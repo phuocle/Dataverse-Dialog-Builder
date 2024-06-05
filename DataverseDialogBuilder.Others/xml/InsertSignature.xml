@@ -1,0 +1,132 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_signaturetext" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_ownerId" type="SafeString" />
+        <querystringparameter name="param_senderId" type="SafeString" />
+        <querystringparameter name="param_sendertype" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{14662BF4-A3FA-410C-88EE-7EF367A6297F}" name="{14662BF4-A3FA-410C-88EE-7EF367A6297F}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{BC732D4D-AEFB-43D7-B681-53B0A3B0D5F7}" name="{BC732D4D-AEFB-43D7-B681-53B0A3B0D5F7}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{BCF46377-80DE-4310-B9A6-C5C74685FDEF}">
+                                        <labels>
+                                            <label description="Language" languagecode="1033" />
+                                        </labels>
+                                        <control id="language_id" classid="{671A9387-CA5A-4d1e-8AB7-06E39DDCF6B5}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{74C3C409-6E06-4B7C-8FAC-946BD5BA279C}">
+                                        <labels>
+                                            <label description="Search Signature " languagecode="1033" />
+                                        </labels>
+                                        <control id="signatures_id" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{B2DAAE82-B4D4-4A89-93A2-CB2ECCABDEBB}</DefaultViewId>
+                                                        <EntityLogicalName>emailsignature</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{AE76111D-E92C-4D5E-A863-F8DBF0DCE2B4}">
+        <rows>
+            <row>
+                <cell id="{2CBFCD6F-F059-4336-AF4C-DC73A4CF0319}">
+                    <labels>
+                        <label description="Insert Signature" languagecode="1033" />
+                    </labels>
+                    <control id="insertsignature_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{1A0122D2-39AB-43B1-B1FC-4F44F8A03588}">
+                    <labels>
+                        <label description="Select the signature you want to use." languagecode="1033" />
+                    </labels>
+                    <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{E1157E21-F00F-4D94-ABE9-C3D065536A05}">
+        <rows>
+            <row>
+                <cell id="{85D0C0E4-E9A5-452E-8196-0EFED5CEC122}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="select_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{8D6134B9-EC4F-45AC-AB2F-7B29D4070B25}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.InsertSignatureDialog.onLoad" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="{EF75DA86-E279-4AB4-8EBE-BBF4BD5DA4D7}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="select_id">
+            <Handlers>
+                <Handler functionName="Activities.InsertSignatureDialog.onSelect" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="{A02FDE76-AA8D-4C83-B59E-61C871A57EB6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.Common.ActivityHelper.closeDialog" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="{90F33AA2-477C-463C-AAB7-7110AD806156}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="language_id">
+            <Handlers>
+                <Handler functionName="Activities.InsertSignatureDialog.onLanguageChange" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="{8AB9732F-568C-463C-915B-453879C53682}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="signatures_id">
+            <Handlers>
+                <Handler functionName="Activities.InsertSignatureDialog.onSignatureChange" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="{0D0719C9-E48D-4820-B485-CEEF7FC3E95D}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Email_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

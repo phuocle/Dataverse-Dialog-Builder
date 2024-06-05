@@ -1,0 +1,150 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_regardingentityname" type="SafeString" />
+        <querystringparameter name="param_regardingentityid" type="SafeString" />
+        <querystringparameter name="param_selectedrecords" type="SafeString" />
+        <querystringparameter name="param_numberofsequences" type="SafeString" />
+        <querystringparameter name="param_selectedowners" type="SafeString" />
+        <querystringparameter name="param_action" type="SafeString" />
+    </formparameters>
+    <header id="{0d15f263-d097-4135-b0ba-c6240980b59b}">
+        <rows>
+            <row>
+                <cell id="{f8effaef-d301-4a86-b921-21c077eab269}">
+                    <labels>
+                        <label description="Assign to a seller" languagecode="1033" />
+                    </labels>
+                    <control id="ViewAssignedSequences_connectSequenceDialogTitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{f3b7325f-2ec0-44d1-9be2-437ff92b52a6}">
+                    <labels>
+                        <label description="Confirm the seller to be assigned to the sequence{0}." languagecode="1033" />
+                    </labels>
+                    <control id="ViewAssignedSequences_connectSequenceDialogDescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{20ffda74-8e20-4f8e-ad8e-8ada7a17fe17}" name="SequencesOwnersTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="ViewAssignedSequences_Section" showlabel="false" showbar="false" locklevel="0" id="{eab8800a-cd5e-4433-9082-b4f9363f1e57}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Sequences" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e0210f48-add7-48ae-bdaf-4714e2e5e7f4}" showlabel="false" colspan="1" auto="false" rowspan="10">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="ViewAssignedSubgrid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{25c28d5b-9b4e-4580-9778-b55cef33c947}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{eb2a3a8d-07c6-45f8-86c7-8b90035e3ee1}">
+                <rows>
+                    <row>
+                        <cell id="{4e13552d-f785-490c-bccb-68e5f53b6e98}">
+                            <labels>
+                                <label description="Assign" languagecode="1033" />
+                            </labels>
+                            <control id="ViewAssignedSequences_AssignSequences" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{69afe5ae-7c7f-4625-9c19-84d32957b651}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="ViewAssignedSequences_CancelButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ViewAssignedSequences_AssignSequences">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewAssignedSequencesAssignHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{2d4daed9-8956-4785-845c-9452ed14da4c}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ViewAssignedSequences_CancelButton">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewAssignedSequences_DialogCancelHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{06504db4-1ca5-4556-9a4d-8aaf5a70753c}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewAssignedSequencesOnLoad" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{eb424dfd-5803-4a4c-9438-6ba114f74750}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="param_selectedowners">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewAssignedSequencesOnOwnerChange" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{9822df8f-daca-4316-83a7-5cb9bb907bc2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{25c28d5b-9b4e-4580-9778-b55cef33c947}">
+            <customControl name="MscrmControls.SalesCadence.SequenceOwnersCustomControl" formFactor="1">
+                <parameters>
+                    <regardingentityid type="SingleLine.Text">param_regardingentityid</regardingentityid>
+                    <regardingentityname type="SingleLine.Text">param_regardingentityname</regardingentityname>
+                    <selectedrecords type="SingleLine.Text">param_selectedrecords</selectedrecords>
+                    <numberofsequences type="SingleLine.Text">param_numberofsequences</numberofsequences>
+                    <selectedowners type="SingleLine.Text">param_selectedowners</selectedowners>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SalesCadence.SequenceOwnersCustomControl" formFactor="2">
+                <parameters>
+                    <regardingentityid type="SingleLine.Text">param_regardingentityid</regardingentityid>
+                    <regardingentityname type="SingleLine.Text">param_regardingentityname</regardingentityname>
+                    <selectedrecords type="SingleLine.Text">param_selectedrecords</selectedrecords>
+                    <numberofsequences type="SingleLine.Text">param_numberofsequences</numberofsequences>
+                    <selectedowners type="SingleLine.Text">param_selectedowners</selectedowners>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SalesCadence.SequenceOwnersCustomControl" formFactor="0">
+                <parameters>
+                    <regardingentityid type="SingleLine.Text">param_regardingentityid</regardingentityid>
+                    <regardingentityname type="SingleLine.Text">param_regardingentityname</regardingentityname>
+                    <selectedrecords type="SingleLine.Text">param_selectedrecords</selectedrecords>
+                    <numberofsequences type="SingleLine.Text">param_numberofsequences</numberofsequences>
+                    <selectedowners type="SingleLine.Text">param_selectedowners</selectedowners>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

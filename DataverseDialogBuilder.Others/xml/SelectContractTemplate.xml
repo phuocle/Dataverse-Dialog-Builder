@@ -1,0 +1,98 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="contractTemplateId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="contractTemplateEntityType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <header id="{009f8acb-9fd7-42c4-88c7-fa626e54b337}">
+        <rows>
+            <row>
+                <cell id="{7890b41b-f350-4310-8abd-ae7607b817a5}">
+                    <labels>
+                        <label description="Select Template" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_selecttemplate" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{5ac31201-6b8f-4a7b-9c9b-f0d31c4c5ecf}" name="{5ac31201-6b8f-4a7b-9c9b-f0d31c4c5ecf}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{03594557-1733-4379-9cc2-1b4a05bb6004}" name="{03594557-1733-4379-9cc2-1b4a05bb6004}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3967bbbf-6294-4717-a8bc-cffd8fc44e57}">
+                                        <labels>
+                                            <label description="Contract Template" languagecode="1033" />
+                                        </labels>
+                                        <control id="contracttemplate_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{816E19C6-2309-49B8-ADDD-B03B0AF66FDD}</DefaultViewId>
+                                                        <EntityLogicalName>contracttemplate</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8d89c450-42ed-4080-a121-32776d9ec1f8}">
+        <rows>
+            <row>
+                <cell id="{28177dd8-1b32-4978-9bde-3401526f802b}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{078f972b-a2a9-4411-9cb7-81dee0958af6}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.Contract.GridCommandActions.selectContractTemplateApplyChangesClick" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="{5dceea85-992e-4d5a-b5ac-6a28368eb821}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{af5f3c71-50df-496f-a842-0af50479946e}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

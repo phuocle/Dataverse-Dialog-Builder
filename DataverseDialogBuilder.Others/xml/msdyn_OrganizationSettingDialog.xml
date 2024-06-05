@@ -1,0 +1,111 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_isConfirmed" type="Integer" />
+        <querystringparameter name="param_selectedValue" type="SafeString" />
+        <querystringparameter name="param_initialValue" type="SafeString" />
+        <querystringparameter name="param_settingName" type="SafeString" />
+    </formparameters>
+    <header id="{867CF9CF-F7CD-4957-9F4C-8D3EB13E02ED}">
+        <rows>
+            <row>
+                <cell id="{198317D3-663C-4521-8003-AFC1E1B7125B}">
+                    <labels>
+                        <label description="Confirm setting change" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_organization_setting_confirmation_dialog_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{89C04ED4-E379-4418-A7C8-8C79C4A2A698}" IsUserDefined="1" name="OrganizationSettingDialogTab" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section name="TermsSection" showlabel="true" showbar="false" locklevel="0" id="{7DC99341-AF6E-43B0-8AAF-5F9A0AF2E63D}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6D6CE4D1-2260-4CBC-AAEE-99170CF966DB}" showlabel="false" locklevel="0" colspan="1" auto="true" rowspan="3">
+                                        <labels>
+                                            <label description="Organization setting confirmation dialog content" languagecode="1033" />
+                                        </labels>
+                                        <control id="IFRAME_OrganizationSettingDialogContent" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true">
+                                            <parameters>
+                                                <Url>about:blank</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{1B2511E0-0236-4557-8DDC-282D2DB9706A}">
+        <rows>
+            <row>
+                <cell id="{77C15611-9883-437B-A156-17F215C5347D}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="btn_ok" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{93EFD308-1A16-466D-9B44-B7EF65E46CC7}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="btn_cancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OrganizationSettingDialog.Library.onLoad" libraryName="$webresource:msdyn_/OrganizationSettingDialog/OrganizationSettingDialog.js" handlerUniqueId="{EE54B2E0-6EF7-403D-B87B-E3C1E347D83F}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btn_ok">
+            <Handlers>
+                <Handler functionName="OrganizationSettingDialog.Library.onClickOK" libraryName="$webresource:msdyn_/OrganizationSettingDialog/OrganizationSettingDialog.js" handlerUniqueId="{90EC69B0-C851-4D89-AB92-C7E49D04C7E6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btn_cancel">
+            <Handlers>
+                <Handler functionName="OrganizationSettingDialog.Library.onClickCancel" libraryName="$webresource:msdyn_/OrganizationSettingDialog/OrganizationSettingDialog.js" handlerUniqueId="{C5140B96-3E0A-4C0B-A646-121601A8F20E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/OrganizationSettingDialog/OrganizationSettingDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

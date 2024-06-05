@@ -1,0 +1,117 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_pbiconfigurl" type="SafeString" />
+        <querystringparameter name="param_pbiseturl" type="SafeString" />
+    </formparameters>
+    <header id="{9456236a-fbfb-404a-8403-7c27717b3872}">
+        <rows>
+            <row>
+                <cell id="{93c61ee0-4d7d-490f-9930-3c6ef6a40388}">
+                    <labels>
+                        <label description="Power BI Tile" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_pbi_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row />
+            <row>
+                <cell id="{3e4a6a33-5f0b-4b6c-9280-434a681d9f38}">
+                    <labels>
+                        <label description="Choose the Power BI tile that you want to add to the form." languagecode="1033" />
+                    </labels>
+                    <control id="lbl_pbi_caption" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{2fe24db9-62e6-47ee-8c05-3899b8cac534}" name="pbi_config_tab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{737aa498-4924-4d6b-9312-46845340f245}" name="pbi_config_section">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="100%">
+                                    <cell id="{30be9629-b6ae-4723-a73f-8fa80bcc23fa}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="PowerBIConfiguration" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{b9d4d54e-03c4-4d17-82eb-137e6589742f}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{bcbe50ef-dfd6-444d-b769-8e0df1060dfc}">
+                                        <labels>
+                                            <label description="The Power BI tile will be filtered to show the current device data." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_pbi_device_filter" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{69799f66-362c-456d-bb90-4fb35354ef53}">
+        <rows>
+            <row>
+                <cell id="{871ae74c-1366-4e9a-9cbd-306514d29ad6}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="CancelButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{e9888d05-a619-4bd4-809f-54a29c6f5af0}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="SaveButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{b9d4d54e-03c4-4d17-82eb-137e6589742f}">
+            <customControl formFactor="0" name="MscrmControls.WebResource.WebResourceWrapperControl">
+                <parameters>
+                    <PbiUrl type="SingleLine.Text">param_pbiconfigurl</PbiUrl>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.WebResource.WebResourceWrapperControl">
+                <parameters>
+                    <PbiUrl type="SingleLine.Text">param_pbiconfigurl</PbiUrl>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.WebResource.WebResourceWrapperControl">
+                <parameters>
+                    <PbiUrl type="SingleLine.Text">param_pbiconfigurl</PbiUrl>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

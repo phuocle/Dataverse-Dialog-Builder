@@ -1,0 +1,161 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="entity_record" type="SafeString" />
+        <querystringparameter name="entity_type" type="SafeString" />
+        <querystringparameter name="param_MergeFlag" type="SafeString" />
+        <querystringparameter name="param_parental_check" type="Boolean" />
+    </formparameters>
+    <header id="{CBBE74F2-DC2E-4103-8D40-C25CD8B0FBB5}">
+        <rows>
+            <row>
+                <cell id="{fdd8c240-efc8-4a80-90c3-83a9ed233b57}">
+                    <labels>
+                        <label description=" " languagecode="1033" />
+                    </labels>
+                    <control id="merge_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{cb6e93f8-5d1e-4dbf-9724-a0ae3f8ed013}" name="{df69936b-ddfa-4265-ba6a-be69118380b4}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{4b41b211-788b-4185-8774-a26014cf658a}" name="{599a892f-8e7d-4022-9f29-3eb616f9a65a}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3534f341-b45d-412d-a3e4-27f9d6cfc053}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="merge_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{3ADC008E-94D9-4BA3-8272-DD4F3029DE25}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{138869A9-E806-465B-AECC-6F6E043BC028}">
+        <rows>
+            <row>
+                <cell id="{2eaa09a6-6f2c-41a1-98ae-193e1c25fae5}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{f05e6e5b-441c-4e30-a4d1-98b4fb6a76fd}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{C09FACAD-D87C-487B-8185-5F4C5026F11F}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="updated_content_list" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{2E099A1C-1E7F-4018-80AD-E399F0E2FAC7}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="master_record_merge" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{EC6687F4-6832-451A-9D41-EB7689AB1417}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="entity_record2" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="ClientUtility.MergeRecords.onOkClickMergeRecordsDialog" libraryName="CRM/MergeRecords/ClientUtility_MergeRecords.js" handlerUniqueId="{526d2b6d-a57d-4992-97f9-bc8e9b4d5685}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="ClientUtility.MergeRecords.onCancelClickMergeRecordsDialog" libraryName="CRM/MergeRecords/ClientUtility_MergeRecords.js" handlerUniqueId="{fbea9116-8a8e-4a3f-af18-58ed4586f6fc}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="ClientUtility.MergeRecords.onLoadMergeRecordsDialog" libraryName="CRM/MergeRecords/ClientUtility_MergeRecords.js" handlerUniqueId="{8d08d2f2-0f84-4506-8561-28b0c4c8fcb6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="entity_record2">
+            <Handlers>
+                <Handler functionName="ClientUtility.MergeRecords.onChangeEntityRecord2" libraryName="CRM/MergeRecords/ClientUtility_MergeRecords.js" handlerUniqueId="{C574471E-35D8-489D-A91F-D6FCBB53E05E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/MergeRecords/ClientUtility_MergeRecords.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{3ADC008E-94D9-4BA3-8272-DD4F3029DE25}">
+            <customControl name="MscrmControls.MergeControlContainer.MergeControl" formFactor="0">
+                <parameters>
+                    <Entity1 type="SingleLine.Text">entity_record</Entity1>
+                    <Entity2 type="SingleLine.Text">entity_record2</Entity2>
+                    <EntityType type="SingleLine.Text">entity_type</EntityType>
+                    <MergeFlag type="SingleLine.Text">param_MergeFlag</MergeFlag>
+                    <UpdatedContentList type="SingleLine.Text">updated_content_list</UpdatedContentList>
+                    <MasterRecord type="SingleLine.Text">master_record_merge</MasterRecord>
+                    <ParentalCheckFlag type="TwoOptions">param_parental_check</ParentalCheckFlag>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.MergeControlContainer.MergeControl" formFactor="1">
+                <parameters>
+                    <Entity1 type="SingleLine.Text">entity_record</Entity1>
+                    <Entity2 type="SingleLine.Text">entity_record2</Entity2>
+                    <EntityType type="SingleLine.Text">entity_type</EntityType>
+                    <MergeFlag type="SingleLine.Text">param_MergeFlag</MergeFlag>
+                    <UpdatedContentList type="SingleLine.Text">updated_content_list</UpdatedContentList>
+                    <MasterRecord type="SingleLine.Text">master_record_merge</MasterRecord>
+                    <ParentalCheckFlag type="TwoOptions">param_parental_check</ParentalCheckFlag>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.MergeControlContainer.MergeControl" formFactor="2">
+                <parameters>
+                    <Entity1 type="SingleLine.Text">entity_record</Entity1>
+                    <Entity2 type="SingleLine.Text">entity_record2</Entity2>
+                    <EntityType type="SingleLine.Text">entity_type</EntityType>
+                    <MergeFlag type="SingleLine.Text">param_MergeFlag</MergeFlag>
+                    <UpdatedContentList type="SingleLine.Text">updated_content_list</UpdatedContentList>
+                    <MasterRecord type="SingleLine.Text">master_record_merge</MasterRecord>
+                    <ParentalCheckFlag type="TwoOptions">param_parental_check</ParentalCheckFlag>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

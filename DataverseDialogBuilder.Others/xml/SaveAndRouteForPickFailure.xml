@@ -1,0 +1,90 @@
+<form>
+    <hiddencontrols />
+    <tabs>
+        <tab verticallayout="true" id="{4218b48a-d003-454c-93bd-ec544f9c2c15}" name="{4218b48a-d003-454c-93bd-ec544f9c2c15}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{195865a4-3ea6-41e9-9501-243f3b7291d6}" name="{195865a4-3ea6-41e9-9501-243f3b7291d6}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c85d515c-d6ba-483d-95d1-b51a8eb39174}">
+                                        <labels>
+                                            <label description="There is a problem in performing the requested action on this record due to a conflict, please click Save and Route to re-route the affected record" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_message" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{f5489207-9b99-4c0f-a093-2b93205f65b1}">
+        <rows>
+            <row>
+                <cell id="{d5650554-335a-4911-a870-0ec1e38ca84f}">
+                    <labels>
+                        <label description="Business Process Error" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_BusinessProcessError" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{316f39f7-7c2a-4bb7-b7d1-5b1f16357593}">
+        <rows>
+            <row>
+                <cell id="{ca7c2b25-b87e-41a1-9595-d1b82748ecc5}">
+                    <labels>
+                        <label description="Save and Route" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{be9d2af7-3478-4265-b96e-7894bc81e55a}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="AppCommon.QueueItemPick.SaveAndRouteClick" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="{eb1be968-dca1-4410-a41d-33762eade23b}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="AppCommon.QueueItemPick.CloseDialogSaveAndRouteErrorPick" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="{2940c963-36de-4c95-8250-f967ee4db4d9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="entity_records" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/QueueItem/QueueItem.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

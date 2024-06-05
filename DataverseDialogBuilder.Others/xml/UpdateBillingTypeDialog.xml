@@ -1,0 +1,127 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_approvalsIds" type="Object" />
+    </formparameters>
+    <header id="{ff36bebe-35de-463b-b2fc-6e4535fa6995}">
+        <rows>
+            <row>
+                <cell id="{896aea10-7298-4b4a-a84b-9143113216fc}">
+                    <labels>
+                        <label description="Choose a billing type" languagecode="1033" />
+                    </labels>
+                    <control id="updateBillingTypeHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="false" id="{7ed0366b-9816-4044-93c7-bd4707185f95}" name="Choose a billingtype" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="25%">
+                    <sections>
+                        <section showbar="false" columns="4" id="{8213a6c1-6384-466a-b5c6-2296ac243fc9}" name="Tab1_section1" height="auto" showlabel="true">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{38d3ecee-61e4-44eb-862d-7085c5520c85}" colspan="2">
+                                        <labels>
+                                            <label description="Billing Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="billingTypeLookup" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetName>msdyn_billingtype</OptionSetName>
+                                                <DefaultValue>-1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{f45711dc-dc64-42fe-8927-af1ff45312c0}">
+                                        <labels>
+                                            <label description="Time Entry - Billable (hrs)" languagecode="1033" />
+                                        </labels>
+                                        <control id="modifyHours" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" isunbound="true" isrequired="true" disabled="true">
+                                            <parameters>
+                                                <MinValue>-100000000000</MinValue>
+                                                <MaxValue>100000000000</MaxValue>
+                                                <Precision>2</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{77b97019-81a1-46cd-ba8d-adb7fcc277da}">
+                                        <labels>
+                                            <label description="Expense Entry - Sales Price" languagecode="1033" />
+                                        </labels>
+                                        <control id="salesPrice" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" isunbound="true">
+                                            <parameters>
+                                                <MinValue>-100000000000</MinValue>
+                                                <MaxValue>100000000000</MaxValue>
+                                                <Precision>2</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{66f6b7b8-a107-496c-ae50-81ed2eb5f3a0}">
+        <rows>
+            <row>
+                <cell id="{0f88bf69-ba32-4dba-a440-c08ab6464641}">
+                    <labels>
+                        <label description="Apply" languagecode="1033" />
+                    </labels>
+                    <control id="apply_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{120a3367-a6bd-45f7-b4f2-dc3331561a9b}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="onDialogBoxLoad" libraryName="msdyn_/ProjectApprovals/Common/ProjectApprovalActions.js" handlerUniqueId="{2e84c070-5315-4104-a672-842f886ea17a}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="apply_id">
+            <Handlers>
+                <Handler functionName="onUpdate" libraryName="msdyn_/ProjectApprovals/Common/ProjectApprovalActions.js" handlerUniqueId="{f79f064d-1c66-4f73-85c8-edb2df3dfeb0}" enabled="true" parameters="false" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="onCancelling" libraryName="msdyn_/ProjectApprovals/Common/ProjectApprovalActions.js" handlerUniqueId="{d0c07dd7-ff2c-49bc-ab18-6c8e10c0d3d5}" enabled="true" parameters="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="billingTypeLookup">
+            <Handlers>
+                <Handler functionName="validateAndEnableBilledHoursAttribute" libraryName="msdyn_/ProjectApprovals/Common/ProjectApprovalActions.js" handlerUniqueId="{0121acb4-b106-445f-9dad-d2b02469c9ed}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/Libraries/require/require.js" />
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,107 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_target_entity_id" type="SafeString" />
+        <querystringparameter name="param_target_entity_name" type="SafeString" />
+        <querystringparameter name="param_target_entity_plural_name" type="SafeString" />
+        <querystringparameter name="param_target_entity_title" type="SafeString" />
+        <querystringparameter name="param_is_connected" type="Integer" />
+    </formparameters>
+    <header id="{FAFAD7C5-C7CE-4BCF-9746-0BB26B37016A}">
+        <rows>
+            <row>
+                <cell id="{8F4F74D7-D125-4A96-9D4D-A65F95C20724}">
+                    <labels>
+                        <label description="Connect to a device" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_connect_device_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{E2E95D29-65C6-4364-B161-A1FF7762DA79}" IsUserDefined="1" name="ConnectDeviceDialogTab" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section name="DeviceSection" showlabel="true" showbar="false" locklevel="0" id="{786690C0-12BE-45FE-B48B-F6146AE838C9}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{99A7949F-9878-41B7-B5FF-007EB4DA9A01}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Device" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_device" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" disabled="false" isrequired="true" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>msdyn_iotdevice</EntityLogicalName>
+                                                        <DefaultViewId>{13C8A47C-EC96-45E7-8D0E-BC388A2CEF36}</DefaultViewId>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{3EEBD775-53C6-4D46-9B43-8449A87E4B11}">
+        <rows>
+            <row>
+                <cell id="{D1E0A09D-0FA0-41BB-BD94-1C619F1BA295}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="btnOK" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{036232F0-85CD-4755-8283-3BCAF17BF072}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="btnCancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="IoTConnector.Connection.ConnectDeviceDialog.onLoad" libraryName="$webresource:msdyn_/IoT/Connection/ConnectDeviceDialog/ConnectDeviceDialog.js" handlerUniqueId="{9D8F6814-F9BC-404B-B2D5-D87A79759E5C}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnOK">
+            <Handlers>
+                <Handler functionName="IoTConnector.Connection.ConnectDeviceDialog.onClickOK" libraryName="$webresource:msdyn_/IoT/Connection/ConnectDeviceDialog/ConnectDeviceDialog.js" handlerUniqueId="{5D94909C-6A6B-471B-86F7-36FFF3D9E9B3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnCancel">
+            <Handlers>
+                <Handler functionName="IoTConnector.Connection.ConnectDeviceDialog.onClickCancel" libraryName="$webresource:msdyn_/IoT/Connection/ConnectDeviceDialog/ConnectDeviceDialog.js" handlerUniqueId="{A658F317-8909-4CD3-8682-46B633E0453D}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/IoT/Connection/ConnectDeviceDialog/ConnectDeviceDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

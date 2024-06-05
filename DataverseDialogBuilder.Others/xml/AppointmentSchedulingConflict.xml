@@ -1,0 +1,105 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_isDraft" type="SafeString" />
+        <querystringparameter name="param_activityType" type="SafeString" />
+        <querystringparameter name="param_notificationsData" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{CB92E76B-1633-4884-B276-E7AD765DEB0A}" name="{F83E44C3-0AFF-4E70-A24E-A6612E4625DA}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{207B6CE5-B4A3-4F77-8770-03C3E5A6C68C}" name="{19584B6E-029A-45EF-B7E8-B0D17B651D4D}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{B7ADF19D-C955-4A38-83D9-EE9E5FE4D27F}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="description2_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{7E338DEE-5886-454A-A08E-4C31F5E2AC0A}">
+        <rows>
+            <row>
+                <cell id="{5AACB9CD-0066-4E98-BBAC-18C86AE49DA3}">
+                    <labels>
+                        <label description="Scheduling Alerts" languagecode="1033" />
+                    </labels>
+                    <control id="schedulingalert_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{DBA1B267-11F6-4605-8FDE-2907A0ABDC41}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="description1_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{21F949BB-C671-4A55-8990-5610B070074F}">
+        <rows>
+            <row>
+                <cell id="{6F1DBF41-DBA0-473C-8B2A-C816BB41337A}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="save_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{30AB3AA9-8BFF-490B-B881-5113609107BA}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.SchedulingConflictDialog.onLoad" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{2D626812-7C49-4E33-BE67-966B32475DE3}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="save_id">
+            <Handlers>
+                <Handler functionName="Activities.SchedulingConflictDialog.onSave" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{2231790D-C9B6-4315-B16D-997B001C9707}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.Common.ActivityHelper.closeDialog" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{B142E644-40E8-4A04-90BC-76953B111808}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/InsertEmailTemplate.js" />
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Appointment_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

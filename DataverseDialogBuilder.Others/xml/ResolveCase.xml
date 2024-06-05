@@ -1,0 +1,176 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="gridControl" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="bIsTimeAllotment" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="iAllotmentsRemaining" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="timeSpent" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <header id="{a48c165a-435a-4448-848f-29f48076b937}">
+        <rows>
+            <row>
+                <cell id="{27cb568a-6561-4bb7-b6bc-4fc7100c1173}">
+                    <labels>
+                        <label description="Resolve Case" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_resolvecase" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{cc414c88-c791-424b-ba52-51c20a263bae}" name="{cc414c88-c791-424b-ba52-51c20a263bae}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{9ea058d6-4986-4c70-a7fb-25ddba83138a}" name="{9ea058d6-4986-4c70-a7fb-25ddba83138a}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{57b8cc35-eedd-4820-a3d3-2ad5acbaf18a}">
+                                        <labels>
+                                            <label description="Resolution Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="resolutionType_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>-1</DefaultValue>
+                                                <OptionSetId>{aad11aee-84cd-ee11-907a-002248243577}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ca9a96d4-157e-4539-b67b-84d47ce7f6af}">
+                                        <labels>
+                                            <label description="Resolution" languagecode="1033" />
+                                        </labels>
+                                        <control id="resolution_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8c921f38-ea41-41f4-abd0-717f7404869f}">
+                                        <labels>
+                                            <label description="Total Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="totaltime_id" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true">
+                                            <parameters>
+                                                <MinValue>0</MinValue>
+                                                <MaxValue>2147483647</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3b8272b3-117b-4e49-ab7d-a690f2ccad7a}">
+                                        <labels>
+                                            <label description="Billable Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="billabletime_id" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <MinValue>0</MinValue>
+                                                <MaxValue>2147483647</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4f60624c-4797-4cde-b427-99d835398068}">
+                                        <labels>
+                                            <label description="Remarks" languagecode="1033" />
+                                        </labels>
+                                        <control id="remarks_id" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2960624c-2345-4cde-a356-99d835398068}">
+                                        <labels>
+                                            <label description="Propose new knowledge article for this case" languagecode="1033" />
+                                        </labels>
+                                        <control id="propose_ka" classid="{b0c6723a-8503-4fd7-bb28-c8a06ac933c2}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>52ecd72f-da52-44fd-be99-4573a422b83b</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{473b8216-9cd0-435b-879b-542e0f705bfa}">
+        <rows>
+            <row>
+                <cell id="{b2635d65-adcb-498e-8b9e-f51cd25b523a}">
+                    <labels>
+                        <label description="Resolve" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{36e52bf7-c6b8-4615-acfe-6901c6164d96}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.resolveClose" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{441ec7ff-a8f0-4736-a4c7-33c6c400b433}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeResolveDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{db16b500-8ca3-4503-8dee-462f148b78f7}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.DialogCloseCancelOnLoad" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{dab73a90-cbf8-4bd0-9b6f-3be0633aa5a7}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_is_time_allotment" type="Integer" />
+        <querystringparameter name="param_allotments_remaining" type="Integer" />
+        <querystringparameter name="param_time_spent" type="Integer" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+        <querystringparameter name="param_proposeNewKA" type="Boolean" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

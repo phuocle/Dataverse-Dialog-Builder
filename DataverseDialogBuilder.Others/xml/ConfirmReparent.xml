@@ -1,0 +1,91 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{ec965040-85eb-453c-a93c-0a5ac8f806a8}">
+        <rows>
+            <row>
+                <cell id="{60d609d3-9170-4791-8284-756e07c7cc0b}">
+                    <labels>
+                        <label description="Change product parent" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_ArticleToProductAssociation" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{31ad38a8-93e5-4774-80c1-4812abe3867e}" name="{31ad38a8-93e5-4774-80c1-4812abe3867e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{13df16de-628d-42e4-9e8b-8d3c79e525a4}" name="{13df16de-628d-42e4-9e8b-8d3c79e525a4}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2316021e-44f4-484c-82cd-932962b71968}">
+                                        <labels>
+                                            <label description="Changing the product category (parent) can’t be reverted. Product properties–plus those of any child records–will be replaced with the new category’s properties. Continue anyway?" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_message1" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{1bd7d5dd-3621-4360-8068-4aa70a32480f}">
+        <rows>
+            <row>
+                <cell id="{0326b1e0-1360-4b40-915a-f41bcd9d5887}">
+                    <labels>
+                        <label description="Continue" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{e836f1ad-167e-454a-9da6-c038dbda3454}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.ProductMainSystemLibraryWebResource.okHandler" libraryName="ProductManagement/Product/Product_main_system_library.js" handlerUniqueId="{e4133c28-8b25-462a-a399-ba4116a0fc47}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.ProductMainSystemLibraryWebResource.cancelHandler" libraryName="ProductManagement/Product/Product_main_system_library.js" handlerUniqueId="{3cf98ac2-f08b-49b5-b1df-01cb9914b437}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ProductManagement/Product/Product_main_system_library.js" />
+                <internaljscriptfile src="$webresource:ProductManagement/Localization/ResourceStringProvider.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

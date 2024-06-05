@@ -1,0 +1,102 @@
+<form>
+    <header id="{8d526984-46f7-4c09-99b0-982d46623a52}">
+        <rows>
+            <row>
+                <cell id="{5d29493d-d583-492c-80ef-7c7e63adf7d1}">
+                    <labels>
+                        <label description="Copy Contract" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_copycontract" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{835feceb-7c09-4de8-a3fb-c1e8f3e4d14c}" name="{835feceb-7c09-4de8-a3fb-c1e8f3e4d14c}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5ab04831-268d-4a45-a005-ff658faae714}" name="{5ab04831-268d-4a45-a005-ff658faae714}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6cd09fe3-fc03-4cde-a44d-f6cf84f72227}">
+                                        <labels>
+                                            <label description="Use this contract to create a new contract." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_descriptioncopycontract" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{557114bf-9866-4680-816c-e07d2d53ceeb}">
+                                        <labels>
+                                            <label description="Include canceled contract lines" languagecode="1033" />
+                                        </labels>
+                                        <control id="includeCanceledContractLines_id" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{ae38af03-9153-4d12-b074-b42055c15ee4}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{718c85b4-5a1f-48df-9397-e7722499272c}">
+        <rows>
+            <row>
+                <cell id="{511d4aa2-8b50-421b-922b-6b2fc2b28d38}">
+                    <labels>
+                        <label description="Create" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{d472e92c-258c-4a7e-a155-df0e6814831f}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.Contract.CommandBarActions.contractCloneApplyChangesClick" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="{55fba0a5-12db-4e97-8788-bb9ecabba7f8}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{f68b8f2e-db62-4f07-baef-f2b2ee3e6c30}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+        <querystringparameter name="param_clonedContractId" type="UniqueId" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Contract/Contract_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

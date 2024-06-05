@@ -1,0 +1,169 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityLogicalName" type="SafeString" />
+        <querystringparameter name="param_queryParameters" type="SafeString" />
+        <querystringparameter name="param_gridColumns" type="SafeString" />
+    </formparameters>
+    <header id="{505D3486-3289-4864-97E6-F46F9DB0CCF9}">
+        <rows>
+            <row>
+                <cell id="{2FB7E2C7-C014-471E-B0B3-1DBF07B1E3D1}">
+                    <labels>
+                        <label description="Merge Cases" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_merge_case" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{AFEFA697-CA96-4838-ADC5-ED31F6363610}" name="CaseGridTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{0F223834-4592-4D09-B544-DADD3F6172C6}" name="CaseGridSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6B8F6B82-BC59-4C9C-A5E4-1957E8AA22B5}">
+                                        <labels>
+                                            <label description="Select the case that the other cases will be merged into. Review the cases and corresponding customers before you merge the cases. You can't undo this action." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_merge_message" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6222B9A6-4CAE-4DC4-B7CF-5B7B2A16AA75}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="MergeCaseGrid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{894C8BB8-F72B-4525-A2C4-466162056B88}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{D8F30B95-883E-4C69-B2C0-48723E843D55}">
+        <rows>
+            <row>
+                <cell id="{2D76A79C-1E46-4C1A-86A8-9D907E0C77B2}">
+                    <labels>
+                        <label description="Merge" languagecode="1033" />
+                    </labels>
+                    <control id="Merge" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{11A4B067-9C81-433B-9BF6-8C70AA2CB748}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{48B781A8-39E6-4EF8-9186-80D1EAE7A384}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="selectedRecordId" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.mergeDialogOnLoad" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{172099FD-9718-4235-9818-A82A60AF958B}" enabled="true" passExecutionContext="false" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="selectedRecordId">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.mergeDialogOnChange" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{3D6ADA81-77F2-462F-8419-32994B50530B}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Merge">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.mergeDialogMergeClick" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{FFC16326-E7F7-4098-BADC-D8385402AE27}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{4DDE77B9-5803-47B8-B98E-37F4454DE3C8}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{894C8BB8-F72B-4525-A2C4-466162056B88}">
+            <customControl name="MscrmControls.Containers.ClientContextGridControl" formFactor="0">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selectedRecordId</SelectedRecordId>
+                    <EntityLogicalName type="SingleLine.Text">param_entityLogicalName</EntityLogicalName>
+                    <QueryParameters type="SingleLine.Text">param_queryParameters</QueryParameters>
+                    <GridColumns type="SingleLine.Text">param_gridColumns</GridColumns>
+                    <data-set name="Grid">
+                        <ViewId>{e1d7d576-da76-4f22-8a65-cc57e23c41bb}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>incident</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.ClientContextGridControl" formFactor="1">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selectedRecordId</SelectedRecordId>
+                    <EntityLogicalName type="SingleLine.Text">param_entityLogicalName</EntityLogicalName>
+                    <QueryParameters type="SingleLine.Text">param_queryParameters</QueryParameters>
+                    <GridColumns type="SingleLine.Text">param_gridColumns</GridColumns>
+                    <data-set name="Grid">
+                        <ViewId>{e1d7d576-da76-4f22-8a65-cc57e23c41bb}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>incident</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.ClientContextGridControl" formFactor="2">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selectedRecordId</SelectedRecordId>
+                    <EntityLogicalName type="SingleLine.Text">param_entityLogicalName</EntityLogicalName>
+                    <QueryParameters type="SingleLine.Text">param_queryParameters</QueryParameters>
+                    <GridColumns type="SingleLine.Text">param_gridColumns</GridColumns>
+                    <data-set name="Grid">
+                        <ViewId>{e1d7d576-da76-4f22-8a65-cc57e23c41bb}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>incident</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

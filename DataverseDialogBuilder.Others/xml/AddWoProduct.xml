@@ -1,0 +1,244 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_RMAId" type="Object" />
+        <querystringparameter name="param_ParentFormContext" type="Object" />
+        <querystringparameter name="param_WorkOrderId" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{E24A8D68-36A5-404A-8202-B4CE42EE784D}">
+        <rows>
+            <row>
+                <cell id="{CCC32B00-66C6-42A0-95E1-44E81BF666CA}">
+                    <labels>
+                        <label description="Add Work Order Product" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_wocomment" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{AD8BBA1D-20F5-4DFA-8451-B4239C95A947}">
+                    <labels>
+                        <label description="Add Work Order Product" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_wodescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab name="rmaproductstab" id="{0B359831-400A-406C-8C78-E778E5354832}" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{4235B244-866A-41AA-AA6A-0A10314327A1}" expanded="false">
+            <labels>
+                <label description="Products" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" IsUserDefined="0" id="{7551AF97-8933-4137-8A11-1D91971242CE}" labelid="{9DA0403D-D95A-4796-9BDE-A14F3EFEA7D6}">
+                            <labels>
+                                <label description="Work Order Product Details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{558A59F1-7D88-4305-AAFF-0E7F2D292C60}" showlabel="true" locklevel="0" labelid="{EAC65340-42AE-4F25-8669-5BDDB472F53C}">
+                                        <labels>
+                                            <label description="Work Order Product" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddlProduct" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{38f2138f-b25b-e111-b0e5-000c2959f9b8}</DefaultViewId>
+                                                        <EntityLogicalName>msdyn_workorderproduct</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5750F6F3-475A-4F47-B266-ABB60B90B208}" showlabel="true" locklevel="0" labelid="{72ECEC7A-1B1A-411F-8810-140964AF427A}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtDescription" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8A7CC596-027D-4C56-A13B-B44343A572AC}" showlabel="true" locklevel="0" labelid="{63EB4538-1EF2-416D-A8FF-F482C3E473A9}">
+                                        <labels>
+                                            <label description="Quantity" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtQuantity" classid="{0D2C745A-E5A8-4c8f-BA63-C6D3BB604660}" isunbound="true" disabled="true">
+                                            <parameters>
+                                                <Precision>2</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5D4B42F6-594D-41A5-ACCF-0E2AD47BDAC2}" showlabel="true" locklevel="0" labelid="{EE981793-CC79-4CF9-BEBB-CB3F79ADC898}">
+                                        <labels>
+                                            <label description="Total Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtTotalAmount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" isunbound="true" disabled="true">
+                                            <parameters>
+                                                <Precision>2</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section showbar="false" IsUserDefined="0" id="{1e4266c5-7e3e-4692-a272-530bbe61a104}" labelid="{9b74673d-cea4-4c7c-b517-54d9fb3eeecb}">
+                            <labels>
+                                <label description="RMA Product Details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{21C0EF75-0BA0-4993-8632-47C387B31C3F}" showlabel="true" locklevel="0" labelid="{BA862F9D-165A-4044-8895-C2524732246F}">
+                                        <labels>
+                                            <label description="Quantity to Return" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtReturnValue" classid="{0D2C745A-E5A8-4c8f-BA63-C6D3BB604660}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <MinValue>0.1</MinValue>
+                                                <MaxValue>1000000000</MaxValue>
+                                                <Precision>2</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0778B804-78B2-4E8E-A995-2C2FB1372D13}" showlabel="true" locklevel="0" labelid="{7B2474D0-6863-403C-A0F2-B017437F13A3}">
+                                        <labels>
+                                            <label description="Processing Action" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddlProcessingAction" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <OptionSetName>msdyn_rmaprocessingaction</OptionSetName>
+                                                <DefaultValue>-1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{B50579EA-F50C-433E-BFE6-052DDBC3D416}" showlabel="true" locklevel="0" labelid="{C4803672-C822-46FE-91DE-C386E04227C8}">
+                                        <labels>
+                                            <label description="Return To Vendor" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddlReturnToVendor" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" disabled="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{E5AE3BAC-CAE5-41EE-89CB-0E406E56386B}" showlabel="true" locklevel="0" labelid="{22E3F5E0-169E-42BE-A412-5B2F97555053}">
+                                        <labels>
+                                            <label description="Return To Warehouse" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddlReturnToWarehouse" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" disabled="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{F8F1D95A-4BE4-46E7-AFEC-51EFC5FEB168}</DefaultViewId>
+                                                        <EntityLogicalName>msdyn_warehouse</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8B317D32-9710-414F-A994-B1472E24696F}" showlabel="true" locklevel="0" labelid="{C10B1EE7-DACF-4590-89E3-4E61DBBAF198}">
+                                        <labels>
+                                            <label description="Change Ownership" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddlChangeOwnership" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" disabled="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{3E1EA2FE-382E-4AE1-91AC-1BF2AE9DB088}">
+        <rows>
+            <row>
+                <cell id="{8BB693A6-DE26-46DE-BB40-C29D7BC42B34}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{015A4DEF-5888-4290-9B03-2F4630011602}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="true">
+            <Handlers>
+                <Handler functionName="RMAWOProducts.Library.OnDialogOpen" libraryName="$webresource:msdyn_/RMA/RMA.Library.AddWOProducts.js" handlerUniqueId="{dcbf48c4-8e2b-46bd-bc57-9a599cd71ec2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="RMAWOProducts.Library.ProcessAddWOProducts" libraryName="$webresource:msdyn_/RMA/RMA.Library.AddWOProducts.js" handlerUniqueId="{87EE84E8-5758-414F-8EDC-B35B1F1C251C}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="RMAWOProducts.Library.CloseDialog" libraryName="$webresource:msdyn_/RMA/RMA.Library.AddWOProducts.js" handlerUniqueId="{3adc7241-2d1f-4820-a1b4-a4d7e9346ecc}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="true" attribute="ddlProduct">
+            <Handlers>
+                <Handler functionName="RMAWOProducts.Library.GetProductDetails" libraryName="$webresource:msdyn_/RMA/RMA.Library.AddWOProducts.js" handlerUniqueId="{C58E2252-3FF9-4A7F-946E-2B4549DE92B4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="true" attribute="ddlProcessingAction">
+            <Handlers>
+                <Handler functionName="RMAWOProducts.Library.OnProcessingActionChange" libraryName="$webresource:msdyn_/RMA/RMA.Library.AddWOProducts.js" handlerUniqueId="{E4BFE84D-396B-473D-A466-E3337240996E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/RMA/RMA.Library.AddWOProducts.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

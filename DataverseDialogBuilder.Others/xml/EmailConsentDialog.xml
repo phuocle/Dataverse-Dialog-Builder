@@ -1,0 +1,132 @@
+<form>
+    <formparameters>
+        <querystringparameter name="header_label" type="SafeString" />
+        <querystringparameter name="ok_button_label" type="SafeString" />
+        <querystringparameter name="cancel_button_label" type="SafeString" />
+        <querystringparameter name="html_page_url" type="SafeString" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{88015e6f-bbf9-4b2a-9ca2-736469cbad8e}" name="{72e27ba7-52b2-4b88-b4ac-cf7c11f68d4b}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{2dca32a6-97b6-4f31-98c0-dfd2b66fcf71}" name="{959def5c-48b4-48a9-8c17-aaa8ff9a3357}" columns="1" showbar="false" showlabel="false" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{fa8857e4-62dc-4bb4-b1ae-692e6fb47559}" rowspan="10">
+                                        <labels>
+                                            <label description="Iframe control for the HTML resource." languagecode="1033" />
+                                        </labels>
+                                        <control id="html_resource_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{0ee8c4bd-0409-4c19-a50c-23688a21d6c1}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{8d4eff94-55bf-4bc6-b416-f80d2974c683}">
+        <rows>
+            <row height="auto">
+                <cell id="{dbde2d49-538f-495f-8002-643d465df37d}" rowspan="2">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="header_id" isunbound="true" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{1c5b0546-1207-4b55-aed7-5aaad24fc855}">
+        <rows>
+            <row>
+                <cell id="{dfa892f9-77b0-49f9-94c7-7d01c53db29e}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{9b3e8672-623f-4070-8bc6-3149d4e23db3}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.EmailConsentDialog.onOkClick" libraryName="$webresource:AppCommon/ControlWS/EmailConsentDialog/EmailConsentDialog.js" handlerUniqueId="{cbf57e20-37af-42df-b5f2-67bb3b8b8647}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.EmailConsentDialog.onCancelClick" libraryName="$webresource:AppCommon/ControlWS/EmailConsentDialog/EmailConsentDialog.js" handlerUniqueId="{80d66f8a-2ede-48d1-8cc2-f84fef8f087d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.EmailConsentDialog.onDialogLoad" libraryName="$webresource:AppCommon/ControlWS/EmailConsentDialog/EmailConsentDialog.js" handlerUniqueId="{13d1f745-de24-4266-bdee-4a31b1f3de3d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{0ee8c4bd-0409-4c19-a50c-23688a21d6c1}">
+            <customControl name="MscrmControls.Appcommon.EmailConsentDialog.EmailConsentDialogControl" formFactor="0">
+                <parameters>
+                    <header_label type="SingleLine.Text">header_label</header_label>
+                    <ok_button_label type="SingleLine.Text">ok_button_label</ok_button_label>
+                    <cancel_button_label type="SingleLine.Text">cancel_button_label</cancel_button_label>
+                    <html_page_url type="SingleLine.Text">html_page_url</html_page_url>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Appcommon.EmailConsentDialog.EmailConsentDialogControl" formFactor="1">
+                <parameters>
+                    <header_label type="SingleLine.Text">header_label</header_label>
+                    <ok_button_label type="SingleLine.Text">ok_button_label</ok_button_label>
+                    <cancel_button_label type="SingleLine.Text">cancel_button_label</cancel_button_label>
+                    <html_page_url type="SingleLine.Text">html_page_url</html_page_url>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Appcommon.EmailConsentDialog.EmailConsentDialogControl" formFactor="2">
+                <parameters>
+                    <header_label type="SingleLine.Text">header_label</header_label>
+                    <ok_button_label type="SingleLine.Text">ok_button_label</ok_button_label>
+                    <cancel_button_label type="SingleLine.Text">cancel_button_label</cancel_button_label>
+                    <html_page_url type="SingleLine.Text">html_page_url</html_page_url>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

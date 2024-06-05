@@ -1,0 +1,95 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_PrimaryControl" type="Object" />
+        <querystringparameter name="param_RecordId" type="Object" />
+        <querystringparameter name="param_EntityTypeName" type="Object" />
+        <querystringparameter name="param_Localization" type="Object" />
+    </formparameters>
+    <header id="{543AA208-469D-456E-8D78-62ADFB610B40}">
+        <rows>
+            <row>
+                <cell id="{5101D6F7-83F5-4236-846D-D6FFD5E65870}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="InFormSchedulingHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="false" id="{07184C49-5EC3-4776-8C2B-2A07BC6702D6}" name="InFormSchedulingTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{c9a1d6ab-104f-4063-9220-90446f38e948}" name="Tab1_section1" height="auto" showlabel="true">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{773584d0-cbcc-554d-1757-beb3c839d9b7}" showlabel="false" colspan="1" auto="true" rowspan="17">
+                                        <labels>
+                                            <label description="In-Form scheduling iFrame" languagecode="1033" />
+                                        </labels>
+                                        <control id="InFormSchedulingControl" isunbound="true" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}">
+                                            <parameters>
+                                                <Url>msdyn_/InFormSchedule/html/index.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Initialize" libraryName="msdyn_/InFormSchedule/script/dist/main.js" handlerUniqueId="{2677c5ef-68f8-40a5-b4c3-49b12ece2f29}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/fps/LocalizationLibrary/Localization.Library.js" />
+                <internaljscriptfile src="$webresource:msdyn_/InFormSchedule/script/dist/main.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

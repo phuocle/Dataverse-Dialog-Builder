@@ -1,0 +1,127 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityType" type="SafeString" />
+        <querystringparameter name="param_emailFormData" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{D999A80F-111B-4996-9022-9134F21B76E4}" name="{D999A80F-111B-4996-9022-9134F21B76E4}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{8F0FD7AA-B596-4CA8-9581-214ADDBBAC93}" name="{8F0FD7AA-B596-4CA8-9581-214ADDBBAC93}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3B7CC41E-8C11-48B1-BF24-69E38A9C2A35}">
+                                        <labels>
+                                            <label description="Field Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="fieldname_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{4c4ba736-e47b-4b90-95cf-453c17e514c5}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0CB27558-2CC8-4D4E-A95C-ED61F6925146}">
+                                        <labels>
+                                            <label description="Record" languagecode="1033" />
+                                        </labels>
+                                        <control id="record_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{4c4ba736-e47b-4b90-95cf-453c17e514c5}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{DC4E3B16-EB9C-43EB-8AA7-C3F4BB39C3ED}">
+        <rows>
+            <row>
+                <cell id="{FD5B7548-B713-4D95-BCE4-5214E619216D}">
+                    <labels>
+                        <label description="Select Record" languagecode="1033" />
+                    </labels>
+                    <control id="inserttemplate_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{0EA6E505-4C97-4CE9-9603-A2C082BD26BB}">
+                    <labels>
+                        <label description="Select the record you want to select a template for." languagecode="1033" />
+                    </labels>
+                    <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{4f48b2fd-6a9a-47fc-9727-fb248091cc9c}">
+        <rows>
+            <row>
+                <cell id="{18394CB9-52D8-4F04-A030-EE4D9D43CC33}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="select_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{5C4EE141-8A5F-4EB4-B310-6A142DBD4C60}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.SelectTemplateRecipientDialog.onLoad" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{991048F1-9FD3-48FB-A5FA-3ABD3C4A4C07}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="select_id">
+            <Handlers>
+                <Handler functionName="Activities.SelectTemplateRecipientDialog.onSelect" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{08672F68-1067-4FDF-9024-5B036A4478BB}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.TemplateUtil.closeDialog" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{09127BFE-F7EF-468E-B8F3-5B5E44C79660}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="fieldname_id">
+            <Handlers>
+                <Handler functionName="Activities.SelectTemplateRecipientDialog.onPartyNameChange" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{3B2EAD52-F541-434F-98C0-C3E48CF46DC1}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/InsertEmailTemplate.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

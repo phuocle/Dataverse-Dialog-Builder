@@ -1,0 +1,139 @@
+<form>
+    <header id="{747b5143-a19f-4bd1-86c8-5d910b353bea}">
+        <rows>
+            <row>
+                <cell id="{ef647bf9-efc2-478b-b324-3550f90efae5}">
+                    <labels>
+                        <label description="Create a new email template" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{539db5d4-ffab-4dd6-8c49-e97b4fab6ae7}" name="{0fced550-e011-4fb0-b69a-cb2a8c506dc0}">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{5cc3cb63-0ebf-483a-8562-8bb978341660}" name="{bd5025ef-16ff-43fa-b3e7-b3d86b82ddee}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dc83d1ee-2f9e-4767-82ae-9ddc487d47a3}" rowspan="12">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="preview_host_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{2331f45b-50b0-4585-84b7-d49cc6f5719c}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{bea4298f-006e-46e7-a7e1-368ca4000d33}">
+        <rows>
+            <row>
+                <cell id="{2758fb18-263b-489f-9ff0-92788c0a98cb}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="select_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" disabled="true" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{6aab02f3-4c37-48cc-933f-79f78601fc6a}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Activities.Template.onTemplateGalleryLoad" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{0d8acc4b-60d5-4f11-9b1d-a80ba0d096e5}" enabled="true" parameters="'input_config','lbl_header'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="select_id">
+            <Handlers>
+                <Handler functionName="Activities.Template.onGallerySelectClick" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{ffb4c0f2-f72d-4237-a325-f31f6c164ded}" enabled="true" parameters="'dialog_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.Template.onGalleryCancelClick" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{2b8e4658-cd60-4c38-af48-439211be2eb5}" enabled="true" parameters="'dialog_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="dialog_result">
+            <Handlers>
+                <Handler functionName="Activities.Template.onGalleryResultChanged" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{5c6dfd79-9d92-4037-957e-a0bf3f00ab69}" enabled="true" parameters="'dialog_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="selected_item">
+            <Handlers>
+                <Handler functionName="Activities.Template.onGallerySelectedItemChanged" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{660e22b2-d9b7-4d8f-87f0-5baff43ecc8d}" enabled="true" parameters="'selected_item','select_id'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{2331f45b-50b0-4585-84b7-d49cc6f5719c}">
+            <customControl formFactor="0" name="MscrmControls.TemplateGalleryHostControl.TemplateGalleryHostControl">
+                <parameters>
+                    <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
+                    <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>
+                    <titleLabelId type="SingleLine.Text" static="true">lbl_header</titleLabelId>
+                    <inputConfig type="SingleLine.Text">input_config</inputConfig>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_item</outputItems>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.TemplateGalleryHostControl.TemplateGalleryHostControl">
+                <parameters>
+                    <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
+                    <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>
+                    <titleLabelId type="SingleLine.Text" static="true">lbl_header</titleLabelId>
+                    <inputConfig type="SingleLine.Text">input_config</inputConfig>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_item</outputItems>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.TemplateGalleryHostControl.TemplateGalleryHostControl">
+                <parameters>
+                    <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
+                    <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>
+                    <titleLabelId type="SingleLine.Text" static="true">lbl_header</titleLabelId>
+                    <inputConfig type="SingleLine.Text">input_config</inputConfig>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_item</outputItems>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="input_config" type="SafeString" />
+        <querystringparameter name="dialog_result" type="Boolean" />
+        <querystringparameter name="selected_item" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Template_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

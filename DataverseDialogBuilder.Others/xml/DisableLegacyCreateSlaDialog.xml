@@ -1,0 +1,112 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{ad604a32-8bfa-4b6c-a726-77fa975f0237}" name="{1263e3b1-e276-4e62-8a31-480db26ffe22}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" showlabel="false" columns="1" id="{9da9afb6-b38f-4553-a980-a9c8aaa4a8df}" name="{119ce99e-77f6-4d76-bd21-30a9afaa194b}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0c596d1b-beb4-4eb9-a76f-bbf05b65ec30}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="depreciation_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" showlabel="false" columns="1" id="{00c9030d-987a-4888-b946-20e5f4b217ba}" name="{8c4ac956-bc57-4485-bbaf-bf5301a79072}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{75e495b3-ad3d-4bc6-b773-66aeef502a3d}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="confirmation_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{8254f95b-41ca-4fcb-81b5-d7d8288be11e}">
+        <rows>
+            <row>
+                <cell id="{0f50d2b3-4521-4792-a302-e9be61746584}" showlabel="true">
+                    <labels>
+                        <label description="Create SLA" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{9b5c787d-9df3-4362-9d9c-fe1826307c07}">
+        <rows>
+            <row>
+                <cell id="{5566e60a-bb6b-4126-884d-671b90a88e20}" visible="false">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="confirm_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{2b7e0fa7-d9e4-473c-8228-d1c9c0051bfa}" visible="false">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="confirm_id">
+            <Handlers>
+                <Handler functionName="Mscrm.DisableLegacyCreateSlaDialog.onConfirmClick" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="{4592c384-ff04-4167-b52f-e295f8549fd3}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.InternalUtilities.DialogUtility.closeDialog" libraryName="/_static/_common/scripts/CommandbarActions.js" handlerUniqueId="{65e3de31-e88b-44a3-b2ad-b58f157047e4}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.DisableLegacyCreateSlaDialog.onLoadDepreciationDialog" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="{9c1ca31e-acd7-4b71-a336-32c6a6879b0a}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="/_static/_common/scripts/CommandbarActions.js" />
+                <internaljscriptfile src="$webresource:ServiceLevelAgreement/Sla/Sla_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Marketing/CommandActions/Marketing_CommandActions.js" />
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Convert/Incident_convert_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

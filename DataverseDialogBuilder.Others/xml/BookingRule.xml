@@ -1,0 +1,74 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_bookingRules" type="Object" />
+    </formparameters>
+    <header id="{894ece54-e741-46c0-b156-e82de70b8711}">
+        <rows>
+            <row>
+                <cell id="{009cb718-5433-4e89-9b04-a47dfc948a40}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="bookingRuleHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="false" id="{3d8553ca-73c4-421b-864d-49cc4e4b8e56}" name="Booking Rule" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%"></column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{3dda7a20-d28e-4f4e-9ed5-8bd0ac50f50b}">
+        <rows>
+            <row>
+                <cell id="{6d94eee4-9ad1-48df-9e1d-7c077fa16ec9}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="btnCancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{fc1da45c-e3a9-4ef7-91b9-a7fd4395303e}">
+                    <labels>
+                        <label description="Continue" languagecode="1033" />
+                    </labels>
+                    <control id="btnContinue" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="FPS.BookingRule.Core.OpenBookingRuleMDD" libraryName="msdyn_/fps/BookingRules/BookingRules.Core.js" handlerUniqueId="{3fdf43c3-6676-4efd-ad0b-711802dce9cd}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnCancel">
+            <Handlers>
+                <Handler functionName="FPS.BookingRule.Core.CancelProcess" libraryName="msdyn_/fps/BookingRules/BookingRules.Core.js" handlerUniqueId="{59be229b-f489-49c5-bca4-657fe33ae5f3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnContinue">
+            <Handlers>
+                <Handler functionName="FPS.BookingRule.Core.ContinueProcess" libraryName="msdyn_/fps/BookingRules/BookingRules.Core.js" handlerUniqueId="{38b80cc1-f692-4cd5-8bd1-eac7ae087570}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/fps/BookingRules/BookingRules.Core.js" />
+                <internaljscriptfile src="$webresource:msdyn_/fps/LocalizationLibrary/Localization.Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

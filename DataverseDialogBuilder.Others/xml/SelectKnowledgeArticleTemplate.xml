@@ -1,0 +1,98 @@
+<form>
+    <header id="{eb79bac3-1f76-445c-8ba7-bf41b954ff02}">
+        <rows>
+            <row>
+                <cell id="{04a6f8ac-0076-479a-b6ea-cd482f111559}">
+                    <labels>
+                        <label description="Select Knowledge Article Template" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_selectKnowledgeArticleTemplate" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{38245698-58d1-4c49-aa98-01b7690e4ea9}" name="{38245698-58d1-4c49-aa98-01b7690e4ea9}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{20a05150-96a9-4f48-9397-a17f445353d7}" name="{20a05150-96a9-4f48-9397-a17f445353d7}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{749cf404-781f-4cf1-a433-eb255ca499fc}">
+                                        <labels>
+                                            <label description="Choose a template​" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectTemplate_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{c546874f-3642-48df-99fb-cb0cf9749900}</DefaultViewId>
+                                                        <EntityLogicalName>msdyn_knowledgearticletemplate</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{aed307c3-44b3-4008-9695-aef6e4184ce0}">
+        <rows>
+            <row>
+                <cell id="{38922c7f-b25f-4524-b5e5-bc4990b45f7f}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{72aa9f8b-0169-4a82-9b55-d45fdb960d13}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="true" active="true" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.CommandBarActions.Instance.selectTemplateFromDialog" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleTemplate/KnowledgeArticleTemplateMainSystemLibrary.js" handlerUniqueId="{ad4c73ef-bbcf-40de-9304-fea697a859fe}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.CommandBarActions.Instance.onDialogCancel" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleTemplate/KnowledgeArticleTemplateMainSystemLibrary.js" handlerUniqueId="{ead740ea-2b48-4825-afa0-0a4fee449a88}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_knowledgeArticleId" type="SafeString" />
+        <querystringparameter name="param_msdyn_knowledgearticletemplateId" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_articlePublicNumber" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleTemplate/KnowledgeArticleTemplateMainSystemLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

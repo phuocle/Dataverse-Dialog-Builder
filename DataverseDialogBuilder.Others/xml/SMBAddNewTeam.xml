@@ -1,0 +1,122 @@
+<form>
+    <formparameters>
+        <querystringparameter name="save_success" type="Boolean" />
+        <querystringparameter name="businessUnit_data" type="Object" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{d160dd18-65bd-40ec-9d38-9d7e274bedf4}" name="{d160dd18-65bd-40ec-9d38-9d7e274bedf4}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{e19c857c-d536-434f-a557-dce223e391c1}" name="{e19c857c-d536-434f-a557-dce223e391c1}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7383815b-71f5-4788-9e0a-dc68275ea37e}" visible="false">
+                                        <labels>
+                                            <label description="Team Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="teamName_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>160</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3c159206-0535-495b-b930-3fab14b75134}" visible="false">
+                                        <labels>
+                                            <label description="Business Unit Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessUnitName_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>160</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e43c7909-570b-4dca-ae2b-a33f03fbc5eb}" visible="false">
+                                        <labels>
+                                            <label description="Team Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="teamDescription_id" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5be3647d-9dce-47fe-b811-bd10566f4bfd}" visible="false">
+                                        <labels>
+                                            <label description="Select Team Administrator" languagecode="1033" />
+                                        </labels>
+                                        <control id="teamAdministrator_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{E88CA999-0B16-4AE9-B6A9-9EDC840D42D8}</DefaultViewId>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{3e6ea93a-9010-407f-84ca-68f5c156425a}">
+        <rows>
+            <row>
+                <cell id="{36faac99-5e45-4317-bedb-5bc6941a54f9}">
+                    <labels>
+                        <label description="Add New Team" languagecode="1033" />
+                    </labels>
+                    <control id="add_new_team" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{9bbd2bf2-87af-4956-b4c4-47b45f52297a}">
+        <rows>
+            <row>
+                <cell id="{b84f5c30-a184-472f-a63f-0f8132c83c86}" visible="false">
+                    <labels>
+                        <label description="Add" languagecode="1033" />
+                    </labels>
+                    <control id="add_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="add_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.AddTeam.AddButtonClickHandler" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{20036006-68c9-4f0a-aa41-1001f3c5cf38}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.AddTeam.OnLoadHandler" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{e9a5eecd-c6b7-4511-a9e8-51d20d082181}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

@@ -1,0 +1,191 @@
+<form>
+    <hiddencontrols>
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{3819f7c3-d785-4e4d-ad66-82fa3918e823}" name="{3819f7c3-d785-4e4d-ad66-82fa3918e823}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{f5969373-8c5c-4894-aa12-6549f652e167}" name="{f5969373-8c5c-4894-aa12-6549f652e167}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a710c0e0-5855-45cb-82d5-da01623dd4ba}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_headerdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e99a1b5e-86b9-410b-9eec-7d24765feac0}">
+                                        <labels>
+                                            <label description="Route To" languagecode="1033" />
+                                        </labels>
+                                        <control id="routeto_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{6a1c0d0f-2420-490e-a50e-4f84c54d872b}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0accd0ed-28b3-4bea-b1de-6331efb60e5c}">
+                                        <labels>
+                                            <label description="Add to the following Queue:" languagecode="1033" />
+                                        </labels>
+                                        <control id="crmQueueLookupControl_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{f374f814-00a2-44ed-8b88-13f34e202e79}</DefaultViewId>
+                                                        <EntityLogicalName>queue</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{32803989-6e8d-451c-857e-90fe0a81e79b}">
+                                        <labels>
+                                            <label description="The item will be assigned to the user/team to work on." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_assignedtouser" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{faa8aec1-4634-44c5-bc86-307c657cc0ca}">
+                                        <labels>
+                                            <label description="The item(s) cannot be removed from the UR queue(s)." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_removaldenial" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c6979b0b-4d35-4572-9f76-307085a1da86}">
+                                        <labels>
+                                            <label description="Also remove the item(s) from the Queue" languagecode="1033" />
+                                        </labels>
+                                        <control id="chkBoxRemoveItem_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{2abb66b9-044e-493d-a3c9-0d1ed85f7592}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c4f1e2a3-4633-4d76-9e77-97d67235d197}">
+                                        <labels>
+                                            <label description="Add to the following User:" languagecode="1033" />
+                                        </labels>
+                                        <control id="crmUserLookupControl_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>                                                        <!--TODO: Add DefaultViewId-->
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>team</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{1f417e61-53f6-43b5-9b1b-563e3296e5d4}">
+        <rows>
+            <row>
+                <cell id="{f1695f96-2061-4cba-a79d-fae20b45d6dd}">
+                    <labels>
+                        <label description="Route Queued Item" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_route" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{770fe5dd-4654-4fbc-9281-a177ba48ba3a}">
+        <rows>
+            <row>
+                <cell id="{4cc7c4f1-039f-45c2-8d2f-104a9b1a1ca8}">
+                    <labels>
+                        <label description="Route" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" disabled="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{ad30d2c4-b4f1-4de5-af19-aeecff3da217}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="AppCommon.QueueItemCommandBarActions.queueItemDialogRouteClick" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="{ccc7230b-a996-4629-a394-10982d3f1028}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="AppCommon.Commands.Queue.closeDialog" libraryName="AppCommon/Commands/QueueCommands.js" handlerUniqueId="{2c5f7484-35b8-4ed9-b961-9e3f88dfb319}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="routeto_id">
+            <Handlers>
+                <Handler functionName="AppCommon.QueueItemCommandBarActions.queueItemDialogRouteToChange" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="{c287dd76-233f-47ee-8e83-0397fc1eff4d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="AppCommon.QueueItemCommandBarActions.queueItemDialogRouteOnLoad" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="efe2a3cb-3298-46d0-9312-ccf4fa1203c7" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="crmUserLookupControl_id">
+            <Handlers>
+                <Handler functionName="AppCommon.QueueItemCommandBarActions.queueItemDialogRouteLookupChange" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="{676423fc-2156-41c9-8857-e212a1d5cb3e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="crmQueueLookupControl_id">
+            <Handlers>
+                <Handler functionName="AppCommon.QueueItemCommandBarActions.queueItemDialogRouteLookupChange" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="{e49144da-a2c8-438a-af1b-00b482b0b882}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_records" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/QueueItem/QueueItem.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,106 @@
+<form>
+    <formparameters>
+        <querystringparameter name="total_records_selected" type="SafeString" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="selected_records" type="Object" />
+        <querystringparameter name="parent_id" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{925b0bce-a1ca-45c1-ac10-14d93ddc365e}" name="{925b0bce-a1ca-45c1-ac10-14d93ddc365e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{6f64fa78-f7f6-4608-86c9-389d5a381f06}">
+                <rows>
+                    <row>
+                        <cell id="{93958e9d-c420-4dab-a886-2dc67cad3384}">
+                            <labels>
+                                <label description="Change Manager" languagecode="1033" />
+                            </labels>
+                            <control id="changemanager_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <tabfooter id="{7ca41398-1e1d-4a0b-932a-8852701aabf5}">
+                <rows>
+                    <row>
+                        <cell id="{7cf3c495-6b89-416b-b0f3-dc0bc7ca4c71}">
+                            <labels>
+                                <label description="OK" languagecode="1033" />
+                            </labels>
+                            <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{6ca27a5d-2977-4b92-8e65-c5fabd68613d}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{45636d0c-7a7e-49c6-81b1-F1dea10014de}" name="{45636d0c-7a7e-49c6-81b1-F1dea10014de}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5C33A9F1-A304-4BB9-8F10-A794FF3BCA2A}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="header_description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f613b0cf-f6e1-4e9c-b5ed-045cd341444e}">
+                                        <labels>
+                                            <label description="New manager:" languagecode="1033" />
+                                        </labels>
+                                        <control id="changemanagercontrol_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{E88CA999-0B16-4AE9-B6A9-9EDC840D42D8}</DefaultViewId>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser_ChangeManager.SaveChangeManager" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{529B38FA-F357-4F11-A09E-0250C535E0BB}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser_ChangeManager.CancelChangeManager" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{ce8f355d-0010-4299-a9bd-719e7d4cc0cd}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="true">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser_ChangeManager.OnLoadChangeManager" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{CB7A8778-26A6-465E-8BF5-C57E081C7B0F}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

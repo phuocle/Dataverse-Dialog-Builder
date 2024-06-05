@@ -1,0 +1,103 @@
+<form>
+    <formparameters>
+        <querystringparameter name="current_record_id" type="SafeString" />
+        <querystringparameter name="duplicate_record_count" type="SafeString" />
+        <querystringparameter name="current_record_delete_requested" type="Boolean" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{F74C848E-D3EF-4E65-B2BA-26643D29792F}" name="{F74C848E-D3EF-4E65-B2BA-26643D29792F}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5E216FA8-392F-4F4B-B4EB-762519F18C97}" name="{5E216FA8-392F-4F4B-B4EB-762519F18C97}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{96A5B205-D50C-42C2-B531-0E69011709FA}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="updated_duplicate_count" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{A33CE790-000E-4498-AE8D-8A62B1E338CA}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="duplicateLeadsContainer" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{EB2ACAEA-76BE-4C74-A568-B21A04AA2AFF}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{9C73E67B-9515-4167-920A-977AC795F8EA}">
+        <rows>
+            <row>
+                <cell id="{C1B3CB9F-A472-4D4E-8B9F-52806EC3FDB8}">
+                    <labels>
+                        <label description="Possible duplicate records" languagecode="1033" />
+                    </labels>
+                    <control id="duplicatedialog_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.LeadHygiene.DuplicateLeadNotificationLibrary.duplicateDialogOnLoad" libraryName="LeadHygiene/Lead/leadhygiene_form_notification_library.js" handlerUniqueId="{643727A3-C5BF-470A-89D3-D8D2FCB98F90}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="updated_duplicate_count">
+            <Handlers>
+                <Handler functionName="Mscrm.LeadHygiene.DuplicateLeadNotificationLibrary.onChangeDuplicateCount" libraryName="LeadHygiene/Lead/leadhygiene_form_notification_library.js" handlerUniqueId="{E2C34342-6AC7-44E7-BA42-486D7150091A}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:LeadHygiene/Lead/leadhygiene_form_notification_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{EB2ACAEA-76BE-4C74-A568-B21A04AA2AFF}">
+            <customControl name="MscrmControls.LeadHygiene.LeadHygieneDuplicateDialogControl" formFactor="0">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">current_record_id</SelectedRecordId>
+                    <DuplicateRecordCount type="SingleLine.Text">duplicate_record_count</DuplicateRecordCount>
+                    <UpdatedDuplicateCount type="SingleLine.Text">updated_duplicate_count</UpdatedDuplicateCount>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.LeadHygiene.LeadHygieneDuplicateDialogControl" formFactor="1">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">current_record_id</SelectedRecordId>
+                    <DuplicateRecordCount type="SingleLine.Text">duplicate_record_count</DuplicateRecordCount>
+                    <UpdatedDuplicateCount type="SingleLine.Text">updated_duplicate_count</UpdatedDuplicateCount>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.LeadHygiene.LeadHygieneDuplicateDialogControl" formFactor="2">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">current_record_id</SelectedRecordId>
+                    <DuplicateRecordCount type="SingleLine.Text">duplicate_record_count</DuplicateRecordCount>
+                    <UpdatedDuplicateCount type="SingleLine.Text">updated_duplicate_count</UpdatedDuplicateCount>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

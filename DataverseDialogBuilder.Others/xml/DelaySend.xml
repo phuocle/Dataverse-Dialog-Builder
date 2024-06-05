@@ -1,0 +1,130 @@
+<form>
+    <hiddencontrols>
+        <data id="delayedSendTime" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="footerText" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="dateErrorText" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="now" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{0238EEF1-F5C6-480A-9A3C-182D1C8924C0}" name="{0238EEF1-F5C6-480A-9A3C-182D1C8924C0}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{9D2B3BD1-4CD5-4B7A-A462-B2AC24700A44}" name="{9D2B3BD1-4CD5-4B7A-A462-B2AC24700A44}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{757FAE4C-3523-4B4F-BE68-748F8D084C2D}" showlabel="true">
+                                        <labels>
+                                            <label description="Send this email later at specific time." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{D155C060-12F1-4BBD-80DA-E52CE74C3C69}" showlabel="true">
+                                        <labels>
+                                            <label description="Send at" languagecode="1033" />
+                                        </labels>
+                                        <control id="sendAtDate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>DateTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{AE75CDC5-B599-4D70-941E-A8AC7924251A}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_textFooter" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters />
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{A3ECE017-744F-461A-8FE0-3FD5C3158CE4}">
+        <rows>
+            <row>
+                <cell id="{2B8321BE-A30F-4CD5-8856-09997D73DFB4}">
+                    <labels>
+                        <label description="Send Later" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_sendLater" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{B53E11AD-D0E1-40BA-983A-303B7E1A367C}">
+        <rows>
+            <row>
+                <cell id="{4BF211C1-D9AF-4EF3-943D-6F1551A82899}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{19728E68-4E9B-4D4B-B35A-46E671FDB958}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.sendLaterClick" libraryName="Email_main_system_library.js" handlerUniqueId="{C31640C3-592E-4968-89CF-612558AA6CD1}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.InternalUtilities.DialogUtility.closeDialog" libraryName="/_static/_common/scripts/CommandbarActions.js" handlerUniqueId="{4FB0BACD-5FA4-4A1B-8F94-43895F1CED66}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.sendLaterOnLoad" libraryName="Email_main_system_library.js" handlerUniqueId="{7CAAA955-C197-4EB4-8974-41A8A3874E87}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="sendAtDate">
+            <Handlers>
+                <Handler functionName="Mscrm.sendLaterOnChange" libraryName="Email_main_system_library.js" handlerUniqueId="{ED2DD55E-6BB7-4F77-A50F-DCB2241BB65C}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="/_static/activities/email.js" />
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Email_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Marketing/CommandActions/Marketing_CommandActions.js" />
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Convert/Incident_convert_library.js" />
+                <internaljscriptfile src="$webresource:Service/Activities/activity.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,121 @@
+<form>
+    <hiddencontrols />
+    <tabs>
+        <tab verticallayout="false" id="{28d3b3f3-d6ce-44d5-ac69-d915b04d317f}" name="{d8cd01ac-35c9-4750-9f67-ce81ef9ee549}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{d3b73838-5096-4c13-a994-0464da85935e}" name="{d72863c2-13cc-47a6-9170-579e4a5cb3dc}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{32a5f175-9e84-4cf1-a87a-87540c0c7dbe}">
+                                        <labels>
+                                            <label description="Playbooks help teams establish consistent, streamlined responses to routine sales events and milestones." languagecode="1033" />
+                                        </labels>
+                                        <control id="isplaybookenabled" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{c4bafa8f-94b2-45f9-896e-7525cf7d1307}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>false</DefaultValue>
+                                                <OptionSetId>{A0C7F96F-1FF3-40D8-AB75-5CE202DA11D9}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{ca04a065-5721-44da-ade2-cb4b545a5b62}">
+                <rows>
+                    <row>
+                        <cell id="{4e628b8c-c216-445a-be0d-b6604f95db95}">
+                            <labels>
+                                <label description="Apply" languagecode="1033" />
+                            </labels>
+                            <control id="okButton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{1ca1b0dd-a808-4d42-a876-b5497f8651e6}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancelButton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onLoad" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.PlayBookSettings.onLoad" libraryName="Playbook/PlayBookSettings/Play_Book_Admin_Settings.js" handlerUniqueId="{369DE835-A4F4-4BEC-90C6-8F8D55C2E868}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="okButton">
+            <Handlers>
+                <Handler functionName="Mscrm.PlayBookSettings.okAction" libraryName="Playbook/PlayBookSettings/Play_Book_Admin_Settings.js" handlerUniqueId="{7BF72672-0843-4741-8F66-5A6649307ABC}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelButton">
+            <Handlers>
+                <Handler functionName="Mscrm.PlayBookSettings.closeDialog" libraryName="Playbook/PlayBookSettings/Play_Book_Admin_Settings.js" handlerUniqueId="{4F1DF095-4FD0-4E21-BEFF-2E0E23394DC0}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <header id="{5eca9884-ddf5-4530-96c2-123f985c558b}">
+        <rows>
+            <row>
+                <cell id="{fccb6227-fa3d-4952-8fa4-2f5e4a276b50}">
+                    <labels>
+                        <label description="[DEPRECATED] Playbook Settings" languagecode="1033" />
+                    </labels>
+                    <control classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" id="formtitle_title" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{b683870e-59c4-4825-87c9-51438bbeb98a}">
+                    <labels>
+                        <label description="Set Playbook settings for Microsoft Dynamics 365." languagecode="1033" />
+                    </labels>
+                    <control classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" id="formheader_description" isunbound="true"></control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Playbook/PlayBookSettings/Play_Book_Admin_Settings.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{c4bafa8f-94b2-45f9-896e-7525cf7d1307}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">isplaybookenabled</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">isplaybookenabled</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">isplaybookenabled</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

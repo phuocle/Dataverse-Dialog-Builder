@@ -1,0 +1,428 @@
+<form>
+    <hiddencontrols>
+        <data id="samedayweekoptionoutput" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <formparameters>
+        <querystringparameter name="param_repeatValue" type="SafeString" />
+        <querystringparameter name="param_everyFieldValue" type="Integer" />
+        <querystringparameter name="param_radioOptionsList" type="SafeString" />
+        <querystringparameter name="param_isVertical" type="SafeString" />
+        <querystringparameter name="param_sameselectedvalue" type="SafeString" />
+        <querystringparameter name="param_patternstartdate" type="DateTime" />
+        <querystringparameter name="param_patternenddate" type="DateTime" />
+        <querystringparameter name="param_returnValueRecurring" type="SafeString" />
+        <querystringparameter name="param_daysofweekmask" type="SafeString" />
+        <querystringparameter name="param_starttime" type="DateTime" />
+        <querystringparameter name="param_endtime" type="DateTime" />
+        <querystringparameter name="param_startTimeName" type="SafeString" />
+        <querystringparameter name="param_endTimeName" type="SafeString" />
+        <querystringparameter name="param_duration" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_seriesid" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{87a9a6c6-7c44-42e1-b248-fdb315085a54}" name="{87a9a6c6-7c44-42e1-b248-fdb315085a54}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{526532dc-0eab-4f62-8148-03eca596c90a}" name="AppointmentTimeSection">
+                            <labels>
+                                <label description="Appointment time" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{430bfe09-1c2f-4afe-aa60-94016d677008}">
+                                        <labels>
+                                            <label description="Start time" languagecode="1033" />
+                                        </labels>
+                                        <control id="starttime_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{aaee1584-0cbc-48a9-b268-340c692c2dc4}" isunbound="true" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6e44830e-b855-417d-b2ad-aeb56f13251d}">
+                                        <labels>
+                                            <label description="End time" languagecode="1033" />
+                                        </labels>
+                                        <control id="endtime_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{7de71fde-005f-4b88-85e2-6954a61f4377}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9b1d975c-77d4-48af-ae2e-0a8b9a51bef0}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="duration_id" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{ffb59221-d7b6-4501-9d20-7493069d7953}" name="RecurrencePatternSection">
+                            <labels>
+                                <label description="Recurrence Pattern" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{918e5054-8090-42fc-8b07-ca783dbd59ab}">
+                                        <labels>
+                                            <label description="Repeat" languagecode="1033" />
+                                        </labels>
+                                        <control id="repeat_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{e451f2cb-abf1-4f28-b6b5-20893fa3b24e}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fee2cd9d-e567-4e1f-a361-56cc67f3df3c}" visible="false" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="sameradios_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{6a6801ea-9afb-4dff-ac39-8ddb79dfb085}" isunbound="true">
+                                            <parameters>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{770eef9d-bca7-494d-944d-4ba65b71d7b6}" visible="false">
+                                        <labels>
+                                            <label description="Days" languagecode="1033" />
+                                        </labels>
+                                        <control id="daysofweek_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{a3977d21-7e09-4d79-8418-48dc7332890b}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{86065928-d14e-4af8-81ff-33b1432726a6}" visible="false">
+                                        <labels>
+                                            <label description="Week" languagecode="1033" />
+                                        </labels>
+                                        <control id="sameweekweek_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{f533df07-4f5e-4e8f-b2d6-c2abf06673f6}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{963fc6fa-b4c6-4e90-9392-12f6d270c1e9}" visible="false">
+                                        <labels>
+                                            <label description="Day" languagecode="1033" />
+                                        </labels>
+                                        <control id="sameweekday_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{11d3400d-2067-4393-a113-a90ea955efb8}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{09411e12-19dc-4e9c-8b17-3886d224a3ce}" visible="false">
+                                        <labels>
+                                            <label description="Day" languagecode="1033" />
+                                        </labels>
+                                        <control id="samedayday_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f8ee62fc-87f3-410c-84fd-fab503f7a6cd}" visible="false">
+                                        <labels>
+                                            <label description="Month" languagecode="1033" />
+                                        </labels>
+                                        <control id="yearlymonth_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{80a558ae-003b-4d7e-a56a-1555ce5961f2}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8d13235e-e8f7-4ada-80ce-7235b95cf514}" visible="true">
+                                        <labels>
+                                            <label description="Every" languagecode="1033" />
+                                        </labels>
+                                        <control id="every_id" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" disabled="false" uniqueid="{b10bbbba-0663-45f8-829d-785ce4ede22b}">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>99</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{4b7baf90-89de-4067-ad4c-8b059a3a6478}" name="RangeOfRecurrenceSection">
+                            <labels>
+                                <label description="Range of recurrence" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{926e9149-e5f0-4282-b41b-cc0dd9deb723}">
+                                        <labels>
+                                            <label description="Starts" languagecode="1033" />
+                                        </labels>
+                                        <control id="rangestart_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a5af4b6e-5832-408c-b988-f3310e4c380f}">
+                                        <labels>
+                                            <label description="Ends" languagecode="1033" />
+                                        </labels>
+                                        <control id="endspicklist_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{77f98ebd-57a3-48da-a461-e91699207d71}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{84956ecd-f201-4959-9a61-65cfc7e4c13b}" visible="false">
+                                        <labels>
+                                            <label description="Total occurences" languagecode="1033" />
+                                        </labels>
+                                        <control id="totaloccurences_id" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>999</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c1c3d1ac-1b0b-4c38-ae07-d57d8ece7ce5}" visible="false">
+                                        <labels>
+                                            <label description="End date" languagecode="1033" />
+                                        </labels>
+                                        <control id="enddate_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{6a6801ea-9afb-4dff-ac39-8ddb79dfb085}">
+            <customControl formFactor="0" name="MscrmControls.Activity.RadioButtonsControl">
+                <parameters>
+                    <options type="SingleLine.Text">param_radioOptionsList</options>
+                    <selectedValue type="SingleLine.Text">param_sameselectedvalue</selectedValue>
+                    <isVertical type="SingleLine.Text">param_isVertical</isVertical>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Activity.RadioButtonsControl">
+                <parameters>
+                    <options type="SingleLine.Text">param_radioOptionsList</options>
+                    <selectedValue type="SingleLine.Text">param_sameselectedvalue</selectedValue>
+                    <isVertical type="SingleLine.Text">param_isVertical</isVertical>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Activity.RadioButtonsControl">
+                <parameters>
+                    <options type="SingleLine.Text">param_radioOptionsList</options>
+                    <selectedValue type="SingleLine.Text">param_sameselectedvalue</selectedValue>
+                    <isVertical type="SingleLine.Text">param_isVertical</isVertical>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{b10bbbba-0663-45f8-829d-785ce4ede22b}">
+            <customControl name="MscrmControls.Activity.EveryTextLabelControl" formFactor="0">
+                <parameters>
+                    <repeatPattern type="SingleLine.Text">param_repeatValue</repeatPattern>
+                    <fieldValue type="Number">param_everyFieldValue</fieldValue>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Activity.EveryTextLabelControl" formFactor="1">
+                <parameters>
+                    <repeatPattern type="SingleLine.Text">param_repeatValue</repeatPattern>
+                    <fieldValue type="Number">param_everyFieldValue</fieldValue>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Activity.EveryTextLabelControl" formFactor="2">
+                <parameters>
+                    <repeatPattern type="SingleLine.Text">param_repeatValue</repeatPattern>
+                    <fieldValue type="Number">param_everyFieldValue</fieldValue>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{a3977d21-7e09-4d79-8418-48dc7332890b}">
+            <customControl formFactor="0" name="MscrmControls.Activity.WeekDayPickerControl">
+                <parameters>
+                    <weekDayMask type="SingleLine.Text">param_daysofweekmask</weekDayMask>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Activity.WeekDayPickerControl">
+                <parameters>
+                    <weekDayMask type="SingleLine.Text">param_daysofweekmask</weekDayMask>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Activity.WeekDayPickerControl">
+                <parameters>
+                    <weekDayMask type="SingleLine.Text">param_daysofweekmask</weekDayMask>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{aaee1584-0cbc-48a9-b268-340c692c2dc4}">
+            <customControl formFactor="0" name="MscrmControls.Activity.TimeControl">
+                <parameters>
+                    <value type="DateTime">param_starttime</value>
+                    <displayName type="String">param_startTimeName</displayName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Activity.TimeControl">
+                <parameters>
+                    <value type="DateTime">param_starttime</value>
+                    <displayName type="String">param_startTimeName</displayName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Activity.TimeControl">
+                <parameters>
+                    <value type="DateTime">param_starttime</value>
+                    <displayName type="String">param_startTimeName</displayName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{7de71fde-005f-4b88-85e2-6954a61f4377}">
+            <customControl formFactor="0" name="MscrmControls.Activity.TimeControl">
+                <parameters>
+                    <value type="DateTime">param_endtime</value>
+                    <displayName type="String">param_endTimeName</displayName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Activity.TimeControl">
+                <parameters>
+                    <value type="DateTime">param_endtime</value>
+                    <displayName type="String">param_endTimeName</displayName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Activity.TimeControl">
+                <parameters>
+                    <value type="DateTime">param_endtime</value>
+                    <displayName type="String">param_endTimeName</displayName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <header id="{03ac8448-f9a3-4371-967d-ee3ad88200f8}">
+        <rows>
+            <row>
+                <cell id="{40118a75-da7a-4c1a-adad-4405246260bb}">
+                    <labels>
+                        <label description="Set Recurrence" languagecode="1033" />
+                    </labels>
+                    <control id="setrecurrence_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{611b7c23-0b6c-477e-89f0-1914663d3388}">
+                    <labels>
+                        <label description="Select the appointment time, recurrence pattern and the range of recurrence" languagecode="1033" />
+                    </labels>
+                    <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{b7842997-2f45-45c7-a0e7-c2cac6af623e}">
+        <rows>
+            <row>
+                <cell id="{3fc6928a-29d8-4bda-8914-0f1fc921db0a}">
+                    <labels>
+                        <label description="Set" languagecode="1033" />
+                    </labels>
+                    <control id="set_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{8f600cbf-c36e-490c-89c5-ae936895a368}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{d2000d43-a724-43cc-a074-8a8b4779c80e}">
+                    <labels>
+                        <label description="End Series" languagecode="1033" />
+                    </labels>
+                    <control id="endseries_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.RecurrenceDialog.RecurrenceDialogOnLoad" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{28618a2b-dade-4604-bdd5-b7ebbb2e3507}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="repeat_id">
+            <Handlers>
+                <Handler functionName="Activities.RecurrenceDialog.RepeatOnChange" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{7c14f05c-0448-4a41-9680-1974ba0c8ab7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="param_sameselectedvalue">
+            <Handlers>
+                <Handler functionName="Activities.RecurrenceDialog.SameDayOrWeekOnChange" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{395e8977-3d49-451d-ac7a-6ec759869bda}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="endspicklist_id">
+            <Handlers>
+                <Handler functionName="Activities.RecurrenceDialog.RangeEndTypeOnChange" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{6bae1b38-36c3-4f17-ad2f-831ef778cfd3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="param_starttime">
+            <Handlers>
+                <Handler functionName="Activities.RecurrenceDialog.StartTimeOnChange" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{1ad7135b-c6bf-48c7-a872-f24b0c32b563}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="param_endtime">
+            <Handlers>
+                <Handler functionName="Activities.RecurrenceDialog.EndTimeOnChange" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{f09a56e8-169a-4d3c-ba3f-9a01b55787d7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="duration_id">
+            <Handlers>
+                <Handler functionName="Activities.RecurrenceDialog.DurationOnChange" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{257cceac-279f-4968-a123-693178893f85}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="set_id">
+            <Handlers>
+                <Handler functionName="Activities.RecurrenceDialog.SetRecurrence" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{6d51ebff-7332-4bb4-96bc-58b02405486c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="endseries_id">
+            <Handlers>
+                <Handler functionName="Activities.RecurringAppointmentMaster.EndSeriesFromDialog" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{ad2e9f61-127c-48d0-a2bd-14468781e08b}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.RecurrenceDialog.CancelDialog" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{de794a89-c05a-4d6b-a422-9e6e0876ef62}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

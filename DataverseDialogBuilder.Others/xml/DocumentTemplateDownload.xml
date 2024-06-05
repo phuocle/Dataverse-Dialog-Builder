@@ -1,0 +1,133 @@
+<form>
+    <formparameters>
+        <querystringparameter name="DocTemplateFile_Type" type="Integer" />
+        <querystringparameter name="DocTemplate_Type" type="Integer" />
+        <querystringparameter name="file_data" type="SafeString" />
+        <querystringparameter name="Entity_Name" type="SafeString" />
+        <querystringparameter name="View_Id" type="SafeString" />
+        <querystringparameter name="fetch_xmldata" type="SafeString" />
+        <querystringparameter name="current_view" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{53782dcb-41b1-419f-b5d6-8662a24036ff}" name="{53782dcb-41b1-419f-b5d6-8662a24036ff}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{799d8083-819b-41f6-8e7f-e341ac6c2204}" name="{799d8083-819b-41f6-8e7f-e341ac6c2204}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8513f348-11bc-440d-9300-dd6530002284}" showlabel="false">
+                                        <labels>
+                                            <label description="Download" languagecode="1033" />
+                                        </labels>
+                                        <control id="download_template_download" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{cfa1ec4e-ad4a-4430-8625-090daee6a165}">
+                                            <parameters>
+                                                <MaxLength>142606336</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{e48693f5-b762-48b6-8850-8a571a7486ee}">
+        <rows>
+            <row>
+                <cell id="{051edcdd-1cce-4a5a-b1fd-9b7523957676}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="download_template_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{508398d6-192c-427b-bb39-7a63c96f5a05}">
+        <rows>
+            <row>
+                <cell id="{4ddaa96f-620f-4f95-9e83-07f2bde8e012}">
+                    <labels>
+                        <label description="Download" languagecode="1033" />
+                    </labels>
+                    <control id="download_template_doc_download" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{0d10aa54-31a8-43ed-8b90-d3c184d7f02c}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="download_template_doc_cancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false" attribute="download_template_header_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.DocTemplateDownload.DocTemplateDownloadOnLoad" libraryName="AppCommon/ControlWS/DocTemplateDownload/DocTemplateDownload.js" handlerUniqueId="{64383e65-273d-461d-9e23-ca5d482197c4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="download_template_doc_download">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.DocTemplateDownload.DocTemplateDownloadFile" libraryName="AppCommon/ControlWS/DocTemplateDownload/DocTemplateDownload.js" handlerUniqueId="{64383e65-273d-461d-9e23-ca5d482197c4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="download_template_doc_cancel">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.DocTemplateDownload.DocTemplateDownloadClose" libraryName="AppCommon/ControlWS/DocTemplateDownload/DocTemplateDownload.js" handlerUniqueId="{d402f011-5f7e-4b50-941c-b227a53a4d0c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/ControlWS/DocTemplateDownload/DocTemplateDownload.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{cfa1ec4e-ad4a-4430-8625-090daee6a165}">
+            <customControl name="MscrmControls.AppCommon.DocTemplateDownload.DocTemplateDownloadControl" formFactor="0">
+                <parameters>
+                    <dialogtype type="Whole.None">DocTemplateFile_Type</dialogtype>
+                    <entityname type="SingleLine.Text">Entity_Name</entityname>
+                    <viewid type="SingleLine.Text">View_Id</viewid>
+                    <fetchxmldata type="SingleLine.Text">fetch_xmldata</fetchxmldata>
+                    <file_data type="SingleLine.Text">file_data</file_data>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.DocTemplateDownload.DocTemplateDownloadControl" formFactor="1">
+                <parameters>
+                    <dialogtype type="Whole.None">DocTemplateFile_Type</dialogtype>
+                    <entityname type="SingleLine.Text">Entity_Name</entityname>
+                    <viewid type="SingleLine.Text">View_Id</viewid>
+                    <fetchxmldata type="SingleLine.Text">fetch_xmldata</fetchxmldata>
+                    <file_data type="SingleLine.Text">file_data</file_data>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.DocTemplateDownload.DocTemplateDownloadControl" formFactor="2">
+                <parameters>
+                    <dialogtype type="Whole.None">DocTemplateFile_Type</dialogtype>
+                    <entityname type="SingleLine.Text">Entity_Name</entityname>
+                    <viewid type="SingleLine.Text">View_Id</viewid>
+                    <fetchxmldata type="SingleLine.Text">fetch_xmldata</fetchxmldata>
+                    <file_data type="SingleLine.Text">file_data</file_data>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

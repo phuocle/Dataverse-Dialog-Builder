@@ -1,0 +1,89 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityType" type="SafeString" />
+        <querystringparameter name="param_entityTypeCode" type="SafeString" />
+        <querystringparameter name="param_templateType" type="SafeString" />
+        <querystringparameter name="param_documentType" type="SafeString" />
+    </formparameters>
+    <header id="{8ce36364-a3bf-49c4-94b3-75670b349d4f}">
+        <rows>
+            <row>
+                <cell id="{af9e3d2e-dcd2-4f13-8459-5135cedca6f8}">
+                    <labels>
+                        <label description="Export to PDF" languagecode="1033" />
+                    </labels>
+                    <control id="createPDF_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{7dbb014e-aa9d-40b3-8296-8d59ecdee62f}" name="{CC597D0F-BC87-4C7F-B4F0-A78BFAEA8727}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{47b60e6d-6acd-4531-82ab-388c78ef68d1}" name="{53EA9959-1BC6-47C9-8779-805CD21551BD}" columns="1" showbar="false" showlabel="false" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3e28f35a-cc61-4533-b5ee-5fc76d665301}" showlabel="false" rowspan="6">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="pdfpreviewcontrolid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{b96f1da1-d4fc-4af3-9a9f-e11b5370fbcc}">
+                                            <parameters>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <clientresources />
+    <controlDescriptions>
+        <controlDescription forControl="{b96f1da1-d4fc-4af3-9a9f-e11b5370fbcc}">
+            <customControl name="MscrmControls.AppCommon.PDFParent.PDFParentControl" formFactor="0">
+                <parameters>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityType type="SingleLine.Text">param_entityType</entityType>
+                    <entityTypeCode type="SingleLine.Text">param_entityTypeCode</entityTypeCode>
+                    <templateType type="SingleLine.Text">param_templateType</templateType>
+                    <documentType type="SingleLine.Text">param_documentType</documentType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PDFParent.PDFParentControl" formFactor="1">
+                <parameters>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityType type="SingleLine.Text">param_entityType</entityType>
+                    <entityTypeCode type="SingleLine.Text">param_entityTypeCode</entityTypeCode>
+                    <templateType type="SingleLine.Text">param_templateType</templateType>
+                    <documentType type="SingleLine.Text">param_documentType</documentType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PDFParent.PDFParentControl" formFactor="2">
+                <parameters>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityType type="SingleLine.Text">param_entityType</entityType>
+                    <entityTypeCode type="SingleLine.Text">param_entityTypeCode</entityTypeCode>
+                    <templateType type="SingleLine.Text">param_templateType</templateType>
+                    <documentType type="SingleLine.Text">param_documentType</documentType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

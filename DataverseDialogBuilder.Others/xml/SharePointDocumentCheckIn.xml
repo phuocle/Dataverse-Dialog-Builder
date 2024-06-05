@@ -1,0 +1,124 @@
+<form>
+    <formparameters>
+        <querystringparameter name="entity_Id" type="SafeString" />
+        <querystringparameter name="location_Id" type="SafeString" />
+        <querystringparameter name="regarding_Object_Id" type="SafeString" />
+        <querystringparameter name="regarding_Object_EntityName" type="SafeString" />
+        <querystringparameter name="document_Id" type="SafeString" />
+        <querystringparameter name="last_Button_Clicked" type="SafeString" />
+    </formparameters>
+    <header id="{47528b86-a141-4070-90b9-fe08202a0625}">
+        <rows>
+            <row>
+                <cell id="{cb3cee07-6382-4d48-ab12-f11cafb51d6f}">
+                    <labels>
+                        <label description="Document Check In" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_documentcheckin" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{9e22ebe7-7bb4-403d-b566-f9b86dd95ed6}" name="{9e22ebe7-7bb4-403d-b566-f9b86dd95ed6}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{bebd6e7d-76f9-4fda-9ac2-dd005493c3c7}" name="{bebd6e7d-76f9-4fda-9ac2-dd005493c3c7}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5a7d5727-f03b-4369-a928-60ad14e29107}">
+                                        <labels>
+                                            <label description="Retain your check out after checking in?" languagecode="1033" />
+                                        </labels>
+                                        <control id="retaincheckout_id" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{bc67002b-234f-46a7-92b9-bb5b23d54afe}" showlabel="true">
+                                        <labels>
+                                            <label description="Other users will not see your changes until you check in. If you wish to continue editing, you can retain your check out after check in" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_retainmessage" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c4e3b273-6991-4e29-9b1f-437aba764cf0}">
+                                        <labels>
+                                            <label description="Comments" languagecode="1033" />
+                                        </labels>
+                                        <control id="comments_id" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>1023</MaxLength>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{32fa8b77-cd00-4aff-a48a-7240b9906071}" showlabel="true">
+                                        <labels>
+                                            <label description="Type comments describing what has changed in this session." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_commentsmessage" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{9524fc87-d38b-4a55-a57b-1afb2722796f}">
+        <rows>
+            <row>
+                <cell id="{7eafab85-e281-4783-bf9a-de14f2430213}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{0a10d1b5-3b95-418d-800c-032f9d5664fd}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.SharePointDocumentCheckin.CheckInClickHandler" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{7aa5f854-069b-4a2b-9ad4-f04689e08923}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.GenericUtilities.CloseDialog" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{1188fd4d-0d09-4884-939a-504467922060}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

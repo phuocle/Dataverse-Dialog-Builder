@@ -1,0 +1,126 @@
+<form>
+    <hiddencontrols />
+    <tabs>
+        <tab verticallayout="false" id="{fd9eb0e8-f30d-49c7-85ea-0ef80f519281}" name="{fd9eb0e8-f30d-49c7-85ea-0ef80f519281}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{543f0ef7-2077-441e-868f-7aea9e9b73fc}" name="{543f0ef7-2077-441e-868f-7aea9e9b73fc}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2613c129-482e-4020-bdab-b78ff44d9be3}" showlabel="true">
+                                        <labels>
+                                            <label description="Set the roll-up expiration time and the roll-up frequency" languagecode="1033" />
+                                        </labels>
+                                        <control id="goal_setting_time_freq_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{08e3d10f-ed69-49ad-bb93-a1a4c3899ae5}">
+                                        <labels>
+                                            <label description="Days after the goal end date when the rollup will stop (in Days)" languagecode="1033" />
+                                        </labels>
+                                        <control id="goalrollupexpirytime" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" isunbound="true">
+                                            <parameters>
+                                                <MinValue>0</MinValue>
+                                                <MaxValue>400</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f01bf952-2945-466f-9407-f603a53ca54e}">
+                                        <labels>
+                                            <label description="Roll-up recurrence frequency (in Hours)" languagecode="1033" />
+                                        </labels>
+                                        <control id="goalrollupfrequency" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" isunbound="true">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>2147483647</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{f4624786-120a-4134-ac67-2b969e21b3fe}">
+                <rows>
+                    <row>
+                        <cell id="{6e5c9abb-ec9f-43a4-a4a8-a00f89e5e790}">
+                            <labels>
+                                <label description="Apply" languagecode="1033" />
+                            </labels>
+                            <control id="okButton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{0b3d9e12-bf48-4c06-ac90-ae3df833885e}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancelButton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <formparameters>
+        <querystringparameter name="is_Form" type="Boolean" />
+    </formparameters>
+    <events>
+        <event name="onLoad" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.AdminSettings.onLoad" libraryName="Sales/Settings/Sale_Admin_Settings.js" handlerUniqueId="{2b931225-7fc6-4ad6-82fd-7307666476cd}" enabled="true" parameters="['goalrollupexpirytime','goalrollupfrequency']" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="okButton">
+            <Handlers>
+                <Handler functionName="Mscrm.AdminSettings.okAction" libraryName="Sales/Settings/Sale_Admin_Settings.js" handlerUniqueId="{31a70717-9f70-46b5-acbd-f88399365d33}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelButton">
+            <Handlers>
+                <Handler functionName="Mscrm.AdminSettings.closeDialog" libraryName="Sales/Settings/Sale_Admin_Settings.js" handlerUniqueId="{98ba6170-9ed0-45b7-9db7-cf3dc1a7fb99}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <header id="{aceb6093-34eb-4c06-bef5-b8c7811d1f30}">
+        <rows>
+            <row>
+                <cell id="{b3974d88-9b63-415f-82bd-abdfef4e2b12}">
+                    <labels>
+                        <label description="Goal Settings" languagecode="1033" />
+                    </labels>
+                    <control classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" id="formtitle_title" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{fe66db5f-0ffd-4f72-be8f-c94f637ea84e}">
+                    <labels>
+                        <label description="Set system-level Goal settings for Microsoft Dynamics 365." languagecode="1033" />
+                    </labels>
+                    <control classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" id="formheader_description" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/Settings/Sale_Admin_Settings.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

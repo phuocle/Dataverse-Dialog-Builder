@@ -1,0 +1,134 @@
+<form>
+    <formparameters>
+        <querystringparameter name="businessUnit_data" type="Object" />
+        <querystringparameter name="team_data" type="Object" />
+        <querystringparameter name="administrator_data" type="Object" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{43e734e8-5087-42a5-a302-b1cc00acf2de}" name="{954e6a7f-fdf5-4a06-a8fe-91d2225f8ba7}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{cad668e7-98f5-4b3f-a254-a152d33c8268}" name="{20ff9cb0-df35-4822-876a-0f7dc87ead1d}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0286b957-8e6c-40a9-9f42-845bc0e9b686}" visible="false">
+                                        <labels>
+                                            <label description="Team Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="teamName_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>160</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6ec39ac3-4ca3-40bb-8366-a101ed9f3453}" visible="false">
+                                        <labels>
+                                            <label description="Business Unit Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessUnitName_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>160</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{10c552af-a40e-43fe-8d65-9dc8fc17a8b8}" visible="false">
+                                        <labels>
+                                            <label description="Team Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="teamDescription_id" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fde24ba7-f8e1-438d-bcc8-c10b83d02cb0}" visible="false">
+                                        <labels>
+                                            <label description="Select Team Administrator" languagecode="1033" />
+                                        </labels>
+                                        <control id="teamAdministrator_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{E88CA999-0B16-4AE9-B6A9-9EDC840D42D8}</DefaultViewId>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{5f92787b-0dde-4c40-ad8e-fef1665218f5}">
+        <rows>
+            <row>
+                <cell id="{e7eb1747-39c0-4fa6-9830-21e896ba282e}">
+                    <labels>
+                        <label description="Edit Team Details" languagecode="1033" />
+                    </labels>
+                    <control id="edit_team_details" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{62253783-8bfa-47e7-a01e-4d901fa16a17}">
+        <rows>
+            <row>
+                <cell id="{cf1bc0f8-f333-43bb-a50b-ea58acab1c63}" visible="false">
+                    <labels>
+                        <label description="Done" languagecode="1033" />
+                    </labels>
+                    <control id="done_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{351926c4-b240-4092-a09e-4a58f78302f5}" visible="false">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="close_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="close_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.EditTeam.CloseButtonClickHandler" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{a5144054-09cd-402d-a59c-d526f3d79a96}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="done_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.EditTeam.DoneButtonClickHandler" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{87f93b3b-5c6b-4f34-b7d5-143e6b5259a0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.EditTeam.OnLoadHandler" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{7e5e4dc3-ca7e-4f03-88bf-341a172c5cbc}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

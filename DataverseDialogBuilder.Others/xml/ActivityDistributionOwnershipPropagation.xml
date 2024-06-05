@@ -1,0 +1,151 @@
+<form>
+    <formparameters>
+        <querystringparameter name="activity_name_pluralized" type="SafeString" />
+        <querystringparameter name="close_email_activity" type="Boolean" />
+        <querystringparameter name="is_email_activity" type="Integer" />
+        <querystringparameter name="add_to_queue" type="Boolean" />
+        <querystringparameter name="context_serialized" type="SafeString" />
+        <querystringparameter name="ownership_option" type="Integer" />
+        <querystringparameter name="owner_id" type="Object" />
+        <querystringparameter name="queue_id" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{ea28a1df-efe4-40f1-9f77-daafd7f05560}">
+        <rows>
+            <row>
+                <cell id="{e7eefc21-fdc5-4cba-a134-20d415355c41}">
+                    <labels>
+                        <label description="Distribute {0}" languagecode="1033" />
+                    </labels>
+                    <control id="header_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{6105e027-81ae-4809-98d4-c6b84c2c95c3}" name="{6105e027-81ae-4809-98d4-c6b84c2c95c3}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" showlabel="false" columns="1" id="{b66ce6b7-8753-491c-a7fe-fb9bc6bac317}" name="{b66ce6b7-8753-491c-a7fe-fb9bc6bac317}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d94d6060-ac2a-47ab-901f-745f4071d35c}" showlabel="true">
+                                        <labels>
+                                            <label description="Before you distribute the {0}, choose who you want to assign them to." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{68e960cb-5611-44dd-9cd0-10a45703bc3d}" showlabel="true">
+                                        <labels>
+                                            <label description="{0} owner:" languagecode="1033" />
+                                        </labels>
+                                        <control id="choose_owner_label_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4e358714-aae4-4af4-9d87-a6172e3a86cf}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="activity_ownership_options_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{58E98987-F8AE-4402-AF37-5745C2BFB420}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{1c370496-60b8-43a4-9457-aaa1263a4503}">
+        <rows>
+            <row>
+                <cell id="{6ed0e0ad-374c-40c0-bb5e-6981f1add7e3}">
+                    <labels>
+                        <label description="Distribute" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{d5f5a499-3b90-469f-9b71-e4e6c575bf9d}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Instance.onOwnershipPropagationDialogLoaded" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{eb73ad6e-5e4a-40e9-a10d-6a72aed95250}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onOwnershipPropagationDistributeButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{41e93bdf-85c5-4814-af31-0587b22fa77e}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="Marketing/ClientCommon/Marketing_ClientCommon.js" handlerUniqueId="{6ba5c30a-7df3-4703-843c-9cb26fd4e829}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/CampaignActivity/CampaignActivity_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{58E98987-F8AE-4402-AF37-5745C2BFB420}">
+            <customControl name="MscrmControls.ActivityPropagationOwnership.OwnershipControl" formFactor="0">
+                <parameters>
+                    <AddToQueue type="Whole.None">add_to_queue</AddToQueue>
+                    <IsEmailActivity type="Whole.None">is_email_activity</IsEmailActivity>
+                    <QueueId type="Whole.None">queue_id</QueueId>
+                    <CloseEmailActivity type="Whole.None">close_email_activity</CloseEmailActivity>
+                    <OwnershipOption type="Whole.None">ownership_option</OwnershipOption>
+                    <OwnerId type="Whole.None">owner_id</OwnerId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ActivityPropagationOwnership.OwnershipControl" formFactor="1">
+                <parameters>
+                    <AddToQueue type="Whole.None">add_to_queue</AddToQueue>
+                    <IsEmailActivity type="Whole.None">is_email_activity</IsEmailActivity>
+                    <QueueId type="Whole.None">queue_id</QueueId>
+                    <CloseEmailActivity type="Whole.None">close_email_activity</CloseEmailActivity>
+                    <OwnershipOption type="Whole.None">ownership_option</OwnershipOption>
+                    <OwnerId type="Whole.None">owner_id</OwnerId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ActivityPropagationOwnership.OwnershipControl" formFactor="2">
+                <parameters>
+                    <AddToQueue type="Whole.None">add_to_queue</AddToQueue>
+                    <IsEmailActivity type="Whole.None">is_email_activity</IsEmailActivity>
+                    <QueueId type="Whole.None">queue_id</QueueId>
+                    <CloseEmailActivity type="Whole.None">close_email_activity</CloseEmailActivity>
+                    <OwnershipOption type="Whole.None">ownership_option</OwnershipOption>
+                    <OwnerId type="Whole.None">owner_id</OwnerId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

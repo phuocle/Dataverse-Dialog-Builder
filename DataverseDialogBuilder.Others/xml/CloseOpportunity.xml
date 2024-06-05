@@ -1,0 +1,182 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_opportunityId" type="UniqueId" />
+        <querystringparameter name="param_won" type="Object" />
+        <querystringparameter name="param_caller" type="SafeString" />
+        <querystringparameter name="param_callerparameters" type="Object" />
+        <querystringparameter name="param_hideCompetitorField" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_timezone" type="Object" />
+    </formparameters>
+    <header id="{99dcc89e-9bb3-49d1-8f53-91126f64b0f6}">
+        <rows>
+            <row>
+                <cell id="{72b85b2f-2282-4aa9-83f6-d167e57b7dde}">
+                    <labels>
+                        <label description="Close opportunity" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_closeopportunity" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{8b9a3b25-77a5-426c-b786-ee02ba2a6d29}" name="{8b9a3b25-77a5-426c-b786-ee02ba2a6d29}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{90ae12ab-5de3-4163-8a47-9528dc3aea05}" name="{90ae12ab-5de3-4163-8a47-9528dc3aea05}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2e457767-7bea-40c7-9f3c-7ee028b42217}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_closedescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e7a4c1e1-6568-46bd-9955-136b664cf202}">
+                                        <labels>
+                                            <label description="Status reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="statusreason_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{7d49457e-8acd-ee11-907a-002248243577}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fa083ce7-5bde-4c80-97ce-950c252a78da}">
+                                        <labels>
+                                            <label description="Actual revenue" languagecode="1033" />
+                                        </labels>
+                                        <control id="actualrevenue_id" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MinValue>-1000000000000</MinValue>
+                                                <MaxValue>1000000000000</MaxValue>
+                                                <Precision>2</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{917e1906-fd15-4366-937b-374f8b96ef9b}">
+                                        <labels>
+                                            <label description="Close date" languagecode="1033" />
+                                        </labels>
+                                        <control id="closedate_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{665fbfb9-a79f-410a-a7e8-5a66e9c7a9b3}">
+                                        <labels>
+                                            <label description="Competitor" languagecode="1033" />
+                                        </labels>
+                                        <control id="competitor_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{57BCA9AC-87A0-4C28-ADC8-2D0A4645F29E}</DefaultViewId>
+                                                        <EntityLogicalName>competitor</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{842da1a6-f338-4ad1-a1fa-b50c9998dfa0}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3e4b0caf-518d-4316-8c9f-93077723b7d8}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>transactioncurrency</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{640ed3b0-b474-4bf6-86ff-fe7c7283b1ed}">
+        <rows>
+            <row>
+                <cell id="{d199d34d-50c5-49c1-8793-d9ea0c5ba3c5}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{deb18720-7d17-4e23-8c55-c97ad2acdd59}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.OpportunityGridCommandActions.onLoadCloseOpportunity" libraryName="Sales/Opportunity/Opportunity_main_system_library.js" handlerUniqueId="{274d57a8-1762-4357-b1cf-1b89c59afb8d}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.OpportunityGridCommandActions.onClickCloseOpportunity" libraryName="Sales/Opportunity/Opportunity_main_system_library.js" handlerUniqueId="{7c172366-d467-469c-9cec-53c9b64cfd0a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.dialogClose" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{b75e7486-5402-4ea9-9f64-f69123cc3a02}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/Opportunity/Opportunity_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

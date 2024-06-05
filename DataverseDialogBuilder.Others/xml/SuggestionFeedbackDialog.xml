@@ -1,0 +1,96 @@
+<form>
+    <formparameters>
+        <querystringparameter name="params_headertext" type="SafeString" />
+        <querystringparameter name="params_subheadertext" type="SafeString" />
+        <querystringparameter name="params_suggestionId" type="SafeString" />
+        <querystringparameter name="params_feedbackreason" type="SafeString" />
+        <querystringparameter name="params_lastbuttonclicked" type="SafeString" />
+    </formparameters>
+    <header id="{79E8DE08-A81E-4EFD-9F0A-5F03D53CA6A5}">
+        <rows>
+            <row>
+                <cell id="{FC96C617-4151-42A1-9F31-253D18F9AA16}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="otherFeedbackTitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{6F7620FA-CC94-4366-B3F1-B5DBDC6EEA72}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="FeedbackReasonSubText" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{DAD1698A-9297-4A51-A4F0-6E19BA673DEC}" name="FeedbackReason" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="FeedbackReasonSection" showlabel="false" showbar="false" locklevel="0" id="{A0C7C011-22A6-4A3F-9F7B-B3A4DCC08FA0}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="100">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{29D2D3D6-5E63-4A38-8966-48A34EFD173A}" showlabel="true" auto="false" rowspan="5">
+                                        <labels>
+                                            <label description="Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="FeedbackReasonTextBox" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true" isrequired="true" uniqueid="{90B1809E-0BE8-4655-93FF-27F98E209105}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{7F34ECCE-77DA-4FEC-B7D3-8FF76CBDB2F6}">
+                <rows>
+                    <row>
+                        <cell id="{481FF683-4990-49A9-98D1-1D272C737017}">
+                            <labels>
+                                <label description="Save" languagecode="1033" />
+                            </labels>
+                            <control id="SubmitFeedbackReasonHandler" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="SubmitFeedbackReasonHandler">
+            <Handlers>
+                <Handler functionName="AcceleratedSales.SalesSuggestion.CommandAction.HandleFeedbackDialogClick" libraryName="$webresource:msdyn_/salessuggestion_main_system_library.js" handlerUniqueId="{B26F95F2-0571-404C-BD0A-AAC71E7BC225}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <Handlers>
+                <Handler functionName="AcceleratedSales.SalesSuggestion.CommandAction.HandleFeedbackDialogLoad" libraryName="$webresource:msdyn_/salessuggestion_main_system_library.js" handlerUniqueId="{48EFACB7-4699-4324-84C9-2085F9E58908}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/salessuggestion_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

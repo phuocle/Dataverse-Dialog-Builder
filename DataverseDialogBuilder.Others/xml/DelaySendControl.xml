@@ -1,0 +1,138 @@
+<form>
+    <hiddencontrols>
+        <data id="delayedSendTime" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="footerText" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="dateErrorText" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="now" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="suggestedDelaySendTime" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <formparameters>
+        <querystringparameter name="id_delayedSendTime" type="SafeString" />
+        <querystringparameter name="id_footerText" type="SafeString" />
+        <querystringparameter name="id_dateErrorText" type="SafeString" />
+        <querystringparameter name="id_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="id_now" type="SafeString" />
+        <querystringparameter name="id_suggestedDelaySendTime" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{0238EEF1-F5C6-480A-9A3C-182D1C8924C0}" name="{0238EEF1-F5C6-480A-9A3C-182D1C8924C0}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{2bac74c8-eb35-4593-a88c-522a5370cee6}" name="{2bac74c8-eb35-4593-a88c-522a5370cee6}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b581cb43-28bd-4f09-9d75-ca12bdb88d00}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="Send_Later_Control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{1b435652-2d01-4b9e-9174-9de283c05307}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{A3ECE017-744F-461A-8FE0-3FD5C3158CE4}">
+        <rows>
+            <row>
+                <cell id="{2B8321BE-A30F-4CD5-8856-09997D73DFB0}">
+                    <labels>
+                        <label description="Schedule email" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_sendLater" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{B53E11AD-D0E1-40BA-983A-303B7E1A367C}">
+        <rows>
+            <row>
+                <cell id="{4BF211C1-D9AF-4EF3-943D-6F1551A82890}">
+                    <labels>
+                        <label description="Schedule email" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{19728E68-4E9B-4D4B-B35A-46E671FDB957}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.sendLaterClick" libraryName="msdyn_/EmailEngagementActions/Scripts/Email_Engagement_Actions_Dialogs.js" handlerUniqueId="{C31640C3-592E-4968-89CF-612558AA6CD1}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.sendLaterCancelClick" libraryName="msdyn_/EmailEngagementActions/Scripts/Email_Engagement_Actions_Dialogs.js" handlerUniqueId="{4FB0BACD-5FA4-4A1B-8F94-43895F1CED66}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/EmailEngagementActions/Scripts/Email_Engagement_Actions_Dialogs.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{1b435652-2d01-4b9e-9174-9de283c05307}">
+            <customControl name="MscrmControls.EmailDelayDialogControl.DelayDialogControl" formFactor="0">
+                <parameters>
+                    <id_delayedSendTime type="SingleLine.Text">id_delayedSendTime</id_delayedSendTime>
+                    <id_footerText type="SingleLine.Text">id_footerText</id_footerText>
+                    <id_dateErrorText type="SingleLine.Text">id_dateErrorText</id_dateErrorText>
+                    <id_lastButtonClicked type="SingleLine.Text">id_lastButtonClicked</id_lastButtonClicked>
+                    <id_now type="SingleLine.Text">id_now</id_now>
+                    <id_suggestedDelaySendTime type="SingleLine.Text">id_suggestedDelaySendTime</id_suggestedDelaySendTime>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EmailDelayDialogControl.DelayDialogControl" formFactor="1">
+                <parameters>
+                    <id_delayedSendTime type="SingleLine.Text">id_delayedSendTime</id_delayedSendTime>
+                    <id_footerText type="SingleLine.Text">id_footerText</id_footerText>
+                    <id_dateErrorText type="SingleLine.Text">id_dateErrorText</id_dateErrorText>
+                    <id_lastButtonClicked type="SingleLine.Text">id_lastButtonClicked</id_lastButtonClicked>
+                    <id_now type="SingleLine.Text">id_now</id_now>
+                    <id_suggestedDelaySendTime type="SingleLine.Text">id_suggestedDelaySendTime</id_suggestedDelaySendTime>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EmailDelayDialogControl.DelayDialogControl" formFactor="2">
+                <parameters>
+                    <id_delayedSendTime type="SingleLine.Text">id_delayedSendTime</id_delayedSendTime>
+                    <id_footerText type="SingleLine.Text">id_footerText</id_footerText>
+                    <id_dateErrorText type="SingleLine.Text">id_dateErrorText</id_dateErrorText>
+                    <id_lastButtonClicked type="SingleLine.Text">id_lastButtonClicked</id_lastButtonClicked>
+                    <id_now type="SingleLine.Text">id_now</id_now>
+                    <id_suggestedDelaySendTime type="SingleLine.Text">id_suggestedDelaySendTime</id_suggestedDelaySendTime>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

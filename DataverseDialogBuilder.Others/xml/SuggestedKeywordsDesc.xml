@@ -1,0 +1,113 @@
+<form>
+    <header id="{3e53700f-62dd-4731-8b4b-15180255d67b}">
+        <rows>
+            <row>
+                <cell id="{ffd94966-9d45-47ec-bcf0-82190d6f180b}">
+                    <labels>
+                        <label description="Suggested keywords and description" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_suggestedKeywordsDesc" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{ebda1460-1e7b-459f-a618-999b71a62465}">
+                    <labels>
+                        <label description="Add the keywords you'd like to use and decide if you'd like to insert the auto-generated description." languagecode="1033" />
+                    </labels>
+                    <control id="lbl_suggestedKeywordsDesc_subHeader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{a9b07db5-a86b-4c7d-a945-23110348da5a}" name="{a9b07db5-a86b-4c7d-a945-23110348da5a}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{21df6d7c-99ef-454a-93eb-3d5dd33c6bff}" name="{21df6d7c-99ef-454a-93eb-3d5dd33c6bff}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4d686678-1a12-4302-81ac-fa62eb00bdb3}" showlabel="false" colspan="1" rowspan="12" auto="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="keywordsDescControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{5f8d9dd4-02c2-435b-80e5-b8d35867e5c1}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{11893e35-a64d-493b-b7fa-94e49e64f616}">
+        <rows>
+            <row>
+                <cell id="{b3c8879b-d8e4-4cbc-85f6-39b9cd65a166}">
+                    <labels>
+                        <label description="Apply Changes" languagecode="1033" />
+                    </labels>
+                    <control id="apply_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{f9255ba7-f18a-43ad-bd28-4de9fe73aa28}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="apply_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KeywordsDescSuggestionDialog.Instance.onDialogApply" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KbKeywordsDescSuggestionDialog/KbKeywordsDescSuggestionDialog.js" handlerUniqueId="{0b268544-cd36-4cfc-9480-b952b8192ae5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KeywordsDescSuggestionDialog.Instance.onDialogCancel" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KbKeywordsDescSuggestionDialog/KbKeywordsDescSuggestionDialog.js" handlerUniqueId="{35ed90da-9e49-4076-a26b-f87288e1eaa3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_Title" type="SafeString" />
+        <querystringparameter name="param_Content" type="SafeString" />
+        <querystringparameter name="param_Language" type="SafeString" />
+        <querystringparameter name="param_Keywords" type="SafeString" />
+        <querystringparameter name="param_Description" type="SafeString" />
+        <querystringparameter name="param_ArticleId" type="SafeString" />
+        <querystringparameter name="param_KeywordsCharLimit" type="SafeString" />
+        <querystringparameter name="param_DescCharLimit" type="SafeString" />
+        <querystringparameter name="param_LastBtnClicked" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KbKeywordsDescSuggestionDialog/KbKeywordsDescSuggestionDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{5f8d9dd4-02c2-435b-80e5-b8d35867e5c1}">
+            <customControl formFactor="0" name="MscrmControls.KbSuggestKeywordsDescControl.SuggestionControl"></customControl>
+            <customControl formFactor="1" name="MscrmControls.KbSuggestKeywordsDescControl.SuggestionControl"></customControl>
+            <customControl formFactor="2" name="MscrmControls.KbSuggestKeywordsDescControl.SuggestionControl"></customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

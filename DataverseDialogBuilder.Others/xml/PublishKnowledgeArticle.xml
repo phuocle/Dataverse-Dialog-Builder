@@ -1,0 +1,265 @@
+<form>
+    <header id="{c76dc8e5-6167-4080-965b-055fe62b8c02}">
+        <rows>
+            <row>
+                <cell id="{fc7633d4-bb78-4fe5-9d25-033a5efd3dd2}">
+                    <labels>
+                        <label description="Publish" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_publishArticle_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{2e2124eb-2a78-4450-9082-d3f6ef4f0ab3}">
+                    <labels>
+                        <label description="Publishing the article might make the contents available to the public depending on the permissions settings. Confirm these settings before publishing." languagecode="1033" />
+                    </labels>
+                    <control id="lbl_publishArticle_description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{1b3dd085-0e7d-435b-b135-e138fbef197e}" name="{1b3dd085-0e7d-435b-b135-e138fbef197e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{d392f787-c9fb-407e-abd7-3075c1164d9c}" name="{d392f787-c9fb-407e-abd7-3075c1164d9c}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3cbdffc7-f309-4f4d-ab60-a19f732d9b38}">
+                                        <labels>
+                                            <label description="Publish" languagecode="1033" />
+                                        </labels>
+                                        <control id="publish_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{984497A3-EE2F-4A3E-81ED-4D28D009B06B}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{33af107d-b51b-44b6-b70e-34f081a6019a}" visible="false">
+                                        <labels>
+                                            <label description="Publish On" languagecode="1033" />
+                                        </labels>
+                                        <control id="publishingdatetime_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{691f046b-c701-4a6d-8da8-14dc274ec9db}">
+                                        <labels>
+                                            <label description="Published status" languagecode="1033" />
+                                        </labels>
+                                        <control id="publishedstatus_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{d1d90632-a200-e511-80d2-00155d217c03}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{02d12973-aba8-4753-91b0-2cde53ee804e}" visible="false">
+                                        <labels>
+                                            <label description="Scheduled status" languagecode="1033" />
+                                        </labels>
+                                        <control id="scheduledstatus_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{d1d90632-a200-e511-80d2-00155d217c03}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1e08bc9d-34c2-4417-b49f-9079f51dee6a}">
+                                        <labels>
+                                            <label description="Expiration Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="expirationdate_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d226cc3c-c4cc-425a-80b4-a8e851657b44}" visible="false">
+                                        <labels>
+                                            <label description="Expiration State" languagecode="1033" />
+                                        </labels>
+                                        <control id="expirationstate_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{BDF1F841-0756-4493-9818-AB4C1C2AECBA}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0f8985ec-4323-4e44-9e51-93a3b3d65ad0}" visible="false">
+                                        <labels>
+                                            <label description="Expiration Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="expirationstatus_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{d1d90632-a200-e511-80d2-00155d217c03}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f53a0c18-59d9-4f8a-9a17-934dbb0c3ca5}" visible="false">
+                                        <labels>
+                                            <label description="Default Expiration Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="defaultexpirationstatus_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{d1d90632-a200-e511-80d2-00155d217c03}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b4c35704-b55a-405f-9a6a-4909c10469a0}" visible="false">
+                                        <labels>
+                                            <label description="Inherit product associations from related primary article while publishing translations" languagecode="1033" />
+                                        </labels>
+                                        <control id="copyrelated_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{d7a1d8ed-f76d-44b9-9f3c-154607afe7b0}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d41d55dc-3b4d-4b68-8a74-89a2f0a4b114}" visible="false">
+                                        <labels>
+                                            <label description="When publishing this translation inherit category associations from the related primary Article " languagecode="1033" />
+                                        </labels>
+                                        <control id="copyrelatedcategories_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{d7a1d8ed-f76d-44b9-9f3c-154607afe7b0}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0980d918-f9e0-4974-b02c-9ca024197946}">
+                                        <labels>
+                                            <label description="Publish approved related translations with Article" languagecode="1033" />
+                                        </labels>
+                                        <control id="approverelated_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{acbaaaff-3572-43cb-bc8a-0fb322e2cef5}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{264a55f6-c314-44c9-9ad8-ef1f25caf9ab}">
+        <rows>
+            <row>
+                <cell id="{7394d96f-3e15-49d1-bac4-77046ff295d8}">
+                    <labels>
+                        <label description="Publish" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{36443b42-e0d9-4747-bb06-0e58c40c495d}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="AppCommon.KnowledgeArticle.CommandActions.articleOnLoad" libraryName="KnowledgeArticle_main_system_library.js" handlerUniqueId="{5ac7db67-5da0-41b3-95ce-be487fd30ee7}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="AppCommon.KnowledgeArticle.PublishCommands.closeDialog" libraryName="KnowledgeArticle_main_system_library.js" handlerUniqueId="{f1d68b26-6688-4809-afa5-a9982cbdb9e4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="AppCommon.KnowledgeArticle.PublishCommands.cancelDialog" libraryName="KnowledgeArticle_main_system_library.js" handlerUniqueId="{ab78e9a0-a866-43c4-8012-41d4f5e93d78}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="publish_id">
+            <Handlers>
+                <Handler functionName="AppCommon.KnowledgeArticle.CommandActions.scheduledStatusOnChange" libraryName="KnowledgeArticle_main_system_library.js" handlerUniqueId="{cd310d29-fb2e-4f2f-8439-d08a8455b688}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="expirationdate_id">
+            <Handlers>
+                <Handler functionName="AppCommon.KnowledgeArticle.CommandActions.expirationDateOnChange" libraryName="KnowledgeArticle_main_system_library.js" handlerUniqueId="{6206F065-F5F3-405A-BFB6-998A67BAB772}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="publishingdatetime_id">
+            <Handlers>
+                <Handler functionName="AppCommon.KnowledgeArticle.CommandActions.publishDateOnChange" libraryName="KnowledgeArticle_main_system_library.js" handlerUniqueId="{6206F065-F5F3-405A-BFB6-998A67BAB772}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="expirationstate_id">
+            <Handlers>
+                <Handler functionName="AppCommon.KnowledgeArticle.CommandActions.expirationStateOnChange" libraryName="KnowledgeArticle_main_system_library.js" handlerUniqueId="{e31d664b-5693-47bd-b0de-c866f31ed97d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_selectedrecords" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_isprimary" type="SafeString" />
+        <querystringparameter name="param_parentarticlecontentid" type="SafeString" />
+        <querystringparameter name="param_languagelocaleid" type="SafeString" />
+        <querystringparameter name="param_articlePublicNumber" type="SafeString" />
+        <querystringparameter name="param_isbulkpublishaction" type="SafeString" />
+        <querystringparameter name="param_majorversionnumber" type="SafeString" />
+        <querystringparameter name="param_minorversionnumber" type="SafeString" />
+        <querystringparameter name="param_datetimefixoffset" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:KnowledgeArticle_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

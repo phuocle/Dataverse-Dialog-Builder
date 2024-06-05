@@ -1,0 +1,1585 @@
+<form>
+    <formparameters>
+        <querystringparameter name="activity_id" type="Integer" />
+        <querystringparameter name="activity_type" type="SafeString" />
+        <querystringparameter name="email_description" type="SafeString" />
+        <querystringparameter name="email_selected_template_id" type="SafeString" />
+        <querystringparameter name="entity_ids" type="SafeString" />
+        <querystringparameter name="entity_type_code" type="SafeString" />
+        <querystringparameter name="fetch_xml" type="SafeString" />
+        <querystringparameter name="is_email_activity" type="Integer" />
+        <querystringparameter name="add_to_queue" type="Boolean" />
+        <querystringparameter name="owner_id" type="Object" />
+        <querystringparameter name="ownership_option" type="Integer" />
+        <querystringparameter name="queue_id" type="Object" />
+        <querystringparameter name="selected_records_count" type="Integer" />
+        <querystringparameter name="selection_mode" type="Integer" />
+        <querystringparameter name="send_email" type="Boolean" />
+        <querystringparameter name="transaction_currency" type="Object" />
+        <querystringparameter name="form_values_phonecall" type="SafeString" />
+        <querystringparameter name="form_values_appointment" type="SafeString" />
+        <querystringparameter name="form_values_letter" type="SafeString" />
+        <querystringparameter name="form_values_fax" type="SafeString" />
+        <querystringparameter name="form_values_email" type="SafeString" />
+    </formparameters>
+    <header id="{91c0e7e5-d254-4f70-94f6-054b91ff41f5}">
+        <rows>
+            <row>
+                <cell id="{5932c379-79ef-4435-b3bd-d2cfb3d79585}">
+                    <labels>
+                        <label description="Create a Quick Campaign" languagecode="1033" />
+                    </labels>
+                    <control id="{06a00a52-a9ac-4ab3-8176-b65c4d8701a9}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{51730351-eccc-4bad-a42b-6e4cc04cb305}" name="start_tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{2c233cc3-ec5f-4a7d-96d1-63b41e35309a}">
+                <rows>
+                    <row>
+                        <cell id="{19bd0290-562a-42eb-a74c-33f9ec263978}">
+                            <labels>
+                                <label description="Welcome to the Create Quick Campaign Wizard" languagecode="1033" />
+                            </labels>
+                            <control id="{16d6441f-1a7d-4cf7-ba41-87ba8511222a}" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="true" id="{b904dec1-b1ea-45b5-bac0-4e7b9c86eb9a}" name="{5a8b2747-78b0-4df2-968d-5c05360489b9}">
+                            <labels>
+                                <label description="This wizard helps you create an activity and distribute it to multiple records at one time." languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b7f17ebd-0b08-43f8-aec8-e5edaaca289e}">
+                                        <labels>
+                                            <label description="You can use this wizard to communicate directly with your customers, such as by sending email, or to assign activities to others to complete, such as making phone calls. Then, you can track the responses to these activities. " languagecode="1033" />
+                                        </labels>
+                                        <control id="{7817567c-d137-4926-bdc4-167f77a47f5c}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="true" id="{b904dec1-b2ea-45b5-bac0-4e7b9c86eb9a}" name="{5a8b2747-78b0-4df2-968d-5c05360489b9}_2">
+                            <labels>
+                                <label description="You will be asked to:" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d4aad7bf-5d06-488a-b6a0-9156982e72e5}">
+                                        <labels>
+                                            <label description="Specify the name of the quick campaign" languagecode="1033" />
+                                        </labels>
+                                        <control id="{20067b11-82b4-4ca7-a667-4922f3e21d68}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0d704a10-b7d7-40c5-93a0-2f002388b3e4}">
+                                        <labels>
+                                            <label description="Select an activity and who to assign the activity to" languagecode="1033" />
+                                        </labels>
+                                        <control id="{7b2520ac-0b09-4626-9b4d-8d330aa59250}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5e1ad9b4-d4d3-41cc-a200-e03e82b57a13}">
+                                        <labels>
+                                            <label description="Specify the content for the activity" languagecode="1033" />
+                                        </labels>
+                                        <control id="{1ed58bca-59e8-44c4-b138-125afc24e943}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1e3ad9b4-d4d3-42cc-a200-e03e82b57a13}">
+                                        <labels>
+                                            <label description="To continue, click Next." languagecode="1033" />
+                                        </labels>
+                                        <control id="{2ed58bca-59e8-44c3-b138-325afc24e943}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{ca1ceefb-8146-483f-aa81-e385e26668c1}">
+                <rows>
+                    <row>
+                        <cell id="{153f68dc-d8cb-466b-b2b2-538052a9d77c}">
+                            <labels>
+                                <label description="Next" languagecode="1033" />
+                            </labels>
+                            <control id="start_tab_continue_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{7412a825-4103-4f51-a0c5-bf6b4e7741d5}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="start_tab_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{3a98637f-d6da-482c-b811-eef33231a40d}" name="name_tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{37b5b2b4-1670-4b73-89cc-5f6f975c4ce9}">
+                <rows>
+                    <row>
+                        <cell id="{90fc50fa-d1ac-4598-b24a-15ea4118852f}">
+                            <labels>
+                                <label description="Specify the Campaign Name" languagecode="1033" />
+                            </labels>
+                            <control id="{5616c970-410b-48ee-b20e-5cc32c0349f3}" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{6d988cd0-6f6e-4b72-bf47-9e940bfaf9b6}" name="{5a8b2747-78b0-4df2-968d-5c05360489b9}_3">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c89583cb-4768-49e5-a440-92eda58bab05}">
+                                        <labels>
+                                            <label description="Specify the name for this Quick Campaign. The maximum number of characters is 200." languagecode="1033" />
+                                        </labels>
+                                        <control id="{2e828e17-2a21-426f-b3c4-a3f6bce61a7b}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{557d2165-a25d-4a06-bb12-cf339b97d6a5}">
+                                        <labels>
+                                            <label description="Name:" languagecode="1033" />
+                                        </labels>
+                                        <control id="quick_campaign_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{6505e721-9651-4dce-803d-d8ab3c06fb2f}">
+                <rows>
+                    <row>
+                        <cell id="{f48fe1da-68a3-4407-b1d6-8660464bda2c}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="name_tab_back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{9782680c-7d29-434d-9dde-c1cd98134e34}">
+                            <labels>
+                                <label description="Next" languagecode="1033" />
+                            </labels>
+                            <control id="name_tab_continue_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{88978999-9a4d-49fa-9ae6-e11712a5449b}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="name_tab_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{b535f544-e05e-486e-ab89-279488b16d71}" name="activity_type_tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{4f057143-64b4-4c49-9a35-4616cbcaa5cb}">
+                <rows>
+                    <row>
+                        <cell id="{50dc9bc4-4e55-4dfc-8e2f-c0b4d0156030}">
+                            <labels>
+                                <label description="Select the Activity Type and Owners" languagecode="1033" />
+                            </labels>
+                            <control id="{fc1e064e-71f1-4304-8945-f8c263dcbb21}" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{dabc4103-c596-4eee-b619-72f24104cc83}" name="{daec7af5-a1d9-478a-ac81-7dbc90342352}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9d734a61-fb16-438e-bb50-62cd2df59434}">
+                                        <labels>
+                                            <label description="Activity Type:" languagecode="1033" />
+                                        </labels>
+                                        <control id="activity_type_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{beb6ef25-c4d4-41ba-8c57-30425a3d7be1}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="true" id="{d4041dae-0b57-45cd-aab6-e8b48a94f4ab}" name="{5d4041dae-0b57-45cd-aab6-e8b48a94f4ab}">
+                            <labels>
+                                <label description="Select an activity and who to assign the activity to" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4e358714-aae4-4af4-9d87-a6172e3a86cf}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="activity_ownership_options_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{58E98987-F8AE-4402-AF37-5745C2BFB420}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{70e1f79b-1f95-4f9e-9c5b-d3b23739551f}">
+                <rows>
+                    <row>
+                        <cell id="{4ff03195-b0b4-440e-8531-eb374a89e338}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="activity_type_tab_back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{7f18b4bf-eaff-4f3b-b788-139513715ad9}">
+                            <labels>
+                                <label description="Next" languagecode="1033" />
+                            </labels>
+                            <control id="activity_type_tab_continue_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{83ae1b06-c97a-47cb-af09-cb4a1f07e97f}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="activity_type_tab_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{0bdb13c3-df17-4d9f-890d-00217c7e17e9}" name="phone_call_tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{9cd4eeb8-8b1e-4d90-a5fa-05654d446294}">
+                <rows>
+                    <row>
+                        <cell id="{b8774dd9-aa8d-44ac-8ce0-3af9cfab5548}">
+                            <labels>
+                                <label description="Specify the Content of the Activity" languagecode="1033" />
+                            </labels>
+                            <control id="phone_call_tab_specifycontent_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{4c911d08-af92-4157-adbd-a8fd34910311}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{143d14e9-ba79-4eb1-9c8d-f940ce926215}">
+                                        <labels>
+                                            <label description="Specify the details of the quick campaign by filling out the available fields in the activity. When you are done, click Next." languagecode="1033" />
+                                        </labels>
+                                        <control id="phone_call_tab_specify_details_message_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4f1a25e5-717d-42e0-bf14-4044f104cd8b}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{f54ab74b-886f-4885-8dbe-8c1d61bf93a4}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d91d4aee-0117-4863-994c-ee24738d81de}">
+                                        <labels>
+                                            <label description="Due" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_scheduled_end" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{287617fa-6c37-4659-920d-fcb553983b23}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0a974723-6239-4f00-a299-5f3cfae3f3a3}" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_description" classid="{E0DECE4B-6FC8-4A8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{b7c750e8-0fd9-4ea5-8af9-291f39d02c38}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8826C417-A311-4C47-90CA-9575F67B7492}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control_phonecall" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{5A9EE786-69D5-4ACA-85CE-B614CEC6918A}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{0de69e30-7502-41db-84b5-4fe44dcb8267}">
+                <rows>
+                    <row>
+                        <cell id="{36819ef5-4deb-4fb5-997b-8794b9d7cc48}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="phone_call_tab_back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{efd2ef62-3e14-48b0-b899-12caad77323a}">
+                            <labels>
+                                <label description="Next" languagecode="1033" />
+                            </labels>
+                            <control id="phone_call_tab_continue_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{e0daa66c-832a-42b1-9eca-862b5ac71a84}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="phone_call_tab_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{6833881a-2421-4b85-9428-93558db7f7f5}" name="appointment_tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{9cd4eeb8-8b1e-4d90-a5fa-05654d446294}">
+                <rows>
+                    <row>
+                        <cell id="{d76ffba8-98df-4d12-aa2b-deddcc3f2bce}">
+                            <labels>
+                                <label description="Specify the Content of the Activity" languagecode="1033" />
+                            </labels>
+                            <control id="appointment_tab_specifycontent_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{fd1d1bed-311b-4503-8206-e65c29d75176}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2e5e7052-2adf-4415-ba26-3e703e4e7e0d}">
+                                        <labels>
+                                            <label description="Specify the details of the quick campaign by filling out the available fields in the activity. When you are done, click Next." languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_tab_specify_details_message_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{81cd08ef-a1a8-4c62-982c-fe4d6bc90502}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{091cde1c-ea31-4b40-a09a-3c83890d3a52}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e976aa8a-969a-47d5-9bfa-8f320470ef66}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{570acc1b-434c-4ab4-9b15-92a2dc928fc5}">
+                                        <labels>
+                                            <label description="Location" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_location" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{71bf49f3-3614-427a-9d92-08d0130b8cc0}">
+                                        <labels>
+                                            <label description="All Day Event" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_all_day_event" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{488ff1c9-eea9-426c-9e5d-7eb34aef13c2}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d3bfbbca-9713-439c-92ca-6700af5f9e30}">
+                                        <labels>
+                                            <label description="Start Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_start_time" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7fb3b895-d990-4236-a86d-017918f07f42}">
+                                        <labels>
+                                            <label description="End Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_end_time" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f5a0de07-5971-4de2-a234-cda02a4339ac}" rowspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_description" classid="{E0DECE4B-6FC8-4A8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{0eaabf1a-661e-4702-acdc-d0aa7f74fcfb}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9AAE45F0-BE9B-45A9-959E-112D2A2BFACC}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control_appointment" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{7624374D-9515-4DA3-A00F-34F07D01BC0A}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{7c53ab19-55ff-4dae-9a76-cfbdc8ca1088}">
+                <rows>
+                    <row>
+                        <cell id="{1142ce82-6ac1-4985-b70a-df390ed443a2}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="appointment_tab_back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{2a9c34f6-30ee-4653-9a01-2f16365fcb68}">
+                            <labels>
+                                <label description="Next" languagecode="1033" />
+                            </labels>
+                            <control id="appointment_tab_continue_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{556797ef-a4a2-45e4-9b9e-007d91227bca}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="appointment_tab_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{5f405429-e218-4632-aefa-27f6d0da8121}" name="letter_tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{099f9a14-9f6e-42de-b3e1-0afbe467479c}">
+                <rows>
+                    <row>
+                        <cell id="{6728f25d-33ed-4a2b-b24c-d362373c9b13}">
+                            <labels>
+                                <label description="Specify the Content of the Activity" languagecode="1033" />
+                            </labels>
+                            <control id="letter_tab_specifycontent_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{8febf3e3-949c-447d-8682-14e4cf2cc2d1}">
+                            <labels>
+                                <label description="Specify the details of the quick campaign by filling out the available fields in the activity. When you are done, click Next." languagecode="1033" />
+                            </labels>
+                            <control id="letter_tab_specify_details_message_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{f289b9da-b059-46c5-9042-e97db7cf7932}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9f135e1c-28f3-4170-bc85-6840ac05aa94}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{cbecacd1-3346-4123-b715-e07b9f607769}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{bc897cdf-43e2-4858-bb5f-c32530e31c57}">
+                                        <labels>
+                                            <label description="Due" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_scheduled_end" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f513ce64-4ddb-47e8-8437-a0a858664964}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9c5899e9-6d38-479f-975f-9fac8264def3}" showlabel="true" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_description" classid="{E0DECE4B-6FC8-4A8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{4305cbd0-55c8-457c-8383-6fe62244853b}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{98683063-99FE-4556-B8AD-49E40EB288A0}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control_letter" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{09D0851F-9C7E-412C-9C84-1D67CD619ACF}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{066d51dc-8138-4edf-a325-3f0156dd569c}">
+                <rows>
+                    <row>
+                        <cell id="{30ea33bc-948f-48aa-8511-5b38dc43b61a}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="letter_tab_back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{0946095f-57c1-4656-a9f8-827c5e868405}">
+                            <labels>
+                                <label description="Next" languagecode="1033" />
+                            </labels>
+                            <control id="letter_tab_continue_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{cfca1e70-4574-495c-8203-3a952ee4a1e9}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="letter_tab_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{cf367748-17f3-413d-a0dc-e232b7e24bf7}" name="fax_tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{92a4ac94-5a65-4738-9a11-989771191aa1}">
+                <rows>
+                    <row>
+                        <cell id="{5afe8696-17c8-4757-bd16-d655405f036a}">
+                            <labels>
+                                <label description="Specify the Content of the Activity" languagecode="1033" />
+                            </labels>
+                            <control id="fax_tab_specifycontent_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{5C36D5FA-6CF2-405D-B64B-A99863AE5D38}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{91e7b6b4-5ecb-4f81-873d-e73138c7f4a1}">
+                                        <labels>
+                                            <label description="Specify the details of the quick campaign by filling out the available fields in the activity. When you are done, click Next." languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_tab_specify_details_message_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7e54b6eb-9c07-404a-b8f3-2a0349c74223}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{468db0d2-7f10-4f21-9f19-2f42a4832c6b}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7b6d4cef-81d9-4e75-80cf-81468befd722}">
+                                        <labels>
+                                            <label description="Due" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_scheduled_end" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{01289ad0-91bb-48ff-a44b-7e1846fb7b97}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a364b675-b700-4f68-8baf-8ad5e6ae80b1}" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_description" classid="{E0DECE4B-6FC8-4A8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{32299291-648b-4262-9745-61f7cdf8895a}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{37C6A4BF-B352-43E3-B649-2E63F66077A1}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control_fax" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{471EF58E-5E30-49B5-AF9B-AF9A70719101}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{bf1b6283-7787-477e-a8ee-4aac36fa7e5e}">
+                <rows>
+                    <row>
+                        <cell id="{bf1cc518-e0c0-4d24-8654-d7973744a0ce}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="fax_tab_back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{342f9aa9-5e76-4705-8b3a-d84cb2b6e801}">
+                            <labels>
+                                <label description="Next" languagecode="1033" />
+                            </labels>
+                            <control id="fax_tab_continue_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{33af2159-31e6-412d-9d68-fcb2a692a4e9}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="fax_tab_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{cd7e597e-34d7-4124-a4c1-3979402322db}" name="email_tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{f2de6904-9435-4820-ab42-3587ff6c3940}">
+                <rows>
+                    <row>
+                        <cell id="{67a68d70-8616-48b6-98ea-57c9fc2a6861}">
+                            <labels>
+                                <label description="Specify the Content of the Activity" languagecode="1033" />
+                            </labels>
+                            <control id="email_tab_specifycontent_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{40e2649a-30e5-4558-8d8a-92721a84d45d}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{081ae51a-64e5-4756-ad37-f4286c77cf2f}">
+                                        <labels>
+                                            <label description="Specify the details of the quick campaign by filling out the available fields in the activity. When you are done, click Next." languagecode="1033" />
+                                        </labels>
+                                        <control id="email_tab_specify_details_message_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{3f9f7768-0152-4002-a8da-31f7d1b9e9de}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c0f05d28-7192-4aa3-a0ea-f5ea1f067990}">
+                                        <labels>
+                                            <label description="Use Template" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_use_template" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{080112b8-55ea-43ef-b1c8-fdb094a917cd}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="false" id="{040a7507-c506-4c4f-a806-51ed2ca7e357}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_select_template_button_cc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{24947a71-c84c-4a0b-a28c-0982061b894a}" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{da01d8e8-6445-4828-897b-b33ca041ac94}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{8504c433-d681-4437-b58c-96b48d71703f}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4bacc62d-e705-4f3c-9b90-4d9cd4ff8c2e}">
+                                        <labels>
+                                            <label description="Due" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_scheduled_end" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{430ccc0f-b406-422d-bf72-12b03cf4172b}">
+                                        <labels>
+                                            <label description="From" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_from" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{2DF45189-84C2-452A-B4D6-D09F918EBCA7}</DefaultViewId>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{2DF45189-84C2-452A-B4D6-D09F918EBCA7}</DefaultViewId>
+                                                        <EntityLogicalName>team</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{3434f892-b38a-4a21-98e4-35c473073f52}</DefaultViewId>
+                                                        <EntityLogicalName>queue</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8edcb360-acb2-4c1f-b370-9624c96098c0}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cba461f5-2cc4-47c1-a32a-646e5c83c10d}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_description_cc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{965f3678-8d89-4f8f-be8f-cdcb02132b0c}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8da3d89b-31e7-49f5-a028-29335d9c97d5}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7F3034EC-1244-4632-9B83-60E4305F11CD}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control_email" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{B2F8287E-B7B4-47EE-B6A6-69DAE68A4E2A}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{77a66fbe-54c9-4090-8cbd-f6944e3060a9}">
+                <rows>
+                    <row>
+                        <cell id="{0ac98bbf-d920-474f-8a1d-a810941c7b55}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="email_tab_back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{ce2f49eb-b642-44b5-972f-cad6977e3d34}">
+                            <labels>
+                                <label description="Next" languagecode="1033" />
+                            </labels>
+                            <control id="email_tab_continue_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                    <row>
+                        <cell id="{116189ee-19c9-40b9-9821-fac8cc1d0f64}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="email_tab_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{354ff021-a991-4bca-b11a-a2b84f53ebab}" name="summary_tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabheader id="{b47fe4c8-ea90-4743-9a66-e0634bcdd163}">
+                <rows>
+                    <row>
+                        <cell id="{cc999b75-154f-4b8b-8c3d-f19b341931ef}">
+                            <labels>
+                                <label description="Completing the Create Quick Campaign Wizard" languagecode="1033" />
+                            </labels>
+                            <control id="{a5afdbeb-b00a-43f9-ba58-638df90be811}" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                <parameters>
+                                    <IsTitle>true</IsTitle>
+                                </parameters>
+                            </control>
+                        </cell>
+                    </row>
+                </rows>
+            </tabheader>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" id="{7bb13e9c-5f77-4a12-bbfb-c6af2d4f2aab}" name="{7bb13e9c-5f77-4a12-bbfb-c6af2d4f2aab}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9e4a4347-394f-49b7-9ff1-fd4816c60108}">
+                                        <labels>
+                                            <label description="You have successfully completed the wizard. Review the information for your campaign. If you want to make changes, click Back." languagecode="1033" />
+                                        </labels>
+                                        <control id="{2bf09843-c6f2-4310-a703-b58590304e67}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{16fd8305-8090-4b29-b7c6-1c0571df49f4}">
+                                        <labels>
+                                            <label description=" " languagecode="1033" />
+                                        </labels>
+                                        <control id="{3b5f6436-fb56-44c0-bbd2-713103497973}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5f745dad-b6af-452b-9f92-4d981355e1f4}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="summary_tab_name_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{62aff576-f24e-4c76-bfd8-238df129ad56}">
+                                        <labels>
+                                            <label description="Activity" languagecode="1033" />
+                                        </labels>
+                                        <control id="summary_tab_activity_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5f6317ca-f17e-4075-b305-f085cf53bb1a}">
+                                        <labels>
+                                            <label description="Scope" languagecode="1033" />
+                                        </labels>
+                                        <control id="summary_tab_scope_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0708985d-2b1f-4668-be1c-0431c5200b4e}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="summary_tab_owner_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="false" id="{73762c1f-59f6-46c9-bf7b-635bec4d7c5f}" name="{73762c1f-59f6-46c9-bf7b-635bec4d7c5f}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8b85cfb5-6694-4c8c-94b6-9ed0bd892704}">
+                                        <labels>
+                                            <label description=" " languagecode="1033" />
+                                        </labels>
+                                        <control id="{1335941d-65e5-46fd-9865-2a2a124e7564}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{795513cc-38e8-467f-a74a-37d11c091025}">
+                                        <labels>
+                                            <label description="After you create this quick campaign, it will be located in the Sales and Marketing pane, under Quick Campaigns." languagecode="1033" />
+                                        </labels>
+                                        <control id="{f1de3ae3-396e-4851-b110-7b59930c1736}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e5efc5da-0f4b-4568-a1cb-bfa68f32ff1c}">
+                                        <labels>
+                                            <label description=" " languagecode="1033" />
+                                        </labels>
+                                        <control id="{6f4a7b73-1dfc-4304-b591-e2b032e81b1b}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{533c8387-947d-4b3e-bd67-bf5ab852b2b5}">
+                                        <labels>
+                                            <label description="To create the quick campaign and its activities, click Create." languagecode="1033" />
+                                        </labels>
+                                        <control id="{e13989b0-6311-4c36-8905-906cff0b1da8}" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{7d4017c2-7408-494b-b686-5c4fd3b43bc9}">
+                <rows>
+                    <row>
+                        <cell id="{d15eda3b-379a-47ff-bd10-28f7aa20c0dd}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="summary_tab_back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{b3141a6e-7f3a-4f60-8d26-afa7f46e654f}">
+                            <labels>
+                                <label description="Create" languagecode="1033" />
+                            </labels>
+                            <control id="summary_tab_create_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{c773b323-03de-4d87-a804-5e89f7dd49d7}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="summary_tab_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{f21c94b4-2795-44a6-acf4-1bbf78c29ca9}" enabled="true" parameters="'appointment_tab_'" passExecutionContext="false" />
+                <Handler functionName="Marketing.ActivityCreation.NewEmails.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{f31c94b4-2795-44a6-acf4-1bbf78c29ca9}" enabled="true" parameters="'email_tab_'" passExecutionContext="false" />
+                <Handler functionName="Marketing.ActivityCreation.NewFaxes.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{f61c94b4-2795-44a6-acf4-1bbf78c29ca9}" enabled="true" parameters="'fax_tab_'" passExecutionContext="false" />
+                <Handler functionName="Marketing.ActivityCreation.NewLetters.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{f51c94b4-2795-44a6-acf4-1bbf78c29ca9}" enabled="true" parameters="'letter_tab_'" passExecutionContext="false" />
+                <Handler functionName="Marketing.ActivityCreation.NewPhoneCalls.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{f21c94b4-2795-44a6-acf4-1bbf78c19ca2}" enabled="true" parameters="'phone_call_tab_'" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- start_tab -->
+        <event name="onclick" application="false" active="true" attribute="start_tab_continue_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onContinueClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'name_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="start_tab_cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCancelClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{5be0a877-1f11-4cba-b8c2-eef02ac294ab}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- /start_tab -->        <!-- name_tab -->
+        <event name="onclick" application="false" active="true" attribute="name_tab_cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCancelClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{5be0a877-1f11-4cba-b8c2-eef02ac294ab}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="name_tab_back_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onBackClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'start_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="name_tab_continue_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onContinueClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'activity_type_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- /name_tab -->        <!-- activity_type_tab -->
+        <event name="onload" application="false" active="true" attribute="activity_type_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onLoadActivityType" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{da9986ba-962e-4020-bcda-6ae73cfde911}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="true" attribute="activity_type_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onActivityTypeChanged" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{e7a3e467-994e-414b-ae17-4b815b23e73b}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="activity_type_tab_back_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onBackClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'name_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="activity_type_tab_continue_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onContinueWithActivityClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{79ffbb24-4711-44e2-87ef-52eae95e64c8}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="activity_type_tab_cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCancelClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{5be0a877-1f11-4cba-b8c2-eef02ac294ab}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- /activity_type_tab -->        <!-- phone_call_tab -->
+        <event name="onclick" application="false" active="true" attribute="phone_call_tab_back_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onBackClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'activity_type_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="phone_call_tab_continue_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onContinueWithSummaryClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{79ffbb24-4711-44e2-87ef-52eae95e64c8}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="phone_call_tab_cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCancelClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{5be0a877-1f11-4cba-b8c2-eef02ac294ab}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- /phone_call_tab -->        <!-- appointment_tab -->
+        <event name="onchange" application="false" active="false" attribute="appointment_all_day_event">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onAllDayEventChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{61739a24-1899-4e31-a5be-793e93fc709d}" enabled="true" parameters="'appointment_tab_'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="appointment_actual_duration_minutes">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onActualDurationMinutesChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{584725c0-d135-4d3b-be94-3d432cde9d52}" enabled="true" parameters="'appointment_tab_'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="appointment_start_time">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onStartTimeChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{1df35070-9c3d-46a5-9470-5897b2dfadfe}" enabled="true" parameters="'appointment_tab_'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="appointment_end_time">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onEndTimeChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{f04e3fc8-6100-43a9-ac0c-1e15ac0498ed}" enabled="true" parameters="'appointment_tab_'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="appointment_tab_back_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onBackClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'activity_type_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="appointment_tab_continue_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onContinueWithSummaryClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{79ffbb24-4711-44e2-87ef-52eae95e64c8}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="appointment_tab_cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCancelClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{5be0a877-1f11-4cba-b8c2-eef02ac294ab}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- /appointment_tab -->        <!-- letter_tab -->
+        <event name="onclick" application="false" active="true" attribute="letter_tab_back_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onBackClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'activity_type_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="letter_tab_continue_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onContinueWithSummaryClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{79ffbb24-4711-44e2-87ef-52eae95e64c8}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="letter_tab_cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCancelClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{5be0a877-1f11-4cba-b8c2-eef02ac294ab}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- /letter_tab -->        <!-- fax_tab -->
+        <event name="onclick" application="false" active="true" attribute="fax_tab_back_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onBackClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'activity_type_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="fax_tab_continue_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onContinueWithSummaryClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{79ffbb24-4711-44e2-87ef-52eae95e64c8}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="fax_tab_cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCancelClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{5be0a877-1f11-4cba-b8c2-eef02ac294ab}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- /fax_tab -->        <!-- email_tab -->
+        <event name="onchange" application="false" active="false" attribute="email_use_template">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewEmails.onUseTemplateChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{e7b1cea8-0b43-4ec8-a72a-3526efcff33d}" enabled="true" parameters="'email_tab_'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="email_tab_back_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onBackClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'activity_type_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="email_tab_continue_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onContinueWithSummaryClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{79ffbb24-4711-44e2-87ef-52eae95e64c8}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="email_tab_cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCancelClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{5be0a877-1f11-4cba-b8c2-eef02ac294ab}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- /email_tab -->        <!-- summary_tab -->
+        <event name="onclick" application="false" active="true" attribute="summary_tab_back_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onContinueWithActivityClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{fa7fa0ff-b70e-478f-9363-b8743642a62e}" enabled="true" parameters="'activity_type_tab'" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="summary_tab_create_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCreateClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{e109bf5f-17dc-43e4-8ba4-0879ce32e687}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="summary_tab_cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.BulkOperation.CreateWizard.onCancelClicked" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="{b688b083-c845-4236-85b2-f205d0c9a801}" enabled="true" passExecutionContext="false" />
+            </Handlers>
+        </event>        <!-- /summary_tab --></events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/BulkOperation/BulkOperation_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{58E98987-F8AE-4402-AF37-5745C2BFB420}">
+            <customControl name="MscrmControls.ActivityPropagationOwnership.OwnershipControl" formFactor="0">
+                <parameters>
+                    <AddToQueue type="Whole.None">add_to_queue</AddToQueue>
+                    <IsEmailActivity type="Whole.None">is_email_activity</IsEmailActivity>
+                    <QueueId type="Whole.None">queue_id</QueueId>
+                    <CloseEmailActivity type="Whole.None">send_email</CloseEmailActivity>
+                    <OwnershipOption type="Whole.None">ownership_option</OwnershipOption>
+                    <OwnerId type="Whole.None">owner_id</OwnerId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ActivityPropagationOwnership.OwnershipControl" formFactor="1">
+                <parameters>
+                    <AddToQueue type="Whole.None">add_to_queue</AddToQueue>
+                    <IsEmailActivity type="Whole.None">is_email_activity</IsEmailActivity>
+                    <QueueId type="Whole.None">queue_id</QueueId>
+                    <CloseEmailActivity type="Whole.None">send_email</CloseEmailActivity>
+                    <OwnershipOption type="Whole.None">ownership_option</OwnershipOption>
+                    <OwnerId type="Whole.None">owner_id</OwnerId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ActivityPropagationOwnership.OwnershipControl" formFactor="2">
+                <parameters>
+                    <AddToQueue type="Whole.None">add_to_queue</AddToQueue>
+                    <IsEmailActivity type="Whole.None">is_email_activity</IsEmailActivity>
+                    <QueueId type="Whole.None">queue_id</QueueId>
+                    <CloseEmailActivity type="Whole.None">send_email</CloseEmailActivity>
+                    <OwnershipOption type="Whole.None">ownership_option</OwnershipOption>
+                    <OwnerId type="Whole.None">owner_id</OwnerId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5A9EE786-69D5-4ACA-85CE-B614CEC6918A}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_phonecall</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_phonecall</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_phonecall</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{7624374D-9515-4DA3-A00F-34F07D01BC0A}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_appointment</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_appointment</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_appointment</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{09D0851F-9C7E-412C-9C84-1D67CD619ACF}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_letter</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_letter</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_letter</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{471EF58E-5E30-49B5-AF9B-AF9A70719101}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_fax</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_fax</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_fax</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{B2F8287E-B7B4-47EE-B6A6-69DAE68A4E2A}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_email</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_email</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName type="Whole.None">activity_id</EntityName>
+                    <FormValues type="SafeString">form_values_email</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{965f3678-8d89-4f8f-be8f-cdcb02132b0c}">
+            <customControl name="MscrmControls.RichTextEditor.RichTextEditorControl" formFactor="0">
+                <parameters>
+                    <value type="Whole.None">email_description</value>
+                    <configUrl static="true" type="SingleLine.URL">/WebResources/Marketing/RichTextEditorControl/Marketing_RTEConfig.json</configUrl>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.RichTextEditor.RichTextEditorControl" formFactor="1">
+                <parameters>
+                    <value type="Whole.None">email_description</value>
+                    <configUrl static="true" type="SingleLine.URL">/WebResources/Marketing/RichTextEditorControl/Marketing_RTEConfig.json</configUrl>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.RichTextEditor.RichTextEditorControl" formFactor="2">
+                <parameters>
+                    <value type="Whole.None">email_description</value>
+                    <configUrl static="true" type="SingleLine.URL">/WebResources/Marketing/RichTextEditorControl/Marketing_RTEConfig.json</configUrl>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{24947a71-c84c-4a0b-a28c-0982061b894a}">
+            <customControl name="MscrmControls.SelectEmailTemplate.SelectEmailTemplateButton" formFactor="0">
+                <parameters>
+                    <activityType type="Decimal">activity_type</activityType>
+                    <selectedTemplateId type="Whole.None">email_selected_template_id</selectedTemplateId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SelectEmailTemplate.SelectEmailTemplateButton" formFactor="1">
+                <parameters>
+                    <activityType type="Decimal">activity_type</activityType>
+                    <selectedTemplateId type="Whole.None">email_selected_template_id</selectedTemplateId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SelectEmailTemplate.SelectEmailTemplateButton" formFactor="2">
+                <parameters>
+                    <activityType type="Decimal">activity_type</activityType>
+                    <selectedTemplateId type="Whole.None">email_selected_template_id</selectedTemplateId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

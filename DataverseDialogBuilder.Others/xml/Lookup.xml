@@ -1,0 +1,88 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <header id="{8ca11f5c-164d-426f-9f8e-42334d42fcbd}">
+        <rows>
+            <row>
+                <cell id="{a1ca636d-b9b2-4b4b-b901-8ee951612535}">
+                    <labels>
+                        <label description="Look Up Records" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_lookup_records" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{f6f7e787-35a7-4740-88e2-457b1c01399f}" name="{f6f7e787-35a7-4740-88e2-457b1c01399f}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{8eb4cc5e-e064-4cd4-8164-bacd31b58b1b}" name="{8eb4cc5e-e064-4cd4-8164-bacd31b58b1b}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{cad3f8c5-8dd6-47f6-a734-7715d58126d0}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lookup_entities_id" classid="{D873DC38-D40B-4CF1-AA71-99B2C4C5157D}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{1b237e8c-a326-4199-988c-f8b06c344420}">
+        <rows>
+            <row>
+                <cell id="{c04380a3-b182-451c-87df-bd47b542150f}">
+                    <labels>
+                        <label description="Add" languagecode="1033" />
+                    </labels>
+                    <control id="add_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{748ac02a-1b7b-4df0-b1fe-5f3623627cc9}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="add_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialogAsOk" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{51ec22b9-603f-4f45-b212-8cbf12c055a4}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{99124e12-b4b0-45b5-a9bb-92562a32def5}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

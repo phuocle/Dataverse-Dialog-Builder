@@ -1,0 +1,119 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_msdyn_welcometitletext" type="SafeString" />
+        <querystringparameter name="param_msdyn_welcomecaptiontext" type="SafeString" />
+        <querystringparameter name="param_msdyn_iotdeploymentlink" type="SafeString" />
+        <querystringparameter name="param_msdyn_iotcentrallink" type="SafeString" />
+    </formparameters>
+    <header id="{2A26DF4C-1ADC-4A0A-AC87-8EF798370B93}">
+        <rows>
+            <row>
+                <cell id="{BBE0A819-1751-4489-B7B0-CF1E2D50C392}">
+                    <labels>
+                        <label description="Welcome to Connected Field Service" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_cfswelcome_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row />
+            <row>
+                <cell id="{7ABEAAEE-1E19-4B61-99F6-79BC8AB46901}">
+                    <labels>
+                        <label description="To enjoy the benefits of CFS, get started with one of the two options." languagecode="1033" />
+                    </labels>
+                    <control id="lbl_cfswelcome_caption" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{052854AC-38BF-48F6-8F59-83A7A37752CC}" IsUserDefined="1" name="DeploymentOptionsTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{7CC87D71-80B6-4BB3-B55E-01632314241B}" showlabel="false" showbar="false" IsUserDefined="0" columns="1" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{C626BA0A-4561-4A5B-BAD9-BCAAAC5C5F63}" colspan="1" auto="true" rowspan="7">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="IFRAME_DeploymentOptions" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true">
+                                            <parameters>
+                                                <Url>https://docs.microsoft.com/dynamics365/customer-engagement/field-service/connected-field-service</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{E3DD646A-CE51-4B68-8865-060D065549EB}">
+        <rows>
+            <row>
+                <cell id="{226593FD-0CE8-4BA5-BB74-2B2CCC2C71EE}">
+                    <labels>
+                        <label description="Learn More" languagecode="1033" />
+                    </labels>
+                    <control id="LearnMoreButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{3F5C8183-9A00-41FF-865D-8750ED784301}">
+                    <labels>
+                        <label description="Do Not Show Again" languagecode="1033" />
+                    </labels>
+                    <control id="DoNotShowAgainButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false">
+            <Handlers>
+                <Handler functionName="msdyn.IoTWelcomeDialog.init" libraryName="$webresource:msdyn_/IoT/WelcomeDialog/WelcomeDialog.js" handlerUniqueId="{DAB9DD94-9079-450F-82CE-584448832A30}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/IoT/WelcomeDialog/WelcomeDialog.js" />
+                <internaljscriptfile src="$webresource:msdyn_/IoT/Localization/Localization.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions></controlDescriptions>
+</form>

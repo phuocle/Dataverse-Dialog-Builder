@@ -1,0 +1,105 @@
+<form>
+    <hiddencontrols>
+        <data id="knowledgeArticleId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="associationType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <formparameters>
+        <querystringparameter name="param_knowledgeArticleId" type="UniqueId" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_associationType" type="SafeString" />
+        <querystringparameter name="param_statecode" type="Integer" />
+        <querystringparameter name="param_statuscode" type="Integer" />
+    </formparameters>
+    <header id="{19ec46a6-3518-4006-8f82-654e56b71bce}">
+        <rows>
+            <row>
+                <cell id="{48d47503-3a1c-43bb-80ce-1d9cbcb500aa}">
+                    <labels>
+                        <label description="Relate Product" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_ArticleToProductAssociation" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{6fd5c3a1-cc54-4348-afb0-610b89d69745}" name="{6fd5c3a1-cc54-4348-afb0-610b89d69745}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{7cd1616c-7Fdb-4f4f-ad0e-35b0351234a6}" name="{7cd1616c-7Fdb-4f4f-ad0e-35b0351234a6}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a7ff9419-58bc-4a05-ba04-2d86c3cf0cd7}">
+                                        <labels>
+                                            <label description="Select Product to Associate with" languagecode="1033" />
+                                        </labels>
+                                        <control id="associateEntity_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{8ba625b2-6a2a-4735-bab2-0c74ae8442a4}</DefaultViewId>
+                                                        <EntityLogicalName>product</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{4a6c95b9-f4d3-466d-8b57-a9898b754914}">
+        <rows>
+            <row>
+                <cell id="{d01b76ed-fad2-47a5-8dE5-76df21ab50b1}">
+                    <labels>
+                        <label description="Associate" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{5f9f00aa-37ef-4b6c-886c-eb4f63ea792b}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="ProductManagement.KnowledgeArticle.Instance.associate" libraryName="ProductManagement/KnowledgeArticle/KnowledgeArticle_main_system_library.js" handlerUniqueId="{e4133c28-8b25-462a-a399-ba4116a0fc47}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="ProductManagement.KnowledgeArticle.dialogClose" libraryName="ProductManagement/KnowledgeArticle/KnowledgeArticle_main_system_library.js" handlerUniqueId="{3cf98ac2-f08b-49b5-b1df-01cb9914b437}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ProductManagement/KnowledgeArticle/KnowledgeArticle_main_system_library.js" />
+                <internaljscriptfile src="$webresource:ProductManagement/Localization/ResourceStringProvider.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

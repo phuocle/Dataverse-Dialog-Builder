@@ -1,0 +1,175 @@
+<form>
+    <formparameters>
+        <querystringparameter name="is_createmode" type="Boolean" />
+        <querystringparameter name="liveworkstream_id" type="SafeString" />
+        <querystringparameter name="livechatconfig_id" type="SafeString" />
+        <querystringparameter name="question_order" type="SafeString" />
+        <querystringparameter name="questionsequence_id" type="SafeString" />
+        <querystringparameter name="surveyquestion_id" type="SafeString" />
+        <querystringparameter name="questionnaire_type" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{A49244C6-328D-4AFB-A952-A2ECDA2F51D1}" name="{A49244C6-328D-4AFB-A952-A2ECDA2F51D1}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{BA7EDEF7-0313-4FFB-BCC5-1DCCFEB4ED92}" name="{BA7EDEF7-0313-4FFB-BCC5-1DCCFEB4ED92}" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{14E31E47-8F4E-45C4-98FB-1668D39E77C1}">
+                                        <labels>
+                                            <label description="Question name" languagecode="1033" />
+                                        </labels>
+                                        <control id="surveyquestionname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{21945FAB-A679-4457-A28C-69200B12650E}" auto="true" rowspan="2">
+                                        <labels>
+                                            <label description="Question text" languagecode="1033" />
+                                        </labels>
+                                        <control id="surveyquestiontext" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>512</MaxLength>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{8E79D7A2-F7C4-41F3-A8A1-569CE74F0CFC}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Question type" languagecode="1033" />
+                                        </labels>
+                                        <control id="chatanswertype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" disabled="false" uniqueid="{11B40EC3-7EEC-4FF4-AF9C-84D6EBA79965}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetName>msdyn_chatanswertype</OptionSetName>
+                                                <DefaultValue>192350000</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{C78BA409-FD8A-4D68-80FE-8C4CA50CE26F}" visible="false">
+                                        <labels>
+                                            <label description="Rating Scale" languagecode="1033" />
+                                        </labels>
+                                        <control id="ratingscale" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{C4B9ED42-0755-4382-93DF-CEB85DD9B1FD}" visible="false" auto="true" rowspan="3">
+                                        <labels>
+                                            <label description="Option values" languagecode="1033" />
+                                        </labels>
+                                        <control id="chatansweroptions" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{b04aaea9-7a64-4f63-b78d-e7cab24f60a1}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Mandatory?" languagecode="1033" />
+                                        </labels>
+                                        <control id="questionrequired" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" disabled="false" uniqueid="{02aadcac-0be9-429d-8f8d-a2239c4622cc}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetName>msdyn_questionsequence_msdyn_questionrequired</OptionSetName>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{819E6DDD-E04C-463C-B1A9-775672649F48}">
+        <rows>
+            <row>
+                <cell id="{7CB076D6-DD5A-4933-89E9-A2DB22401EA9}">
+                    <labels>
+                        <label description="New Question" languagecode="1033" />
+                    </labels>
+                    <control id="createsurveyquestionsequence" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{A4E6487D-CDA3-4FA5-94D0-46EE61BAA6CE}">
+        <rows>
+            <row>
+                <cell id="{89E7710A-9912-4796-A190-73A138841A1A}">
+                    <labels>
+                        <label description="Save and Close" languagecode="1033" />
+                    </labels>
+                    <control id="save" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{09CCE5A0-1642-4454-A6D1-7BB3C3DAB54F}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelChatQuestion.Instance.loadSurveyQuestionSequence" libraryName="msdyn_OmniChannelChatQuestion.js" handlerUniqueId="{0AF133D9-00AF-40A4-9FF4-6CA05CCDA2B4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="save">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelChatQuestion.Instance.saveSurveyQuestionSequence" libraryName="msdyn_OmniChannelChatQuestion.js" handlerUniqueId="{5DE990B8-7DBC-46E6-9B88-5B1300314BAB}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelChatQuestion.Instance.closeSurveyQuestionDialog" libraryName="msdyn_OmniChannelChatQuestion.js" handlerUniqueId="{E12D7415-AFC4-4A1D-944E-D96D808467E6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="chatanswertype">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelChatQuestion.Instance.onAnswerTypeChange" libraryName="msdyn_OmniChannelChatQuestion.js" handlerUniqueId="{B9154D7A-3776-41C4-B8AC-CB955D57867F}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="surveyquestionname">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelChatQuestion.Instance.onQuestionNameChanged" libraryName="msdyn_OmniChannelChatQuestion.js" handlerUniqueId="{F72FB7B7-66BC-4D7D-846E-D675926BCC8D}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="chatansweroptions">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelChatQuestion.Instance.onSurveyAnswerOptionsChanged" libraryName="msdyn_OmniChannelChatQuestion.js" handlerUniqueId="{250C77E2-25CA-4F9C-85FE-114F91CE461B}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="ratingscale">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelChatQuestion.Instance.onRatingScaleChanged" libraryName="msdyn_OmniChannelChatQuestion.js" handlerUniqueId="{E029D51F-0597-4635-A6F1-44061CBD1364}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions></controlDescriptions>
+    <clientresources></clientresources>
+</form>

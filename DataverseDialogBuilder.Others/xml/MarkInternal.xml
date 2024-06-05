@@ -1,0 +1,93 @@
+<form>
+    <header id="{1c85234f-0707-452b-9f44-af77915bd663}">
+        <rows>
+            <row>
+                <cell id="{42DBC995-4D0F-48BA-A386-8C942978FDFA}">
+                    <labels>
+                        <label description="Would you like to mark all related versions and translations as internal?" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_markinternal" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{875C7A2A-DF5B-4EE3-A4D7-41462737D571}" name="{875C7A2A-DF5B-4EE3-A4D7-41462737D571}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{9ACE6364-070B-446D-8572-2BCE2EA06092}" name="{9ACE6364-070B-446D-8572-2BCE2EA06092}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{A4B01272-46DD-4C41-8B64-E31526C5C934}">
+                                        <labels>
+                                            <label description="Select Versions" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectversions_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{E2DDF4AF-D91A-4FA3-B154-09CAA55ED353}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{F74FC104-BC8C-4A57-990A-44E6036B3C72}">
+        <rows>
+            <row>
+                <cell id="{43F84586-E227-490E-B052-A685C3CBEE4A}">
+                    <labels>
+                        <label description="Submit" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{9F8964E8-E94D-4509-B5E3-1B5CA5830DF2}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticle.CommandActions.markInternalSubmitClick" libraryName="msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" handlerUniqueId="{a143059b-2202-4005-b7db-d344c1c7c243}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticleUtility.closeDialog" libraryName="msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" handlerUniqueId="{828fd812-c99e-499b-b9ad-476932157f36}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_knowledgeArticleId" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_articlePublicNumber" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

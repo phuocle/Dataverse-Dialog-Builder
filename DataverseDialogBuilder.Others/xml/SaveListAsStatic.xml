@@ -1,0 +1,88 @@
+<form>
+    <formparameters>
+        <querystringparameter name="entity_id" type="SafeString" />
+    </formparameters>
+    <header id="{34aa1dcd-7309-4a75-a7cb-c8a682209ad2}">
+        <rows>
+            <row>
+                <cell id="{860e1c8b-095b-4722-ac37-2b85f09516d8}" showlabel="true">
+                    <labels>
+                        <label description="Save List as Static" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{04eacc95-a8bb-4390-8bbc-5a4365cf657d}" name="{04eacc95-a8bb-4390-8bbc-5a4365cf657d}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" showlabel="false" columns="1" id="{82c4df51-e6cf-4ab3-9a66-7467913d7f76}" name="{82c4df51-e6cf-4ab3-9a66-7467913d7f76}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{51b3e372-3fd1-4b26-8574-ac61ce94f492}" showlabel="true">
+                                        <labels>
+                                            <label description="Do you want to save the dynamic list as a static list?" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{c55fc145-146e-4c56-92a2-0185a9e32fa3}">
+        <rows>
+            <row>
+                <cell id="{fe321aa4-9299-45de-870f-a8e62053f091}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{417e829e-d26e-4424-af38-414a4ead5bf2}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.CopyDynamicToStaticDialog.onOkClicked" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{ecc8e878-6fde-41ae-9c64-008b8406d3f0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="Main_system_library.js" handlerUniqueId="{d5bb0cb4-d7be-4e6c-a38d-01a1e54d695b}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

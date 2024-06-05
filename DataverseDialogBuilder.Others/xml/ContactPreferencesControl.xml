@@ -1,0 +1,121 @@
+<form>
+    <hiddencontrols>
+        <data id="preferences" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="tableHeaderLeft" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="tableHeaderRight" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="followText" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="donotFollowText" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <formparameters>
+        <querystringparameter name="id_preferences" type="SafeString" />
+        <querystringparameter name="id_tableHeaderLeft" type="SafeString" />
+        <querystringparameter name="id_tableHeaderRight" type="SafeString" />
+        <querystringparameter name="id_followText" type="SafeString" />
+        <querystringparameter name="id_donotFollowText" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{926B1674-D998-4C9A-9330-13F06679F902}" name="{926B1674-D998-4C9A-9330-13F06679F902}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{75FA562C-EB2E-4522-AB85-8EB24FBE3E50}" name="{75FA562C-EB2E-4522-AB85-8EB24FBE3E50}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="false" auto="true" id="{3B8ACDE6-E984-460C-8556-E7BF91CBB6E7}" labelid="{0295E11E-AAB1-47D4-A957-1C4D3D82E2EF}" locklevel="1">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="contactPreferences" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{E9B34EE7-A833-453E-B9DB-F785A2932A8B}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{52C0E576-95E2-4657-BE8A-1AEF0C8FACE3}">
+        <rows>
+            <row>
+                <cell id="{920356C0-9417-4EEE-830B-60FDA25A2F6D}">
+                    <labels>
+                        <label description="Recipient Preferences" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_viewContactPreferences" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{d4869702-164e-4c06-baf7-259abbdeb724}" showlabel="true">
+                    <labels>
+                        <label description="Email activity preference per recipient." languagecode="1033" />
+                    </labels>
+                    <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{0A0886D9-5377-458B-B74D-4FC412E51434}">
+        <rows>
+            <row>
+                <cell id="{0FD184C8-C3B3-4F67-AF29-B893D102C38B}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.viewPreferenceClick" libraryName="msdyn_/EmailEngagementActions/Scripts/Email_Engagement_Actions_Dialogs.js" handlerUniqueId="{789AEBCD-9476-486E-8CBE-82F6F670EF2C}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/EmailEngagementActions/Scripts/Email_Engagement_Actions_Dialogs.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{E9B34EE7-A833-453E-B9DB-F785A2932A8B}">
+            <customControl name="MscrmControls.EmailContactPreferences.Preferences" formFactor="0">
+                <parameters>
+                    <id_preferences type="SingleLine.Text">id_preferences</id_preferences>
+                    <id_tableHeaderLeft type="SingleLine.Text">id_tableHeaderLeft</id_tableHeaderLeft>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EmailContactPreferences.Preferences" formFactor="1">
+                <parameters>
+                    <id_preferences type="SingleLine.Text">id_preferences</id_preferences>
+                    <id_tableHeaderLeft type="SingleLine.Text">id_tableHeaderLeft</id_tableHeaderLeft>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EmailContactPreferences.Preferences" formFactor="2">
+                <parameters>
+                    <id_preferences type="SingleLine.Text">id_preferences</id_preferences>
+                    <id_tableHeaderLeft type="SingleLine.Text">id_tableHeaderLeft</id_tableHeaderLeft>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

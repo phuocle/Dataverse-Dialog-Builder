@@ -1,0 +1,98 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_firstTimeOpen" type="Boolean" />
+    </formparameters>
+    <header id="{216bae5a-8812-4c99-836f-e5d0ca837115}">
+        <rows>
+            <row>
+                <cell id="{58546275-fa0b-49f8-861a-6459efbf618d}">
+                    <labels>
+                        <label description="Include Outlook free/busy in search resource availability API" languagecode="1033" />
+                    </labels>
+                    <control id="OutlookFreeBusyNewFeatureHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="false" id="{07184C49-5EC3-4776-8C2B-2A07BC6702D6}" name="OutlookFreeBusyNewFeatureTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{c9a1d6ab-104f-4063-9220-90446f38e948}" name="OutlookFreeBusyNewFeatureTab_section1" height="auto" showlabel="true">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d92289e0-39aa-49be-81d0-43bcdbebf48c}" showlabel="false" auto="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="IFRAME_OutlookSchedulingNewFeatureDialog" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true">
+                                            <parameters>
+                                                <Url>msdyn_/ConfirmationDialog/scripts/OptInOutlookSchedulingFeature.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>no</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{10ab949e-893a-47d3-8e9c-ebe93cf2b59a}">
+        <rows>
+            <row>
+                <cell id="{1d24849e-0c85-4650-84c1-330c7a9e02fc}">
+                    <labels>
+                        <label description="Got it. Let's enable" languagecode="1033" />
+                    </labels>
+                    <control id="Upgrade" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{4b2d619f-2025-4163-a8ec-5427e12242ef}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="Cancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="msdyn.ConfirmDialog.Initialize" libraryName="msdyn_/ConfirmationDialog/scripts/ConfirmDialog.js" handlerUniqueId="{3ec303d7-3820-4409-9116-2b3354ba5a30}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/fps/LocalizationLibrary/Localization.Library.js" />
+                <internaljscriptfile src="$webresource:msdyn_/ConfirmationDialog/scripts/ConfirmDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

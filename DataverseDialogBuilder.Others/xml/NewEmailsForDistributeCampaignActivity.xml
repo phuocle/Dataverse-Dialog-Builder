@@ -1,0 +1,293 @@
+<form>
+    <formparameters>
+        <querystringparameter name="action_name" type="SafeString" />
+        <querystringparameter name="activity_serialized" type="SafeString" />
+        <querystringparameter name="activity_type" type="SafeString" />
+        <querystringparameter name="email_description" type="SafeString" />
+        <querystringparameter name="email_selected_template_id" type="SafeString" />
+        <querystringparameter name="entity_id" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="channel_name" type="SafeString" />
+        <querystringparameter name="form_values_email" type="SafeString" />
+    </formparameters>
+    <header id="{4669181c-51c0-4cd8-adf8-18154fcb294d}">
+        <rows>
+            <row>
+                <cell id="{61ff91c9-a2cc-453b-801d-9493513fdf62}">
+                    <labels>
+                        <label description="New Emails" languagecode="1033" />
+                    </labels>
+                    <control id="dialog_header_title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{e5c0fc60-0c8e-41c6-83ca-150f43253a75}" name="{e5c0fc60-0c8e-41c6-83ca-150f43253a75}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{151037ee-8a33-4f3c-8d21-83a9cb3e0f7a}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{61c19d9b-01f2-4091-a56a-7dc06d46a98b}">
+                                        <labels>
+                                            <label description="Fill out this form to create new emails for the members you selected in the marketing list. To add this email as a new email in each member's record, click Distribute." languagecode="1033" />
+                                        </labels>
+                                        <control id="dialog_subtitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" id="{a5a255c6-4925-43ce-a552-6ad4fc05920b}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{195480e9-50fc-45db-a15f-92f0971b997a}">
+                                        <labels>
+                                            <label description="Use Template" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_use_template" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{080112b8-55ea-43ef-b1c8-fdb094a917cd}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="false" id="{040a7507-c506-4c4f-a806-51ed2ca7e357}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_select_template_button_cc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{683dccd9-1107-4459-a6af-c3850a598be1}" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3a38b51f-e831-432c-af2a-6ec4f25e4090}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{8504c433-d681-4437-b58c-96b48d71703f}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{281677e3-aa85-484d-b871-b900ea8f22fc}">
+                                        <labels>
+                                            <label description="Due" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_scheduled_end" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8e8dd9a1-c736-45b7-9590-72db55190b75}">
+                                        <labels>
+                                            <label description="From" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_from" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{2DF45189-84C2-452A-B4D6-D09F918EBCA7}</DefaultViewId>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{3434f892-b38a-4a21-98e4-35c473073f52}</DefaultViewId>
+                                                        <EntityLogicalName>queue</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0684345a-b0e6-4100-986f-9febdaf7f6ed}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a53c583f-9c33-43ea-a1f2-c50f3f233dae}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_description_cc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{dd63ea27-cf67-435c-9853-e5b19d118f4e}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9d5fa2a1-b359-4ec0-89e4-957cb6607537}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="email_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{C7889AFB-7987-469C-81D4-038C57841A33}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{E10BA3B4-14A3-4069-A904-E3B4F1945320}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{44bafe4e-dc75-4e75-8165-589919b00d32}">
+        <rows>
+            <row>
+                <cell id="{2c470c16-01f2-474e-9838-5c46d6d325df}">
+                    <labels>
+                        <label description="Help" languagecode="1033" />
+                    </labels>
+                    <control id="help_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{18b83701-9b73-4861-bc03-ba37269f6789}">
+                    <labels>
+                        <label description="Distribute" languagecode="1033" />
+                    </labels>
+                    <control id="distribute_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{93d684fd-6bcb-4cf4-8001-2b228a3cffdc}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewEmails.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{d199989e-d658-4edf-9a4b-aee558eb74e4}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="email_use_template">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewEmails.onUseTemplateChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{e7b1cea8-0b43-4ec8-a72a-3526efcff33d}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="help_id">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onHelpButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{e46bf013-f010-4d6c-a75d-0f6ed579c831}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="distribute_id">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewEmails.onConfirmClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{5730ac13-3ab9-4524-88c7-1c9f11b29107}" enabled="true" parameters="" passExecutionContext="false" />
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onDistributeActivityButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{294e9076-d40e-42a4-8e55-eab3cde1de4a}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="Marketing/ClientCommon/Marketing_ClientCommon.js" handlerUniqueId="{26d64878-86d2-4aec-afcd-28977ca5f83e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/CampaignActivity/CampaignActivity_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{dd63ea27-cf67-435c-9853-e5b19d118f4e}">
+            <customControl name="MscrmControls.RichTextEditor.RichTextEditorControl" formFactor="0">
+                <parameters>
+                    <value type="Whole.None">email_description</value>
+                    <configUrl static="true" type="SingleLine.URL">/WebResources/Marketing/RichTextEditorControl/Marketing_RTEConfig.json</configUrl>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.RichTextEditor.RichTextEditorControl" formFactor="1">
+                <parameters>
+                    <value type="Whole.None">email_description</value>
+                    <configUrl static="true" type="SingleLine.URL">/WebResources/Marketing/RichTextEditorControl/Marketing_RTEConfig.json</configUrl>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.RichTextEditor.RichTextEditorControl" formFactor="2">
+                <parameters>
+                    <value type="Whole.None">email_description</value>
+                    <configUrl static="true" type="SingleLine.URL">/WebResources/Marketing/RichTextEditorControl/Marketing_RTEConfig.json</configUrl>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{683dccd9-1107-4459-a6af-c3850a598be1}">
+            <customControl name="MscrmControls.SelectEmailTemplate.SelectEmailTemplateButton" formFactor="0">
+                <parameters>
+                    <activityType type="Decimal">activity_type</activityType>
+                    <selectedTemplateId type="Whole.None">email_selected_template_id</selectedTemplateId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SelectEmailTemplate.SelectEmailTemplateButton" formFactor="1">
+                <parameters>
+                    <activityType type="Decimal">activity_type</activityType>
+                    <selectedTemplateId type="Whole.None">email_selected_template_id</selectedTemplateId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SelectEmailTemplate.SelectEmailTemplateButton" formFactor="2">
+                <parameters>
+                    <activityType type="Decimal">activity_type</activityType>
+                    <selectedTemplateId type="Whole.None">email_selected_template_id</selectedTemplateId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{E10BA3B4-14A3-4069-A904-E3B4F1945320}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4202</EntityName>
+                    <FormValues type="SafeString">form_values_email</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4202</EntityName>
+                    <FormValues type="SafeString">form_values_email</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4202</EntityName>
+                    <FormValues type="SafeString">form_values_email</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

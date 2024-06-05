@@ -1,0 +1,128 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{eca2a8ba-6eeb-4a8e-8996-94963da2d4b7}" name="{eca2a8ba-6eeb-4a8e-8996-94963da2d4b7}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{86017d64-16ab-458f-ad1f-a65910de11d5}" name="{86017d64-16ab-458f-ad1f-a65910de11d5}" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8efacce4-b792-4470-84b6-301a6755720f}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="firsttext_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{396b6303-cb78-4c1c-95c3-982664d645a2}" name="{396b6303-cb78-4c1c-95c3-982664d645a2}" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{93e209c1-f436-4f33-9f32-373f6854e108}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="secondtext_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{d2112931-d0d0-45ba-9cb3-b9e95dfc1a39}">
+        <rows>
+            <row>
+                <cell id="{312c4070-4c4b-4ca6-b5e4-215914f50db4}">
+                    <labels>
+                        <label description="Update the series" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{d7084850-db22-4d09-81f1-de96d6e94231}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="toplabel_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{b7463184-21b2-4872-a1c1-01664f29b328}">
+        <rows>
+            <row>
+                <cell id="{e39152f8-c44b-4129-afd6-51f875d431e9}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="okupdatebutton_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{c7885848-defd-4cb0-828e-c8facb7760bc}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelupdatebutton_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.UpdateSeriesDialog.UpdateSeriesDialogOnLoad" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{dd47470c-0f70-49d8-b4ce-04042864a58b}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="okupdatebutton_id">
+            <Handlers>
+                <Handler functionName="Activities.UpdateSeriesDialog.OkOnClick" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{03be9f05-8a2f-4ec4-abc1-26f9fd911001}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelupdatebutton_id">
+            <Handlers>
+                <Handler functionName="Activities.UpdateSeriesDialog.CancelOnClick" libraryName="Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" handlerUniqueId="{af52723b-15aa-43e8-a01e-59b70671d764}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/RecurringAppointmentMaster_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

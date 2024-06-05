@@ -1,0 +1,367 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_workOrderIds" type="Object" />
+        <querystringparameter name="param_parentPage" type="Object" />
+        <querystringparameter name="param_ParentFormContext" type="Object" />
+    </formparameters>
+    <header id="{deed0f2d-a50f-4b0a-abd5-40db90fcda25}">
+        <rows>
+            <row>
+                <cell id="{deedf0b5-a50f-4b0a-abd5-40db90fcda55}">
+                    <labels>
+                        <label description="Geocode Address" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{54c90094-ab7e-4236-ad08-cb3f1516ddf2}">
+                    <labels>
+                        <label description="Get latitude and longitude of address. Marker on map can also be manually adjusted to reflect a more precise geographical location." languagecode="1033" />
+                    </labels>
+                    <control id="lbl_subHeader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{e8dd9035-12f9-46f3-9275-7c192deed650}" name="{6f6dec6f-3fe5-4e05-bd80-d358eb93f28b}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="3" id="{393767c1-06c8-4a78-b6e3-a6ebbbfcd35e}" name="{b4b3a40b-bbb9-4125-911b-5b57b9fb27fa}" celllabelposition="Top">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dbd5332b-9725-481d-9eb0-7fc7fcb3d923}" showlabel="false">
+                                        <labels>
+                                            <label description="Street" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_street" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="false" uniqueid="{DAAEA61A-59D9-490D-90F0-13D7AFEB3206}">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{8d41547c-2ee7-7345-89b1-6eb7cc464148}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Latitude" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_latitude" classid="{0D2C745A-E5A8-4c8f-BA63-C6D3BB604660}" disabled="true" isunbound="true">
+                                            <parameters>
+                                                <Precision>5</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{0c9b5587-5ccb-343b-3c97-a93933538e56}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Longitude" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_longitude" classid="{0D2C745A-E5A8-4c8f-BA63-C6D3BB604660}" disabled="true" isunbound="true">
+                                            <parameters>
+                                                <Precision>5</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{38926ead-0d19-4b7a-ade9-25497bdf55d9}" visible="false">
+                                        <labels>
+                                            <label description="Street 2" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_street2" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2c5c6f4e-b8f5-4767-b8bf-4aeae401e955}" visible="false">
+                                        <labels>
+                                            <label description="Street 3" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_street3" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0bb8bb1c-7598-4e73-991b-aa0440720708}" visible="false">
+                                        <labels>
+                                            <label description="City" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_city" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{575b9d80-476a-4ed8-8324-42860faafa95}" visible="false">
+                                        <labels>
+                                            <label description="State/Province" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_stateOrProvince" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{35c34b87-91ec-435c-a56a-c2e2536ee9b7}" visible="false">
+                                        <labels>
+                                            <label description="Zip/Postal Code" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_postalCode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9426d9a9-511c-428c-82ac-3361e14f3a37}" visible="false">
+                                        <labels>
+                                            <label description="Country/Region" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_country" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{CEA9531F-529D-48D8-9030-B154749797C4}" name="{965CF289-6B77-4768-A7D6-D832831CC0DE}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3564e629-5152-d838-6dcb-1031e8892a27}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="bingMapControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{0783d46d-7153-5b67-aab2-b177553705e0}">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8f7fbd6f-537a-4032-bc69-b041485e58a6}">
+        <rows>
+            <row>
+                <cell id="{9bb8d6c6-11be-4db5-9b00-7533a093f690}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="btnChangeAddress" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{3b90b328-3111-4a0f-888f-281f52488dee}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="btnReturn" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{af5d4375-7f62-4f7c-9d0c-f5012b850a94}">
+                    <labels>
+                        <label description="Reset" languagecode="1033" />
+                    </labels>
+                    <control id="btn_resetMarker" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.InitForm" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de788}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnChangeAddress">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.ChangeData" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de787}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnReturn">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.CloseDialog" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de786}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btn_resetMarker">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.ResetAddress" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de785}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="address1_country">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.AddressChanged" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de784}" enabled="true" parameters="&quot;address1_country&quot;" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="address1_postalCode">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.AddressChanged" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de783}" enabled="true" parameters="&quot;address1_postalCode&quot;" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="address1_stateOrProvince">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.AddressChanged" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de782}" enabled="true" parameters="&quot;address1_stateOrProvince&quot;" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="address1_city">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.AddressChanged" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de781}" enabled="true" parameters="&quot;address1_city&quot;,1" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="address1_street">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.AddressChanged" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de780}" enabled="true" parameters="&quot;address1_street&quot;" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="address1_latitude">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.AddressChanged" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de779}" enabled="true" parameters="&quot;address1_latitude&quot;" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="address1_longitude">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.AddressChanged" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de7778}" enabled="true" parameters="&quot;address1_longitude&quot;" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{0783d46d-7153-5b67-aab2-b177553705e0}">
+            <customControl formFactor="0" name="MscrmControls.Map.MapControl">
+                <parameters>
+                    <value type="Multiple">bingMapControl</value>
+                    <mapSourceSwitch isGroup="true" static="true" type="SingleLine.Text">CoordinatesGroup</mapSourceSwitch>
+                    <latitude type="FP">address1_latitude</latitude>
+                    <longitude type="FP">address1_longitude</longitude>
+                    <addressEditableSwitch isGroup="true" static="true" type="SingleLine.Text">isAddressEditableYesGroup</addressEditableSwitch>
+                    <outputLatitude type="FP">address1_latitude</outputLatitude>
+                    <outputLongitude type="FP">address1_longitude</outputLongitude>
+                    <isStatic type="Enum" static="true">No</isStatic>
+                    <height type="Whole.None" static="true">587</height>
+                    <showGetDirectionsButton type="Enum" static="true">Yes</showGetDirectionsButton>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Map.MapControl">
+                <parameters>
+                    <value type="Multiple">bingMapControl</value>
+                    <mapSourceSwitch isGroup="true" static="true" type="SingleLine.Text">CoordinatesGroup</mapSourceSwitch>
+                    <latitude type="FP">address1_latitude</latitude>
+                    <longitude type="FP">address1_longitude</longitude>
+                    <addressEditableSwitch isGroup="true" static="true" type="SingleLine.Text">isAddressEditableYesGroup</addressEditableSwitch>
+                    <outputLatitude type="FP">address1_latitude</outputLatitude>
+                    <outputLongitude type="FP">address1_longitude</outputLongitude>
+                    <isStatic type="Enum" static="true">No</isStatic>
+                    <height type="Whole.None" static="true">587</height>
+                    <showGetDirectionsButton type="Enum" static="true">Yes</showGetDirectionsButton>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Map.MapControl">
+                <parameters>
+                    <value type="Multiple">bingMapControl</value>
+                    <mapSourceSwitch isGroup="true" static="true" type="SingleLine.Text">CoordinatesGroup</mapSourceSwitch>
+                    <latitude type="FP">address1_latitude</latitude>
+                    <longitude type="FP">address1_longitude</longitude>
+                    <addressEditableSwitch isGroup="true" static="true" type="SingleLine.Text">isAddressEditableYesGroup</addressEditableSwitch>
+                    <outputLatitude type="FP">address1_latitude</outputLatitude>
+                    <outputLongitude type="FP">address1_longitude</outputLongitude>
+                    <isStatic type="Enum" static="true">No</isStatic>
+                    <height type="Whole.None" static="true">587</height>
+                    <showGetDirectionsButton type="Enum" static="true">Yes</showGetDirectionsButton>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{DAAEA61A-59D9-490D-90F0-13D7AFEB3206}">
+            <customControl formFactor="0" name="Microsoft.AddressInputUCI">
+                <parameters>
+                    <Address type="SingleLine.Text">address1_street</Address>
+                    <Street1 type="SingleLine.Text">address1_street</Street1>
+                    <Street2 type="SingleLine.Text">address1_street2</Street2>
+                    <Street3 type="SingleLine.Text">address1_street3</Street3>
+                    <City type="SingleLine.Text">address1_city</City>
+                    <StateOrProvince type="SingleLine.Text">address1_stateOrProvince</StateOrProvince>
+                    <CountryOrRegion type="SingleLine.Text">address1_country</CountryOrRegion>
+                    <ZipOrPostalCode type="SingleLine.Text">address1_postalCode</ZipOrPostalCode>
+                    <WriteToPrimaryField static="true" type="Enum">True</WriteToPrimaryField>
+                    <AddressFormFormat static="true" type="Enum">LegacyFormat</AddressFormFormat>
+                    <KeyProvider static="true" type="Enum">FS</KeyProvider>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="Microsoft.AddressInputUCI">
+                <parameters>
+                    <Address type="SingleLine.Text">address1_street</Address>
+                    <Street1 type="SingleLine.Text">address1_street</Street1>
+                    <Street2 type="SingleLine.Text">address1_street2</Street2>
+                    <Street3 type="SingleLine.Text">address1_street3</Street3>
+                    <City type="SingleLine.Text">address1_city</City>
+                    <StateOrProvince type="SingleLine.Text">address1_stateOrProvince</StateOrProvince>
+                    <CountryOrRegion type="SingleLine.Text">address1_country</CountryOrRegion>
+                    <ZipOrPostalCode type="SingleLine.Text">address1_postalCode</ZipOrPostalCode>
+                    <WriteToPrimaryField static="true" type="Enum">True</WriteToPrimaryField>
+                    <AddressFormFormat static="true" type="Enum">LegacyFormat</AddressFormFormat>
+                    <KeyProvider static="true" type="Enum">FS</KeyProvider>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="Microsoft.AddressInputUCI">
+                <parameters>
+                    <Address type="SingleLine.Text">address1_street</Address>
+                    <Street1 type="SingleLine.Text">address1_street</Street1>
+                    <Street2 type="SingleLine.Text">address1_street2</Street2>
+                    <Street3 type="SingleLine.Text">address1_street3</Street3>
+                    <City type="SingleLine.Text">address1_city</City>
+                    <StateOrProvince type="SingleLine.Text">address1_stateOrProvince</StateOrProvince>
+                    <CountryOrRegion type="SingleLine.Text">address1_country</CountryOrRegion>
+                    <ZipOrPostalCode type="SingleLine.Text">address1_postalCode</ZipOrPostalCode>
+                    <WriteToPrimaryField static="true" type="Enum">True</WriteToPrimaryField>
+                    <AddressFormFormat static="true" type="Enum">LegacyFormat</AddressFormFormat>
+                    <KeyProvider static="true" type="Enum">FS</KeyProvider>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

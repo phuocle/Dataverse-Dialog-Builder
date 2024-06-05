@@ -1,0 +1,145 @@
+<form>
+    <header id="{46269378-08c5-4a20-a006-0c4cc12a95eb}">
+        <rows>
+            <row>
+                <cell id="{148cd8df-991e-44ab-b68b-3d5a938b5b32}">
+                    <labels>
+                        <label description="Create an email template" languagecode="1033" />
+                    </labels>
+                    <control id="createTemplateTitleId" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{9fc329a1-cd73-418b-8f2d-a2592f95465f}" name="{9fc329a1-cd73-418b-8f2d-a2592f95465f}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{a9f2b5a1-6789-4d6e-bf5b-a37b11257092}" name="{a9f2b5a1-6789-4d6e-bf5b-a37b11257092}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e541f45e-81f7-472f-a15e-bb697e286df1}" showlabel="true">
+                                        <labels>
+                                            <label description="Template name" languagecode="1033" />
+                                        </labels>
+                                        <control id="templateNameId" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3a457000-08be-445a-8a84-829fee90d58d}" showlabel="true">
+                                        <labels>
+                                            <label description="Permission level" languagecode="1033" />
+                                        </labels>
+                                        <control id="permissionLevelId" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{692312cf-56a6-4e49-b23e-9102ff0f67ca}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0051a2f9-f584-4ed7-839c-dbd9dd16e8bc}" showlabel="true">
+                                        <labels>
+                                            <label description="Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="templateTypeControlId" classid="{f9a8a302-114e-466a-b582-6771b2ae0d92}" isunbound="true" isrequired="true" uniqueid="{240c3be5-abe2-4d8e-bb19-338ee0af21c9}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ca3cbeb2-a1bc-460a-a10d-6a751e0cb151}" showlabel="true">
+                                        <labels>
+                                            <label description="Language" languagecode="1033" />
+                                        </labels>
+                                        <control id="languageId" classid="{671A9387-CA5A-4d1e-8AB7-06E39DDCF6B5}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{b9595d65-478a-4043-80ac-9b2146caf8dd}">
+        <rows>
+            <row>
+                <cell id="{2d8f5fa0-71e2-40c3-9664-7ca4e8f4b941}">
+                    <labels>
+                        <label description="Create" languagecode="1033" />
+                    </labels>
+                    <control id="createOrConvertId" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{4d45da52-a66e-4dca-8399-1307e413abb0}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelId" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{240c3be5-abe2-4d8e-bb19-338ee0af21c9}">
+            <customControl formFactor="0" name="MscrmControls.Activity.TemplateTypeControl">
+                <parameters>
+                    <templateType type="SingleLine.Text">param_category</templateType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Activity.TemplateTypeControl">
+                <parameters>
+                    <templateType type="SingleLine.Text">param_category</templateType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Activity.TemplateTypeControl">
+                <parameters>
+                    <templateType type="SingleLine.Text">param_category</templateType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.Template.createOrConvertTemplateDialogOnLoad" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{23e51c01-3b92-4ce4-aaf4-f12d36a86b7c}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="createOrConvertId">
+            <Handlers>
+                <Handler functionName="Activities.Template.createTemplate" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{413b2abc-932d-425b-9c19-a0779b3236d1}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelId">
+            <Handlers>
+                <Handler functionName="Activities.Template.closeDialog" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{b78e85ab-6bc4-4a25-b8e2-706da31befb6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_category" type="SafeString" />
+        <querystringparameter name="param_templateRecord" type="Object" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Template_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,169 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityLogicalName" type="SafeString" />
+        <querystringparameter name="param_queryParameters" type="SafeString" />
+        <querystringparameter name="param_gridColumns" type="SafeString" />
+    </formparameters>
+    <header id="{FED0A93A-B677-46B0-9C5A-CD9F64C13DC7}">
+        <rows>
+            <row>
+                <cell id="{B4529E37-DD76-4B1B-B77E-DE70A8D86174}">
+                    <labels>
+                        <label description="Set Parent Child Relationship" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_associate_case" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{062EA124-D602-4BAC-8D72-FBC6FF7EFB7B}" name="CaseGridTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{3D3F29EF-3A94-4A73-B506-F38D3926E257}" name="CaseGridSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{C81B6525-4593-4EC2-958E-4762CCA5CF3B}">
+                                        <labels>
+                                            <label description="Select a parent case for these cases." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_select_parent" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{165C1516-D0AB-4842-A203-C37F76033564}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="AssociateCaseGrid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{947536B7-0687-4E49-A1C8-5E14ADD9BA2B}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{C3E78115-0367-437F-A0E1-008074E3A6B3}">
+        <rows>
+            <row>
+                <cell id="{467D47FD-880B-4570-9754-B2108D8EE2EE}">
+                    <labels>
+                        <label description="Set" languagecode="1033" />
+                    </labels>
+                    <control id="Set" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{598B3F8E-B8C5-4BAF-8D0D-FF1239369C71}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{6EF9EC1E-22B6-4FE4-8C9C-0510FF935363}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="selectedRecordId" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.associateDialogOnLoad" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{AFDD4FFE-6800-4BD8-B0F1-4784345ABC22}" enabled="true" passExecutionContext="false" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="selectedRecordId">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.associateDialogOnChange" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{1951961B-E64E-4D75-9634-4FF633627021}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Set">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.associateDialogSetClick" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{09D2D10D-D953-4E95-935E-C81D34CE93E0}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{4343341A-40B6-43A7-847F-D44CC82C2E5B}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{947536B7-0687-4E49-A1C8-5E14ADD9BA2B}">
+            <customControl name="MscrmControls.Containers.ClientContextGridControl" formFactor="0">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selectedRecordId</SelectedRecordId>
+                    <EntityLogicalName type="SingleLine.Text">param_entityLogicalName</EntityLogicalName>
+                    <QueryParameters type="SingleLine.Text">param_queryParameters</QueryParameters>
+                    <GridColumns type="SingleLine.Text">param_gridColumns</GridColumns>
+                    <data-set name="Grid">
+                        <ViewId>{5dbd358d-6670-4138-92b3-b5810fa2a0e8}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>incident</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.ClientContextGridControl" formFactor="1">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selectedRecordId</SelectedRecordId>
+                    <EntityLogicalName type="SingleLine.Text">param_entityLogicalName</EntityLogicalName>
+                    <QueryParameters type="SingleLine.Text">param_queryParameters</QueryParameters>
+                    <GridColumns type="SingleLine.Text">param_gridColumns</GridColumns>
+                    <data-set name="Grid">
+                        <ViewId>{5dbd358d-6670-4138-92b3-b5810fa2a0e8}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>incident</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.ClientContextGridControl" formFactor="2">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selectedRecordId</SelectedRecordId>
+                    <EntityLogicalName type="SingleLine.Text">param_entityLogicalName</EntityLogicalName>
+                    <QueryParameters type="SingleLine.Text">param_queryParameters</QueryParameters>
+                    <GridColumns type="SingleLine.Text">param_gridColumns</GridColumns>
+                    <data-set name="Grid">
+                        <ViewId>{5dbd358d-6670-4138-92b3-b5810fa2a0e8}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>incident</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

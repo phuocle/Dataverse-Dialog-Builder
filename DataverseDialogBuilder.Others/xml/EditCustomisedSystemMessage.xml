@@ -1,0 +1,97 @@
+<form>
+    <formparameters>
+        <querystringparameter name="is_editmode" type="Boolean" />
+        <querystringparameter name="customisedrecord_id" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{22F64BF6-4A10-4E50-B114-9D2D2C16EDDC}" name="{22F64BF6-4A10-4E50-B114-9D2D2C16EDDC}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{E88722A4-FE63-4278-AFCA-120E3CED07BB}" name="{E88722A4-FE63-4278-AFCA-120E3CED07BB}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{27DB195E-A78D-43DD-BC60-809C999B7AFA}">
+                                        <labels>
+                                            <label description="Language Code" languagecode="1033" />
+                                        </labels>
+                                        <control id="languagename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{720BD9AC-2A5B-4A57-BF85-73A807ADE6E4}" auto="true" rowspan="4">
+                                        <labels>
+                                            <label description="Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="customizedsystemmessage" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{40137B80-9154-4015-AB2A-29173FA827D6}">
+        <rows>
+            <row>
+                <cell id="{B8D3F0C2-6F87-40DB-9574-93B955D351A9}">
+                    <labels>
+                        <label description="Edit system message" languagecode="1033" />
+                    </labels>
+                    <control id="editcustomisedsystemmessage" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{11961591-FD03-4AD1-BD24-D6FA86FA44B4}">
+        <rows>
+            <row>
+                <cell id="{373493F3-5CF1-4C34-8EF0-4A7EB598E0ED}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="save" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{667000C0-BBD1-4E0C-9BDF-5FD03E588D4F}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.loadCustomMessage" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{426CF7FA-FCD6-48E7-9EE2-4D8CE93529CF}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="save">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.saveCustomMessage" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{1E5A6C79-9554-4F5E-8AC5-4701544286DC}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.closeEditMessageDialog" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{58009403-EC55-4912-A72E-944751906F96}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions></controlDescriptions>
+    <clientresources></clientresources>
+</form>

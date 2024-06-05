@@ -1,0 +1,230 @@
+<form>
+    <formparameters>
+        <querystringparameter name="params_entitytypename" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityrecordslist" type="SafeString" />
+        <querystringparameter name="param_entityviewid" type="SafeString" />
+        <querystringparameter name="param_entityselectedlist" type="SafeString" />
+    </formparameters>
+    <header id="{E9DB8685-8296-4C12-91C0-025F765A5BF1}">
+        <rows>
+            <row>
+                <cell id="{30BC7487-FF66-4090-BAF7-6C7E98C6C384}">
+                    <labels>
+                        <label description="Connect {0}" languagecode="1033" />
+                    </labels>
+                    <control id="connectSequenceDialogTitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{D929D1EF-8984-4687-A383-84105242A7B7}">
+                    <labels>
+                        <label description="Choose the {0} that you want to connect." languagecode="1033" />
+                    </labels>
+                    <control id="connectSequenceDialogDescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{B07CF0D9-E549-4241-8918-2C3E655C6568}" name="RecordsTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="RecordsSection" showlabel="false" showbar="false" locklevel="0" id="{F820C19E-31CC-41F8-A592-CC9148E54FB7}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Sequences" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{F425321E-8A9F-4F35-9246-93C15DD65AA1}" showlabel="false" colspan="1" auto="false" rowspan="10">
+                                        <labels>
+                                            <label description="Leads" languagecode="1033" />
+                                        </labels>
+                                        <control id="LeadRecordsSubgrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <EnableQuickFind>true</EnableQuickFind>
+                                                <ViewId>{0cc3ebe5-428c-4bf4-8019-0d1371bf42ef}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName />
+                                                <TargetEntityType>lead</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableViewPicker>true</EnableViewPicker>
+                                                <ViewIds></ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                                <RecordsPerPage>10</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row>
+                                    <cell id="{9CCB73DA-9C66-4427-915E-A4FEE95B89B0}" showlabel="false" colspan="1" auto="false" rowspan="10">
+                                        <labels>
+                                            <label description="Opportunities" languagecode="1033" />
+                                        </labels>
+                                        <control id="OpportunityRecordsSubgrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <EnableQuickFind>true</EnableQuickFind>
+                                                <ViewId>{8a3fd1f6-f35c-4295-aac3-ef5cadf28f50}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName />
+                                                <TargetEntityType>opportunity</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableViewPicker>true</EnableViewPicker>
+                                                <ViewIds></ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                                <RecordsPerPage>10</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row>
+                                    <cell id="{AF7138CE-B6EC-49FA-B35F-E69C21EFFD44}" showlabel="false" colspan="1" auto="false" rowspan="10">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="CustomEntityRecordsSubgrid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{11A52085-3BAE-4EB8-99F5-77BEE2B8D592}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{D9A33060-E171-4359-8DB2-76E7CCEE9207}">
+                <rows>
+                    <row>
+                        <cell id="{00EB7794-48CC-4AD6-ACDD-257ABF90DDAD}">
+                            <labels>
+                                <label description="Connect" languagecode="1033" />
+                            </labels>
+                            <control id="ApplyCadenceOnClickHandler" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{CB65A86E-4974-4FBD-9177-9F228FE864E9}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="CancelOnClickHandler" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ApplyCadenceOnClickHandler">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ApplyRecordsToSequenceOkHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{CD1F7063-4995-4433-A9CB-D5D477287EE4}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ApplyRecordsToSequenceOnLoad" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{3F042EE3-DB96-4994-A519-0A62B97C4EBB}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="CancelOnClickHandler">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.DialogCancelHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{B0CFB422-E0FE-4E94-9A8E-FED828628A2B}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{11A52085-3BAE-4EB8-99F5-77BEE2B8D592}">
+            <customControl name="MscrmControls.SalesCadence.ApplyRecordsToSequenceDialog" formFactor="1">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">params_entitytypename</entitylogicalname>
+                    <entityviewid type="SingleLine.Text">param_entityviewid</entityviewid>
+                    <displayQuickFind static="true" type="TwoOptions">true</displayQuickFind>
+                    <displayViewSelector static="true" type="TwoOptions">true</displayViewSelector>
+                    <displayCommandBar static="true" type="TwoOptions">false</displayCommandBar>
+                    <isSingleRowSelection static="true" type="TwoOptions">false</isSingleRowSelection>
+                    <selectedrecords type="SingleLine.Text">param_entityselectedlist</selectedrecords>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SalesCadence.ApplyRecordsToSequenceDialog" formFactor="2">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">params_entitytypename</entitylogicalname>
+                    <entityviewid type="SingleLine.Text">param_entityviewid</entityviewid>
+                    <displayQuickFind static="true" type="TwoOptions">true</displayQuickFind>
+                    <displayViewSelector static="true" type="TwoOptions">true</displayViewSelector>
+                    <displayCommandBar static="true" type="TwoOptions">false</displayCommandBar>
+                    <isSingleRowSelection static="true" type="TwoOptions">false</isSingleRowSelection>
+                    <selectedrecords type="SingleLine.Text">param_entityselectedlist</selectedrecords>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SalesCadence.ApplyRecordsToSequenceDialog" formFactor="0">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">params_entitytypename</entitylogicalname>
+                    <entityviewid type="SingleLine.Text">param_entityviewid</entityviewid>
+                    <displayQuickFind static="true" type="TwoOptions">true</displayQuickFind>
+                    <displayViewSelector static="true" type="TwoOptions">true</displayViewSelector>
+                    <displayCommandBar static="true" type="TwoOptions">false</displayCommandBar>
+                    <isSingleRowSelection static="true" type="TwoOptions">false</isSingleRowSelection>
+                    <selectedrecords type="SingleLine.Text">param_entityselectedlist</selectedrecords>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

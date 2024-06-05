@@ -1,0 +1,134 @@
+<form>
+    <hiddencontrols />
+    <header id="{e2a5abf6-cf4d-48fe-b310-99aa537eaa21}">
+        <rows>
+            <row>
+                <cell id="{bf39a666-ecfc-410c-9379-8280d332195c}">
+                    <labels>
+                        <label description="Add Subject" languagecode="1033" />
+                    </labels>
+                    <control id="addsubject_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" isrequired="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{267563a0-1d10-4f88-9385-95d2d7c4d8ac}" name="{267563a0-1d10-4f88-9385-95d2d7c4d8ac}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{4afc8478-7bcf-46a0-aec5-37040a507359}" name="{4afc8478-7bcf-46a0-aec5-37040a507359}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e99ebf70-1769-43f1-99a9-cf2aba8f59e7}">
+                                        <labels>
+                                            <label description="Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="title_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" disabled="false" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d907df62-97fc-4a3e-8e98-9e1a2ed860e2}">
+                                        <labels>
+                                            <label description="Parent Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentsubject_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{2492be92-3492-e711-80f3-00155d1d360a}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{80c58087-eb59-4e01-8220-6ce5df682e8f}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{226f6fa7-a715-4f55-91c2-8e44795c5668}">
+        <rows>
+            <row>
+                <cell id="{79694c28-e373-4c39-aff4-a2439516db1e}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="save_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{b2e16e30-fdf9-416d-8ec5-ba2ae8f765ca}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="cancel_dialog" libraryName="AppCommon/Subject/SubjectLibrary.js" handlerUniqueId="a7cbd9be-2eee-4d73-bfd3-c6dc7f964779" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="save_id">
+            <Handlers>
+                <Handler functionName="add_subject" libraryName="AppCommon/Subject/SubjectLibrary.js" handlerUniqueId="3b3ad977-cd50-4249-bb59-a05b49b5c7aa" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="dialogOnLoad" libraryName="AppCommon/Subject/SubjectLibrary.js" handlerUniqueId="c955bf2b-be99-4b72-99b6-05fba87c639d" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:AppCommon/Subject/SubjectLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{2492be92-3492-e711-80f3-00155d1d360a}">
+            <customControl name="MscrmControls.AppCommon.SubjectTreeWrapper.SubjectTreeWrapperControl" formFactor="0">
+                <parameters>
+                    <selectedSubject type="SingleLine.Text">selected_subject</selectedSubject>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.SubjectTreeWrapper.SubjectTreeWrapperControl" formFactor="1">
+                <parameters>
+                    <selectedSubject type="SingleLine.Text">selected_subject</selectedSubject>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.SubjectTreeWrapper.SubjectTreeWrapperControl" formFactor="2">
+                <parameters>
+                    <selectedSubject type="SingleLine.Text">selected_subject</selectedSubject>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="selected_subject" type="Object" />
+        <querystringparameter name="last_selected_button" type="SafeString" />
+    </formparameters>
+</form>

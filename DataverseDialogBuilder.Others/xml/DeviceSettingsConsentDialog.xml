@@ -1,0 +1,72 @@
+<form>
+    <formparameters>
+        <querystringparameter name="is_confirmed" type="Boolean" />
+    </formparameters>
+    <controlDescriptions>
+        <controlDescription forControl="{2f0190db-25b9-4076-89fd-f1614d16eb83}">
+            <customControl name="MscrmControls.ConsentDialog.ConsentDialogControl" formFactor="0" />
+            <customControl name="MscrmControls.ConsentDialog.ConsentDialogControl" formFactor="1" />
+            <customControl name="MscrmControls.ConsentDialog.ConsentDialogControl" formFactor="2" />
+        </controlDescription>
+    </controlDescriptions>
+    <tabs>
+        <tab id="{b6caf3a0-a529-47bc-9306-7648fd2fddb4}" name="{b6caf3a0-a529-47bc-9306-7648fd2fddb4}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{3907f648-ad91-4b66-b715-0cb801325aa3}" name="{3907f648-ad91-4b66-b715-0cb801325aa3}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dcf49a79-0e94-40af-bf78-0d80c1be08ff}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="consentDialogControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{2f0190db-25b9-4076-89fd-f1614d16eb83}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{4bb1ccdc-703b-46a7-96d6-ff408e9dc1b5}">
+        <rows>
+            <row>
+                <cell id="{d0b4ec77-cb2d-41b5-80be-2ed87648193d}">
+                    <labels>
+                        <label description="Ok" languagecode="1033" />
+                    </labels>
+                    <control id="saveChanges" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{8e173518-8472-4f67-bee0-ec557c7032eb}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="discardChanges" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="saveChanges">
+            <Handlers>
+                <Handler functionName="ClientUtility.ConsentDialog.onOkButtonClick" libraryName="CRM/ClientUtility.js" handlerUniqueId="{bc6ac22a-2063-4227-9a21-a0b68dbf6ba0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="discardChanges">
+            <Handlers>
+                <Handler functionName="ClientUtility.ConsentDialog.onCancelButtonClick" libraryName="CRM/ClientUtility.js" handlerUniqueId="{3bc10fe0-ee69-4c93-97a3-38ed9ace35f9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

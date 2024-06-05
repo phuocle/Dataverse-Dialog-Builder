@@ -1,0 +1,206 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_otc" type="SafeString" />
+        <querystringparameter name="param_selectedRecords" type="Object" />
+        <querystringparameter name="param_gridControl" type="Object" />
+        <querystringparameter name="internalparam_entityId" type="SafeString" />
+        <querystringparameter name="internalparam_template" type="SafeString" />
+        <querystringparameter name="internalparam_entityType" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{0d5ee1b8-3da8-49d5-8cc5-19eea3135ffc}" name="BulkEmailTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{868d5f8b-4d87-4483-a1b4-9ca8672209df}" locklevel="0" IsUserDefined="0" name="FirstSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6040de5a-3704-4dcd-adb5-ec12b7ee8429}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="To" languagecode="1033" />
+                                        </labels>
+                                        <control id="recipients" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{e67627b0-31f2-4eca-86e6-f719bee360f7}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ef0afbb9-c978-4fd6-a67d-2ed72ca78313}">
+                                        <labels>
+                                            <label description="From" languagecode="1033" />
+                                        </labels>
+                                        <control id="sender_id" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{E88CA999-0B16-4AE9-B6A9-9EDC840D42D8}</DefaultViewId>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{3434F892-B38A-4A21-98E4-35C473073F52}</DefaultViewId>
+                                                        <EntityLogicalName>queue</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4c14e67b-48e1-4497-a7d7-ac84d56651bc}">
+                                        <labels>
+                                            <label description="Language" languagecode="1033" />
+                                        </labels>
+                                        <control id="language_id" classid="{671A9387-CA5A-4d1e-8AB7-06E39DDCF6B5}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{87c66090-f704-4ef8-abed-dbc3dc31078e}">
+                                        <labels>
+                                            <label description="Template" languagecode="1033" />
+                                        </labels>
+                                        <control id="emailtemplates_id" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{DAF88706-1DAD-4810-ADC4-1517ED39F575}</DefaultViewId>
+                                                        <EntityLogicalName>template</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{725f6951-3d06-46e5-aa7b-5ff132e86b3c}" showbar="false" locklevel="0" columns="1" IsUserDefined="0" name="PreviewSection" celllabelalignment="Left" celllabelposition="Top">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="100%">
+                                    <cell id="{77d1eede-ee4e-4abb-9693-49635c0b4e0b}" auto="true" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Email Preview" languagecode="1033" />
+                                        </labels>
+                                        <control id="template_preview" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{3137960a-4b1b-4312-aaee-2d13a5dfafd2}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{3137960a-4b1b-4312-aaee-2d13a5dfafd2}">
+            <customControl formFactor="0" name="MscrmControls.Activity.TemplatePreviewControl">
+                <parameters>
+                    <templateIdProperty type="SingleLine.Text">internalparam_template</templateIdProperty>
+                    <entityTypeProperty type="SingleLine.Text">internalparam_entityType</entityTypeProperty>
+                    <entityIdProperty type="SingleLine.Text">internalparam_entityId</entityIdProperty>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Activity.TemplatePreviewControl">
+                <parameters>
+                    <templateIdProperty type="SingleLine.Text">internalparam_template</templateIdProperty>
+                    <entityTypeProperty type="SingleLine.Text">internalparam_entityType</entityTypeProperty>
+                    <entityIdProperty type="SingleLine.Text">internalparam_entityId</entityIdProperty>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Activity.TemplatePreviewControl">
+                <parameters>
+                    <templateIdProperty type="SingleLine.Text">internalparam_template</templateIdProperty>
+                    <entityTypeProperty type="SingleLine.Text">internalparam_entityType</entityTypeProperty>
+                    <entityIdProperty type="SingleLine.Text">internalparam_entityId</entityIdProperty>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <header id="{2F1D7682-8476-4441-BADA-37375B1C0AE9}">
+        <rows>
+            <row>
+                <cell id="{4126f52a-e8a8-46fa-87e9-ac912b66ab8a}">
+                    <labels>
+                        <label description="Send Email" languagecode="1033" />
+                    </labels>
+                    <control id="sendemail_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{2CBB18F5-3C50-4844-8176-7E3D60C0F745}">
+        <rows>
+            <row>
+                <cell id="{ccacef1e-e6e7-45ad-8f6a-9dc444b4f348}">
+                    <labels>
+                        <label description="Send" languagecode="1033" />
+                    </labels>
+                    <control id="send_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{15bef601-3603-4b88-9c6b-6b37feaf2e51}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.BulkEmailDialog.onLoad" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{3f56280a-7a96-4e2d-a6d3-95e83c240d25}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="send_id">
+            <Handlers>
+                <Handler functionName="Activities.BulkEmailDialog.sendBulkEmail" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{9bb866ee-e8ac-4d79-8b99-ab9a8c2117b0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.TemplateUtil.closeDialog" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{48144FCE-8067-44AB-9D8B-E786164EC633}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="emailtemplates_id">
+            <Handlers>
+                <Handler functionName="Activities.BulkEmailDialog.onTemplateChange" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{71f9af46-0aac-4909-8f84-cb9e2d4701e3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="language_id">
+            <Handlers>
+                <Handler functionName="Activities.BulkEmailDialog.onLanguageChange" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{1c525bb3-b3b3-48f8-9b03-3f0810187302}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="sender_id">
+            <Handlers>
+                <Handler functionName="Activities.BulkEmailDialog.onSenderChange" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{1f8f05fb-d4a4-4203-84a5-87d42a00662c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/InsertEmailTemplate.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

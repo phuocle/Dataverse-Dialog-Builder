@@ -1,0 +1,234 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_msdyn_workorderid" type="SafeString" />
+    </formparameters>
+    <header id="{41e21913-9235-4a92-ae34-9a26085392f3}">
+        <rows>
+            <row>
+                <cell id="{ace32d95-6d94-4349-9d2f-ea44ce8791d3}">
+                    <labels>
+                        <label description="Create Incident Type from Work Order" languagecode="1033" />
+                    </labels>
+                    <control id="header_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{b521c54f-d618-4e9f-ae08-47dc9db58b40}">
+                    <labels>
+                        <label description="This will create an Incident Type from this Work Order. Incident type acts as a Work Order template and can be used for quickly creating Work Orders which are of similar types and share same Products, Services, Characteristics, and Knowledge Articles." languagecode="1033" />
+                    </labels>
+                    <control id="header_description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true"></control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{8d137ad8-b388-4ad8-ad56-b22bc789a72e}" IsUserDefined="1">
+            <labels>
+                <label description="Create Incident Type" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{e2a8aa1a-f7e7-4a41-9f02-1bd3057fbacc}">
+                            <labels>
+                                <label description="Create Incident Type Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{aea56ce7-2776-02e6-3c46-8ec49141413b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Incident Type Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_incidenttypename" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" disabled="false" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>100</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ec2385ea-ec39-63dc-4a49-0dc6d8a4a88d}" showlabel="true" locklevel="0" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>8000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row>
+                                    <cell id="{c632e0bb-b1d3-4ba7-e7e3-7095dade5ca5}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Work Order Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_workordertype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{8f0514ca-d271-46cc-b531-41791c56949a}</DefaultViewId>
+                                                        <EntityLogicalName>msdyn_workordertype</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{8d137ad8-b388-4ad8-ad56-b22bc789a72e}_section_2" showlabel="false" showbar="false" locklevel="0" id="{ad349f85-e0a9-4224-956f-bb6c543e515c}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="250">
+                            <labels>
+                                <label description="Estimated Duration Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{204cd386-3105-c3b2-311a-5972cd1917dc}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Estimated Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_estimatedduration" classid="{AA987274-CE4E-4271-A803-66164311A958}" disabled="false" isunbound="true" />
+                                    </cell>
+                                    <cell id="{a294604b-865a-8862-5b5b-ad284a867cd1}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Copy Tasks" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_copytasks" classid="{b0c6723a-8503-4fd7-bb28-c8a06ac933c2}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{8d137ad8-b388-4ad8-ad56-b22bc789a72e}_section_3" showlabel="false" showbar="false" locklevel="0" id="{a910403c-7e53-cee2-c3b5-dd6a6a2c052a}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="225">
+                            <labels>
+                                <label description="Options" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c43aab38-ed40-d94a-6627-926c15284ec2}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Copy Products" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_copyproducts" classid="{b0c6723a-8503-4fd7-bb28-c8a06ac933c2}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{a3b2ae68-ca13-3323-c780-bbec46228289}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Copy Services" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_copyservices" classid="{b0c6723a-8503-4fd7-bb28-c8a06ac933c2}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{18764452-e536-8676-90c7-dd40266b9c06}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Copy Characteristics" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_copycharacteristics" classid="{b0c6723a-8503-4fd7-bb28-c8a06ac933c2}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{660684e3-840e-4e0f-94cc-d30771aee166}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Copy Articles" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_copyknowledgearticles" classid="{b0c6723a-8503-4fd7-bb28-c8a06ac933c2}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{8d137ad8-b388-4ad8-ad56-b22bc789a72e}_section_3_2" showlabel="false" showbar="false" locklevel="0" id="{308fdc71-1715-4ec8-bcb9-2cede18d6350}" IsUserDefined="0">
+                            <labels>
+                                <label description="FootNote" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{94e9b4a6-848f-44d8-96c6-e8ad735db9ac}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2d4e6319-0dfa-4fe9-bc77-a8b2268a753b}">
+                                        <labels>
+                                            <label description="The related Tasks, Products, Services, Characteristics, and Knowledge Articles can be edited after the Incident Type is created." languagecode="1033" />
+                                        </labels>
+                                        <control id="foot_note" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{3d3536a2-d5d6-451a-af07-bedbb9007e83}">
+        <rows>
+            <row>
+                <cell id="{63f41149-1539-4bcb-a25a-aabcc6bf1180}">
+                    <labels>
+                        <label description="Create Incident Type" languagecode="1033" />
+                    </labels>
+                    <control id="msdyn_BtnCreateIncidentType" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>        <!-- Load -->
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CreateIncidentType.Library.onDialogLoad" libraryName="$webresource:msdyn_/CreateIncidentType/CreateIncidentType.Library.js" handlerUniqueId="{133198e1-1f94-4f8f-8d07-d8b1472ffdcb}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>        <!-- Fields -->
+        <event name="onchange" application="false" active="false" attribute="msdyn_copytasks">
+            <Handlers>
+                <Handler functionName="CreateIncidentType.Library.onCopyTasksChange" libraryName="$webresource:msdyn_/CreateIncidentType/CreateIncidentType.Library.js" handlerUniqueId="{d67fc637-4604-4216-9de6-2609b64fc704}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>        <!-- Buttons -->
+        <event name="onclick" application="false" active="false" attribute="msdyn_BtnCreateIncidentType">
+            <Handlers>
+                <Handler functionName="CreateIncidentType.Library.onCreateIncidentTypeClick" libraryName="$webresource:msdyn_/CreateIncidentType/CreateIncidentType.Library.js" handlerUniqueId="{92cb614e-1c55-483d-acc3-f4b9e8344c6e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/CreateIncidentType/CreateIncidentType.Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

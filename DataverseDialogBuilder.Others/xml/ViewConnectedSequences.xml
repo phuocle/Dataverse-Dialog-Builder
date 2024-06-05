@@ -1,0 +1,162 @@
+<form>
+    <formparameters>
+        <querystringparameter name="params_tabstate" type="SafeString" />
+        <querystringparameter name="param_entityname" type="SafeString" />
+        <querystringparameter name="param_selectedrecords" type="SafeString" />
+        <querystringparameter name="param_selectedsequences" type="SafeString" />
+        <querystringparameter name="param_action" type="SafeString" />
+    </formparameters>
+    <header id="{11ac16c5-4bd8-4a12-aab4-745e39c5f29c}">
+        <rows>
+            <row>
+                <cell id="{bd644e31-a13f-4e09-9649-4d089f40b62a}">
+                    <labels>
+                        <label description="Connect {0} to sequence" languagecode="1033" />
+                    </labels>
+                    <control id="ViewConnectedSequences_connectSequenceDialogTitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{88e64655-7222-44ca-8baf-24d6117225ef}">
+                    <labels>
+                        <label description="Select the sequence that you want to connect to the {0}." languagecode="1033" />
+                    </labels>
+                    <control id="ViewConnectedSequences_connectSequenceDialogDescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{4e9240f9-a4f6-4660-a757-dad41c3ce8b7}" name="SequencesTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="ViewSequences_Section" showlabel="false" showbar="false" locklevel="0" id="{F820C19E-31CC-41F8-A592-CC9148E54FB7}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Sequences" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8585dfe1-56ac-4324-9310-8d8e8939cee7}" showlabel="false" colspan="1" auto="false" rowspan="10">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="MultiApplyCadenceSubgrid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{a64e8415-1b96-407b-8396-7ed450e1ca70}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{28c0914f-1ef9-4643-b33c-5fd36f6f4a85}">
+                <rows>
+                    <row>
+                        <cell id="{f5ceee78-1178-40e0-b2d1-9cb9c0c1da16}">
+                            <labels>
+                                <label description="Connect" languagecode="1033" />
+                            </labels>
+                            <control id="ViewConnectedSequences_ConnectSequences" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{d4a27667-877e-4b2f-9a48-1b5000371368}">
+                            <labels>
+                                <label description="Disconnect" languagecode="1033" />
+                            </labels>
+                            <control id="ViewConnectedSequences_DisconnectSequences" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{aa9b9488-37e2-4947-a5d0-8fa8deed046c}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="ViewConnectedSequences_CancelButton1" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ViewConnectedSequences_ConnectSequences">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewConnectedSequencesConnectHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{6d908d45-abd3-47ca-9000-a6d36a79669b}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ViewConnectedSequences_CancelButton1">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewConnectedSequences_DialogCancelHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{c8ac36cf-740e-447b-a591-bd9c34ef680d}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ViewConnectedSequences_DisconnectSequences">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewConnectedSequencesDisconnectHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{1cda384f-3ef4-4a1a-9417-ed2a6d25b8f3}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewConnectedSequencesOnLoad" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{3F042EE3-DB96-4994-A519-0A62B97C4EBB}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="params_tabstate">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewConnectedSequencesTabChange" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{9822df8f-daca-4316-83a7-5cb9bb907bc2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="param_selectedsequences">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ViewConnectedSequencesSelectedSequencesChange" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{2f2c7f02-8631-4ffa-b45e-f10ba9c8a7ef}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{a64e8415-1b96-407b-8396-7ed450e1ca70}">
+            <customControl name="MscrmControls.ConnectMulti.ConnectMultiSequenceCustomControl" formFactor="1">
+                <parameters>
+                    <regardingentity type="SingleLine.Text">param_entityname</regardingentity>
+                    <selectedrecords type="SingleLine.Text">param_selectedrecords</selectedrecords>
+                    <selectedsequences type="SingleLine.Text">param_selectedsequences</selectedsequences>
+                    <tabstate type="SingleLine.Text">params_tabstate</tabstate>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConnectMulti.ConnectMultiSequenceCustomControl" formFactor="2">
+                <parameters>
+                    <regardingentity type="SingleLine.Text">param_entityname</regardingentity>
+                    <selectedrecords type="SingleLine.Text">param_selectedrecords</selectedrecords>
+                    <selectedsequences type="SingleLine.Text">param_selectedsequences</selectedsequences>
+                    <tabstate type="SingleLine.Text">params_tabstate</tabstate>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConnectMulti.ConnectMultiSequenceCustomControl" formFactor="0">
+                <parameters>
+                    <regardingentity type="SingleLine.Text">param_entityname</regardingentity>
+                    <selectedrecords type="SingleLine.Text">param_selectedrecords</selectedrecords>
+                    <selectedsequences type="SingleLine.Text">param_selectedsequences</selectedsequences>
+                    <tabstate type="SingleLine.Text">params_tabstate</tabstate>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,92 @@
+<form>
+    <tabs>
+        <tab id="{254e1030-a632-11ea-8b6e-0800200c9a66}" verticallayout="true" name="Tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{445331e0-a632-11ea-8b6e-0800200c9a66}" name="{3ef04210-a632-11ea-8b6e-0800200c9a66}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{60f3afa0-a632-11ea-8b6e-0800200c9a66}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="enhanced_error_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{70590800-a632-11ea-8b6e-0800200c9a66}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{118a3fb0-a632-11ea-8b6e-0800200c9a66}">
+        <rows>
+            <row>
+                <cell id="{1b01f470-a632-11ea-8b6e-0800200c9a66}">
+                    <labels>
+                        <label description="Business Process Error" languagecode="1033" />
+                    </labels>
+                    <control id="FormHeader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{b55c0858-ed25-4f96-960f-1fb8bac57edd}">
+        <rows>
+            <row>
+                <cell id="{7f2ab238-aca0-11ea-bb37-0242ac130002}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="AppCommon.DialogActions.CloseDialog" libraryName="AppCommon/ClientCommon/AppCommon_ClientCommon.js" handlerUniqueId="{841aa7a8-aca0-11ea-bb37-0242ac130002}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" active="false" application="false">
+            <Handlers>
+                <Handler passExecutionContext="true" parameters="" enabled="true" handlerUniqueId="{013653DB-9142-4D97-9E1A-2ED63D1E084E}" libraryName="AppCommon/ControlWS/EnhancedErrorDialogControl/EnhancedErrorDialogControl.js" functionName="Mscrm.AppCommon.EnhancedErrorDialogControl.OnLoad" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{70590800-a632-11ea-8b6e-0800200c9a66}">
+            <customControl formFactor="0" name="MscrmControls.AppCommon.EnhancedErrorDialog.EnhancedErrorDialogControl">
+                <parameters>
+                    <options type="SingleLine.Text">input_options</options>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.AppCommon.EnhancedErrorDialog.EnhancedErrorDialogControl">
+                <parameters>
+                    <options type="SingleLine.Text">input_options</options>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.AppCommon.EnhancedErrorDialog.EnhancedErrorDialogControl">
+                <parameters>
+                    <options type="SingleLine.Text">input_options</options>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="input_options" type="SafeString" />
+    </formparameters>
+</form>

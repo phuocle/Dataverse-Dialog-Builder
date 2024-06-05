@@ -1,0 +1,112 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_primaryControl" type="Object" />
+        <querystringparameter name="param_EntityRecordIds" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{3287b163-cda7-4bdc-a04b-a3ff063082e8}">
+        <rows>
+            <row>
+                <cell id="{02D06A90-BF34-4B94-A15E-D3D574C648DB}">
+                    <labels>
+                        <label description="Recall of approved entries" languagecode="1033" />
+                    </labels>
+                    <control classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" id="formtitle_title" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="false" id="{94839B37-47AF-4514-9688-7B2AD5E6826E}" name="{94839B37-47AF-4514-9688-7B2AD5E6826E}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{2CACFC69-4786-455E-ABC9-3EB5895CF51F}" name="{2CACFC69-4786-455E-ABC9-3EB5895CF51F}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{CE3F9B23-C523-4EDF-A0A9-5A62EE6F7B24}">
+                                        <labels>
+                                            <label description="Some or all of the entries selected have already been approved. For these entries, a request will be sent to the approver to approve the recall before the entry is recalled. Provide a reason to recall approved entries? (Cancelling this dialog will stop processing all recalls.)" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{4644DAA2-3AE7-4755-8177-427FCA9D7B82}" name="{2CACFC69-4786-455E-ABC9-3EB5895CF51F}_2">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{B91EED50-5EF6-4F96-9B13-0DE9454B46D6}">
+                                        <labels>
+                                            <label description="Reason for Recall" languagecode="1033" />
+                                        </labels>
+                                        <control id="textArea_title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{A5B6C6BB-F9AE-4385-BDBB-A14873329D68}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="recall_note" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{8CE6B2EF-C408-4204-851E-C367E3E2BF50}">
+                <rows>
+                    <row>
+                        <cell id="{33EDC398-4D96-4643-A0B0-4BB5983260E4}">
+                            <labels>
+                                <label description="Yes" languagecode="1033" />
+                            </labels>
+                            <control id="okButton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{2D3DA4A3-811B-42E8-B259-954130BD2C00}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancelButton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="okButton">
+            <Handlers>
+                <Handler functionName="msdyn.recallApprovedEntriesDialog.recallApprovedEntries" libraryName="$webresource:msdyn_/RecallApprovedEntries/RecallApprovedEntries.js" handlerUniqueId="{31a70717-9f70-46b5-acbd-f88399365d33}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelButton">
+            <Handlers>
+                <Handler functionName="msdyn.recallApprovedEntriesDialog.dialogClose" libraryName="$webresource:msdyn_/RecallApprovedEntries/RecallApprovedEntries.js" handlerUniqueId="{98ba6170-9ed0-45b7-9db7-cf3dc1a7fb99}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/Libraries/require/require.js" />
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

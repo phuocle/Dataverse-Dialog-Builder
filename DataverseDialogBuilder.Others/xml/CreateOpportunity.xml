@@ -1,0 +1,213 @@
+<form>
+    <formparameters>
+        <querystringparameter name="member_type" type="SafeString" />
+        <querystringparameter name="members_array" type="Object" />
+        <querystringparameter name="form_values" type="SafeString" />
+    </formparameters>
+    <header id="{d2cf4bcb-05ef-4da6-83d5-114c74d96653}">
+        <rows>
+            <row>
+                <cell id="{e9f40ead-8837-4815-a50f-d84254ca9a85}" showlabel="true">
+                    <labels>
+                        <label description="Create Opportunity for Marketing List Members" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{eb6e1609-dfbe-473b-964f-c9c9387990b3}" name="{eb6e1609-dfbe-473b-964f-c9c9387990b3}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" columns="2" id="{bf1dbb23-73d4-4cbf-aaee-5ebcb6723284}" name="{bf1dbb23-73d4-4cbf-aaee-5ebcb6723284}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{78a150dc-c050-4b3b-aca1-18d61a646600}" showlabel="true" colspan="2">
+                                        <labels>
+                                            <label description="Fill out this form to create new opportunities for the members you selected in the marketing list. To add this opportunity as a new opportunity in each member's record, click Create." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ed865002-dfe2-4902-af38-c2449c231abf}" showlabel="true" colspan="2">
+                                        <labels>
+                                            <label description="Details" languagecode="1033" />
+                                        </labels>
+                                        <control id="details_label_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c942db09-1203-43d8-b9c6-28486eca445e}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Topic" languagecode="1033" />
+                                        </labels>
+                                        <control id="topic_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                    <cell id="{7b56e69d-2a42-4f8e-8390-6bac4b3e272e}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Budget Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="budget_amount_id" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cd9773d4-d693-4bca-a335-bbda313f68fb}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Contact" languagecode="1033" />
+                                        </labels>
+                                        <control id="contact_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A2D479C5-53E3-4C69-ADDD-802327E67A0D}</DefaultViewId>
+                                                        <EntityLogicalName>contact</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{e197a540-c9f5-4253-ab5e-dba0d7416cbf}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Est. Revenue" languagecode="1033" />
+                                        </labels>
+                                        <control id="estimated_revenue_id" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{afd3341c-a69e-4ac1-8587-762de32ee6e6}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Account" languagecode="1033" />
+                                        </labels>
+                                        <control id="account_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{a9af0ab8-861d-4cfa-92a5-c6281fed7fab}</DefaultViewId>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{a5c40b55-acf0-478c-ab2f-0bec93c58a80}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Est. Close Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="estimated_close_date_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{eeb19ebb-3692-474a-8f6f-0e4fc03b077f}" showlabel="true" colspan="2">
+                                        <labels>
+                                            <label description="Customer Need" languagecode="1033" />
+                                        </labels>
+                                        <control id="customer_need_label_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b052ed48-60fb-4f34-916c-cbae7a9a61e9}" showlabel="false" colspan="2" rowspan="4">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customer_need_id" classid="{E0DECE4B-6FC8-4A8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{DF4B2DF2-0928-4518-B63A-62F008068DC1}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{3998FFB9-7491-43A9-9167-E0522FFD6A6A}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{e574a736-4a98-4e05-ac50-b721eab29bca}">
+        <rows>
+            <row>
+                <cell id="{e030a6d0-9f10-4837-878d-130d7770b92e}">
+                    <labels>
+                        <label description="Create" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{41efa64d-1442-4a1b-be27-7356f76204c3}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.CreateOpportunitiesDialog.createOpportunities" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{fd38437c-77e1-4d9c-920e-546bbfc75b46}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="Main_system_library.js" handlerUniqueId="{eecc7609-4d2d-41fc-b28b-473378e71b13}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{3998FFB9-7491-43A9-9167-E0522FFD6A6A}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">3</EntityName>
+                    <FormValues type="SafeString">form_values</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">3</EntityName>
+                    <FormValues type="SafeString">form_values</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">3</EntityName>
+                    <FormValues type="SafeString">form_values</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

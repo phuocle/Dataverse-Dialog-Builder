@@ -1,0 +1,91 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_is_enable_dialog" type="Boolean" />
+    </formparameters>
+    <header id="{f0e816ff-4625-4761-8fef-a0f1fc309113}">
+        <rows>
+            <row>
+                <cell id="{52fb3c19-ae3d-460a-8b60-e8f457a88d42}">
+                    <labels>
+                        <label description="Turn on routing diagnostics?" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_enabledisablediagnostics" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{95e13f79-8d7a-4c59-ac3e-ea612b3f559b}" name="{b2659dfd-975c-4b73-8070-c3945a88b730}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5a7e902a-abc2-41b4-8fad-f7520dfe6469}" name="{ce959179-216e-47fa-8e14-d9ea28ca09d7}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{af5d46ef-cd31-4b32-93a4-346a24dbd0fb}">
+                                        <labels>
+                                            <label description="Routing diagnostics allow you to monitor work items and to manually diagnose any issues in the routing process." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_descriptionenabledisablediagnostics" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{a27d92b9-861c-4683-a400-457c79c7eeb4}">
+        <rows>
+            <row>
+                <cell id="{743df0aa-7553-4f68-b2e5-4d067577c4fe}">
+                    <labels>
+                        <label description="Yes" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" disabled="false" />
+                </cell>
+                <cell id="{c0efa874-bea4-4427-bed3-03a6423a21ce}">
+                    <labels>
+                        <label description="No" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="OCBaseURBase.msdyn_DiagnosticsCommandBarActions.EnableDisableDiagnosticsOnLoad" libraryName="msdyn_DiagnosticsCommandBarActions.js" handlerUniqueId="{23e51c01-3b92-4ce4-aaf4-f12d36a86b7c}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="OCBaseURBase.msdyn_DiagnosticsCommandBarActions.OnYesClick" libraryName="msdyn_DiagnosticsCommandBarActions.js" handlerUniqueId="{87bd55c2-165a-417e-b227-c15de93c298e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="OCBaseURBase.msdyn_DiagnosticsCommandBarActions.CloseDialog" libraryName="msdyn_DiagnosticsCommandBarActions.js" handlerUniqueId="{9c845643-c5aa-4bd5-a123-a7b66fac0a64}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_DiagnosticsCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

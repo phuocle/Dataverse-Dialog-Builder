@@ -1,0 +1,119 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+    </formparameters>
+    <header id="{9668acc3-e790-46fa-a95f-e01b6b20e623}">
+        <rows>
+            <row>
+                <cell id="{1b0fe4de-7206-48ab-8ad4-34818c0f441d}">
+                    <labels>
+                        <label description="Resource Groups" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_resource_groups" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{e4093c5f-8eff-4360-bbf4-0d47ae833fe1}" name="ResourceGroupsGridTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{a002964d-087f-47b9-9253-be7cc19b1a37}" name="ResourceGroupsGridSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{af86c2d0-0dbf-4ebf-a06f-0bae2df4f8ac}" colspan="1" rowspan="5">
+                                        <labels>
+                                            <label description="Resource Groups" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResourceGroupsGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <ViewId>{A44A85B1-BEA0-4a48-B7C0-64AE7D131145}</ViewId>
+                                                <TargetEntityType>constraintbasedgroup</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{b6530eb1-ffc6-4f15-b2ee-5f5c21b6581c}">
+        <rows>
+            <row>
+                <cell id="{c72d517f-e02e-4d91-9571-3681152f0fc7}">
+                    <labels>
+                        <label description="Add to Resource Group" languagecode="1033" />
+                    </labels>
+                    <control id="Add" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{51b7325a-8edb-42ad-aaad-ff9f0a11f02a}">
+                    <labels>
+                        <label description="Remove from Resource Group" languagecode="1033" />
+                    </labels>
+                    <control id="Remove" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{592eb70c-c94c-423a-911f-824453897002}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="Close" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.Resource.CommandBarActions.ResourceGroupsDialogOnLoad" libraryName="Service/Resource/Resource_main_system_library.js" handlerUniqueId="{db020c43-3b2d-44aa-bf13-9d0e356c0d50}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Add">
+            <Handlers>
+                <Handler functionName="CrmService.Resource.CommandBarActions.JoinGroup" libraryName="Service/Resource/Resource_main_system_library.js" handlerUniqueId="{e45827e7-bff7-47d3-bb8f-ca90dcb0e8c2}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Remove">
+            <Handlers>
+                <Handler functionName="CrmService.Resource.CommandBarActions.DepartGroup" libraryName="Service/Resource/Resource_main_system_library.js" handlerUniqueId="{de82eff1-51fd-418c-984d-e0d33c820c5f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Close">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{ac64d8bc-0c6f-47f4-b79c-258c60b0e4a5}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

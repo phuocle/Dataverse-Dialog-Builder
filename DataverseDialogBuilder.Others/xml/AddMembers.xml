@@ -1,0 +1,129 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{F74D5724-9A7B-4A42-95E3-919F2F66CC93}" name="{F74D5724-9A7B-4A42-95E3-919F2F66CC93}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{7EE0B2D7-86DB-4A90-BC52-1298E508A7BE}" name="{7EE0B2D7-86DB-4A90-BC52-1298E508A7BE}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{DFE4107E-0A6A-438C-855B-EEF71ACEB9E8}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectedRecords_label" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{84AFC9C9-72D0-442C-AB4B-251FC4A19597}">
+                                        <labels>
+                                            <label description="Users:" languagecode="1033" />
+                                        </labels>
+                                        <control id="addmembers_cc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{6D486999-B9FF-4173-92D7-C3C52595C848}">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{E9400F92-BCA2-4411-BE40-585C31C2C83C}">
+        <rows>
+            <row>
+                <cell id="{74DC445A-CD6A-418F-B2CE-F785ADF3AEE0}">
+                    <labels>
+                        <label description="Add Members to Team" languagecode="1033" />
+                    </labels>
+                    <control id="addmembersheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{D5ED6ACE-DA80-482D-B464-FE8A5B81A1DC}">
+        <rows>
+            <row>
+                <cell id="{CFB81068-5F47-4510-9ED5-B2614406348B}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{99E285DD-CF27-4B0F-9CDF-0B81AF1089D2}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.AddMembers.onOkClick" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{2DD1FCC4-451A-4EA6-92E8-B84D6FDD30EC}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.AddMembers.onCancelClick" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{43E04FED-2210-4444-9989-92E07E7D133C}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.AddMembers.onDialogLoad" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{77763521-6CA7-4AC7-9B36-F7F790CE18CB}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{6D486999-B9FF-4173-92D7-C3C52595C848}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">entity_records</selectedEntities>
+                    <customLabel type="SingleLine.Text">custom_label</customLabel>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">entity_records</selectedEntities>
+                    <customLabel type="SingleLine.Text">custom_label</customLabel>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">entity_records</selectedEntities>
+                    <customLabel type="SingleLine.Text">custom_label</customLabel>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="target_entities" type="SafeString" />
+        <querystringparameter name="entity_records" type="Object" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="selected_records" type="Object" />
+        <querystringparameter name="total_records_selected" type="SafeString" />
+        <querystringparameter name="custom_label" type="SafeString" />
+    </formparameters>
+</form>

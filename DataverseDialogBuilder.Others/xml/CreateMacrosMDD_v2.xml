@@ -1,0 +1,111 @@
+<form>
+    <header id="{C2CF50F9-B162-476D-801F-63BBF86D8C88}">
+        <rows>
+            <row>
+                <cell id="{6996F7A0-06E9-4D05-9370-D25661A24ABC}">
+                    <labels>
+                        <label description="Macros" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_createmacros" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{D24EE346-DF53-420C-A26D-C149F322B522}" name="{7C947822-AF45-4C0B-BFEB-22C84C4524D1}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{E92CFD49-4270-46DE-931D-A60BC388E4FD}" name="{2339F5EF-9B6F-4E1B-B463-35D0372CD5FD}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{441EB6AA-F5D6-41BB-830F-1FD195D0E93E}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="macrosname_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{83E38314-B01D-4CC2-8092-153B30F3DBC5}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="macrosdesc_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{52D9F9C5-0D47-4634-BAF2-299891A327A5}" showlabel="false">
+                                        <labels>
+                                            <label description="Run History" languagecode="1033" />
+                                        </labels>
+                                        <control id="RunHistory" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{d0a99063-9af2-42a1-b336-47b79ba30112}">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4862553E-74AE-4EDF-8139-F3B5187C6FB3}" rowspan="16" showlabel="false">
+                                        <labels>
+                                            <label description="Macro Designer" languagecode="1033" />
+                                        </labels>
+                                        <control id="designer_id" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true">
+                                            <parameters>
+                                                <Url></Url>
+                                                <PassParameters>true</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">            <!--testLoadHandlerDialog-->
+            <Handlers>
+                <Handler functionName="Microsoft.Macros.Utility.dialogOnLoadHandler" libraryName="$webresource:CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js" handlerUniqueId="{4EA010D8-93BC-4E05-8CA1-882AD5CA7815}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{d0a99063-9af2-42a1-b336-47b79ba30112}">
+            <customControl name="MscrmControls.RunLink.RunLinkControl" formFactor="0"></customControl>
+            <customControl name="MscrmControls.RunLink.RunLinkControl" formFactor="1"></customControl>
+            <customControl name="MscrmControls.RunLink.RunLinkControl" formFactor="2"></customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="record_Id" type="SafeString" />
+    </formparameters>
+</form>

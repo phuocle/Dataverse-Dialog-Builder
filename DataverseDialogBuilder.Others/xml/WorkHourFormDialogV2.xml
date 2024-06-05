@@ -1,0 +1,113 @@
+<form>
+    <header id="{f1b59469-8859-4659-9bfb-c718674b3a6e}">
+        <rows>
+            <row>
+                <cell id="{87a2d901-e1ea-43ff-ae9a-ac63bf311017}">
+                    <labels>
+                        <label description="Add Work Hour" languagecode="1033" />
+                    </labels>
+                    <control id="workHourFormHeaderV2" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{ec036553-a55b-4e29-9828-30da35c18d15}" name="Work Hours" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{e8e75363-73df-41c9-84ee-d6dc82e0e9d6}" name="Details">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6cfcd6d8-5c84-4493-979b-20cfcf4d231b}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>                                        <!--WorkHourForm control-->
+                                        <control id="WorkHourFormV2_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{bf090021-8fb9-40fd-b615-c2f02fffd29e}">
+                                            <parameters>
+                                                <MaxLength>2147483647</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{837a4799-c809-4729-982a-632be2628be7}">
+        <rows>
+            <row>
+                <cell id="{96069867-05e9-4b89-9a33-695475f3885b}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="workhour_form_v2_save_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{b06237e5-1f03-4921-8352-782c11ce7725}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="workhour_form_v2_cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="onLoad" libraryName="$webresource:msdyn_/WorkHourFormEventHandlerV2/dist/eventHandler.js" handlerUniqueId="{9b3f401f-02c3-4b30-8c69-3ee525d9e561}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="workhour_form_v2_save_id">
+            <Handlers>
+                <Handler functionName="onSave" libraryName="$webresource:msdyn_/WorkHourFormEventHandlerV2/dist/eventHandler.js" handlerUniqueId="{4bf300b1-dde4-4c84-bdac-f713eb09800}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="workhour_form_v2_cancel_id">
+            <Handlers>
+                <Handler functionName="onCancel" libraryName="$webresource:msdyn_/WorkHourFormEventHandlerV2/dist/eventHandler.js" handlerUniqueId="{4bf300b1-dde4-4c84-bdac-f713eb09800}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="workHourForm_Input" type="Object" />
+        <querystringparameter name="workHourForm_Output" type="Object" />
+        <querystringparameter name="workHourForm_ClickedButton" type="Object" />
+    </formparameters>
+    <controlDescriptions>
+        <controlDescription forControl="{bf090021-8fb9-40fd-b615-c2f02fffd29e}">
+            <customControl name="MscrmControls.WorkHourControlV2.WorkHourFormV2" formFactor="0">
+                <parameters>
+                    <workHourFormInput type="SingleLine.Text">workHourForm_Input</workHourFormInput>
+                    <workHourFormOutput type="SingleLine.Text">workHourForm_Output</workHourFormOutput>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.WorkHourControlV2.WorkHourFormV2" formFactor="1">
+                <parameters>
+                    <workHourFormInput type="SingleLine.Text">workHourForm_Input</workHourFormInput>
+                    <workHourFormOutput type="SingleLine.Text">workHourForm_Output</workHourFormOutput>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.WorkHourControlV2.WorkHourFormV2" formFactor="2">
+                <parameters>
+                    <workHourFormInput type="SingleLine.Text">workHourForm_Input</workHourFormInput>
+                    <workHourFormOutput type="SingleLine.Text">workHourForm_Output</workHourFormOutput>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

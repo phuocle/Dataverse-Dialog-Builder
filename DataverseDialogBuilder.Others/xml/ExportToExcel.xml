@@ -1,0 +1,138 @@
+<form>
+    <formparameters>
+        <querystringparameter name="entity_oId" type="SafeString" />
+        <querystringparameter name="entity_oType" type="SafeString" />
+        <querystringparameter name="entity_rollupType" type="SafeString" />
+        <querystringparameter name="entity_typeName" type="SafeString" />
+        <querystringparameter name="entity_typeCode" type="Integer" />
+        <querystringparameter name="entity_fetchXml" type="SafeString" />
+        <querystringparameter name="entity_effectiveFetchXml" type="SafeString" />
+        <querystringparameter name="entity_exportType" type="Integer" />
+        <querystringparameter name="file_data" type="SafeString" />
+        <querystringparameter name="entity_layoutXml" type="SafeString" />
+        <querystringparameter name="entity_effectiveLayoutXml" type="SafeString" />
+        <querystringparameter name="entity_viewId" type="SafeString" />
+        <querystringparameter name="entity_viewName" type="SafeString" />
+        <querystringparameter name="entity_viewType" type="SafeString" />
+        <querystringparameter name="entity_totalRecordCount" type="Integer" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{95ce05bf-dbb6-49db-b97a-25df945a7afd}" name="{22afcbc7-1e04-4b2a-9e51-7dcaee23c7c8}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{dab3d402-66b9-466d-b175-6b167e564069}" name="{1828626b-c952-4c2e-82db-aa6705a50570}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5b902a93-775e-4df9-9ce5-5a99771902e2}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="entitySelector_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{a96f1da1-d4fc-4af3-9a9f-e11b5370fbcc}">
+                                            <parameters>
+                                                <MaxLength>80000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{9ce36364-a3bf-49c4-94b3-75670b349d4f}">
+        <rows>
+            <row>
+                <cell id="{bf9e3d2e-dcd2-4f13-8459-5135cedca6f8}">
+                    <labels>
+                        <label description="Export Excel" languagecode="1033" />
+                    </labels>
+                    <control id="exportExcel_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{7c58fac7-befe-4d0c-a311-fb4f59420c01}">
+        <rows>
+            <row>
+                <cell id="{e3307cdf-7743-4c8e-8133-2a680ceda4e5}">
+                    <labels>
+                        <label description="Export" languagecode="1033" />
+                    </labels>
+                    <control id="export_excel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{6be1c259-0f5f-4a03-9b23-0cb71fb18cfc}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="export_cancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="export_excel">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.ExportToExcel.ProcessExportToExcel" libraryName="AppCommon/ControlWS/ExportToExcel/ExportToExcel.js" handlerUniqueId="{093450df-dd6d-459f-936f-803b69f7e544}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="export_cancel">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.ExportToExcel.CancelExportToExcel" libraryName="AppCommon/ControlWS/ExportToExcel/ExportToExcel.js" handlerUniqueId="{080f2386-a73c-49b5-9b30-3105ee75265c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.ExportToExcel.ExportToExcelOnLoad" libraryName="AppCommon/ControlWS/ExportToExcel/ExportToExcel.js" handlerUniqueId="{a3941eac-fdef-430f-87b1-162bf4f41eb9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/ControlWS/ExportToExcel/ExportToExcel.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{a96f1da1-d4fc-4af3-9a9f-e11b5370fbcc}">
+            <customControl name="MscrmControls.AppCommon.ExportToExcel.ExportToExcelControl" formFactor="0">
+                <parameters>
+                    <typecode type="Whole.None">entity_typeCode</typecode>
+                    <fetchxml type="SingleLine.Text">entity_fetchXml</fetchxml>
+                    <layoutxml type="SingleLine.Text">entity_layoutXml</layoutxml>
+                    <exporttype type="Whole.None">entity_exportType</exporttype>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.ExportToExcel.ExportToExcelControl" formFactor="1">
+                <parameters>
+                    <typecode type="Whole.None">entity_typeCode</typecode>
+                    <fetchxml type="SingleLine.Text">entity_fetchXml</fetchxml>
+                    <layoutxml type="SingleLine.Text">entity_layoutXml</layoutxml>
+                    <exporttype type="Whole.None">entity_exportType</exporttype>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.ExportToExcel.ExportToExcelControl" formFactor="2">
+                <parameters>
+                    <typecode type="Whole.None">entity_typeCode</typecode>
+                    <fetchxml type="SingleLine.Text">entity_fetchXml</fetchxml>
+                    <layoutxml type="SingleLine.Text">entity_layoutXml</layoutxml>
+                    <exporttype type="Whole.None">entity_exportType</exporttype>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

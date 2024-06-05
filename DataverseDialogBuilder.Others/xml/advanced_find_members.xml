@@ -1,0 +1,288 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_fetch_xml" type="SafeString" />
+        <querystringparameter name="param_query_entity_type" type="SafeString" />
+        <querystringparameter name="param_layout_xml" type="SafeString" />
+        <querystringparameter name="param_invoke_type" type="SafeString" />
+        <querystringparameter name="param_selected_records" type="SafeString" />
+        <querystringparameter name="entity_id" type="SafeString" />
+        <querystringparameter name="param_isvalid" type="Boolean" />
+        <querystringparameter name="param_validationerrormessage" type="SafeString" />
+    </formparameters>
+    <header id="{D4756C0D-837C-476A-BF84-B8B9A4742179}">
+        <rows>
+            <row>
+                <cell id="{D4756C0D-837C-476A-BF84-B8B9A4742179}">
+                    <labels>
+                        <label description="{0} members using advanced find" languagecode="1033" />
+                    </labels>
+                    <control id="header_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{1E78EFB0-0FCC-453D-8605-3D83F96166C0}">
+                    <labels>
+                        <label description="{0}" languagecode="1033" />
+                    </labels>
+                    <control id="subheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{DFBA4FB7-CF89-4CA9-849F-33CF73347018}" name="query_tab" locklevel="0">
+            <labels>
+                <label description="Build query" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Rule Conditions" labelwidth="125" showbar="false" showlabel="false" locklevel="1" IsUserDefined="0" id="{CDD5AC03-6AC9-42BD-B110-34B2E2A62379}" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{74036c4d-af16-47ae-ab85-7da2587fab89}">
+                                        <labels>
+                                            <label description="Look for:" languagecode="1033" />
+                                        </labels>
+                                        <control id="look_for_entity_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isrequired="true" />
+                                    </cell>
+                                    <cell id="{9cc58038-98cf-41c1-b885-6a6802d33cde}">
+                                        <labels>
+                                            <label description="Use Saved View:" languagecode="1033" />
+                                        </labels>
+                                        <control id="saved_query_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isrequired="false" />
+                                    </cell>
+                                </row>
+                                <row height="auto">
+                                    <cell showlabel="false" auto="true" colspan="2" rowspan="10" id="{873B9BB8-7E8A-453D-8381-D80536EAFC6B}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="queryeditor_uc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{5FAC183C-9B4B-4677-8174-B389A8C1F24E}">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{3c7d062e-8440-412a-a261-3efc95dcb2a0}">
+                <rows>
+                    <row>
+                        <cell id="{75965F46-6547-4DFC-B1B5-E325F01D37A2}">
+                            <labels>
+                                <label description="Find" languagecode="1033" />
+                            </labels>
+                            <control id="next_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab verticallayout="true" id="{e144766b-9b48-45be-854f-ea3d904765c2}" name="confirm_tab" locklevel="0">
+            <labels>
+                <label description="Confirm results" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{B9DC2C0F-9B21-47C5-A9C8-4C3CB1881637}" name="members" layout="varwidth" showlabel="false" labelwidth="190" showbar="false" IsUserDefined="0" locklevel="0">
+                            <labels>
+                                <label description="Filtered members" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{F083983F-FF81-4E16-8545-85C1F4092D87}" showlabel="false" labelid="{A743E865-57F7-453A-99F8-C43266B65589}" colspan="1">
+                                        <labels>
+                                            <label description="Contacts" languagecode="1033" />
+                                        </labels>
+                                        <control id="contactsUCIPopup" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{DA602A0F-BEDE-4BBB-9174-81E28DD92120}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{c330fe32-971a-47e5-a50e-4f3e1ad9d2f5}">
+                <rows>
+                    <row>
+                        <cell id="{BD679606-6990-4C9F-83AA-DFE815C67203}">
+                            <labels>
+                                <label description="Back to query" languagecode="1033" />
+                            </labels>
+                            <control id="back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{B4144992-8769-475A-8739-CF1093638D36}" visible="false">
+                            <labels>
+                                <label description="Add all" languagecode="1033" />
+                            </labels>
+                            <control id="lqAdd_all_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{FFFB65E2-8EEF-4DD8-A6F9-BC451E6BAC9D}" visible="false">
+                            <labels>
+                                <label description="Add only selected" languagecode="1033" />
+                            </labels>
+                            <control id="lqAdd_selected_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{E3C6C7DC-EBE2-4BB7-9A93-15B6FAFD95CA}" visible="false">
+                            <labels>
+                                <label description="Remove all" languagecode="1033" />
+                            </labels>
+                            <control id="lqRemove_all_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{4FD8DA43-FECA-409E-AA72-6492B39D9852}" visible="false">
+                            <labels>
+                                <label description="Remove only selected" languagecode="1033" />
+                            </labels>
+                            <control id="lqRemove_selected_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{7E1C0848-48CE-434D-9B1F-B0D239E1FD82}" visible="false">
+                            <labels>
+                                <label description="Keep all" languagecode="1033" />
+                            </labels>
+                            <control id="lqKeep_all_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{A5D99B55-2ADC-42B1-9A53-1FE1C6FB3F1F}" visible="false">
+                            <labels>
+                                <label description="Keep only selected" languagecode="1033" />
+                            </labels>
+                            <control id="lqKeep_selected_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.load" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{F6085069-A94D-4A20-A0BE-440D5CA652E1}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="lqKeep_all_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.keepAll" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{603B89BC-3D38-4910-B803-9416D0DBA93E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="lqKeep_selected_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.keepSelected" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{31977F96-D123-4E8C-90B2-DEF23EAD8859}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="lqRemove_all_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.removeAll" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{BA5F6AF2-357C-4197-A30C-A0235A179715}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="lqRemove_selected_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.removeSelected" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{75643DF5-EB3A-41DF-98D7-E00B13B8F5BE}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="lqAdd_all_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.addAll" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{3E8F7234-A3D6-44D7-8C86-25F5576FAEAC}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="lqAdd_selected_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.addSelected" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{3E8F7234-A3D6-44D7-8C86-25F5576FAEAC}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="next_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.next" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{FFAD8FDC-2C12-47A9-B8D8-EFD75292846A}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="back_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.back" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{9F5EF475-C77C-4B2B-A9C6-AAC5B12DBB68}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="saved_query_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageStaticListDialog.QueryChanged" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{33E4573A-A0DF-4564-A29C-9FC1B658D98E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{DA602A0F-BEDE-4BBB-9174-81E28DD92120}">
+            <customControl name="MscrmControls.DialogControlWrapper.DialogControlWrapper" formFactor="2">
+                <parameters>
+                    <controlName static="true" type="SingleLine.Text">MscrmControls.Grid.MarketingFetchXmlResultsViewer</controlName>
+                    <parametersJson static="true" type="SingleLine.Text">{"entitylogicalname":{"Value":"param_query_entity_type","Type":"SingleLine.Text"},"fetchxml":{"Value":"param_fetch_xml","Type":"SingleLine.Text"},"layoutxml":{"Value":"param_layout_xml","Type":"SingleLine.Text"},"selectedrecords":{"Type":"Multiple","Usage": 3}}</parametersJson>
+                    <bindingJson static="true" type="SingleLine.Text">{"selectedrecords":"param_selected_records"}</bindingJson>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.DialogControlWrapper.DialogControlWrapper" formFactor="1">
+                <parameters>
+                    <controlName static="true" type="SingleLine.Text">MscrmControls.Grid.MarketingFetchXmlResultsViewer</controlName>
+                    <parametersJson static="true" type="SingleLine.Text">{"entitylogicalname":{"Value":"param_query_entity_type","Type":"SingleLine.Text"},"fetchxml":{"Value":"param_fetch_xml","Type":"SingleLine.Text"},"layoutxml":{"Value":"param_layout_xml","Type":"SingleLine.Text"},"selectedrecords":{"Type":"Multiple","Usage": 3}}</parametersJson>
+                    <bindingJson static="true" type="SingleLine.Text">{"selectedrecords":"param_selected_records"}</bindingJson>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.DialogControlWrapper.DialogControlWrapper" formFactor="0">
+                <parameters>
+                    <controlName static="true" type="SingleLine.Text">MscrmControls.Grid.MarketingFetchXmlResultsViewer</controlName>
+                    <parametersJson static="true" type="SingleLine.Text">{"entitylogicalname":{"Value":"param_query_entity_type","Type":"SingleLine.Text"},"fetchxml":{"Value":"param_fetch_xml","Type":"SingleLine.Text"},"layoutxml":{"Value":"param_layout_xml","Type":"SingleLine.Text"},"selectedrecords":{"Type":"Multiple","Usage": 3}}</parametersJson>
+                    <bindingJson static="true" type="SingleLine.Text">{"selectedrecords":"param_selected_records"}</bindingJson>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5FAC183C-9B4B-4677-8174-B389A8C1F24E}">
+            <customControl name="MscrmControls.ConditionBuilder.ConditionBuilderControl" formFactor="2">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">param_query_entity_type</entitylogicalname>
+                    <fetchxml type="SingleLine.Text">param_fetch_xml</fetchxml>
+                    <isvalid type="Boolean">param_isvalid</isvalid>
+                    <validationerrormessage type="SingleLine.Text">param_validationerrormessage</validationerrormessage>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConditionBuilder.ConditionBuilderControl" formFactor="0">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">param_query_entity_type</entitylogicalname>
+                    <fetchxml type="SingleLine.Text">param_fetch_xml</fetchxml>
+                    <isvalid type="Boolean">param_isvalid</isvalid>
+                    <validationerrormessage type="SingleLine.Text">param_validationerrormessage</validationerrormessage>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConditionBuilder.ConditionBuilderControl" formFactor="1">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">param_query_entity_type</entitylogicalname>
+                    <fetchxml type="SingleLine.Text">param_fetch_xml</fetchxml>
+                    <isvalid type="Boolean">param_isvalid</isvalid>
+                    <validationerrormessage type="SingleLine.Text">param_validationerrormessage</validationerrormessage>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

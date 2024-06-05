@@ -1,0 +1,221 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_parentId" type="UniqueId" />
+        <querystringparameter name="param_addressId" type="UniqueId" />
+        <querystringparameter name="param_disableShipToCall" type="Boolean" />
+    </formparameters>
+    <header id="{22b248eb-2a58-4f85-acc9-197e52ddb9a3}">
+        <rows>
+            <row>
+                <cell id="{d98c8dbf-88fe-4abb-a3b8-58f58f55f900}">
+                    <labels>
+                        <label description="Look Up Address" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_lookupaddress" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{d2230aa9-5204-4b27-bd9d-22e33d19b53c}" name="{d2230aa9-5204-4b27-bd9d-22e33d19b53c}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" showlabel="true" columns="1" id="{6595f72e-f8bc-431c-b23f-4b669a7db6ee}" name="{6595f72e-f8bc-431c-b23f-4b669a7db6ee}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3527B0E4-CA20-4EEF-8216-21CCA80320E3}">
+                                        <labels>
+                                            <label description="Enter the bill to and/or ship to addresses automatically from an existing address." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_lookupaddressdescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{541AFDA8-F16D-4E99-B903-07B7EF0C65A4}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4d480f8c-a1ad-40ce-b002-2963de8d7daa}">
+                                        <labels>
+                                            <label description="Select an address to add to the transaction:" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_addresstext" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b1f2ea7d-cbf7-43d7-9486-c141eea5ba76}">
+                                        <labels>
+                                            <label description="Select an address" languagecode="1033" />
+                                        </labels>
+                                        <control id="addresslookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{081847FB-4097-426A-AFFE-904D54D9DFEC}</DefaultViewId>
+                                                        <EntityLogicalName>customeraddress</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9cd86901-70e6-4d02-af7f-824b7ee32622}">
+                                        <labels>
+                                            <label description="Select this option to enter the bill to address." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_billaddress" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c6d4cbf6-fe17-4d74-8ab7-2cdaf569d08a}">
+                                        <labels>
+                                            <label description="Bill to address" languagecode="1033" />
+                                        </labels>
+                                        <control id="billtoaddress" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{f3c603d0-b97d-479f-b4f6-1e8e036488b5}">
+                                            <parameters>
+                                                <DefaultValue>true</DefaultValue>
+                                                <OptionSetId>{7e770ec0-6801-4e4e-bb4d-d20ac73e90d9}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{80447ca3-f657-4dbd-8123-089031b3037c}">
+                                        <labels>
+                                            <label description="Select this option to enter the ship to address. If Will Call is selected, this will not be available." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_shipaddress" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{14b4472c-6580-4e19-9201-c0b452515d6b}">
+                                        <labels>
+                                            <label description="Ship to address" languagecode="1033" />
+                                        </labels>
+                                        <control id="shiptoaddress" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{279bc575-c8b9-4815-ae55-447d4462fc4b}">
+                                            <parameters>
+                                                <DefaultValue>true</DefaultValue>
+                                                <OptionSetId>{ada7a21a-1c7c-4b2e-845a-a293f0d25d0b}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{79443902-3bb9-475d-ab5f-01dd14f89d34}">
+        <rows>
+            <row>
+                <cell id="{6e1b5511-2c0c-44bf-8a66-cde9d7f0c522}">
+                    <labels>
+                        <label description="Add address" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{cae57048-c70a-4f53-b5aa-53897297b240}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onOkClickLookUpAddressDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{EAAEDE66-4394-444F-84FD-A6C8C623F9D0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCancelClickLookUpAddressDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{9854AB59-9753-4BAE-821D-40931D724077}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onLoadLookUpAddressDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{61319A44-2237-4514-B672-EA19B958039A}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="shiptoaddress">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onLookUpAddressOptionsChanged" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{96eed695-25b1-45f2-9a6a-60fb731dd263}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="billtoaddress">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onLookUpAddressOptionsChanged" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{0ee79305-3f63-47ea-a824-e70cd2c5596c}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="addresslookup">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onLookUpAddressOptionsChanged" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{9d6484c4-22f5-450f-80f1-da08d2ca7a54}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/CommandBarActions/SalesCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{f3c603d0-b97d-479f-b4f6-1e8e036488b5}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">billtoaddress</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">billtoaddress</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">billtoaddress</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{279bc575-c8b9-4815-ae55-447d4462fc4b}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">shiptoaddress</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">shiptoaddress</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">shiptoaddress</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

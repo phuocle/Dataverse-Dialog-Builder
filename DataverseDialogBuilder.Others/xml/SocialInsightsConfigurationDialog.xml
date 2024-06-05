@@ -1,0 +1,112 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_baseUrl" type="SafeString" />
+        <querystringparameter name="param_topicId" type="SafeString" />
+        <querystringparameter name="param_widgetName" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{505D3486-3289-4864-97E6-F46F9DB0CCF9}">
+        <rows>
+            <row>
+                <cell id="{505D3486-C014-471E-B0B3-1DBF07B1E3D1}">
+                    <labels>
+                        <label description="Configure Social Insights" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_configure_social_insights" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{505D3486-CA96-4838-ADC5-ED31F6363610}" name="ConfigTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{505D3486-4592-4D09-B544-DADD3F6172C6}" name="ConfigTabSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6222B9A6-4CAE-4DC4-B7CF-5B7B2A16AA75}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="ConfigureSI" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{894C8BB8-F72B-4525-A2C4-466162056BAA}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{505D3486-334f-4a07-a5c0-9fec31bce217}">
+        <rows>
+            <row>
+                <cell id="{505D3486-0073-4029-af2e-e366d965727d}">
+                    <labels>
+                        <label description="Apply" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{505D3486-d44a-4d6e-ac52-dcbf16a6d106}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="SocialInsightsActions.DialogActions.closeDialog" libraryName="CRM/CommandActions/SocialInsightsActions.js" handlerUniqueId="{92a1fc4d-6ecd-4d25-988b-8c35f83a17af}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="SocialInsightsActions.DialogActions.closeDialog" libraryName="CRM/CommandActions/SocialInsightsActions.js" handlerUniqueId="{eb7c46f3-576d-4aab-88dd-48286b758480}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{894C8BB8-F72B-4525-A2C4-466162056BAA}">
+            <customControl name="MscrmControls.ConfigureSIControl.ConfigureSIControl" formFactor="0">
+                <parameters>
+                    <baseUrl type="SingleLine.Text">param_baseUrl</baseUrl>
+                    <topicId type="SingleLine.Text">param_topicId</topicId>
+                    <widgetName type="SingleLine.Text">param_widgetName</widgetName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConfigureSIControl.ConfigureSIControl" formFactor="1">
+                <parameters>
+                    <baseUrl type="SingleLine.Text">param_baseUrl</baseUrl>
+                    <topicId type="SingleLine.Text">param_topicId</topicId>
+                    <widgetName type="SingleLine.Text">param_widgetName</widgetName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConfigureSIControl.ConfigureSIControl" formFactor="2">
+                <parameters>
+                    <baseUrl type="SingleLine.Text">param_baseUrl</baseUrl>
+                    <topicId type="SingleLine.Text">param_topicId</topicId>
+                    <widgetName type="SingleLine.Text">param_widgetName</widgetName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

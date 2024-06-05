@@ -1,0 +1,109 @@
+<form>
+    <formparameters>
+        <querystringparameter name="params_scheduledate" type="SafeString" />
+        <querystringparameter name="params_scheduletime" type="SafeString" />
+        <querystringparameter name="param_emailscheduledatetime" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab id="{20b4fcb2-45c1-4fe7-b9f2-69a4a9538501}" verticallayout="true" name="Tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{d3fdd18b-159b-4619-a376-cf47a4b0eaa1}" name="{84ab2288-3c22-413d-8904-45f752304ab6}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{60f3afa0-a632-11ea-8b6e-0800200c9a66}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="bulk_email_send_later_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{422578db-5d75-46bb-9207-4b0f6a5a29bd}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{13831058-ca4e-43d6-a7b4-19ebab1d7c31}">
+        <rows>
+            <row>
+                <cell id="{27d61bf5-397f-4342-916e-5f77a1e9bd4e}">
+                    <labels>
+                        <label description="Schedule email activity for selected contacts" languagecode="1033" />
+                    </labels>
+                    <control id="FormHeader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{71aec97e-18ed-4b41-be33-ae3c82444c0f}">
+        <rows>
+            <row>
+                <cell id="{4ac0c6db-4b57-4e6c-8243-c1c44f2123bf}">
+                    <labels>
+                        <label description="Schedule" languagecode="1033" />
+                    </labels>
+                    <control id="ScheduleOnClickHandler" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{7914ad93-0a81-42c9-af07-859f581b1611}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="CancelOnClickHandler" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ScheduleOnClickHandler">
+            <Handlers>
+                <Handler functionName="AppCommon.ContextualBulkEmail.ScheduleOnClickHandler" libraryName="$webresource:AppCommon/ContextualEmail/AppCommon_ContextualEmail.js" handlerUniqueId="{841aa7a8-aca0-11ea-bb37-0242ac130002}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="CancelOnClickHandler">
+            <Handlers>
+                <Handler functionName="AppCommon.ContextualBulkEmail.CancelOnClickHandler" libraryName="$webresource:AppCommon/ContextualEmail/AppCommon_ContextualEmail.js" handlerUniqueId="{30d87715-1ba3-4071-b5d7-6b4d79b9235e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" active="false" application="false">
+            <Handlers>
+                <Handler passExecutionContext="true" parameters="" enabled="true" handlerUniqueId="{013653DB-9142-4D97-9E1A-2ED63D1E084E}" libraryName="$webresource:AppCommon/ContextualEmail/AppCommon_ContextualEmail.js" functionName="AppCommon.ContextualBulkEmail.SendLaterDialogOnLoad" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{422578db-5d75-46bb-9207-4b0f6a5a29bd}">
+            <customControl formFactor="0" name="MscrmControls.AppCommon.BulkEmailSendLater.BulkEmailSendLaterControl">
+                <parameters>
+                    <scheduledate type="Date">params_scheduledate</scheduledate>
+                    <scheduletime type="SingleLine.Text">params_scheduletime</scheduletime>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.AppCommon.BulkEmailSendLater.BulkEmailSendLaterControl">
+                <parameters>
+                    <scheduledate type="Date">params_scheduledate</scheduledate>
+                    <scheduletime type="SingleLine.Text">params_scheduletime</scheduletime>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.AppCommon.BulkEmailSendLater.BulkEmailSendLaterControl">
+                <parameters>
+                    <scheduledate type="Date">params_scheduledate</scheduledate>
+                    <scheduletime type="SingleLine.Text">params_scheduletime</scheduletime>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

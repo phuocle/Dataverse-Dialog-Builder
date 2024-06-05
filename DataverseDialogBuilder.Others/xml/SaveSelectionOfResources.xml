@@ -1,0 +1,146 @@
+<form>
+    <header id="{595251b9-5dc7-4bf3-be56-f3e23710b98d}">
+        <rows>
+            <row>
+                <cell id="{7f8443de-f272-4aed-a47e-0753561f64d8}">
+                    <labels>
+                        <label description="Save the selection as a resource group" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{7577bf26-d0e9-45f9-99bf-e2a11fcb1cc1}" name="tab_1" locklevel="0" expanded="true">
+            <labels>
+                <label description="New Tab" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="tab_section_1" showlabel="false" showbar="false" IsUserDefined="0" id="{139f3e7d-9416-4423-8242-7d2929f37168}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="false" locklevel="0" id="{596d88fa-5f6a-4455-8f49-c8cc0f631dc2}">
+                                        <labels>
+                                            <label description="Do you want to save this selection as a new resource group?" languagecode="1033" />
+                                        </labels>
+                                        <control id="Label_1" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{9e1d2153-57e6-409d-971b-00c90d13b47c}">
+                                        <labels>
+                                            <label description="Do you want to save this selection as a new resource group?" languagecode="1033" />
+                                        </labels>
+                                        <control id="save_selection" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{38f7b4e1-dbdd-47e6-9bbb-65f6182e0328}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{d71a4866-4897-41fb-ae35-8ac1b154dc2e}">
+                                        <labels>
+                                            <label description="Save the selection as a resource group with the name:" languagecode="1033" />
+                                        </labels>
+                                        <control id="resource_group_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{7383d5e2-0b96-4674-94bb-b2dff0d2cdea}">
+        <rows>
+            <row>
+                <cell id="{7b73b5c7-206c-4f17-beea-a04d992ca93e}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{9fe294a3-a764-41b3-b6e6-b58a6b6a9fd3}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onchange" application="false" active="false" attribute="save_selection">
+            <Handlers>
+                <Handler functionName="Mscrm.saveSelection_valueChange" libraryName="Service/Service/Service_main_system_library.js" handlerUniqueId="6a2cb517-78b9-4f01-98dd-01e0f39721c9" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="resource_group_name">
+            <Handlers>
+                <Handler functionName="Mscrm.resourceGroupName_inputChange" libraryName="Service/Service/Service_main_system_library.js" handlerUniqueId="396d000d-a809-439b-a0f4-9ec63869e26f" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.dialog_cancel" libraryName="Service/Service/Service_main_system_library.js" handlerUniqueId="3a8bceb9-1b95-480a-be26-96b702d36de1" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.on_saveResourceSelectionDialogSave" libraryName="Service/Service/Service_main_system_library.js" handlerUniqueId="3f8ee083-c212-4ad6-aba3-dcbdb0f5af85" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.on_loadSaveResourceSelection" libraryName="Service/Service/Service_main_system_library.js" handlerUniqueId="25722d70-60f3-4237-b48c-a7863c53b8a2" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="selected_node" type="Object" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Service/Service/Service_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{38f7b4e1-dbdd-47e6-9bbb-65f6182e0328}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">save_selection</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">save_selection</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">save_selection</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

@@ -1,0 +1,93 @@
+<form>
+    <formparameters>
+        <querystringparameter name="appmodule_id" type="SafeString" />
+        <querystringparameter name="parkingsolution_id" type="SafeString" />
+        <querystringparameter name="dialogselect_options" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" name="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{d7c8d6ab-104f-4063-9220-90446f38e938}" name="{d7c8d6ab-104f-4063-9220-90446f38e938}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9327ad40-927d-4094-81c3-6fd6dc3a3e61}">
+                                        <labels>
+                                            <label description="Entity" languagecode="1033" />
+                                        </labels>
+                                        <control id="entityname_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true" disabled="false">
+                                            <parameters>
+                                                <OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{ea28a1df-efe4-40f1-9f77-daafd7f05560}">
+        <rows>
+            <row>
+                <cell id="{247b8e5d-5fcd-4f07-be3b-d2e42cb53bf2}">
+                    <labels>
+                        <label description="Create System View" languagecode="1033" />
+                    </labels>
+                    <control id="createview_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{303f1bb7-3f05-423b-8b27-135b552b337c}">
+        <rows>
+            <row>
+                <cell id="{99155eb3-72c7-4d78-9257-00450c21a5a8}">
+                    <labels>
+                        <label description="Go to View Designer" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{c67abc8b-6981-4494-9f16-e38fdb499337}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="close_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemView.LaunchViewDesingerCreateMode" libraryName="$webresource:AppCommon/ControlWS/SystemView/SystemView.js" handlerUniqueId="{ce8f355d-0010-4299-a9bd-719e7d4cc0cd}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="close_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemView.CloseDialog" libraryName="$webresource:AppCommon/ControlWS/SystemView/SystemView.js" handlerUniqueId="{ce8f355d-0010-4299-a9bd-719e7d4cc0cd}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemView.PopulateEntityNamesOnLoad" libraryName="$webresource:AppCommon/ControlWS/SystemView/SystemView.js" handlerUniqueId="{b4abb24a-5c3e-4c31-babd-2a8b9232a972}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

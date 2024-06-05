@@ -1,0 +1,95 @@
+<form>
+    <header id="{6ed158e3-a099-42a7-8437-509140fda9b6}">
+        <rows>
+            <row>
+                <cell id="{e6c2edd4-0071-49c6-a093-119861e27d87}">
+                    <labels>
+                        <label description="Opt-In to Auto-Numbering" languagecode="1033" />
+                    </labels>
+                    <control id="headerLabel" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{597fb392-4fe1-4be9-a32e-14f9a7830e30}" name="Opt-In Auto-Numbering" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{53419391-1540-4430-a10f-820cb104926d}" name="Details">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{bfceafb4-eadf-4c94-b802-d90654c139ac}" rowspan="15">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="benefitsLabel" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{d1c13abb-2763-4f81-9c10-abc61ea57ca8}">
+        <rows>
+            <row>
+                <cell id="{ad19eb5e-bc73-4890-990d-9fb9a13288c9}">
+                    <labels>
+                        <label description="Opt-In" languagecode="1033" />
+                    </labels>
+                    <control id="okButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{9529cd27-f62c-4a0b-b6d3-3c45e8133b8d}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="AutoNumbering.Library.onLoadOptIn" libraryName="$webresource:msdyn_/AutoNumbering/AutoNumbering.Library.js" handlerUniqueId="{01e29063-bc4a-40cb-b133-cfadda83d940}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="okButton">
+            <Handlers>
+                <Handler functionName="AutoNumbering.Library.onOptInOk" libraryName="$webresource:msdyn_/AutoNumbering/AutoNumbering.Library.js" handlerUniqueId="{2cf63f0e-06e1-4690-8789-915a2a354e9d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelButton">
+            <Handlers>
+                <Handler functionName="AutoNumbering.Library.onClose" libraryName="$webresource:msdyn_/AutoNumbering/AutoNumbering.Library.js" handlerUniqueId="{43736d76-2fd2-422b-b7f5-0cd56645beaf}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters></formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/AutoNumbering/AutoNumbering.Library.js" />
+                <internaljscriptfile src="$webresource:msdyn_/Action/FieldServiceSystemAction/Sdk_msdyn_FieldServiceSystemAction_min.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

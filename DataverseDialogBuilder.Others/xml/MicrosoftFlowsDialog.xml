@@ -1,0 +1,187 @@
+<form>
+    <formparameters>
+        <querystringparameter name="flow_id" type="SafeString" />
+        <querystringparameter name="entity_ids" type="SafeString" />
+        <querystringparameter name="environment_id" type="SafeString" />
+        <querystringparameter name="org_unique_name" type="SafeString" />
+        <querystringparameter name="entity_logical_collection_name" type="SafeString" />
+        <querystringparameter name="entity_logical_name" type="SafeString" />
+        <querystringparameter name="flows_destination_url" type="SafeString" />
+        <querystringparameter name="flows_fpi_site_url" type="SafeString" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="dynamics365_access_token" type="SafeString" />
+        <querystringparameter name="flows_authentication_string" type="SafeString" />
+        <querystringparameter name="flows_enable_widget_v2" type="Boolean" />
+        <querystringparameter name="flows_wflog_id" type="SafeString" />
+        <querystringparameter name="bpf_instance_id" type="SafeString" />
+        <querystringparameter name="bpf_instance_entity_name" type="SafeString" />
+        <querystringparameter name="bpf_definition_id" type="SafeString" />
+        <querystringparameter name="bpf_definition_entity_name" type="SafeString" />
+        <querystringparameter name="bpf_step_id" type="SafeString" />
+        <querystringparameter name="bpf_definition_name" type="SafeString" />
+        <querystringparameter name="bpf_instance_name" type="SafeString" />
+        <querystringparameter name="bpf_flowstage_localized_name" type="SafeString" />
+        <querystringparameter name="bpf_flowstage_entity_name" type="SafeString" />
+        <querystringparameter name="bpf_flowstage_entity_collection_name" type="SafeString" />
+        <querystringparameter name="bpf_flowstage_entity_record_id" type="SafeString" />
+        <querystringparameter name="bpf_activestage_id" type="SafeString" />
+        <querystringparameter name="bpf_activestageentity_name" type="SafeString" />
+        <querystringparameter name="bpf_activestage_localized_name" type="SafeString" />
+    </formparameters>
+    <header id="{DC12EEC8-ECB6-400E-8775-CADA61369307}">
+        <rows>
+            <row>
+                <cell id="{14B8CF48-8711-407E-99FD-617B90CBA8DC}">
+                    <labels>
+                        <label description="Login Successful" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_flows" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{0DBECF32-99F0-4D3C-9F4E-16754586227F}" name="FlowsIFrameTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{46CB51BB-4B05-445A-AFBC-EE179D160305}" name="FlowsIFrameSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="false" id="{77D3DCEC-7D2D-4B53-B619-42900816C4C0}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="FlowsIFrameControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{ACDDA97E-9BFC-4A06-8967-B5CE46638B84}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.Flows.onFlowsDialogLoad" libraryName="$webresource:Main_system_library.js" handlerUniqueId="{DE20E1AD-0CEE-4DE9-9C63-846812BCA728}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.Flows.flowsDialogCloseCallback" libraryName="$webresource:Main_system_library.js" handlerUniqueId="{75ED5538-96EE-4955-854E-38BCD3404309}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{ACDDA97E-9BFC-4A06-8967-B5CE46638B84}">
+            <customControl name="MscrmControls.Containers.MicrosoftFlowsIFrameControl" formFactor="0">
+                <parameters>
+                    <FlowId type="SingleLine.Text">flow_id</FlowId>
+                    <EntityIds type="SingleLine.Text">entity_ids</EntityIds>
+                    <FlowEnvironmentId type="SingleLine.Text">environment_id</FlowEnvironmentId>
+                    <OrgUniqueName type="SingleLine.Text">org_unique_name</OrgUniqueName>
+                    <EntityLogicalCollectionName type="SingleLine.Text">entity_logical_collection_name</EntityLogicalCollectionName>
+                    <EntityLogicalName type="SingleLine.Text">entity_logical_name</EntityLogicalName>
+                    <Dynamics365AccessToken type="SingleLine.Text">dynamics365_access_token</Dynamics365AccessToken>
+                    <FlowsDestinationURL type="SingleLine.Text">flows_destination_url</FlowsDestinationURL>
+                    <FlowsFPISiteURL type="SingleLine.Text">flows_fpi_site_url</FlowsFPISiteURL>
+                    <FlowsAuthenticationString type="SingleLine.Text">flows_authentication_string</FlowsAuthenticationString>
+                    <FlowsEnableWidgetV2 type="TwoOptions">flows_enable_widget_v2</FlowsEnableWidgetV2>
+                    <FlowsWorkflowLogId type="SingleLine.Text">flows_wflog_id</FlowsWorkflowLogId>
+                    <BPFInstanceId type="SingleLine.Text">bpf_instance_id</BPFInstanceId>
+                    <BPFInstanceEntityName type="SingleLine.Text">bpf_instance_entity_name</BPFInstanceEntityName>
+                    <BPFDefinitionId type="SingleLine.Text">bpf_definition_id</BPFDefinitionId>
+                    <BPFDefinitionEntityName type="SingleLine.Text">bpf_definition_entity_name</BPFDefinitionEntityName>
+                    <StepId type="SingleLine.Text">bpf_step_id</StepId>
+                    <BPFDefinitionName type="SingleLine.Text">bpf_definition_name</BPFDefinitionName>
+                    <BPFInstanceName type="SingleLine.Text">bpf_instance_name</BPFInstanceName>
+                    <BPFFlowStageLocalizedName type="SingleLine.Text">bpf_flowstage_localized_name</BPFFlowStageLocalizedName>
+                    <BPFFlowStageEntityName type="SingleLine.Text">bpf_flowstage_entity_name</BPFFlowStageEntityName>
+                    <BPFFlowStageEntityCollectionName type="SingleLine.Text">bpf_flowstage_entity_collection_name</BPFFlowStageEntityCollectionName>
+                    <BPFFlowStageEntityRecordId type="SingleLine.Text">bpf_flowstage_entity_record_id</BPFFlowStageEntityRecordId>
+                    <BPFActiveStageId type="SingleLine.Text">bpf_activestage_id</BPFActiveStageId>
+                    <BPFActiveStageEntityName type="SingleLine.Text">bpf_activestageentity_name</BPFActiveStageEntityName>
+                    <BPFActiveStageLocalizedName type="SingleLine.Text">bpf_activestage_localized_name</BPFActiveStageLocalizedName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.MicrosoftFlowsIFrameControl" formFactor="1">
+                <parameters>
+                    <FlowId type="SingleLine.Text">flow_id</FlowId>
+                    <EntityIds type="SingleLine.Text">entity_ids</EntityIds>
+                    <FlowEnvironmentId type="SingleLine.Text">environment_id</FlowEnvironmentId>
+                    <OrgUniqueName type="SingleLine.Text">org_unique_name</OrgUniqueName>
+                    <EntityLogicalCollectionName type="SingleLine.Text">entity_logical_collection_name</EntityLogicalCollectionName>
+                    <EntityLogicalName type="SingleLine.Text">entity_logical_name</EntityLogicalName>
+                    <Dynamics365AccessToken type="SingleLine.Text">dynamics365_access_token</Dynamics365AccessToken>
+                    <FlowsDestinationURL type="SingleLine.Text">flows_destination_url</FlowsDestinationURL>
+                    <FlowsFPISiteURL type="SingleLine.Text">flows_fpi_site_url</FlowsFPISiteURL>
+                    <FlowsAuthenticationString type="SingleLine.Text">flows_authentication_string</FlowsAuthenticationString>
+                    <FlowsEnableWidgetV2 type="TwoOptions">flows_enable_widget_v2</FlowsEnableWidgetV2>
+                    <FlowsWorkflowLogId type="SingleLine.Text">flows_wflog_id</FlowsWorkflowLogId>
+                    <BPFInstanceId type="SingleLine.Text">bpf_instance_id</BPFInstanceId>
+                    <BPFInstanceEntityName type="SingleLine.Text">bpf_instance_entity_name</BPFInstanceEntityName>
+                    <BPFDefinitionId type="SingleLine.Text">bpf_definition_id</BPFDefinitionId>
+                    <BPFDefinitionEntityName type="SingleLine.Text">bpf_definition_entity_name</BPFDefinitionEntityName>
+                    <StepId type="SingleLine.Text">bpf_step_id</StepId>
+                    <BPFDefinitionName type="SingleLine.Text">bpf_definition_name</BPFDefinitionName>
+                    <BPFInstanceName type="SingleLine.Text">bpf_instance_name</BPFInstanceName>
+                    <BPFFlowStageLocalizedName type="SingleLine.Text">bpf_flowstage_localized_name</BPFFlowStageLocalizedName>
+                    <BPFFlowStageEntityName type="SingleLine.Text">bpf_flowstage_entity_name</BPFFlowStageEntityName>
+                    <BPFFlowStageEntityCollectionName type="SingleLine.Text">bpf_flowstage_entity_collection_name</BPFFlowStageEntityCollectionName>
+                    <BPFFlowStageEntityRecordId type="SingleLine.Text">bpf_flowstage_entity_record_id</BPFFlowStageEntityRecordId>
+                    <BPFActiveStageId type="SingleLine.Text">bpf_activestage_id</BPFActiveStageId>
+                    <BPFActiveStageEntityName type="SingleLine.Text">bpf_activestageentity_name</BPFActiveStageEntityName>
+                    <BPFActiveStageLocalizedName type="SingleLine.Text">bpf_activestage_localized_name</BPFActiveStageLocalizedName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.MicrosoftFlowsIFrameControl" formFactor="2">
+                <parameters>
+                    <FlowId type="SingleLine.Text">flow_id</FlowId>
+                    <EntityIds type="SingleLine.Text">entity_ids</EntityIds>
+                    <FlowEnvironmentId type="SingleLine.Text">environment_id</FlowEnvironmentId>
+                    <OrgUniqueName type="SingleLine.Text">org_unique_name</OrgUniqueName>
+                    <EntityLogicalCollectionName type="SingleLine.Text">entity_logical_collection_name</EntityLogicalCollectionName>
+                    <EntityLogicalName type="SingleLine.Text">entity_logical_name</EntityLogicalName>
+                    <Dynamics365AccessToken type="SingleLine.Text">dynamics365_access_token</Dynamics365AccessToken>
+                    <FlowsDestinationURL type="SingleLine.Text">flows_destination_url</FlowsDestinationURL>
+                    <FlowsFPISiteURL type="SingleLine.Text">flows_fpi_site_url</FlowsFPISiteURL>
+                    <FlowsAuthenticationString type="SingleLine.Text">flows_authentication_string</FlowsAuthenticationString>
+                    <FlowsEnableWidgetV2 type="TwoOptions">flows_enable_widget_v2</FlowsEnableWidgetV2>
+                    <FlowsWorkflowLogId type="SingleLine.Text">flows_wflog_id</FlowsWorkflowLogId>
+                    <BPFInstanceId type="SingleLine.Text">bpf_instance_id</BPFInstanceId>
+                    <BPFInstanceEntityName type="SingleLine.Text">bpf_instance_entity_name</BPFInstanceEntityName>
+                    <BPFDefinitionId type="SingleLine.Text">bpf_definition_id</BPFDefinitionId>
+                    <BPFDefinitionEntityName type="SingleLine.Text">bpf_definition_entity_name</BPFDefinitionEntityName>
+                    <StepId type="SingleLine.Text">bpf_step_id</StepId>
+                    <BPFDefinitionName type="SingleLine.Text">bpf_definition_name</BPFDefinitionName>
+                    <BPFInstanceName type="SingleLine.Text">bpf_instance_name</BPFInstanceName>
+                    <BPFFlowStageLocalizedName type="SingleLine.Text">bpf_flowstage_localized_name</BPFFlowStageLocalizedName>
+                    <BPFFlowStageEntityName type="SingleLine.Text">bpf_flowstage_entity_name</BPFFlowStageEntityName>
+                    <BPFFlowStageEntityCollectionName type="SingleLine.Text">bpf_flowstage_entity_collection_name</BPFFlowStageEntityCollectionName>
+                    <BPFFlowStageEntityRecordId type="SingleLine.Text">bpf_flowstage_entity_record_id</BPFFlowStageEntityRecordId>
+                    <BPFActiveStageId type="SingleLine.Text">bpf_activestage_id</BPFActiveStageId>
+                    <BPFActiveStageEntityName type="SingleLine.Text">bpf_activestageentity_name</BPFActiveStageEntityName>
+                    <BPFActiveStageLocalizedName type="SingleLine.Text">bpf_activestage_localized_name</BPFActiveStageLocalizedName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources />
+</form>

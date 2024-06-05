@@ -1,0 +1,144 @@
+<form>
+    <hiddencontrols>
+        <data id="entityName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityTypeCode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{b7b5729d-e692-4637-8333-48433f951a21}" name="{b7b5729d-e692-4637-8333-48433f951a21}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{8fa41774-a907-4846-b33e-eeef47394027}" name="{8fa41774-a907-4846-b33e-eeef47394027}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>                                    <!--Header Description >-->
+                                    <cell id="{73c72d64-db8c-4906-a958-74812931bd3f}">
+                                        <labels>
+                                            <label description="Select the user or team to assign all the records owned by the current user or team." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>                                <!--AppNotifications are set only for the entities Workflow,SLA,RoutingRule,ConvertRule, these entities are not shown in MOCA >-->
+                                <row>
+                                    <cell id="{3a3c65ae-dae1-4277-abb6-867e09c74acf}">
+                                        <labels>
+                                            <label description="Assign to" languagecode="1033" />
+                                        </labels>
+                                        <control id="rdoMe_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{14af8dca-bede-49b2-b6b2-67d017113d7b}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1925adf8-f17a-431d-8422-ebbcd3d2d3e3}">
+                                        <labels>
+                                            <label description="User or team" languagecode="1033" />
+                                        </labels>
+                                        <control id="systemuserview_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>team</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{ea28a1df-efe4-40f1-9f77-daafd7f05560}">
+        <rows>
+            <row>
+                <cell id="{d01c7969-8648-45ad-834a-498b151c9c3e}">
+                    <labels>
+                        <label description="Assign" languagecode="1033" />
+                    </labels>
+                    <control id="assignheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{303f1bb7-3f05-423b-8b27-135b552b337c}">
+        <rows>
+            <row>
+                <cell id="{cd9b7088-728d-47b1-a9f0-cdf2a7eade7e}">
+                    <labels>
+                        <label description="Assign" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{da8b6839-a1ff-48ac-916f-2bbe22bc6ac6}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.Assign.assignDialogAssignClick" libraryName="$webresource:Main_system_library.js" handlerUniqueId="{ce8f355d-0010-4299-a9bd-719e7d4cc0cc}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.Assign.assignCloseDialog" libraryName="$webresource:Main_system_library.js" handlerUniqueId="{1188fd4d-0d09-4884-939a-504467922060}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="rdoMe_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.Assign.assignDialogAssignToChange" libraryName="$webresource:Main_system_library.js" handlerUniqueId="{750c95c6-8675-4ab5-baaa-13567423429c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.Assign.assignDialogOnLoad" libraryName="$webresource:Main_system_library.js" handlerUniqueId="{86740684-68f8-40a5-b4c3-49b12ece2f29}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="systemuserview_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.Assign.assignDialogSystemUserChange" libraryName="$webresource:Main_system_library.js" handlerUniqueId="{e4d818ec-8437-4221-b97a-b3e215192e62}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="entity_name" type="SafeString" />
+        <querystringparameter name="entity_type_code" type="SafeString" />
+        <querystringparameter name="selected_records_count" type="PositiveInteger" />
+        <querystringparameter name="entity_records" type="Object" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="owner_id" type="SafeString" />
+        <querystringparameter name="owner_type" type="SafeString" />
+        <querystringparameter name="entity_id" type="SafeString" />
+    </formparameters>
+</form>

@@ -1,0 +1,76 @@
+<form>
+    <formparameters>
+        <querystringparameter name="mailbox_id" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{2093f89b-46f5-4013-b5df-d52d26f981ca}" name="{2093f89b-46f5-4013-b5df-d52d26f981ca}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{bd56973d-0ced-4ae2-829a-27268509d725}" name="{bd56973d-0ced-4ae2-829a-27268509d725}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{127792e2-763c-4e20-b9ad-bca3dc3b115b}">
+                                        <labels>
+                                            <label description="Mailbox Alerts" languagecode="1033" />
+                                        </labels>
+                                        <control id="mailbox_alerts" classid="{f9a8a302-114e-466a-b582-6771b2ae0d92}" isunbound="true" disabled="false" uniqueid="{d3cb5c66-6d96-467f-a664-e5aba5151011}">
+                                            <parameters>
+                                                <MaxLength>40</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{ea28a1df-efe4-40f1-9f77-daafd7f05560}">
+        <rows>
+            <row>
+                <cell id="{ac696d6c-90a1-4ae7-a234-fccf6d64e659}">
+                    <labels>
+                        <label description="Alerts" languagecode="1033" />
+                    </labels>
+                    <control id="alertsview_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{7fdb1c08-6a00-462a-b093-072f6e3137ed}">
+        <rows />
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{d3cb5c66-6d96-467f-a664-e5aba5151011}">
+            <customControl name="MscrmControls.AppCommon.MailboxAlerts.MailboxAlerts" formFactor="0">
+                <parameters>
+                    <mailboxId type="SingleLine.Text">mailbox_id</mailboxId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.MailboxAlerts.MailboxAlerts" formFactor="1">
+                <parameters>
+                    <mailboxId type="SingleLine.Text">mailbox_id</mailboxId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.MailboxAlerts.MailboxAlerts" formFactor="2">
+                <parameters>
+                    <mailboxId type="SingleLine.Text">mailbox_id</mailboxId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

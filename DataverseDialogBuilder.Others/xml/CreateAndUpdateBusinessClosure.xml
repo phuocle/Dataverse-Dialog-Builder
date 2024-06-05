@@ -1,0 +1,187 @@
+<form>
+    <header id="{cc890b9c-cf28-4405-9134-80c450db4108}">
+        <rows>
+            <row>
+                <cell id="{87fee19c-b9fe-4463-9a2a-386d9c46bc86}">
+                    <labels>
+                        <label description="Schedule a Business Closure" languagecode="1033" />
+                    </labels>
+                    <control id="header_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{ce21eba1-d4ec-48fe-a31b-1356432f4b70}" name="Business Closure" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{9746b999-87fc-4c73-935f-a7d9e81997c7}" name="Details">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b9211c0e-b1ab-4172-8e0b-5b098d26a883}">
+                                        <labels>
+                                            <label description="Specify the name and select the time of the business closure." languagecode="1033" />
+                                        </labels>
+                                        <control id="subheader01_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a1b75f21-f6e2-4008-9322-bb17797c7012}">
+                                        <labels>
+                                            <label description="During this closure, resources cannot be scheduled. However, resources with the 'Do not observe' option selected for 'Business Closures' can be scheduled." languagecode="1033" />
+                                        </labels>
+                                        <control id="subheader02_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a0fe709f-4b94-4f31-90b3-11b606650e63}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_name_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e6093e71-dd37-42e7-b6f0-09492433f5f1}">
+                                        <labels>
+                                            <label description="All Day Event" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_alldayevent_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetName>cardtype_isenabled</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{565771c3-7ad5-404a-83b0-e6613c65baac}">
+                                        <labels>
+                                            <label description="Start Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_starttime_id" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ea3daf68-4481-43c9-a517-2fdd561a2523}">
+                                        <labels>
+                                            <label description="End Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_endtime_id" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{47933ec3-ebe0-4ed7-b5ce-b7f2ed6e152a}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_duration_id" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{72734d8d-d009-453c-be6f-b383aba85fc7}">
+        <rows>
+            <row>
+                <cell id="{df16aeac-81e9-4a0d-8f38-aa165c75407d}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="businessclosure_ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{ee6c1d00-76c7-480c-a4a3-62dce8133331}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="businessclosure_cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{3cd49691-a2f9-4cd1-a7ed-4fa180475069}">
+                    <labels>
+                        <label description="Help" languagecode="1033" />
+                    </labels>
+                    <control id="businessclosure_help_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true"></control>
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="ScheduleCommon.BusinessClosure.Library.onLoad" libraryName="$webresource:msdyn_/fps/BusinessClosure/BusinessClosure.Library.js" handlerUniqueId="{9b3f401f-02c3-4b30-8c69-3ee525d9e561}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="businessclosure_ok_id">
+            <Handlers>
+                <Handler functionName="ScheduleCommon.BusinessClosure.Library.onClickOk" libraryName="$webresource:msdyn_/fps/BusinessClosure/BusinessClosure.Library.js" handlerUniqueId="{0df43cbe-df10-497c-b20a-40f8c013f5cf}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="businessclosure_cancel_id">
+            <Handlers>
+                <Handler functionName="ScheduleCommon.BusinessClosure.Library.onClickCancel" libraryName="$webresource:msdyn_/fps/BusinessClosure/BusinessClosure.Library.js" handlerUniqueId="{19E5FBF4-DC9E-4772-8FEC-25E3C199A17A}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="businessclosure_help_id">
+            <Handlers>
+                <Handler functionName="ScheduleCommon.BusinessClosure.Library.onClickHelp" libraryName="$webresource:msdyn_/fps/BusinessClosure/BusinessClosure.Library.js" handlerUniqueId="{0EB91BB7-388D-4394-B5CD-031C09451BAD}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="businessclosure_alldayevent_id">
+            <Handlers>
+                <Handler functionName="ScheduleCommon.BusinessClosure.Library.onChangeAllDayEvent" libraryName="$webresource:msdyn_/fps/BusinessClosure/BusinessClosure.Library.js" handlerUniqueId="{02AD9C54-F6FA-4413-AE2D-7F6B99245BCF}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="businessclosure_starttime_id">
+            <Handlers>
+                <Handler functionName="ScheduleCommon.BusinessClosure.Library.onChangeStartTime" libraryName="$webresource:msdyn_/fps/BusinessClosure/BusinessClosure.Library.js" handlerUniqueId="{5E79150C-786A-44F8-A3A4-0968653A3488}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="businessclosure_endtime_id">
+            <Handlers>
+                <Handler functionName="ScheduleCommon.BusinessClosure.Library.onChangeEndTime" libraryName="$webresource:msdyn_/fps/BusinessClosure/BusinessClosure.Library.js" handlerUniqueId="{6ED6AABB-D39D-4505-8844-C7561830B6F1}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="businessclosure_duration_id">
+            <Handlers>
+                <Handler functionName="ScheduleCommon.BusinessClosure.Library.onChangeDuration" libraryName="$webresource:msdyn_/fps/BusinessClosure/BusinessClosure.Library.js" handlerUniqueId="{FB25344A-1C26-420D-94A9-E6C7EAEA1BE3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_businessclosure_id" type="Object" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/fps/LocalizationLibrary/Localization.Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

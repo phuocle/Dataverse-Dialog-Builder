@@ -1,0 +1,160 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityTypeCode" type="SafeString" />
+        <querystringparameter name="param_firstName" type="SafeString" />
+        <querystringparameter name="param_lastName" type="SafeString" />
+        <querystringparameter name="param_email" type="SafeString" />
+        <querystringparameter name="param_company" type="SafeString" />
+        <querystringparameter name="param_subject" type="SafeString" />
+        <querystringparameter name="param_saveActivity" type="SafeString" />
+        <querystringparameter name="param_openNewRecord" type="SafeString" />
+        <querystringparameter name="param_leadId" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_ownerId" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{51ea11ed-c51d-49cb-862a-a72b9a99505f}" name="{51ea11ed-c51d-49cb-862a-a72b9a99505f}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5c73cfe9-d9bb-4e32-8591-7297c3eb9843}" name="{5c73cfe9-d9bb-4e32-8591-7297c3eb9843}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{99af5c13-249c-446f-8f96-ade4be9b4a61}" showlabel="true">
+                                        <labels>
+                                            <label description="Specify the details of the new lead." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1ffd5fe3-4270-4fd9-a35c-4f49718fe942}" showlabel="true">
+                                        <labels>
+                                            <label description="First Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="firstName" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c516d312-e214-4791-9242-cb71636b5994}" showlabel="true">
+                                        <labels>
+                                            <label description="Last Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="lastName" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3c0d3a3e-7f22-4596-a1b7-cf267f054c51}" showlabel="true">
+                                        <labels>
+                                            <label description="Company" languagecode="1033" />
+                                        </labels>
+                                        <control id="company" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8db66637-649e-47a8-81cf-69c79556882b}" showlabel="true">
+                                        <labels>
+                                            <label description="Email Address" languagecode="1033" />
+                                        </labels>
+                                        <control id="email" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{09be1b3c-ca7f-4543-8952-cf342ffe0726}" showlabel="true">
+                                        <labels>
+                                            <label description="Open the new Lead" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbOpenNew_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{dd0fc293-0044-4f9e-a22d-ef7b271e3baa}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{17342761-a099-407d-be44-93ddaa129b9f}" showlabel="true">
+                                        <labels>
+                                            <label description="Close the e-mail form" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbSaveActivity_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{dd0fc293-0044-4f9e-a22d-ef7b271e3baa}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{dfdddbb4-4232-4e11-8a42-dfd07e3bee7d}">
+        <rows>
+            <row>
+                <cell id="{a5058ca1-b99d-40c5-8010-f3876b18ea76}">
+                    <labels>
+                        <label description="Convert to Lead" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_convert" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{c3c2e8fd-1893-4e2c-a992-0b264acf358a}">
+        <rows>
+            <row>
+                <cell id="{a6a96a0a-4f38-4f52-bee6-e70380955798}">
+                    <labels>
+                        <label description="Convert" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{410b48dc-4d16-43db-a14c-a9ba7c7a2d42}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="MarketingSales.CommandBarActions.Instance.convertLeadOnLoad" libraryName="MarketingSales/CommandBarActions/MarketingSalesCommandBarActions.js" handlerUniqueId="{712d0e1a-1638-4b61-a261-c23ff35b0d33}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="MarketingSales.CommandBarActions.Instance.convertLeadClick" libraryName="MarketingSales/CommandBarActions/MarketingSalesCommandBarActions.js" handlerUniqueId="{e9a78516-2522-4d08-ae19-f9c5738b6103}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="MarketingSales.CommandBarActions.Instance.convertLeadCloseDialog" libraryName="MarketingSales/CommandBarActions/MarketingSalesCommandBarActions.js" handlerUniqueId="{6274b821-d8c7-42ad-a66a-78b2e68763c9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:MarketingSales/CommandBarActions/MarketingSalesCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

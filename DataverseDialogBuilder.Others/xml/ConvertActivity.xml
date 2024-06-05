@@ -1,0 +1,214 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityTypeCode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="leadId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="subject" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="opportunityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="saveActivity" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="openNewRecord" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <formparameters>
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityTypeCode" type="SafeString" />
+        <querystringparameter name="param_leadId" type="SafeString" />
+        <querystringparameter name="param_subject" type="SafeString" />
+        <querystringparameter name="param_ownerId" type="SafeString" />
+        <querystringparameter name="param_ownerType" type="SafeString" />
+        <querystringparameter name="param_ownerName" type="SafeString" />
+        <querystringparameter name="param_opportunityId" type="SafeString" />
+        <querystringparameter name="param_saveActivity" type="SafeString" />
+        <querystringparameter name="param_openNewRecord" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_currencyId" type="SafeString" />
+        <querystringparameter name="param_customerId" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{fbc00897-9be8-46af-939e-dc31542d2bd8}" name="{fbc00897-9be8-46af-939e-dc31542d2bd8}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{abc1dcc3-cec5-4a90-8905-139368c5ae32}" name="{abc1dcc3-cec5-4a90-8905-139368c5ae32}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{12a5f240-9d0a-4bd6-973f-3e87c9c43398}" showlabel="true">
+                                        <labels>
+                                            <label description="Specify the details of the new opportunity." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b2a61b26-4309-46e5-b021-82f30594a4da}" showlabel="true">
+                                        <labels>
+                                            <label description="Customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerLookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>contact</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5c86a962-b8e0-406e-9575-fbd052b08ede}" showlabel="true">
+                                        <labels>
+                                            <label description="Currency" languagecode="1033" />
+                                        </labels>
+                                        <control id="currencyLookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{CD5625B0-DDA8-4EE2-B13F-B9331E027C8A}</DefaultViewId>
+                                                        <EntityLogicalName>transactioncurrency</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1bcd55da-f03a-4bfa-8b7d-7c8bca6c6940}" showlabel="true">
+                                        <labels>
+                                            <label description="Related Campaign" languagecode="1033" />
+                                        </labels>
+                                        <control id="campaignassociatedview_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{0E76DC73-2052-484E-8C00-A760F8D522EC}</DefaultViewId>
+                                                        <EntityLogicalName>campaign</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f0f3a6a4-12d9-404c-a1a3-9d1a7219f662}" showlabel="true">
+                                        <labels>
+                                            <label description="Open the new opportunity" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbOpenNew_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{dd0fc293-0044-4f9e-a22d-ef7b271e3baa}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d4c1b89e-dd1f-4e53-beb6-af0938d68c8e}" showlabel="true">
+                                        <labels>
+                                            <label description="Change the task status to Completed and close the form" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbSaveActivity_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{dd0fc293-0044-4f9e-a22d-ef7b271e3baa}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53b8d493-3390-4f71-bf10-18cb0b993832}" showlabel="true">
+                                        <labels>
+                                            <label description="Record a closed campaign response" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbLogResponse_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{dd0fc293-0044-4f9e-a22d-ef7b271e3baa}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{97686dac-4fc7-4eeb-adca-26f484c2fcc6}">
+        <rows>
+            <row>
+                <cell id="{a5f9a76b-562f-45fe-ae30-4b4d5fa43759}">
+                    <labels>
+                        <label description="Convert to Opportunity" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_convert" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{7a051ed6-2262-419a-a75c-7b888dacdb4a}">
+        <rows>
+            <row>
+                <cell id="{6e9275b5-358d-41f4-9612-b1ff23ca2961}">
+                    <labels>
+                        <label description="Convert" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{59ef1e48-2b61-4e98-b4c6-0d4017bce6b7}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="MarketingSales.CommandBarActions.Instance.convertActivityOnLoad" libraryName="MarketingSales/CommandBarActions/MarketingSalesCommandBarActions.js" handlerUniqueId="{d67250e3-4359-4a66-aaaa-32186fff80b0}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="MarketingSales.CommandBarActions.Instance.dialogClose" libraryName="MarketingSales/CommandBarActions/MarketingSalesCommandBarActions.js" handlerUniqueId="{73c47417-fe26-4b44-9864-590ccf0c17b2}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="MarketingSales.CommandBarActions.Instance.convertActivityClick" libraryName="MarketingSales/CommandBarActions/MarketingSalesCommandBarActions.js" handlerUniqueId="{022400f5-18ed-4923-9cd0-3ea208609095}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="cbLogResponse_id">
+            <Handlers>
+                <Handler functionName="MarketingSales.CommandBarActions.Instance.setRelatedCampaign" libraryName="MarketingSales/CommandBarActions/MarketingSalesCommandBarActions.js" handlerUniqueId="{162fce40-f6e2-4079-b4f7-4a93e8e348f2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:MarketingSales/CommandBarActions/MarketingSalesCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

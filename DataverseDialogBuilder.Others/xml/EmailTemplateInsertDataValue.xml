@@ -1,0 +1,119 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_templateEntity" type="SafeString" />
+        <querystringparameter name="param_datafield_control_output" type="SafeString" />
+        <querystringparameter name="param_last_button_clicked" type="SafeString" />
+    </formparameters>
+    <header id="{4361baa1-410f-4571-9d9d-0d52ab3928a3}">
+        <rows>
+            <row>
+                <cell id="{07c9c6aa-cd65-47a8-997e-0c482804bf29}">
+                    <labels>
+                        <label description="Edit dynamic text" languagecode="1033" />
+                    </labels>
+                    <control id="formheader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{30e36472-33f1-4a67-9955-c6f93ced336c}">
+                    <labels>
+                        <label description="Dynamic text will appear in the order of the following list. If a data field is unavailable, the next available one will populate." languagecode="1033" />
+                    </labels>
+                    <control id="description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{71a9e9f0-74c4-4e84-bcc9-f944fb7a2da8}" name="{127a37c3-22fa-47af-85e5-8049716da3f1}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="true" showlabel="false" columns="1" id="{1877796f-eaf8-4a27-a479-20d3414df78a}" name="{fc8b7aa8-06e7-48be-a4c7-9761f012c492}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell showlabel="false" id="{9ce10a84-90a5-46d3-8eec-b7d98d672c94}" auto="false" rowspan="15" colspan="1" visible="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="template_insert_data" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{57317926-6126-45c2-adfa-16e836898b3a}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{57317926-6126-45c2-adfa-16e836898b3a}">
+            <customControl name="MscrmControls.Activity.TemplateInsertDataControl" formFactor="0">
+                <parameters>
+                    <templateEntityType type="SingleLine.Text">param_templateEntity</templateEntityType>
+                    <templateDataField type="SingleLine.Text">param_datafield_control_output</templateDataField>
+                    <templateButtonClicked type="SingleLine.Text">param_last_button_clicked</templateButtonClicked>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Activity.TemplateInsertDataControl" formFactor="1">
+                <parameters>
+                    <templateEntityType type="SingleLine.Text">param_templateEntity</templateEntityType>
+                    <templateDataField type="SingleLine.Text">param_datafield_control_output</templateDataField>
+                    <templateButtonClicked type="SingleLine.Text">param_last_button_clicked</templateButtonClicked>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Activity.TemplateInsertDataControl" formFactor="2">
+                <parameters>
+                    <templateEntityType type="SingleLine.Text">param_templateEntity</templateEntityType>
+                    <templateDataField type="SingleLine.Text">param_datafield_control_output</templateDataField>
+                    <templateButtonClicked type="SingleLine.Text">param_last_button_clicked</templateButtonClicked>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <footer id="{ed9c2cc9-9c44-489d-9619-5dd63d3761e6}">
+        <rows>
+            <row>
+                <cell id="{f90dcf99-9b4b-434f-b50b-3f536162d875}">
+                    <labels>
+                        <label description="Insert" languagecode="1033" />
+                    </labels>
+                    <control id="insert_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" disabled="false" />
+                </cell>
+                <cell id="{972e6f3d-3d61-47fc-94f7-0ab1bca04a47}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" disabled="false" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="insert_id">
+            <Handlers>
+                <Handler functionName="Activities.Template.onInsert" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{4D3B6DC2-C6DE-4428-8EA9-B207F5D3FFF4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.Template.closeDialog" libraryName="Activities/SystemLibraries/Template_main_system_library.js" handlerUniqueId="{48144FCE-8067-44AB-9D8B-E786164EC633}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

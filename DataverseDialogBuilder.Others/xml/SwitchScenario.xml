@@ -1,0 +1,94 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{1a3907b2-5f85-41df-8e07-5ab1694bd2fc}" name="{1a3907b2-5f85-41df-8e07-5ab1694bd2fc}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{99f31ce9-425c-46f3-a94b-51b3e95b7d53}" name="{99f31ce9-425c-46f3-a94b-51b3e95b7d53}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{EEEC7960-7C1B-4CAB-8B16-CC5ED84D8407}">
+                                        <labels>
+                                            <label description="App" languagecode="1033" />
+                                        </labels>
+                                        <control id="scenario_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{908A5520-6E21-42DD-BC2E-8E8B76B5ECB5}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="switchScenarioNote_label" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{175d2db8-4971-4df7-9d98-19e145e2ddbe}">
+        <rows>
+            <row>
+                <cell id="{e0c05e4b-5c86-4483-a704-d4e07dc09cbc}">
+                    <labels>
+                        <label description="Try a different App" languagecode="1033" />
+                    </labels>
+                    <control id="switch_scenario_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{8e843d25-492b-4eea-ba06-cb6b602cbfda}">
+        <rows>
+            <row>
+                <cell id="{cb85515c-7ebc-4f06-ab91-68147beabc7c}" visible="true">
+                    <labels>
+                        <label description="Done" languagecode="1033" />
+                    </labels>
+                    <control id="switch_done_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{925026bd-0c53-4c08-8d2e-a366629869ed}" visible="true">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="switch_close_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="switch_close_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SwitchScenarioCommand.CloseButtonClickHandler" libraryName="$webresource:AppCommon/ControlWS/SwitchScenario/SwitchScenario.js" handlerUniqueId="{A5F6E84E-EC8E-4518-AF00-422F94F830D7}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="switch_done_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SwitchScenarioCommand.DoneButtonClickHandler" libraryName="$webresource:AppCommon/ControlWS/SwitchScenario/SwitchScenario.js" handlerUniqueId="{29479E27-9573-4D9A-95F6-EC193F868C1E}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SwitchScenarioCommand.OnLoadHandler" libraryName="$webresource:AppCommon/ControlWS/SwitchScenario/SwitchScenario.js" handlerUniqueId="{1DF005EF-0FAC-485A-9A8A-A43FA8A5F9B3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

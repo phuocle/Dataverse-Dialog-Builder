@@ -1,0 +1,487 @@
+<form>
+    <formparameters>
+        <querystringparameter name="all_available_values" type="SafeString" />
+        <querystringparameter name="show_teaching_bubble_for_UR" type="Boolean" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{b820d011-ff4f-4e2e-b1f4-1648a93bea16}" name="{b820d011-ff4f-4e2e-b1f4-1648a93bea16}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{cc504106-c51d-4570-985d-adfc4b945118}" name="{bc504106-c51d-4570-985d-adfc4b945118}">
+                            <labels>
+                                <label description="Unified routing" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{F8B64AC8-9473-4FA6-A6D8-74B0E16DA7B4}" showlabel="false">
+                                        <labels>
+                                            <label description="Unified routing header" languagecode="1033" />
+                                        </labels>
+                                        <control id="unified_routing_toggle_header" isunbound="true" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{EC1EF43E-D284-42B8-A824-38611DC9B05A}">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7D8FFCFC-E3EA-468C-903D-7D8039FF4CC7}" showlabel="true">
+                                        <labels>
+                                            <label description="Turn on unified routing" languagecode="1033" />
+                                        </labels>
+                                        <control id="unified_routing_toggle" isunbound="true" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{B652FE91-0E8F-4190-9309-6B5D4EFC2BBE}">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8331b777-c52d-4d0e-ad75-d17633a99d83}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{bc504106-c51d-4570-985d-adfc4b945118}" name="{bc504106-c51d-4570-985d-adfc4b945118}_2">
+                            <labels>
+                                <label description="Disable SLAs" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{915b6faf-22ad-47cf-a388-89c27eb2c40f}" showlabel="true">
+                                        <labels>
+                                            <label description="Disable service level agreements(SLAs) on SLA-enabled entity records" languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_disable_sla" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{d2a18878-03f2-423e-b02b-8990a6c837f7}">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{16741283-60c6-42cd-a600-033b87ae6590}" name="{16741283-60c6-42cd-a600-033b87ae6590}">
+                            <labels>
+                                <label description="Recalculate SLA on terminal status" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4c3cf042-ee86-46c9-8a22-e639964f9020}" showlabel="false" visible="false">
+                                        <labels>
+                                            <label description="preview of documentation" languagecode="1033" />
+                                        </labels>
+                                        <control id="SLARecalcualtion_PreviewMsg" isunbound="true" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}">
+                                            <parameters>
+                                                <Url>Service/ServiceManagementSettings/msdyn_slarecalculation_feature_message.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <WebResourceId>{2accd3b9-c652-41eb-844a-8527dda60fad}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8b566691-d54b-4905-855a-871657063abf}" showlabel="true" visible="false">
+                                        <labels>
+                                            <label description="Recalculate SLAs for SLA-enabled entities." languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_recalculate_sla" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{b8227e0e-f089-4eb5-807e-bd294127b719}">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{be504106-d51d-4570-985d-adfa4b945118}" name="{bc504106-c51d-4570-985d-adfc4b945118}_3">
+                            <labels>
+                                <label description="Apply SLA after manual override" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{915b6fae-22ad-47cf-a388-89c27fb2c50b}">
+                                        <labels>
+                                            <label description="Automatically apply SLA on entity record update after SLA was manually applied" languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_auto_apply_sla" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{5c7544f5-f4f6-45c9-b2fd-24677c6c8af9}">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{bc504106-e51d-4570-985d-adfc4b945118}" name="{bc504106-c51d-4570-985d-adfc4b945118}_4">
+                            <labels>
+                                <label description="Select SLA Pause Status" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{915b6fae-22ad-47cf-a388-89f27eb2f40b}" showlabel="false">
+                                        <labels>
+                                            <label description="Select the SLA enabled entity for which the status values should apply:" languagecode="1033" />
+                                        </labels>
+                                        <control id="sla_pausestates__control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{4e04bf3f-d2fe-40b6-ac7d-7c6cd6e56fbe}">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{be504106-c51e-4570-985d-adfa4b945118}" name="{bc504106-c51d-4570-985d-adfc4b945118}_5">
+                            <labels>
+                                <label description="Automatically apply entitlement" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b6ae9bb7-73bf-46cb-aef7-cabb01c35fc6}" showlabel="true">
+                                        <labels>
+                                            <label description="Select whether to automatically apply the default customer entitlement when a case is created." languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_auto_apply_entit_create" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{048dca0a-431b-4af2-8b40-f4aa2091bb1b}">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" showlabel="false" columns="1" id="{d0f04920-c031-42f2-a9b7-9175e9303ee7}" name="{d0f04920-c031-42f2-a9b7-9175e9303ee7}">
+                            <labels>
+                                <label description="Automatically apply entitlement" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b6ae9bb7-73bf-46cb-aef7-cabb01c35ef6}" showlabel="true">
+                                        <labels>
+                                            <label description="Select whether to automatically apply the default customer entitlement when a case is updated." languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_auto_apply_entit_updt" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{12f51e21-84f7-45a4-9dcf-191d739d5aa5}">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" showlabel="true" columns="1" id="{0cdf1296-9e3b-4019-8d6d-8669ef09dfc9}" name="{0cdf1296-9e3b-4019-8d6d-8669ef09dfc9}">
+                            <labels>
+                                <label description="Resolve case dialog" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="c0279677-bb3a-487a-962d-027234535dfb" showlabel="true">
+                                        <labels>
+                                            <label description="Select the style of the Resolve Case dialog box." languagecode="1033" />
+                                        </labels>
+                                        <control id="picklist_resolve_case_dialog" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>1921b76d-bb66-4416-8918-39d16cde1f8b</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" showlabel="true" columns="1" id="{D3B1E8C4-91E7-46E6-8A1E-5DB4E19A1968}" name="{D3B1E8C4-91E7-46E6-8A1E-5DB4E19A1968}">
+                            <labels>
+                                <label description="Case update after resolution" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{CD304F40-E5D2-4B0C-AA09-B6B57A64416D}" showlabel="true">
+                                        <labels>
+                                            <label description="This allows updates to canceled or resolved cases on the backend--for example, using Power Automate flow." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_use_desc_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8FFFFD5D-A663-4CC7-8CC9-CCC17699B6DB}" showlabel="true">
+                                        <labels>
+                                            <label description="Allow updates for" languagecode="1033" />
+                                        </labels>
+                                        <control id="picklist_case_update_after_resolution_dialog" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>82FE28DB-276F-42D5-9CE9-54AD52F0B954</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{cf333e7d-517d-413b-b71e-401959c74241}" name="{cf333e7d-517d-413b-b71e-401959c74241}">
+                            <labels>
+                                <label description="Calendar Export and Import" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{f1adb978-9ef1-4dd7-9de9-53b3f38e0a81}" showlabel="false" visible="false">
+                                        <labels>
+                                            <label description="Documentation preview" languagecode="1033" />
+                                        </labels>
+                                        <control id="SLACalendarExportImport_PreviewMsg" isunbound="true" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}">
+                                            <parameters>
+                                                <Url>Service/ServiceManagementSettings/msdyn_learnmore_message.html</Url>
+                                                <PassParameters>true</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <WebResourceId>{15a54182-b4cb-4306-84a7-3bd84c98e784}</WebResourceId>
+                                                <Data>IframeControlId=SLACalendarExportImport_PreviewMsg;TextKey=SlaCalendarExportImportHelpText;HyperLinkText=CalendarImportExportHyperLinkText;LearnMoreURL=https://go.microsoft.com/fwlink/p/?linkid=2189022</Data>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b7ff30e1-5afe-4020-a596-939385770aaa}" showlabel="true" visible="false">
+                                        <labels>
+                                            <label description="Enable calendar export and import" languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_exportimportcalendar_sla" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{ed22880b-6d96-4b1e-b627-45b381da7e2f}">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{a49cea6c-f36a-4b50-84b8-fa8e7d92444c}">
+        <rows>
+            <row>
+                <cell id="{19bef5b3-53c9-4764-8aab-75575aa981b2}">
+                    <labels>
+                        <label description="Service Configuration Settings" languagecode="1033" />
+                    </labels>
+                    <control id="serviceconfigheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{a87addb4-ce24-4139-b286-f659d1858473}">
+        <rows>
+            <row>
+                <cell id="{abff28aa-a1bb-4b26-aad3-fab720593b9f}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.serviceConfigurationSettingsOnLoad" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{aadc8e5a-4e01-4383-9501-0ffedcc3b18c}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.ServiceSettingsDialogApply" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{4416ba70-34b9-411b-8d50-722e0ea809df}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{EC1EF43E-D284-42B8-A824-38611DC9B05A}">
+            <customControl formFactor="0" name="MscrmControls.UnifiedRouting.URForCSToggleHeaderControl">
+                <parameters>
+                    <notificationType type="Whole.None">unified_routing_toggle_header</notificationType>
+                    <showTeachingBubble type="TwoOptions">show_teaching_bubble_for_UR</showTeachingBubble>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.UnifiedRouting.URForCSToggleHeaderControl">
+                <parameters>
+                    <notificationType type="Whole.None">unified_routing_toggle_header</notificationType>
+                    <showTeachingBubble type="TwoOptions">show_teaching_bubble_for_UR</showTeachingBubble>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.UnifiedRouting.URForCSToggleHeaderControl">
+                <parameters>
+                    <notificationType type="Whole.None">unified_routing_toggle_header</notificationType>
+                    <showTeachingBubble type="TwoOptions">show_teaching_bubble_for_UR</showTeachingBubble>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{B652FE91-0E8F-4190-9309-6B5D4EFC2BBE}">
+            <customControl formFactor="0" name="MscrmControls.UnifiedRouting.URForCSToggleControl">
+                <parameters>
+                    <value type="TwoOptions">unified_routing_toggle</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.UnifiedRouting.URForCSToggleControl">
+                <parameters>
+                    <value type="TwoOptions">unified_routing_toggle</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.UnifiedRouting.URForCSToggleControl">
+                <parameters>
+                    <value type="TwoOptions">unified_routing_toggle</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{4e04bf3f-d2fe-40b6-ac7d-7c6cd6e56fbe}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.SLAPauseStatesControl">
+                <parameters>
+                    <value type="SingleLine.Text">sla_pausestates__control</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.SLAPauseStatesControl">
+                <parameters>
+                    <value type="SingleLine.Text">sla_pausestates__control</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.SLAPauseStatesControl">
+                <parameters>
+                    <value type="SingleLine.Text">sla_pausestates__control</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{d2a18878-03f2-423e-b02b-8990a6c837f7}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">radio_disable_sla</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">radio_disable_sla</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">radio_disable_sla</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{b8227e0e-f089-4eb5-807e-bd294127b719}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">radio_recalculate_sla</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">radio_recalculate_sla</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">radio_recalculate_sla</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5c7544f5-f4f6-45c9-b2fd-24677c6c8af9}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">radio_auto_apply_sla</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">radio_auto_apply_sla</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">radio_auto_apply_sla</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{048dca0a-431b-4af2-8b40-f4aa2091bb1b}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">radio_auto_apply_entit_create</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">radio_auto_apply_entit_create</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">radio_auto_apply_entit_create</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{12f51e21-84f7-45a4-9dcf-191d739d5aa5}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">radio_auto_apply_entit_updt</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">radio_auto_apply_entit_updt</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">radio_auto_apply_entit_updt</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{ed22880b-6d96-4b1e-b627-45b381da7e2f}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">radio_exportimportcalendar_sla</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">radio_exportimportcalendar_sla</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">radio_exportimportcalendar_sla</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

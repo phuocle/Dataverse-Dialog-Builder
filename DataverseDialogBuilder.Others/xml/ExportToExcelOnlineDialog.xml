@@ -1,0 +1,128 @@
+<form>
+    <formparameters>
+        <querystringparameter name="current_view" type="SafeString" />
+        <querystringparameter name="fetch_xml" type="SafeString" />
+        <querystringparameter name="layout_xml" type="SafeString" />
+        <querystringparameter name="file_id" type="SafeString" />
+        <querystringparameter name="entityType_name" type="SafeString" />
+        <querystringparameter name="entity_is_importable" type="Boolean" />
+        <querystringparameter name="entity_oId" type="SafeString" />
+        <querystringparameter name="entity_oType" type="SafeString" />
+        <querystringparameter name="entity_rollupType" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{4e073e5e-b8f9-4640-8d55-8c8a934afdf9}" name="{4e073e5e-b8f9-4640-8d55-8c8a934afdf9}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{789e72e3-1bf2-442a-a4d8-e9a87a2f0a7c}" name="{789e72e3-1bf2-442a-a4d8-e9a87a2f0a7c}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{f4c212a4-8af2-4ffe-acea-e61b5765260b}" showlabel="false">
+                                        <labels>
+                                            <label description="ExcelOnline" languagecode="1033" />
+                                        </labels>
+                                        <control id="excel_online_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{2ff34c0d-47cb-4eb3-8bd8-6e55ba0577fa}">
+                                            <parameters>
+                                                <MaxLength>142606336</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{00441cfd-19da-4ed4-b10c-8536353af623}">
+        <rows>
+            <row>
+                <cell id="{315711ae-b1f1-4697-857a-42851a206655}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="export_to_excelonline_save" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{984f7428-daf5-4f87-b05f-d5fc0cf8c1a1}">
+                    <labels>
+                        <label description="Return" languagecode="1033" />
+                    </labels>
+                    <control id="export_to_excelonline_returntocrm" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false" attribute="export_to_excelonline_header_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.ExportToExcel.ExportToExcelOnlineOnLoad" libraryName="AppCommon/ControlWS/ExportToExcel/ExportToExcel.js" handlerUniqueId="{67d57a8f-4e0a-49e4-8a2c-ceb29346fd14}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="export_to_excelonline_save">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.ExportToExcel.ExportToExcelOnlineSave" libraryName="AppCommon/ControlWS/ExportToExcel/ExportToExcel.js" handlerUniqueId="{c0ae1465-7ff5-41c4-ac54-0785f1a1eb24}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="export_to_excelonline_returntocrm">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.ExportToExcel.ExportToExcelOnlineReturnToCrm" libraryName="AppCommon/ControlWS/ExportToExcel/ExportToExcel.js" handlerUniqueId="{3ea59680-b148-4260-8e02-33766e0241eb}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/ControlWS/ExportToExcel/ExportToExcel.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{2ff34c0d-47cb-4eb3-8bd8-6e55ba0577fa}">
+            <customControl name="MscrmControls.AppCommon.ExportToExcelOnline.ExportToExcelOnlineControl" formFactor="0">
+                <parameters>
+                    <view type="SingleLine.Text">current_view</view>
+                    <fetchXml type="SingleLine.Text">fetch_xml</fetchXml>
+                    <layoutXml type="SingleLine.Text">layout_xml</layoutXml>
+                    <entityTypeName type="SingleLine.Text">entityType_name</entityTypeName>
+                    <originalEntityId type="SingleLine.Text">entity_oId</originalEntityId>
+                    <originalEntityTypeCode type="SingleLine.Text">entity_oType</originalEntityTypeCode>
+                    <rollupType type="SingleLine.Text">entity_rollupType</rollupType>
+                    <file_id type="SingleLine.Text">file_id</file_id>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.ExportToExcelOnline.ExportToExcelOnlineControl" formFactor="1">
+                <parameters>
+                    <view type="SingleLine.Text">current_view</view>
+                    <fetchXml type="SingleLine.Text">fetch_xml</fetchXml>
+                    <layoutXml type="SingleLine.Text">layout_xml</layoutXml>
+                    <entityTypeName type="SingleLine.Text">entityType_name</entityTypeName>
+                    <originalEntityId type="SingleLine.Text">entity_oId</originalEntityId>
+                    <originalEntityTypeCode type="SingleLine.Text">entity_oType</originalEntityTypeCode>
+                    <rollupType type="SingleLine.Text">entity_rollupType</rollupType>
+                    <file_id type="SingleLine.Text">file_id</file_id>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.ExportToExcelOnline.ExportToExcelOnlineControl" formFactor="2">
+                <parameters>
+                    <view type="SingleLine.Text">current_view</view>
+                    <fetchXml type="SingleLine.Text">fetch_xml</fetchXml>
+                    <layoutXml type="SingleLine.Text">layout_xml</layoutXml>
+                    <entityTypeName type="SingleLine.Text">entityType_name</entityTypeName>
+                    <originalEntityId type="SingleLine.Text">entity_oId</originalEntityId>
+                    <originalEntityTypeCode type="SingleLine.Text">entity_oType</originalEntityTypeCode>
+                    <rollupType type="SingleLine.Text">entity_rollupType</rollupType>
+                    <file_id type="SingleLine.Text">file_id</file_id>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

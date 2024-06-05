@@ -1,0 +1,125 @@
+<form>
+    <hiddencontrols />
+    <tabs>
+        <tab verticallayout="true" id="{e7700b77-c28c-47d6-bd68-a0806c2fad0a}" name="{e7700b77-c28c-47d6-bd68-a0806c2fad0a}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{38110f23-432b-49c1-ae64-2ab7064968ff}" name="{38110f23-432b-49c1-ae64-2ab7064968ff}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0113be88-9227-431f-820a-facf290e1c7a}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_headerdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ab2dd5b2-bdf2-4c6f-8da9-0b158060072d}">
+                                        <labels>
+                                            <label description="The items will be assigned to you to work on." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_message" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f2d07fe9-70e9-4dd4-9bab-4a54105307c6}">
+                                        <labels>
+                                            <label description="The item(s) cannot be removed from the UR queue(s)." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_removaldenial" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a2530e70-3acc-432e-bbf5-20e457ae8206}">
+                                        <labels>
+                                            <label description="Also remove the item(s) from the Queue" languagecode="1033" />
+                                        </labels>
+                                        <control id="checkboxpick_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{2abb66b9-044e-493d-a3c9-0d1ed85f7592}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{dc77715a-0df7-49d4-b21e-3c516e4dc540}">
+        <rows>
+            <row>
+                <cell id="{3acc4be8-3f60-4c91-9c02-2e00eceaf1d3}">
+                    <labels>
+                        <label description="Pick" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_pick" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{9beee1e6-0798-4674-b565-cd74d89f809f}">
+        <rows>
+            <row>
+                <cell id="{72335e33-a2a3-4dba-9a16-1f8588880a51}">
+                    <labels>
+                        <label description="Pick" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{8223346f-abc0-40d9-a908-fc0c5c6e26c4}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="AppCommon.QueueItemPick.QueueItemDialogPickClick" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="{75b7f89b-7502-4321-8c0d-f4b564926fe7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="AppCommon.QueueItemPick.CloseDialog" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="{73c47417-fe26-4b44-9864-590ccf0c17b2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="AppCommon.QueueItemPick.QueueItemDialogPickOnLoad" libraryName="AppCommon/QueueItem/QueueItem.js" handlerUniqueId="f19ea3e4-93fa-4d2a-a7eb-47be0e52a844" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="entity_records" type="SafeString" />
+        <querystringparameter name="param_gridControl" type="Object" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/QueueItem/QueueItem.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,154 @@
+<form>
+    <hiddencontrols>
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="parentAccountId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="parentAccountName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="parentContactId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="parentContactName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="transactioncurrencyid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="qualifyStatus" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_parentAccountId" type="SafeString" />
+        <querystringparameter name="param_parentAccountName" type="SafeString" />
+        <querystringparameter name="param_parentContactId" type="SafeString" />
+        <querystringparameter name="param_parentContactName" type="SafeString" />
+        <querystringparameter name="param_transactioncurrencyid" type="UniqueId" />
+        <querystringparameter name="param_qualifyStatus" type="Integer" />
+        <querystringparameter name="param_emailAddress" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{8ebc498c-5c28-4e65-bc68-5ff4d84cfb29}" name="{8ebc498c-5c28-4e65-bc68-5ff4d84cfb29}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{769c5142-8d94-4fb9-9c90-81e61d8c5e69}" name="{769c5142-8d94-4fb9-9c90-81e61d8c5e69}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{84c2f3be-83ba-4ce8-a874-7a8544d172c0}" showlabel="true">
+                                        <labels>
+                                            <label description="To add this record to existing ones, select matching account and contact names, then Continue." languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{34723c9b-fed3-4211-b9b0-09e19cd86786}" showlabel="true">
+                                        <labels>
+                                            <label description="Account" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentAccountLookup_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                        <IsDeDupLookup>true</IsDeDupLookup>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{59293bf9-485f-4a02-a51b-ab0e3884af3f}" showlabel="true">
+                                        <labels>
+                                            <label description="Contact" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentContactLookup_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A2D479C5-53E3-4C69-ADDD-802327E67A0D}</DefaultViewId>
+                                                        <EntityLogicalName>contact</EntityLogicalName>
+                                                        <IsDeDupLookup>true</IsDeDupLookup>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0cce9f27-6506-487d-b2b3-9b3f47473037}" showlabel="true">
+                                        <labels>
+                                            <label description="For a new, separate record, leave fields blank and Continue." languagecode="1033" />
+                                        </labels>
+                                        <control id="actiontext_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{a0627a90-57af-4c9e-b21c-7d7c32010420}">
+        <rows>
+            <row>
+                <cell id="{9a37a263-4579-4d52-ab39-54545ecbd1e7}">
+                    <labels>
+                        <label description="Matching information found" languagecode="1033" />
+                    </labels>
+                    <control id="dupwarning" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{22db8b15-c7d6-4075-80d0-045daa318758}">
+        <rows>
+            <row>
+                <cell id="{02db819c-ab5e-4221-8a91-3c5b3de8079d}">
+                    <labels>
+                        <label description="Continue" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{bbbaf2b7-b884-47a0-a992-98687e3779df}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.LeadCommandActions.dupWarningOnLoadHandler" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{ff2c9832-eb68-49dd-a61e-1645f9d9d6db}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="MarketingSales.Lead.CommandActions.dialogClose" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{2d02e167-be7d-4b22-969b-4bf52a386126}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.LeadCommandActions.dupWarningOnOkClickHandler" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{03d80721-295a-4713-a98a-da70cffe4b90}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:MarketingSales/Lead/Lead_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,210 @@
+<form>
+    <formparameters>
+        <querystringparameter name="action_name" type="SafeString" />
+        <querystringparameter name="activity_serialized" type="SafeString" />
+        <querystringparameter name="activity_type" type="SafeString" />
+        <querystringparameter name="entity_id" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="channel_name" type="SafeString" />
+        <querystringparameter name="form_values_fax" type="SafeString" />
+    </formparameters>
+    <header id="{26d64878-86d2-4aec-afcd-28977ca5f83e}">
+        <rows>
+            <row>
+                <cell id="{84d197c1-9fe1-4228-ac27-e4097eb15652}">
+                    <labels>
+                        <label description="New Faxes" languagecode="1033" />
+                    </labels>
+                    <control id="dialog_header_title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{d7cf17bb-0046-4c5e-8211-d003774f6361}" name="{d7cf17bb-0046-4c5e-8211-d003774f6361}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{891b5448-c778-4422-86ec-babe8fed1443}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0949e569-c56c-49f3-90a8-fd0e9c3845db}">
+                                        <labels>
+                                            <label description="Fill out this form to create new faxes for the members you selected in the marketing list. To add this fax as a new fax in each member's record, click Distribute." languagecode="1033" />
+                                        </labels>
+                                        <control id="dialog_subtitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" id="{6c5ece61-f4db-4f11-a0d3-54bea11aec92}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dd7ebc98-5640-4d3c-b12c-f875b780c894}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{468db0d2-7f10-4f21-9f19-2f42a4832c6b}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cbb8d60a-e86f-46ef-a783-f2c94ec6ed3b}">
+                                        <labels>
+                                            <label description="Due" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_scheduled_end" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0e363b4c-5449-42b7-b969-6d1bef124684}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{54e1b39c-759a-48c7-80df-4fb84e20bf4e}" rowspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_description" classid="{E0DECE4B-6FC8-4A8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{447b4493-f5ab-428f-922a-496ef3505fc4}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="fax_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2945C2B2-9093-46D9-8412-E8C9EE401B2D}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{8B89B6D8-6692-4262-9BEB-E2D4B9AE5DEB}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{0a7c1049-eaa9-4c55-af8d-617506f1f577}">
+        <rows>
+            <row>
+                <cell id="{229dfef5-5027-43b2-be28-ea46718d1338}">
+                    <labels>
+                        <label description="Help" languagecode="1033" />
+                    </labels>
+                    <control id="help_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{d3e3e39c-23fa-47f7-aff8-731aff1f5340}">
+                    <labels>
+                        <label description="Distribute" languagecode="1033" />
+                    </labels>
+                    <control id="distribute_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{a5615594-bbae-4e9e-9e70-feb5d1b654e2}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewFaxes.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{9db2dab3-f47d-4982-af3b-1e77e6483308}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="help_id">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onHelpButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{e92a4dcb-a2e6-45d7-bbac-5dd586b55cfb}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="distribute_id">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewFaxes.onConfirmClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{5730ac13-3ab9-4524-88c7-1c9f11b29107}" enabled="true" parameters="" passExecutionContext="false" />
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onDistributeActivityButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{2f4d902d-8db8-4ca8-8fd0-419a3a2e1e68}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="Marketing/ClientCommon/Marketing_ClientCommon.js" handlerUniqueId="{cd9dcb63-f983-4cca-ab0d-f239ff5d98c5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/CampaignActivity/CampaignActivity_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{8B89B6D8-6692-4262-9BEB-E2D4B9AE5DEB}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4204</EntityName>
+                    <FormValues type="SafeString">form_values_fax</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4204</EntityName>
+                    <FormValues type="SafeString">form_values_fax</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4204</EntityName>
+                    <FormValues type="SafeString">form_values_fax</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

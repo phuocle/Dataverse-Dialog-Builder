@@ -1,0 +1,152 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_feedType" type="SafeString" />
+        <querystringparameter name="param_yammerNetwork" type="SafeString" />
+        <querystringparameter name="param_yammerGroupId" type="SafeString" />
+        <querystringparameter name="param_yammerUserId" type="SafeString" />
+        <querystringparameter name="param_yammerEmailAddress" type="SafeString" />
+        <querystringparameter name="param_postFollowed" type="SafeString" />
+        <querystringparameter name="param_yammerPostState" type="SafeString" />
+        <querystringparameter name="param_domainName" type="SafeString" />
+        <querystringparameter name="param_errorCode" type="SafeString" />
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityType" type="SafeString" />
+        <querystringparameter name="param_entityName" type="SafeString" />
+        <querystringparameter name="param_yammerPostMethod" type="SafeString" />
+    </formparameters>
+    <header id="{e75b319a-4748-43fc-8c20-9300fcf34769}">
+        <rows>
+            <row>
+                <cell id="{71f86d66-c425-4da7-8caf-a64e976e6907}">
+                    <labels>
+                        <label description="Yammer Conversation" languagecode="1033" />
+                    </labels>
+                    <control id="yammer_conversation_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{5131963e-f023-43cd-8d4e-f6aaa6af0ce2}" name="{5131963e-f023-43cd-8d4e-f6aaa6af0ce2}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{4409a694-e8bc-42ce-9e7d-999a22a0ca34}" name="{4409a694-e8bc-42ce-9e7d-999a22a0ca34}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{aab09768-9a00-4c1f-8762-0d820d007816}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="YammerIntegrationControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{a8c8e1e3-9da2-4cb7-be96-3046377a733b}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Yammer.Dialog.onLoad" libraryName="msdyn_/YammerIntegration/Yammer_main_system_library.js" handlerUniqueId="{4B9C3446-B67B-4602-9AB4-2F038FE73B36}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/YammerIntegration/Yammer_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{a8c8e1e3-9da2-4cb7-be96-3046377a733b}">
+            <customControl name="MscrmControls.YammerIntegration.YammerIntegrationControl" formFactor="0">
+                <parameters>
+                    <feedType type="SingleLine.Text">param_feedType</feedType>
+                    <yammerNetwork type="SingleLine.Text">param_yammerNetwork</yammerNetwork>
+                    <yammerGroupId type="SingleLine.Text">param_yammerGroupId</yammerGroupId>
+                    <yammerUserId type="SingleLine.Text">param_yammerUserId</yammerUserId>
+                    <yammerEmailAddress type="SingleLine.Text">param_yammerEmailAddress</yammerEmailAddress>
+                    <postFollowed type="SingleLine.Text">param_postFollowed</postFollowed>
+                    <yammerPostState type="SingleLine.Text">param_yammerPostState</yammerPostState>
+                    <domainName type="SingleLine.Text">param_domainName</domainName>
+                    <errorCode type="SingleLine.Text">param_errorCode</errorCode>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityType type="SingleLine.Text">param_entityType</entityType>
+                    <entityName type="SingleLine.Text">param_entityName</entityName>
+                    <yammerPostMethod type="SingleLine.Text">param_yammerPostMethod</yammerPostMethod>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.YammerIntegration.YammerIntegrationControl" formFactor="1">
+                <parameters>
+                    <feedType type="SingleLine.Text">param_feedType</feedType>
+                    <yammerNetwork type="SingleLine.Text">param_yammerNetwork</yammerNetwork>
+                    <yammerGroupId type="SingleLine.Text">param_yammerGroupId</yammerGroupId>
+                    <yammerUserId type="SingleLine.Text">param_yammerUserId</yammerUserId>
+                    <yammerEmailAddress type="SingleLine.Text">param_yammerEmailAddress</yammerEmailAddress>
+                    <postFollowed type="SingleLine.Text">param_postFollowed</postFollowed>
+                    <yammerPostState type="SingleLine.Text">param_yammerPostState</yammerPostState>
+                    <domainName type="SingleLine.Text">param_domainName</domainName>
+                    <errorCode type="SingleLine.Text">param_errorCode</errorCode>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityType type="SingleLine.Text">param_entityType</entityType>
+                    <entityName type="SingleLine.Text">param_entityName</entityName>
+                    <yammerPostMethod type="SingleLine.Text">param_yammerPostMethod</yammerPostMethod>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.YammerIntegration.YammerIntegrationControl" formFactor="2">
+                <parameters>
+                    <feedType type="SingleLine.Text">param_feedType</feedType>
+                    <yammerNetwork type="SingleLine.Text">param_yammerNetwork</yammerNetwork>
+                    <yammerGroupId type="SingleLine.Text">param_yammerGroupId</yammerGroupId>
+                    <yammerUserId type="SingleLine.Text">param_yammerUserId</yammerUserId>
+                    <yammerEmailAddress type="SingleLine.Text">param_yammerEmailAddress</yammerEmailAddress>
+                    <postFollowed type="SingleLine.Text">param_postFollowed</postFollowed>
+                    <yammerPostState type="SingleLine.Text">param_yammerPostState</yammerPostState>
+                    <domainName type="SingleLine.Text">param_domainName</domainName>
+                    <errorCode type="SingleLine.Text">param_errorCode</errorCode>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityType type="SingleLine.Text">param_entityType</entityType>
+                    <entityName type="SingleLine.Text">param_entityName</entityName>
+                    <yammerPostMethod type="SingleLine.Text">param_yammerPostMethod</yammerPostMethod>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.YammerIntegration.YammerIntegrationControl" formFactor="3">
+                <parameters>
+                    <feedType type="SingleLine.Text">param_feedType</feedType>
+                    <yammerNetwork type="SingleLine.Text">param_yammerNetwork</yammerNetwork>
+                    <yammerGroupId type="SingleLine.Text">param_yammerGroupId</yammerGroupId>
+                    <yammerUserId type="SingleLine.Text">param_yammerUserId</yammerUserId>
+                    <yammerEmailAddress type="SingleLine.Text">param_yammerEmailAddress</yammerEmailAddress>
+                    <postFollowed type="SingleLine.Text">param_postFollowed</postFollowed>
+                    <yammerPostState type="SingleLine.Text">param_yammerPostState</yammerPostState>
+                    <domainName type="SingleLine.Text">param_domainName</domainName>
+                    <errorCode type="SingleLine.Text">param_errorCode</errorCode>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityType type="SingleLine.Text">param_entityType</entityType>
+                    <entityName type="SingleLine.Text">param_entityName</entityName>
+                    <yammerPostMethod type="SingleLine.Text">param_yammerPostMethod</yammerPostMethod>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

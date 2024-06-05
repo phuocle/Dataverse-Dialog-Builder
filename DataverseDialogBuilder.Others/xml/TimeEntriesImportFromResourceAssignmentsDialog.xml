@@ -1,0 +1,145 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_selectedIds" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_startDate" type="DateTime" />
+        <querystringparameter name="param_endDate" type="DateTime" />
+        <querystringparameter name="param_resourceId" type="SafeString" />
+    </formparameters>
+    <header id="{49efb086-ef42-481f-9e0b-b40bcaadf3b5}">
+        <rows>
+            <row>
+                <cell id="{1894125f-b445-4647-ab9f-5cb3e2b3e020}">
+                    <labels>
+                        <label description="Import Resource Assignments" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_resourceassignmentsimport" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{1b37ef23-dcea-4d35-8c29-115c2940925b}" name="ResourceAssignmentsGridTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{208bd6fd-92e5-4503-bb9c-c56e3bd73b64}" name="ResourceAssignmentPickerSection">
+                            <labels>
+                                <label description="From week" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ad777cf9-e72d-4b74-91e4-ee996d24f2d3}">
+                                        <labels>
+                                            <label description="Starting on" languagecode="1033" />
+                                        </labels>
+                                        <control id="startDate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{54ae12eb-0fd2-4da7-a30a-6df105d7b8f2}">
+                                        <labels>
+                                            <label description="Ending on" languagecode="1033" />
+                                        </labels>
+                                        <control id="endDate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6f5c0320-4db4-44cf-8b58-4d68870b923a}" colspan="1" rowspan="5">
+                                        <labels>
+                                            <label description="Select the resource assignments to import" languagecode="1033" />
+                                        </labels>
+                                        <control id="SourceGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <ViewId>{d754d984-20cf-e711-8122-000d3a29ec0b}</ViewId>
+                                                <TargetEntityType>msdyn_resourceassignment</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>true</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{cea923b0-881c-41bd-9829-f486047efb70}">
+        <rows>
+            <row>
+                <cell id="{f58adc2a-af74-49b4-9a62-8570f2ce6115}">
+                    <labels>
+                        <label description="Import" languagecode="1033" />
+                    </labels>
+                    <control id="Import" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{93d7c4a0-f17e-41e8-a528-86fc095b7e99}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="Cancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceAssignmentsDialog.onLoad" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{bd136442-bfbf-4a93-9aa2-97c9006e2c18}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="startDate">
+            <Handlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceAssignmentsDialog.onStartDateChange" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{4345cef5-d60a-4e18-ae64-1425ff51c3ca}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="endDate">
+            <Handlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceAssignmentsDialog.onEndDateChange" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{6d8db6ca-83ed-41cd-8200-0cbdca775824}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Cancel">
+            <Handlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceAssignmentsDialog.onCancel" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{b0f3f8e6-2e08-49af-a446-2ec03db01c7f}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Import">
+            <Handlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceAssignmentsDialog.onConfirm" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{41d58448-c378-40e6-b2c0-8eaffaf051c2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/TimeEntry/timeEntry.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

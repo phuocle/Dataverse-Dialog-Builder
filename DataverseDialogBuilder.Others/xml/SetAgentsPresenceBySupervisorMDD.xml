@@ -1,0 +1,104 @@
+<form>
+    <header id="{8F84747D-5CFC-440E-96BD-1D773798423E}">
+        <rows>
+            <row>
+                <cell id="{146379F6-CC6F-4F43-8614-5472823F277E}">
+                    <labels>
+                        <label description="Set Agent's Status" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_setagentsstatus" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{BE04BDB1-2290-4CF2-B4B0-135C531B85B9}" name="{EF091E3B-7821-4E4E-972B-FC6D87F8DC58}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{DD4651F6-E956-4EA1-A981-D7C8856F6780}" name="{C3EBEFCF-552E-45BC-B53C-37AB5E13DAEF}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7AC6F5B3-77D4-43F3-989A-EB76C597A510}" showlabel="true" locklevel="1" colspan="1" rowspan="1" auto="false">
+                                        <labels>
+                                            <label description="Agent Name" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="true" id="agent_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{715B7A35-7EFD-4DA8-AE22-F50E820F8FC5}" showlabel="true" locklevel="0" colspan="1" rowspan="1" auto="false">
+                                        <labels>
+                                            <label description="Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="presence_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetName>msdyn_presencestatusforsupervisor</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{6DE62AAC-FE28-407B-BD05-EDD5D19AB3DD}">
+        <rows>
+            <row>
+                <cell id="{45E5CEA9-B7F2-4DBC-A90A-E0CA7CF4B8D8}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{0668F182-BD4F-40B6-B563-73D83995B0AE}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.SetPresenceBySupervisorDialog.prototype.openPresenceDialogOKClick" libraryName="msdyn_SetPresenceBySupervisorDialog.js" handlerUniqueId="{C6E48FD9-FFCB-4364-B415-01472DF7D9AC}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.SetPresenceBySupervisorDialog.prototype.openPresenceDialogCancelClick" libraryName="msdyn_SetPresenceBySupervisorDialog.js" handlerUniqueId="{76A76D69-4839-49FC-B0AE-EC31B0CBFE0B}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.SetPresenceBySupervisorDialog.prototype.openPresenceDialogonLoad" libraryName="msdyn_SetPresenceBySupervisorDialog.js" handlerUniqueId="{3760DB53-457C-4D10-BFAC-EDACD3E27D89}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_selectedValue" type="SafeString" />
+        <querystringparameter name="param_agentName" type="SafeString" />
+        <querystringparameter name="param_agentId" type="SafeString" />
+        <querystringparameter name="param_isPresenceChangeRequested" type="Boolean" />
+        <querystringparameter name="param_presenceId" type="SafeString" />
+        <querystringparameter name="param_presenceText" type="SafeString" />
+        <querystringparameter name="param_presenceColour" type="SafeString" />
+        <querystringparameter name="param_basePresenceStatus" type="SafeString" />
+    </formparameters>
+</form>

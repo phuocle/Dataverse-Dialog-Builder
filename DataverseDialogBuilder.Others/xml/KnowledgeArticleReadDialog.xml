@@ -1,0 +1,133 @@
+<form>
+    <header id="{0f88b832-f41c-46c9-bac1-2d985bad4515}">
+        <rows>
+            <row>
+                <cell id="{20ecd955-6fd8-4e72-8fb0-8b0b6216c97e}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_kareaddialogHeader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{de364593-3768-4a38-9f5e-401765a35be2}" name="{de364593-3768-4a38-9f5e-401765a35be2}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{dd750465-362d-401e-83a5-70dd8ceb826e}" name="{dd750465-362d-401e-83a5-70dd8ceb826e}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{bbc481a5-706e-4522-aec9-1c934d1dd701}" showlabel="false" colspan="1" rowspan="12" auto="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="kareaddialog_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{f8cc3513-1397-423f-8a9a-a9a3d70c36fc}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{39f8250f-77b8-4211-acaf-25834dbb3785}">
+        <rows>
+            <row>
+                <cell id="{8ae01acd-f26d-45fb-bde1-856240d067d9}" visible="false">
+                    <labels>
+                        <label description="Edit" languagecode="1033" />
+                    </labels>
+                    <control id="edit_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{7c93fabb-e8f0-4b06-899f-4a96e3d9b41e}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="close_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="edit_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticleSubgridActions.Instance.editKnowledgeArticle" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleSubgrid/KnowledgeArticleSubgridLibrary.js" handlerUniqueId="{09e55bc3-cbd3-4eae-8d27-b71f7dd9cb5a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="close_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticleSubgridActions.Instance.closeDialog" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleSubgrid/KnowledgeArticleSubgridLibrary.js" handlerUniqueId="{eaa10963-44c4-4d1d-9302-71033e3d6770}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleSubgrid/KnowledgeArticleSubgridLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <formparameters>
+        <querystringparameter name="param_articleid" type="SafeString" />
+        <querystringparameter name="param_showcontrol" type="SafeString" />
+    </formparameters>
+    <controlDescriptions>
+        <controlDescription forControl="{f8cc3513-1397-423f-8a9a-a9a3d70c36fc}">
+            <customControl formFactor="0" name="MscrmControls.KnowledgeControl.KnowledgeControl">
+                <parameters>
+                    <data-set name="dataSetKnowledgeControl">
+                        <ViewId>{f9736a16-6fda-4a5d-bc98-019ece2da7e7}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>msdyn_knowledgearticleimage</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds />
+                    </data-set>
+                    <DialogUniqueName static="true" type="SingleLine.Text">KnowledgeArticleReadDialog</DialogUniqueName>
+                    <ShowControl type="SingleLine.Text" static="false">param_showcontrol</ShowControl>
+                    <KnowledgeArticleId type="SingleLine.Text" static="false">param_articleid</KnowledgeArticleId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.KnowledgeControl.KnowledgeControl">
+                <parameters>
+                    <data-set name="dataSetKnowledgeControl">
+                        <ViewId>{f9736a16-6fda-4a5d-bc98-019ece2da7e7}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>msdyn_knowledgearticleimage</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds />
+                    </data-set>
+                    <DialogUniqueName static="true" type="SingleLine.Text">KnowledgeArticleReadDialog</DialogUniqueName>
+                    <ShowControl type="SingleLine.Text" static="false">param_showcontrol</ShowControl>
+                    <KnowledgeArticleId type="SingleLine.Text" static="false">param_articleid</KnowledgeArticleId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.KnowledgeControl.KnowledgeControl">
+                <parameters>
+                    <data-set name="dataSetKnowledgeControl">
+                        <ViewId>{f9736a16-6fda-4a5d-bc98-019ece2da7e7}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>msdyn_knowledgearticleimage</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds />
+                    </data-set>
+                    <DialogUniqueName static="true" type="SingleLine.Text">KnowledgeArticleReadDialog</DialogUniqueName>
+                    <ShowControl type="SingleLine.Text" static="false">param_showcontrol</ShowControl>
+                    <KnowledgeArticleId type="SingleLine.Text" static="false">param_articleid</KnowledgeArticleId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

@@ -1,0 +1,183 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_controlValues" type="Object" />
+    </formparameters>
+    <header id="{ff73073a-9b7c-41e2-ad9e-adb04cd71015}">
+        <rows>
+            <row>
+                <cell id="{dc46102f-b365-4224-b668-131015e39602}">
+                    <labels>
+                        <label description="Copy Contract" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_copycontract" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{6E16FDB2-3B82-4D43-A027-DB14D8BAC7CA}" name="copyContract" locklevel="0" expanded="true">
+            <labels>
+                <label description="Copy Contract" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{82AF4E4B-93DB-413D-B4A9-93DB62437BE9}" name="quickContract_column1" columns="1" showbar="false">
+                            <labels>
+                                <label description="Enter properties and copy pricing option for the target entity" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{763D36AF-128F-48AA-966B-C083F5031F13}">
+                                        <labels>
+                                            <label description="Topic" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>300</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7F71D9CC-50CA-4215-B47C-AF8AE5BEE397}">
+                                        <labels>
+                                            <label description="Customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{01BB80D1-E42B-4BBF-86CF-F4949435875B}">
+                                        <labels>
+                                            <label description="Contracting Unit" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_contractorganizationalunitid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{31E3527E-9FA5-4CDA-BFF2-A9FC76B87CBE}</DefaultViewId>
+                                                        <EntityLogicalName>msdyn_organizationalunit</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7F71D10C-15CA-4215-B47C-AF8AE5BEE397}">
+                                        <labels>
+                                            <label description="Currency" languagecode="1033" />
+                                        </labels>
+                                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{CD5625B0-DDA8-4EE2-B13F-B9331E027C8A}</DefaultViewId>
+                                                        <EntityLogicalName>transactioncurrency</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0A7F11E9-21BA-40C4-971B-543B796ED8F3}">
+                                        <labels>
+                                            <label description="Request Delivery Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="requestdeliveryby" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{92453A95-F639-450B-1015-E084A5A71015}">
+                                        <labels>
+                                            <label description="Copy Pricing" languagecode="1033" />
+                                        </labels>
+                                        <control id="copypricing" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{3077D2B8-FC25-4A84-B3F8-F1DE3BDCE1FB}">
+        <rows>
+            <row>
+                <cell id="{54D20F98-13AB-43B2-B461-0252D18C8564}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{DCD99D57-19E1-4760-8F38-D7C0A211A756}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false">
+            <Handlers>
+                <Handler functionName="msdyn.entityCopy.salesDocumentCopy.contractCopy.initializeContractDialogControls" libraryName="$webresource:msdyn_/EntityCopy/SalesDocumentCopy/SalesDocumentCopy.js" handlerUniqueId="{C92617A5-B43A-4C71-8EAD-F86FECF12369}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="msdyn.entityCopy.salesDocumentCopy.contractCopy.closeContractDialogOk" libraryName="$webresource:msdyn_/EntityCopy/SalesDocumentCopy/SalesDocumentCopy.js" handlerUniqueId="{DA868B50-3DE5-40A7-92CD-8327B8E78B8A}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="msdyn.entityCopy.salesDocumentCopy.contractCopy.closeContractDialogCancel" libraryName="$webresource:msdyn_/EntityCopy/SalesDocumentCopy/SalesDocumentCopy.js" handlerUniqueId="{B0084CCD-0507-4753-891F-1A6FFCCC99DD}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="customerid">
+            <Handlers>
+                <Handler functionName="msdyn.entityCopy.salesDocumentCopy.contractCopy.updateContractDialogUI" libraryName="$webresource:msdyn_/EntityCopy/SalesDocumentCopy/SalesDocumentCopy.js" handlerUniqueId="{90084CCD-0509-4753-891F-1A6FFCCC99DE}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="transactioncurrencyid">
+            <Handlers>
+                <Handler functionName="msdyn.entityCopy.salesDocumentCopy.contractCopy.updateContractDialogUI" libraryName="$webresource:msdyn_/EntityCopy/SalesDocumentCopy/SalesDocumentCopy.js" handlerUniqueId="{90084CCD-0509-4753-891F-1A6FFCCC99DF}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/EntityCopy/SalesDocumentCopy/SalesDocumentCopy.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

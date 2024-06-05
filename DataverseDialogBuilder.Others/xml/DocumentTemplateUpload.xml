@@ -1,0 +1,152 @@
+<form>
+    <formparameters>
+        <querystringparameter name="DocTemplateFile_Type" type="Integer" />
+        <querystringparameter name="DocTemplate_Type" type="Integer" />
+        <querystringparameter name="DocTemplate_FileName" type="SafeString" />
+        <querystringparameter name="DocTemplate_Size" type="Integer" />
+        <querystringparameter name="Is_DocumentTemplate_Uploaded" type="Integer" />
+        <querystringparameter name="DocumentTemplate_index" type="SafeString" />
+        <querystringparameter name="current_view" type="SafeString" />
+        <querystringparameter name="Entity_Name" type="SafeString" />
+        <querystringparameter name="DocTemplate_ExpectedFileType" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{bbfb2fbd-85d6-42bb-a83c-5cc41f981b9b}" name="{bbfb2fbd-85d6-42bb-a83c-5cc41f981b9b}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{e0676379-d98c-4c31-8c46-4c70c02908c1}" name="{e0676379-d98c-4c31-8c46-4c70c02908c1}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{fa8c15eb-45bf-4348-a3e7-349f7a4cef92}">
+                                        <labels>
+                                            <label description="File Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="docimport_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{767dd916-da79-454f-8c2c-9f94aa51eb25}">
+                                            <parameters>
+                                                <MaxLength>142606336</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{0fd20c69-7bd5-4246-9606-ddfc423dc13f}" name="{0fd20c69-7bd5-4246-9606-ddfc423dc13f}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2976ff49-1c82-4378-959a-f9cdca7440c8}">
+                                        <labels>
+                                            <label description="File types description" languagecode="1033" />
+                                        </labels>
+                                        <control id="docimportdescription_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{06787698-ad40-4c25-b5d4-37286ce7c091}">
+        <rows>
+            <row>
+                <cell id="{84ba7f3a-c212-4d22-9f54-936e2c41e8b9}">
+                    <labels>
+                        <label description="Document Template Upload" languagecode="1033" />
+                    </labels>
+                    <control id="doctemplateuploadheader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{fbd61deb-aa7b-41d5-99eb-907b92c704fe}">
+        <rows>
+            <row>
+                <cell id="{59b802ee-ddb1-4a82-b0cb-ef99bf46e8df}">
+                    <labels>
+                        <label description="Upload" languagecode="1033" />
+                    </labels>
+                    <control id="doc_upload" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{358142ca-e67e-4373-97bf-f310079e2b2a}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="doc_cancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="doc_upload">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.DocTemplateDownload.UploadDocTemplate" libraryName="AppCommon/ControlWS/DocTemplateDownload/DocTemplateDownload.js" handlerUniqueId="{0d9bc7b8-6d52-4ab1-abad-d0baea13d2a1}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="doc_cancel">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.DocTemplateDownload.DocTemplateDownloadClose" libraryName="AppCommon/ControlWS/DocTemplateDownload/DocTemplateDownload.js" handlerUniqueId="{726bd128-ff69-4a32-86de-d1665b8d151a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.DocTemplateDownload.DocTemplateUploadOnLoad" libraryName="AppCommon/ControlWS/DocTemplateDownload/DocTemplateDownload.js" handlerUniqueId="{d4072566-b7de-4be5-8f49-d430b1eafa99}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/ControlWS/DocTemplateDownload/DocTemplateDownload.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{767dd916-da79-454f-8c2c-9f94aa51eb25}">
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="0">
+                <parameters>
+                    <value type="SingleLine.Text">docimport_id</value>
+                    <filename type="SingleLine.Text">DocTemplate_FileName</filename>
+                    <size type="Whole.None">DocTemplate_Size</size>
+                    <ImportFileType type="Whole.None">DocTemplate_ExpectedFileType</ImportFileType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="1">
+                <parameters>
+                    <value type="SingleLine.Text">docimport_id</value>
+                    <filename type="SingleLine.Text">DocTemplate_FileName</filename>
+                    <size type="Whole.None">DocTemplate_Size</size>
+                    <ImportFileType type="Whole.None">DocTemplate_ExpectedFileType</ImportFileType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="2">
+                <parameters>
+                    <value type="SingleLine.Text">docimport_id</value>
+                    <filename type="SingleLine.Text">DocTemplate_FileName</filename>
+                    <size type="Whole.None">DocTemplate_Size</size>
+                    <ImportFileType type="Whole.None">DocTemplate_ExpectedFileType</ImportFileType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

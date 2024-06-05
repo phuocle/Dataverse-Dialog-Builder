@@ -1,0 +1,139 @@
+<form>
+    <formparameters>
+        <querystringparameter name="location_Id" type="SafeString" />
+        <querystringparameter name="regarding_Object_Id" type="SafeString" />
+        <querystringparameter name="regarding_Object_EntityName" type="SafeString" />
+        <querystringparameter name="document_Id" type="SafeString" />
+        <querystringparameter name="last_Button_Clicked" type="SafeString" />
+        <querystringparameter name="full_Name" type="SafeString" />
+        <querystringparameter name="title_Value" type="SafeString" />
+        <querystringparameter name="extension_Value" type="SafeString" />
+        <querystringparameter name="use_Fallback" type="SafeString" />
+        <querystringparameter name="sharePoint_Document_Id" type="SafeString" />
+        <querystringparameter name="created_By" type="SafeString" />
+        <querystringparameter name="created_On" type="SafeString" />
+        <querystringparameter name="modified_By" type="SafeString" />
+        <querystringparameter name="modified_On" type="SafeString" />
+        <querystringparameter name="file_Type" type="SafeString" />
+    </formparameters>
+    <header id="{3db132d4-f033-4b10-a80d-1aa6d6404d12}">
+        <rows>
+            <row>
+                <cell id="{da1a19cb-5b01-4e3f-b2af-cc83959cbe66}">
+                    <labels>
+                        <label description="Edit Document Properties" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_editdocumentproperties" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{7c715a84-7c9f-4bf7-8224-c310f6a3cf03}" name="{25707e61-9842-45f8-bf77-44cfbfc1abb3}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{486cfe96-04db-4c2b-9c27-bb2ba9077119}" name="{53d99df7-3648-4e8c-bb3b-5f9dad69afea}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6ff5bebb-dbf2-4e5b-b9dd-f66b49b747e5}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="fullname_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>128</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{167ad706-815c-416e-8a67-b4367447ef6d}">
+                                        <labels>
+                                            <label description="Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="title_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>255</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6c4652fc-d999-4d62-b202-8f5ed4ba378d}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_createdon_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b969170b-e34d-45ab-9969-60f7ad97b591}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_modifiedon_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{10347de8-921a-4aa6-9860-a71dd0e6d68d}">
+        <rows>
+            <row>
+                <cell id="{f6b01500-aee8-45f3-8b94-3f01268af324}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="save_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{3e45664a-79b8-459b-bdf6-fdf8be2c93d7}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="DocumentManagement.SharePointDocumentEditProperties.OnLoadEventHandler" libraryName="SharePoint_main_system_library.js" handlerUniqueId="0ecb19e3-0b14-47a8-8c1b-6648f67a3883" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="save_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.SharePointDocumentEditProperties.EditPropertiesClickHandler" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{30a9531e-d895-43ef-a21d-ab7cba0a66ec}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.GenericUtilities.CloseDialog" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{17c1d7f0-cb35-44e4-ad90-bec92b61dc1c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

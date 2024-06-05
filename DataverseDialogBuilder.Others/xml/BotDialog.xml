@@ -1,0 +1,150 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_BotUserId" type="UniqueId" />
+        <querystringparameter name="param_BotUserName" type="SafeString" />
+    </formparameters>
+    <header id="{4ad5217c-4f8b-4cae-b619-b673d3406e51}">
+        <rows>
+            <row>
+                <cell id="{62aac4e9-85bf-495d-9d7e-bcb8f14072e6}">
+                    <labels>
+                        <label description="Select queues to complete your virtual agent setup" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{d89f52ce-77c0-4a43-8bb5-0d0b50ff4ed4}" name="{14b336c0-bf6d-4d1a-ac3e-975d2b5fc841}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{d9c716c1-e95e-4326-998f-65a9022750fb}" name="{3e2f1d77-f747-492a-985a-c4969ffaa417}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{08ddbf32-9b0e-411d-beea-8469bc21f2a9}">
+                                        <labels>
+                                            <label description="Name: " languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_botName" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e6ba0bab-bc69-4efb-aa3a-3f342d5c4ab4}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5e030bbd-335a-440b-9c28-4b0a1a5ded23}">
+                                        <labels>
+                                            <label description="Your virtual agent has been created. To receive incoming messages, your virtual agent must be added to at least one queue." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_explanation" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{62d70d90-30c1-4ca8-9930-affebccaaa63}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3ddd483a-c7c7-484e-b6c0-1831058f6b21}">
+                                        <labels>
+                                            <label description="Queues" languagecode="1033" />
+                                        </labels>
+                                        <control id="Active Queues" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{e6f6fd69-4169-4a8b-9eb0-5a1fb1693ed3}">
+                                            <parameters>
+                                                <ViewId>{475ba760-c16c-e911-8196-000d3af7379e}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <TargetEntityType>queue</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{475ba760-c16c-e911-8196-000d3af7379e}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>8</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b6deaba6-60f0-489e-b22a-38d97c3625ca}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e8369e5d-1c79-4ae8-af8b-dd3594b448ea}">
+                                        <labels>
+                                            <label description="Existing routing rules for each queue will send incoming messages to the virtual agent. These rules will also be used to transfer virtual agents to human agents, when needed." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_content_strings" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{cde5f72a-db2d-46cb-a84d-8e0d0d833e8c}">
+        <rows>
+            <row>
+                <cell id="{032f9b4b-d0e8-46b3-88f4-8df401f25e01}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="btnOK" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{027d0d71-01f3-4c2e-92b4-babcbe27c59a}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="btnCancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdyn_CCIDialog.js" libraryUniqueId="{f48774db-293a-4c54-be5c-b52c8ec1a011}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" attribute="btnOK">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.CCIDialog.saveChanges" libraryName="msdyn_CCIDialog.js" handlerUniqueId="{a545509b-2233-416f-9ec6-f1c165ba5951}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnCancel">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.CCIDialog.onClickCancel" libraryName="msdyn_CCIDialog.js" handlerUniqueId="{710d2e99-1e95-4ebe-9a68-df93e8dbad57}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.CCIDialog.onLoad" libraryName="msdyn_CCIDialog.js" handlerUniqueId="{710d2e99-1e95-4ebe-9a68-df93e8dbad59}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

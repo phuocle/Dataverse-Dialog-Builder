@@ -1,0 +1,128 @@
+<form>
+    <formparameters>
+        <querystringparameter name="entity_id" type="UniqueId" />
+        <querystringparameter name="entity_logical_name" type="SafeString" />
+        <querystringparameter name="effectivity_calendar" type="SafeString" />
+        <querystringparameter name="is_read_only" type="Boolean" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{969d50b2-b1a2-4bc5-92df-72fa9c590823}" name="{969d50b2-b1a2-4bc5-92df-72fa9c590823}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{b45f3266-0c87-4e74-b2e2-24d42c9be6f6}" name="{b45f3266-0c87-4e74-b2e2-24d42c9be6f6}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e6d3f572-e854-471c-b912-3d283251bf15}" showlabel="true">
+                                        <labels>
+                                            <label description="Select the days in a week and the timeslots during which the Contract will be in effect." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c306d71d-c4c8-41d5-97b9-6ba8d18f4661}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="cc_ContractCalendar" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{0c331515-ec55-4203-8cf6-f8817c2375ba}">
+                                            <parameters>
+                                                <MaxLength>168</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{2c5b733f-6841-4139-a30e-13acbb14e848}">
+        <rows>
+            <row>
+                <cell id="{11cbf4cd-0a68-427f-9d3c-935d2b7153a8}">
+                    <labels>
+                        <label description="Set Calendar" languagecode="1033" />
+                    </labels>
+                    <control id="assignheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{154f0121-809c-4759-86c0-5dc29689d68c}">
+        <rows>
+            <row>
+                <cell id="{8c15b351-d9f4-41bb-b1fc-4dd159c664d3}">
+                    <labels>
+                        <label description="Set" languagecode="1033" />
+                    </labels>
+                    <control id="set_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{cb397019-5836-4b00-b63b-c727e981b8ed}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="close_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.onLoadSetCalendarDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{f0e12782-42de-49f9-85c0-5578f2ae1573}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="set_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.setContractCalendar" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{562da408-83d4-4f20-9c38-f939f291a834}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="close_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{1aec4aef-26bf-49b2-9a18-f398388816d3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{0c331515-ec55-4203-8cf6-f8817c2375ba}">
+            <customControl formFactor="0" name="MscrmControls.ContractCalendar.ContractCalendarControl">
+                <parameters>
+                    <value type="SingleLine.Text" static="false">cc_ContractCalendar</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ContractCalendar.ContractCalendarControl">
+                <parameters>
+                    <value type="SingleLine.Text" static="false">cc_ContractCalendar</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ContractCalendar.ContractCalendarControl">
+                <parameters>
+                    <value type="SingleLine.Text" static="false">cc_ContractCalendar</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,166 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_quoteid" type="UniqueId" />
+        <querystringparameter name="param_cancloseopportunity" type="Object" />
+        <querystringparameter name="param_opportunityid" type="UniqueId" />
+        <querystringparameter name="param_closedstate" type="Integer" />
+        <querystringparameter name="param_timezone" type="Object" />
+    </formparameters>
+    <header id="{aba4067a-ece2-11e5-9ce9-5e5517507c66}">
+        <rows>
+            <row>
+                <cell id="{aba40aa8-ece2-11e5-9ce9-5e5517507c66}">
+                    <labels>
+                        <label description="Close Quote" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_closequote" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{aba40bac-ece2-11e5-9ce9-5e5517507c66}" name="{aba40c7e-ece2-11e5-9ce9-5e5517507c66}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{aba40d50-ece2-11e5-9ce9-5e5517507c66}" name="{aba40e9a-ece2-11e5-9ce9-5e5517507c66}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{aba4100c-ece2-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_closequotedescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{aba413ea-ece2-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="Status Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="closequotestatusreason_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{95e27090-8acd-ee11-907a-002248243577}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{aba414da-ece2-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="Close Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="closequotedate_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{aba415a2-ece2-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{aba4166a-ece2-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="Create a revised quote" languagecode="1033" />
+                                        </labels>
+                                        <control id="closequotecreaterevisedquote_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{3fcb90e6-f9fb-4198-a046-6d10e176242a}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{aba41728-ece2-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="Close the associated opportunity" languagecode="1033" />
+                                        </labels>
+                                        <control id="closequotecloseopportunity_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{58592238-ecca-11e5-9ce9-5e5517507c66}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{aba41854-ece2-11e5-9ce9-5e5517507c66}">
+        <rows>
+            <row>
+                <cell id="{aba41930-ece2-11e5-9ce9-5e5517507c66}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{aba41c32-ece2-11e5-9ce9-5e5517507c66}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onLoadCloseQuoteDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{aba41d04-ece2-11e5-9ce9-5e5517507c66}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCloseCloseQuoteDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{aba41dc2-ece2-11e5-9ce9-5e5517507c66}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.dialogClose" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{aba41e8a-ece2-11e5-9ce9-5e5517507c66}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="closequotecreaterevisedquote_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCloseQuoteCreateRevisedChanged" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{b9bfa0e8-c6e9-4a28-a6a7-68c105594a55}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/Quote/Quote_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Sales/CommandBarActions/SalesCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

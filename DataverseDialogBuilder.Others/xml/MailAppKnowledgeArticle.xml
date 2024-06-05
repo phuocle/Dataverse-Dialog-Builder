@@ -1,0 +1,99 @@
+<form>
+    <formparameters>
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="entity_id" type="SafeString" />
+        <querystringparameter name="entity_typecode" type="Integer" />
+        <querystringparameter name="email_form_data" type="Object" />
+        <querystringparameter name="email_subject" type="SafeString" />
+        <querystringparameter name="email_description" type="SafeString" />
+        <querystringparameter name="entity_type_info" type="SafeString" />
+        <querystringparameter name="cursor_info" type="SafeString" />
+        <querystringparameter name="template_id" type="SafeString" />
+        <querystringparameter name="is_select_button" type="Boolean" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" name="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{d7c8d6ab-104f-4063-9220-90446f38e938}" name="{d7c8d6ab-104f-4063-9220-90446f38e938}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0f255350-faca-4d53-bd07-6e9dfc746925}">
+                                        <labels>
+                                            <label description="Select Knowledge Articles" languagecode="1033" />
+                                        </labels>
+                                        <control id="kadescription_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{932d9be5-0857-419e-a66a-a7abeb93f3e6}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="kbsearch_id" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{90CA108E-A83A-4065-BA7B-98EC54B57400}</DefaultViewId>
+                                                        <EntityLogicalName>knowledgearticle</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{bc7bef02-5fab-4c92-a15c-662aa66091cd}">
+        <rows>
+            <row>
+                <cell id="{241c83ea-3a83-4111-baef-3b223dd830c1}">
+                    <labels>
+                        <label description="Insert Knowledge Article" languagecode="1033" />
+                    </labels>
+                    <control id="knowledgearticle_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{1253fd19-5978-4890-bb06-50dad58bea4e}">
+        <rows>
+            <row>
+                <cell id="{694e1eb2-89d0-455d-8813-4668749f670b}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="select_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="select_id">
+            <Handlers>
+                <Handler functionName="Dialogs.KnowledgeArticle.onSelectClick" libraryName="new_MailAppScriptResource" handlerUniqueId="{c896a7ba-5b93-4d75-bae4-79aa9dab945c}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="kbsearch_id">
+            <Handlers>
+                <Handler functionName="Dialogs.KnowledgeArticle.SetSelectDisabled" libraryName="new_MailAppScriptResource" handlerUniqueId="{653d4c0c-8c20-4aed-8dd4-64836ecfd43b}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

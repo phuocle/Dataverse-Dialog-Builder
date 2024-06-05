@@ -1,0 +1,74 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{CA1C915D-699C-420B-89A4-747760467C88}" name="{3E184102-6221-404C-A5C2-0BAD66A7668E}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" showlabel="false" columns="1" id="{132FD230-ACED-4C6D-8369-76A2B140CF46}" name="{105C8A9B-03F0-4574-B8E7-9E94BD40FF15}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{23c10fb1-fe8b-4284-a21b-c2e92cd8c795}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{0E9548BF-8704-4D86-A9BE-875FE24785D5}">
+        <rows>
+            <row>
+                <cell id="{6d757f7a-7552-42b9-9220-1ac4e68bb430}" visible="false">
+                    <labels>
+                        <label description="I acknowledge" languagecode="1033" />
+                    </labels>
+                    <control id="acknowledge_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{714adf35-0743-4d41-9308-c68936ae6f50}" visible="false">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="acknowledge_id">
+            <Handlers>
+                <Handler functionName="ARC.ARCWebClientDeprecationAckDialog.acknowledgeClick" libraryName="$webresource:AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="{54bd9a74-e6ba-4d30-bdce-500cdc79243f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="ARC.ARCWebClientDeprecationAckDialog.cancelClick" libraryName="$webresource:AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="{6fa09ceb-a357-49b4-8219-6f46ba4917c8}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="ARC.ARCWebClientDeprecationAckDialog.onLoadAcknowledgeDialog" libraryName="$webresource:AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="{94b277f9-9d14-490a-88ce-bab4554ceecc}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AutomaticRecordCreation/ARC/ARC_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,141 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_isGrid" type="Boolean" />
+        <querystringparameter name="param_recordCount" type="Integer" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{6C81AD5F-B985-4DBE-B8A9-6E1B5890326F}" name="{6C81AD5F-B985-4DBE-B8A9-6E1B5890326F}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5E216FA8-392F-4F4B-B4EB-762519F18C97}" name="{5E216FA8-392F-4F4B-B4EB-762519F18C97}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{CFFF4B30-F173-413A-9242-102A0FF9D63C}" showlabel="true">
+                                        <labels>
+                                            <label description="Convert this lead as qualified and create the following records:" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{23459D82-219F-4529-B6F4-98AD64E952C0}" showlabel="true">
+                                        <labels>
+                                            <label description="Account" languagecode="1033" />
+                                        </labels>
+                                        <control id="account_flag" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0BDD4415-4A6F-4A77-A2F8-0D28994D2501}" showlabel="true">
+                                        <labels>
+                                            <label description="Contact" languagecode="1033" />
+                                        </labels>
+                                        <control id="contact_flag" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" showlabel="true">
+                                        <labels>
+                                            <label description="Opportunity" languagecode="1033" />
+                                        </labels>
+                                        <control id="opportunity_flag" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9A690897-8BE7-45D1-BCD3-34C20BA526E4}" showlabel="true" visible="false">
+                                        <labels>
+                                            <label description="Choices will be applied to all selected records" languagecode="1033" />
+                                        </labels>
+                                        <control id="notification" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{132BD734-CA85-48FB-8A0D-929CC735784A}">
+        <rows>
+            <row>
+                <cell id="{69D1075D-D014-48D6-9082-C1CD5EEEBCC3}">
+                    <labels>
+                        <label description="Qualify lead" languagecode="1033" />
+                    </labels>
+                    <control id="qualify_lead" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{8EC81A4A-9738-449F-9A95-9FC2D307332C}">
+        <rows>
+            <row>
+                <cell id="{ACB5693F-DDBB-4BF9-AC95-C96BEA77991A}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{986F2A63-55E1-4F54-916C-6C36EF0D6D8F}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="MarketingSales.Lead.LeadUtil.convertLeadOnLoadHandler" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{F4E05329-1BA2-493B-8FE8-1505F3CDE179}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="MarketingSales.Lead.CommandActions.dialogClose" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{9F527656-E58C-4191-8A78-494B3B8F0099}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="MarketingSales.Lead.LeadUtil.convertLeadOnOkClickHandler" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{E4C22301-0E05-4F97-9373-0A6E60ECAF9D}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:MarketingSales/Lead/Lead_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

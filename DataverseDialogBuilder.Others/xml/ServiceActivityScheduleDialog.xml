@@ -1,0 +1,815 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_serviceAppointmentId" type="SafeString" />
+        <querystringparameter name="param_serviceId" type="Object" />
+        <querystringparameter name="param_siteId" type="Object" />
+        <querystringparameter name="param_duration" type="SafeString" />
+        <querystringparameter name="param_targetentities" type="SafeString" />
+        <querystringparameter name="param_selectedresources" type="Object" />
+        <querystringparameter name="param_targetentitiescustomers" type="SafeString" />
+        <querystringparameter name="param_selectedcustomers" type="Object" />
+        <querystringparameter name="param_rootResourceSpecId" type="SafeString" />
+    </formparameters>
+    <header id="{37a97444-1ff3-4133-9104-01acbe99dc14}">
+        <rows>
+            <row>
+                <cell id="{8be4c5a0-3d12-445d-b713-32686dd958d9}" labelid="{4df4c305-8628-4305-a4a6-491d8bda437c}">
+                    <labels>
+                        <label description="Schedule Service Activity" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{e8dd9035-12f9-46f3-9275-7c192deed650}" name="ScheduleTab" locklevel="0" expanded="true" labelid="{7755473b-980a-4c2c-8a61-745a91e933a4}">
+            <labels>
+                <label description="Scheduling information tab" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="CustomersSection" id="6acae86f-b777-4d37-abc6-686115b0b648" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{3fdcccf8-a8cb-43cd-ba44-2c75d3ba4d86}">
+                            <labels>
+                                <label description="Customers section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{2eec0dee-f02c-40eb-aa7a-9465aef35ae4}" labelid="{919c235a-7591-454a-98b6-41032fe5e061}">
+                                        <labels>
+                                            <label description="Customers" languagecode="1033" />
+                                        </labels>
+                                        <control id="customer_ids" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{c65ef1a3-ebe5-4aa9-8501-51748a9d3121}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5844914e-02d2-4320-8aae-6ea2c97a5e9b}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="RequestedServiceActivitySection" id="e1f5a3ab-ce35-466b-af67-90fca388991c" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{cfd974ba-ccc4-4925-8d0f-2f9e9a0049fa}">
+                            <labels>
+                                <label description="Requested Service Activity" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{3ccbebbb-6d2f-405a-bc04-71559ee17ef7}" labelid="{ca80ae7e-b835-4974-b0b8-35c885a1f61e}">
+                                        <labels>
+                                            <label description="Service" languagecode="1033" />
+                                        </labels>
+                                        <control id="service_ids" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true" disabled="false">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{B3185104-1DB7-4b92-99C6-1E594523FF7C}</DefaultViewId>
+                                                        <EntityLogicalName>service</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{e448f3bf-7dc7-40a8-a52f-44d2e09c2180}" labelid="{2ba3bfe8-ada1-48d3-8615-b8dd5c7f8985}">
+                                        <labels>
+                                            <label description="Resources" languagecode="1033" />
+                                        </labels>
+                                        <control id="resource_ids" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{b4fcf696-0e7d-45a6-b760-4d8db587b1e2}">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{7738C997-2681-43BE-BFCF-DB1D159B5C5A}</DefaultViewId>
+                                                        <EntityLogicalName>resource</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{f3865d22-3141-4e46-819c-76574a989420}" labelid="{628baaf8-0a5d-42de-a2d3-296b46a19e6c}">
+                                        <labels>
+                                            <label description="Site" languagecode="1033" />
+                                        </labels>
+                                        <control id="site_ids" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="false" disabled="false">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{F5262CB2-3621-43f6-9410-F71527188DA7}</DefaultViewId>
+                                                        <EntityLogicalName>site</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{797720c0-43d4-42a9-a3f3-4da2bcbe0185}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selected_slot" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{473b54b2-b39b-4209-9f03-cbbbb8122f23}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="RequestedTimeSection" id="24c5f855-577c-4f8a-810c-a2fcdea5e29a" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{ef9a4723-3029-4af1-bd9d-46df4452be02}">
+                            <labels>
+                                <label description="Requested Time" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{d269d568-2a8a-45d3-82aa-a70a3ab75c32}" labelid="{e8bc4acb-39b4-49cf-a084-81e9334359a7}">
+                                        <labels>
+                                            <label description="Select Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="SelectDate" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <OptionSetId>{4D8DDDC7-1EB9-4BB2-869B-B11C9FA2C051}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{623941f9-2041-48a9-9b40-ce2f5c159871}" showlabel="true" labelid="{cdec59da-8eb9-4e3b-8147-3707a933b6a1}" locklevel="0">
+                                        <labels>
+                                            <label description="Days Of Week" languagecode="1033" />
+                                        </labels>
+                                        <control id="DayList" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" isunbound="true" isrequired="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ef315412-bb15-43cb-82ac-00a93bd95452}" showlabel="true" labelid="{43a8f10c-0e16-4606-a80c-625fb22be72d}" locklevel="0">
+                                        <labels>
+                                            <label description="Specific Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="specificdate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" disabled="false" uniqueid="{3c97b2a1-2754-4a82-95c5-41116801b38d}">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{61ccdd67-2228-4bce-8cdf-67688fce7af9}" showlabel="true" labelid="{e7093a2f-c7b9-4883-a935-8d9ed4b95c10}" locklevel="0">
+                                        <labels>
+                                            <label description="Start Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="datewindowstart" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" disabled="false" uniqueid="{fb003143-3a8f-4656-8e36-e011ad5eaa3f}">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{535b48e5-e229-4782-8cf6-6fdd112e0d4e}" showlabel="true" labelid="{d9139bef-3a63-4b78-b40d-c1d0b4b960a8}" locklevel="0">
+                                        <labels>
+                                            <label description="End Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="datewindowend" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" disabled="false" uniqueid="{43ca304f-4753-4775-80ad-471ce19af02c}">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{70b58b42-9dff-459c-a260-bb11e4682916}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{e6001ce7-a87b-4bcd-8ca2-5dee21498e12}" labelid="{640726df-c627-4b5e-b749-6f132063b5d1}">
+                                        <labels>
+                                            <label description="Select Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="SelectTime" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <OptionSetId>{AAF7A157-D55E-4D1D-95EB-8A256D0F7874}</OptionSetId>
+                                                <DefaultValue>3</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{76689ed0-e598-4adf-a28b-ac027034f73f}" showlabel="true" labelid="{511b2100-1efc-4046-8eec-a8e90f4c5123}" locklevel="0">
+                                        <labels>
+                                            <label description="Specific Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="specifictime" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{3079BA06-32B0-42CE-B50D-84EC72491E66}">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5191fe2a-3a00-4bdc-bad9-43bdc128edfd}" showlabel="true" labelid="{3367823c-17e5-4b56-b146-449380bce2a6}" locklevel="0">
+                                        <labels>
+                                            <label description="Start Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="timewindowstart" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{cc23f6f2-8500-4d66-92ed-1bd3294a4521}">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{64c4a224-7778-4eb5-bc60-08925e541083}" showlabel="true" labelid="{19515fdf-b601-437e-a9ac-11147ba2b592}" locklevel="0">
+                                        <labels>
+                                            <label description="End Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="timewindowend" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{1deccdbf-dc05-4388-8208-001ab9c908ac}">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6751a3cd-5f55-43b3-9738-f95cf847102d}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{6d397e22-830e-4369-90fe-8f16a9b38ce3}">
+                                        <labels>
+                                            <label description="Use Default Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="UseDefaultDuration" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{3a373326-3b87-441b-a178-b0acb7754f60}">
+                                            <parameters>
+                                                <OptionSetId>{CB30A9F4-0332-E611-80D5-00155DCF0C03}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{e91107fa-42e4-42b0-960d-de240c4f62cc}" labelid="{e29a4bc8-b88b-4de1-a55a-f3108b7d1de3}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="Duration_1" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{8f7fbd6f-537a-4032-bc69-b041485e58a6}">
+                <rows>
+                    <row>
+                        <cell id="{f427f22c-4a34-440f-a7d1-25bd7d62786e}" labelid="{c9c9850c-41ed-4c1c-aaf6-1e54ae6b2d27}">
+                            <labels>
+                                <label description="Find Available Times" languagecode="1033" />
+                            </labels>
+                            <control id="find_available_times_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{e8d42136-dcf1-479e-b393-235a318bd797}" labelid="{461a7d79-3e5c-4256-a740-8c7d4368b70f}" visible="false">
+                            <labels>
+                                <label description="Select Resources" languagecode="1033" />
+                            </labels>
+                            <control id="form_assistant_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{9669c247-4dd7-49f5-bbf0-78265acdde9d}" labelid="{ffc5eb38-aa4c-435f-9800-1dfb1cb7dd80}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{e8dd9035-12f9-46f3-9275-7c192deed651}" name="AvailableTimesTab" locklevel="0" expanded="true" labelid="{7755473b-980a-4c2c-8a61-745a91e933a5}">
+            <labels>
+                <label description="Available times tab" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="AvailableTimesSection" id="b7cf92ef-6d06-465c-8a74-56eaf0880892" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Available Times Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{def2bb37-c388-429d-a42a-0be6690b685c}" labelid="{d4a0362c-1d93-43e9-848f-49c886227024}">
+                                        <labels>
+                                            <label description="Service" languagecode="1033" />
+                                        </labels>
+                                        <control id="service_ids_read_only" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="false" disabled="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{B3185104-1DB7-4b92-99C6-1E594523FF7C}</DefaultViewId>
+                                                        <EntityLogicalName>service</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{acb2559b-a038-4057-8642-87a834ee5bda}" labelid="{e6131559-05df-4245-9087-13edbc45e67f}">
+                                        <labels>
+                                            <label description="Site" languagecode="1033" />
+                                        </labels>
+                                        <control id="site_ids_read_only" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="false" disabled="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{F5262CB2-3621-43f6-9410-F71527188DA7}</DefaultViewId>
+                                                        <EntityLogicalName>site</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="AvailableTimesGridSection" id="60cf6cc7-94ef-489c-ac2c-d8579b01ffdf" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Available times grid section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c4cd9d1d-5d4e-413e-a60f-7a62c1877973}" showlabel="false" colspan="1" auto="false" rowspan="12">
+                                        <labels>
+                                            <label description="Available Times" languagecode="1033" />
+                                        </labels>
+                                        <control id="findSlotGridControl_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{c0fafc4e-a497-4b3b-ba66-6e5e90715c31}">
+                                            <parameters>
+                                                <ViewId>{27c67ac4-f3c1-414f-bdb1-ba047736442f}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName />
+                                                <TargetEntityType>availabletimes</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>10</RecordsPerPage>
+                                                <ReferencePanelSubgridIconUrl>/_imgs/ico_16_9947.png</ReferencePanelSubgridIconUrl>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{8f7fbd6f-537a-4032-bc69-b041485e58a7}">
+                <rows>
+                    <row>
+                        <cell id="{45eeb5ac-74af-4a18-8c84-e43e0890af37}" showlabel="true" locklevel="0">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="back_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" isrequired="false" />
+                        </cell>
+                        <cell id="{E5EBEB27-E6C1-4AA3-BE0F-D8CACB186EE3}" labelid="{6cf15a82-eb88-480e-a248-b7f7adbdf1ab}">
+                            <labels>
+                                <label description="Schedule" languagecode="1033" />
+                            </labels>
+                            <control id="schedule_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{f427f22c-4a34-440f-a7d1-25bd7d62786f}" labelid="{c9c9850c-41ed-4c1c-aaf6-1e54ae6b2d28}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancel_id2" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab id="{f18181b0-320b-4d85-9c61-9efe09ad4872}" name="FormAssistantTab" locklevel="0" expanded="true" labelid="{699cd462-ded3-476f-a22a-3d80a87fbe6d}">
+            <labels>
+                <label description="Form Assistant tab" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="FormAssistantSelectedResourcesSection" id="6d8f8701-d466-41de-ba33-1070067ae9be" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Form Assistant" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{c5743829-8101-4256-b0b4-0da93b19ce0b}" labelid="{c6d75715-a826-4425-920d-ef6152182cd0}">
+                                        <labels>
+                                            <label description="Service" languagecode="1033" />
+                                        </labels>
+                                        <control id="form_assistant_service_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="false" disabled="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{B3185104-1DB7-4b92-99C6-1E594523FF7C}</DefaultViewId>
+                                                        <EntityLogicalName>service</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{1b0995bd-855c-40e7-bd1a-184e20c0ddbd}" labelid="{d6bddeec-9e4e-4f92-a475-9c2cf9ad55cf}">
+                                        <labels>
+                                            <label description="Resources" languagecode="1033" />
+                                        </labels>
+                                        <control id="form_assistant_selected_resources_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{683474fe-eaf8-42bd-8875-7fc0f176f8e7}">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{7738C997-2681-43BE-BFCF-DB1D159B5C5A}</DefaultViewId>
+                                                        <EntityLogicalName>resource</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="FormAssistantControlSection" id="166224a8-28de-4f6c-8f45-c8b60c61d4b9" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Select Resources" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{30c8674c-f767-4955-9955-9d08705257f4}" showlabel="false" colspan="1" auto="false" rowspan="12">
+                                        <labels>
+                                            <label description="Select Resources" languagecode="1033" />
+                                        </labels>
+                                        <control id="tree_control_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{d9a3ac26-7533-4755-a690-9dffa7e746ba}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{c645865b-6a5c-46b4-b30a-16fb2ce52273}">
+                <rows>
+                    <row>
+                        <cell id="{51d7488f-db0c-42ad-a55d-4bb292476f98}" showlabel="true" locklevel="0" labelid="{035041d1-4959-48b1-b3f3-d5dfa74634bd}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="back_from_form_assistant_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" isrequired="false" />
+                        </cell>
+                        <cell id="{045d2532-2a8a-4272-831b-61fc6fee65c8}" labelid="{380f8e3b-9a38-486d-8ec5-c828326098d2}">
+                            <labels>
+                                <label description="Find Available Times" languagecode="1033" />
+                            </labels>
+                            <control id="find_available_times_form_assistant_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{fc561f08-8be1-47be-8493-0d9598559419}" labelid="{dc3fd343-3503-435c-8094-14b4d8e13e72}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancel_form_assistant_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <Handlers>
+                <Handler functionName="Mscrm.ScheduleDialog_onload" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="{462cc439-bf2a-47f4-8ec1-5a9ed8837a68}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="form_assistant_id">
+            <Handlers>
+                <Handler functionName="Mscrm.Navigate_to_formAssistant" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="ca17b3de-db4d-4e47-b33f-b316b9e6ed5d" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="find_available_times_id">
+            <Handlers>
+                <Handler functionName="Mscrm.Navigate_to_findAvailableTimes" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="d46baef0-0b3e-47c1-8bf5-5d26236e6310" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.Close_dialog" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="d46baef0-0b3e-47c1-8bf5-5d26236e6311" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="back_id">
+            <Handlers>
+                <Handler functionName="Mscrm.Navigate_back" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="e8fdad9b-ea08-41f3-a74d-07dd34e34b2e" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="find_available_times_form_assistant_id">
+            <Handlers>
+                <Handler functionName="Mscrm.Navigate_to_findAvailableTimes_FormAssistant" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="c396ff76-6cf0-427c-8398-d7a3b5206d1f" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="back_from_form_assistant_id">
+            <Handlers>
+                <Handler functionName="Mscrm.Navigate_back_FormAssistant" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="61549815-6265-4cdb-9a25-6f800e3cf199" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_form_assistant_id">
+            <Handlers>
+                <Handler functionName="Mscrm.Close_dialog" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="9a763bc9-1e2c-44f2-8438-9d0e611c0d86" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id2">
+            <Handlers>
+                <Handler functionName="Mscrm.Close_dialog" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="148cf7c3-1d46-4d0e-9a58-035875a3d351" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="SelectDate">
+            <Handlers>
+                <Handler functionName="Mscrm.OnDateRangeChangeHandler" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="6c2dc823-31b1-434e-987f-ee2d6830802d" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="SelectTime">
+            <Handlers>
+                <Handler functionName="Mscrm.OnTimeRangeChangeHandler" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="f99c63d1-59c5-4af9-8db9-8ab5d1762f60" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="service_ids">
+            <Handlers>
+                <Handler functionName="Mscrm.OnServiceChangeDialogHandler" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="20361b42-098b-474d-985c-00e1fd54ee9d" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="Duration_1">
+            <Handlers>
+                <Handler functionName="Mscrm.OnDurationChangeDialogHandler" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="ea18003f-b633-4132-a849-598d99251b95" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="UseDefaultDuration">
+            <Handlers>
+                <Handler functionName="Mscrm.OnUseDefaultDurationChangeHandler" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="5c78b644-2ffb-4c0f-8f4e-1f3961009eba" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="schedule_id">
+            <Handlers>
+                <Handler functionName="Mscrm.Record_submit" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="69bd5f81-555a-4da7-8e33-678de92f3720" enabled="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{c65ef1a3-ebe5-4aa9-8501-51748a9d3121}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_targetentitiescustomers</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedcustomers</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_targetentitiescustomers</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedcustomers</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_targetentitiescustomers</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedcustomers</selectedEntities>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{b4fcf696-0e7d-45a6-b760-4d8db587b1e2}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_targetentities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedresources</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_targetentities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedresources</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_targetentities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedresources</selectedEntities>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{683474fe-eaf8-42bd-8875-7fc0f176f8e7}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_targetentities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedresources</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_targetentities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedresources</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_targetentities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedresources</selectedEntities>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{d9a3ac26-7533-4755-a690-9dffa7e746ba}">
+            <customControl name="MscrmControls.ServiceConfigControl.ServiceConfigTree" formFactor="0">
+                <parameters>
+                    <treeObject type="SingleLine.Text">param_rootResourceSpecId</treeObject>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ServiceConfigControl.ServiceConfigTree" formFactor="1">
+                <parameters>
+                    <treeObject type="SingleLine.Text">param_rootResourceSpecId</treeObject>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ServiceConfigControl.ServiceConfigTree" formFactor="2">
+                <parameters>
+                    <treeObject type="SingleLine.Text">param_rootResourceSpecId</treeObject>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{3c97b2a1-2754-4a82-95c5-41116801b38d}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.DateTimeControl">
+                <parameters>
+                    <value type="DateAndTime.DateOnly">specificdate</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.DateTimeControl">
+                <parameters>
+                    <value type="DateAndTime.DateOnly">specificdate</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.DateTimeControl">
+                <parameters>
+                    <value type="DateAndTime.DateOnly">specificdate</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{fb003143-3a8f-4656-8e36-e011ad5eaa3f}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.DateTimeControl">
+                <parameters>
+                    <value type="DateAndTime.DateOnly">datewindowstart</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.DateTimeControl">
+                <parameters>
+                    <value type="DateAndTime.DateOnly">datewindowstart</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.DateTimeControl">
+                <parameters>
+                    <value type="DateAndTime.DateOnly">datewindowstart</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{43ca304f-4753-4775-80ad-471ce19af02c}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.DateTimeControl">
+                <parameters>
+                    <value type="DateAndTime.DateOnly">datewindowend</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.DateTimeControl">
+                <parameters>
+                    <value type="DateAndTime.DateOnly">datewindowend</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.DateTimeControl">
+                <parameters>
+                    <value type="DateAndTime.DateOnly">datewindowend</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{3a373326-3b87-441b-a178-b0acb7754f60}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">UseDefaultDuration</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">UseDefaultDuration</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">UseDefaultDuration</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{c0fafc4e-a497-4b3b-ba66-6e5e90715c31}">
+            <customControl formFactor="0" name="MscrmControls.FindSlots.FindSlotGridControl">
+                <parameters>
+                    <data-set name="SubGrid">
+                        <ViewId>{27c67ac4-f3c1-414f-bdb1-ba047736442f}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>availabletimes</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FindSlots.FindSlotGridControl">
+                <parameters>
+                    <data-set name="SubGrid">
+                        <ViewId>{27c67ac4-f3c1-414f-bdb1-ba047736442f}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>availabletimes</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FindSlots.FindSlotGridControl">
+                <parameters>
+                    <data-set name="SubGrid">
+                        <ViewId>{27c67ac4-f3c1-414f-bdb1-ba047736442f}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>availabletimes</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{3079BA06-32B0-42CE-B50D-84EC72491E66}">
+            <customControl formFactor="0" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time type="DateAndTime.DateAndTime">specifictime</time>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time type="DateAndTime.DateAndTime">specifictime</time>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time type="DateAndTime.DateAndTime">specifictime</time>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{cc23f6f2-8500-4d66-92ed-1bd3294a4521}">
+            <customControl formFactor="0" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time type="DateAndTime.DateAndTime">timewindowstart</time>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time type="DateAndTime.DateAndTime">timewindowstart</time>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time type="DateAndTime.DateAndTime">timewindowstart</time>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{1deccdbf-dc05-4388-8208-001ab9c908ac}">
+            <customControl formFactor="0" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time type="DateAndTime.DateAndTime">timewindowend</time>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time type="DateAndTime.DateAndTime">timewindowend</time>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time type="DateAndTime.DateAndTime">timewindowend</time>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>
