@@ -8,7 +8,7 @@ If you are a Microsoft Dataverse developer, especially when working on model-dri
 **1.** Can I build a custom dialog like that?
 > Yes.
 
-**2.** But I don't see any document that Microsoft refers to regarding this?
+**2.** But I don't see any documents that Microsoft refers to regarding this?
 > Yes, there are no documents.
 
 **3.** I understand that if there are no documents from Microsoft, and you can achieve this in the model-driven app, it means you are writing ```unsupported code```?
@@ -32,7 +32,7 @@ formContext.ui.moveTo(...)
 > Yes, [Here](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-navigation), and [here](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/formcontext-ui). And you ```don't``` see ```2``` functions I mention above. Mean ```unsupported code```.
 
 **8.** What are the benefits of using ```Dataverse Dialog Builder```?
-> 1. If you ignore the ```2``` functions I mentioned above, all your knowledge of JavaScript and WebApi remains the same as what you're already familiar with. For example, you have an ```OnLoad``` event on form, then you can access ```formContext```. Then, you can use ```getAttribute``` to get or set values, manipulate controls with ```getControl``` to hide or show them, ```addPreSearch``` logic to filter lookup, or ```addOnChange``` logic, or trigger ```fireOnChange```, ... In essence, ```dialog``` are similar to the ```main``` form you've known before.
+> 1. If you ignore the ```2``` functions I mentioned above, all your knowledge of ```JavaScript``` and ```WebApi``` remains the same as what you're already familiar with. For example, you have an ```OnLoad``` event on form, then you can access ```formContext```. Then, you can use ```getAttribute``` to get or set values, manipulate controls with ```getControl``` to hide or show them, ```addPreSearch``` logic to filter lookup, or ```addOnChange``` logic, or trigger ```fireOnChange```, ... In essence, ```dialog``` are similar to the ```main``` form you've known before.
 > 2. Once you've built a dialog using ```Dataverse Dialog Builder```, you can use it across various platforms, including ```Web```, ```Mobile Web```, ```Mobile App```, ```App for Outlook```, ```UDS```, ```Omnichannel```, ...
 
 **9.** Show me some dialogs you've built?
@@ -47,11 +47,11 @@ formContext.ui.moveTo(...)
 
 **12.** How you do that?
 >1. If you are a Microsoft Dataverse developer, you are likely familiar with some form types: ```Main```, ```Quick Create```, ```Card```, and more. But did you know that there is another form type called ```Dialog``` (```OptionSet value = 8```)? You can build a ```FetchXml``` query with the filter value ```8``` for the attribute ```type``` in the ```systemform``` entity in your current environment to retrieve all your dialogs.
->2. Navigate to the ```\DataverseDialogBuilder.Others\xml``` folder, where you'll find ```324``` dialog files that I obtained from ```first-party``` Microsoft apps. I believe these files will continue to grow in the future as more ```first-party``` apps are developed by Microsoft.
-> 3. Now, take a look at one file. Your task is to manually build the ```FormXml``` and then save it back to the ```systemform``` entity. That's why the ```Dataverse Dialog Builder``` solution helps you build ```FormXml``` and seamlessly save it back to the ```systemform``` entity.
+>2. Navigate to the ```\DataverseDialogBuilder.Others\xml``` folder, where you'll find ```324``` dialog files that I obtained from Microsoft ```first-party  apps```. I believe these files will continue to grow in the future as more ```first-party apps``` are developed by Microsoft.
+> 3. Consider a scenario where you need to examine a single file. Your task involves manually constructing the ```FormXml``` and subsequently saving it to the ```systemform``` entity. This manual process can be challenging. However, the ```Dataverse Dialog Builder``` solution simplifies this by assisting you in building ```FormXml``` and seamlessly saving it back to the ```systemform``` entity.
 
 **13.** Try, Errors, Results -> Try, Errors, Results -> ...
->Yes, I looked at each file one by one, analyzed them, manually built ```FormXml```, tried updating the ```systemform``` entity to see the errors or results, and continued in a loop. It was hard work that I did in my free time, and it took me many days, months, years. After that, I derived some conventions from ```FormXml```, which I then used to build ```Dataverse Dialog Builder```.
+>Yes, I meticulously examined each file, analyzed them one by one, manually constructed ```FormXml```, and experimented with updating the ```systemform``` entity to observe errors and results. This process was labor-intensive, spanning many days, months, and even years. Subsequently, I extracted conventions from the ```FormXml```, which I later leveraged to create ```Dataverse Dialog Builder```.
 
 # Links
 The following links are from a Google search. The first post dates back to 2018, which is six years ago. Surprisingly, the dialog is still functional, and nothing has changed with the ```2``` functions I mentioned earlier. This suggests that the remains ```unsupported code``` but still works.
@@ -86,4 +86,4 @@ The following links are from a Google search. The first post dates back to 2018,
 >Noted: solution ```DataverseDialogBuilder.sln``` used [DynamicsCrm.DevKit](https://github.com/phuocle/Dynamics-Crm-DevKit) that built by [me](https://github.com/phuocle) too.
 
 # Conclusion
-```Unsupported code```! However, I believe that in the future, this will become ```supported code```. Why? Well, in ```Question 12, Answer 2```, I showed you ```324``` dialog files (and perhaps there will be even more in the future) that I obtained from Microsoft ```first-party apps```. If Microsoft modifies the two functions I mentioned earlier, we can debug and adapt them, just like they do with their ```first-party apps```. I don’t think Microsoft would deprecate dialogs and then need to rebuild them across all their ```first-party apps```.
+```Unsupported code```! However, I believe that in the future, this will become ```supported code```. Why? Well, in ```Question 12, Answer 2```, I showed you ```324``` dialog files (and perhaps there will be even more in the future) that I obtained from Microsoft ```first-party apps```. If Microsoft modifies the ```2``` functions I mentioned earlier, we can debug and adapt them, just like they do with their ```first-party apps```. I don’t think Microsoft would deprecate dialogs and then need to rebuild them across all their ```first-party apps```.
