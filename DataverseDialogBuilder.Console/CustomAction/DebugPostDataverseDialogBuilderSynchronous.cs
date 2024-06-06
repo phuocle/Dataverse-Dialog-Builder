@@ -5,21 +5,6 @@ namespace DataverseDialogBuilder.Console.CustomAction
 {
     internal class DebugPostDataverseDialogBuilderSynchronous
     {
-        internal static void GetLanguages()
-        {
-            var input = new
-            {
-                invoiceIds = "38297d38-e272-ee11-8179-000d3aa2eef7",
-                isValidation = false
-            };
-            var context = Helper.GetCustomActionExecutionContext;
-            context.InputParameters["f"] = "GetLanguages";
-            context.InputParameters["input"] = SimpleJson.SerializeObject(input);
-            var serviceProvider = Helper.GetServiceProvider(context, AppSettings.Service);
-            var plugin = new DataverseDialogBuilder.CustomAction.PostDataverseDialogBuilderSynchronous();
-            plugin.Execute(serviceProvider);
-        }
-
         internal static void GetObjectTypeCode()
         {
             var input = new

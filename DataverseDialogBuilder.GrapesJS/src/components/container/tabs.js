@@ -31,7 +31,7 @@ export default (editor, options) => {
                 init() {
                 },
                 toFormXml() {
-                    let formXml = '';
+                    let formXml = ``;
                     this.components().map((comp) => {
                         if (!comp.is('HiddenComponent')) {
                             formXml += comp.toFormXml();

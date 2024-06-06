@@ -6,8 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import * as GUID from './guid';
 const helpers = {
     toString: (value) => {
-        if (value === undefined || value == null) return '';
-        if (value.trim && value.trim().length === 0) return '';
+        if (value === undefined || value == null) return ``;
+        if (value.trim && value.trim().length === 0) return ``;
         return value;
     },
     toNumber: (value) => {
@@ -21,12 +21,12 @@ const helpers = {
         return value;
     },
     cleanGUID: (value) => {
-        if (value === undefined || value == null) return '';
-        return value.replace(/{/g, '').replace(/}/g, '');
+        if (value === undefined || value == null) return ``;
+        return value.replace(/{/g, ``).replace(/}/g, ``);
     },
     cleanGUIDWithDefaultNewGuid: (value) => {
         if (value === undefined || value == null) return uuidv4().toUpperCase();
-        return value.replace(/{/g, '').replace(/}/g, '').toUpperCase();
+        return value.replace(/{/g, ``).replace(/}/g, ``).toUpperCase();
     },
     isEmpty: (value) => {
         if (value === undefined || value === null) return true;
@@ -64,8 +64,8 @@ const helpers = {
         return false;
     },
     toGuid: (value) => {
-        if (value === undefined || value === null || value === 'undefined' || value === '{undefined}') return uuidv4().toLowerCase().replace(/{/g, '').replace(/}/g, '');
-        return value.replace(/{/g, '').replace(/}/g, '');
+        if (value === undefined || value === null || value === 'undefined' || value === '{undefined}') return uuidv4().toLowerCase().replace(/{/g, ``).replace(/}/g, ``);
+        return value.replace(/{/g, ``).replace(/}/g, ``);
     },
     msg: (editor, message, callback) => {
         try {
@@ -107,7 +107,7 @@ const helpers = {
         return /^[a-zA-Z_][a-zA-Z0-9_.]+$/.test(value);
     },
     UndefinedToEmpty: (value) => {
-        if (value === undefined) return '';
+        if (value === undefined) return ``;
         return value;
     },
     getLanguageCode: (editor) => {
@@ -144,12 +144,12 @@ const helpers = {
         });
     },
     ShowHideLogicalName(editor, logicalname) {
-        if (logicalname === undefined) return '';
+        if (logicalname === undefined) return ``;
         logicalname = logicalname.toLowerCase();
         if (editor.Panels.getButton('options', 'button_logicalname').active === true) {
             return `<span class='LogicalName'>${logicalname}</span>`;
         }
-        return '';
+        return ``;
     },
     GetFormXml(editor){
         const metadata = editor.getComponents().filter(c => c.attributes.type === 'MetadataComponent')[0];
@@ -249,7 +249,7 @@ const helpers = {
 <parameters>
     <configUrl static="true" type="SingleLine.URL">${attr.lib}</configUrl>
 </parameters>`;
-                controlDescription += getControlDescription(attr.uniqueid, `${ControlName.MscrmControls_RichTextEditor_RichTextEditorControl}`, `${this.isEmpty(attr.lib) ? '' : parameters}`);
+                controlDescription += getControlDescription(attr.uniqueid, `${ControlName.MscrmControls_RichTextEditor_RichTextEditorControl}`, `${this.isEmpty(attr.lib) ? `` : parameters}`);
             });
             editor.getWrapper().find('.DDBControlEntityOptionSet').map((comp) => {
                 const attr = comp.getAttributes();
@@ -319,7 +319,7 @@ const helpers = {
             }
             return ``;
         }
-        const dialog = `<form>${getParameters()}${getEvents()}${getJavaScripts()}${header.toFormXml()}${tabs.toFormXml()}${footer?.toFormXml() ?? ''}${getControlDescriptions()}</form>`;
+        const dialog = `<form>${getParameters()}${getEvents()}${getJavaScripts()}${header.toFormXml()}${tabs.toFormXml()}${footer?.toFormXml() ?? ``}${getControlDescriptions()}</form>`;
         return xmlFormat.minify(dialog);
     }
 

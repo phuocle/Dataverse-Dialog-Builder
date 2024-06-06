@@ -120,8 +120,8 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_attachment_file_name) || Helper.isEmpty(attr.para_uploaded_file_size) ? 'BackgroundRed' : '';
-                    const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_attachment_file_name) || Helper.isEmpty(attr.para_uploaded_file_size) ? 'BackgroundRed' : ``;
+                    const visibleClass = attr.visible !== '1' ? 'Visibled' : ``;
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);

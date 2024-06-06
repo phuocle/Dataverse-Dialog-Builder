@@ -124,7 +124,7 @@ export default (editor, options) => {
 <row>
     <cell id='{${Helper.toGuidWithDefaultNewGuid(attr.id)}}' visible='${Helper.toTrueFalse(attr.visible)}' rowspan='${attr.rows}' auto='true'>
         <labels>
-            <label description='' languagecode='${Helper.getLanguageCode(editor)}' />
+            <label description=`` languagecode='${Helper.getLanguageCode(editor)}' />
         </labels>
         <control uniqueid='{${Helper.toGuidWithDefaultNewGuid(attr.uniqueid)}}' id='${attr.logicalname}' classid='${GUID.PLACE_HOLDER_CONTROL}' disabled='false' isunbound='true'>
             <parameters>
@@ -141,8 +141,8 @@ ${rowsAdded}
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_fetchxml) || Helper.isEmpty(attr.para_entitylogicalname) || Helper.isEmpty(attr.para_layout_xml) || Helper.isEmpty(attr.para_selected_records) ||Helper.isEmpty(attr.rows) ? 'BackgroundRed' : '';
-                    const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_fetchxml) || Helper.isEmpty(attr.para_entitylogicalname) || Helper.isEmpty(attr.para_layout_xml) || Helper.isEmpty(attr.para_selected_records) ||Helper.isEmpty(attr.rows) ? 'BackgroundRed' : ``;
+                    const visibleClass = attr.visible !== '1' ? 'Visibled' : ``;
                     const rowsClass = Helper.isEmpty(attr.rows) || Number(attr.rows) <= 10 ? `Row${attr.rows}` : 'Row10';
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {

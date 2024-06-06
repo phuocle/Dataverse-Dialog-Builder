@@ -8,7 +8,6 @@ namespace DataverseDialogBuilder.Console
         [STAThread]
         static void Main()
         {
-            //DebugPostDataverseDialogBuilderSynchronous.GetLanguages();
             //DebugPostDataverseDialogBuilderSynchronous.GetObjectTypeCode();
             //DebugPostDataverseDialogBuilderSynchronous.GetViewId();
             //DebugPostDataverseDialogBuilderSynchronous.GetViewName();

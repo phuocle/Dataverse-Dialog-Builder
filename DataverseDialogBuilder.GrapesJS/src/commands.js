@@ -1130,7 +1130,7 @@ export default (editor, opts = {}) => {
                 tab01.setAttributes({ ...tab01.getAttributes(), logicalname: 'pl_tab_label' });
                 const tab01_sections = tab01.findType("SectionsComponent")[0];
                 const tab01_section = tab01_sections.findType("SectionComponent")[0];
-                tab01_section.setAttributes({ ...tab01_section.getAttributes(), logicalname: 'pl_tab01_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab01_section.setAttributes({ ...tab01_section.getAttributes(), logicalname: 'pl_tab01_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const label1 = tab01_section.append(block_label)[0];
                 label1.setAttributes({ ...label1.getAttributes(), rows: '1', label: `Tab  1/${totalTabs}: LABEL`, visible: '1', logicalname: 'pl_label1' });
@@ -1192,7 +1192,7 @@ export default (editor, opts = {}) => {
                 tab02.setAttributes({ ...tab02.getAttributes(), logicalname: 'pl_tab_textbox' });
                 const tab02_sections = tab02.findType("SectionsComponent")[0];
                 const tab02_section = tab02_sections.findType("SectionComponent")[0];
-                tab02_section.setAttributes({ ...tab02_section.getAttributes(), logicalname: 'pl_tab02_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab02_section.setAttributes({ ...tab02_section.getAttributes(), logicalname: 'pl_tab02_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const textbox1 = tab02_section.append(block_textbox)[0];
                 textbox1.setAttributes({ ...textbox1.getAttributes(), logicalname: 'pl_textbox1', textboxtype: 'Text', label: 'Text', maxlength: 20, required: '1' });
@@ -1224,7 +1224,7 @@ export default (editor, opts = {}) => {
                 tab03.setAttributes({ ...tab03.getAttributes(), logicalname: 'pl_tab_textarea' });
                 const tab03_sections = tab03.findType("SectionsComponent")[0];
                 const tab03_section = tab03_sections.findType("SectionComponent")[0];
-                tab03_section.setAttributes({ ...tab03_section.getAttributes(), logicalname: 'pl_tab03_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab03_section.setAttributes({ ...tab03_section.getAttributes(), logicalname: 'pl_tab03_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const textarea1 = tab03_section.append(block_textarea)[0];
                 textarea1.setAttributes({ ...textarea1.getAttributes(), logicalname: 'pl_textarea1', label: 'Text Area', maxlength: 2000, rows: 5, required: '1' });
@@ -1248,7 +1248,7 @@ export default (editor, opts = {}) => {
                 tab04.setAttributes({ ...tab04.getAttributes(), logicalname: 'pl_tab_datetime' });
                 const tab04_sections = tab04.findType("SectionsComponent")[0];
                 const tab04_section = tab04_sections.findType("SectionComponent")[0];
-                tab04_section.setAttributes({ ...tab04_section.getAttributes(), logicalname: 'pl_tab04_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab04_section.setAttributes({ ...tab04_section.getAttributes(), logicalname: 'pl_tab04_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const datetime1 = tab04_section.append(block_datetime)[0];
                 datetime1.setAttributes({ ...datetime1.getAttributes(), logicalname: 'pl_datetime1', datetimetype: 'DateAndTime', label: 'Date Time', required: '1' });
@@ -1277,7 +1277,7 @@ export default (editor, opts = {}) => {
                 tab05.setAttributes({ ...tab05.getAttributes(), logicalname: 'pl_tab_number' });
                 const tab05_sections = tab05.findType("SectionsComponent")[0];
                 const tab05_section = tab05_sections.findType("SectionComponent")[0];
-                tab05_section.setAttributes({ ...tab05_section.getAttributes(), logicalname: 'pl_tab05_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab05_section.setAttributes({ ...tab05_section.getAttributes(), logicalname: 'pl_tab05_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const number1 = tab05_section.append(block_number)[0];
                 number1.setAttributes({ ...number1.getAttributes(), logicalname: 'pl_number1', numbertype: 'WholeNumber', label: 'Whole Number', required: '1', minvalue: 1, maxvalue: 100 });
@@ -1309,7 +1309,7 @@ export default (editor, opts = {}) => {
                 tab06.setAttributes({ ...tab06.getAttributes(), logicalname: 'pl_tab_lookup' });
                 const tab06_sections = tab06.findType("SectionsComponent")[0];
                 const tab06_section = tab06_sections.findType("SectionComponent")[0];
-                tab06_section.setAttributes({ ...tab06_section.getAttributes(), logicalname: 'pl_tab06_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab06_section.setAttributes({ ...tab06_section.getAttributes(), logicalname: 'pl_tab06_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const lookup1 = tab06_section.append(block_lookup)[0];
                 lookup1.setAttributes({ ...lookup1.getAttributes(), logicalname: 'pl_lookup1', label: 'Lookup', entitylogicalname01: 'account', viewid01: `${viewid_AccountLookupView},${viewid_ActiveAccounts}`, usemainformdialogforcreate: '1', usemainformdialogforedit: '1', required: '1' });
@@ -1338,7 +1338,7 @@ export default (editor, opts = {}) => {
                 tab07.setAttributes({ ...tab07.getAttributes(), logicalname: 'pl_tab_regarding' });
                 const tab07_sections = tab07.findType("SectionsComponent")[0];
                 const tab07_section = tab07_sections.findType("SectionComponent")[0];
-                tab07_section.setAttributes({ ...tab07_section.getAttributes(), logicalname: 'pl_tab07_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab07_section.setAttributes({ ...tab07_section.getAttributes(), logicalname: 'pl_tab07_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const regarding1 = tab07_section.append(block_regarding)[0];
                 regarding1.setAttributes({ ...regarding1.getAttributes(), logicalname: 'pl_regarding1', label: 'Regarding', required: '1' });
@@ -1363,10 +1363,10 @@ export default (editor, opts = {}) => {
                 tab08.setAttributes({ ...tab08.getAttributes(), logicalname: 'pl_tab_iframe' });
                 const tab08_sections = tab08.findType("SectionsComponent")[0];
                 const tab08_section = tab08_sections.findType("SectionComponent")[0];
-                tab08_section.setAttributes({ ...tab08_section.getAttributes(), logicalname: 'pl_tab08_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab08_section.setAttributes({ ...tab08_section.getAttributes(), logicalname: 'pl_tab08_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const iframe1 = tab08_section.append(block_iframe)[0];
-                iframe1.setAttributes({ ...iframe1.getAttributes(), logicalname: 'pl_iframe1', label: '', url: 'pl_/html/WebResource.html', rows: 5 });
+                iframe1.setAttributes({ ...iframe1.getAttributes(), logicalname: 'pl_iframe1', label: ``, url: 'pl_/html/WebResource.html', rows: 5 });
                 const hide = tab08_section.append(block_iframe)[0];
                 hide.setAttributes({ ...hide.getAttributes(), logicalname: 'pl_iframe_hide', label: 'HIDE', visible: `0`, rows: 3, url: 'pl_/html/WebResource.html' });
 
@@ -1386,7 +1386,7 @@ export default (editor, opts = {}) => {
                 tab09.setAttributes({ ...tab09.getAttributes(), logicalname: 'pl_tab_dropdown' });
                 const tab09_sections = tab09.findType("SectionsComponent")[0];
                 const tab09_section = tab09_sections.findType("SectionComponent")[0];
-                tab09_section.setAttributes({ ...tab09_section.getAttributes(), logicalname: 'pl_tab09_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab09_section.setAttributes({ ...tab09_section.getAttributes(), logicalname: 'pl_tab09_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const dropdown1 = tab09_section.append(block_dropdown)[0];
                 dropdown1.setAttributes({ ...dropdown1.getAttributes(), logicalname: 'pl_dropdown1', label: 'Language', dropdowntype: 'Language', required: '1' });
@@ -1414,7 +1414,7 @@ export default (editor, opts = {}) => {
                 tab10.setAttributes({ ...tab10.getAttributes(), logicalname: 'pl_tab_optionset' });
                 const tab10_sections = tab10.findType("SectionsComponent")[0];
                 const tab10_section = tab10_sections.findType("SectionComponent")[0];
-                tab10_section.setAttributes({ ...tab10_section.getAttributes(), logicalname: 'pl_tab10_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab10_section.setAttributes({ ...tab10_section.getAttributes(), logicalname: 'pl_tab10_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const optionset1 = tab10_section.append(block_optionset)[0];
                 optionset1.setAttributes({ ...optionset1.getAttributes(), logicalname: 'pl_optionset1', optionsettype: 'OptionSet', label: 'OptionSet Dynamic', dynamic: '1', required: '1' });
@@ -1450,7 +1450,7 @@ export default (editor, opts = {}) => {
                 tab11.setAttributes({ ...tab11.getAttributes(), logicalname: 'pl_tab_twooptions' });
                 const tab11_sections = tab11.findType("SectionsComponent")[0];
                 const tab11_section = tab11_sections.findType("SectionComponent")[0];
-                tab11_section.setAttributes({ ...tab11_section.getAttributes(), logicalname: 'pl_tab11_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab11_section.setAttributes({ ...tab11_section.getAttributes(), logicalname: 'pl_tab11_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const twooptions1 = tab11_section.append(block_twooptions)[0];
                 twooptions1.setAttributes({ ...twooptions1.getAttributes(), logicalname: 'pl_twooptions1', label: 'TwoOptions Dropdown', twooptionstype: 'Dropdown', entitylogicalname01: 'contact', optionsetname: 'contact_donotemail', required: '1', default: `0` });
@@ -1479,7 +1479,7 @@ export default (editor, opts = {}) => {
                 tab12.setAttributes({ ...tab12.getAttributes(), logicalname: 'pl_tab_subgrid' });
                 const tab12_sections = tab12.findType("SectionsComponent")[0];
                 const tab12_section = tab12_sections.findType("SectionComponent")[0];
-                tab12_section.setAttributes({ ...tab12_section.getAttributes(), logicalname: 'pl_tab12_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab12_section.setAttributes({ ...tab12_section.getAttributes(), logicalname: 'pl_tab12_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const subgrid1 = tab12_section.append(block_subgrid)[0];
                 subgrid1.setAttributes({ ...subgrid1.getAttributes(), logicalname: 'pl_subgrid1', label: 'Accounts', entitylogicalname: 'account', viewids: `${viewid_AccountLookupView},${viewid_ActiveAccounts}`, visible: '1', contextual: '1', quickfind: '1', viewpicker: '1' });
@@ -1503,7 +1503,7 @@ export default (editor, opts = {}) => {
                 tab13.setAttributes({ ...tab13.getAttributes(), logicalname: 'pl_tab_chart' });
                 const tab13_sections = tab13.findType("SectionsComponent")[0];
                 const tab13_section = tab13_sections.findType("SectionComponent")[0];
-                tab13_section.setAttributes({ ...tab13_section.getAttributes(), logicalname: 'pl_tab13_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab13_section.setAttributes({ ...tab13_section.getAttributes(), logicalname: 'pl_tab13_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const chart1 = tab13_section.append(block_chart)[0];
                 chart1.setAttributes({ ...chart1.getAttributes(), logicalname: 'pl_chart1', label: 'Chart', entitylogicalname: 'account', viewids: `${viewid_AllAccounts},${viewid_ActiveAccounts}`, visible: '1', visualizationid: `${visualizationid_NewAccountsByMonth}`, chartpicker: '1', viewpicker: '1' });
@@ -1528,7 +1528,7 @@ export default (editor, opts = {}) => {
                 tab14.setAttributes({ ...tab14.getAttributes(), logicalname: 'pl_tab_rich_text_box' });
                 const tab15_sections = tab14.findType("SectionsComponent")[0];
                 const tab15_section = tab15_sections.findType("SectionComponent")[0];
-                tab15_section.setAttributes({ ...tab15_section.getAttributes(), logicalname: 'pl_tab14_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab15_section.setAttributes({ ...tab15_section.getAttributes(), logicalname: 'pl_tab14_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const rtb1 = tab15_section.append(block_rich_text_box)[0];
                 rtb1.setAttributes({ ...rtb1.getAttributes(), logicalname: 'pl_rtb1', visible: '1', lib: 'pl_/json/RTEGlobalConfiguration.json', rows: 5 });
@@ -1554,7 +1554,7 @@ export default (editor, opts = {}) => {
                 tab15.setAttributes({ ...tab15.getAttributes(), logicalname: 'pl_tab_entity_optionset' });
                 const tab15_sections = tab15.findType("SectionsComponent")[0];
                 const tab15_section = tab15_sections.findType("SectionComponent")[0];
-                tab15_section.setAttributes({ ...tab15_section.getAttributes(), logicalname: 'pl_tab15_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab15_section.setAttributes({ ...tab15_section.getAttributes(), logicalname: 'pl_tab15_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const entity_optionset1 = tab15_section.append(block_entity_optionset)[0];
                 entity_optionset1.setAttributes({ ...entity_optionset1.getAttributes(), logicalname: 'pl_entity_optionset1', label: 'Entity OptionSet', required: '1', para_entitylogicalname: para_entitylogicalname.getAttributes().logicalname });
@@ -1580,7 +1580,7 @@ export default (editor, opts = {}) => {
                 tab16.setAttributes({ ...tab16.getAttributes(), logicalname: 'pl_tab_advfind' });
                 const tab16_sections = tab16.findType("SectionsComponent")[0];
                 const tab16_section = tab16_sections.findType("SectionComponent")[0];
-                tab16_section.setAttributes({ ...tab16_section.getAttributes(), logicalname: 'pl_tab16_section', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab16_section.setAttributes({ ...tab16_section.getAttributes(), logicalname: 'pl_tab16_section', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const advfind1 = tab16_section.append(block_advfind)[0];
                 advfind1.setAttributes({ ...advfind1.getAttributes(), logicalname: 'pl_advfind1', visible: '1', para_fetchxml: para_fetchxml.getAttributes().logicalname, para_entitylogicalname: para_entitylogicalname.getAttributes().logicalname, para_validationerrormessage: para_validationerrormessage.getAttributes().logicalname, para_isvalid: para_isvalid.getAttributes().logicalname });
@@ -1806,7 +1806,7 @@ export default (editor, opts = {}) => {
                             pl_para_isvalid: true,
                             pl_para_layout_xml: "<grid name=\"resultset\" object=\"1\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"accountid\"><cell name=\"name\" width=\"300\" /><cell name=\"primarycontactid\" width=\"125\" /><cell name=\"telephone1\" width=\"125\" /></row></grid>",
                             pl_para_selected_records: ``,
-                            pl_para_entity_type: ''
+                            pl_para_entity_type: ``
                         };
                     }
                     Crm.getXrm().Navigation.openDialog(metadata.logicalname, options, parameters);

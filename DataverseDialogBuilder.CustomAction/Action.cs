@@ -472,7 +472,6 @@ namespace DataverseDialogBuilder.CustomAction
         {
             var input = SimpleJson.DeserializeObject<Input_GetForm>(json);
             var SystemFormApi = ReadSystemForm();
-
             var output = new
             {
                 ok = true,
@@ -509,10 +508,10 @@ namespace DataverseDialogBuilder.CustomAction
 
         private static int? GetLanguageCode(IOrganizationService serviceAdmin)
         {
-            var fetchXml = $@"<?xml version=""1.0"" encoding=""utf-16""?>
-<fetch>
-  <entity name=""organization"">
-    <attribute name=""languagecode"" />
+            var fetchXml = $@"
+<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
+  <entity name='organization'>
+    <attribute name='languagecode' />
   </entity>
 </fetch>";
             var rows = serviceAdmin.RetrieveMultiple<Organization>(fetchXml);
@@ -521,7 +520,6 @@ namespace DataverseDialogBuilder.CustomAction
 
         internal static string GetLanguageCode(IPluginExecutionContext context, IOrganizationService serviceAdmin, IOrganizationService service, ITracingService tracing, string json)
         {
-
             var output = new
             {
                 ok = true,

@@ -142,7 +142,7 @@ export default (editor, options) => {
 <row>
     <cell id='{${Helper.toGuidWithDefaultNewGuid(attr.id)}}' visible='${Helper.toTrueFalse(attr.visible)}' rowspan='${attr.rows}'>
         <labels>
-            <label description='' languagecode='${Helper.getLanguageCode(editor)}' />
+            <label description=`` languagecode='${Helper.getLanguageCode(editor)}' />
         </labels>
         <control uniqueid='{${Helper.toGuidWithDefaultNewGuid(attr.uniqueid)}}' id='${attr.logicalname}' classid='${GUID.PLACE_HOLDER_CONTROL}' isrequired='${Helper.toTrueFalse(attr.required)}' disabled='${Helper.toTrueFalse(attr.disabled)}' isunbound='true' />
     </cell>
@@ -154,11 +154,11 @@ ${rowsAdded}
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.rows) ? 'BackgroundRed' : '';
-                    const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.rows) ? 'BackgroundRed' : ``;
+                    const visibleClass = attr.visible !== '1' ? 'Visibled' : ``;
                     const rowsClass = Helper.isEmpty(attr.rows) || Number(attr.rows) <= 10 ? `Row${attr.rows}` : 'Row10';
-                    const requiredText = attr.required === '1' ? Const.Required : '';
-                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : '';
+                    const requiredText = attr.required === '1' ? Const.Required : ``;
+                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : ``;
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);

@@ -112,8 +112,8 @@ export default (editor, options) => {
                             optionsettype: 'OptionSet',
                             visible: '1',
                             disabled: '0',
-                            optionsetname: '',
-                            optionsetid: '',
+                            optionsetname: ``,
+                            optionsetid: ``,
                             dynamic: '0'
                         });
                     }

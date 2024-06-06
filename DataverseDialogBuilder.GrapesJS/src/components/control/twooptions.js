@@ -131,7 +131,7 @@ export default (editor, options) => {
                             twooptionstype: 'Checkbox',
                             visible: '1',
                             disabled: '0',
-                            twooptionsname: ''
+                            twooptionsname: ``
                         });
                     }
                     model.set('toolbar', [...model.get('toolbar'), { attributes: { class: Const.IconFindEvent }, command: Const.ToolbarFindEvent}]);

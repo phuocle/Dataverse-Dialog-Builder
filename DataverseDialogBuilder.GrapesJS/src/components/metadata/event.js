@@ -105,7 +105,7 @@ export default (editor, options) => {
                     model?.view?.render();
                 },
                 getForControl(model) {
-                    let value = '';
+                    let value = ``;
                     const attr = model.getAttributes();
                     if (attr.eventtype === 'onclick') {
                         editor
@@ -135,11 +135,11 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.lib) || Helper.isEmpty(attr.func) ? 'BackgroundRed' : '';
-                    const parametersText = !Helper.isEmpty(attr.parameters) ? `, ${attr.parameters}` : '';
-                    const contextText = Helper.isTrue(attr.context) ? `(executionContext${parametersText})` : `(${parametersText.length > 0 ? parametersText.substring(2) : ''})`;
+                    const errorClass = Helper.isEmpty(attr.lib) || Helper.isEmpty(attr.func) ? 'BackgroundRed' : ``;
+                    const parametersText = !Helper.isEmpty(attr.parameters) ? `, ${attr.parameters}` : ``;
+                    const contextText = Helper.isTrue(attr.context) ? `(executionContext${parametersText})` : `(${parametersText.length > 0 ? parametersText.substring(2) : ``})`;
                     model.setClass(`DDBEvent ${errorClass}`);
-                    el.innerHTML = `<span class='Bold'>Event ${attr.eventtype ?? ''}:</span> [${attr.lib ?? ''}] ${attr.func ?? ''} ${contextText}`;
+                    el.innerHTML = `<span class='Bold'>Event ${attr.eventtype ?? ``}:</span> [${attr.lib ?? ``}] ${attr.func ?? ``} ${contextText}`;
                 },
             },
         },

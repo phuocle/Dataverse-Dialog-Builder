@@ -112,7 +112,7 @@ export default (editor, options) => {
 <row>
     <cell id='{${Helper.toGuidWithDefaultNewGuid(attr.id)}}' visible='${Helper.toTrueFalse(attr.visible)}'>
         <labels>
-            <label description='' languagecode='${Helper.getLanguageCode(editor)}' />
+            <label description=`` languagecode='${Helper.getLanguageCode(editor)}' />
         </labels>
         <control uniqueid='{${Helper.toGuidWithDefaultNewGuid(attr.uniqueid)}}' id='${attr.logicalname}' classid='${GUID.PLACE_HOLDER_CONTROL}' disabled='false' isunbound='true'>
             <parameters>
@@ -128,8 +128,8 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_fetchxml) || Helper.isEmpty(attr.para_entitylogicalname) || Helper.isEmpty(attr.para_validationerrormessage) || Helper.isEmpty(attr.para_isvalid) ? 'BackgroundRed' : '';
-                    const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_fetchxml) || Helper.isEmpty(attr.para_entitylogicalname) || Helper.isEmpty(attr.para_validationerrormessage) || Helper.isEmpty(attr.para_isvalid) ? 'BackgroundRed' : ``;
+                    const visibleClass = attr.visible !== '1' ? 'Visibled' : ``;
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);

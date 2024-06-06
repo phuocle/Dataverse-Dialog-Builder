@@ -91,7 +91,7 @@ export default (editor, options) => {
                     return `
 <tab id='{${Helper.toGuidWithDefaultNewGuid(attr.id)}}' name='${attr.logicalname}' visible='${Helper.toTrueFalse(attr.visible)}' expanded='true' verticallayout='true' locklevel='0' >
     <labels>
-        <label description='' languagecode='${Helper.getLanguageCode(editor)}' />
+        <label description=`` languagecode='${Helper.getLanguageCode(editor)}' />
     </labels>
     ${tabheader}
     ${sections}
@@ -103,8 +103,8 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const visibleClass = attr.visible !== '1' ? ' Visibled' : '';
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) ? 'BackgroundRed' : '';
+                    const visibleClass = attr.visible !== '1' ? ' Visibled' : ``;
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) ? 'BackgroundRed' : ``;
                     model.setClass(`DDBTab ${errorClass}${visibleClass}`);
                     for (let i = 0; i < el.children.length; i++) {
                         if (el.children[i].tagName === 'LEGEND') {

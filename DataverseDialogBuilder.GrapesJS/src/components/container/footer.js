@@ -52,7 +52,7 @@ export default (editor, options) => {
                 toFormXml() {
                     const model = this;
                     const attr = model.getAttributes();
-                    let formXml = '';
+                    let formXml = ``;
                     model.components().map((comp) => {
                         if (!comp.is('HiddenComponent')) {
                             formXml += comp.toFormXml();

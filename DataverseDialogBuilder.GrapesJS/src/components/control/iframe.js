@@ -169,10 +169,10 @@ ${rowsAdded}
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.rows) || Helper.isEmpty(attr.url) ? 'BackgroundRed' : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.rows) || Helper.isEmpty(attr.url) ? 'BackgroundRed' : ``;
                     const rowsClass = Helper.isEmpty(attr.rows) || Number(attr.rows) <= 10 ? `Row${attr.rows}` : 'Row10';
-                    const requiredText = attr.required === '1' ? Const.Required : '';
-                    const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
+                    const requiredText = attr.required === '1' ? Const.Required : ``;
+                    const visibleClass = attr.visible !== '1' ? 'Visibled' : ``;
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);
