@@ -33,7 +33,7 @@ formContext.ui.moveTo(...)
 
 **8.** What are the benefits of using ```Dataverse Dialog Builder```?
 > 1. If you ignore the ```2``` functions I mentioned above, all your knowledge of ```JavaScript``` and ```WebApi``` remains the same as what you're already familiar with. For example, you have an ```OnLoad``` event on form, then you can access ```formContext```. Then, you can use ```getAttribute``` to get or set values, manipulate controls with ```getControl``` to hide or show them, ```addPreSearch``` logic to filter lookup, or ```addOnChange``` logic, or trigger ```fireOnChange```, ... In essence, ```dialog``` are similar to the ```main``` form you've known before.
-> 2. Once you've built a dialog using ```Dataverse Dialog Builder```, you can use it across various platforms, including ```Desktop Web```, ```Mobile Web```, ```Mobile App```, ```Dynamics 365 App for Outlook```, ```Unified Service Desk```, ```Omnichannel```, ```...```
+> 2. Once you've built a ```dialog``` using ```Dataverse Dialog Builder```, you can use it across various platforms, including ```Desktop Web```, ```Mobile Web```, ```Mobile App```, ```Dynamics 365 App for Outlook```, ```Unified Service Desk```, ```Omnichannel```, ```...```
 
 **9.** Show me some dialogs you've built?
 >Absolutely! I, [PhuocLe](https://github.com/phuocle), can confirm that I have built several dialogs and successfully run them in production for many years.\
@@ -54,7 +54,7 @@ formContext.ui.moveTo(...)
 >Yes, I meticulously examined each file, analyzed them one by one, manually constructed ```FormXml```, and experimented with updating the ```systemform``` entity to observe errors and results. This process was labor-intensive, spanning many days, months, and even years. Subsequently, I extracted conventions from the ```FormXml```, which I later leveraged to create ```Dataverse Dialog Builder```.
 
 # Links
-The following links are from a Google search. The first post dates back to 2018, which is six years ago. Surprisingly, the dialog is still functional, and nothing has changed with the ```2``` functions I mentioned earlier. This suggests that the remains ```unsupported code``` but still works.
+The following links are from a Google search. The first post dates back to 2018, which is six years ago. Surprisingly, the ```dialog``` is still functional, and nothing has changed with the ```2``` functions I mentioned earlier. This suggests that the remains ```unsupported code``` but still works.
 
 * July 22, 2018 [Custom Dialog Boxes - Part 1](https://bguidinger.com/blog/custom-dialog-boxes-part-1)
 * July 29, 2018 [Custom Dialog Boxes - Part 2](https://bguidinger.com/blog/custom-dialog-boxes-part-2)
@@ -83,7 +83,7 @@ The following links are from a Google search. The first post dates back to 2018,
 8. Push and create a pull request to your repository.
 9. Then pull request your code to the ```Dataverse Dialog Builder``` repository.
 
->Noted: solution ```DataverseDialogBuilder.sln``` uses [DynamicsCrm.DevKit](https://github.com/phuocle/Dynamics-Crm-DevKit), which I also built.
+>Note: solution ```DataverseDialogBuilder.sln``` uses [DynamicsCrm.DevKit](https://github.com/phuocle/Dynamics-Crm-DevKit), which I also built.
 
 # Conclusion
-```Unsupported code```! However, I believe that in the future, this will become ```supported code```. Why? Well, in ```Question 12, Answer 2```, I showed you ```324``` dialog files (and perhaps there will be even more in the future) that I obtained from Microsoft ```first-party apps```. If Microsoft modifies the ```2``` functions I mentioned earlier, we can debug and adapt them, just like they do with their ```first-party apps```. I don’t think Microsoft would deprecate dialogs and then need to rebuild them across all their ```first-party apps```.
+```Unsupported code```! However, I believe that in the future, this will become ```supported code```. Why? Well, in ```Question 12, Answer 2```, I showed you ```324``` dialog files (and perhaps there will be even more in the future) that I obtained from Microsoft ```first-party apps```. If Microsoft modifies the ```2``` functions I mentioned earlier, we can debug and adapt them, just like they do with their ```first-party apps```. I don’t think Microsoft would deprecate dialogs and then they need to rebuild them across all their ```first-party apps```.
