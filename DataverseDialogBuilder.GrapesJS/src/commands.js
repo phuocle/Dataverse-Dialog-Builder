@@ -20,7 +20,7 @@ export default (editor, opts = {}) => {
             const el = document.createElement('div');
             const elLabel = document.createElement('div');
             const txtarea = document.createElement('textarea');
-            txtarea.style.width = '565px';
+            txtarea.style.width = '100%';
             txtarea.style.height = '450px';
             txtarea.style.resize = 'none';
             txtarea.style.whiteSpace = "nowrap";
