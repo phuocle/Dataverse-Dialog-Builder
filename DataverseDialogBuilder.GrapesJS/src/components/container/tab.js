@@ -74,16 +74,16 @@ export default (editor, options) => {
                     const attr = model.getAttributes();
 
                     const tabHeaderComponent = model.components().filter((comp) => comp.is('TabHeaderComponent'))[0];
-                    let tabheader = ``;
+                    let tabheader = '';
                     if (tabHeaderComponent) {
                        tabheader = tabHeaderComponent.toFormXml();
                     }
-                    let sections = ``;
+                    let sections = '';
                     const sectionsComponent = model.components().filter((comp) => comp.is('SectionsComponent'))[0];
                     if (sectionsComponent) {
                        sections = sectionsComponent.toFormXml();
                     }
-                    let tabfooter = ``;
+                    let tabfooter = '';
                     const tabFooterComponent = model.components().filter((comp) => comp.is('TabFooterComponent'))[0];
                     if (tabFooterComponent) {
                         tabfooter = tabFooterComponent.toFormXml();
@@ -91,7 +91,7 @@ export default (editor, options) => {
                     return `
 <tab id='{${Helper.toGuidWithDefaultNewGuid(attr.id)}}' name='${attr.logicalname}' visible='${Helper.toTrueFalse(attr.visible)}' expanded='true' verticallayout='true' locklevel='0' >
     <labels>
-        <label description=`` languagecode='${Helper.getLanguageCode(editor)}' />
+        <label description='' languagecode='${Helper.getLanguageCode(editor)}' />
     </labels>
     ${tabheader}
     ${sections}
@@ -103,8 +103,8 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const visibleClass = attr.visible !== '1' ? ' Visibled' : ``;
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) ? 'BackgroundRed' : ``;
+                    const visibleClass = attr.visible !== '1' ? ' Visibled' : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) ? 'BackgroundRed' : '';
                     model.setClass(`DDBTab ${errorClass}${visibleClass}`);
                     for (let i = 0; i < el.children.length; i++) {
                         if (el.children[i].tagName === 'LEGEND') {

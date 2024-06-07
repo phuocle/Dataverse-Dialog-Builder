@@ -151,7 +151,7 @@ export default (editor, options) => {
                 toFormXml() {
                     const model = this;
                     const attr = model.getAttributes();
-                    const precisionText = attr.numbertype !== 'WholeNumber' ? `<Precision>${attr.precision}</Precision>` : ``;
+                    const precisionText = attr.numbertype !== 'WholeNumber' ? `<Precision>${attr.precision}</Precision>` : '';
                     return `
 <row>
     <cell id='{${Helper.toGuidWithDefaultNewGuid(attr.id)}}' visible='${Helper.toTrueFalse(attr.visible)}'>
@@ -173,14 +173,14 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.minvalue) || Helper.isEmpty(attr.maxvalue) || Helper.isEmpty(attr.precision) ? 'BackgroundRed' : ``;
-                    const visibleClass = attr.visible !== '1' ? 'Visibled' : ``;
-                    const requiredText = attr.required === '1' ? Const.Required : ``;
-                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : ``;
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.minvalue) || Helper.isEmpty(attr.maxvalue) || Helper.isEmpty(attr.precision) ? 'BackgroundRed' : '';
+                    const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
+                    const requiredText = attr.required === '1' ? Const.Required : '';
+                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : '';
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);
-                            comp.view.el.innerHTML = `${disabledIcon} ${attr.label ?? ``} ${requiredText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
+                            comp.view.el.innerHTML = `${disabledIcon} ${attr.label ?? ''} ${requiredText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                         }
                         if (comp.view.el.classList.contains('DDBControlControl')) {
                             comp.view.el.innerHTML = `${attr.numbertype?.toUpperCase()}`;

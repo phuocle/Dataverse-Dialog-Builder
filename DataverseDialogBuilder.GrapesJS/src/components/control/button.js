@@ -91,7 +91,7 @@ export default (editor, options) => {
                             label: 'Button',
                             visible: '1',
                             disabled: '0',
-                            eventid: ``,
+                            eventid: '',
                         });
                     }
                     model.set('toolbar', [...model.get('toolbar'), { attributes: { class: Const.IconFindEvent }, command: Const.ToolbarFindEvent}]);
@@ -120,12 +120,12 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : ``;
-                    const eventidIcon = !Helper.isEmpty(attr.eventid) ? Const.IconClick : ``;
-                    const visibleClass = attr.visible !== '1' ? ' Visibled' : ``;
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.eventid) || Helper.isEmpty(attr.label) ? ' BackgroundRed' : ``;
+                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : '';
+                    const eventidIcon = !Helper.isEmpty(attr.eventid) ? Const.IconClick : '';
+                    const visibleClass = attr.visible !== '1' ? ' Visibled' : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.eventid) || Helper.isEmpty(attr.label) ? ' BackgroundRed' : '';
                     model.setClass(`DDBButton${errorClass}${visibleClass}`);
-                    el.innerHTML = `${disabledIcon} ${attr.label ?? ``} ${eventidIcon} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}</span>`;
+                    el.innerHTML = `${disabledIcon} ${attr.label ?? ''} ${eventidIcon} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}</span>`;
                 },
             },
         },

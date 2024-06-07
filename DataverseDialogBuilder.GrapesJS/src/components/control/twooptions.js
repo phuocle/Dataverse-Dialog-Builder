@@ -131,7 +131,7 @@ export default (editor, options) => {
                             twooptionstype: 'Checkbox',
                             visible: '1',
                             disabled: '0',
-                            twooptionsname: ``
+                            twooptionsname: ''
                         });
                     }
                     model.set('toolbar', [...model.get('toolbar'), { attributes: { class: Const.IconFindEvent }, command: Const.ToolbarFindEvent}]);
@@ -171,7 +171,7 @@ export default (editor, options) => {
                     const model = this;
                     const attr = model.getAttributes();
                     const nameText = Helper.isTrue(attr.dynamic) ? `<OptionSetId>${GUID.EMPTY}</OptionSetId>` : `<OptionSetName>${attr.optionsetname}</OptionSetName>`;
-                    const defaultValueText = !Helper.isEmpty(attr.default) ? `<DefaultValue>${attr.default}</DefaultValue>` : ``;
+                    const defaultValueText = !Helper.isEmpty(attr.default) ? `<DefaultValue>${attr.default}</DefaultValue>` : '';
                     return `
 <row>
     <cell id='{${Helper.toGuidWithDefaultNewGuid(attr.id)}}' visible='${Helper.toTrueFalse(attr.visible)}'>
@@ -192,14 +192,14 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || (attr.dynamic === '0' && Helper.isEmpty(attr.default)) || (attr.dynamic === '0' && Helper.isEmpty(attr.optionsetname?.toLowerCase())) ? `BackgroundRed` : ``;
-                    const visibleClass = attr.visible !== `1` ? `Visibled` : ``;
-                    const requiredText = attr.required === `1` ? Const.Required : ``;
-                    const disabledIcon = attr.disabled === `1` ? Const.IconLock : ``;
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || (attr.dynamic === '0' && Helper.isEmpty(attr.default)) || (attr.dynamic === '0' && Helper.isEmpty(attr.optionsetname?.toLowerCase())) ? `BackgroundRed` : '';
+                    const visibleClass = attr.visible !== `1` ? `Visibled` : '';
+                    const requiredText = attr.required === `1` ? Const.Required : '';
+                    const disabledIcon = attr.disabled === `1` ? Const.IconLock : '';
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains(`DDBControlLabel`)) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);
-                            comp.view.el.innerHTML = `${disabledIcon} ${attr.label ?? ``} ${requiredText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
+                            comp.view.el.innerHTML = `${disabledIcon} ${attr.label ?? ''} ${requiredText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                         }
                         if (comp.view.el.classList.contains(`DDBControlControl`)) {
                             comp.view.el.innerHTML = `${attr.twooptionstype?.toUpperCase()}`;

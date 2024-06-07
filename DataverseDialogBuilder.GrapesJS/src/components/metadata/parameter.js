@@ -70,9 +70,9 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) ? 'BackgroundRed' : ``;
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) ? 'BackgroundRed' : '';
                     model.setClass(`DDBParameter ${errorClass}`);
-                    el.innerHTML = `<span class='Bold'>Parameter:</span> ${attr.parametertype ?? ``} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
+                    el.innerHTML = `<span class='Bold'>Parameter:</span> ${attr.parametertype ?? ''} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                 }
             }
         }

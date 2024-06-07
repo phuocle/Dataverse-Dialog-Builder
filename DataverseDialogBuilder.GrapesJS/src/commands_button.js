@@ -40,8 +40,8 @@ export default (editor, opts = {}) => {
                     };
                     var result = await Crm.getXrm().Utility.lookupObjects(lookupOptions);
                     if (result.length > 0) {
-                        component.getTrait(`lib`).setValue(result[0]?.name ?? ``);
-                        component.getTrait(`button_lib`).el.innerHTML = result[0]?.name ?? ``;
+                        component.getTrait(`lib`).setValue(result[0]?.name ?? '');
+                        component.getTrait(`button_lib`).el.innerHTML = result[0]?.name ?? '';
                     }
                 }
                 catch{
@@ -98,8 +98,8 @@ export default (editor, opts = {}) => {
                         filters: [{filterXml: `<filter type='or'><condition attribute='returnedtypecode' operator='eq' value='${output.object_type_code}' /></filter>`, entityLogicalName: "savedquery"}]
                     };
                     var result = await Crm.getXrm().Utility.lookupObjects(lookupOptions);
-                    let viewids = ``;
-                    let viewnames = ``;
+                    let viewids = '';
+                    let viewnames = '';
                     if (result.length > 0) {
                         for (let i = 0; i < result.length; i++) {
                             viewids += `${result[i]?.id?.toUpperCase()},`;

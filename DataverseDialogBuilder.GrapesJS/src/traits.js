@@ -5,13 +5,13 @@ export default (editor, opts = {}) => {
     traits.addType('text-readonly', {
         createLabel({ label, trait, model }) {
             const { tooltip } = trait.model.attributes;
-            const ppfx = editor.getConfig().pStylePrefix || ``;
-            return `<div class="${ppfx}label" title="${tooltip ?? ``}">${label} ${Const.IconLock}</div>`;
+            const ppfx = editor.getConfig().pStylePrefix || '';
+            return `<div class="${ppfx}label" title="${tooltip ?? ''}">${label} ${Const.IconLock}</div>`;
         },
         getInputEl() {
             if (!this.inputEl) {
                 const { model } = this;
-                const plh = model.get('placeholder') || model.get('default') || ``;
+                const plh = model.get('placeholder') || model.get('default') || '';
                 const value = this.getModelValue();
                 const input = document.createElement('input');
                 input.type = 'text';
@@ -31,8 +31,8 @@ export default (editor, opts = {}) => {
     traits.addType('text-area', {
         createLabel({ label, trait }) {
             const { tooltip } = trait.model.attributes;
-            const ppfx = editor.getConfig().pStylePrefix || ``;
-            return `<div class="${ppfx}label" title="${tooltip ?? ``}">${label}</div>`;
+            const ppfx = editor.getConfig().pStylePrefix || '';
+            return `<div class="${ppfx}label" title="${tooltip ?? ''}">${label}</div>`;
         },
         getInputEl() {
             if (!this.inputEl) {

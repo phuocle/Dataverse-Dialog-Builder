@@ -334,7 +334,7 @@ export default (editor, options) => {
                 async getViewNames() {
                     const model = this;
                     const attr = model.getAttributes();
-                    let viewnames = ``;
+                    let viewnames = '';
                     const viewids = attr.viewid01.split(',');
                     for (let i = 0; i < viewids.length; i++) {
                         viewnames += `${await Crm.GetViewName(attr.entitylogicalname01, viewids[i])},`;
@@ -374,39 +374,39 @@ export default (editor, options) => {
                 toFormXml() {
                     const model = this;
                     const attr = model.getAttributes();
-                    let parameters = ``;
+                    let parameters = '';
                     if (!Helper.isEmpty(attr.entitylogicalname01)) {
                         parameters += `
                             <TargetEntity>
-                                  ${!Helper.isEmpty(attr.viewid01) ? `<DefaultViewId>${attr.viewid01.split(',')[0]}</DefaultViewId>` : ``}
+                                  ${!Helper.isEmpty(attr.viewid01) ? `<DefaultViewId>${attr.viewid01.split(',')[0]}</DefaultViewId>` : ''}
                                   <EntityLogicalName>${attr.entitylogicalname01}</EntityLogicalName>
                             </TargetEntity>`;
                     }
                     if (!Helper.isEmpty(attr.entitylogicalname02)) {
                         parameters += `
                             <TargetEntity>
-                                  ${!Helper.isEmpty(attr.viewid02) ? `<DefaultViewId>${attr.viewid02.split(',')[0]}</DefaultViewId>` : ``}
+                                  ${!Helper.isEmpty(attr.viewid02) ? `<DefaultViewId>${attr.viewid02.split(',')[0]}</DefaultViewId>` : ''}
                                   <EntityLogicalName>${attr.entitylogicalname02}</EntityLogicalName>
                             </TargetEntity>`;
                     }
                     if (!Helper.isEmpty(attr.entitylogicalname03)) {
                         parameters += `
                             <TargetEntity>
-                                  ${!Helper.isEmpty(attr.viewid03) ? `<DefaultViewId>${attr.viewid03.split(',')[0]}</DefaultViewId>` : ``}
+                                  ${!Helper.isEmpty(attr.viewid03) ? `<DefaultViewId>${attr.viewid03.split(',')[0]}</DefaultViewId>` : ''}
                                   <EntityLogicalName>${attr.entitylogicalname03}</EntityLogicalName>
                             </TargetEntity>`;
                     }
                     if (!Helper.isEmpty(attr.entitylogicalname04)) {
                         parameters += `
                             <TargetEntity>
-                                  ${!Helper.isEmpty(attr.viewid04) ? `<DefaultViewId>${attr.viewid04.split(',')[0]}</DefaultViewId>` : ``}
+                                  ${!Helper.isEmpty(attr.viewid04) ? `<DefaultViewId>${attr.viewid04.split(',')[0]}</DefaultViewId>` : ''}
                                   <EntityLogicalName>${attr.entitylogicalname04}</EntityLogicalName>
                             </TargetEntity>`;
                     }
                     if (!Helper.isEmpty(attr.entitylogicalname05)) {
                         parameters += `
                             <TargetEntity>
-                                  ${!Helper.isEmpty(attr.viewid05) ? `<DefaultViewId>${attr.viewid05.split(',')[0]}</DefaultViewId>` : ``}
+                                  ${!Helper.isEmpty(attr.viewid05) ? `<DefaultViewId>${attr.viewid05.split(',')[0]}</DefaultViewId>` : ''}
                                   <EntityLogicalName>${attr.entitylogicalname05}</EntityLogicalName>
                             </TargetEntity>`;
                     }
@@ -438,17 +438,17 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.entitylogicalname01?.toLowerCase()) || Helper.isEmpty(attr.viewid01)  ? 'BackgroundRed' : ``;
-                    const visibleClass = attr.visible !== '1' ? 'Visibled' : ``;
-                    const requiredText = attr.required === '1' ? Const.Required : ``;
-                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : ``;
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.entitylogicalname01?.toLowerCase()) || Helper.isEmpty(attr.viewid01)  ? 'BackgroundRed' : '';
+                    const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
+                    const requiredText = attr.required === '1' ? Const.Required : '';
+                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : '';
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);
-                            comp.view.el.innerHTML = `${disabledIcon} ${attr.label ?? ``} ${requiredText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
+                            comp.view.el.innerHTML = `${disabledIcon} ${attr.label ?? ''} ${requiredText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                         }
                         if (comp.view.el.classList.contains('DDBControlControl')) {
-                            let logicalnameText = ``;
+                            let logicalnameText = '';
                             if (!Helper.isEmpty(attr.entitylogicalname01)) logicalnameText += `${attr.entitylogicalname01?.toLowerCase()}, `;
                             if (!Helper.isEmpty(attr.entitylogicalname02)) logicalnameText += `${attr.entitylogicalname02?.toLowerCase() }, `;
                             if (!Helper.isEmpty(attr.entitylogicalname03)) logicalnameText += `${attr.entitylogicalname03?.toLowerCase() }, `;

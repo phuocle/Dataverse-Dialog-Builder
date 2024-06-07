@@ -133,12 +133,12 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_targetentities) || Helper.isEmpty(attr.para_selectedentities) || Helper.isEmpty(attr.para_isdisabled) || Helper.isEmpty(attr.para_disablemru) ? 'BackgroundRed' : ``;
-                    const visibleClass = attr.visible !== '1' ? 'Visibled' : ``;
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_targetentities) || Helper.isEmpty(attr.para_selectedentities) || Helper.isEmpty(attr.para_isdisabled) || Helper.isEmpty(attr.para_disablemru) ? 'BackgroundRed' : '';
+                    const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);
-                            comp.view.el.innerHTML = `${attr.label ?? ``} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
+                            comp.view.el.innerHTML = `${attr.label ?? ''} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                         }
                         if (comp.view.el.classList.contains('DDBControlControl')) {
                             comp.view.el.innerHTML = `MULTISELECT LOOKUP`;

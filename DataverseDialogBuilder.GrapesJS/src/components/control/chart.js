@@ -156,7 +156,7 @@ export default (editor, options) => {
                             if (viewids.length === 1)
                                 model.getTrait('button_viewids').attributes.text = attr.viewids;
                             else {
-                                let viewnames = ``;
+                                let viewnames = '';
                                 for (let i = 0; i < viewids.length; i++) {
                                     viewnames += `${await Crm.GetViewName(attr.entitylogicalname, viewids[i])};`;
                                 }
@@ -182,7 +182,7 @@ export default (editor, options) => {
                     if (arr.length > 1) {
                         return `<ViewIds>${attr.viewids}</ViewIds>`;
                     }
-                    return ``;
+                    return '';
                 },
                 getViewId(model) {
                     const attr = model.getAttributes();
@@ -192,7 +192,7 @@ export default (editor, options) => {
                 toFormXml() {
                     const model = this;
                     const attr = model.getAttributes();
-                    let rowsAdded = ``;
+                    let rowsAdded = '';
                     if (Number(attr.rows) > 1) {
                         for (let i = 1; i < Number(attr.rows); i += 1) {
                             rowsAdded += `<row />`;
@@ -227,12 +227,12 @@ ${rowsAdded}
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.entitylogicalname?.toLowerCase()) || Helper.isEmpty(attr.viewids) || Helper.isEmpty(attr.visualizationid) || Helper.isEmpty(attr.rows) ? 'BackgroundRed' : ``;
-                    const visibleClass = attr.visible !== `1` ? `Visibled` : ``;
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.entitylogicalname?.toLowerCase()) || Helper.isEmpty(attr.viewids) || Helper.isEmpty(attr.visualizationid) || Helper.isEmpty(attr.rows) ? 'BackgroundRed' : '';
+                    const visibleClass = attr.visible !== `1` ? `Visibled` : '';
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);
-                            comp.view.el.innerHTML = `${attr.label ?? ``} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
+                            comp.view.el.innerHTML = `${attr.label ?? ''} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                         }
                         if (comp.view.el.classList.contains('DDBControlControl')) {
                             if (Number(attr.rows) > 10) {
@@ -240,7 +240,7 @@ ${rowsAdded}
                             } else {
                                 comp.setClass(`DDBControlControl Row${attr.rows}`);
                             }
-                            comp.view.el.innerHTML = `CHART ${attr.entitylogicalname ?? ``} (${attr.rows} rows)`;
+                            comp.view.el.innerHTML = `CHART ${attr.entitylogicalname ?? ''} (${attr.rows} rows)`;
                         }
                     });
                     return this;

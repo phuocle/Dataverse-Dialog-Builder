@@ -41,19 +41,6 @@ export async function ExecuteCustomAction(functionName, obj) {
     return JSON.parse(json.output);
 }
 
-export async function GetLanguages() {
-    try {
-        var input = {};
-        var output = await ExecuteCustomAction("GetLanguages", input);
-        return output.languages.map(x => { return { id: x.Value, name: x.Name } });
-    }
-    catch {
-        return [
-            { id: 1033, name: 'English-United States' }
-        ]
-    }
-}
-
 export async function GetViewId(entity_logical_name, view_name) {
     try {
         let input = { entity_logical_name, view_name };
@@ -99,6 +86,7 @@ export async function GetGlobalOptionSet() {
         ];
     }
 }
+
 export async function IsGlobalOptionSet(option_set_name) {
     try {
         let input = { option_set_name };
@@ -235,7 +223,7 @@ export async function GetForm(formid) {
         return output;
     }
     catch {
-        return { formxml: ``, languagecode: 1033, logicalname: ``, description: ``, fulldescription : ``}
+        return { formxml: '', languagecode: 1033, logicalname: '', description: '', fulldescription : ''}
     }
 }
 
@@ -257,13 +245,19 @@ export function HideProcessing() {
 }
 
 export function ShowAlert(message) {
-    getXrm().Navigation.openAlertDialog({ text: message, title: "Alert" }, { height: 300, width: 500 });
+    try {
+        getXrm().Navigation.openAlertDialog({ text: message, title: "Alert" }, { height: 300, width: 500 });
+    } catch { }
 }
 
 export function ShowAlertWithCallback(message, successCallback, errorCallback) {
-    getXrm().Navigation.openAlertDialog({ text: message, title: "Alert" }, { height: 300, width: 500 }).then(successCallback, errorCallback);
+    try {
+        getXrm().Navigation.openAlertDialog({ text: message, title: "Alert" }, { height: 300, width: 500 }).then(successCallback, errorCallback);
+    } catch { }
 }
 
 export async function ShowConfirm(message) {
-    return await getXrm().Navigation.openConfirmDialog({ text: message, title: "Confirm" }, { height: 300, width: 500 });
+    try {
+        return await getXrm().Navigation.openConfirmDialog({ text: message, title: "Confirm" }, { height: 300, width: 500 });
+    } catch { }
 }

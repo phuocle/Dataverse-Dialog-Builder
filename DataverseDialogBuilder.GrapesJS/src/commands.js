@@ -79,7 +79,7 @@ export default (editor, opts = {}) => {
             <li>Released a commercial CRM add-on to AppSource: <a target="_blank" href='https://appsource.microsoft.com/en-us/product/dynamics-365/phuocle.d365-icons-and-tooltips'>Icons and Tooltips with D365</a> - Allow you customize Icons and Tooltips without help from your developer.</li>
             <li>Released <a target="_blank" href='https://github.com/phuocle/Dynamics-Crm-DevKit'>DynamicsCrm.DevKit</a> - a Visual Studio extensions - that help CRM developer can easy develop.</li>
             <li>Released <a target="_blank" href='https://github.com/phuocle/View-FetchXML'>View-FetchXML</a> - a small tool that help CRM developer easy copy/paste FetchXml code.</li>
-            <li>Released <a target="_blank" href='https://github.com/phuocle/DDB'>DDB</a> - A WYSIWYG tool to create crm form dialog quickly.</li>
+            <li>Released <a target="_blank" href='https://github.com/phuocle/DataverseDialogBuilder'>Dataverse Dialog Builder</a> - A WYSIWYG tool to create crm form dialog quickly.</li>
 			</ul>
 		</div>`;
 
@@ -103,7 +103,7 @@ export default (editor, opts = {}) => {
         return {
             run(editor, sender) {
                 editor.Panels.getButton('options', 'button_github').set('active', 0);
-                window.open('https://github.com/phuocle/dataversedialogbuilder');
+                window.open('https://github.com/phuocle/DataverseDialogBuilder');
                 setTimeout(() => { editor.stopCommand('command_github'); }, 1);
             },
             stop(editor, sender) {
@@ -149,7 +149,7 @@ export default (editor, opts = {}) => {
                     parser.parseStringPromise(output.formxml).then(async (result) => {
                         const { clientresources, controldescriptions, events, formparameters, header, tabs, footer } = result.form;
                         const getControlName = ((row) => {
-                            let controlName = ``;
+                            let controlName = '';
                             (controldescriptions?.controldescription?.length ? [...controldescriptions?.controldescription] : [controldescriptions?.controldescription]).filter((controldescription) => {
                                 if (Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid).toLowerCase() === Helper.cleanGUIDWithDefaultNewGuid(controldescription?.$?.forControl).toLowerCase()) {
                                     controlName = controldescription?.customcontrol[0]?.$?.name;
@@ -159,7 +159,7 @@ export default (editor, opts = {}) => {
                             return controlName;
                         });
                         const getCustomControl = ((row) => {
-                            let customControl = ``;
+                            let customControl = '';
                             (controldescriptions?.controldescription?.length ? [...controldescriptions?.controldescription] : [controldescriptions?.controldescription]).filter((controldescription) => {
                                 if (Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid).toLowerCase() === Helper.cleanGUIDWithDefaultNewGuid(controldescription?.$?.forControl).toLowerCase()) {
                                     customControl = controldescription?.customcontrol[0];
@@ -169,7 +169,7 @@ export default (editor, opts = {}) => {
                             return customControl;
                         });
                         const getControlDescription = ((row) => {
-                            let value = ``;
+                            let value = '';
                             (controldescriptions?.controldescription?.length ? [...controldescriptions?.controldescription] : [controldescriptions?.controldescription]).filter((controldescription) => {
                                 if (Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid).toLowerCase() === Helper.cleanGUIDWithDefaultNewGuid(controldescription?.$?.forControl).toLowerCase()) {
                                     value = controldescription;
@@ -184,8 +184,8 @@ export default (editor, opts = {}) => {
                                 ...label_c.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
                                 rows: Helper.toNumberWithDefault(row?.cell?.$?.rowspan, 1),
                                 istitle: Helper.to01WithDefault(row?.cell?.control?.parameters?.istitle, false),
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`
@@ -197,8 +197,8 @@ export default (editor, opts = {}) => {
                                 ...button_c.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(cell?.labels?.label?.$?.description, '')}`,
                                 disabled: `${Helper.to01WithDefault(cell?.control?.$?.disabled, `0`)}`,
                                 visible: `${Helper.to01WithDefault(cell?.$?.visible, '1')}`,
                                 eventid: `${Helper.cleanGUIDWithDefaultNewGuid(event?.handlers?.handler?.$?.handlerUniqueId)}`
@@ -211,17 +211,17 @@ export default (editor, opts = {}) => {
                                 ...event_c.getAttributes(),
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(handlers?.handler?.$?.handlerUniqueId)}`,
                                 eventtype: `${Helper.toStringWithDefault(event?.$?.name?.toLowerCase())}`,
-                                lib: `${Helper.toStringWithDefault(handlers?.handler?.$?.libraryName?.startsWith('$webresource:') ? handlers?.handler?.$?.libraryName?.substring(13) : handlers?.handler?.$?.libraryName, ``)}`,
-                                func: `${Helper.toStringWithDefault(handlers?.handler?.$?.functionName, ``)}`,
+                                lib: `${Helper.toStringWithDefault(handlers?.handler?.$?.libraryName?.startsWith('$webresource:') ? handlers?.handler?.$?.libraryName?.substring(13) : handlers?.handler?.$?.libraryName, '')}`,
+                                func: `${Helper.toStringWithDefault(handlers?.handler?.$?.functionName, '')}`,
                                 context: `${Helper.to01WithDefault(handlers?.handler?.$?.passExecutionContext, '1')}`,
-                                parameters: `${Helper.toStringWithDefault(handlers?.handler?.$?.parameters, ``)}`
+                                parameters: `${Helper.toStringWithDefault(handlers?.handler?.$?.parameters, '')}`
                             });
                         });
                         const addParameter = ((container, parameter) => {
                             const parameter_c = container.append(block_parameter)[0];
                             parameter_c.setAttributes({
                                 ...parameter_c.getAttributes(),
-                                logicalname: `${Helper.toStringWithDefault(parameter?.$?.name, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(parameter?.$?.name, '')}`,
                                 parametertype: `${Helper.toStringWithDefault(parameter?.$?.type, 'SafeString')}`
                             });
                         });
@@ -229,7 +229,7 @@ export default (editor, opts = {}) => {
                             const javascript_c = container.append(block_javascript)[0];
                             javascript_c.setAttributes({
                                 ...javascript_c.getAttributes(),
-                                lib: `${Helper.toStringWithDefault(javascript?.$?.src?.substring(13), ``)}`
+                                lib: `${Helper.toStringWithDefault(javascript?.$?.src?.substring(13), '')}`
                             });
                         });
                         const addSection = ((container, section) => {
@@ -237,8 +237,8 @@ export default (editor, opts = {}) => {
                             section_c.setAttributes({
                                 ...section_c.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(section?.$?.id)}`,
-                                logicalname: `${Helper.toStringWithDefault(section?.$?.name, ``)}`,
-                                label: `${Helper.toStringWithDefault(section?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(section?.$?.name, '')}`,
+                                label: `${Helper.toStringWithDefault(section?.labels?.label?.$?.description, '')}`,
                                 labelwidth: `${Helper.toNumberWithDefault(section?.$?.labelwidth, 115)}`,
                                 alignment: `${Helper.toStringWithDefault(section?.$?.celllabelalignment, 'Left')}`,
                                 position: `${Helper.toStringWithDefault(section?.$?.celllabelposition, 'Left')}`,
@@ -251,7 +251,7 @@ export default (editor, opts = {}) => {
                             tab_c.setAttributes({
                                 ...tab_c.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(tab?.$?.id)}`,
-                                logicalname: `${Helper.toStringWithDefault(tab?.$?.name, ``)}`
+                                logicalname: `${Helper.toStringWithDefault(tab?.$?.name, '')}`
                             });
                             return tab_c;
                         });
@@ -288,9 +288,9 @@ export default (editor, opts = {}) => {
                                 ...textbox.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                textboxtype: `${Helper.toStringWithDefault(getTextBoxType(row?.cell?.control?.$?.classid), ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                textboxtype: `${Helper.toStringWithDefault(getTextBoxType(row?.cell?.control?.$?.classid), '')}`,
                                 maxlength: `${Helper.toNumberWithDefault(row?.cell?.control?.parameters?.maxlength, 100)}`,
                                 required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
                                 disabled: `${Helper.to01WithDefault(row?.cell?.control?.$?.disabled, `0`)}`,
@@ -303,8 +303,8 @@ export default (editor, opts = {}) => {
                                 ...textarea.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
                                 maxlength: `${Helper.toNumberWithDefault(row?.cell?.control?.parameters?.maxlength, 100)}`,
                                 rows: Helper.toNumberWithDefault(row?.cell?.$?.rowspan, 1),
                                 required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
@@ -323,8 +323,8 @@ export default (editor, opts = {}) => {
                                 ...datetime.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
                                 datetimetype: getDateTimeType(),
                                 required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
                                 disabled: `${Helper.to01WithDefault(row?.cell?.control?.$?.disabled, `0`)}`,
@@ -346,9 +346,9 @@ export default (editor, opts = {}) => {
                                 ...number.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                numbertype: `${Helper.toStringWithDefault(getNumberType(row?.cell?.control?.$?.classid), ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                numbertype: `${Helper.toStringWithDefault(getNumberType(row?.cell?.control?.$?.classid), '')}`,
                                 required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
                                 disabled: `${Helper.to01WithDefault(row?.cell?.control?.$?.disabled, `0`)}`,
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`,
@@ -364,18 +364,18 @@ export default (editor, opts = {}) => {
                                 ...lookup.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                entitylogicalname01: `${Helper.toStringWithDefault(views[0]?.entitylogicalname, ``)}`,
-                                entitylogicalname02: `${Helper.toStringWithDefault(views[1]?.entitylogicalname, ``)}`,
-                                entitylogicalname03: `${Helper.toStringWithDefault(views[2]?.entitylogicalname, ``)}`,
-                                entitylogicalname04: `${Helper.toStringWithDefault(views[3]?.entitylogicalname, ``)}`,
-                                entitylogicalname05: `${Helper.toStringWithDefault(views[4]?.entitylogicalname, ``)}`,
-                                viewid01: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.availableviewids, ``)}`,
-                                viewid02: `${Helper.toStringWithDefault(views[1]?.defaultviewid, ``)}`,
-                                viewid03: `${Helper.toStringWithDefault(views[2]?.defaultviewid, ``)}`,
-                                viewid04: `${Helper.toStringWithDefault(views[3]?.defaultviewid, ``)}`,
-                                viewid05: `${Helper.toStringWithDefault(views[4]?.defaultviewid, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                entitylogicalname01: `${Helper.toStringWithDefault(views[0]?.entitylogicalname, '')}`,
+                                entitylogicalname02: `${Helper.toStringWithDefault(views[1]?.entitylogicalname, '')}`,
+                                entitylogicalname03: `${Helper.toStringWithDefault(views[2]?.entitylogicalname, '')}`,
+                                entitylogicalname04: `${Helper.toStringWithDefault(views[3]?.entitylogicalname, '')}`,
+                                entitylogicalname05: `${Helper.toStringWithDefault(views[4]?.entitylogicalname, '')}`,
+                                viewid01: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.availableviewids, '')}`,
+                                viewid02: `${Helper.toStringWithDefault(views[1]?.defaultviewid, '')}`,
+                                viewid03: `${Helper.toStringWithDefault(views[2]?.defaultviewid, '')}`,
+                                viewid04: `${Helper.toStringWithDefault(views[3]?.defaultviewid, '')}`,
+                                viewid05: `${Helper.toStringWithDefault(views[4]?.defaultviewid, '')}`,
                                 disableviewpicker: `${Helper.to01WithDefault(row?.cell?.control?.parameters?.disableviewpicker, 0)}`,
                                 disablequickfind: `${Helper.to01WithDefault(row?.cell?.control?.parameters?.disablequickfind, 0)}`,
                                 disablemru: `${Helper.to01WithDefault(row?.cell?.control?.parameters?.disablemru, 0)}`,
@@ -393,8 +393,8 @@ export default (editor, opts = {}) => {
                                 ...regarding.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
                                 required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
                                 disabled: `${Helper.to01WithDefault(row?.cell?.control?.$?.disabled, `0`)}`,
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`,
@@ -406,8 +406,8 @@ export default (editor, opts = {}) => {
                                 ...iframe.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
                                 url: `${row?.cell?.control?.parameters?.url}`,
                                 parameters: `${Helper.to01WithDefault(row?.cell?.control?.parameters?.passparameters, 0)}`,
                                 security: `${Helper.to01WithDefault(row?.cell?.control?.parameters?.security, 0)}`,
@@ -432,9 +432,9 @@ export default (editor, opts = {}) => {
                                 ...dropdown.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                dropdowntype: `${Helper.toStringWithDefault(getDropdownType(row?.cell?.control?.$?.classid), ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                dropdowntype: `${Helper.toStringWithDefault(getDropdownType(row?.cell?.control?.$?.classid), '')}`,
                                 required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
                                 disabled: `${Helper.to01WithDefault(row?.cell?.control?.$?.disabled, `0`)}`,
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`
@@ -454,9 +454,9 @@ export default (editor, opts = {}) => {
                                     ...optionset.getAttributes(),
                                     id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                     uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                    logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                    label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                    optionsettype: `${Helper.toStringWithDefault(getOptionSetType(row?.cell?.control?.$?.classid), ``)}`,
+                                    logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                    label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                    optionsettype: `${Helper.toStringWithDefault(getOptionSetType(row?.cell?.control?.$?.classid), '')}`,
                                     dynamic: '1',
                                     required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
                                     disabled: `${Helper.to01WithDefault(row?.cell?.control?.$?.disabled, `0`)}`,
@@ -471,9 +471,9 @@ export default (editor, opts = {}) => {
                                         ...optionset.getAttributes(),
                                         id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                         uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                        logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                        label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                        optionsettype: `${Helper.toStringWithDefault(getOptionSetType(row?.cell?.control?.$?.classid), ``)}`,
+                                        logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                        label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                        optionsettype: `${Helper.toStringWithDefault(getOptionSetType(row?.cell?.control?.$?.classid), '')}`,
                                         dynamic: '0',
                                         logicaltype: '0',
                                         optionsetname: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.optionsetname, '-1')}`,
@@ -489,12 +489,12 @@ export default (editor, opts = {}) => {
                                         ...optionset.getAttributes(),
                                         id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                         uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                        logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                        label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                        optionsettype: `${Helper.toStringWithDefault(getOptionSetType(row?.cell?.control?.$?.classid), ``)}`,
+                                        logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                        label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                        optionsettype: `${Helper.toStringWithDefault(getOptionSetType(row?.cell?.control?.$?.classid), '')}`,
                                         dynamic: '0',
                                         logicaltype: '1',
-                                        entitylogicalname01: `${Helper.toStringWithDefault(data?.entity_logical_name, ``)}`,
+                                        entitylogicalname01: `${Helper.toStringWithDefault(data?.entity_logical_name, '')}`,
                                         optionsetname: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.optionsetname, '-1')}`,
                                         default: `${Helper.toNumberWithDefault(row?.cell?.control?.parameters?.defaultvalue, -1)}`,
                                         required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
@@ -520,11 +520,11 @@ export default (editor, opts = {}) => {
                                 ...twooptions.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                twooptionstype: `${Helper.toStringWithDefault(getTwoOptionsType(row?.cell?.control?.$?.classid), ``)}`,
-                                entitylogicalname01: `${Helper.toStringWithDefault(data?.entity_logical_name, ``)}`,
-                                optionsetname: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.optionsetname, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                twooptionstype: `${Helper.toStringWithDefault(getTwoOptionsType(row?.cell?.control?.$?.classid), '')}`,
+                                entitylogicalname01: `${Helper.toStringWithDefault(data?.entity_logical_name, '')}`,
+                                optionsetname: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.optionsetname, '')}`,
                                 default: `${Helper.toNumberWithDefault(row?.cell?.control?.parameters?.defaultvalue, -1)}`,
                                 required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
                                 disabled: `${Helper.to01WithDefault(row?.cell?.control?.$?.disabled, `0`)}`,
@@ -538,10 +538,10 @@ export default (editor, opts = {}) => {
                                 ...subgrid.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                entitylogicalname: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.targetentitytype, ``)}`,
-                                viewids: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.viewids, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                entitylogicalname: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.targetentitytype, '')}`,
+                                viewids: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.viewids, '')}`,
                                 perpage: `${Helper.toNumberWithDefault(row?.cell?.control?.parameters?.recordsperpage, 5)}`,
                                 contextual: `${Helper.to01WithDefault(row?.cell?.control?.parameters?.enablecontextualactions, `0`)}`,
                                 quickfind: `${Helper.to01WithDefault(row?.cell?.control?.parameters?.enablequickfind, `0`)}`,
@@ -556,11 +556,11 @@ export default (editor, opts = {}) => {
                                 ...chart.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                entitylogicalname: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.targetentitytype, ``)}`,
-                                viewids: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.viewids, ``)}`,
-                                visualizationid: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.visualizationid, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                entitylogicalname: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.targetentitytype, '')}`,
+                                viewids: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.viewids, '')}`,
+                                visualizationid: `${Helper.toStringWithDefault(row?.cell?.control?.parameters?.visualizationid, '')}`,
                                 chartpicker: `${Helper.to01WithDefault(row?.cell?.control?.parameters?.enablechartpicker, `0`)}`,
                                 viewpicker: `${Helper.to01WithDefault(row?.cell?.control?.parameters?.enableviewpicker, `0`)}`,
                                 rows: Helper.toNumberWithDefault(row?.cell?.$?.rowspan, 1),
@@ -574,9 +574,9 @@ export default (editor, opts = {}) => {
                                 ...rtb.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
-                                lib: `${Helper.toStringWithDefault(customControl?.parameters?.configurl?._, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
+                                lib: `${Helper.toStringWithDefault(customControl?.parameters?.configurl?._, '')}`,
                                 rows: Helper.toNumberWithDefault(row?.cell?.$?.rowspan, 1),
                                 required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
                                 disabled: `${Helper.to01WithDefault(row?.cell?.control?.$?.disabled, `0`)}`,
@@ -590,12 +590,12 @@ export default (editor, opts = {}) => {
                                 ...entity_optionset.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
                                 required: `${Helper.to01WithDefault(row?.cell?.control?.$?.isrequired, `0`)}`,
                                 disabled: `${Helper.to01WithDefault(row?.cell?.control?.$?.disabled, `0`)}`,
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`,
-                                para_entitylogicalname: `${Helper.toStringWithDefault(customControl?.parameters?.value?._, ``)}`
+                                para_entitylogicalname: `${Helper.toStringWithDefault(customControl?.parameters?.value?._, '')}`
                             });
 
                         });
@@ -606,12 +606,12 @@ export default (editor, opts = {}) => {
                                 ...advfind.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`,
-                                para_fetchxml: `${Helper.toStringWithDefault(customControl?.parameters?.fetchxml?._, ``)}`,
-                                para_entitylogicalname: `${Helper.toStringWithDefault(customControl?.parameters?.entitylogicalname?._, ``)}`,
-                                para_validationerrormessage: `${Helper.toStringWithDefault(customControl?.parameters?.validationerrormessage?._, ``)}`,
-                                para_isvalid: `${Helper.toStringWithDefault(customControl?.parameters?.isvalid?._, ``)}`,
+                                para_fetchxml: `${Helper.toStringWithDefault(customControl?.parameters?.fetchxml?._, '')}`,
+                                para_entitylogicalname: `${Helper.toStringWithDefault(customControl?.parameters?.entitylogicalname?._, '')}`,
+                                para_validationerrormessage: `${Helper.toStringWithDefault(customControl?.parameters?.validationerrormessage?._, '')}`,
+                                para_isvalid: `${Helper.toStringWithDefault(customControl?.parameters?.isvalid?._, '')}`,
                             });
                         });
                         const addAdvFindResult = ((container, row) => {
@@ -621,12 +621,12 @@ export default (editor, opts = {}) => {
                                 ...advfind_result.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`,
-                                para_fetchxml: `${Helper.toStringWithDefault(customControl?.parameters?.fetchxml?._, ``)}`,
-                                para_entitylogicalname: `${Helper.toStringWithDefault(customControl?.parameters?.entitylogicalname?._, ``)}`,
-                                para_layout_xml: `${Helper.toStringWithDefault(customControl?.parameters?.layoutxml?._, ``)}`,
-                                para_selected_records: `${Helper.toStringWithDefault(customControl?.parameters?.selectedrecords?._, ``)}`,
+                                para_fetchxml: `${Helper.toStringWithDefault(customControl?.parameters?.fetchxml?._, '')}`,
+                                para_entitylogicalname: `${Helper.toStringWithDefault(customControl?.parameters?.entitylogicalname?._, '')}`,
+                                para_layout_xml: `${Helper.toStringWithDefault(customControl?.parameters?.layoutxml?._, '')}`,
+                                para_selected_records: `${Helper.toStringWithDefault(customControl?.parameters?.selectedrecords?._, '')}`,
                             });
                         });
                         const addUpload = ((container, row) => {
@@ -636,11 +636,11 @@ export default (editor, opts = {}) => {
                                 ...upload.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`,
-                                para_attachment_file_name: `${Helper.toStringWithDefault(customControl?.parameters?.filename?._, ``)}`,
-                                para_uploaded_file_size: `${Helper.toStringWithDefault(customControl?.parameters?.size?._, ``)}`,
+                                para_attachment_file_name: `${Helper.toStringWithDefault(customControl?.parameters?.filename?._, '')}`,
+                                para_uploaded_file_size: `${Helper.toStringWithDefault(customControl?.parameters?.size?._, '')}`,
                             });
                         });
                         const addAdvFindAndResult = ((container, row) => {
@@ -650,12 +650,12 @@ export default (editor, opts = {}) => {
                                 ...advfind_and_result.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
                                 rows: Helper.toNumberWithDefault(row?.cell?.$?.rowspan, 1),
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`,
-                                para_fetchxml: `${Helper.toStringWithDefault(customControl?.parameters?.fetchxml?._, ``)}`,
-                                para_entitylogicalname: `${Helper.toStringWithDefault(customControl?.parameters?.entitylogicalname?._, ``)}`,
+                                para_fetchxml: `${Helper.toStringWithDefault(customControl?.parameters?.fetchxml?._, '')}`,
+                                para_entitylogicalname: `${Helper.toStringWithDefault(customControl?.parameters?.entitylogicalname?._, '')}`,
                             });
                         });
                         const addMultiselectLookup = ((container, row) => {
@@ -665,13 +665,13 @@ export default (editor, opts = {}) => {
                                 ...multiselectlookup.getAttributes(),
                                 id: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.$?.id)}`,
                                 uniqueid: `${Helper.cleanGUIDWithDefaultNewGuid(row?.cell?.control?.$?.uniqueid)}`,
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
-                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
+                                label: `${Helper.toStringWithDefault(row?.cell?.labels?.label?.$?.description, '')}`,
                                 visible: `${Helper.to01WithDefault(row?.cell?.$?.visible, '1')}`,
-                                para_targetentities: `${Helper.toStringWithDefault(customControl?.parameters?.targetentities?._, ``)}`,
-                                para_selectedentities: `${Helper.toStringWithDefault(customControl?.parameters?.selectedentities?._, ``)}`,
-                                para_isdisabled: `${Helper.toStringWithDefault(customControl?.parameters?.isdisabled?._, ``)}`,
-                                para_disablemru: `${Helper.toStringWithDefault(customControl?.parameters?.disablemru?._, ``)}`,
+                                para_targetentities: `${Helper.toStringWithDefault(customControl?.parameters?.targetentities?._, '')}`,
+                                para_selectedentities: `${Helper.toStringWithDefault(customControl?.parameters?.selectedentities?._, '')}`,
+                                para_isdisabled: `${Helper.toStringWithDefault(customControl?.parameters?.isdisabled?._, '')}`,
+                                para_disablemru: `${Helper.toStringWithDefault(customControl?.parameters?.disablemru?._, '')}`,
                             });
                         });
                         const addUnknow = ((container, row) => {
@@ -690,7 +690,7 @@ export default (editor, opts = {}) => {
 
                             unknown.setAttributes({
                                 ...unknown.getAttributes(),
-                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, ``)}`,
+                                logicalname: `${Helper.toStringWithDefault(row?.cell?.control?.$?.id, '')}`,
                                 row: xml,
                                 control_description: control_description
                             });
@@ -881,7 +881,7 @@ export default (editor, opts = {}) => {
                                     (tab?.tabfooter?.rows?.row?.length ? [...tab?.tabfooter?.rows?.row] : [tab?.tabfooter?.rows?.row]).map((row) => {
                                         (row?.cell?.length ? [...row?.cell] : [row?.cell]).map((cell) => {
                                             const event_onclick = (events?.event?.length ? [...events?.event] : [events?.event]).filter((x) => {
-                                                return x?.$?.name?.toLowerCase() === 'onclick' && Helper.toStringWithDefault(x?.$?.attribute, ``) === Helper.toStringWithDefault(cell?.control?.$?.id, ``)
+                                                return x?.$?.name?.toLowerCase() === 'onclick' && Helper.toStringWithDefault(x?.$?.attribute, '') === Helper.toStringWithDefault(cell?.control?.$?.id, '')
                                             });
                                             addButton(tabfooter_c, cell, event_onclick[0]);
                                         });
@@ -899,7 +899,7 @@ export default (editor, opts = {}) => {
                             (footer?.rows?.row?.length ? [...footer?.rows?.row] : [footer?.rows?.row]).map((row) => {
                                 (row?.cell?.length ? [...row?.cell] : [row?.cell]).map((cell) => {
                                     const event_onclick = (events?.event?.length ? [...events?.event] : [events?.event]).filter((x) => {
-                                        return x?.$?.name?.toLowerCase() === 'onclick' && Helper.toStringWithDefault(x?.$?.attribute, ``) === Helper.toStringWithDefault(cell?.control?.$?.id, ``)
+                                        return x?.$?.name?.toLowerCase() === 'onclick' && Helper.toStringWithDefault(x?.$?.attribute, '') === Helper.toStringWithDefault(cell?.control?.$?.id, '')
                                     });
                                     addButton(footer_c, cell, event_onclick[0]);
                                 });
@@ -920,17 +920,17 @@ export default (editor, opts = {}) => {
                         await loadForm(output);
                     }
                 } catch {
-                    loadForm(
-                        {
-                            "ok": true,
-                            "mesage": "",
-                            "formxml": "",
-                            "languagecode": "",
-                            "logicalname": "",
-                            "description": "",
-                            "fulldescription": ""
-                        }
-                    );
+                    const debug =
+                    {
+                        //"ok": true,
+                        //"mesage": "",
+                        //"formxml": "<form><formparameters><querystringparameter name=\"pl_parameter_input\" type=\"SafeString\" /></formparameters><events><event name=\"onload\" application=\"false\" active=\"false\"><Handlers><Handler functionName=\"assign_dialog.OnLoad\" libraryName=\"$webresource:pl_/js/assign_dialog.js\" handlerUniqueId=\"{F4981653-A6C6-4AF0-A505-601E03E4D060}\" enabled=\"true\" parameters=\"\" passExecutionContext=\"true\" /></Handlers></event><event name=\"onclick\" application=\"false\" active=\"false\" attribute=\"pl_button_ok\"><Handlers><Handler functionName=\"assign_dialog.OnClickOk\" libraryName=\"$webresource:pl_/js/assign_dialog.js\" handlerUniqueId=\"{9F1D16B0-0E18-4300-B523-7A23CA4C305A}\" enabled=\"true\" parameters=\"\" passExecutionContext=\"true\" /></Handlers></event><event name=\"onclick\" application=\"false\" active=\"false\" attribute=\"pl_button_cancel\"><Handlers><Handler functionName=\"assign_dialog.OnClickCancel\" libraryName=\"$webresource:pl_/js/assign_dialog.js\" handlerUniqueId=\"{D3D13132-E146-46C1-B4FD-77F1EDBA8A81}\" enabled=\"true\" parameters=\"\" passExecutionContext=\"true\" /></Handlers></event></events><header id=\"{AB78554D-655A-44EC-8CA9-2B4305B67D69}\"><rows><row><cell id=\"{9D481FE2-68D5-4354-A3CB-16B35BFD2AB1}\" visible=\"true\" rowspan=\"1\"><labels><label description=\"Assign\" languagecode=\"1033\" /></labels><control uniqueid=\"{67FB8FD9-6226-44FF-BC6E-2F6C3A88BFF5}\" id=\"pl_label_header\" classid=\"{39354E4A-5015-4D74-8031-EA9EB73A1322}\" isunbound=\"true\"><parameters><IsTitle>true</IsTitle></parameters></control></cell></row><row><cell id=\"{3AC2B1E3-EBA3-4607-A6D3-33915708B643}\" visible=\"true\" rowspan=\"1\"><labels><label description=\"You have selected 1 record. To whom would you like to assign it?\" languagecode=\"1033\" /></labels><control uniqueid=\"{40B0C36E-119B-4E42-833E-308BB2EED7CB}\" id=\"pl_label_header_sub\" classid=\"{39354E4A-5015-4D74-8031-EA9EB73A1322}\" isunbound=\"true\"><parameters><IsTitle>false</IsTitle></parameters></control></cell></row></rows></header><tabs><tab id=\"{DB784C1E-AA26-4FFB-B843-8D753B91D201}\" name=\"pl_tab\" visible=\"true\" expanded=\"true\" verticallayout=\"true\" locklevel=\"0\"><labels><label description=\"\" languagecode=\"1033\" /></labels><columns><column width=\"100%\"><sections><section id=\"{B54B70EA-DA8F-4155-8A7C-A42A5646B0AC}\" name=\"pl_section\" labelwidth=\"115\" showlabel=\"false\" visible=\"true\" celllabelalignment=\"Left\" celllabelposition=\"Left\"><labels><label description=\"\" languagecode=\"1033\" /></labels><rows><row><cell id=\"{ED09D50D-2B41-4F0D-BF1A-00E75090526C}\" visible=\"true\"><labels><label description=\"Assign to\" languagecode=\"1033\" /></labels><control uniqueid=\"{07829A31-A5FD-4C8A-9A9B-BE8B239B6D5D}\" id=\"pl_assign_to_code\" classid=\"{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}\" isrequired=\"true\" disabled=\"false\" isunbound=\"true\"><parameters><OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId></parameters></control></cell></row><row><cell id=\"{FFE3B044-62E0-4EEA-9616-9469D7204D21}\" visible=\"true\"><labels><label description=\"Lookup\" languagecode=\"1033\" /></labels><control uniqueid=\"{10410A06-F0A1-4AE7-88A7-5AB7CE552DDA}\" id=\"pl_userteam_id\" classid=\"{270BD3DB-D9AF-4782-9025-509E298DEC0A}\" isrequired=\"true\" disabled=\"false\" isunbound=\"true\"><parameters><TargetEntities><TargetEntity><DefaultViewId>{00000000-0000-0000-00AA-000010001026}</DefaultViewId><EntityLogicalName>team</EntityLogicalName></TargetEntity></TargetEntities><DisableViewPicker>true</DisableViewPicker><DisableQuickFind>true</DisableQuickFind><DisableMru>true</DisableMru><AutoResolve>true</AutoResolve><useMainFormDialogForCreate>false</useMainFormDialogForCreate><useMainFormDialogForEdit>false</useMainFormDialogForEdit><AvailableViewIds>{00000000-0000-0000-00AA-000010001026}</AvailableViewIds></parameters></control></cell></row></rows></section></sections></column></columns></tab></tabs><footer id=\"{4287FE50-32F7-4587-90BC-913657D140B1}\"><rows><row><cell id=\"{AC92F9AF-D0B0-4BC0-9C08-37C7081AC966}\" visible=\"true\"><labels><label description=\"Ok\" languagecode=\"1033\" /></labels><control uniqueid=\"{5C45B04D-9E29-4DD9-A1AC-0732837E1A9D}\" id=\"pl_button_ok\" classid=\"{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}\" disabled=\"false\" isunbound=\"true\" /></cell><cell id=\"{C44D937F-4179-4D5C-8E70-3454F8E4783B}\" visible=\"true\"><labels><label description=\"Cancel\" languagecode=\"1033\" /></labels><control uniqueid=\"{F32B48D0-7D0F-4FF8-8F43-D2007FA29A46}\" id=\"pl_button_cancel\" classid=\"{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}\" disabled=\"false\" isunbound=\"true\" /></cell></row></rows></footer></form>",
+                        //"languagecode": 1033,
+                        //"logicalname": "pl_assign_dialog",
+                        //"description": "Assign record to user/team.",
+                        //"fulldescription": "Allow user can select one or more records then assign to user/team."
+                    }
+                    loadForm(debug);
                 }
             },
             stop(editor, sender) {
@@ -1130,7 +1130,7 @@ export default (editor, opts = {}) => {
                 tab01.setAttributes({ ...tab01.getAttributes(), logicalname: 'pl_tab_label' });
                 const tab01_sections = tab01.findType("SectionsComponent")[0];
                 const tab01_section = tab01_sections.findType("SectionComponent")[0];
-                tab01_section.setAttributes({ ...tab01_section.getAttributes(), logicalname: 'pl_tab01_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab01_section.setAttributes({ ...tab01_section.getAttributes(), logicalname: 'pl_tab01_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const label1 = tab01_section.append(block_label)[0];
                 label1.setAttributes({ ...label1.getAttributes(), rows: '1', label: `Tab  1/${totalTabs}: LABEL`, visible: '1', logicalname: 'pl_label1' });
@@ -1192,7 +1192,7 @@ export default (editor, opts = {}) => {
                 tab02.setAttributes({ ...tab02.getAttributes(), logicalname: 'pl_tab_textbox' });
                 const tab02_sections = tab02.findType("SectionsComponent")[0];
                 const tab02_section = tab02_sections.findType("SectionComponent")[0];
-                tab02_section.setAttributes({ ...tab02_section.getAttributes(), logicalname: 'pl_tab02_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab02_section.setAttributes({ ...tab02_section.getAttributes(), logicalname: 'pl_tab02_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const textbox1 = tab02_section.append(block_textbox)[0];
                 textbox1.setAttributes({ ...textbox1.getAttributes(), logicalname: 'pl_textbox1', textboxtype: 'Text', label: 'Text', maxlength: 20, required: '1' });
@@ -1224,7 +1224,7 @@ export default (editor, opts = {}) => {
                 tab03.setAttributes({ ...tab03.getAttributes(), logicalname: 'pl_tab_textarea' });
                 const tab03_sections = tab03.findType("SectionsComponent")[0];
                 const tab03_section = tab03_sections.findType("SectionComponent")[0];
-                tab03_section.setAttributes({ ...tab03_section.getAttributes(), logicalname: 'pl_tab03_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab03_section.setAttributes({ ...tab03_section.getAttributes(), logicalname: 'pl_tab03_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const textarea1 = tab03_section.append(block_textarea)[0];
                 textarea1.setAttributes({ ...textarea1.getAttributes(), logicalname: 'pl_textarea1', label: 'Text Area', maxlength: 2000, rows: 5, required: '1' });
@@ -1248,7 +1248,7 @@ export default (editor, opts = {}) => {
                 tab04.setAttributes({ ...tab04.getAttributes(), logicalname: 'pl_tab_datetime' });
                 const tab04_sections = tab04.findType("SectionsComponent")[0];
                 const tab04_section = tab04_sections.findType("SectionComponent")[0];
-                tab04_section.setAttributes({ ...tab04_section.getAttributes(), logicalname: 'pl_tab04_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab04_section.setAttributes({ ...tab04_section.getAttributes(), logicalname: 'pl_tab04_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const datetime1 = tab04_section.append(block_datetime)[0];
                 datetime1.setAttributes({ ...datetime1.getAttributes(), logicalname: 'pl_datetime1', datetimetype: 'DateAndTime', label: 'Date Time', required: '1' });
@@ -1277,7 +1277,7 @@ export default (editor, opts = {}) => {
                 tab05.setAttributes({ ...tab05.getAttributes(), logicalname: 'pl_tab_number' });
                 const tab05_sections = tab05.findType("SectionsComponent")[0];
                 const tab05_section = tab05_sections.findType("SectionComponent")[0];
-                tab05_section.setAttributes({ ...tab05_section.getAttributes(), logicalname: 'pl_tab05_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab05_section.setAttributes({ ...tab05_section.getAttributes(), logicalname: 'pl_tab05_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const number1 = tab05_section.append(block_number)[0];
                 number1.setAttributes({ ...number1.getAttributes(), logicalname: 'pl_number1', numbertype: 'WholeNumber', label: 'Whole Number', required: '1', minvalue: 1, maxvalue: 100 });
@@ -1309,7 +1309,7 @@ export default (editor, opts = {}) => {
                 tab06.setAttributes({ ...tab06.getAttributes(), logicalname: 'pl_tab_lookup' });
                 const tab06_sections = tab06.findType("SectionsComponent")[0];
                 const tab06_section = tab06_sections.findType("SectionComponent")[0];
-                tab06_section.setAttributes({ ...tab06_section.getAttributes(), logicalname: 'pl_tab06_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab06_section.setAttributes({ ...tab06_section.getAttributes(), logicalname: 'pl_tab06_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const lookup1 = tab06_section.append(block_lookup)[0];
                 lookup1.setAttributes({ ...lookup1.getAttributes(), logicalname: 'pl_lookup1', label: 'Lookup', entitylogicalname01: 'account', viewid01: `${viewid_AccountLookupView},${viewid_ActiveAccounts}`, usemainformdialogforcreate: '1', usemainformdialogforedit: '1', required: '1' });
@@ -1338,7 +1338,7 @@ export default (editor, opts = {}) => {
                 tab07.setAttributes({ ...tab07.getAttributes(), logicalname: 'pl_tab_regarding' });
                 const tab07_sections = tab07.findType("SectionsComponent")[0];
                 const tab07_section = tab07_sections.findType("SectionComponent")[0];
-                tab07_section.setAttributes({ ...tab07_section.getAttributes(), logicalname: 'pl_tab07_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab07_section.setAttributes({ ...tab07_section.getAttributes(), logicalname: 'pl_tab07_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const regarding1 = tab07_section.append(block_regarding)[0];
                 regarding1.setAttributes({ ...regarding1.getAttributes(), logicalname: 'pl_regarding1', label: 'Regarding', required: '1' });
@@ -1363,10 +1363,10 @@ export default (editor, opts = {}) => {
                 tab08.setAttributes({ ...tab08.getAttributes(), logicalname: 'pl_tab_iframe' });
                 const tab08_sections = tab08.findType("SectionsComponent")[0];
                 const tab08_section = tab08_sections.findType("SectionComponent")[0];
-                tab08_section.setAttributes({ ...tab08_section.getAttributes(), logicalname: 'pl_tab08_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab08_section.setAttributes({ ...tab08_section.getAttributes(), logicalname: 'pl_tab08_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const iframe1 = tab08_section.append(block_iframe)[0];
-                iframe1.setAttributes({ ...iframe1.getAttributes(), logicalname: 'pl_iframe1', label: ``, url: 'pl_/html/WebResource.html', rows: 5 });
+                iframe1.setAttributes({ ...iframe1.getAttributes(), logicalname: 'pl_iframe1', label: '', url: 'pl_/html/WebResource.html', rows: 5 });
                 const hide = tab08_section.append(block_iframe)[0];
                 hide.setAttributes({ ...hide.getAttributes(), logicalname: 'pl_iframe_hide', label: 'HIDE', visible: `0`, rows: 3, url: 'pl_/html/WebResource.html' });
 
@@ -1386,7 +1386,7 @@ export default (editor, opts = {}) => {
                 tab09.setAttributes({ ...tab09.getAttributes(), logicalname: 'pl_tab_dropdown' });
                 const tab09_sections = tab09.findType("SectionsComponent")[0];
                 const tab09_section = tab09_sections.findType("SectionComponent")[0];
-                tab09_section.setAttributes({ ...tab09_section.getAttributes(), logicalname: 'pl_tab09_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab09_section.setAttributes({ ...tab09_section.getAttributes(), logicalname: 'pl_tab09_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const dropdown1 = tab09_section.append(block_dropdown)[0];
                 dropdown1.setAttributes({ ...dropdown1.getAttributes(), logicalname: 'pl_dropdown1', label: 'Language', dropdowntype: 'Language', required: '1' });
@@ -1414,7 +1414,7 @@ export default (editor, opts = {}) => {
                 tab10.setAttributes({ ...tab10.getAttributes(), logicalname: 'pl_tab_optionset' });
                 const tab10_sections = tab10.findType("SectionsComponent")[0];
                 const tab10_section = tab10_sections.findType("SectionComponent")[0];
-                tab10_section.setAttributes({ ...tab10_section.getAttributes(), logicalname: 'pl_tab10_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab10_section.setAttributes({ ...tab10_section.getAttributes(), logicalname: 'pl_tab10_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const optionset1 = tab10_section.append(block_optionset)[0];
                 optionset1.setAttributes({ ...optionset1.getAttributes(), logicalname: 'pl_optionset1', optionsettype: 'OptionSet', label: 'OptionSet Dynamic', dynamic: '1', required: '1' });
@@ -1450,7 +1450,7 @@ export default (editor, opts = {}) => {
                 tab11.setAttributes({ ...tab11.getAttributes(), logicalname: 'pl_tab_twooptions' });
                 const tab11_sections = tab11.findType("SectionsComponent")[0];
                 const tab11_section = tab11_sections.findType("SectionComponent")[0];
-                tab11_section.setAttributes({ ...tab11_section.getAttributes(), logicalname: 'pl_tab11_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab11_section.setAttributes({ ...tab11_section.getAttributes(), logicalname: 'pl_tab11_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const twooptions1 = tab11_section.append(block_twooptions)[0];
                 twooptions1.setAttributes({ ...twooptions1.getAttributes(), logicalname: 'pl_twooptions1', label: 'TwoOptions Dropdown', twooptionstype: 'Dropdown', entitylogicalname01: 'contact', optionsetname: 'contact_donotemail', required: '1', default: `0` });
@@ -1479,7 +1479,7 @@ export default (editor, opts = {}) => {
                 tab12.setAttributes({ ...tab12.getAttributes(), logicalname: 'pl_tab_subgrid' });
                 const tab12_sections = tab12.findType("SectionsComponent")[0];
                 const tab12_section = tab12_sections.findType("SectionComponent")[0];
-                tab12_section.setAttributes({ ...tab12_section.getAttributes(), logicalname: 'pl_tab12_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab12_section.setAttributes({ ...tab12_section.getAttributes(), logicalname: 'pl_tab12_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const subgrid1 = tab12_section.append(block_subgrid)[0];
                 subgrid1.setAttributes({ ...subgrid1.getAttributes(), logicalname: 'pl_subgrid1', label: 'Accounts', entitylogicalname: 'account', viewids: `${viewid_AccountLookupView},${viewid_ActiveAccounts}`, visible: '1', contextual: '1', quickfind: '1', viewpicker: '1' });
@@ -1503,7 +1503,7 @@ export default (editor, opts = {}) => {
                 tab13.setAttributes({ ...tab13.getAttributes(), logicalname: 'pl_tab_chart' });
                 const tab13_sections = tab13.findType("SectionsComponent")[0];
                 const tab13_section = tab13_sections.findType("SectionComponent")[0];
-                tab13_section.setAttributes({ ...tab13_section.getAttributes(), logicalname: 'pl_tab13_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab13_section.setAttributes({ ...tab13_section.getAttributes(), logicalname: 'pl_tab13_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const chart1 = tab13_section.append(block_chart)[0];
                 chart1.setAttributes({ ...chart1.getAttributes(), logicalname: 'pl_chart1', label: 'Chart', entitylogicalname: 'account', viewids: `${viewid_AllAccounts},${viewid_ActiveAccounts}`, visible: '1', visualizationid: `${visualizationid_NewAccountsByMonth}`, chartpicker: '1', viewpicker: '1' });
@@ -1528,7 +1528,7 @@ export default (editor, opts = {}) => {
                 tab14.setAttributes({ ...tab14.getAttributes(), logicalname: 'pl_tab_rich_text_box' });
                 const tab15_sections = tab14.findType("SectionsComponent")[0];
                 const tab15_section = tab15_sections.findType("SectionComponent")[0];
-                tab15_section.setAttributes({ ...tab15_section.getAttributes(), logicalname: 'pl_tab14_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab15_section.setAttributes({ ...tab15_section.getAttributes(), logicalname: 'pl_tab14_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const rtb1 = tab15_section.append(block_rich_text_box)[0];
                 rtb1.setAttributes({ ...rtb1.getAttributes(), logicalname: 'pl_rtb1', visible: '1', lib: 'pl_/json/RTEGlobalConfiguration.json', rows: 5 });
@@ -1554,7 +1554,7 @@ export default (editor, opts = {}) => {
                 tab15.setAttributes({ ...tab15.getAttributes(), logicalname: 'pl_tab_entity_optionset' });
                 const tab15_sections = tab15.findType("SectionsComponent")[0];
                 const tab15_section = tab15_sections.findType("SectionComponent")[0];
-                tab15_section.setAttributes({ ...tab15_section.getAttributes(), logicalname: 'pl_tab15_section1', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab15_section.setAttributes({ ...tab15_section.getAttributes(), logicalname: 'pl_tab15_section1', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const entity_optionset1 = tab15_section.append(block_entity_optionset)[0];
                 entity_optionset1.setAttributes({ ...entity_optionset1.getAttributes(), logicalname: 'pl_entity_optionset1', label: 'Entity OptionSet', required: '1', para_entitylogicalname: para_entitylogicalname.getAttributes().logicalname });
@@ -1580,7 +1580,7 @@ export default (editor, opts = {}) => {
                 tab16.setAttributes({ ...tab16.getAttributes(), logicalname: 'pl_tab_advfind' });
                 const tab16_sections = tab16.findType("SectionsComponent")[0];
                 const tab16_section = tab16_sections.findType("SectionComponent")[0];
-                tab16_section.setAttributes({ ...tab16_section.getAttributes(), logicalname: 'pl_tab16_section', label: ``, labelwidth: 200, alignment: 'Left', position: 'Left' });
+                tab16_section.setAttributes({ ...tab16_section.getAttributes(), logicalname: 'pl_tab16_section', label: '', labelwidth: 200, alignment: 'Left', position: 'Left' });
 
                 const advfind1 = tab16_section.append(block_advfind)[0];
                 advfind1.setAttributes({ ...advfind1.getAttributes(), logicalname: 'pl_advfind1', visible: '1', para_fetchxml: para_fetchxml.getAttributes().logicalname, para_entitylogicalname: para_entitylogicalname.getAttributes().logicalname, para_validationerrormessage: para_validationerrormessage.getAttributes().logicalname, para_isvalid: para_isvalid.getAttributes().logicalname });
@@ -1805,8 +1805,8 @@ export default (editor, opts = {}) => {
                             pl_para_validationerrormessage: "",
                             pl_para_isvalid: true,
                             pl_para_layout_xml: "<grid name=\"resultset\" object=\"1\" jump=\"name\" select=\"1\" icon=\"1\" preview=\"1\"><row name=\"result\" id=\"accountid\"><cell name=\"name\" width=\"300\" /><cell name=\"primarycontactid\" width=\"125\" /><cell name=\"telephone1\" width=\"125\" /></row></grid>",
-                            pl_para_selected_records: ``,
-                            pl_para_entity_type: ``
+                            pl_para_selected_records: '',
+                            pl_para_entity_type: ''
                         };
                     }
                     Crm.getXrm().Navigation.openDialog(metadata.logicalname, options, parameters);

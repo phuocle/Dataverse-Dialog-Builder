@@ -115,7 +115,7 @@ export default (editor, options) => {
                 toFormXml() {
                     const model = this;
                     const attr = model.getAttributes();
-                    let formXml = ``;
+                    let formXml = '';
                     model.components().map((comp) => {
                         if (!comp.is('HiddenComponent')) {
                             formXml += comp.toFormXml();
@@ -140,8 +140,8 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const visibleClass = attr.visible !== '1' ? ' Visibled' : ``;
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.labelwidth) ? 'BackgroundRed' : ``;
+                    const visibleClass = attr.visible !== '1' ? ' Visibled' : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.labelwidth) ? 'BackgroundRed' : '';
                     el.firstChild.innerHTML = `${attr.label ?? 'Section'}` + " " + Helper.ShowHideLogicalName(editor, attr.logicalname);
                     model.setClass(`DDBSection ${errorClass}${visibleClass}`);
                     return this;

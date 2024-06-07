@@ -109,7 +109,7 @@ export default (editor, options) => {
                 toFormXml() {
                     const model = this;
                     const attr = model.getAttributes();
-                    let rowsAdded = ``;
+                    let rowsAdded = '';
                     if (Number(attr.rows) > 1) {
                         for (let i = 1; i < Number(attr.rows); i += 1) {
                             rowsAdded += `<row />`;
@@ -135,10 +135,10 @@ ${rowsAdded}
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const titleClass = Helper.isTrue(attr.istitle) ? `Title` : ``;
-                    const visibleClass = Helper.isFalse(attr.visible) ? `Visibled` : ``;
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.rows) ? `BackgroundRed` : ``;
-                    const rowsText = Number(attr.rows ?? 0) > 1 ? `(${attr.rows} rows)` : ``;
+                    const titleClass = Helper.isTrue(attr.istitle) ? `Title` : '';
+                    const visibleClass = Helper.isFalse(attr.visible) ? `Visibled` : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.rows) ? `BackgroundRed` : '';
+                    const rowsText = Number(attr.rows ?? 0) > 1 ? `(${attr.rows} rows)` : '';
                     model.setClass(`DDBLabel ${titleClass} ${errorClass} ${visibleClass}`);
                     el.innerHTML = `${Helper.UndefinedToEmpty(attr.label) || 'Label'} ${rowsText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}</span>`;
                 },

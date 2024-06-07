@@ -84,7 +84,7 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.languagecode) || Helper.isEmpty(attr.description) ? 'BackgroundRed' : ``;
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.languagecode) || Helper.isEmpty(attr.description) ? 'BackgroundRed' : '';
                     el.firstChild.innerHTML = `Metadata ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                     model.setClass(`DDBMetadata ${errorClass}`);
                 }

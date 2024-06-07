@@ -71,7 +71,7 @@ export default (editor, opts = {}) => {
             const dynamicLoadEvents = () => {
                 const eventid = component.get('traits').where({ name: 'eventid' })[0];
                 if (!eventid) return;
-                const options = [{ id: ``, name: ' ' }];
+                const options = [{ id: '', name: ' ' }];
                 const events = editor.DomComponents.getWrapper().find('.DDBEvent');
                 if (!events) return;
                 events.map((comp) => {

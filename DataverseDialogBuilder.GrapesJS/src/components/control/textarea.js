@@ -122,7 +122,7 @@ export default (editor, options) => {
                 toFormXml() {
                     const model = this;
                     const attr = model.getAttributes();
-                    let rowsAdded = ``;
+                    let rowsAdded = '';
                     if (Number(attr.rows) > 1) {
                         for (let i = 1; i < Number(attr.rows); i += 1) {
                             rowsAdded += `<row />`;
@@ -149,15 +149,15 @@ ${rowsAdded}
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.maxlength) || Helper.isEmpty(attr.rows) ? 'BackgroundRed' : ``;
-                    const visibleClass = attr.visible !== '1' ? 'Visibled' : ``;
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.maxlength) || Helper.isEmpty(attr.rows) ? 'BackgroundRed' : '';
+                    const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
                     const rowsClass = Helper.isEmpty(attr.rows) || Number(attr.rows) <= 10 ? `Row${attr.rows}` : 'Row10';
-                    const requiredText = attr.required === '1' ? Const.Required : ``;
-                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : ``;
+                    const requiredText = attr.required === '1' ? Const.Required : '';
+                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : '';
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);
-                            comp.view.el.innerHTML = `${disabledIcon} ${attr.label ?? ``} ${requiredText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
+                            comp.view.el.innerHTML = `${disabledIcon} ${attr.label ?? ''} ${requiredText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                         }
                         if (comp.view.el.classList.contains('DDBControlControl')) {
                             comp.setClass(`DDBControlControl ${rowsClass}`);

@@ -67,9 +67,9 @@ export default (editor, options) => {
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.lib?.toLowerCase()) ? 'BackgroundRed' : ``;
+                    const errorClass = Helper.isEmpty(attr.lib?.toLowerCase()) ? 'BackgroundRed' : '';
                     model.setClass(`DDBJavaScript ${errorClass}`);
-                    el.innerHTML = `<span class='Bold'>JavaScript:</span> ${attr.lib ?? ``}`;
+                    el.innerHTML = `<span class='Bold'>JavaScript:</span> ${attr.lib ?? ''}`;
                 }
             }
         }
