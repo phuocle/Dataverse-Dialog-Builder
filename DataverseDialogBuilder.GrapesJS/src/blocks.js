@@ -26,7 +26,7 @@ export default (editor, opts = {}) => {
         content: `<fieldset class="DDBTab"><legend>Tab</legend><fieldset class="DDBSections"><legend>Sections</legend><fieldset class="DDBSection"><legend></legend></fieldset></fieldset></fieldset>`
     });
     blockManager.add('block_section', {
-        label: 'Secion',
+        label: 'Section',
         category: '02. Container',
         attributes: { class: 'fa fa-columns' },
         content: `<fieldset class='DDBSection'><legend></legend></fieldset>`
@@ -129,7 +129,7 @@ export default (editor, opts = {}) => {
         content: `<div class='DDBControlDropDown'><div class='DDBControlLabel'></div><div class='DDBControlControl'></div></div>`
     });
     blockManager.add('block_optionset', {
-        label: 'Optionset',
+        label: 'OptionSet',
         category: '03. Control',
         attributes: { class: 'fa fa-caret-square-o-down' },
         content: `<div class='DDBControlOptionSet'><div class='DDBControlLabel'></div><div class='DDBControlControl'></div></div>`
