@@ -22,7 +22,7 @@ namespace DataverseDialogBuilder.Console
   </entity>
 </fetch>";
             var rows = AppSettings.Service.RetrieveMultiple(new FetchExpression(fetchXml));
-            var folder = @"..\..\..\DataverseDialogBuilder.Others\xml";
+            var folder = @"..\..\..\DataverseDialogBuilder.Others\dialogs";
             foreach (var entity in rows.Entities)
             {
                 var file = Path.Combine(folder, entity.GetAttributeValue<string>("uniquename") + ".xml");

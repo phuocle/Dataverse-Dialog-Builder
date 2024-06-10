@@ -1,5 +1,5 @@
 # Dataverse Dialog Builder
-Welcome to ```Dataverse Dialog Builder```, a managed solution helps you build Microsoft Dataverse OOB dialogs, such as the Assign dialog, Close Opportunity dialog, ...
+Welcome to ```Dataverse Dialog Builder```, a managed solution helps you build Microsoft Dataverse OOB dialogs, such as the ```Assign dialog```, ```Close Opportunity dialog```, ...
 
 If you are a Microsoft Dataverse developer, especially when working on model-driven app, you encounter a lot of dialogs like the ones shown in the images below.\
 ![OOB](DataverseDialogBuilder.Others/images/oob.gif)
@@ -47,7 +47,7 @@ formContext.ui.moveTo(...)
 
 **12.** How you do that?
 >1. If you are a Microsoft Dataverse developer, you are likely familiar with some form types: ```Main```, ```Quick Create```, ```Quick View```, ```Card```, ```...```. But did you know that there is another form type called ```Dialog``` (```OptionSet value = 8```)? You can build a ```FetchXml``` query with the filter value ```8``` for the attribute ```type``` in the ```systemform``` entity in your current environment to retrieve all your dialogs.
->2. Navigate to the ```\DataverseDialogBuilder.Others\xml``` folder, where you'll find ```324``` dialog files that I obtained from Microsoft ```first-party apps```. I believe these files will continue to grow in the future as more ```first-party apps``` are developed by Microsoft.
+>2. Navigate to the ```\DataverseDialogBuilder.Others\dialogs``` folder, where you'll find ```324``` dialog files that I obtained from Microsoft ```first-party apps```. I believe these files will continue to grow in the future as more ```first-party apps``` are developed by Microsoft.
 > 3. Consider a scenario where you need to examine a single file. Your task involves manually constructing the ```FormXml``` and subsequently saving it to the ```systemform``` entity. This manual process can be challenging. However, the ```Dataverse Dialog Builder``` solution simplifies this by assisting you in building ```FormXml``` and seamlessly saving it back to the ```systemform``` entity.
 
 **13.** Try, Errors, Results -> Try, Errors, Results -> ...
