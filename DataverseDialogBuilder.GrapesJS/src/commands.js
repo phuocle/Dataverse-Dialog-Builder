@@ -79,7 +79,7 @@ export default (editor, opts = {}) => {
             <li>Released a commercial CRM add-on to AppSource: <a target="_blank" href='https://appsource.microsoft.com/en-us/product/dynamics-365/phuocle.d365-icons-and-tooltips'>Icons and Tooltips with D365</a> - Allow you customize Icons and Tooltips without help from your developer.</li>
             <li>Released <a target="_blank" href='https://github.com/phuocle/Dynamics-Crm-DevKit'>DynamicsCrm.DevKit</a> - a Visual Studio extensions - that help CRM developer can easy develop.</li>
             <li>Released <a target="_blank" href='https://github.com/phuocle/View-FetchXML'>View-FetchXML</a> - a small tool that help CRM developer easy copy/paste FetchXml code.</li>
-            <li>Released <a target="_blank" href='https://github.com/phuocle/DataverseDialogBuilder'>Dataverse Dialog Builder</a> - A WYSIWYG tool to create crm form dialog quickly.</li>
+            <li>Released <a target="_blank" href='https://github.com/phuocle/Dataverse-Dialog-Builder'>Dataverse Dialog Builder</a> - A WYSIWYG tool to create crm form dialog quickly.</li>
 			</ul>
 		</div>`;
 
@@ -103,7 +103,7 @@ export default (editor, opts = {}) => {
         return {
             run(editor, sender) {
                 editor.Panels.getButton('options', 'button_github').set('active', 0);
-                window.open('https://github.com/phuocle/DataverseDialogBuilder');
+                window.open('https://github.com/phuocle/Dataverse-Dialog-Builder');
                 setTimeout(() => { editor.stopCommand('command_github'); }, 1);
             },
             stop(editor, sender) {
