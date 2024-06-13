@@ -21,7 +21,7 @@ namespace DataverseDialogBuilder.Console
             //DebugPostDataverseDialogBuilderSynchronous.GetVisualizationId();
             //DebugPostDataverseDialogBuilderSynchronous.IsGlobalOptionSet();
             //DebugPostDataverseDialogBuilderSynchronous.ParseLocalOptionSet();
-            //Others.DownloadAllDialogs();
+            Others.DownloadAllDialogs();
         }
     }
 }

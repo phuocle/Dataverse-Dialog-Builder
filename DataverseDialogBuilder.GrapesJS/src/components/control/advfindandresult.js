@@ -96,6 +96,7 @@ export default (editor, options) => {
                     model.listenTo(model, 'change:attributes:visible', model.changedAdvFindAndResult);
                     model.listenTo(model, 'change:attributes:para_fetchxml', model.changedAdvFindAndResult);
                     model.listenTo(model, 'change:attributes:para_entitylogicalname', model.changedAdvFindAndResult);
+                    model.listenTo(model, 'change:attributes:rows', model.changedAdvFindAndResult);
                 },
                 changedAdvFindAndResult() {
                     this?.view?.render();
