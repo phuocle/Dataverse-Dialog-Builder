@@ -3,7 +3,6 @@ import * as Crm from './crm';
 import * as ControlName from './controlname';
 import xmlFormat from 'xml-formatter';
 import { v4 as uuidv4 } from 'uuid';
-import * as GUID from './guid';
 const helpers = {
     toString: (value) => {
         if (value === undefined || value == null) return '';
@@ -304,18 +303,8 @@ const helpers = {
                     controlDescription += getControlDescription(attr.uniqueid, `${ControlName.MscrmControls_FieldControls_ToggleControl}`, parameters);
                 }
             });
-    //        const test_test_parameters = `
-    //<parameters>
-    //    <targetEntities static="true" type="SingleLine.Text">account,contact,team</targetEntities>
-    //    <selectedEntities type="SingleLine.Text">pl_para_entity_records</selectedEntities>
-    //    <isDisabled type="SingleLine.Text">pl_para_is_disabled</isDisabled>
-    //    <disableMru type="SingleLine.Text">pl_para_is_disable_mru</disableMru>
-    //</parameters>`;
-    //        const test_test = getControlDescription(`00000000-0000-0000-0000-000000000001`, `MscrmControls.AppCommon.PartyListWrapper`, test_test_parameters);
-
-            const test_test = '';
             if (controlDescription.length > 0) {
-                return `<controlDescriptions>${controlDescription}${test_test}</controlDescriptions>`;
+                return `<controlDescriptions>${controlDescription}</controlDescriptions>`;
             }
             return '';
         }

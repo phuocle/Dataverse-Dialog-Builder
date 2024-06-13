@@ -159,5 +159,4 @@ export default (editor, opts = {}) => {
             component.set('badgable', false);
         }
     });
-
 };

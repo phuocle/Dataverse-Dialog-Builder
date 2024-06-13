@@ -1,6 +1,5 @@
 export default (editor, opts = {}) => {
     const panels = editor.Panels;
-    const iconStyle = 'style="display: block; max-width:22px"';
     editor.Panels.addPanel({ id: 'options_left', visible: true });
     panels.addButton('options_left', {
         id: 'button_new', className: 'fa fa-file-o', attributes: { title: 'New' }, active: false, command: 'command_new'
