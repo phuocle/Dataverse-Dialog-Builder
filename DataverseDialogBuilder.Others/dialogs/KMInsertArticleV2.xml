@@ -1,121 +1,105 @@
 <form>
-	<header id="{864a6a34-a37e-4534-a275-22e16f36104e}">
-		<rows>
-			<row>
-				<cell id="{f74c09f0-3d97-48a4-8e25-13fbe33e0484}">
-					<labels>
-						<label description="Select knowledge article to insert" languagecode="1033" />
-					</labels>
-					<control id="lbl_chooseKA" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
-						<parameters>
-							<IsTitle>true</IsTitle>
-						</parameters>
-					</control>
-				</cell>
-			</row>
-		</rows>
-	</header>
-	<tabs>
-		<tab verticallayout="true" id="{36c31851-cf26-4a53-ba5c-62eb627b6e09}" name="{36c31851-cf26-4a53-ba5c-62eb627b6e09}" locklevel="0" expanded="true">
-			<labels>
-				<label description="" languagecode="1033" />
-			</labels>
-			<columns>
-				<column width="100%">
-					<sections>
-						<section showbar="false" columns="1" id="{730a1779-cadc-4334-be88-3145c77abaa3}" name="{730a1779-cadc-4334-be88-3145c77abaa3}">
-							<labels>
-								<label description="" languagecode="1033" />
-							</labels>
-							<rows>
-								<row>
-									<cell id="{52b625a0-621b-46c4-8ca6-c9fa88260e3e}" showlabel="false" colspan="1" rowspan="12" auto="false">
-										<labels>
-											<label description="" languagecode="1033" />
-										</labels>
-										<control id="selectKA_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{2D2BEED2-DD78-4B3F-A941-C73FBADB6421}" />
-									</cell>
-								</row>
-							</rows>
-						</section>
-					</sections>
-				</column>
-			</columns>
-		</tab>
-	</tabs>
-	<footer id="{f1d9ab85-3949-4dfe-bbb9-c223fe5b222b}">
-		<rows>
-			<row>				<!-- Should be enabled for multiple selection only
-							<cell id="{5e84b254-d410-44d1-b3a7-0e3b400b13ee}">
-								<labels>
-									<label description="Selected Count : 0 (Max 3 articles)" languagecode="1033" />
-								</labels>
-								<control id="lbl_selectCount" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true"/>
-							</cell>
-							<cell id="{6eb09c49-cc86-bcbc-99c0-af82456b1c74}">
-								<labels>
-									<label description="Add to email" languagecode="1033" />
-								</labels>
-								<control id="insert_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
-							</cell>  Should be enabled for multiple selection only     -->
-				<cell id="{97b10467-f7b0-4f61-9b2f-1994f8e8d707}">
-					<labels>
-						<label description="Cancel" languagecode="1033" />
-					</labels>
-					<control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
-				</cell>
-			</row>
-		</rows>
-	</footer>
-	<events>
-		<event name="onchange" application="false" active="false" attribute="selectKA_id">
-			<Handlers>
-				<Handler functionName="KnowledgeManagement.CommandBarActions.Instance.onOutputChange" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/InsertKbEmailDialog/InsertKbEmailDialogLibrary.js" handlerUniqueId="{2e567363-7924-4280-bb57-b72a86a09240}" enabled="true" parameters="" passExecutionContext="true" />
-			</Handlers>
-		</event>
-		<event name="onclick" application="false" active="false" attribute="cancel_id">
-			<Handlers>
-				<Handler functionName="KnowledgeManagement.CommandBarActions.Instance.onDialogCancel" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/InsertKbEmailDialog/InsertKbEmailDialogLibrary.js" handlerUniqueId="{5edac0fe-7f74-4a9a-9c45-ff0feb483c04}" enabled="true" parameters="" passExecutionContext="true" />
-			</Handlers>
-		</event>		<!-- Should be enabled for multiple selection only
-					<event name="onclick" application="false" active="false" attribute="insert_id">
-						<Handlers>
-							<Handler functionName="KnowledgeManagement.CommandBarActions.Instance.onDialogClose" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/InsertKbEmailDialog/InsertKbEmailDialogLibrary.js" handlerUniqueId="{7e94d39a-9629-4648-af51-2eb773c87c8f}" enabled="true" parameters="" passExecutionContext="true" />
-						</Handlers>
-					</event>   Should be enabled for multiple selection only --></events>
-	<formparameters>
-		<querystringparameter name="param_isMultipleSelectionEnabled" type="SafeString" />
-	</formparameters>
-	<clientresources>
-		<internalresources>
-			<clientincludes>
-				<internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/InsertKbEmailDialog/InsertKbEmailDialogLibrary.js" />
-			</clientincludes>
-		</internalresources>
-	</clientresources>
-	<controlDescriptions>
-		<controlDescription forControl="{2D2BEED2-DD78-4B3F-A941-C73FBADB6421}">
-			<customControl formFactor="0" name="MscrmControls.KnowledgeControl.KnowledgeControl">
-				<parameters>
-					<DialogUniqueName static="true" type="SingleLine.Text">Email_InsertKb</DialogUniqueName>
-					<OutputParameter static="true" type="SingleLine.Text">selectKA_id</OutputParameter>
-					<IsMultipleSelectionEnabled static="true" type="SingleLine.Text">No</IsMultipleSelectionEnabled>
-				</parameters>
-			</customControl>
-			<customControl formFactor="1" name="MscrmControls.KnowledgeControl.KnowledgeControl">
-				<parameters>
-					<DialogUniqueName static="true" type="SingleLine.Text">Email_InsertKb</DialogUniqueName>
-					<OutputParameter static="true" type="SingleLine.Text">selectKA_id</OutputParameter>
-					<IsMultipleSelectionEnabled static="true" type="SingleLine.Text">No</IsMultipleSelectionEnabled>
-				</parameters>
-			</customControl>
-			<customControl formFactor="2" name="MscrmControls.KnowledgeControl.KnowledgeControl">
-				<parameters>
-					<DialogUniqueName static="true" type="SingleLine.Text">Email_InsertKb</DialogUniqueName>
-					<OutputParameter static="true" type="SingleLine.Text">selectKA_id</OutputParameter>
-					<IsMultipleSelectionEnabled static="true" type="SingleLine.Text">No</IsMultipleSelectionEnabled>
-				</parameters>
-			</customControl>
-		</controlDescription>
-	</controlDescriptions>
+    <header id="{864a6a34-a37e-4534-a275-22e16f36104e}">
+        <rows>
+            <row>
+                <cell id="{f74c09f0-3d97-48a4-8e25-13fbe33e0484}">
+                    <labels>
+                        <label description="Select knowledge article to insert" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_chooseKA" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{36c31851-cf26-4a53-ba5c-62eb627b6e09}" name="{36c31851-cf26-4a53-ba5c-62eb627b6e09}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{730a1779-cadc-4334-be88-3145c77abaa3}" name="{730a1779-cadc-4334-be88-3145c77abaa3}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{52b625a0-621b-46c4-8ca6-c9fa88260e3e}" showlabel="false" colspan="1" rowspan="12" auto="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectKA_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{2D2BEED2-DD78-4B3F-A941-C73FBADB6421}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{f1d9ab85-3949-4dfe-bbb9-c223fe5b222b}">
+        <rows>
+            <row>
+                <cell id="{97b10467-f7b0-4f61-9b2f-1994f8e8d707}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onchange" application="false" active="false" attribute="selectKA_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.CommandBarActions.Instance.onOutputChange" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/InsertKbEmailDialog/InsertKbEmailDialogLibrary.js" handlerUniqueId="{2e567363-7924-4280-bb57-b72a86a09240}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.CommandBarActions.Instance.onDialogCancel" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/InsertKbEmailDialog/InsertKbEmailDialogLibrary.js" handlerUniqueId="{5edac0fe-7f74-4a9a-9c45-ff0feb483c04}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_isMultipleSelectionEnabled" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/InsertKbEmailDialog/InsertKbEmailDialogLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{2D2BEED2-DD78-4B3F-A941-C73FBADB6421}">
+            <customControl formFactor="0" name="MscrmControls.KnowledgeControl.KnowledgeControl">
+                <parameters>
+                    <DialogUniqueName static="true" type="SingleLine.Text">Email_InsertKb</DialogUniqueName>
+                    <OutputParameter static="true" type="SingleLine.Text">selectKA_id</OutputParameter>
+                    <IsMultipleSelectionEnabled static="true" type="SingleLine.Text">No</IsMultipleSelectionEnabled>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.KnowledgeControl.KnowledgeControl">
+                <parameters>
+                    <DialogUniqueName static="true" type="SingleLine.Text">Email_InsertKb</DialogUniqueName>
+                    <OutputParameter static="true" type="SingleLine.Text">selectKA_id</OutputParameter>
+                    <IsMultipleSelectionEnabled static="true" type="SingleLine.Text">No</IsMultipleSelectionEnabled>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.KnowledgeControl.KnowledgeControl">
+                <parameters>
+                    <DialogUniqueName static="true" type="SingleLine.Text">Email_InsertKb</DialogUniqueName>
+                    <OutputParameter static="true" type="SingleLine.Text">selectKA_id</OutputParameter>
+                    <IsMultipleSelectionEnabled static="true" type="SingleLine.Text">No</IsMultipleSelectionEnabled>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
 </form>

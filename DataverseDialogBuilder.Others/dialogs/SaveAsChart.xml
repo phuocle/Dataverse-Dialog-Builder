@@ -1,0 +1,101 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_presentationdescription" type="SafeString" />
+        <querystringparameter name="param_primaryentitytypecode" type="SafeString" />
+        <querystringparameter name="param_datadescription" type="SafeString" />
+        <querystringparameter name="param_entityname" type="SafeString" />
+        <querystringparameter name="param_chartid" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" name="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{fd26828a-9489-470c-b1a7-304940c1a3ea}" name="{fd26828a-9489-470c-b1a7-304940c1a3ea}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{04a208d2-a121-48da-b1c4-5bb0d78f6450}">
+                                        <labels>
+                                            <label description="The chart is stored in the list of saved charts" languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1e20c360-8e46-4265-b22d-fbc464e5af24}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2a5c821c-8257-4b0a-a5aa-5e36c974ebad}" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{399ca37a-8ec4-4c18-87cd-272ed3d14000}">
+        <rows>
+            <row>
+                <cell id="{b54431fc-3328-4c05-8255-16f724b40234}">
+                    <labels>
+                        <label description="Save as new chart" languagecode="1033" />
+                    </labels>
+                    <control id="save_as_new_view_header_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{58837ad8-8749-4823-9a6e-1c962f4cefc0}">
+        <rows>
+            <row>
+                <cell id="{0580f317-47bc-4798-89e2-f009a573b2d2}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{090b653a-d748-4cc6-96eb-0ed29ff0ca28}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.OnChartSave" libraryName="CRM/ClientUtility.js" handlerUniqueId="{f22b6fb8-d09b-4197-b33a-db5046c31837}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.OnDialogClose" libraryName="CRM/ClientUtility.js" handlerUniqueId="{9b57290b-e2ac-4ca5-bc1A-9ed2ead1bb69}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>
