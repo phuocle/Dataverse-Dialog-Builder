@@ -1,0 +1,81 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_maximumpopupsalert" type="SafeString" />
+    </formparameters>
+    <header id="{A7A3944F-3C6E-4BCB-9C2C-4108F5E924E1}">
+        <rows>
+            <row>
+                <cell id="{613D535A-23FC-420A-A542-DD59520F8026}">
+                    <labels>
+                        <label description="Maximum {0} active email windows allowed" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_maximumpopupsalerttitle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{83F5E55B-E146-4463-A7C6-A7081DCB272E}" name="{83F5E55B-E146-4463-A7C6-A7081DCB272E}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{1B6488BD-FFBC-4701-8975-86E66787C598}" name="{1B6488BD-FFBC-4701-8975-86E66787C598}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{D033EE3D-90D8-4731-807C-0BC5FF3B1A26}" showlabel="true">
+                                        <labels>
+                                            <label description="To begin a new email, close one of your open email windows (you can save drafts)." languagecode="1033" />
+                                        </labels>
+                                        <control id="maximumpopupsalertmessage_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{4623B929-B2C7-4C24-B39D-392E57E85752}">
+        <rows>
+            <row>
+                <cell id="{04F5AE66-3E90-4E14-B001-7ED183D13D4A}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="AppCommon.ContextualEmail.onLoadMaximumPopupsAlertDialog" libraryName="AppCommon/ContextualEmail/AppCommon_ContextualEmail.js" handlerUniqueId="{08C15959-F5D4-4B3D-965E-65FA8EE037B5}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="AppCommon.DialogActions.CloseDialog" libraryName="AppCommon/ClientCommon/AppCommon_ClientCommon.js" handlerUniqueId="{AB7DC86B-6F77-4B63-9FB1-4B3D3BDF11CD}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/ClientCommon/AppCommon_ClientCommon.js" />
+                <internaljscriptfile src="$webresource:AppCommon/ContextualEmail/AppCommon_ContextualEmail.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

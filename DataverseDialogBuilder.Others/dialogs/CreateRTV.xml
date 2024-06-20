@@ -1,0 +1,113 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_originatingRMAId" type="SafeString" />
+        <querystringparameter name="param_RmaProductDetails" type="Object" />
+    </formparameters>
+    <header id="{afbd569e-50c4-4784-94a0-18eca0b74235}">
+        <rows>
+            <row>
+                <cell id="{82a14634-9648-45eb-8965-4cc686f89329}">
+                    <labels>
+                        <label description="Please select a vendor for which to create the RTV" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{39354E4A-5015-4D74-8031-EA9EB73A1322}">
+                    <labels>
+                        <label description="After RTV is created, please use 'Add RMA Product' ribbon buttons to add the desired RMA product." languagecode="1033" />
+                    </labels>
+                    <control id="lbl_subHeader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{9f950175-943c-4e27-a96b-a97b626eddb3}" name="{abb11bd4-18ec-4736-ae5b-0d9fb99a3329}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{ae136f07-8a1b-4019-ad78-324acd4cb419}" name="{0fef593a-44a3-4f60-9491-b923a1cefbcc}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6a42d58d-e329-4145-8711-ea89312f8031}">
+                                        <labels>
+                                            <label description="Vendor" languagecode="1033" />
+                                        </labels>
+                                        <control id="rmaProductVendor" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{b62f2d12-c29a-4f81-96fb-19ad1ae2c646}">
+        <rows>
+            <row>
+                <cell id="{0a4b15b7-9407-4db8-9140-af484d973889}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{4a570f2a-b6aa-4253-a6ea-d63409fa4b1b}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false">
+            <Handlers>
+                <Handler functionName="RMA.CreateRTV.OnCreateRTVDialogOpen" libraryName="$webresource:msdyn_/RMA/RMA.Library.CreateRTV.js" handlerUniqueId="{be683b50-893a-4a74-b61b-06321e3c7231}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="RMA.CreateRTV.CreateRTV" libraryName="$webresource:msdyn_/RMA/RMA.Library.CreateRTV.js" handlerUniqueId="{1b38e2e2-f008-43c1-8fb3-621f44d34a9a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="RMA.CreateRTV.CloseMddDialog" libraryName="$webresource:msdyn_/RMA/RMA.Library.CreateRTV.js" handlerUniqueId="{30728411-6a1f-4120-af90-996523f047e2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/RMA/RMA.Library.CreateRTV.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,119 @@
+<form>
+    <formparameters>
+        <querystringparameter name="params_entitylogicalname" type="SafeString" />
+        <querystringparameter name="params_entityid" type="SafeString" />
+        <querystringparameter name="params_out_trackprogress" type="Boolean" />
+    </formparameters>
+    <header id="{12cc5138-1589-4677-ba73-2064d6492624}">
+        <rows>
+            <row>
+                <cell id="{da04a38f-d2f3-453a-bfbd-54f83c32e33a}">
+                    <labels>
+                        <label description="Playbook templates" languagecode="1033" />
+                    </labels>
+                    <control id="launchPlaybookTitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{7dbbc2e9-a4f7-4a70-9828-6bbb2821d8a8}">
+                    <labels>
+                        <label description="Select a playbook template you want to launch." languagecode="1033" />
+                    </labels>
+                    <control id="launchPlaybookDescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{c02d89fd-5c29-4901-b0cf-cb2492ff33cc}" name="AssociatedPlaybookTemplatesTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="AssociatedPlaybookTemplatesSection" showlabel="false" showbar="false" locklevel="0" id="{02f0d54c-e98e-4acf-8581-d5594b9961dd}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{83fa9ab4-3300-4c41-8ba9-d4c0122e26e5}" showlabel="false" colspan="1" auto="false" rowspan="7">
+                                        <labels>
+                                            <label description="Playbook templates" languagecode="1033" />
+                                        </labels>
+                                        <control id="LaunchPlaybookSubgrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <EnableQuickFind>true</EnableQuickFind>
+                                                <ViewId>{ED81B2E3-7CD2-4A50-9336-D05551D2D4B4}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName />
+                                                <TargetEntityType>msdyn_playbooktemplate</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{ED81B2E3-7CD2-4A50-9336-D05551D2D4B4}</ViewIds>
+                                                <EnableJumpBar>true</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                                <RecordsPerPage>7</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{6f4bc22f-3f64-4c92-922b-98a828048f7d}">
+                <rows>
+                    <row>
+                        <cell id="{3d3f3442-8db4-4927-b128-2d7fae7ce2a1}">
+                            <labels>
+                                <label description="Launch" languagecode="1033" />
+                            </labels>
+                            <control id="LaunchPlaybookOnClickHandler" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="LaunchPlaybookOnClickHandler">
+            <Handlers>
+                <Handler functionName="PlaybookService.PlaybookTemplateLibrary.LaunchPlaybookOnClickHandler" libraryName="$webresource:Playbook/PlaybookTemplate/PlaybookTemplate_main_system_library.js" handlerUniqueId="db3b008a-9233-41b1-a9ee-07e96dfe1081" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="PlaybookService.PlaybookTemplateLibrary.OnLaunchPlaybookLoad" libraryName="$webresource:Playbook/PlaybookTemplate/PlaybookTemplate_main_system_library.js" handlerUniqueId="{3773aaf1-1fff-412b-ae16-91ebdb988f24}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Playbook/PlaybookTemplate/PlaybookTemplate_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

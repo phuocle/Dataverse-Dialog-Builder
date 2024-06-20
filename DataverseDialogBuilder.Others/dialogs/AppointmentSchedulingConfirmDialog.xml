@@ -1,0 +1,99 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_engineIsURS" type="Boolean" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_firstTimeOpen" type="Boolean" />
+    </formparameters>
+    <header id="{12736163-d813-4816-8fd2-f4ddbeb5d941}">
+        <rows>
+            <row>
+                <cell id="{8a6eb021-16b9-4780-a7bd-4130e8ddb499}">
+                    <labels>
+                        <label description="Include Appointments in Resource Scheduling" languagecode="1033" />
+                    </labels>
+                    <control id="AppointmentSchedulingHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="false" id="{07184C49-5EC3-4776-8C2B-2A07BC6702D6}" name="AppointmentSchedulingTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{c9a1d6ab-104f-4063-9220-90446f38e948}" name="Tab1_section1" height="auto" showlabel="true">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3fc577d7-8cd0-463b-84aa-43bd711b3d1d}" showlabel="false" auto="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="IFRAME_ConfirmDialog" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true">
+                                            <parameters>
+                                                <Url>msdyn_/ConfirmationDialog/scripts/NewAppointmentSchedulingFeature.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>no</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{E3DD646A-CE51-4B68-8865-060D065549EB}">
+        <rows>
+            <row>
+                <cell id="{3196c457-afa1-4937-b7d0-84c145be3917}">
+                    <labels>
+                        <label description="Got it. Let's enable" languagecode="1033" />
+                    </labels>
+                    <control id="Upgrade" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{6523e030-de7b-4ab7-93b1-e913ac567702}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="Cancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="msdyn.ConfirmDialog.Initialize" libraryName="msdyn_/ConfirmationDialog/scripts/ConfirmDialog.js" handlerUniqueId="{3ec303d7-3820-4409-9116-2b3354ba5a30}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/fps/LocalizationLibrary/Localization.Library.js" />
+                <internaljscriptfile src="$webresource:msdyn_/ConfirmationDialog/scripts/ConfirmDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

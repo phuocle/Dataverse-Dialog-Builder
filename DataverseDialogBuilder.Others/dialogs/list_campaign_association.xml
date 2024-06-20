@@ -1,0 +1,100 @@
+<form>
+    <formparameters>
+        <querystringparameter name="lookup_items" type="Object" />
+        <querystringparameter name="entity_type" type="Integer" />
+        <querystringparameter name="association_sub_value_type" type="SafeString" />
+        <querystringparameter name="association_name" type="SafeString" />
+        <querystringparameter name="role_ordinal" type="Integer" />
+        <querystringparameter name="parent_entity" type="Object" />
+    </formparameters>
+    <header id="{338330cd-4832-4286-8307-b13e6322ae72}">
+        <rows>
+            <row>
+                <cell id="{338330cd-4832-4286-8307-b13e6322ae72}">
+                    <labels>
+                        <label description="Confirm Addition" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_createorder" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{16f6ba16-38af-4664-9ca5-ccb572026554}" name="{16f6ba16-38af-4664-9ca5-ccb572026554}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{16f6ba16-38af-4664-9ca5-ccb572026554}" name="{16f6ba16-38af-4664-9ca5-ccb572026554}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8791356e-0b6c-4b5b-8f2c-4f77427b6aea}">
+                                        <labels>
+                                            <label description="Select where you would like to add this marketing list:" languagecode="1033" />
+                                        </labels>
+                                        <control id="associationDestination" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{4e6f362b-058d-41a1-b815-d96971c8c9e4}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{4a6ba7df-2c8e-456f-a229-30913259e32c}">
+        <rows>
+            <row>
+                <cell id="{76847ddc-2682-413a-b5d2-94bbf8fefa82}">
+                    <labels>
+                        <label description="Add" languagecode="1033" />
+                    </labels>
+                    <control id="add_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{3e34061e-f70e-4f51-a9bc-df12767061e9}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="add_id">
+            <Handlers>
+                <Handler functionName="Marketing.Campaign.Instance.openListAssociationDialogResponse" libraryName="Marketing/Campaign/Campaign_main_system_library.js" handlerUniqueId="{7a16f5e3-d5e8-4e91-9eae-1cc5306775f8}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="Marketing/ClientCommon/Marketing_ClientCommon.js" handlerUniqueId="{bfee9b96-89ab-41b4-a299-b8f1fa8a8ccf}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Marketing/ClientCommon/Marketing_ClientCommon.js" />
+                <internaljscriptfile src="$webresource:Marketing/Campaign/Campaign_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

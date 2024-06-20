@@ -1,0 +1,97 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+    </formparameters>
+    <header id="{60cc069f-cbad-4ccb-a2c1-68ae624c511b}">
+        <rows>
+            <row>
+                <cell id="{708e66ae-5e7a-4ca4-8276-fd797148bca3}">
+                    <labels>
+                        <label description="Services" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_services" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{99d8b502-3881-48b2-8345-ac1fa467f442}" name="ServicesGridTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{47627d06-d57e-40db-bf0e-3dd746456884}" name="ServicesGridSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2fc8337a-579f-49b3-b07e-e477455641ec}" colspan="1" rowspan="5">
+                                        <labels>
+                                            <label description="Services" languagecode="1033" />
+                                        </labels>
+                                        <control id="ServicesGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <ViewId>{A7E7C631-DB03-4667-9584-ED3CB784C4E4}</ViewId>
+                                                <TargetEntityType>service</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{3f82bfc0-4ba6-41a6-9dc6-60d9bc1c802c}">
+        <rows>
+            <row>
+                <cell id="{c56fd147-c0fc-443e-93a3-1dc359a01788}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="Close" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.Resource.CommandBarActions.ServicesDialogOnLoad" libraryName="Service/Resource/Resource_main_system_library.js" handlerUniqueId="{adcbf10f-6ac9-4c79-9881-9729790dc7d9}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Close">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{1345e4c9-864d-4c5a-b4d9-d41fbddccd45}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

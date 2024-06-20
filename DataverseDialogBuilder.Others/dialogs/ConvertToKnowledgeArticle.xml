@@ -1,0 +1,194 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityTypeCode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="incident_title" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="incident_description" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="incident_resolution" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="incidentresolution_description" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="knowledgeArticleId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="subjectId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="subjectName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="openNewRecord" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{2779ACB5-72A7-4789-929D-91316A97E77D}" name="{2779ACB5-72A7-4789-929D-91316A97E77D}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{22F770A9-E3C0-4A3C-89B2-C3B12DC759E0}" name="{22F770A9-E3C0-4A3C-89B2-C3B12DC759E0}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{954753D0-B8EB-468C-89D2-AF2EBCFAD621}" showlabel="true">
+                                        <labels>
+                                            <label description="Specify the details of the new knowledge article." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{770AEDED-76A4-4075-96CD-EDC262E5EA5D}" showlabel="true">
+                                        <labels>
+                                            <label description="Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="title_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <IsTitle>true</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1AC6B5CB-16D1-4440-8583-AE3FD7A033E3}" showlabel="true">
+                                        <labels>
+                                            <label description="Content" languagecode="1033" />
+                                        </labels>
+                                        <control id="content_id" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1CC6F26D-B3DA-4176-9BC5-8D2AEDA63CC0}" showlabel="true">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="owner_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>team</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1D988CCE-53CD-47CC-9569-62A0F57347EB}" showlabel="true">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{FA1A7EF7-53E4-40A6-97D2-5935ADAF1277}</DefaultViewId>
+                                                        <EntityLogicalName>subject</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{FF1BB591-25C7-4086-B051-AD83FD16999B}" showlabel="true">
+                                        <labels>
+                                            <label description="Open the new knowledge article" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbOpenNew_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{ea35a58e-9769-4f29-aa2f-cb3a4979f441}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{68D9F8E1-091E-487B-93E2-E58E1C2AE837}">
+        <rows>
+            <row>
+                <cell id="{5C3A3370-2BEB-499C-82BE-B22DB74E4292}">
+                    <labels>
+                        <label description="Convert to Knowledge Article" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_converttoknowledgearticle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{41F1CD0A-4520-49A5-883E-9421A2DD84EB}">
+        <rows>
+            <row>
+                <cell id="{24F3BFDE-955B-491C-B944-39DD4B635D02}">
+                    <labels>
+                        <label description="Convert" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{0BDD8327-D71C-4F6D-B54E-4A61793F4EFD}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.ConvertToKnowledgeArticle.convertToKnowledgeArticleClick" libraryName="Service/Incident/Convert/Incident_convert_library.js" handlerUniqueId="{247E8BAE-DE5A-4E6F-9818-B3A92A5EFA22}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{E22B01B8-C3FB-42F6-AD47-1AB1EDE35627}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.ConvertToKnowledgeArticle.convertToKnowledgeArticleOnLoad" libraryName="Service/Incident/Convert/Incident_convert_library.js" handlerUniqueId="{ED2CC971-F168-4E1C-A217-9FA9AEC3EEC5}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_entityId" type="UniqueId" />
+        <querystringparameter name="param_entityTypeCode" type="SafeString" />
+        <querystringparameter name="param_incident_title" type="SafeString" />
+        <querystringparameter name="param_incident_description" type="SafeString" />
+        <querystringparameter name="param_incidentresolution_description" type="SafeString" />
+        <querystringparameter name="param_incident_resolution" type="SafeString" />
+        <querystringparameter name="param_ownerId" type="SafeString" />
+        <querystringparameter name="param_ownerName" type="SafeString" />
+        <querystringparameter name="param_ownerType" type="SafeString" />
+        <querystringparameter name="param_knowledgeArticleId" type="SafeString" />
+        <querystringparameter name="param_subjectId" type="SafeString" />
+        <querystringparameter name="param_subjectName" type="SafeString" />
+        <querystringparameter name="param_openNewRecord" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Convert/Incident_convert_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

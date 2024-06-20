@@ -1,0 +1,391 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_defaultMobileOfflineProfile" type="SafeString" />
+        <querystringparameter name="param_defaultFieldSecurityProfile" type="SafeString" />
+        <querystringparameter name="param_defaultSecurityRole" type="SafeString" />
+        <querystringparameter name="param_defaultTimezone" type="Integer" />
+        <querystringparameter name="is_FLW_EmailChecked" type="Boolean" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{cb5ac8cc-e5b4-4f30-83c1-28592a3e0c3c}" name="{cb5ac8cc-e5b4-4f30-83c1-28592a3e0c3c}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5b57c6e8-4f49-425c-81b4-77ca87603dbe}" name="{5b57c6e8-4f49-425c-81b4-77ca87603dbe}" showlabel="true" IsUserDefined="0">
+                            <labels>
+                                <label description="Select Users" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{34208ee7-83f7-432a-9a14-59adfc451df4}">
+                                        <labels>
+                                            <label description="Set up one or more frontline workers into your organization. When setting up multiple frontline workers, they will share the same properties. " languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0fa01fa4-fb4d-4b3e-9c7a-89bfbf2ab0d4}">
+                                        <labels>
+                                            <label description="Users" languagecode="1033" />
+                                        </labels>
+                                        <control id="systemuserview_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{26f49fb7-58c0-444b-bd40-989a5d47c286}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{81abd13f-4868-4dc1-923b-e3707365fc4f}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{d6ff12b0-756f-4e4a-b0ed-3e030d57895f}" name="tab_1_column_1_section_3" layout="varwidth" columns="1" showlabel="true" showbar="false" IsUserDefined="0">
+                            <labels>
+                                <label description="Properties" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dfe62d1f-cf26-464f-8d51-638a7c178ef0}">
+                                        <labels>
+                                            <label description="Add properties that define your frontline workers. The required fields control the data they can see and access." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_propertydescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{9f975f5d-184f-4059-a648-118f309aa546}" name="tab_1_column_1_section_4" layout="varwidth" columns="1" showlabel="true" showbar="false" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ce50d9f4-c399-463c-bdfc-86ecb8f26980}">
+                                        <labels>
+                                            <label description="Characteristics" languagecode="1033" />
+                                        </labels>
+                                        <control id="characteristicsview_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{89ab39b4-1a91-471b-a4d3-1e15b18cf747}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c3e15c00-2118-455a-a9b4-1ae6959051aa}">
+                                        <labels>
+                                            <label description="Territories" languagecode="1033" />
+                                        </labels>
+                                        <control id="territoryview_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{01a2653b-f8cf-496c-84cf-eaf2b326bcfc}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{bc4ef225-e4e9-4f7d-a551-93c6081005e1}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Time Zone" languagecode="1033" />
+                                        </labels>
+                                        <control id="timezone" classid="{7C624A0B-F59E-493d-9583-638D34759266}" isunbound="true" disabled="false" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cfa17a9b-a3b4-48cd-a992-79b175b43504}">
+                                        <labels>
+                                            <label description="Security Role" languagecode="1033" />
+                                        </labels>
+                                        <control id="securityroleview_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{7d9d6325-8373-4d08-b4a3-c0708153a293}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e0efc8c0-6593-4b5e-9691-64b295257e66}">
+                                        <labels>
+                                            <label description="Field Security Profile" languagecode="1033" />
+                                        </labels>
+                                        <control id="fieldsecurityprofileview_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{0b5c41f3-a9b9-4460-a946-e8dda53d88c5}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1668e3ce-f56f-4392-81c3-1eaacac58348}">
+                                        <labels>
+                                            <label description="Mobile Offline Profile" languagecode="1033" />
+                                        </labels>
+                                        <control id="mobileofflineprofileview_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{5089f8f7-e87f-41e3-a0fb-b332244a254c}</DefaultViewId>
+                                                        <EntityLogicalName>mobileofflineprofile</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{81abd13f-4868-4dc1-923b-e3707365fc4f}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{1dbfc855-96cc-488b-b132-18008809765a}" name="tab_1_column_1_section_5" layout="varwidth" columns="1" showlabel="true" showbar="false" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{aab9d2a8-1c54-4751-a786-99b791917f4c}" showlabel="false">
+                                        <labels>
+                                            <label description="Email Notification Checkbox" languagecode="1033" />
+                                        </labels>
+                                        <control id="EmailCheckbox_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{d69efc63-d2e6-402b-9871-3df469bdcb38}" isunbound="true" isrequired="false"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{9a6714d1-bdfc-477e-8565-737350461cf7}">
+        <rows>
+            <row>
+                <cell id="{4e630b5f-f78b-4319-8917-90ac5235fc6e}">
+                    <labels>
+                        <label description="Quick Set Up: Frontline Workers" languagecode="1033" />
+                    </labels>
+                    <control id="EntityPickerMDDHeaderID" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{7aea897f-8800-4a0d-a62d-e87941faca2b}">
+        <rows>
+            <row>
+                <cell id="{2cd9759f-c124-4028-9b05-27563e79c148}">
+                    <labels>
+                        <label description="Save and Close" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{c35367d9-1c38-4d6c-babd-55fdf8d1d39d}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{26f49fb7-58c0-444b-bd40-989a5d47c286}">
+            <customControl formFactor="2" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">systemuserview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">systemuser</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">71ff097f-a986-eb11-b1ad-002248216f73</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">systemuserview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">systemuser</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">71ff097f-a986-eb11-b1ad-002248216f73</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">systemuserview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">systemuser</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">71ff097f-a986-eb11-b1ad-002248216f73</defaultViewId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{89ab39b4-1a91-471b-a4d3-1e15b18cf747}">
+            <customControl formFactor="2" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">characteristicsview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">characteristic</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">069e4479-ae11-4f05-a9f9-188849ec55d6</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">characteristicsview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">characteristic</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">069e4479-ae11-4f05-a9f9-188849ec55d6</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">characteristicsview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">characteristic</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">069e4479-ae11-4f05-a9f9-188849ec55d6</defaultViewId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{01a2653b-f8cf-496c-84cf-eaf2b326bcfc}">
+            <customControl formFactor="2" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">territoryview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">territory</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">ad81b2ca-9789-4465-8c56-94c10830a6ed</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">territoryview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">territory</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">ad81b2ca-9789-4465-8c56-94c10830a6ed</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">territoryview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">territory</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">ad81b2ca-9789-4465-8c56-94c10830a6ed</defaultViewId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{0b5c41f3-a9b9-4460-a946-e8dda53d88c5}">
+            <customControl formFactor="2" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">fieldsecurityprofileview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">fieldsecurityprofile</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">e726c252-a3e1-4af8-be89-a8904a724c55</defaultViewId>
+                    <defaultSelectedRecords type="SingleLine.Text">param_defaultFieldSecurityProfile</defaultSelectedRecords>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">fieldsecurityprofileview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">fieldsecurityprofile</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">e726c252-a3e1-4af8-be89-a8904a724c55</defaultViewId>
+                    <defaultSelectedRecords type="SingleLine.Text">param_defaultFieldSecurityProfile</defaultSelectedRecords>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">fieldsecurityprofileview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">fieldsecurityprofile</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">e726c252-a3e1-4af8-be89-a8904a724c55</defaultViewId>
+                    <defaultSelectedRecords type="SingleLine.Text">param_defaultFieldSecurityProfile</defaultSelectedRecords>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{7d9d6325-8373-4d08-b4a3-c0708153a293}">
+            <customControl formFactor="2" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">securityroleview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">role</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">61f8d435-8e25-4751-8330-5969506ef536</defaultViewId>
+                    <defaultSelectedRecords type="SingleLine.Text">param_defaultSecurityRole</defaultSelectedRecords>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">securityroleview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">role</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">61f8d435-8e25-4751-8330-5969506ef536</defaultViewId>
+                    <defaultSelectedRecords type="SingleLine.Text">param_defaultSecurityRole</defaultSelectedRecords>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">securityroleview_id</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">role</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">61f8d435-8e25-4751-8330-5969506ef536</defaultViewId>
+                    <defaultSelectedRecords type="SingleLine.Text">param_defaultSecurityRole</defaultSelectedRecords>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{d69efc63-d2e6-402b-9871-3df469bdcb38}">
+            <customControl formFactor="2" name="msdyn_MscrmControls.FieldService.FLWEmailCheckboxControl">
+                <parameters>
+                    <isFLWEmailChecked type="TwoOptions">is_FLW_EmailChecked</isFLWEmailChecked>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.FieldService.FLWEmailCheckboxControl">
+                <parameters>
+                    <isFLWEmailChecked type="TwoOptions">is_FLW_EmailChecked</isFLWEmailChecked>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.FieldService.FLWEmailCheckboxControl">
+                <parameters>
+                    <isFLWEmailChecked type="TwoOptions">is_FLW_EmailChecked</isFLWEmailChecked>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onchange" application="false" active="false" attribute="systemuserview_id">
+            <Handlers>
+                <Handler functionName="FrontlineWorker.Library.onChange" libraryName="$webresource:msdyn_/FrontlineWorkerLibrary/FrontlineWorkerLibrary.js" handlerUniqueId="{a3be578d-67ba-4fa2-b169-6569f64cae97}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="timezone">
+            <Handlers>
+                <Handler functionName="FrontlineWorker.Library.onChange" libraryName="$webresource:msdyn_/FrontlineWorkerLibrary/FrontlineWorkerLibrary.js" handlerUniqueId="{a3be578d-67ba-4fa2-b169-6569f64cae97}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="securityroleview_id">
+            <Handlers>
+                <Handler functionName="FrontlineWorker.Library.onChange" libraryName="$webresource:msdyn_/FrontlineWorkerLibrary/FrontlineWorkerLibrary.js" handlerUniqueId="{a3be578d-67ba-4fa2-b169-6569f64cae97}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="fieldsecurityprofileview_id">
+            <Handlers>
+                <Handler functionName="FrontlineWorker.Library.onChange" libraryName="$webresource:msdyn_/FrontlineWorkerLibrary/FrontlineWorkerLibrary.js" handlerUniqueId="{a3be578d-67ba-4fa2-b169-6569f64cae97}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="FrontlineWorker.Library.onCreateFrontlineWorkerClick" libraryName="$webresource:msdyn_/FrontlineWorkerLibrary/FrontlineWorkerLibrary.js" handlerUniqueId="{b49264d2-47b0-4963-8501-52eb3b41b386}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="FrontlineWorker.Library.onClose" libraryName="$webresource:msdyn_/FrontlineWorkerLibrary/FrontlineWorkerLibrary.js" handlerUniqueId="{B426C259-225B-41E0-85EA-A1BFCD56150F}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onLoad" application="false" active="false">
+            <Handlers>
+                <Handler functionName="FrontlineWorker.Library.onDialogLoad" libraryName="$webresource:msdyn_/FrontlineWorkerLibrary/FrontlineWorkerLibrary.js" handlerUniqueId="{c11e471c-7e8b-4e30-9cae-e26b5c19539a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

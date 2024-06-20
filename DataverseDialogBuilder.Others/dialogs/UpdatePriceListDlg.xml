@@ -1,0 +1,120 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_primaryEntityRecordId" type="SafeString" />
+        <querystringparameter name="param_entityLogicalName" type="SafeString" />
+        <querystringparameter name="param_gridControl" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{3287b163-cda7-4bdc-a04b-a3ff063082e8}">
+        <rows>
+            <row>
+                <cell id="{fa949f58-d354-4c8b-b487-3d7e58a74ac5}">
+                    <labels>
+                        <label description="Update Prices" languagecode="1033" />
+                    </labels>
+                    <control classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" id="formtitle_title" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <hiddencontrols />
+    <tabs>
+        <tab verticallayout="false" id="{e9eb5b95-ef17-4836-97a9-bb5ac623a365}" name="{e9eb5b95-ef17-4836-97a9-bb5ac623a365}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{8c20bfee-88b5-4d4b-bbeb-cf01c6940cad}" name="{8c20bfee-88b5-4d4b-bbeb-cf01c6940cad}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0f8baff3-bc88-4fe5-ad56-21a8978c7c2e}" visible="false">
+                                        <labels>
+                                            <label description="Update prices for all Catalog Item prices by applying a % increase or decrease" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_catalogItem_description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{57db5781-b7bd-4e26-a371-44c2ecc896fa}" visible="false">
+                                        <labels>
+                                            <label description="Update prices for all Expense Category prices by applying a % increase or decrease" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_expenseCategory_description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{45d33f7b-8571-496c-ace7-ff3da59ec7e7}" visible="false">
+                                        <labels>
+                                            <label description="Update prices for all Time rates by applying a % increase or decrease" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_timeRates_description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{496514b8-f491-4e3f-af16-5364f70f96da}">
+                                        <labels>
+                                            <label description="Price change [%]" languagecode="1033" />
+                                        </labels>
+                                        <control id="ModifyPercentage" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MinValue>-100</MinValue>
+                                                <MaxValue>9999</MaxValue>
+                                                <Precision>2</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{4f0b145f-b292-493e-ac82-f4c68105160c}">
+                <rows>
+                    <row>
+                        <cell id="{b52ac08d-9cc6-4fd0-951e-75bbbaf714d7}">
+                            <labels>
+                                <label description="Apply" languagecode="1033" />
+                            </labels>
+                            <control id="okButton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{551eb139-a72c-4a66-8b33-d6838aca6207}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancelButton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="OnDialogLoad" libraryName="$webresource:msdyn_/ContractBilling/Scripts/PriceModifier.js" handlerUniqueId="{57f4ef88-4b10-429f-9fd3-2bc28fdcbe9f}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="okButton">
+            <Handlers>
+                <Handler functionName="OnModifyPrice" libraryName="$webresource:msdyn_/ContractBilling/Scripts/PriceModifier.js" handlerUniqueId="{31a70717-9f70-46b5-acbd-f88399365d33}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelButton">
+            <Handlers>
+                <Handler functionName="ClosePriceModifierDialog" libraryName="$webresource:msdyn_/ContractBilling/Scripts/PriceModifier.js" handlerUniqueId="{98ba6170-9ed0-45b7-9db7-cf3dc1a7fb99}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/Libraries/require/require.js" />
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,76 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_entity_name" type="SafeString" />
+        <querystringparameter name="param_org_default_view_id" type="SafeString" />
+        <querystringparameter name="param_user_default_view_id" type="SafeString" />
+    </formparameters>
+    <header id="{2376325d-55ea-4cc5-bfc9-dd63c2032381}">
+        <rows>
+            <row>
+                <cell id="{74ecd99a-8b45-4b91-bd61-a5bca4313a74}">
+                    <labels>
+                        <label description="Manage and share views" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_view_management_dialog_title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{54f216be-a7d8-42e6-ba66-4a98339b3db2}" name="ViewManagementDialogMainTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="ViewManagementDialogMainSection" showbar="false" locklevel="0" id="{debe653f-7fd4-4301-9ca3-434440bbb4b9}" columns="1">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dbcd9670-c61f-4160-a946-8fe1dbdb5389}">
+                                        <labels>
+                                            <label description="Manage and share views" languagecode="1033" />
+                                        </labels>
+                                        <control id="viewmanagementcontrol" classid="{f9a8a302-114e-466a-b582-6771b2ae0d92}" disabled="false" isrequired="true" isunbound="true" uniqueid="{0d1ee0bb-6950-4c75-b4e1-0b79dd5ea8ea}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{0d1ee0bb-6950-4c75-b4e1-0b79dd5ea8ea}">
+            <customControl formFactor="0" name="MscrmControls.ViewManagementControl">
+                <parameters>
+                    <entityName type="SingleLine.Text">param_entity_name</entityName>
+                    <orgDefaultViewId type="SingleLine.Text">param_org_default_view_id</orgDefaultViewId>
+                    <userDefaultViewId type="SingleLine.Text">param_user_default_view_id</userDefaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ViewManagementControl">
+                <parameters>
+                    <entityName type="SingleLine.Text">param_entity_name</entityName>
+                    <orgDefaultViewId type="SingleLine.Text">param_org_default_view_id</orgDefaultViewId>
+                    <userDefaultViewId type="SingleLine.Text">param_user_default_view_id</userDefaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ViewManagementControl">
+                <parameters>
+                    <entityName type="SingleLine.Text">param_entity_name</entityName>
+                    <orgDefaultViewId type="SingleLine.Text">param_org_default_view_id</orgDefaultViewId>
+                    <userDefaultViewId type="SingleLine.Text">param_user_default_view_id</userDefaultViewId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

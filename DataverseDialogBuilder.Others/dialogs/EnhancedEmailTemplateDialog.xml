@@ -1,0 +1,127 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{921fef75-46e6-4563-b73e-d7398e9340e8}" name="{9f2ba339-a334-44b9-a1d2-c49446dd9cc4}">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{a98d5be1-a923-4e20-8d3f-fe31da225bbe}" name="{7bb88db9-5214-43d2-a757-d9fa75ff4f64}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{141f4b14-9b66-4f5d-8c2b-738842632602}" rowspan="12">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="preview_host_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{8d641e8b-fb0f-4856-bd8b-2f9ef8d59153}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{a200995c-a5d2-4309-a4d8-92adac391d22}">
+        <rows>
+            <row>
+                <cell id="{bfeb0dc9-2d37-4f26-b4a7-c51f39b46d41}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="select_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" disabled="true" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{cd7c11bd-0ef9-47bb-9a87-5287e777e325}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onTemplateGalleryLoadFromEmailForm" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{d05ad588-d166-4203-9a82-10495b53a2b8}" enabled="true" parameters="'input_config','lbl_header'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="select_id">
+            <Handlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onGallerySelectClickFromEmailForm" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{0a09d002-88c7-428d-b2ca-803f6807214e}" enabled="true" parameters="'dialog_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onGalleryCancelClickFromEmailForm" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{8a93c5ca-02a8-4d17-9222-59660052d5c8}" enabled="true" parameters="'dialog_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="dialog_result">
+            <Handlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onGalleryResultChangedFromEmailForm" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{a6bbd03d-445f-4833-b5dc-44937968afa0}" enabled="true" parameters="'dialog_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="selected_item">
+            <Handlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onGallerySelectedItemChangedFromEmailForm" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{01530446-d335-432d-b1ad-99b102a0247d}" enabled="true" parameters="'selected_item','select_id'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{8d641e8b-fb0f-4856-bd8b-2f9ef8d59153}">
+            <customControl formFactor="0" name="MscrmControls.TemplateFilterControl.TemplateFilterControl">
+                <parameters>
+                    <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
+                    <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>
+                    <titleLabelId type="SingleLine.Text" static="true">lbl_header</titleLabelId>
+                    <inputConfig type="SingleLine.Text">input_config</inputConfig>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_item</outputItems>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.TemplateFilterControl.TemplateFilterControl">
+                <parameters>
+                    <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
+                    <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>
+                    <titleLabelId type="SingleLine.Text" static="true">lbl_header</titleLabelId>
+                    <inputConfig type="SingleLine.Text">input_config</inputConfig>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_item</outputItems>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.TemplateFilterControl.TemplateFilterControl">
+                <parameters>
+                    <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
+                    <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>
+                    <titleLabelId type="SingleLine.Text" static="true">lbl_header</titleLabelId>
+                    <inputConfig type="SingleLine.Text">input_config</inputConfig>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_item</outputItems>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="input_config" type="SafeString" />
+        <querystringparameter name="dialog_result" type="Boolean" />
+        <querystringparameter name="selected_item" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityType" type="SafeString" />
+        <querystringparameter name="param_emailFormData" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/InsertEmailTemplate.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

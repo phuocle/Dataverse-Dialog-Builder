@@ -1,0 +1,264 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_target_entities" type="SafeString" />
+        <querystringparameter name="param_target_entitiesequipment" type="SafeString" />
+        <querystringparameter name="param_target_entitiessystemuser" type="SafeString" />
+        <querystringparameter name="param_target_entitiesteam" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_constraintid" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+        <querystringparameter name="param_selectedfacilities" type="Object" />
+        <querystringparameter name="param_selectedusers" type="Object" />
+        <querystringparameter name="param_selectedteams" type="Object" />
+        <querystringparameter name="param_selectedrgs" type="Object" />
+        <querystringparameter name="param_parententityname" type="SafeString" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="selected_node" type="Object" />
+    </formparameters>
+    <header id="{8c5af279-4c57-4597-a204-e8882c47dbc0}">
+        <rows>
+            <row>
+                <cell id="{55844025-eb68-4dfb-83a8-1b180ff25035}" labelid="{7678dd0d-c844-407f-a859-458ad94167d0}">
+                    <labels>
+                        <label description="Add Resources" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{57365c1e-30ec-4a54-bc13-0a398cf5a0b3}" name="tab_1" locklevel="0" expanded="true" labelid="{bc4816a2-da67-4050-b0b4-72b641fda012}">
+            <labels>
+                <label description="New Tab" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="tab_1_section_1" id="2e13b8d2-5960-4c4b-b9bf-c990926fa69b" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{90bb95cc-e5a0-4630-a01f-93aeb7db00d3}">
+                            <labels>
+                                <label description="New Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{f045b408-08b6-4870-b0c4-a06a514c063f}" labelid="{db369cd1-d77d-4ec2-8e33-d11fe835ec21}">
+                                        <labels>
+                                            <label description="Facility/Equipment" languagecode="1033" />
+                                        </labels>
+                                        <control id="facility_ids" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{f5814135-f5df-4b3c-9e24-042788e79ebe}">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{fd3db69b-d18e-4949-8fc6-8733fa74d672}" labelid="{d7da0e65-2c03-4d92-89d1-30df3cb43689}">
+                                        <labels>
+                                            <label description="User" languagecode="1033" />
+                                        </labels>
+                                        <control id="user_ids" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{2c650546-bac5-4eae-9081-6f7b6f71c3de}">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{ce1617ee-9697-483d-83cc-e4ce7904a9b4}" labelid="{a6828176-75d1-425a-8591-fb6cc2ec95f2}">
+                                        <labels>
+                                            <label description="Team" languagecode="1033" />
+                                        </labels>
+                                        <control id="teams_ids" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{fc91e5b5-1414-4680-8f9d-43942e5b95e7}">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" id="{3501bb12-20c3-4388-8f6e-94f0e313c4f9}" labelid="{c3515cca-bb0c-4e6c-ab46-e8604d03ab8a}">
+                                        <labels>
+                                            <label description="Resource Groups" languagecode="1033" />
+                                        </labels>
+                                        <control id="resourcegroup_ids" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{7e9ed920-26fa-4e21-9396-ce66ebfd9546}">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="tab_1_section_2" id="bc8ddc04-0d61-43a5-9aeb-35dde2961fc3" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{f1ecf6a4-d569-4ab6-b657-d4d778032a01}">
+                            <labels>
+                                <label description="Section1" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="false" locklevel="0" id="{e17da287-774a-499d-9519-8c643c45f92e}" labelid="{96a96c2d-4e32-4a1f-aa70-5d37dbf282d1}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{8f7fbd6f-537a-4032-bc69-b041485e58a6}">
+                <rows>
+                    <row>
+                        <cell id="{e290c015-faec-4c79-8ebb-82ef6dc7ba32}" labelid="{b7753ca8-e6f3-41b3-8801-d93369ec1cd8}">
+                            <labels>
+                                <label description="Add" languagecode="1033" />
+                            </labels>
+                            <control id="add_resource_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{467f5268-5d5e-4c24-8ab5-50ddd659ccc5}" labelid="{30f2af5d-e9b1-4350-ba65-7f378b5b0fe1}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{f5814135-f5df-4b3c-9e24-042788e79ebe}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entitiesequipment</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedfacilities</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entitiesequipment</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedfacilities</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entitiesequipment</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedfacilities</selectedEntities>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{2c650546-bac5-4eae-9081-6f7b6f71c3de}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entitiessystemuser</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedusers</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entitiessystemuser</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedusers</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entitiessystemuser</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedusers</selectedEntities>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{fc91e5b5-1414-4680-8f9d-43942e5b95e7}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entitiesteam</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedteams</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entitiesteam</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedteams</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entitiesteam</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedteams</selectedEntities>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{7e9ed920-26fa-4e21-9396-ce66ebfd9546}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedrgs</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedrgs</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">param_target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">param_selectedrgs</selectedEntities>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="add_resource_id">
+            <Handlers>
+                <Handler functionName="Mscrm.add_dialog" libraryName="Service/Resources/Resources_main_system_library.js" parameters="" handlerUniqueId="2b4005d8-ae21-4787-a871-6d6d583731f0" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.cancel_dialog" libraryName="Service/Resources/Resources_main_system_library.js" handlerUniqueId="d86f1abb-890d-45f3-b2e7-d5e5abd44bf9" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false" attribute="add_resource_id">
+            <Handlers>
+                <Handler functionName="Mscrm.on_load" libraryName="Service/Resources/Resources_main_system_library.js" handlerUniqueId="445d9195-f1e2-40ce-b5a2-df9556292251" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="param_selectedfacilities">
+            <Handlers>
+                <Handler functionName="Mscrm.on_resourcechange" libraryName="Service/Resources/Resources_main_system_library.js" handlerUniqueId="3d61a8ce-43ea-498e-8b9e-08442e77563d" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="param_selectedusers">
+            <Handlers>
+                <Handler functionName="Mscrm.on_resourcechange" libraryName="Service/Resources/Resources_main_system_library.js" handlerUniqueId="f7a784b1-5d75-4918-ab36-5cb97ba07666" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="param_selectedteams">
+            <Handlers>
+                <Handler functionName="Mscrm.on_resourcechange" libraryName="Service/Resources/Resources_main_system_library.js" handlerUniqueId="d4a1ff2d-3c1b-44dc-8506-1740384e25cd" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="param_selectedrgs">
+            <Handlers>
+                <Handler functionName="Mscrm.on_resourcechange" libraryName="Service/Resources/Resources_main_system_library.js" handlerUniqueId="8c11edfe-a25e-4d2f-85c0-03dc691b433e" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Service/Resources/Resources_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

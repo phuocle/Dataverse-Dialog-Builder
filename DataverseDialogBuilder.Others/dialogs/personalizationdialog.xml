@@ -1,0 +1,127 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dialog_definedPlaceholders" type="SafeString" />
+        <querystringparameter name="dialog_placeHolderName" type="SafeString" />
+        <querystringparameter name="dialog_placeHolderData" type="SafeString" />
+        <querystringparameter name="dialog_validationErrors" type="SafeString" />
+        <querystringparameter name="dialog_confirmed" type="Boolean" />
+        <querystringparameter name="dialog_disableName" type="SafeString" />
+        <querystringparameter name="dialog_readOnly" type="SafeString" />
+    </formparameters>
+    <header id="{7a154526-b59a-41e6-a44c-0ec90248a809}">
+        <rows>
+            <row>
+                <cell id="{7656549f-4ce8-43a2-ab03-b7ac165850ee}">
+                    <labels>
+                        <label description="Insert dynamic data" languagecode="1033" />
+                    </labels>
+                    <control id="personalizationdialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{443d09b8-dc3a-48d6-8842-8f433b9af4ba}" name="{443d09b8-dc3a-48d6-8842-8f433b9af4ba}" locklevel="0">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{2e0a9edc-5131-4252-9307-417282bf79ac}" name="{2e0a9edc-5131-4252-9307-417282bf79ac}" layout="varwidth" showlabel="false" showbar="false" columns="1" IsUserDefined="0" locklevel="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell showlabel="false" id="{b91ba68c-eb7b-43ba-b3d6-92244ad6129a}" colspan="1">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="PersonalizationControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{894087fa-ac10-441c-92df-d6094f1ce8c8}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{5f7d319a-f4ed-4643-a346-0a051be50096}">
+                <rows>
+                    <row>
+                        <cell id="{3fe25f29-c4b9-4ecb-876c-2c991c39e2e0}">
+                            <labels>
+                                <label description="Insert" languagecode="1033" />
+                            </labels>
+                            <control id="insertbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{5cacbf7d-d7e4-40a4-b7c2-02e2944f0dca}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <formLibraries>
+        <Library name="msdynmkt_personalizationDialogHandlers.CrmWebResource" libraryUniqueId="{f31612c5-a909-438e-a148-5426d25d9d01}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="insertbutton">
+            <Handlers>
+                <Handler functionName="PersonalizationDialogHandlers.insertClicked" libraryName="msdynmkt_personalizationDialogHandlers.CrmWebResource" handlerUniqueId="{c9c9334d-7c07-42de-8d8f-73d2b91cc0eb}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="PersonalizationDialogHandlers.cancelClicked" libraryName="msdynmkt_personalizationDialogHandlers.CrmWebResource" handlerUniqueId="{87564fb1-af11-49eb-977f-b6118fcbb2ca}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="PersonalizationDialogHandlers.onLoad" libraryName="msdynmkt_personalizationDialogHandlers.CrmWebResource" handlerUniqueId="{d08257e2-8836-4f33-ab22-33634c8ced5c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{894087fa-ac10-441c-92df-d6094f1ce8c8}">
+            <customControl formFactor="2" name="PersonalizationDialogControl.PersonalizationDialogControl">
+                <parameters>
+                    <definedPlaceholders type="SingleLine.Text">dialog_definedPlaceholders</definedPlaceholders>
+                    <placeholderName type="SingleLine.Text">dialog_placeHolderName</placeholderName>
+                    <placeholderData type="SingleLine.Text">dialog_placeHolderData</placeholderData>
+                    <validationErrors type="SingleLine.Text">dialog_validationErrors</validationErrors>
+                    <disableName type="SingleLine.Text">dialog_disableName</disableName>
+                    <isReadOnly type="SingleLine.Text">dialog_readOnly</isReadOnly>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="PersonalizationDialogControl.PersonalizationDialogControl">
+                <parameters>
+                    <definedPlaceholders type="SingleLine.Text">dialog_definedPlaceholders</definedPlaceholders>
+                    <placeholderName type="SingleLine.Text">dialog_placeHolderName</placeholderName>
+                    <placeholderData type="SingleLine.Text">dialog_placeHolderData</placeholderData>
+                    <validationErrors type="SingleLine.Text">dialog_validationErrors</validationErrors>
+                    <disableName type="SingleLine.Text">dialog_disableName</disableName>
+                    <isReadOnly type="SingleLine.Text">dialog_readOnly</isReadOnly>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="PersonalizationDialogControl.PersonalizationDialogControl">
+                <parameters>
+                    <definedPlaceholders type="SingleLine.Text">dialog_definedPlaceholders</definedPlaceholders>
+                    <placeholderName type="SingleLine.Text">dialog_placeHolderName</placeholderName>
+                    <placeholderData type="SingleLine.Text">dialog_placeHolderData</placeholderData>
+                    <validationErrors type="SingleLine.Text">dialog_validationErrors</validationErrors>
+                    <disableName type="SingleLine.Text">dialog_disableName</disableName>
+                    <isReadOnly type="SingleLine.Text">dialog_readOnly</isReadOnly>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

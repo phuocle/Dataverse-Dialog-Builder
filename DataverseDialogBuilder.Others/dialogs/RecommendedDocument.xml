@@ -1,0 +1,137 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityTypeCode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{b2e4860d-32d2-4cea-92b2-569056227f96}" name="{b2e4860d-32d2-4cea-92b2-569056227f96}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{a0ff2b3f-3588-4633-9ea4-161e37c8d9fe}" name="{a0ff2b3f-3588-4633-9ea4-161e37c8d9fe}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{64fbdf23-3a3c-4d2b-997f-b58c219d93d7}" colspan="1" rowspan="5">
+                                        <labels>
+                                            <label description="Document Suggestions" languagecode="1033" />
+                                        </labels>
+                                        <control id="documentrecommendations_id" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" isunbound="false">
+                                            <parameters>
+                                                <ViewId>{6180A110-645D-4F82-BAD7-20C56B416514}</ViewId>
+                                                <TargetEntityType>recommendeddocument</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{40cde635-cd1e-494c-a769-29dac0e8ef59}" showlabel="true" visible="false">
+                                        <labels>
+                                            <label description="There are no destination document locations available. Please create a document location for this record." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0e908db5-0b15-4a10-a9a3-1453f234b5eb}" visible="false">
+                                        <labels>
+                                            <label description="Copy To" languagecode="1033" />
+                                        </labels>
+                                        <control id="documentlocations_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>sharepointdocumentlocation</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{0340c4ef-0ced-4629-ad96-539025549f42}">
+        <rows>
+            <row>
+                <cell id="{785c7bb1-4cf6-4b0f-83a2-c8b6fb8a0005}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="suggestionsheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{870181bf-c0ea-4473-9760-7b4ff4b006d0}">
+        <rows>
+            <row>
+                <cell id="{0ae993c6-0635-407d-8cf7-3f5e574dcde6}" visible="true">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="viewother_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{893982e9-f3d4-4693-9b9e-cd49dd86d940}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{c90bb6db-6269-4f54-a5de-c10d39476b00}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="viewother_id">
+            <Handlers>
+                <Handler functionName="Mscrm.CommandBarActions.viewOtherSuggestions" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{fe60eb0f-4924-448d-8675-a12d7012f38e}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.CommandBarActions.copySelectedDocuments" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{4a436a83-a066-4cf4-a654-9b7bf6960adb}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.InternalUtilities.DialogUtility.closeDialog" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{1188fd4d-0d09-4884-939a-504467922060}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.CommandBarActions.populateDocumentSuggestionsDialogControls" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{86740684-68f8-40a5-b4c3-49b12ece2f29}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

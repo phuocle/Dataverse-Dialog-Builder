@@ -1,0 +1,93 @@
+<form>
+    <formparameters>
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+    </formparameters>
+    <header id="{6262aa64-f9a3-4af7-8416-fc0049989805}">
+        <rows>
+            <row>
+                <cell id="{b96bc587-33b1-4885-9dbd-b5eb8607a833}">
+                    <labels>
+                        <label description="Edit view name and description" languagecode="1033" />
+                    </labels>
+                    <control id="edit_personal_view_info_header_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{a613a17b-af5d-41f3-8097-756de4081b7c}" name="EditPersonalViewInfoMainTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{dbab8a4d-d30b-47b1-9b75-d4d867bce7f2}" name="EditPersonalViewInfoMainSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1c23cf85-d391-42f4-ae76-6cf40b0cdcc9}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8ce06c21-474b-4a84-9419-63ae626d12fa}" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{9233dd16-1820-426e-b6c5-9fe779e7172d}">
+        <rows>
+            <row>
+                <cell id="{5dab5c15-bb2c-49b6-9729-1668623478aa}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{12f9a29b-915e-4dde-a7e2-d46435916109}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="onOkButtonClick" libraryName="EditPersonalViewInfo.js" handlerUniqueId="{a58dd9aa-8fad-4b14-a366-51d3aac9cd4e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="onCancelButtonClick" libraryName="EditPersonalViewInfo.js" handlerUniqueId="{ffb73c0c-7987-4120-9a99-21f26f103f59}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

@@ -1,0 +1,119 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+        <querystringparameter name="param_configurationUsedId" type="UniqueId" />
+    </formparameters>
+    <hiddencontrols />
+    <header id="{1408e876-cbd7-49b2-ae00-5b3a5fce0fee}">
+        <rows>
+            <row>
+                <cell id="{1408e876-cbd7-49b2-ae00-5b3a5fce0fee}">
+                    <labels>
+                        <label description="Test Model Configuration" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_testTopicModel" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{32969c56-3c68-476e-a1ac-88ce2ff2d327}" name="{32969c56-3c68-476e-a1ac-88ce2ff2d327}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{76fd6aea-4e09-46f9-9597-c24f0ce9764b}" name="{76fd6aea-4e09-46f9-9597-c24f0ce9764b}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{f13e9da6-cda0-4456-8257-ad4a8ce26f12}">
+                                        <labels>
+                                            <label description="Choose a model configuration to test topic analysis.This will automatically start a new model build immediately to execute topic analysis.This result will be available once the build has finished as a topic cloud visualization for topic analysis." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_testTopicModelMessage" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0c1b8853-6edb-40e7-a776-cfd34a6b78a6}">
+                                        <labels>
+                                            <label description="Configuration" languagecode="1033" />
+                                        </labels>
+                                        <control id="configurationused_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>topicmodelconfiguration</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8b6659a0-a713-4cc5-b784-b2b89c9c13cc}">
+                                        <labels>
+                                            <label description="Maximum Topics" languagecode="1033" />
+                                        </labels>
+                                        <control id="maximumtopics_id" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{b45a6a98-b10b-47b5-8869-bbefd1dce0af}">
+        <rows>
+            <row>
+                <cell id="{17dd0584-541b-4612-ae83-a952355c9abb}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{7a7d6487-b031-47e7-a9a4-69cc47faf6d2}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.TopicModel.GridCommandActions.testTopicModelClick" libraryName="Service/TopicModel/TopicModel_main_system_library.js" handlerUniqueId="{cebdc9e6-216c-4ed2-adb2-e51bd94e8982}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{431de106-fd2f-48b6-b3ab-2d741ec147ca}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CrmService.TopicModel.GridCommandActions.testTopicModelDialogOnLoad" libraryName="Service/TopicModel/TopicModel_main_system_library.js" handlerUniqueId="{078618fa-3ba3-4db1-a556-34cc20b2003f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/TopicModel/TopicModel_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,96 @@
+<form>
+    <header id="{e303ad13-64f2-4776-a01c-a8fafb4ec598}">
+        <rows>
+            <row>
+                <cell id="{fac869e8-3e95-4abb-aca3-da0e4aed3dBe}">
+                    <labels>
+                        <label description="Choose Language" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_chooseLanguageKM" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{e8293a52-79c4-4e00-9cd8-a0c53f1b94e6}" name="{e8293a52-79c4-4e00-9cd8-a0c53f1b94e6}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{a21cf7e2-73eb-47ac-910b-e33ad9266ee6}" name="{a21cf7e2-73eb-47ac-910b-e33ad9266ee6}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a87ec142-ae7e-45c6-bd83-a096e44dae9e}">
+                                        <labels>
+                                            <label description="Select a language" languagecode="1033" />
+                                        </labels>
+                                        <control id="translateLanguageLocale_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{11998009-5E27-4E92-84E2-63FB0ECE44E4}</DefaultViewId>
+                                                        <EntityLogicalName>languagelocale</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{a7cbc4e5-6c40-48ce-8842-e32a3aa2e6fe}">
+        <rows>
+            <row>
+                <cell id="{e7ff3a5f-07b8-4483-b719-3edaa2c5a3e0}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{ce1806a6-9828-427f-9fc7-a5c61abfef89}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.CommandBarActions.Instance.onDialogSave" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleTemplate/KnowledgeArticleTemplateMainSystemLibrary.js" handlerUniqueId="{ae75aee5-24cf-4797-88c7-ae2aef0ba7e3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.CommandBarActions.Instance.onDialogCancel" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleTemplate/KnowledgeArticleTemplateMainSystemLibrary.js" handlerUniqueId="{eca5aaae-24cf-4797-88c7-ce2eaf0ba7ea}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_selectedLanguage" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleTemplate/KnowledgeArticleTemplateMainSystemLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

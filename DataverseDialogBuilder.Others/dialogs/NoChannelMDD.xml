@@ -1,0 +1,166 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_entityName" type="SafeString" />
+        <querystringparameter name="param_entityTypeCode" type="SafeString" />
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_modeForTeam" type="PositiveInteger" />
+        <querystringparameter name="param_teamNameForTeam" type="SafeString" />
+        <querystringparameter name="param_modeForChannel" type="PositiveInteger" />
+        <querystringparameter name="param_teamNameForChannel" type="SafeString" />
+        <querystringparameter name="param_selectedTeamName" type="SafeString" />
+        <querystringparameter name="param_previousTabId" type="SafeString" />
+        <querystringparameter name="param_ownerShipType" type="SafeString" />
+        <querystringparameter name="param_nextTabId" type="SafeString" />
+    </formparameters>
+    <header id="{2236bc3b-8c20-46f7-b1a3-e622b1a46871}">
+        <rows>
+            <row>
+                <cell id="{41b4b108-ecd5-4900-be55-c7311b13a617}">
+                    <labels>
+                        <label description="Collaborate with Microsoft Teams" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_collaborateMddTitle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{a67a475d-2e57-49ab-8d62-28140b0a0e8f}" name="{a67a475d-2e57-49ab-8d62-28140b0a0e8f}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{6d159cb7-42e2-4205-957f-ddacf4138184}" name="{6d159cb7-42e2-4205-957f-ddacf4138184}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c060b80c-c9f0-4df4-b339-4f927c15d32d}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="NoChannelControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{306241dc-7ec3-4e83-aa4a-fa279d08990f}">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab verticallayout="true" id="{660bf336-8f74-4ce4-8288-4c8b14a7a069}" name="{660bf336-8f74-4ce4-8288-4c8b14a7a069}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{1060c4b7-aafd-4b07-aafe-db04e12ad7cc}" name="{1060c4b7-aafd-4b07-aafe-db04e12ad7cc}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{906d9a69-0992-47e8-aeaf-502f3f660bef}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="MSTeamsCompositeControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{93f7fd2b-e332-489d-adfd-5e3d275afd14}">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{306241dc-7ec3-4e83-aa4a-fa279d08990f}">
+            <customControl name="MscrmControls.OfficeProductivity.NoChannelControl" formFactor="0">
+                <parameters>
+                    <nextTabId type="SingleLine.Text">param_nextTabId</nextTabId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfficeProductivity.NoChannelControl" formFactor="1">
+                <parameters>
+                    <nextTabId type="SingleLine.Text">param_nextTabId</nextTabId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfficeProductivity.NoChannelControl" formFactor="2">
+                <parameters>
+                    <nextTabId type="SingleLine.Text">param_nextTabId</nextTabId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfficeProductivity.NoChannelControl" formFactor="3">
+                <parameters>
+                    <nextTabId type="SingleLine.Text">param_nextTabId</nextTabId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{93f7fd2b-e332-489d-adfd-5e3d275afd14}">
+            <customControl name="MscrmControls.OfficeProductivity.MSTeamsCompositeControl" formFactor="0">
+                <parameters>
+                    <entityName type="SingleLine.Text">param_entityName</entityName>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityTypecode type="SingleLine.Text">param_entityTypeCode</entityTypecode>
+                    <previousTabId type="SingleLine.Text">param_previousTabId</previousTabId>
+                    <ownerShipType type="SingleLine.Text">param_ownerShipType</ownerShipType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfficeProductivity.MSTeamsCompositeControl" formFactor="1">
+                <parameters>
+                    <entityName type="SingleLine.Text">param_entityName</entityName>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityTypecode type="SingleLine.Text">param_entityTypeCode</entityTypecode>
+                    <previousTabId type="SingleLine.Text">param_previousTabId</previousTabId>
+                    <ownerShipType type="SingleLine.Text">param_ownerShipType</ownerShipType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfficeProductivity.MSTeamsCompositeControl" formFactor="2">
+                <parameters>
+                    <entityName type="SingleLine.Text">param_entityName</entityName>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityTypecode type="SingleLine.Text">param_entityTypeCode</entityTypecode>
+                    <previousTabId type="SingleLine.Text">param_previousTabId</previousTabId>
+                    <ownerShipType type="SingleLine.Text">param_ownerShipType</ownerShipType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfficeProductivity.MSTeamsCompositeControl" formFactor="3">
+                <parameters>
+                    <entityName type="SingleLine.Text">param_entityName</entityName>
+                    <entityId type="SingleLine.Text">param_entityId</entityId>
+                    <entityTypecode type="SingleLine.Text">param_entityTypeCode</entityTypecode>
+                    <previousTabId type="SingleLine.Text">param_previousTabId</previousTabId>
+                    <ownerShipType type="SingleLine.Text">param_ownerShipType</ownerShipType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/OfficeProductivity_RibbonCommands.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

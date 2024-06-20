@@ -1,0 +1,87 @@
+<form>
+    <formparameters>
+        <querystringparameter name="entity_name" type="Object" />
+        <querystringparameter name="object_id" type="Object" />
+        <querystringparameter name="opened_from_grid" type="Object" />
+        <querystringparameter name="page_type" type="Object" />
+    </formparameters>
+    <header id="{e6048f72-2fd2-419f-91c7-84777e82dc57}">
+        <rows>
+            <row>
+                <cell id="{171df374-cb66-4455-92a9-49c8db9e1b5b}">
+                    <labels>
+                        <label description="Share records" languagecode="1033" />
+                    </labels>
+                    <control id="shareTitle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{f08a6916-062c-4b1d-8b91-7b17708f8296}" name="ShareControlTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="ShareControlSection" showbar="false" locklevel="0" id="{DEEF1C18-D892-4A01-B737-B40B8A4675D0}" columns="1">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{91C80CD3-B585-4DB0-B379-1D6CC57D8363}">
+                                        <labels>
+                                            <label description="Share Control" languagecode="1033" />
+                                        </labels>
+                                        <control id="sharecontrol" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" isunbound="true" uniqueid="{1bb56726-1d06-427b-b8a2-e6a0147e7537}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.OnLoadShareDialog" libraryName="CRM/ClientUtility.js" handlerUniqueId="{c88c617d-9c34-4f65-8d94-a583510b4393}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{1bb56726-1d06-427b-b8a2-e6a0147e7537}">
+            <customControl name="MscrmControls.ShareControl" formFactor="0">
+                <parameters>
+                    <entityName type="SingleLine.Text">entity_name</entityName>
+                    <objectId type="SingleLine.Text">object_id</objectId>
+                    <openedFromGrid type="SingleLine.Text">opened_from_grid</openedFromGrid>
+                    <pageType type="SingleLine.Text">page_type</pageType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ShareControl" formFactor="1">
+                <parameters>
+                    <entityName type="SingleLine.Text">entity_name</entityName>
+                    <objectId type="SingleLine.Text">object_id</objectId>
+                    <openedFromGrid type="SingleLine.Text">opened_from_grid</openedFromGrid>
+                    <pageType type="SingleLine.Text">page_type</pageType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ShareControl" formFactor="2">
+                <parameters>
+                    <entityName type="SingleLine.Text">entity_name</entityName>
+                    <objectId type="SingleLine.Text">object_id</objectId>
+                    <openedFromGrid type="SingleLine.Text">opened_from_grid</openedFromGrid>
+                    <pageType type="SingleLine.Text">page_type</pageType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

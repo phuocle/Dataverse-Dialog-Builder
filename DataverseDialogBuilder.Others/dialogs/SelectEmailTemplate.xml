@@ -1,0 +1,125 @@
+<form>
+    <formparameters>
+        <querystringparameter name="activity_type" type="SafeString" />
+        <querystringparameter name="selected_template_id" type="SafeString" />
+        <querystringparameter name="selected_template_title" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{b0d70092-69f4-46f6-99d5-869f06e0dd05}">
+        <rows>
+            <row>
+                <cell id="{f75e7061-ddbe-4594-83dd-2216534f6517}">
+                    <labels>
+                        <label description="Select Template" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{223b14d2-df89-429b-b9b0-42d97d485ed4}">
+                    <labels>
+                        <label description="Select an email template from the list to insert into the email message." languagecode="1033" />
+                    </labels>
+                    <control id="select_email_template_title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{c2eb2afc-1dcc-4a0e-b3e7-f07994df631b}" name="{c2eb2afc-1dcc-4a0e-b3e7-f07994df631b}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{5C36D5FA-6CF2-405D-B64B-A99863AE5D38}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c5c9f667-f51f-4434-b46a-67da262b4d61}" showlabel="false" colspan="4">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="template_selector_cc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{b146e153-4613-4683-8a8e-4163963a57cf}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{a84ce244-de1b-4571-8bb7-69488370aa90}">
+        <rows>
+            <row>
+                <cell id="{fdc43341-7480-4cc7-9904-be3d4b3094a1}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{bc43f7c6-83c3-4dee-914a-21d53574d1a6}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialogAsOk" libraryName="$webresource:Marketing/ClientCommon/Marketing_ClientCommon.js" handlerUniqueId="{cf2d8480-1a22-4d9a-adc9-b5b8578ff03f}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="$webresource:Marketing/ClientCommon/Marketing_ClientCommon.js" handlerUniqueId="{cf2d8480-1a22-4d9a-adc9-b5b8578ff03f}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Marketing/ClientCommon/Marketing_ClientCommon.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{b146e153-4613-4683-8a8e-4163963a57cf}">
+            <customControl name="MscrmControls.EmailTemplate.EmailTemplateSelectorControl" formFactor="0">
+                <parameters>
+                    <activityType type="Decimal">activity_type</activityType>
+                    <selectedTemplateId type="Decimal">selected_template_id</selectedTemplateId>
+                    <selectedTemplateTitle type="Decimal">selected_template_title</selectedTemplateTitle>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EmailTemplate.EmailTemplateSelectorControl" formFactor="1">
+                <parameters>
+                    <activityType type="Decimal">activity_type</activityType>
+                    <selectedTemplateId type="Decimal">selected_template_id</selectedTemplateId>
+                    <selectedTemplateTitle type="Decimal">selected_template_title</selectedTemplateTitle>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EmailTemplate.EmailTemplateSelectorControl" formFactor="2">
+                <parameters>
+                    <activityType type="Decimal">activity_type</activityType>
+                    <selectedTemplateId type="Decimal">selected_template_id</selectedTemplateId>
+                    <selectedTemplateTitle type="Decimal">selected_template_title</selectedTemplateTitle>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

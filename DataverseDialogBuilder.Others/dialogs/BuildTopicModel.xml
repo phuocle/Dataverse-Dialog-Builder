@@ -1,0 +1,91 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_iTotal" type="Integer" />
+        <querystringparameter name="param_iId" type="UniqueId" />
+        <querystringparameter name="param_iObjType" type="Integer" />
+        <querystringparameter name="param_iIndex" type="Integer" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{8511d379-38cc-4ddf-b2a6-eae7ed3ff949}">
+        <rows>
+            <row>
+                <cell id="{03d63117-bcf4-4de6-a3d2-57ffc77d2cee}">
+                    <labels>
+                        <label description="Build Model" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_buildmodel" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{56e87970-7812-4c89-a53a-3bfe4d0b29c0}" name="{2a2b8594-1bf9-4ed3-8f25-2018f6f82913}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{265b30a0-ea99-4dd7-9e8f-12abe2d7deb9}" name="{8ad8d278-6fbd-47d6-b106-c756d7de7307}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1cb527ca-5e38-4439-b70b-80b254ae0139}">
+                                        <labels>
+                                            <label description="This will automatically start a new model build immediately to execute topic analysis. This result will be available once the build has finished." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_buildModelMessage" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{e795eac2-1199-40af-90e2-456af9e35530}">
+        <rows>
+            <row>
+                <cell id="{10b8911e-2060-4fde-8e2e-45970b7efdac}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{62c31087-ee3d-4e42-93ee-68aa65c1273e}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.TopicModel.GridCommandActions.buildModelOkay" libraryName="Service/TopicModel/TopicModel_main_system_library.js" handlerUniqueId="{cebdc9e6-216c-4ed2-adb2-e51bd94e8982}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{431de106-fd2f-48b6-b3ab-2d741ec147ca}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/TopicModel/TopicModel_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

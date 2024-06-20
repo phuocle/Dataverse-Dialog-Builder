@@ -1,0 +1,104 @@
+<form>
+    <formparameters>
+        <querystringparameter name="input_entityid" type="SafeString" />
+        <querystringparameter name="input_seriesid" type="SafeString" />
+        <querystringparameter name="input_records" type="Object" />
+        <querystringparameter name="input_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{1fcf7940-bac1-11e8-96f8-529269fb1459}" name="{1fcf7940-bac1-11e8-96f8-529269fb1459}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{8F0FD7AA-B596-4CA8-9581-214ADDBBAC93}" name="{8F0FD7AA-B596-4CA8-9581-214ADDBBAC93}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1fcf7c06-bac1-11e8-96f8-529269fb1459}">
+                                        <labels>
+                                            <label description="Delete" languagecode="1033" />
+                                        </labels>
+                                        <control id="deleterecurrence_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{a1d9811d-49fd-4a56-989d-cb8156df2b28}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{1fcfafe6-bac1-11e8-96f8-529269fb1459}">
+        <rows>
+            <row>
+                <cell id="{1fcfa55a-bac1-11e8-96f8-529269fb1459}">
+                    <labels>
+                        <label description="Confirm delete appointment series" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{1fcf7e9a-bac1-11e8-96f8-529269fb1459}">
+                    <labels>
+                        <label description="How would you like to delete this series?" languagecode="1033" />
+                    </labels>
+                    <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{1fcf843a-bac1-11e8-96f8-529269fb1459}">
+        <rows>
+            <row>
+                <cell id="{1fcf8890-bac1-11e8-96f8-529269fb1459}">
+                    <labels>
+                        <label description="Ok" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{1fcf8b42-bac1-11e8-96f8-529269fb1459}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Activities.DeleteAppointmentRecord.RecurringActionDialogOkClick" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{0966f8f9-eeef-4884-a61e-62bdce60c953}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.DeleteAppointmentRecord.SeriesActionDialogCancelClick" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{5cb08c6a-bd40-11e8-a355-529269fb1459}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Appointment_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

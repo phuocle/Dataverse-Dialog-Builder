@@ -1,0 +1,103 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entitlementTemplateId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entitlementTemplateEntityType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <header id="{0a5123e1-c91e-41fb-8204-594d8ca00e17}">
+        <rows>
+            <row>
+                <cell id="{3114ba3d-725e-4a37-8c35-4dfcc4ea9924}">
+                    <labels>
+                        <label description="Select Template" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_selecttemplate" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{d64517be-aea6-4b54-960f-1b5bdc611d41}" name="{d64517be-aea6-4b54-960f-1b5bdc611d41}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{0ac58459-8143-4dfb-8c34-06ce9257bb74}" name="{0ac58459-8143-4dfb-8c34-06ce9257bb74}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5dd8239c-f949-44f9-9f12-f6ab31c02034}">
+                                        <labels>
+                                            <label description="Entitlement Template" languagecode="1033" />
+                                        </labels>
+                                        <control id="entitlementtemplate_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{FBE4040B-AB68-4324-8FEF-9A68B2D9518C}</DefaultViewId>
+                                                        <EntityLogicalName>entitlementtemplate</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{f5567055-1611-42a3-a7d2-cb268abed53d}">
+        <rows>
+            <row>
+                <cell id="{6da7dbac-36e0-4767-a295-fe702b99e3e4}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{0337e3cf-2cbf-4cc1-b616-9fd7b6c08f67}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.Entitlement.GridCommandActions.selectEntitlementTemplateApplyChangesClick" libraryName="Service/Entitlement/Entitlement_main_system_library.js" handlerUniqueId="{5dceea85-992e-4d5a-b5ac-6a28368eb821}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{af5f3c71-50df-496f-a842-0af50479946e}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+        <querystringparameter name="param_entityType" type="Integer" />
+    </formparameters>
+</form>

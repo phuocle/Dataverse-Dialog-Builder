@@ -1,0 +1,112 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <header id="{3c26815a-5bf6-4a3e-a72a-9d8b07c6f1e6}">
+        <rows>
+            <row>
+                <cell id="{972c78ba-659b-4329-926d-30c768bd10e4}">
+                    <labels>
+                        <label description="Reactivate Case" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_reactivatecase" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{92e53d47-0e43-465b-97a5-97a99ff8760d}" name="{92e53d47-0e43-465b-97a5-97a99ff8760d}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{6689fa96-e38a-4988-8d57-f22be8aba152}" name="{6689fa96-e38a-4988-8d57-f22be8aba152}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{50f2fdb7-a21f-4955-9c7c-dd68bcb9df6b}">
+                                        <labels>
+                                            <label description="This action reactivates a resolved or canceled case. Do you want to continue?" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_statusmassage" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1b2a3a0c-aa47-4c2c-a74d-a2ca6975647c}">
+                                        <labels>
+                                            <label description="Set case status to" languagecode="1033" />
+                                        </labels>
+                                        <control id="setcasestatus_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{1478e2eb-b414-ef11-840b-6045bd575473}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{661b9428-a9dc-41f5-9ef6-232a526f0522}">
+        <rows>
+            <row>
+                <cell id="{2e4d2086-4165-466d-ac5d-1ad1f3ce9a63}">
+                    <labels>
+                        <label description="Reactivate" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{bebf7937-9111-47ab-92eb-980b3cd1e80e}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.CommandBarActions.ReactivateCaseButtonClick" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{a53a65f8-8e96-4539-a2da-99a18e3193fa}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{2363d1be-b633-4a78-877e-b5afa9eff3e6}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.IncidentRibbon.CommandBarActions.ReactivateCaseDialogOnLoad" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{db020c43-3b2d-44aa-bf13-9d0e356c0d50}" enabled="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_entityId" type="UniqueId" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_records" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,162 @@
+<form>
+    <header id="{c8f657f2-f75e-441a-b6ed-a16f3af8f73b}">
+        <rows>
+            <row>
+                <cell id="{b4f886c9-0552-4374-9ba5-0d9e5c0d0857}">
+                    <labels>
+                        <label description="Choose Image" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{3c67f1ad-f5ca-4988-9457-9c9d0612aa82}">
+                    <labels>
+                        <label description="Upload an image from your device, or use the default image" languagecode="1033" />
+                    </labels>
+                    <control id="description_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{b3aa84a6-448e-426a-944f-01af54d8015e}" name="{fa99f2e8-a990-4cac-9a92-191592f81eae}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{1d54c1e2-ec63-4fa1-b986-834480f16c22}" name="{560dcf0b-5344-4c98-865f-0ef24054f22c}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a467ecb9-074b-49a0-951e-688d22a12cfc}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="entityimagepreview_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{db6dbd91-57f7-409d-bccf-38cad448b46e}">
+                                            <parameters>
+                                                <MaxLength>11492393</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{0c71a7ef-fe45-4026-a85b-3e7e048837cc}">
+        <rows>
+            <row>
+                <cell id="{d3dffc1e-c392-45cd-a096-d9073b3c493d}">
+                    <labels>
+                        <label description="Use Camera" languagecode="1033" />
+                    </labels>
+                    <control id="takephoto_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{e78315b0-2066-45c3-8bcb-02a6ace8edd9}">
+                    <labels>
+                        <label description="Upload Image" languagecode="1033" />
+                    </labels>
+                    <control id="uploadimage_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{f6635cd5-8b03-43a8-86bd-8d5c2f637126}">
+                    <labels>
+                        <label description="Use Default" languagecode="1033" />
+                    </labels>
+                    <control id="usedefault_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{1e5d5045-fec3-42f1-a49f-2f25543d89b3}" visible="false">
+                    <labels>
+                        <label description="Change" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{82cb9cad-1c87-4c45-9652-918013561651}" visible="false">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="XrmCore.Commands.EntityImageUpload.DialogLoad" libraryName="Main_system_library.js" handlerUniqueId="{3b4777dd-55d0-48b0-a9a7-b41a99a5806e}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="takephoto_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.EntityImageUpload.TakePhoto" libraryName="Main_system_library.js" handlerUniqueId="{cc976cd8-e457-48d6-82bd-354af4ac94d6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="uploadimage_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.EntityImageUpload.UploadPhoto" libraryName="Main_system_library.js" handlerUniqueId="{71a0b054-48cc-49f8-b022-4e0d2c8c964f}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="usedefault_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.EntityImageUpload.UseDefault" libraryName="Main_system_library.js" handlerUniqueId="{1d8334fc-1fee-4c00-9eb1-bfb5a67fc0ca}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.EntityImageUpload.Update" libraryName="Main_system_library.js" handlerUniqueId="{33190b81-ec03-4b47-9dcc-ac0dd06d5803}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.EntityImageUpload.Cancel" libraryName="Main_system_library.js" handlerUniqueId="{221b12b2-c5c5-4158-8a77-afb7e00e6541s}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="entityimageurl_id" type="SafeString" />
+        <querystringparameter name="entitylogicalname_id" type="SafeString" />
+        <querystringparameter name="entityprimaryattribute_id" type="SafeString" />
+        <querystringparameter name="entity_id" type="SafeString" />
+        <querystringparameter name="cameraenabled_id" type="Boolean" />
+        <querystringparameter name="entityimagedata_id" type="SafeString" />
+        <querystringparameter name="formattedPrimaryImage_Attribute" type="SafeString" />
+    </formparameters>
+    <controlDescriptions>
+        <controlDescription forControl="{db6dbd91-57f7-409d-bccf-38cad448b46e}">
+            <customControl name="MscrmControls.FieldControls.EntityImageUploadPreviewControl" formFactor="0">
+                <parameters>
+                    <value type="Multiple">entityimagepreview_id</value>
+                    <MaxLength static="true" type="Whole.None">11492393</MaxLength>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.EntityImageUploadPreviewControl" formFactor="1">
+                <parameters>
+                    <value type="Multiple">entityimagepreview_id</value>
+                    <MaxLength static="true" type="Whole.None">11492393</MaxLength>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.EntityImageUploadPreviewControl" formFactor="2">
+                <parameters>
+                    <value type="Multiple">entityimagepreview_id</value>
+                    <MaxLength static="true" type="Whole.None">11492393</MaxLength>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

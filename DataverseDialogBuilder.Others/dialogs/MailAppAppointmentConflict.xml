@@ -1,0 +1,137 @@
+<form>
+    <formparameters>
+        <querystringparameter name="calendar_edit_link_url" type="SafeString" />
+        <querystringparameter name="is_keep_button" type="Boolean" />
+    </formparameters>
+    <header id="{DE449482-80E1-4876-B008-1A35381AD6B3}">
+        <rows>
+            <row>
+                <cell id="{247112B2-8A95-45FF-A53C-783CC7294F9E}">
+                    <labels>
+                        <label description="Scheduling conflict" languagecode="1033" />
+                    </labels>
+                    <control id="header_appointment_conflict" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{D1BC9AA0-92B0-48F1-A82C-31B153D2B6A2}" userspacer="true">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" name="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section celllabelalignment="Left" celllabelposition="Left" labelwidth="300" showbar="false" columns="1" id="{d7c8d6ab-104f-4063-9220-90446f38e938}" name="statusBar">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{B3434AC7-8364-4374-BC26-83D982859F70}">
+                                        <labels>
+                                            <label description="There is a scheduling conflict with another appointment on your calendar. Do you want to keep this appointment?" languagecode="1033" />
+                                        </labels>
+                                        <control id="Status_Message" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>true</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" celllabelalignment="Left" celllabelposition="Left" labelwidth="300" id="{12d2dd0d-ddc1-4821-a964-3679b9db2975}" name="recommendation">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1BC3581E-620B-4F55-ACEF-864FCAD0FC3E}" showlabel="false">
+                                        <labels>
+                                            <label description="Edit this appointment in Dynamics 365" languagecode="1033" />
+                                        </labels>
+                                        <control id="CalendarEdit_Link" uniqueid="{1b80d4d2-3135-414a-8a66-e91900d9fdc4}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8B78489C-2090-4A7F-8C75-71E759386ADA}">
+        <rows>
+            <row>
+                <cell id="{8B78489C-2090-4A7F-8C75-71E759386ADA}">
+                    <labels>
+                        <label description="Keep" languagecode="1033" />
+                    </labels>
+                    <control id="Keep_Button" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{1DE6C9EA-5222-4522-95BC-BE99A7E34CC9}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="Cancel_Button" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{1b80d4d2-3135-414a-8a66-e91900d9fdc4}">
+            <customControl name="MscrmControls.UnboundHyperlinkControl.UnboundHyperlinkControl" formFactor="0">
+                <parameters>
+                    <LinkUrl type="SingleLine.Text">calendar_edit_link_url</LinkUrl>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.UnboundHyperlinkControl.UnboundHyperlinkControl" formFactor="1">
+                <parameters>
+                    <LinkUrl type="SingleLine.Text">calendar_edit_link_url</LinkUrl>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.UnboundHyperlinkControl.UnboundHyperlinkControl" formFactor="2">
+                <parameters>
+                    <LinkUrl type="SingleLine.Text">calendar_edit_link_url</LinkUrl>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="Keep_Button">
+            <Handlers>
+                <Handler functionName="Dialogs.ShowAppointmentConflict.onKeepClick" libraryName="new_MailAppScriptResource" handlerUniqueId="{b421d59d-587d-4e84-b990-f30febf22693}" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Cancel_Button">
+            <Handlers>
+                <Handler functionName="Dialogs.Common.CloseDialog" libraryName="new_MailAppScriptResource" handlerUniqueId="{29d8a053-8502-42cd-a8e2-2bc72881fe37}" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Dialogs.ShowAppointmentConflict.onLoad" libraryName="new_MailAppScriptResource" handlerUniqueId="{1c9ad739-14d7-4136-ad2a-47d54f3f6e6d}" />
+            </Handlers>
+        </event>
+    </events>
+</form>

@@ -1,0 +1,221 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_fetch_xml" type="SafeString" />
+        <querystringparameter name="param_query_entity_type" type="SafeString" />
+        <querystringparameter name="param_layout_xml" type="SafeString" />
+        <querystringparameter name="param_selected_records" type="SafeString" />
+        <querystringparameter name="entity_id" type="SafeString" />
+        <querystringparameter name="param_canceled" type="Boolean" />
+        <querystringparameter name="param_isvalid" type="Boolean" />
+        <querystringparameter name="param_validationerrormessage" type="SafeString" />
+    </formparameters>
+    <header id="{DC0E0955-6D32-4581-B716-4415816E1E30}">
+        <rows>
+            <row>
+                <cell id="{D27C2FA0-D8FB-413A-8251-C83AEFF42949}">
+                    <labels>
+                        <label description="Manage Dynamic List Members" languagecode="1033" />
+                    </labels>
+                    <control id="lqAdd_dialog_header_title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{20329352-B32A-4B05-B9E6-2805C4FAC6B5}" name="query_tab" locklevel="0">
+            <labels>
+                <label description="Build query" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Rule Conditions" labelwidth="125" showbar="false" showlabel="false" locklevel="1" IsUserDefined="0" id="{95B20EEA-1552-4C70-8613-80F6D44D7E47}" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{95f07666-663a-4d04-a8f0-e23201bd5218}">
+                                        <labels>
+                                            <label description="Look for:" languagecode="1033" />
+                                        </labels>
+                                        <control id="look_for_entity_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isrequired="true" />
+                                    </cell>
+                                    <cell id="{3276029b-a535-4c8c-bf47-e4bf68fa8517}">
+                                        <labels>
+                                            <label description="Use Saved View:" languagecode="1033" />
+                                        </labels>
+                                        <control id="saved_query_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isrequired="false" />
+                                    </cell>
+                                </row>
+                                <row height="auto">
+                                    <cell showlabel="false" auto="true" colspan="2" rowspan="10" id="{B56CC209-8D1A-46B2-807E-B7674F4270A0}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="queryeditor_uc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{762A2967-95F3-4603-BA05-171D32E687E4}">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{7733d9e6-c4af-4183-abee-8db5c5c549fd}">
+                <rows>
+                    <row>
+                        <cell id="{547FFA6A-5E8B-4584-AEF8-8D67AF5C74D7}">
+                            <labels>
+                                <label description="Find" languagecode="1033" />
+                            </labels>
+                            <control id="next_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+        <tab verticallayout="true" id="{a0841450-e860-4e97-b514-2c5901aaf5aa}" name="confirm_tab" locklevel="0">
+            <labels>
+                <label description="Confirm results" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{58EC517F-A81A-45FC-9655-B59BBAE5039C}" name="members" layout="varwidth" showlabel="false" labelwidth="190" showbar="false" IsUserDefined="0" locklevel="0">
+                            <labels>
+                                <label description="Filtered members" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{F083983F-FF81-4E16-8545-85C1F4092D87}" showlabel="false" labelid="{16617064-9897-4ED3-95A8-A8198023B499}" colspan="1">
+                                        <labels>
+                                            <label description="Contacts" languagecode="1033" />
+                                        </labels>
+                                        <control id="contactsUCIPopup" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{700468DC-AFBA-4F53-B467-FA32BA5FE48C}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{7733d9e6-c4af-4183-abee-8db5c5c549fd}">
+                <rows>
+                    <row>
+                        <cell id="{DA29ED12-6F6B-487C-BF4B-C3CE9A72E9B0}">
+                            <labels>
+                                <label description="Back to query" languagecode="1033" />
+                            </labels>
+                            <control id="back_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{C4C1D919-08B4-4055-AF2E-9D76BF30DB29}">
+                            <labels>
+                                <label description="Use query" languagecode="1033" />
+                            </labels>
+                            <control id="lqUseQuery_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageDynamicListDialog.load" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{1E5930EA-886A-4100-91AD-EDA81DF656CC}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="next_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageDynamicListDialog.next" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{33E4573A-A0DF-4564-A29C-9FC1B658D98E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="back_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageDynamicListDialog.back" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{4346BDC9-7A04-4A41-B2A7-A07A9203CB95}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="lqUseQuery_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageDynamicListDialog.save" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{33E4573A-A0DF-4564-A29C-9FC1B658D98E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="saved_query_id">
+            <Handlers>
+                <Handler functionName="Marketing.List.ManageDynamicListDialog.QueryChanged" libraryName="Marketing/List/List_main_system_library.js" handlerUniqueId="{33E4573A-A0DF-4564-A29C-9FC1B658D98E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{700468DC-AFBA-4F53-B467-FA32BA5FE48C}">
+            <customControl name="MscrmControls.DialogControlWrapper.DialogControlWrapper" formFactor="2">
+                <parameters>
+                    <controlName static="true" type="SingleLine.Text">MscrmControls.Grid.MarketingFetchXmlResultsViewer</controlName>
+                    <parametersJson static="true" type="SingleLine.Text">{"entitylogicalname":{"Value":"param_query_entity_type","Type":"SingleLine.Text"},"fetchxml":{"Value":"param_fetch_xml","Type":"SingleLine.Text"},"layoutxml":{"Value":"param_layout_xml","Type":"SingleLine.Text"},"selectedrecords":{"Type":"Multiple","Usage": 3}}</parametersJson>
+                    <bindingJson static="true" type="SingleLine.Text">{"selectedrecords":"param_selected_records"}</bindingJson>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.DialogControlWrapper.DialogControlWrapper" formFactor="1">
+                <parameters>
+                    <controlName static="true" type="SingleLine.Text">MscrmControls.Grid.MarketingFetchXmlResultsViewer</controlName>
+                    <parametersJson static="true" type="SingleLine.Text">{"entitylogicalname":{"Value":"param_query_entity_type","Type":"SingleLine.Text"},"fetchxml":{"Value":"param_fetch_xml","Type":"SingleLine.Text"},"layoutxml":{"Value":"param_layout_xml","Type":"SingleLine.Text"},"selectedrecords":{"Type":"Multiple","Usage": 3}}</parametersJson>
+                    <bindingJson static="true" type="SingleLine.Text">{"selectedrecords":"param_selected_records"}</bindingJson>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.DialogControlWrapper.DialogControlWrapper" formFactor="0">
+                <parameters>
+                    <controlName static="true" type="SingleLine.Text">MscrmControls.Grid.MarketingFetchXmlResultsViewer</controlName>
+                    <parametersJson static="true" type="SingleLine.Text">{"entitylogicalname":{"Value":"param_query_entity_type","Type":"SingleLine.Text"},"fetchxml":{"Value":"param_fetch_xml","Type":"SingleLine.Text"},"layoutxml":{"Value":"param_layout_xml","Type":"SingleLine.Text"},"selectedrecords":{"Type":"Multiple","Usage": 3}}</parametersJson>
+                    <bindingJson static="true" type="SingleLine.Text">{"selectedrecords":"param_selected_records"}</bindingJson>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{762A2967-95F3-4603-BA05-171D32E687E4}">
+            <customControl name="MscrmControls.ConditionBuilder.ConditionBuilderControl" formFactor="2">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">param_query_entity_type</entitylogicalname>
+                    <fetchxml type="SingleLine.Text">param_fetch_xml</fetchxml>
+                    <isvalid type="Boolean">param_isvalid</isvalid>
+                    <validationerrormessage type="SingleLine.Text">param_validationerrormessage</validationerrormessage>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConditionBuilder.ConditionBuilderControl" formFactor="0">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">param_query_entity_type</entitylogicalname>
+                    <fetchxml type="SingleLine.Text">param_fetch_xml</fetchxml>
+                    <isvalid type="Boolean">param_isvalid</isvalid>
+                    <validationerrormessage type="SingleLine.Text">param_validationerrormessage</validationerrormessage>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConditionBuilder.ConditionBuilderControl" formFactor="1">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">param_query_entity_type</entitylogicalname>
+                    <fetchxml type="SingleLine.Text">param_fetch_xml</fetchxml>
+                    <isvalid type="Boolean">param_isvalid</isvalid>
+                    <validationerrormessage type="SingleLine.Text">param_validationerrormessage</validationerrormessage>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

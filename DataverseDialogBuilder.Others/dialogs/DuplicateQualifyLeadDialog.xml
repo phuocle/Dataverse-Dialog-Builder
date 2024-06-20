@@ -1,0 +1,213 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_parentAccountId" type="SafeString" />
+        <querystringparameter name="param_parentAccountName" type="SafeString" />
+        <querystringparameter name="param_parentContactId" type="SafeString" />
+        <querystringparameter name="param_parentContactName" type="SafeString" />
+        <querystringparameter name="param_transactioncurrencyid" type="UniqueId" />
+        <querystringparameter name="param_qualifyStatus" type="Integer" />
+        <querystringparameter name="param_emailAddress" type="SafeString" />
+        <querystringparameter name="entity_record_account" type="Object" />
+        <querystringparameter name="entity_record_contact" type="Object" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{05D38A90-F3B7-491C-9234-32DFBB91CB15}" name="{8ebc498c-5c28-4e65-bc68-5ff4d84cfb29}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{E540482D-77E6-455A-8F5D-DA14687E3521}" name="{E540482D-77E6-455A-8F5D-DA14687E3521}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{30F7828E-D46A-40FB-9BF6-31A0D2D34657}" showlabel="true">
+                                        <labels>
+                                            <label description="Associate the lead to existing records by choosing account and (or) contact and clicking continue. To proceed by without linking to matched record, click Ignore and save. " languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{25911A2E-D255-4BE2-B77B-629DF7C12C80}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="manage_duplicates_grid_account" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{D142E78B-AF03-490D-B49E-1A4A71D195E7}">
+                                            <parameters>
+                                                <MaxLength>100000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{90930ED8-2407-4AA5-A966-31C98A11A832}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="manage_duplicates_grid_contact" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{9D789B83-5EEB-440B-8041-398BBCF46D94}">
+                                            <parameters>
+                                                <MaxLength>100000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{895BCF27-B1E7-47C4-B826-DB2DA3D6B641}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selected_Record_account" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{FA892B71-0E3D-4384-AC43-9B5423A4A262}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selected_Record_contact" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{6DA5F87F-B958-4EC7-8804-B7288C0F0EC1}">
+        <rows>
+            <row>
+                <cell id="{43AA05F0-CB22-4E45-B8C0-3879B8489517}">
+                    <labels>
+                        <label description="Account or Contact may already exists" languagecode="1033" />
+                    </labels>
+                    <control id="dupwarning" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{C4F72F0B-7B25-4162-A48C-E920BB28EE18}">
+        <rows>
+            <row>
+                <cell id="{9AEA12DB-CAB4-4A35-B010-392024288FB3}">
+                    <labels>
+                        <label description="Ignore and save" languagecode="1033" />
+                    </labels>
+                    <control id="ignore_save" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{7EB426C6-9058-44FB-B12D-93C66B01FF8E}">
+                    <labels>
+                        <label description="Continue" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{90A16BA2-6803-4C2E-A197-7C035C0E9F1F}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.LeadCommandActions.dupWarningOnLoadHandler" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{ff2c9832-eb68-49dd-a61e-1645f9d9d6db}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="MarketingSales.Lead.CommandActions.dialogClose" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{2d02e167-be7d-4b22-969b-4bf52a386126}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.LeadCommandActions.dupWarningOnOkClickHandler" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{03d80721-295a-4713-a98a-da70cffe4b90}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ignore_save">
+            <Handlers>
+                <Handler functionName="Mscrm.LeadCommandActions.dupWarningOnOkClickHandler" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{A032CAD2-DE0B-4A5F-82B6-113EBE1EAE52}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="selected_Record_account">
+            <Handlers>
+                <Handler functionName="Mscrm.LeadCommandActions.selectedRecordsChange" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{B69A2CE2-5219-40CA-A84E-9D0F849D78A7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="selected_Record_contact">
+            <Handlers>
+                <Handler functionName="Mscrm.LeadCommandActions.selectedRecordsChange" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{B69A2CE2-5219-40CA-A84E-9D0F849D78A7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:MarketingSales/Lead/Lead_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{D142E78B-AF03-490D-B49E-1A4A71D195E7}">
+            <customControl name="MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced" formFactor="0">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selected_Record_account</SelectedRecordId>
+                    <EntityRecord type="SingleLine.Text">entity_record_account</EntityRecord>
+                    <ShowEntityLookupFlag type="TwoOptions" static="true">false</ShowEntityLookupFlag>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced" formFactor="1">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selected_Record_account</SelectedRecordId>
+                    <EntityRecord type="SingleLine.Text">entity_record_account</EntityRecord>
+                    <ShowEntityLookupFlag type="TwoOptions" static="true">false</ShowEntityLookupFlag>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced" formFactor="2">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selected_Record_account</SelectedRecordId>
+                    <EntityRecord type="SingleLine.Text">entity_record_account</EntityRecord>
+                    <ShowEntityLookupFlag type="TwoOptions" static="true">false</ShowEntityLookupFlag>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{9D789B83-5EEB-440B-8041-398BBCF46D94}">
+            <customControl name="MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced" formFactor="0">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selected_Record_contact</SelectedRecordId>
+                    <EntityRecord type="SingleLine.Text">entity_record_contact</EntityRecord>
+                    <ShowEntityLookupFlag type="TwoOptions" static="true">false</ShowEntityLookupFlag>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced" formFactor="1">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selected_Record_contact</SelectedRecordId>
+                    <EntityRecord type="SingleLine.Text">entity_record_contact</EntityRecord>
+                    <ShowEntityLookupFlag type="TwoOptions" static="true">false</ShowEntityLookupFlag>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced" formFactor="2">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selected_Record_contact</SelectedRecordId>
+                    <EntityRecord type="SingleLine.Text">entity_record_contact</EntityRecord>
+                    <ShowEntityLookupFlag type="TwoOptions" static="true">false</ShowEntityLookupFlag>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

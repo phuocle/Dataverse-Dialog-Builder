@@ -1,0 +1,193 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_msdyn_parentalert" type="SafeString" />
+        <querystringparameter name="param_msdyn_parentalertname" type="SafeString" />
+        <querystringparameter name="param_msdyn_deviceid" type="SafeString" />
+        <querystringparameter name="param_msdyn_device" type="SafeString" />
+        <querystringparameter name="param_msdyn_devicename" type="SafeString" />
+    </formparameters>
+    <header id="{9456236a-fbfb-404a-8403-7c27717b3873}">
+        <rows>
+            <row>
+                <cell id="{633D5AA7-B6F4-4E1C-955B-8FE3B6EEED9A}">
+                    <labels>
+                        <label description="Send command to the device" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_command_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{EFEC4929-0FA5-489F-8B1C-128DA049E8AF}" IsUserDefined="1" name="SendIoTCommandDialogTab" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section name="ViewAdvanceInfo" showlabel="true" showbar="false" locklevel="0" id="{AC9EC694-2824-4BA7-8A1A-D4D170497B31}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{FB872094-F804-4563-ACA8-DFBE95239EB2}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="View Advanced Information" languagecode="1033" />
+                                        </labels>
+                                        <control id="ViewAdvanceInfoSwitch" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" isunbound="true" uniqueid="{AAA11F0E-83FC-4ACD-A094-72EF202196F0}">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="DeviceSection" showlabel="true" showbar="false" locklevel="0" id="{A5DA081B-CFF7-4ABE-A243-A6ADC49F6423}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto" visible="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{E4978B0C-0716-465E-BD53-E4C38DFD0DF4}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Send To All Connected Devices" languagecode="1033" />
+                                        </labels>
+                                        <control id="SendToAllConnectedDevices" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" disabled="false" isunbound="true" uniqueid="{1A111D13-A4C7-440B-B4DE-92C6F212D767}">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{47E36DEA-6197-45A9-A301-0A22D79CD9E8}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Enter Device ID" languagecode="1033" />
+                                        </labels>
+                                        <control id="IoTDeviceSwitch" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" isunbound="true" uniqueid="{31DBDA47-7720-41E4-A0FB-B24FDFA8F521}">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{262BFFFC-5651-48B3-927A-C27446193F7F}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Device" languagecode="1033" />
+                                        </labels>
+                                        <control id="DeviceLookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>msdyn_iotdevice</EntityLogicalName>
+                                                        <DefaultViewId>{13C8A47C-EC96-45E7-8D0E-BC388A2CEF36}</DefaultViewId>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{BDFCC0F0-265E-42DD-B6D9-8C5E41724146}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Device ID" languagecode="1033" />
+                                        </labels>
+                                        <control id="DeviceId" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{69799f66-362c-456d-bb90-4fb35354ef54}">
+        <rows>
+            <row>
+                <cell id="{30845053-73FB-484B-A72A-C561010A22A2}">
+                    <labels>
+                        <label description="Send" languagecode="1033" />
+                    </labels>
+                    <control id="btnSendCommand" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{31DBDA47-7720-41E4-A0FB-B24FDFA8F521}">
+            <customControl formFactor="0" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value type="TwoOptions">IoTDeviceSwitch</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value type="TwoOptions">IoTDeviceSwitch</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value type="TwoOptions">IoTDeviceSwitch</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{AAA11F0E-83FC-4ACD-A094-72EF202196F0}">
+            <customControl formFactor="0" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value type="TwoOptions">ViewAdvanceInfoSwitch</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value type="TwoOptions">ViewAdvanceInfoSwitch</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value type="TwoOptions">ViewAdvanceInfoSwitch</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="msdyn.IoTCommandDialog.onLoad" libraryName="$webresource:msdyn_/IoT/Command/CommandDialog.js" handlerUniqueId="{74A29A49-273D-4062-A8F6-6B9FB149C0C5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="IoTDeviceSwitch">
+            <Handlers>
+                <Handler functionName="msdyn.IoTCommandDialog.onDeviceSwitchChange" libraryName="$webresource:msdyn_/IoT/Command/CommandDialog.js" handlerUniqueId="{A5E77EFB-400A-4583-8862-CB7143F5C094}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="SendToAllConnectedDevices">
+            <Handlers>
+                <Handler functionName="msdyn.IoTCommandDialog.onSendToAllConnectedDevicesChange" libraryName="$webresource:msdyn_/IoT/Command/CommandDialog.js" handlerUniqueId="{8E25C97C-E3AD-4FAE-BF9D-813B528E2564}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="ViewAdvanceInfoSwitch">
+            <Handlers>
+                <Handler functionName="msdyn.IoTCommandDialog.onViewAdvanceInfoSwitchChange" libraryName="$webresource:msdyn_/IoT/Command/CommandDialog.js" handlerUniqueId="{0EB70EC0-94AE-47EE-AE8B-7D312636471A}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/IoT/Command/CommandDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

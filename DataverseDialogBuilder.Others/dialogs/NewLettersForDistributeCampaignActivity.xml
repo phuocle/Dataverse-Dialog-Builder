@@ -1,0 +1,210 @@
+<form>
+    <formparameters>
+        <querystringparameter name="action_name" type="SafeString" />
+        <querystringparameter name="activity_serialized" type="SafeString" />
+        <querystringparameter name="activity_type" type="SafeString" />
+        <querystringparameter name="entity_id" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="channel_name" type="SafeString" />
+        <querystringparameter name="form_values_letter" type="SafeString" />
+    </formparameters>
+    <header id="{9e43f951-a9c3-457d-89ca-7413ed7401cb}">
+        <rows>
+            <row>
+                <cell id="{e9bf0331-5b96-40a8-aa71-f56831402952}">
+                    <labels>
+                        <label description="New Letters" languagecode="1033" />
+                    </labels>
+                    <control id="dialog_header_title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{d26b0d82-9cf4-4921-80c5-21589c41d16b}" name="{d26b0d82-9cf4-4921-80c5-21589c41d16b}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{7c057f7e-5d2e-43c5-b105-b2ad1991219e}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8d45e226-2c26-4d9c-87f6-eb534eb594e8}">
+                                        <labels>
+                                            <label description="Fill out this form to create new letters for the members you selected in the marketing list. To add this letter as a new letter in each member's record, click Distribute." languagecode="1033" />
+                                        </labels>
+                                        <control id="dialog_subtitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" id="{26893ba5-7aff-414e-ba79-9bb6e89394b1}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9e9daf11-b4af-4a4a-9f54-a0f4400e6f1d}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{cbecacd1-3346-4123-b715-e07b9f607769}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a0969f5f-c205-4808-8ee0-c296d679c2fb}">
+                                        <labels>
+                                            <label description="Due" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_scheduled_end" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <Format>DateTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{17d0b51a-66c8-4867-99e9-01e2e1fb383e}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6d6d3827-9422-416f-b362-5f207843ffe2}" rowspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_description" classid="{E0DECE4B-6FC8-4A8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{0aebdd1d-606a-4619-9b64-b5528435befa}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="letter_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{96D879B4-9C25-44EE-925D-E5A08C2E16BE}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{24348379-ED37-423F-A151-B9F270A8E3FE}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{b7890e2e-b4e8-4392-823f-5213b0018447}">
+        <rows>
+            <row>
+                <cell id="{aeb4a2e1-0c80-437d-81c6-3a3cba3e29d6}">
+                    <labels>
+                        <label description="Help" languagecode="1033" />
+                    </labels>
+                    <control id="help_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{df4a9faf-1a80-4f2d-b021-a1370c0b8684}">
+                    <labels>
+                        <label description="Distribute" languagecode="1033" />
+                    </labels>
+                    <control id="distribute_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{08d8c4f4-4c8e-46af-a240-72608493e6c3}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewLetters.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{88b644cc-3003-417e-8a16-f841be429320}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="help_id">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onHelpButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{1ced4c1f-7ead-4fbc-b295-19461bc381b8}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="distribute_id">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewLetters.onConfirmClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{5730ac13-3ab9-4524-88c7-1c9f11b29107}" enabled="true" parameters="" passExecutionContext="false" />
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onDistributeActivityButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{f6929760-5558-45ba-9610-d2bf14ed11ff}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="Marketing/ClientCommon/Marketing_ClientCommon.js" handlerUniqueId="{3ef058e2-00d7-4b51-b217-25e45ef3e4a4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/CampaignActivity/CampaignActivity_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{24348379-ED37-423F-A151-B9F270A8E3FE}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4207</EntityName>
+                    <FormValues type="SafeString">form_values_letter</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4207</EntityName>
+                    <FormValues type="SafeString">form_values_letter</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4207</EntityName>
+                    <FormValues type="SafeString">form_values_letter</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

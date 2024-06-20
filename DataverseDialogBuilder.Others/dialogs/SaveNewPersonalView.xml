@@ -1,0 +1,100 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_fetchxml" type="SafeString" />
+        <querystringparameter name="param_layoutxml" type="SafeString" />
+        <querystringparameter name="param_entityname" type="SafeString" />
+        <querystringparameter name="param_viewid" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" name="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{fd26828a-9489-470c-b1a7-304940c1a3ea}" name="{fd26828a-9489-470c-b1a7-304940c1a3ea}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b8a63127-2104-4592-8fbc-9fc8a8eccae0}">
+                                        <labels>
+                                            <label description="The view is stored in the list of saved views" languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7392d26d-e252-40dc-bef4-4726c7275426}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" isrequired="true"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2f858a34-eb50-4886-a6ed-4dd858635880}" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{399ca37a-8ec4-4c18-87cd-272ed3d14000}">
+        <rows>
+            <row>
+                <cell id="{40a59802-b1e2-4463-a074-d4cf2b014501}">
+                    <labels>
+                        <label description="Save as new view" languagecode="1033" />
+                    </labels>
+                    <control id="save_as_new_view_header_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{58837ad8-8749-4823-9a6e-1c962f4cefc0}">
+        <rows>
+            <row>
+                <cell id="{8e78375a-947b-458f-98d2-37573a19a791}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{1cff4e58-5e46-495d-9f11-5ecf18af38e3}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="save" libraryName="$webresource:SaveViewAsNewPersonalView.js" handlerUniqueId="{7c172366-d467-469c-9cec-53c9b64cfdaa}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="close" libraryName="$webresource:SaveViewAsNewPersonalView.js" handlerUniqueId="{b75e7486-5402-4ea9-9f64-f69123cc3aaa}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

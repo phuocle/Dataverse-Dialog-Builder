@@ -1,0 +1,115 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{dcf7aed9-7b29-4826-b779-a76d354b8835}" name="{dcf7aed9-7b29-4826-b779-a76d354b8835}" locklevel="0" expanded="true" showlabel="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="true" showlabel="true" columns="1" id="{23f9a443-d10a-4058-8714-a24e0f5a5e2c}" name="{23f9a443-d10a-4058-8714-a24e0f5a5e2c}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8c4ed4bf-8ac3-41fe-9aa2-6193c37624f4}" showlabel="true">
+                                        <labels>
+                                            <label description="Do you want to close the selected Service Activity?" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2a9f845c-711e-408d-8a02-3d8a906efa78}" showlabel="true">
+                                        <labels>
+                                            <label description="Select the status of the closing Service Activity." languagecode="1033" />
+                                        </labels>
+                                        <control id="message_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6e585efa-26a1-453e-8cc8-88e354fe16ed}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="State" languagecode="1033" />
+                                        </labels>
+                                        <control id="state_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <OptionSetId>{D048CCE1-2608-4A8D-BE0B-54E6422EAB5F}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c86efae0-20f1-4c46-9be7-9e02159ad353}" showlabel="true" locklevel="0" visible="true">
+                                        <labels>
+                                            <label description="Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="status_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <OptionSetId>{D048CCE1-2608-4A8D-BE0B-54E6422EAB5F}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{a4cf51e6-b92e-4f12-9a76-66f86b3804cd}">
+        <rows>
+            <row>
+                <cell id="{ef311b3f-8892-4341-844d-45ca93b42624}" showlabel="true">
+                    <labels>
+                        <label description="Close Service Activity" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{1b904995-d7aa-4ff1-9775-a1e498317103}">
+        <rows>
+            <row>
+                <cell id="{29eb0261-e6bb-408d-a439-af858d09a5d5}" visible="true">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{0cc1bd1b-3239-48cf-9ecb-31d946cb5796}" visible="true">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="closeServiceActivityOk" libraryName="Service/_static/Activities/serviceappointment/serviceappointment.js" handlerUniqueId="{255c9f2e-bb8f-4635-b9d2-3392a1ed3548}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="closeServiceActivityCancel" libraryName="Service/_static/Activities/serviceappointment/serviceappointment.js" handlerUniqueId="{e265552e-b952-4ae3-8f9f-fe1ee2d3848f}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+    </formparameters>
+</form>

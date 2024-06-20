@@ -1,0 +1,105 @@
+<form>
+    <header id="{c9defb13-e10e-4830-99cb-76bd22c96003}">
+        <rows>
+            <row>
+                <cell id="{96dc0e34-b5ff-407f-a59e-8257e314ddbc}">
+                    <labels>
+                        <label description="Cancel Contract" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_cancelcontract" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{c707309c-e371-4040-9934-d981fcbb2bcd}" name="{9853ddfc-6f13-4eff-8894-c7c4b483135e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{880e5d95-9e94-4864-81f2-5f00adc9a765}" name="{477053b3-6c58-477c-be42-6c05dd636f28}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8d04fac0-ebc7-44f1-b342-012270eb7103}">
+                                        <labels>
+                                            <label description="Select the cancellation date for contract." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_descriptioncancelcontract" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cd271907-ece8-429e-9ec3-60c19326c3e1}">
+                                        <labels>
+                                            <label description="Cancellation Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="cancelDate_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{d76f0728-2c94-4967-8eb8-fce7550dbdf2}">
+        <rows>
+            <row>
+                <cell id="{e8e5f7cf-4cb8-4709-9d07-d62335ded083}">
+                    <labels>
+                        <label description="Confirm" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{57b168f1-7843-450c-a451-2047da86eb96}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.Contract.CommandBarActions.contractCancelOnLoad" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="{825565c3-bd41-4131-8455-04997ac00eb4}" enabled="true" parameters="" passExecutionContext="false" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.Contract.CommandBarActions.contractCancelApplyChangesClick" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="{0741069c-4654-4d49-917a-a7e39a00801f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{2531c4b9-7e2d-477c-ac67-ac9e5797e3eb}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Contract/Contract_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,150 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_selectedEntities" type="SafeString" />
+        <querystringparameter name="param_stateCode" type="SafeString" />
+        <querystringparameter name="param_recordId" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{cb5ac8cc-e5b4-4f30-83c1-28592a3e0c3c}" name="{cb5ac8cc-e5b4-4f30-83c1-28592a3e0c3c}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5b57c6e8-4f49-425c-81b4-77ca87603dbe}" name="{5b57c6e8-4f49-425c-81b4-77ca87603dbe}">
+                            <labels>
+                                <label description="Select Users" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{61fe900a-5932-4b58-b1d7-bf3763354f28}">
+                                        <labels>
+                                            <label description="Select the record type you want to use for the connection role" languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1ab79bdc-bcbb-4b55-aef3-564fb386660e}" rowspan="4">
+                                        <labels>
+                                            <label description="Record types" languagecode="1033" />
+                                        </labels>
+                                        <control id="entitylist" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{acb674e6-48d4-37ba-10d6-d61d5abecc77}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4b326e6b-4183-292b-6ab1-350387aea816}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4b326e6b-4183-292b-6ab1-350387aea817}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4b326e6b-4183-292b-6ab1-350387aea818}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4b326e6b-4183-292b-6ab1-350387aea819}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4b326e6b-4183-292b-6ab1-350387aea820}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4b326e6b-4183-292b-6ab1-350387aea821}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{54a5ce51-e36d-4773-9cfb-36224a3e9481}">
+        <rows>
+            <row>
+                <cell id="{41dabe70-f223-49e3-a3aa-a46e25393758}">
+                    <labels>
+                        <label description="Manage record types" languagecode="1033" />
+                    </labels>
+                    <control id="EntityPickerMDDHeaderID" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{303f1bb7-3f05-423b-8b27-135b552b337c}">
+        <rows>
+            <row>
+                <cell id="{560bd1aa-5648-4847-b73e-767ec05de6c3}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{fda1708c-d92d-4015-b36d-1b77113ad275}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="onLoad" libraryName="ManageConnectionRolesDialogHandlers.js" handlerUniqueId="{8DC039D7-2C9B-4A02-8C90-343BC310D2AF}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="entitylist">
+            <Handlers>
+                <Handler functionName="onEntityListChange" libraryName="ManageConnectionRolesDialogHandlers.js" handlerUniqueId="{28d49c6d-1d49-4b29-8677-562bd98240a2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="onSave" libraryName="ManageConnectionRolesDialogHandlers.js" handlerUniqueId="{E9729192-4C8B-4CBE-B464-60010E865163}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="onClose" libraryName="ManageConnectionRolesDialogHandlers.js" handlerUniqueId="{B426C259-225B-41E0-85EA-A1BFCD56150F}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

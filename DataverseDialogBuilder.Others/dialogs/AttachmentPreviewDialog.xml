@@ -1,0 +1,105 @@
+<form>
+    <header id="{690b400b-4ba0-4a6b-b142-4c7e77216f91}">
+        <rows>
+            <row>
+                <cell id="{2e7a2ffa-8a3c-4142-a58f-dd6bf8852f07}">
+                    <labels>
+                        <label description="Attachment preview" languagecode="1033" />
+                    </labels>
+                    <control id="attachmentPreviewTitleId" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{7fcd0828-048d-4fe3-9910-ffe14a606f40}" name="{7fcd0828-048d-4fe3-9910-ffe14a606f40}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{50a0e244-a0ab-43cd-852f-05df54c98241}" name="{50a0e244-a0ab-43cd-852f-05df54c98241}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c81f49aa-bf73-40d1-ba0d-de9f372f2451}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="attachmentPreviewControlId" classid="{f9a8a302-114e-466a-b582-6771b2ae0d92}" isunbound="true" uniqueid="{cf12ff3c-7abc-4725-abb0-2d4b63a7ce8b}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{26d6ea3d-7e80-4a8d-bd7c-4c731cc73165}">
+        <rows>
+            <row>
+                <cell id="{6dc3aec4-83a8-4399-a1ce-db49cb4bda80}">
+                    <labels>
+                        <label description="Download" languagecode="1033" />
+                    </labels>
+                    <control id="downloadId" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{e251b7bd-0da7-41d1-8d9d-e2db2bdc775e}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="closeId" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{cf12ff3c-7abc-4725-abb0-2d4b63a7ce8b}">
+            <customControl formFactor="0" name="MscrmControls.Activity.AttachmentPreviewControl">
+                <parameters>
+                    <attachmentId type="SingleLine.Text">param_attachmentId</attachmentId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Activity.AttachmentPreviewControl">
+                <parameters>
+                    <attachmentId type="SingleLine.Text">param_attachmentId</attachmentId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Activity.AttachmentPreviewControl">
+                <parameters>
+                    <attachmentId type="SingleLine.Text">param_attachmentId</attachmentId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="downloadId">
+            <Handlers>
+                <Handler functionName="Activities.AddAttachment.downloadAttachmentDialog" libraryName="Activities/SystemLibraries/ActivityMimeAttachment.js" handlerUniqueId="{5c64e2f5-eb8f-4ac7-a580-8b0f0ff595e6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="closeId">
+            <Handlers>
+                <Handler functionName="Activities.AddAttachment.closeDialog" libraryName="Activities/SystemLibraries/ActivityMimeAttachment.js" handlerUniqueId="{ab7c2377-6e21-4b6f-983e-80a6e41dcae9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_attachmentId" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/ActivityMimeAttachment.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

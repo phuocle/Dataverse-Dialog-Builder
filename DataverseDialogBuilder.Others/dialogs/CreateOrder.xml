@@ -1,0 +1,206 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_quoteid" type="UniqueId" />
+        <querystringparameter name="param_cancloseopportunity" type="Object" />
+        <querystringparameter name="param_opportunityid" type="UniqueId" />
+        <querystringparameter name="param_closedstate" type="Integer" />
+        <querystringparameter name="param_createorderstatusreasondescription_id" type="SafeString" />
+    </formparameters>
+    <header id="{8d32a61e-ecde-11e5-9ce9-5e5517507c66}">
+        <rows>
+            <row>
+                <cell id="{8d32a42a-ecde-11e5-9ce9-5e5517507c66}">
+                    <labels>
+                        <label description="Create Order" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_createorder" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{b1d18eea-ecde-11e5-9ce9-5e5517507c66}" name="{b1d197aa-ecde-11e5-9ce9-5e5517507c66}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" columns="1" id="{b1d199ee-ecde-11e5-9ce9-5e5517507c66}" name="{b1d19bb0-ecde-11e5-9ce9-5e5517507c66}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b1d19d5e-ecde-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="Use this quote to create an order." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_createorderdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b1d19f16-ecde-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="Status Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="createorderstatusreason_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{9770e29c-b914-ef11-840b-6045bd575473}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{46edd45c-ecdf-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="Date Won" languagecode="1033" />
+                                        </labels>
+                                        <control id="createorderdate_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{46edd57e-ecdf-11e5-9ce9-5e5517507c66}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{46edd650-ecdf-11e5-9ce9-5e5517507c66}" visible="false">
+                                        <labels>
+                                            <label description="Close Opportunity" languagecode="1033" />
+                                        </labels>
+                                        <control id="createordercloseopportunity_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{58592238-ecca-11e5-9ce9-5e5517507c66}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{46edd718-ecdf-11e5-9ce9-5e5517507c66}" visible="false">
+                                        <labels>
+                                            <label description="Calculate actual revenue from quotes" languagecode="1033" />
+                                        </labels>
+                                        <control id="createordercalcrevenue_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{d23b376a-ecdb-11e5-9ce9-5e5517507c66}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{46eddc36-ecdf-11e5-9ce9-5e5517507c66}" visible="false">
+                                        <labels>
+                                            <label description="Actual revenue" languagecode="1033" />
+                                        </labels>
+                                        <control id="actualrevenue_id" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" isunbound="true">
+                                            <parameters>
+                                                <MinValue>-1000000000000</MinValue>
+                                                <MaxValue>1000000000000</MaxValue>
+                                                <Precision>2</Precision>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{82380bdf-ef02-4d1c-a3fd-017b1c628386}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>transactioncurrency</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{b1d1a0ce-ecde-11e5-9ce9-5e5517507c66}">
+        <rows>
+            <row>
+                <cell id="{b1d1a5a6-ecde-11e5-9ce9-5e5517507c66}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{b1d1a786-ecde-11e5-9ce9-5e5517507c66}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onLoadCreateOrderDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{46edcbce-ecdf-11e5-9ce9-5e5517507c66}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCloseCreateOrderDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{46edcfca-ecdf-11e5-9ce9-5e5517507c66}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.dialogClose" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{46edd100-ecdf-11e5-9ce9-5e5517507c66}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="createordercloseopportunity_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCreateOrderCloseOpportunityChanged" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{254bd09b-ed81-480e-986f-0771196b3495}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="createordercalcrevenue_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCreateOrderCalculateRevenueFromQuoteChanged" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="32D871CF-0117-4417-AF59-0273CE176C64" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="actualrevenue_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCreateOrderActualRevenueChanged" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="949C8888-01AA-4481-B405-816B457C63B9" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/Quote/Quote_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Sales/CommandBarActions/SalesCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

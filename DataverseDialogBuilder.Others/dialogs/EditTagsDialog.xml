@@ -1,0 +1,105 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_selectedRecords" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{72f7a78c-595a-4c88-8770-ddeb4ebe7a46}" name="{72f7a78c-595a-4c88-8770-ddeb4ebe7a46}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{4a9c3f68-a254-4c8f-8d52-6d5f27eda3c8}" name="{4a9c3f68-a254-4c8f-8d52-6d5f27eda3c8}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0e6ef365-72a8-4037-9276-8ebe844fb4d8}">
+                                        <labels>
+                                            <label description="Edit Tags" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_edittagsid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{c4985c95-d9a3-4df6-a441-dcf70a041a63}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{35e4e67a-4216-4d90-acda-c4d0300c741d}">
+        <rows>
+            <row>
+                <cell id="{bed37627-4ccc-4b2f-b7e6-4439a0480306}">
+                    <labels>
+                        <label description="Edit Tags" languagecode="1033" />
+                    </labels>
+                    <control id="edittagsheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{43c66299-8e26-459c-a052-2c20471a763d}">
+                    <labels>
+                        <label description="Add or remove tags in bulk to the selected records" languagecode="1033" />
+                    </labels>
+                    <control id="edittagssubheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{9d03b431-d9b6-4bca-bba2-e6cc4a9b2a06}">
+        <rows>
+            <row>
+                <cell id="{501ad8a3-69fa-40db-a6d3-de128524f040}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="close_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="close_id">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.EditTagsDialog.Instance.closeEditTagsDialog" libraryName="msdyn_EditTagsDialog.js" handlerUniqueId="{2161d8fd-8be0-49d4-a5ab-977597ef739d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{c4985c95-d9a3-4df6-a441-dcf70a041a63}">
+            <customControl formFactor="0" name="MscrmControls.OCTagsControl.OCTagsControl">
+                <parameters>
+                    <parentEntityName static="true" type="SingleLine.Text">msdyn_cannedmessage</parentEntityName>
+                    <childEntityName static="true" type="SingleLine.Text">msdyn_octag</childEntityName>
+                    <relationshipSchemaName static="true" type="SingleLine.Text">msdyn_msdyn_cannedmessage_msdyn_octag</relationshipSchemaName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.OCTagsControl.OCTagsControl">
+                <parameters>
+                    <parentEntityName static="true" type="SingleLine.Text">msdyn_cannedmessage</parentEntityName>
+                    <childEntityName static="true" type="SingleLine.Text">msdyn_octag</childEntityName>
+                    <relationshipSchemaName static="true" type="SingleLine.Text">msdyn_msdyn_cannedmessage_msdyn_octag</relationshipSchemaName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.OCTagsControl.OCTagsControl">
+                <parameters>
+                    <parentEntityName static="true" type="SingleLine.Text">msdyn_cannedmessage</parentEntityName>
+                    <childEntityName static="true" type="SingleLine.Text">msdyn_octag</childEntityName>
+                    <relationshipSchemaName static="true" type="SingleLine.Text">msdyn_msdyn_cannedmessage_msdyn_octag</relationshipSchemaName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

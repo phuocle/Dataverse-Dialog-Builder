@@ -1,0 +1,137 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_workOrderIds" type="Object" />
+        <querystringparameter name="param_parentPage" type="Object" />
+        <querystringparameter name="param_ParentFormContext" type="Object" />
+    </formparameters>
+    <header id="{deed0f2d-a50f-4b0a-abd5-40db90fcda21}">
+        <rows>
+            <row>
+                <cell id="{deedf0b5-a50f-4b0a-abd5-40db90fcda51}">
+                    <labels>
+                        <label description="Geocode Multiple Addresses" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{9B0CF6F2-BFB3-4AEB-ABF1-CD35C93413FD}">
+                    <labels>
+                        <label description="Displays the status of the multiple records geocoding" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_subHeader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{e8dd9035-12f9-46f3-9275-7c192deed651}" name="{6f6dec6f-3fe5-4e05-bd80-d358eb93f27b}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{393767c1-06c8-4a78-b6e3-a6ebbbfcd35e}" name="{b4b3a40b-bbb9-4125-911b-5b57b9fb27fa}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8d41547c-2ee7-7345-89b1-6eb5cc454148}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Records selected" languagecode="1033" />
+                                        </labels>
+                                        <control id="total_records" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" disabled="true" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0c9b5587-5ccb-343b-3c97-a93923538e56}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Records processed" languagecode="1033" />
+                                        </labels>
+                                        <control id="processed_records" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" disabled="true" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0c9b5587-5ccb-343b-3c97-a83923538e56}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Records successfully geocoded" languagecode="1033" />
+                                        </labels>
+                                        <control id="success_records" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" disabled="true" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0c9b5587-5ccb-343b-3c97-a73923538e56}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Records unsuccessfully geocoded" languagecode="1033" />
+                                        </labels>
+                                        <control id="unsuccess_records" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" disabled="true" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{af2bbbab-b74d-40a4-95bf-dfeb466975f6}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{54c90024-ab8e-1236-ad08-cb3f2516ddf2}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_processCompleted" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8f7fbd1f-537a-4032-bc69-b031285e58a6}">
+        <rows>
+            <row>
+                <cell id="{9bb4d6c6-11be-4db5-9b00-7433a093f690}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="btnOk" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.InitForm" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de228}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnOk">
+            <Handlers>
+                <Handler functionName="GeoCodePopUp.Library.CloseDialog" libraryName="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" handlerUniqueId="{cb587e9a-6ff9-4be4-8d70-a2660f7de227}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/GeoCodeUtils/GeoCodePopUp.Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

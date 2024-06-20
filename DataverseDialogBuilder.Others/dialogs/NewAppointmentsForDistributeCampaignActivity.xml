@@ -1,0 +1,268 @@
+<form>
+    <formparameters>
+        <querystringparameter name="action_name" type="SafeString" />
+        <querystringparameter name="activity_serialized" type="SafeString" />
+        <querystringparameter name="activity_type" type="SafeString" />
+        <querystringparameter name="entity_id" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="channel_name" type="SafeString" />
+        <querystringparameter name="form_values_appointment" type="SafeString" />
+    </formparameters>
+    <header id="{2bda06c2-e4ad-4e80-a6d8-3ddece58f6bc}">
+        <rows>
+            <row>
+                <cell id="{eb748846-749c-4468-88a9-d34f50c49b23}">
+                    <labels>
+                        <label description="New Appointments" languagecode="1033" />
+                    </labels>
+                    <control id="dialog_header_title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{aff0b4cf-ce5c-46c2-b4ac-72f65653fcbc}" name="{aff0b4cf-ce5c-46c2-b4ac-72f65653fcbc}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{38001bb5-c48a-4ace-a4d1-97062f4fedc9}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a9c011e1-3f6c-4442-88f5-dde4e191b8a4}">
+                                        <labels>
+                                            <label description="Fill out this form to create new appointments for the members you selected in the marketing list. To add this appointment as a new appointment in each member's record, click Distribute." languagecode="1033" />
+                                        </labels>
+                                        <control id="dialog_subtitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" id="{45996eaa-012a-4f5d-ab20-cf1eb91c0ae8}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1292724f-80e9-482d-b4e7-0aafabf62acb}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{091cde1c-ea31-4b40-a09a-3c83890d3a52}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{43c261ba-6d79-4d7b-b52d-14d6bd8abf33}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cacce850-0d00-4285-b669-af2140b5efb6}">
+                                        <labels>
+                                            <label description="Location" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_location" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" id="{1ea09c5e-3872-4820-90b3-6e747b604f03}">
+                                        <labels>
+                                            <label description="All Day Event" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_all_day_event" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{488ff1c9-eea9-426c-9e5d-7eb34aef13c2}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{42e75d4d-f146-4f53-83df-d1845fd715d6}">
+                                        <labels>
+                                            <label description="Start time" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_start_time" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3f444cbb-b72d-4fa8-85d0-e335692623d4}">
+                                        <labels>
+                                            <label description="End time" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_end_time" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0f706f72-8a16-431b-9f75-280c64197414}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6f519d2f-e737-45f2-8c46-bd5d690db1d0}" rowspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="appointment_description" classid="{E0DECE4B-6FC8-4A8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{187DD54F-E07C-44CC-AD6D-481C8A003681}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{C28E1E5C-D97E-4B62-8526-195D95D5B8A9}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{6e710426-f60e-400f-8663-77f365a4725e}">
+        <rows>
+            <row>
+                <cell id="{efa936d2-1c19-4225-aa44-6f5ef7ea5cef}">
+                    <labels>
+                        <label description="Help" languagecode="1033" />
+                    </labels>
+                    <control id="help_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{db97b242-643f-4b0e-8116-a3d33d333c6e}">
+                    <labels>
+                        <label description="Distribute" languagecode="1033" />
+                    </labels>
+                    <control id="distribute_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{a2a5f6e6-6a65-46d9-990e-b18a32e84ed7}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{f88c94b4-4795-44a6-acf4-4bbf78c29ca9}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="appointment_all_day_event">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onAllDayEventChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{61739a24-1899-4e31-a5be-793e93fc709d}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="appointment_actual_duration_minutes">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onActualDurationMinutesChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{61739a24-1899-4e31-a5be-793e93fc709d}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="appointment_start_time">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onStartTimeChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{1df35070-9c3d-46a5-9470-5897b2dfadfe}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="appointment_end_time">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onEndTimeChanged" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{f04e3fc8-6100-43a9-ac0c-1e15ac0498ed}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="help_id">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onHelpButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{2977af47-6086-4e85-b30e-d77ecf37b71f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="distribute_id">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewAppointments.onConfirmClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{5730ac13-3ab9-4524-88c7-1c9f11b29107}" enabled="true" parameters="" passExecutionContext="false" />
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onDistributeActivityButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{0f027b60-2000-4b6e-9090-9e4a3933b054}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="Marketing/ClientCommon/Marketing_ClientCommon.js" handlerUniqueId="{d94e6f4e-9abb-4791-854e-bddb3ef263f7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/CampaignActivity/CampaignActivity_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{C28E1E5C-D97E-4B62-8526-195D95D5B8A9}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4201</EntityName>
+                    <FormValues type="SafeString">form_values_appointment</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4201</EntityName>
+                    <FormValues type="SafeString">form_values_appointment</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4201</EntityName>
+                    <FormValues type="SafeString">form_values_appointment</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

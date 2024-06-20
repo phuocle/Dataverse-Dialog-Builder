@@ -1,0 +1,194 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityName" type="SafeString" />
+        <querystringparameter name="param_gridControl" type="Object" />
+        <querystringparameter name="param_attachmentId" type="SafeString" />
+        <querystringparameter name="param_objectid" type="UniqueId" />
+        <querystringparameter name="param_objecttypecode" type="PositiveInteger" />
+        <querystringparameter name="param_AttachmentFileName" type="SafeString" />
+        <querystringparameter name="param_AttachmentFileMode" type="SafeString" />
+        <querystringparameter name="param_AttachmentFileSize" type="SafeString" />
+        <querystringparameter name="param_AttachmentFileType" type="SafeString" />
+        <querystringparameter name="param_AttachmentFileContent" type="SafeString" />
+        <querystringparameter name="param_AttachmentIsFollowed" type="SafeString" />
+        <querystringparameter name="param_IsEmailFollowed" type="SafeString" />
+        <querystringparameter name="param_EntityName" type="SafeString" />
+    </formparameters>
+    <header id="{16157dd6-9f91-4efa-b7b8-a938ea1ef2d4}">
+        <rows>
+            <row>
+                <cell id="{efd161f8-44de-40a2-97fe-bbf2e50b4908}">
+                    <labels>
+                        <label description="Add attachment" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_activityattachment" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{5131963e-f023-43cd-8d4e-f6aaa6af0ce2}" name="{5131963e-f023-43cd-8d4e-f6aaa6af0ce2}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{4409a694-e8bc-42ce-9e7d-999a22a0ca34}" name="{4409a694-e8bc-42ce-9e7d-999a22a0ca34}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{aab09768-9a00-4c1f-8762-0d820d007816}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="emailAttachmentControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{608C2388-2261-4A46-90DC-6CB0734B9653}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{2d508b59-0668-4ef1-bb5b-e7ed890501c5}">
+        <rows>
+            <row>
+                <cell id="{0a282499-4ec1-4868-8c21-c27cc14b15f0}">
+                    <labels>
+                        <label description="Attach" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{b6642cab-1ce5-4019-a7eb-7d064e0d7e83}">
+                    <labels>
+                        <label description="Remove" languagecode="1033" />
+                    </labels>
+                    <control id="remove_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{6fb67787-8b12-42a4-b07f-da02b2de7ff1}">
+                    <labels>
+                        <label description="Follow" languagecode="1033" />
+                    </labels>
+                    <control id="follow_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{646eefc1-da45-457c-9e75-f564df828bd3}">
+                    <labels>
+                        <label description="Do not Follow" languagecode="1033" />
+                    </labels>
+                    <control id="donot_follow_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{748520f5-2e79-4811-b0b5-d3cacbf95462}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Activities.AddAttachment.onLoad" libraryName="Activities/SystemLibraries/ActivityMimeAttachment.js" handlerUniqueId="{36a92953-acc8-4006-8505-77e798bf3ea6}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Activities.AddAttachment.addAttachmentToActivityDialogOkClick" libraryName="Activities/SystemLibraries/ActivityMimeAttachment.js" handlerUniqueId="{ae538c99-a1f6-4c09-b9a4-9bb6630d4cbb}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="remove_id">
+            <Handlers>
+                <Handler functionName="Activities.AddAttachment.addAttachmentDialogRemoveClick" libraryName="Activities/SystemLibraries/ActivityMimeAttachment.js" handlerUniqueId="{3c5ec8e7-980b-451b-8c16-02ff3fe15ec2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.AddAttachment.closeDialog" libraryName="Activities/SystemLibraries/ActivityMimeAttachment.js" handlerUniqueId="{71aef1eb-976a-4a1e-aa3d-16e69338f2b3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="follow_id">
+            <Handlers>
+                <Handler functionName="Activities.AddAttachment.followAttachmentClick" libraryName="Activities/SystemLibraries/ActivityMimeAttachment.js" handlerUniqueId="{0e8f5da0-1a63-4ff2-b553-abd8865ddd75}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="donot_follow_id">
+            <Handlers>
+                <Handler functionName="Activities.AddAttachment.unFollowAttachmentClick" libraryName="Activities/SystemLibraries/ActivityMimeAttachment.js" handlerUniqueId="{dea67ce0-3837-4378-9e6a-21e30d9a37ae}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/ActivityMimeAttachment.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{608C2388-2261-4A46-90DC-6CB0734B9653}">
+            <customControl name="MscrmControls.FieldControls.DragDropControl" formFactor="0">
+                <parameters>
+                    <fileName type="SingleLine.Text">param_AttachmentFileName</fileName>
+                    <fileType type="SingleLine.Text">param_AttachmentFileType</fileType>
+                    <fileSize type="SingleLine.Text">param_AttachmentFileSize</fileSize>
+                    <mode type="SingleLine.Text">param_AttachmentFileMode</mode>
+                    <content type="SingleLine.Text">param_AttachmentFileContent</content>
+                    <attachmentId type="SingleLine.Text">param_attachmentId</attachmentId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.DragDropControl" formFactor="1">
+                <parameters>
+                    <fileName type="SingleLine.Text">param_AttachmentFileName</fileName>
+                    <fileType type="SingleLine.Text">param_AttachmentFileType</fileType>
+                    <fileSize type="SingleLine.Text">param_AttachmentFileSize</fileSize>
+                    <mode type="SingleLine.Text">param_AttachmentFileMode</mode>
+                    <content type="SingleLine.Text">param_AttachmentFileContent</content>
+                    <attachmentId type="SingleLine.Text">param_attachmentId</attachmentId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.DragDropControl" formFactor="2">
+                <parameters>
+                    <fileName type="SingleLine.Text">param_AttachmentFileName</fileName>
+                    <fileType type="SingleLine.Text">param_AttachmentFileType</fileType>
+                    <fileSize type="SingleLine.Text">param_AttachmentFileSize</fileSize>
+                    <mode type="SingleLine.Text">param_AttachmentFileMode</mode>
+                    <content type="SingleLine.Text">param_AttachmentFileContent</content>
+                    <attachmentId type="SingleLine.Text">param_attachmentId</attachmentId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.DragDropControl" formFactor="3">
+                <parameters>
+                    <fileName type="SingleLine.Text">param_AttachmentFileName</fileName>
+                    <fileType type="SingleLine.Text">param_AttachmentFileType</fileType>
+                    <fileSize type="SingleLine.Text">param_AttachmentFileSize</fileSize>
+                    <mode type="SingleLine.Text">param_AttachmentFileMode</mode>
+                    <content type="SingleLine.Text">param_AttachmentFileContent</content>
+                    <attachmentId type="SingleLine.Text">param_attachmentId</attachmentId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

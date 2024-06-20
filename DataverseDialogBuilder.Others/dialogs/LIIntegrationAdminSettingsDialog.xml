@@ -1,0 +1,92 @@
+<form>
+    <formparameters></formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{A7F2511A-98C8-4983-B839-984684FA4C36}" name="{CF855450-3679-4E85-AFEF-2E146002E0ED}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{033623D2-A3EE-4E6C-BB0D-7F3A486479BF}" name="{3A00D96F-B34E-4C19-B198-10810A02E4FE}" columns="1" showbar="false" showlabel="false" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4C21F3E6-4836-4245-9578-F08517CCD1A9}" showlabel="false" rowspan="10">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="IFRAME_LISettings" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                                <row></row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{A73F0863-5817-4409-A78B-74864CBB55F5}">
+        <rows>
+            <row height="auto">
+                <cell id="{A5A23C8D-3E1F-461B-9A90-673F94692A51}" rowspan="2">
+                    <labels>
+                        <label description="Sales Navigator Integration Settings" languagecode="1033" />
+                    </labels>
+                    <control id="header_id" isunbound="true" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{549BF6A1-3250-46DE-A585-5600B9DC8F3A}">
+        <rows>
+            <row>
+                <cell id="{313CA2C4-58AC-49FC-B966-84697F159CC9}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{E49DB8ED-880B-4598-BE21-946AFBEC09E6}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="LinkedInIntegration.AdminSettings.Instance.OnLoad" libraryName="$webresource:LinkedInIntegration/AdminSettings/msdyn_LinkedInIntegrationAdminSettings.js" handlerUniqueId="{AB053187-F3C9-4E9D-B299-F9F1E6046B13}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="LinkedInIntegration.AdminSettings.Instance.OnClickApplySettings" libraryName="$webresource:LinkedInIntegration/AdminSettings/msdyn_LinkedInIntegrationAdminSettings.js" handlerUniqueId="{88B491F8-BEAA-4D66-B589-516B655355BD}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="LinkedInIntegration.AdminSettings.Instance.DialogClose" libraryName="$webresource:LinkedInIntegration/AdminSettings/msdyn_LinkedInIntegrationAdminSettings.js" handlerUniqueId="{A1BBC19D-B91E-41A5-8255-9436DFCC4DFD}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:LinkedInIntegration/AdminSettings/msdyn_LinkedInIntegrationAdminSettings.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

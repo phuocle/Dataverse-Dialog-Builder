@@ -1,0 +1,120 @@
+<form>
+    <tabs>
+        <tab verticallayout="false" id="{aa3e65c8-8b0f-4d74-b703-45e20242725a}" name="{aa3e65c8-8b0f-4d74-b703-45e20242725a}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" showlabel="false" columns="1" id="{9b3b46b2-2a77-4b53-bf41-0afdd91bbd73}" name="{9b3b46b2-2a77-4b53-bf41-0afdd91bbd73}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{83950c7f-16a8-4f5b-a3b5-3f523c00d31f}" showlabel="true">
+                                        <labels>
+                                            <label description="Select what states to monitor and show in the activity monitor." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_label_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{471361ef-1c61-459a-bfa6-c3692ecd40a7}">
+                                        <labels>
+                                            <label description="Ready for Power Automate / workflow" languagecode="1033" />
+                                        </labels>
+                                        <control id="toggleShowSuccesses" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{be6f3365-863a-4525-aa07-e306a51f4848}">
+                                        <labels>
+                                            <label description="Failed" languagecode="1033" />
+                                        </labels>
+                                        <control id="toggleShowFailures" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{903b03bb-e14d-4849-a572-67e0e5a21afe}">
+                                        <labels>
+                                            <label description="Skipped" languagecode="1033" />
+                                        </labels>
+                                        <control id="toggleShowSkips" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{5a1cbbde-74de-4cac-bdae-b317b08a9c49}">
+        <rows>
+            <row>
+                <cell id="{adac69c9-f8f8-4e0d-bc9a-20b80b97ba65}">
+                    <labels>
+                        <label description="Monitor options" languagecode="1033" />
+                    </labels>
+                    <control id="serviceconfigheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{adac69c9-f8f8-4e0d-bc9a-20b80b97ba65}">
+        <rows>
+            <row>
+                <cell id="{7627025a-6a0d-40c3-936a-b18d93c0c4a0}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="save_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{c092d18e-d15d-4e7b-a034-53191ae72e50}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="ARC.ARCCommandBarActions.OnMonitorOptionsDialogLoad" libraryName="$webresource:AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="{7634affd-2ea0-4f28-a7c5-a0b85d504db9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="save_id">
+            <Handlers>
+                <Handler functionName="ARC.ARCCommandBarActions.OnMonitorOptionsDialogSave" libraryName="$webresource:AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="{1bf44d63-3c21-4552-aa5c-0c6302c5f463}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="ARC.ARCCommandBarActions.OnMonitorOptionsDialogCancel" libraryName="$webresource:AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="{0feac65b-7a92-4f67-9d1b-62fcdc6de018}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

@@ -1,0 +1,102 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_bookableResourceIds" type="Object" />
+    </formparameters>
+    <header id="{18daf37a-8df4-4a07-97b3-2a80f5aa41e1}">
+        <rows>
+            <row>
+                <cell id="{13bdfadb-fc10-46e2-9720-bce63f40d512}">
+                    <labels>
+                        <label description="Choose a Role" languagecode="1033" />
+                    </labels>
+                    <control id="setRoleHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="false" id="{12c8084d-cfa0-4236-b4f9-6cdbff614786}" name="Choose a Role" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="25%">
+                    <sections>
+                        <section showbar="false" columns="4" id="{6d03aa2b-f37e-4dec-826f-e4c2ada0e37e}" name="Tab1_section1" height="auto" showlabel="true">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{afca46eb-e3c4-487a-8cb4-0a025c8c5d9a}" colspan="2">
+                                        <labels>
+                                            <label description="Choose a Role" languagecode="1033" />
+                                        </labels>
+                                        <control id="roleLookup" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{82720e03-f1f6-4fe7-9a53-98db6c67c4a4}</DefaultViewId>
+                                                        <EntityLogicalName>bookableresourcecategory</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{9e35b425-6bf1-42fb-894f-edf1f0e1978d}">
+        <rows>
+            <row>
+                <cell id="{ae28355e-9ac3-4f92-8f50-862b24720f6d}">
+                    <labels>
+                        <label description="Apply" languagecode="1033" />
+                    </labels>
+                    <control id="apply_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{f93779f0-b108-49e0-8cb7-98801b7da0d0}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="onDialogLoad" libraryName="msdyn_/Resource/Scripts/SetRole.js" handlerUniqueId="{96536FE3-06D7-4AF7-AD72-8BE164B1846D}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="apply_id">
+            <Handlers>
+                <Handler functionName="onApply" libraryName="msdyn_/Resource/Scripts/SetRole.js" handlerUniqueId="{0eb13e8e-f011-4ce9-9119-8467c04eb779}" enabled="true" parameters="false" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="onCancel" libraryName="msdyn_/Resource/Scripts/SetRole.js" handlerUniqueId="{49ad7c06-52c0-4794-bb8e-8e4c92245f51}" enabled="true" parameters="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/Libraries/require/require.js" />
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

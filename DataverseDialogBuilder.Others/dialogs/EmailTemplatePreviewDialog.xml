@@ -1,0 +1,102 @@
+<form>
+    <formparameters>
+        <querystringparameter name="msdynce_custom_dialog_templateId" type="SafeString" />
+        <querystringparameter name="msdynce_custom_dialog_objectType" type="SafeString" />
+        <querystringparameter name="msdynce_custom_dialog_objectId" type="SafeString" />
+    </formparameters>
+    <header id="{c1b4177a-c581-41aa-9bf0-ec1271dbcd34}">
+        <rows>
+            <row>
+                <cell id="{c25dea66-c9c4-4cef-98ba-a011def0209a}">
+                    <labels>
+                        <label description="Preview" languagecode="1033" />
+                    </labels>
+                    <control id="preview_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{4096ED0D-B54B-4A90-8E14-6DE2F97EE1DF}" verticallayout="true" name="Tab">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabfooter id="{ba1e8d74-7cd0-44b8-8187-6a9f22474d8d}">
+                <rows>
+                    <row>
+                        <cell id="{85d03e65-65d5-423d-8df6-f5feb13038ad}">
+                            <labels>
+                                <label description="Close" languagecode="1033" />
+                            </labels>
+                            <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{f86373d8-1cb0-4015-8506-28a9faa346bf}" showbar="false" columns="1" name="Section">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="100%">
+                                    <cell id="{16ee92d0-48ca-496b-b68f-a7988351733c}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="template_preview" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{379cd05e-e228-4e2d-a132-2cfc1bc08b6a}">
+                                            <parameters />
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{379cd05e-e228-4e2d-a132-2cfc1bc08b6a}">
+            <customControl formFactor="0" name="MscrmControls.Activity.TemplatePreviewControl">
+                <parameters>
+                    <templateIdProperty type="SingleLine.Text">msdynce_custom_dialog_templateId</templateIdProperty>
+                    <entityTypeProperty type="SingleLine.Text">msdynce_custom_dialog_objectType</entityTypeProperty>
+                    <entityIdProperty type="SingleLine.Text">msdynce_custom_dialog_objectId</entityIdProperty>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Activity.TemplatePreviewControl">
+                <parameters>
+                    <templateIdProperty type="SingleLine.Text">msdynce_custom_dialog_templateId</templateIdProperty>
+                    <entityTypeProperty type="SingleLine.Text">msdynce_custom_dialog_objectType</entityTypeProperty>
+                    <entityIdProperty type="SingleLine.Text">msdynce_custom_dialog_objectId</entityIdProperty>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Activity.TemplatePreviewControl">
+                <parameters>
+                    <templateIdProperty type="SingleLine.Text">msdynce_custom_dialog_templateId</templateIdProperty>
+                    <entityTypeProperty type="SingleLine.Text">msdynce_custom_dialog_objectType</entityTypeProperty>
+                    <entityIdProperty type="SingleLine.Text">msdynce_custom_dialog_objectId</entityIdProperty>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.TemplateUtil.closeDialog" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{48144FCE-8067-44AB-9D8B-E786164EC633}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes />
+        </internalresources>
+    </clientresources>
+</form>

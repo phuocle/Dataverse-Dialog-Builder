@@ -1,0 +1,198 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_msdyn_resource_id" type="SafeString" />
+        <querystringparameter name="param_msdyn_user_id" type="SafeString" />
+    </formparameters>
+    <header id="{eb8d2912-571c-42c3-84b5-90658c3b29e7}">
+        <rows>
+            <row>
+                <cell id="{df898860-de28-4287-95c4-c4184acbf4b0}">
+                    <labels>
+                        <label description="View or Update User Permissions" languagecode="1033" />
+                    </labels>
+                    <control id="header_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{ea37497c-6e3a-455e-b38e-767256ac0cef}">
+                    <labels>
+                        <label description="These fields control the data this user can see and access." languagecode="1033" />
+                    </labels>
+                    <control id="header_description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true"></control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{8c6414f3-52fe-4318-917d-36c7f348e93c}" IsUserDefined="1">
+            <labels>
+                <label description="User Security Roles and Mobile Offline Profile" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="security_roles_section" showlabel="false" showbar="false" locklevel="0" IsUserDefined="0" id="{8ba17004-2bcc-487b-8b06-ad7354779919}" layout="varwidth" columns="1" celllabelalignment="Left" celllabelposition="Left" visible="true">
+                            <labels>
+                                <label description="Security Roles and Mobile Offline Profile" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{69f4f987-4e2c-4f85-8fd5-b1eba2db1d22}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Security Roles" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_securityrole" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{df213017-959e-44f0-9f6d-c2e2e66a3ff4}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{75b519ae-0b83-41b2-97d3-0e049d35198c}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Field Security Profiles" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_fieldsecurityprofile" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{60006d29-b907-4970-a938-30746d5edbe0}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d9471106-604b-4be7-9dd8-8fe73e0121e3}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Mobile Offline Data Profile" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_mobileofflineprofile" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" uniqueid="{9f2aa9ba-bac2-4029-afde-ade14ae71e4b}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{5089f8f7-e87f-41e3-a0fb-b332244a254c}</DefaultViewId>
+                                                        <EntityLogicalName>mobileofflineprofile</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{0d4e06bf-07e7-465e-999c-f700f25e4689}">
+        <rows>
+            <row>
+                <cell id="{0784fc0a-2011-4aa7-8918-d243a492a4b7}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="msdyn_BtnSave" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{42c19d1e-5693-4e89-87ef-c4cc96dbbf62}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="msdyn_BtnClose" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="ViewUser.Library.onDialogLoad" libraryName="$webresource:msdyn_/ViewUser/ViewUser.Library.js" handlerUniqueId="{8ac3a377-f47e-4251-a736-1f2f3c3c8cde}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_securityrole">
+            <Handlers>
+                <Handler functionName="ViewUser.Library.OnFieldChange" libraryName="$webresource:msdyn_/ViewUser/ViewUser.Library.js" handlerUniqueId="{9b294f7b-3e32-48e3-9ffd-7dabd80fd6f4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_fieldsecurityprofile">
+            <Handlers>
+                <Handler functionName="ViewUser.Library.OnFieldChange" libraryName="$webresource:msdyn_/ViewUser/ViewUser.Library.js" handlerUniqueId="{347b62df-2ca5-4b22-9259-dd9056c82304}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_mobileofflineprofile">
+            <Handlers>
+                <Handler functionName="ViewUser.Library.OnFieldChange" libraryName="$webresource:msdyn_/ViewUser/ViewUser.Library.js" handlerUniqueId="{b6af57f6-e63c-4c77-95b5-5ac99b59838e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="msdyn_BtnSave">
+            <Handlers>
+                <Handler functionName="ViewUser.Library.onSaveClick" libraryName="$webresource:msdyn_/ViewUser/ViewUser.Library.js" handlerUniqueId="{d1767fdb-5b83-4892-9140-87a51e155871}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="msdyn_BtnClose">
+            <Handlers>
+                <Handler functionName="ViewUser.Library.onCloseClick" libraryName="$webresource:msdyn_/ViewUser/ViewUser.Library.js" handlerUniqueId="{a3054176-a5e4-4eda-b20a-8c7917fb67a8}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/ViewUser/ViewUser.Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{60006d29-b907-4970-a938-30746d5edbe0}">
+            <customControl formFactor="2" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">msdyn_fieldsecurityprofile</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">fieldsecurityprofile</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">e726c252-a3e1-4af8-be89-a8904a724c55</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">msdyn_fieldsecurityprofile</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">fieldsecurityprofile</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">e726c252-a3e1-4af8-be89-a8904a724c55</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">msdyn_fieldsecurityprofile</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">fieldsecurityprofile</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">e726c252-a3e1-4af8-be89-a8904a724c55</defaultViewId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{df213017-959e-44f0-9f6d-c2e2e66a3ff4}">
+            <customControl formFactor="2" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">msdyn_securityrole</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">role</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">61f8d435-8e25-4751-8330-5969506ef536</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">msdyn_securityrole</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">role</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">61f8d435-8e25-4751-8330-5969506ef536</defaultViewId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.FieldService.MultiselectLookupControl">
+                <parameters>
+                    <outputProperty type="SingleLine.Text">msdyn_securityrole</outputProperty>
+                    <entityName static="true" type="SingleLine.Text">role</entityName>
+                    <defaultViewId static="true" type="SingleLine.Text">61f8d435-8e25-4751-8330-5969506ef536</defaultViewId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

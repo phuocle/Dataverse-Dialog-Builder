@@ -1,0 +1,101 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_primarytext" type="SafeString" />
+        <querystringparameter name="param_titletext" type="SafeString" />
+        <querystringparameter name="param_continueLabel" type="SafeString" />
+        <querystringparameter name="param_learnMoreLabel" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{fe0d0bd7-3343-4b49-9608-e069a348f99a}" name="{fe0d0bd7-3343-4b49-9608-e069a348f99a}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{058a8e17-3b12-4c4b-91ac-a595f655d4ed}" name="{058a8e17-3b12-4c4b-91ac-a595f655d4ed}" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2d106bcf-132c-44d4-a773-d5779026528a}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="primarytext_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{19683547-ac0a-40c2-b7a5-336c839d53be}">
+        <rows>
+            <row>
+                <cell id="{29471f45-9ac1-4cc8-8b4c-7d984b092d46}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{363c779e-278c-4835-b9ca-4f805ce723d3}">
+        <rows>
+            <row>
+                <cell id="{6bd0d3b8-c0a9-4519-b74a-2c352b190f08}">
+                    <labels>
+                        <label description="Learn More" languagecode="1033" />
+                    </labels>
+                    <control id="learnmore_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{e3aeccd0-706a-42e7-ada4-7311cfe66322}">
+                    <labels>
+                        <label description="Continue" languagecode="1033" />
+                    </labels>
+                    <control id="continue_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.LearnMoreDialog.OnLoad" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{991048F1-9FD3-48FB-A5FA-3ABD3C4A4C07}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="continue_id">
+            <Handlers>
+                <Handler functionName="Activities.LearnMoreDialog.OnContinueClick" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="{0966f8f9-eeef-4884-a61e-62bdce60c953}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="learnmore_id">
+            <Handlers>
+                <Handler functionName="Activities.LearnMoreDialog.OnLearnMoreClick" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="{5cb08c6a-bd40-11e8-a355-529269fb1459}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Email_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

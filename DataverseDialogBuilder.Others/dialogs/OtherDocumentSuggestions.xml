@@ -1,0 +1,100 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityTypeCode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{f0f4436b-5e0d-4a02-958b-68fd8b527086}" name="{f0f4436b-5e0d-4a02-958b-68fd8b527086}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{058d7769-ea58-4142-9f2d-74472c82638d}" name="{058d7769-ea58-4142-9f2d-74472c82638d}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a60c2c7f-c373-462c-8c9c-da288c5cc3e8}">
+                                        <labels>
+                                            <label description="These are documents suggested to you from around your company." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{83db5ee8-4789-454d-b6ab-e43bb41e94a9}" showlabel="false" colspan="1" rowspan="14">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="iframe_othersuggestions" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{ab7cafd8-bbb6-4c95-8a98-a7d7b1adb433}">
+        <rows>
+            <row>
+                <cell id="{0bf67a91-49af-4c80-818e-9c06e6b569ee}">
+                    <labels>
+                        <label description="Other Suggestions" languagecode="1033" />
+                    </labels>
+                    <control id="suggestionsheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{459fa356-14e6-488e-893f-6aed78d9eaea}">
+        <rows>
+            <row>
+                <cell id="{676e5c5a-50e6-44aa-8942-1e7dbfcea9f1}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{cbef0c2c-ef48-4950-86c5-a7e56d995dd0}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.CommandBarActions.otherDocumentSuggestionsDialogBackButtonClick" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{48a5751c-9274-461a-876b-2cefeb347232}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.InternalUtilities.DialogUtility.closeDialog" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{eeb9ce58-750b-4ccc-b0f9-437bab3f45db}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.CommandBarActions.otherDocumentSuggestionsDialogOnLoad" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{bdc7e2b1-3666-4047-8a81-0e441c8be5aa}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

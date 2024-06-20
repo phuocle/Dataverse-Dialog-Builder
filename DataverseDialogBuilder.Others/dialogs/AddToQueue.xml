@@ -1,0 +1,120 @@
+<form>
+    <hiddencontrols>
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{d6bbf2ba-39fe-4856-8a01-80e516eddc7e}" name="{d6bbf2ba-39fe-4856-8a01-80e516eddc7e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{c1c47f2d-534f-481f-bc0b-ea87b8d96c07}" name="{c1c47f2d-534f-481f-bc0b-ea87b8d96c07}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7772E972-7971-48BD-860E-33381D5411FB}">
+                                        <labels>
+                                            <label description="Select the queue that you want to add the selected record to." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{102FD191-8117-4413-A66E-1C3FD7BFCE36}">
+                                        <labels>
+                                            <label description="Queue" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessqueues_id" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{f374f814-00a2-44ed-8b88-13f34e202e79}</DefaultViewId>
+                                                        <EntityLogicalName>queue</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{53dc5900-9c4a-48b5-9766-b1497c772035}">
+        <rows>
+            <row>
+                <cell id="{35AA73CF-1D6A-4A92-8E05-82D36BAF89D6}">
+                    <labels>
+                        <label description="Add to Queue" languagecode="1033" />
+                    </labels>
+                    <control id="addtoqueue_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{dc750d76-bb91-45cf-b3ab-e6409b870c50}">
+        <rows>
+            <row>
+                <cell id="{1AAC9DC4-8D52-4FE1-A18D-90828AE485ED}">
+                    <labels>
+                        <label description="Add" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{54D2C17C-063A-4BE4-85B7-F041CCC83103}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="AppCommon.Commands.Queue.addToQueueDialogAddClick" libraryName="AppCommon/Commands/QueueCommands.js" handlerUniqueId="{4c582297-3e7e-2e0e-37b1-34e934d88a2a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="AppCommon.Commands.Queue.AddToQueueOnLoad" libraryName="AppCommon/Commands/QueueCommands.js" handlerUniqueId="{0d38c6dc-ab2f-4906-aabb-d7e586658481}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="AppCommon.Commands.Queue.closeDialog" libraryName="AppCommon/Commands/QueueCommands.js" handlerUniqueId="{73c47417-fe26-4b44-9864-590ccf0c17b2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="businessqueues_id">
+            <Handlers>
+                <Handler functionName="AppCommon.Commands.Queue.addToQueueDialogQueueChange" libraryName="AppCommon/Commands/QueueCommands.js" handlerUniqueId="{d0725a85-e779-4f1a-bbbf-690f79772a4c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/Commands/QueueCommands.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <formparameters>
+        <querystringparameter name="param_records" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+</form>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dialog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="Find User Id by User Name" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Find User Id by User Name" languagecode="1033" />
+  </Descriptions>
+  <FormId>{6ddd87bc-7f24-ef11-840b-00224856e701}</FormId>
+  <UniqueName>pl_find_user_id</UniqueName>
+  <IsCustomizable>1</IsCustomizable>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsTabletEnabled>0</IsTabletEnabled>
+  <CanBeDeleted>1</CanBeDeleted>
+  <FormXml>
+    <forms type="dialog">
+      <form>
+        <formparameters>
+          <querystringparameter name="pl_input_user_name" type="SafeString" />
+          <querystringparameter name="pl_output_user_id" type="SafeString" />
+        </formparameters>
+        <events>
+          <event name="onload" application="false" active="false">
+            <Handlers>
+              <Handler functionName="FindUserId.OnLoad" libraryName="$webresource:pl_/js/FindUserId.js" handlerUniqueId="{53672652-1D07-40D2-B24C-74D5AA11933D}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+          </event>
+          <event name="onclick" application="false" active="false" attribute="pl_button_ok">
+            <Handlers>
+              <Handler functionName="FindUserId.OnClickFind" libraryName="$webresource:pl_/js/FindUserId.js" handlerUniqueId="{BB7553DF-321A-4FBD-BC92-5FE75199AE5C}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+          </event>
+          <event name="onclick" application="false" active="false" attribute="pl_button_cancel">
+            <Handlers>
+              <Handler functionName="FindUserId.OnClickClose" libraryName="$webresource:pl_/js/FindUserId.js" handlerUniqueId="{8C859290-0D77-44F6-8EC8-53ED82CF0522}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+          </event>
+        </events>
+        <header id="{6FD1D0A2-706F-40D4-A1FF-EDEB69E421F2}">
+          <rows>
+            <row>
+              <cell id="{6348342B-F5DC-4703-813B-791BEFDB1F6E}" visible="true" rowspan="1">
+                <labels>
+                  <label description="FIND USER ID" languagecode="1033" />
+                </labels>
+                <control uniqueid="{5E9AF298-F9F3-41ED-B38D-3C184F107F6C}" id="pl_label_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                  <parameters>
+                    <IsTitle>true</IsTitle>
+                  </parameters>
+                </control>
+              </cell>
+            </row>
+            <row>
+              <cell id="{55229F65-C498-4499-A4F8-67CF73138728}" visible="true" rowspan="1">
+                <labels>
+                  <label description="Provide your User Name and we find your User Id (GUID)" languagecode="1033" />
+                </labels>
+                <control uniqueid="{B5748F52-689C-4937-A1A8-6E1709C7C462}" id="pl_label_subheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                  <parameters>
+                    <IsTitle>false</IsTitle>
+                  </parameters>
+                </control>
+              </cell>
+            </row>
+          </rows>
+        </header>
+        <tabs>
+          <tab id="{E9293BA9-78DB-46CA-A7F4-9C609A806C5E}" name="tab_main" visible="true" expanded="true" verticallayout="true" locklevel="0">
+            <labels>
+              <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+              <column width="100%">
+                <sections>
+                  <section id="{AFA8D1FC-44AC-4524-9175-F5873B705FE9}" name="section_main" labelwidth="300" showlabel="false" visible="true" celllabelalignment="Left" celllabelposition="Left">
+                    <labels>
+                      <label description="" languagecode="1033" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell id="{0AC6A9D4-E082-4B74-A589-860904A7350D}" visible="true">
+                          <labels>
+                            <label description="User Name" languagecode="1033" />
+                          </labels>
+                          <control uniqueid="{3D078A01-EBB8-4453-A932-40D3562751E1}" id="pl_textbox_user_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isrequired="true" disabled="false" isunbound="true">
+                            <parameters>
+                              <MaxLength>200</MaxLength>
+                              <Format>SingleLineOfText</Format>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{E18E138F-12A2-414E-A499-FFFCE75B99BE}" visible="true">
+                          <labels>
+                            <label description="User Id" languagecode="1033" />
+                          </labels>
+                          <control uniqueid="{9AF1F4C4-B4CB-4D2F-861C-46D2D7657A8C}" id="pl_textbox_user_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isrequired="false" disabled="true" isunbound="true">
+                            <parameters>
+                              <MaxLength>36</MaxLength>
+                              <Format>SingleLineOfText</Format>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+        <footer id="{7F551F50-4351-494A-AD84-AA8DCBFDE97B}">
+          <rows>
+            <row>
+              <cell id="{2739177D-0ACC-478A-8C70-3EF6CAF87F12}" visible="true">
+                <labels>
+                  <label description="Find" languagecode="1033" />
+                </labels>
+                <control uniqueid="{8F966C8C-1DC7-4E94-9FBB-6901EE0427C8}" id="pl_button_ok" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" disabled="false" isunbound="true" />
+              </cell>
+              <cell id="{60AB8D36-3C48-4840-81A4-58E6260A2379}" visible="true">
+                <labels>
+                  <label description="Close" languagecode="1033" />
+                </labels>
+                <control uniqueid="{B6E3DA04-03D2-4642-8756-5DFBAC3E4C2B}" id="pl_button_cancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" disabled="false" isunbound="true" />
+              </cell>
+            </row>
+          </rows>
+        </footer>
+      </form>
+    </forms>
+  </FormXml>
+</Dialog>

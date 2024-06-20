@@ -1,0 +1,110 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_callbackSuccess" type="Object" />
+        <querystringparameter name="param_callbackFailure" type="Object" />
+    </formparameters>
+    <header id="{7cc04a23-de9b-4f6c-b48b-5864f7b63ad3}">
+        <rows>
+            <row>
+                <cell id="{3a6ed693-85fd-4e34-8780-e9881e722742}">
+                    <labels>
+                        <label description="Create Analysis Job" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{15f189ca-117e-429e-8cc6-4da8306dc617}">
+                    <labels>
+                        <label description="Please specify the Rule Set for which to create an Analysis Job. The Organization Health Rules that are part of the selected Rule Set will be run." languagecode="1033" />
+                    </labels>
+                    <control id="lbl_jobdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{79e400d3-1e53-452a-ae5e-0e7dfdda3fd6}" name="MainTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" IsUserDefined="0" id="{4f8dfc0d-cd28-4382-af87-b49675ce85e0}">
+                            <labels>
+                                <label description="Rule Set Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{cd99430d-052d-446b-b531-79cebe3ec872}">
+                                        <labels>
+                                            <label description="Rule Set" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtRuleSet" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{6573f1b0-823a-4c8b-80c8-4f887d81d7d4}</DefaultViewId>
+                                                        <EntityLogicalName>msdyn_solutionhealthruleset</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{e8513c9c-5abf-4d61-a6ab-e8cadf35efb2}">
+        <rows>
+            <row>
+                <cell id="{8f91e7a9-5438-45bd-ba53-1f01fd862115}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="btnOk" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{f82f766d-ec37-441b-9158-62c27f8b4dd9}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="btnCancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="btnOk">
+            <Handlers>
+                <Handler functionName="AnalysisJobCreate.Library.AnalysisJobCreate_btnOK" libraryName="$webresource:msdyn_/AnalysisJob/AnalysisJob.Library.js" handlerUniqueId="{14EF1DFE-DAFC-4EEC-8E3F-0DD063286C07}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnCancel">
+            <Handlers>
+                <Handler functionName="AnalysisJobCreate.Library.AnalysisJobCreate_btnCancel" libraryName="$webresource:msdyn_/AnalysisJob/AnalysisJob.Library.js" handlerUniqueId="{D09E43A9-678E-473A-A74A-9338370DEB84}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/PowerAppsChecker/Utils/jquery.min.js" />
+                <internaljscriptfile src="$webresource:msdyn_/AnalysisJob/AnalysisJob.Library.js" />
+                <internaljscriptfile src="$webresource:msdyn_/DataContracts/msdyn_CreateNewAnalysisJobForRuleSetRequest.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

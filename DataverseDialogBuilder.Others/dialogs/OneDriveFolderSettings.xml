@@ -1,0 +1,109 @@
+<form>
+    <formparameters>
+        <querystringparameter name="last_Button_Clicked" type="SafeString" />
+        <querystringparameter name="regarding_Object_Id" type="SafeString" />
+        <querystringparameter name="entity_Type_Code" type="EntityType" />
+        <querystringparameter name="regarding_Object_EntityName" type="SafeString" />
+        <querystringparameter name="entity_Name" type="SafeString" />
+        <querystringparameter name="folder_Name" type="SafeString" />
+    </formparameters>
+    <header id="{18fbf2dc-3f43-4358-bceb-3d1632624525}">
+        <rows>
+            <row>
+                <cell id="{58419ec6-99dd-4d1e-a151-0a968930a216}">
+                    <labels>
+                        <label description="OneDrive for Business Folder Settings" languagecode="1033" />
+                    </labels>
+                    <control id="header_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{fd36d962-c7fb-4d94-baa9-1d1b0d2ef0a9}" name="{20ba5143-f7b8-4d6b-aa33-68478c72a5d0}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="80%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{e653ad55-380a-467c-809f-b1f1ec2362b3}" name="{c4d8b279-e164-4cd7-9be4-963e42eea95d}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{cd7e9e3a-fd6f-4041-af08-6068abe0b4d2}">
+                                        <labels>
+                                            <label description="Dynamics 365 Folder" languagecode="1033" />
+                                        </labels>
+                                        <control id="documentname_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>123</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9d48a07d-cc3b-49b8-9e3a-abbb70308e3c}">
+                                        <labels>
+                                            <label description="Dynamics 365 will use this folder for storing your personal files on your OneDrive for Business site. Changing the folder won't cause you to lose any files." languagecode="1033" />
+                                        </labels>
+                                        <control id="row1_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{4c92952c-4408-4986-ab99-2d8c05af6281}">
+        <rows>
+            <row>
+                <cell id="{feea082a-bb11-4ab8-bc99-e143d0a43612}">
+                    <labels>
+                        <label description="Ok" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{fbea082a-bb11-4ab8-bc99-e143d0a43612}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="DocumentManagement.OneDriveFolderSettings.OnLoadOneDriveFolderSettingsDialog" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{9c88f0ce-3060-45ac-86e3-c55ce6ad5c76}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.OneDriveFolderSettings.OkButtonClicked" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{83f71b8d-e658-4ec9-8f2d-5d5033895d26}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.GenericUtilities.CloseDialog" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{25b178e4-999a-441c-893a-ac3a009baaa8}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

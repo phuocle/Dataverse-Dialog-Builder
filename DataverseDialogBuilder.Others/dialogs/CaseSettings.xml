@@ -1,0 +1,167 @@
+<form>
+    <formparameters>
+        <querystringparameter name="values_xml" type="Object" />
+        <querystringparameter name="all_attributes" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{b820d011-ff4f-4e2e-b1f4-1648a93bea16}" name="{b820d011-ff4f-4e2e-b1f4-1648a93bea16}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{3495a4f2-403c-4fbd-a266-61c25ab789ed}" name="{3495a4f2-403c-4fbd-a266-61c25ab789ed}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b6ae9bb7-73bf-46cb-aef7-cabb01c35ec6}" showlabel="true">
+                                        <labels>
+                                            <label description="Select the case attribute that will inherit from parent case to child case." languagecode="1033" />
+                                        </labels>
+                                        <control id="selectAttributeDescription_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{915b6fae-22ad-47cf-a388-89c27eb2c40b}">
+                                        <labels>
+                                            <label description="Attribute" languagecode="1033" />
+                                        </labels>
+                                        <control id="cc_selectedAttributes_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{b157df35-ec18-440b-b3b8-4a38dec25d0c}">
+                                            <parameters>
+                                                <MaxLength>10000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{58d82296-0bcb-4bdc-8012-81ea7165c743}" showlabel="true">
+                                        <labels>
+                                            <label description="You can select a cascade closure preference for parent and child cases." languagecode="1033" />
+                                        </labels>
+                                        <control id="specifyClosurePreferenceDescription_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7a5abf0a-12f8-482f-8918-36d015d14fa5}">
+                                        <labels>
+                                            <label description="Specify closure preference" languagecode="1033" />
+                                        </labels>
+                                        <control id="specifyClosurePreference_id" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <DefaultValue>-1</DefaultValue>
+                                                <OptionSetId>{4c938537-9385-4211-b9d8-615b70708464}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{a49cea6c-f36a-4b50-84a8-fa8e7d92474b}">
+        <rows>
+            <row>
+                <cell id="{19bfd5b3-53c9-4764-8aab-75575aa981a2}">
+                    <labels>
+                        <label description="Case Settings" languagecode="1033" />
+                    </labels>
+                    <control id="casesettingsheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{b87addb4-ce24-4139-a286-f659d185847f}">
+        <rows>
+            <row>
+                <cell id="{abee28aa-a1bb-4b26-aad3-eab720593b9e}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{7fa40c56-c43f-4832-a9a8-d7e2c2d91058}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="close_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{0448834a-9cfe-4e1f-acd0-54cdb80cd69d}">
+                    <labels>
+                        <label description="Help" languagecode="1033" />
+                    </labels>
+                    <control id="help_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.caseSettingsDialogOnLoad" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{2863b060-b035-4524-9718-f5a9c60bf326}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.caseSettingsDialogApply" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{4416ba70-34b9-411b-8d50-722e0ea809df}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="close_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{27c7b75e-0631-48ce-9f8a-bb370616a260}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="help_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.openCaseSettingHelp" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{1acaf593-da88-4211-94ad-0b16cbb240fa}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{b157df35-ec18-440b-b3b8-4a38dec25d0c}">
+            <customControl formFactor="0" name="MscrmControls.DualListSelection.DualListSelectionControl">
+                <parameters>
+                    <JsonOptions type="SingleLine.Text">all_attributes</JsonOptions>
+                    <Selection type="SingleLine.Text">cc_selectedAttributes_id</Selection>
+                    <SelectionOrderBy static="true" type="Enum">0</SelectionOrderBy>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.DualListSelection.DualListSelectionControl">
+                <parameters>
+                    <JsonOptions type="SingleLine.Text">all_attributes</JsonOptions>
+                    <Selection type="SingleLine.Text">cc_selectedAttributes_id</Selection>
+                    <SelectionOrderBy static="true" type="Enum">0</SelectionOrderBy>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.DualListSelection.DualListSelectionControl">
+                <parameters>
+                    <JsonOptions type="SingleLine.Text">all_attributes</JsonOptions>
+                    <Selection type="SingleLine.Text">cc_selectedAttributes_id</Selection>
+                    <SelectionOrderBy static="true" type="Enum">0</SelectionOrderBy>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

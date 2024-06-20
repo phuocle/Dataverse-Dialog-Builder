@@ -1,0 +1,214 @@
+<form>
+    <formparameters>
+        <querystringparameter name="entity_record" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{f08a6916-062c-4b1d-8b91-7b17708f8295}" name="{f08a6916-062c-4b1d-8b91-7b17708f8295}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{DEEF1C18-D892-4A01-B737-B40B8A4675D9}" name="{DEEF1C18-D892-4A01-B737-B40B8A4675D9}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{91C80CD3-B585-4DB0-B379-1D6CC57D8362}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="merge_MyRecord_Grid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{C3ED866A-1749-40A9-B91E-06B75F7A0176}">
+                                            <parameters>
+                                                <MaxLength>100000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{fa1a2bb3-e7f4-45b2-ad2d-a76b229ec7c9}" name="{fa1a2bb3-e7f4-45b2-ad2d-a76b229ec7c9}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4164dd44-f6b9-488a-8160-5cd13382dbf0}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="manage_duplicates_grid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{30a0deae-bce2-457d-98d8-3ddfab2e0b73}">
+                                            <parameters>
+                                                <MaxLength>100000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{c8b57f72-083c-4b1f-acdf-30a4cf80a402}">
+        <rows>
+            <row>
+                <cell id="{5e5ada5a-25b4-430d-a359-5cca30d6d3a9}">
+                    <labels>
+                        <label description="Duplicate records found" languagecode="1033" />
+                    </labels>
+                    <control id="manageDuplicatesTitle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{9067d251-2710-4f46-842a-64fea3f8a51c}">
+                    <labels>
+                        <label description="This record might be a duplicate of one of the records below. Would you like to save it anyway?" languagecode="1033" />
+                    </labels>
+                    <control id="label_manageDuplicates_Description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{fb44e8e4-983e-4bb1-bcbb-2044faea06f8}">
+        <rows>
+            <row>
+                <cell id="{4ba0bb2d-21ff-41f9-bfb0-f1b074eaab45}">
+                    <labels>
+                        <label description="Ignore and save" languagecode="1033" />
+                    </labels>
+                    <control id="ignore_save" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{27ca84d7-6cf7-4e69-85e7-b44ab2301696}">
+                    <labels>
+                        <label description="Merge" languagecode="1033" />
+                    </labels>
+                    <control id="merge_button" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{3a3d6962-5099-4a3f-a8e5-6460a1669bd9}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="close_dialog" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{ed3d2eb6-8512-4fee-bd65-c3d81c14fdaf}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="selected_Record_Id" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{adf1d0a2-5b6e-4190-bfe1-53fc225484a5}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="selected_Record_Name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{236ac25d-b7bf-4ed3-9c64-ec783261e0af}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="matching_Entity_Name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ignore_save">
+            <Handlers>
+                <Handler functionName="Mscrm.ManageDuplicatesDialogActions.onClickIgnoreAndSave" libraryName="DuplicateDetection_main_system_library.js" handlerUniqueId="{010c7c49-59db-432a-b48b-235773cda6c7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="close_dialog">
+            <Handlers>
+                <Handler functionName="Mscrm.ManageDuplicatesDialogActions.onClickCancel" libraryName="DuplicateDetection_main_system_library.js" handlerUniqueId="{353aebda-d086-4217-a586-74b98d48a6c5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="selected_Record_Id">
+            <Handlers>
+                <Handler functionName="ClientUtility.ClientUtil.selectedRecordChange" libraryName="CRM/ClientUtility.js" handlerUniqueId="{3d6ada81-77f2-462f-8419-32994b50530b}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="merge_button">
+            <Handlers>
+                <Handler functionName="ClientUtility.ClientUtil.mergeButtonClickHandller" libraryName="CRM/ClientUtility.js" handlerUniqueId="{9d93f6e5-9184-404d-a431-15592448dc51}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="ClientUtility.ClientUtil.duplicateDialogOnLoad" libraryName="CRM/ClientUtility.js" handlerUniqueId="{5002ee1f-7724-48fc-bf28-4925f5ac136a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{30a0deae-bce2-457d-98d8-3ddfab2e0b73}">
+            <customControl name="MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced" formFactor="0">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selected_Record_Id</SelectedRecordId>
+                    <SelectedRecordName type="SingleLine.Text">selected_Record_Name</SelectedRecordName>
+                    <MatchingEntityName type="SingleLine.Text">matching_Entity_Name</MatchingEntityName>
+                    <EntityRecord type="SingleLine.Text">entity_record</EntityRecord>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced" formFactor="1">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selected_Record_Id</SelectedRecordId>
+                    <SelectedRecordName type="SingleLine.Text">selected_Record_Name</SelectedRecordName>
+                    <MatchingEntityName type="SingleLine.Text">matching_Entity_Name</MatchingEntityName>
+                    <EntityRecord type="SingleLine.Text">entity_record</EntityRecord>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ManageDuplicatesEnhancedContainer.ManageDuplicatesEnhanced" formFactor="2">
+                <parameters>
+                    <SelectedRecordId type="SingleLine.Text">selected_Record_Id</SelectedRecordId>
+                    <SelectedRecordName type="SingleLine.Text">selected_Record_Name</SelectedRecordName>
+                    <MatchingEntityName type="SingleLine.Text">matching_Entity_Name</MatchingEntityName>
+                    <EntityRecord type="SingleLine.Text">entity_record</EntityRecord>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{C3ED866A-1749-40A9-B91E-06B75F7A0176}">
+            <customControl name="MscrmControls.Containers.MergeMyRecordsGridControl" formFactor="0">
+                <parameters>
+                    <EntityRecord type="SingleLine.Text">entity_record</EntityRecord>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.MergeMyRecordsGridControl" formFactor="1">
+                <parameters>
+                    <EntityRecord type="SingleLine.Text">entity_record</EntityRecord>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.MergeMyRecordsGridControl" formFactor="2">
+                <parameters>
+                    <EntityRecord type="SingleLine.Text">entity_record</EntityRecord>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

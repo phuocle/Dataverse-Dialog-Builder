@@ -1,0 +1,102 @@
+<form>
+    <hiddencontrols />
+    <tabs>
+        <tab verticallayout="true" id="{fa18fa46-e37d-4040-a578-5361e78ca186}" name="{fa18fa46-e37d-4040-a578-5361e78ca186}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{dffb6a32-4c3d-427c-b153-7cbf9efeefb0}" name="{dffb6a32-4c3d-427c-b153-7cbf9efeefb0}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c4a95907-0b27-47b5-a62d-ba31b1ea7fbf}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="relationshipSelect" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{b00bbab5-d002-4ff0-aa42-c1b2a524dfbd}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{e2445ae2-0b01-4d9f-b266-f1cfd053ff84}">
+        <rows>
+            <row>
+                <cell id="{04242213-1b44-43b8-a766-a2cbd10605a8}">
+                    <labels>
+                        <label description="Settings Overview" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_relationshipselect" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{03999c62-5f76-4468-a40e-5e2494aaa76e}">
+        <rows>
+            <row>
+                <cell id="{595a3475-9dbe-4efd-bacc-93c07f79c7b5}">
+                    <labels>
+                        <label description="Done" languagecode="1033" />
+                    </labels>
+                    <control id="closeRelationshipDialog" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="closeRelationshipDialog">
+            <Handlers>
+                <Handler functionName="closeRelationshipDialog" libraryName="AppCommon/ControlWS/WordExcelTemplateWizard/Excel_Word_Template_Dialog.js" handlerUniqueId="{56a8b72c-dc77-45d0-99d2-a44d8c8b9ca5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="relationshipDialogOnLoad" libraryName="AppCommon/ControlWS/WordExcelTemplateWizard/Excel_Word_Template_Dialog.js" handlerUniqueId="{b52231df-3c90-40ec-9aa5-9d8534e809e7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{b00bbab5-d002-4ff0-aa42-c1b2a524dfbd}">
+            <customControl name="MscrmControls.AppCommon.RelationshipSelector.RelationshipSelectorControl" formFactor="0">
+                <parameters>
+                    <templateInfo type="SingleLine.Text">template_info</templateInfo>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{b00bbab5-d002-4ff0-aa42-c1b2a524dfbd}">
+            <customControl name="MscrmControls.AppCommon.RelationshipSelector.RelationshipSelectorControl" formFactor="1">
+                <parameters>
+                    <templateInfo type="SingleLine.Text">template_info</templateInfo>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{b00bbab5-d002-4ff0-aa42-c1b2a524dfbd}">
+            <customControl name="MscrmControls.AppCommon.RelationshipSelector.RelationshipSelectorControl" formFactor="2">
+                <parameters>
+                    <templateInfo type="SingleLine.Text">template_info</templateInfo>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="template_info" type="SafeString" />
+    </formparameters>
+</form>

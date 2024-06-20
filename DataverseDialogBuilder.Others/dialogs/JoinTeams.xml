@@ -1,0 +1,130 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{A135495A-B4FD-4432-8344-9032BA6B1D55}" name="{A135495A-B4FD-4432-8344-9032BA6B1D55}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{E03C6943-8B52-445B-9336-8D99F234BB3E}" name="{E03C6943-8B52-445B-9336-8D99F234BB3E}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9BD813E0-DC3C-43C3-80E6-C3005B565552}">
+                                        <labels>
+                                            <label description="Join Teams" languagecode="1033" />
+                                        </labels>
+                                        <control id="header_description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>true</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1E201693-1CDC-4344-903F-4E0EE1272302}">
+                                        <labels>
+                                            <label description="Teams" languagecode="1033" />
+                                        </labels>
+                                        <control id="jointeams_cc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{C716B1C5-6ED2-4691-9C6E-21588AE1C8B4}">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{48CBBF12-52FC-4AE3-A49F-C52E0F57DDE4}">
+        <rows>
+            <row>
+                <cell id="{042DF7EA-EB85-4B17-81FD-9B09E615FC54}">
+                    <labels>
+                        <label description="Join Teams" languagecode="1033" />
+                    </labels>
+                    <control id="jointeamsheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{DB73DAEB-1ECA-4F17-BCBE-F802AF9A63EB}">
+        <rows>
+            <row>
+                <cell id="{A359FE9C-ACD0-4A1C-9E25-F2CFA535ED02}">
+                    <labels>
+                        <label description="Join Teams" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{D84A075C-492D-44F2-8189-FFF189C3FC95}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser.JoinTeams.onJoinTeamsClick" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{DB73DAEB-1ECA-4F17-BCBE-F802AF9A63EB}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser.JoinTeams.onCancelClick" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{BE9D9C7E-A77C-4830-8CCC-F182345CA232}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser.JoinTeams.onDialogLoad" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{09DCF005-3A63-4A8C-8378-9C5AE690DE00}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{C716B1C5-6ED2-4691-9C6E-21588AE1C8B4}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">entity_records</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">entity_records</selectedEntities>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">entity_records</selectedEntities>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="target_entities" type="SafeString" />
+        <querystringparameter name="entity_records" type="Object" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="entity_id" type="SafeString" />
+        <querystringparameter name="total_records_selected" type="SafeString" />
+        <querystringparameter name="selected_records" type="Object" />
+    </formparameters>
+</form>

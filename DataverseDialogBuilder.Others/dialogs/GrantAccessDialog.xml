@@ -1,0 +1,110 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_last_button_clicked" type="SafeString" />
+        <querystringparameter name="param_user_list" type="Object" />
+        <querystringparameter name="param_entity_id" type="SafeString" />
+        <querystringparameter name="param_entity_type" type="SafeString" />
+    </formparameters>
+    <header id="{d06d4d11-62ab-4b30-8d06-e6eeb5d49cfd}">
+        <rows>
+            <row>
+                <cell id="{f5f5a592-d041-4dd1-ba47-6ff97662105d}">
+                    <labels>
+                        <label description="Grant Access" languagecode="1033" />
+                    </labels>
+                    <control id="grantAccessDialogTitle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{2d45809a-d540-49de-aa78-2a996492a65b}" name="GrantAccessTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="GrantAccessSection" showbar="false" locklevel="0" id="{08b5ae40-81fd-4b48-9d26-745387181f33}" columns="1">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{af05b96e-6eac-4715-9ff1-b4d9440d14fa}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="peoplechiplist" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" isunbound="true" uniqueid="{69a19f1b-e4d5-44d1-812d-d17427d87aae}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1a04f652-f041-4fbd-af2f-bd2a1512f917}">
+                                        <labels>
+                                            <label description="These recipients don't have access to this item. They will not be able to see or reply to your mention unless you give them access." languagecode="1033" />
+                                        </labels>
+                                        <control id="grantAccessDialogText" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="baa416f1-cec4-4a48-b8dc-1cd086c8a522">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="grantaccess" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" isunbound="true" uniqueid="{c24decb0-d3fc-427e-b9cc-c5bf91a335f3}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{69a19f1b-e4d5-44d1-812d-d17427d87aae}">
+            <customControl name="MscrmControls.Collaboration.PeopleChipListControl" formFactor="0">
+                <parameters>
+                    <userList type="Object">param_user_list</userList>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Collaboration.PeopleChipListControl" formFactor="1">
+                <parameters>
+                    <userList type="Object">param_user_list</userList>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Collaboration.PeopleChipListControl" formFactor="2">
+                <parameters>
+                    <userList type="Object">param_user_list</userList>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{c24decb0-d3fc-427e-b9cc-c5bf91a335f3}">
+            <customControl name="MscrmControls.Collaboration.GrantAccessControl" formFactor="0">
+                <parameters>
+                    <userList type="Object">param_user_list</userList>
+                    <entityId type="SingleLine.Text">param_entity_id</entityId>
+                    <entityType type="SingleLine.Text">param_entity_type</entityType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Collaboration.GrantAccessControl" formFactor="1">
+                <parameters>
+                    <userList type="Object">param_user_list</userList>
+                    <entityId type="SingleLine.Text">param_entity_id</entityId>
+                    <entityType type="SingleLine.Text">param_entity_type</entityType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Collaboration.GrantAccessControl" formFactor="2">
+                <parameters>
+                    <userList type="Object">param_user_list</userList>
+                    <entityId type="SingleLine.Text">param_entity_id</entityId>
+                    <entityType type="SingleLine.Text">param_entity_type</entityType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

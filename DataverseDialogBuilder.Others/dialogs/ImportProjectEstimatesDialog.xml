@@ -1,0 +1,169 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_entityName" type="SafeString" />
+        <querystringparameter name="param_entityRecordId" type="UniqueId" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{5fc3462a-8682-4991-a172-cbcba0caf205}">
+        <rows>
+            <row>
+                <cell id="{afb01645-088c-42a6-b19a-2e8b6727a909}">
+                    <labels>
+                        <label description="Import from Project Estimates to Quote Line Details" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_formheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{91ffcfaa-ae0a-4d2f-8259-3bb58b11a1bf}" name="{55c104eb-0b33-4232-98f4-4eac7d213804}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{aa32a186-d228-4a72-b40a-40496cc8c582}" name="{6b068c38-ec92-4893-9287-a546880c96f4}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{54c90094-ab7e-4436-ad08-cb3f4516ddf2}">
+                                        <labels>
+                                            <label description="Select summarization options on this dialog to bring in summarized estimates from the project plan. Use default selections to bring in detailed estimates." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_subheading" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{dffa51fb-77ae-43d1-93b1-79af7c7d5365}">
+                                        <labels>
+                                            <label description="Summarize By Transaction type" languagecode="1033" />
+                                        </labels>
+                                        <control id="transaction_type" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{dbb7732a-54c3-4dd5-9c90-733f4e4ef821}">
+                                        <labels>
+                                            <label description="Summarize By Role" languagecode="1033" />
+                                        </labels>
+                                        <control id="role" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8c61bedf-aaaf-459a-8a08-c6270095315c}">
+                                        <labels>
+                                            <label description="Summarize By Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="transaction_category" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1a39f88f-3fc7-4306-9e7f-f75305302b8f}">
+                                        <labels>
+                                            <label description="Summarize By WBS Node Level" languagecode="1033" />
+                                        </labels>
+                                        <control id="wbs_nodelevel" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetName>msdyn_wbsnodelevel</OptionSetName>
+                                                <DefaultValue>4</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{95547629-3a3f-41bf-838d-9a5b61b718b3}" name="{7ccaedea-c9a8-4829-a276-05175eda531a}" visible="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3231b4fb-6616-4b51-a7d7-2c9060b71bfc}">
+                                        <labels>
+                                            <label description="This is the end of the dialog. Click Finish to close it." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_finishtext" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>false</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8a7170eb-2cb5-4d99-b8cf-eefc2e90ef9d}">
+        <rows>
+            <row>
+                <cell id="{887de15d-9d68-4587-9197-4e97498230d6}">
+                    <labels>
+                        <label description="Ok" languagecode="1033" />
+                    </labels>
+                    <control id="finish_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{786b1e56-007b-4051-899f-f9a520edbcab}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="msdyn.importProjectEstimateCommands.onDialogLoad" libraryName="msdyn_/Common/DialogScripts/ImportProjectEstimates.js" handlerUniqueId="{96536FE3-06D7-4AF7-AD72-8BE164B1846D}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="msdyn.importProjectEstimateCommands.onCancel" libraryName="msdyn_/Common/DialogScripts/ImportProjectEstimates.js" handlerUniqueId="{31fca5a3-3e94-4982-844c-81eb8de9f3f0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="finish_id">
+            <Handlers>
+                <Handler functionName="msdyn.importProjectEstimateCommands.onFinish" libraryName="msdyn_/Common/DialogScripts/ImportProjectEstimates.js" handlerUniqueId="{31b05bd5-fb00-4db5-87a1-2d3971415257}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/Localization/ResourceStringProvider.js" />
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

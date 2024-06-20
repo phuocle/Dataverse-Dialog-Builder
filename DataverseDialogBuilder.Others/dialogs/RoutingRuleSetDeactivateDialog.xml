@@ -1,0 +1,90 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_isGrid" type="Boolean" />
+        <querystringparameter name="param_selectedItems" type="Object" />
+        <querystringparameter name="param_selectedEntity" type="SafeString" />
+        <querystringparameter name="param_gridControl" type="Object" />
+    </formparameters>
+    <header id="{D23BEBD4-E164-493F-B755-3D28A3C7FF55}">
+        <rows>
+            <row>
+                <cell id="{FB8E547D-501A-4130-A13C-E68FC3283560}">
+                    <labels>
+                        <label description="Deactivate this ruleset?" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_deactivateslaheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{BB3AEBD1-4577-4328-92BC-0AB8520FFEED}" name="{ff5f5c8d-0585-42e1-a79a-13b22ffa5913}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{C74B6EB2-7217-4998-813C-A3B929D23AF5}" name="{bcd49d61-e206-4ec8-bac1-84183b5c0ce3}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{38DBFF62-66B3-4171-8911-43F5D6274C27}">
+                                        <labels>
+                                            <label description="If you deactivate this ruleset, anything referring to it won't run. Do you still want to deactivate it?" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_deactivatestatemessage" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{A32C0A6E-C835-4FE6-AAF7-4ABED92FD806}">
+        <rows>
+            <row>
+                <cell id="{ADD1D7F5-9733-4940-8F1D-5D4B000D7DBE}">
+                    <labels>
+                        <label description="Yes" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{6417D385-0CCF-4AEE-989A-0E0B0EA20D55}">
+                    <labels>
+                        <label description="No" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.Instance.okButtonClick" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{6B76D13B-CCD0-4F76-B136-7B8E7936947E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.Instance.cancelButtonClick" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{DD7903E0-0CC1-4BD1-A824-59626BA3E4FA}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

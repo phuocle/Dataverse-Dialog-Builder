@@ -1,0 +1,97 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_streamSource" type="Integer" />
+    </formparameters>
+    <header id="{6e79d046-ed69-4050-a9ae-9532e94be7e9}">
+        <rows>
+            <row>
+                <cell id="{2b521a70-aa93-43c4-928e-619ac71be337}">
+                    <labels>
+                        <label description="To set up this channel, you must agree to these terms and conditions" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_prvcy" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{0f7037e9-0889-4ad6-a08e-8bb2182710eb}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{95f78288-b68f-421d-b851-90ef503363f7}" name="section1" showlabel="false" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7f602d8e-421c-4a57-aea0-441e132a259e}" colspan="1" auto="true" rowspan="7">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_ThirdPartyChannelDisclaimer" classid="{FD2A7985-3187-444E-908D-6624B21F69C0}" isunbound="true">
+                                            <parameters>
+                                                <Url>msdyn_octhirdpartychanneldisclaimer.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>false</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{d46d869b-f1c7-47a0-9f88-6cef4e6830b8}">
+        <rows>
+            <row>
+                <cell id="{4e4c0ef3-c440-4418-90b1-dbf565de2dcb}">
+                    <labels>
+                        <label description="Agree" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{954e643e-8e83-419f-bba7-abdab628cb83}">
+                    <labels>
+                        <label description="Don't agree" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false"></event>
+        <event name="onclick" application="false" active="true" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.PrivacyTermsDialog.acceptPrivacyTerms" libraryName="msdyn_PrivacyTermsDialog.js" handlerUniqueId="{0453C47F-2FBC-460B-887F-7167B02A76CE}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.PrivacyTermsDialog.rejectPrivacyTerms" libraryName="msdyn_PrivacyTermsDialog.js" handlerUniqueId="{17DFC45E-0A8D-48B8-87F8-461A0CF057ED}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_PrivacyTermsDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

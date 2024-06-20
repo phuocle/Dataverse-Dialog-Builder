@@ -1,0 +1,145 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityType" type="SafeString" />
+        <querystringparameter name="param_emailFormData" type="SafeString" />
+        <querystringparameter name="param_emailsubject" type="SafeString" />
+        <querystringparameter name="param_emaildescription" type="SafeString" />
+        <querystringparameter name="param_templateId" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{8E83F1D9-2EAC-4710-A4E0-B79C1D62DA12}" name="{8E83F1D9-2EAC-4710-A4E0-B79C1D62DA12}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{4E079B41-4B37-4FDC-82F0-9F55B2912D8A}" name="{4E079B41-4B37-4FDC-82F0-9F55B2912D8A}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{CF2E900B-4A17-4107-999A-D691DC45C5FF}">
+                                        <labels>
+                                            <label description="Language" languagecode="1033" />
+                                        </labels>
+                                        <control id="language_id" classid="{671A9387-CA5A-4d1e-8AB7-06E39DDCF6B5}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{B3E73D20-1A08-467C-9DB1-A533800D86F3}">
+                                        <labels>
+                                            <label description="Search Template " languagecode="1033" />
+                                        </labels>
+                                        <control id="emailtemplates_id" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{DAF88706-1DAD-4810-ADC4-1517ED39F575}</DefaultViewId>
+                                                        <EntityLogicalName>template</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{2F1D7682-8476-4441-BADA-37375B1C0AE9}">
+        <rows>
+            <row>
+                <cell id="{F9923DCF-FF07-4AA4-96BD-E9F652F51B60}">
+                    <labels>
+                        <label description="Insert Template" languagecode="1033" />
+                    </labels>
+                    <control id="inserttemplate_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{87B4F4A2-7613-44D3-A5DC-537F7C405211}">
+                    <labels>
+                        <label description="Select the template you want to use. " languagecode="1033" />
+                    </labels>
+                    <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{2CBB18F5-3C50-4844-8176-7E3D60C0F745}">
+        <rows>
+            <row>
+                <cell id="{D250D803-45BF-4C69-B00D-EFEEA37900C9}">
+                    <labels>
+                        <label description="Preview" languagecode="1033" />
+                    </labels>
+                    <control id="preview_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+                <cell id="{E36F74DF-2E05-44BB-95F2-9F1FD1828E13}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="select_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{D250D801-41BF-4C69-B00D-EFEEA37900C5}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onLoad" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{FC9A5E47-34BA-48A4-A9E8-54663A9E3730}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="select_id">
+            <Handlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onSelect" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{4D3B6DC2-C6DE-4428-8EA9-B207F5D3FFF4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.TemplateUtil.closeDialog" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{48144FCE-8067-44AB-9D8B-E786164EC633}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="preview_id">
+            <Handlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onPreview" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{38144FCE-8067-43AB-9D8B-E786164EC631}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="language_id">
+            <Handlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onLanguageChange" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{154D51EF-B423-4430-A72E-2815ADD3F2A2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="emailtemplates_id">
+            <Handlers>
+                <Handler functionName="Activities.ApplyEmailTemplateDialog.onTemplateChange" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{502DE10C-8560-4F47-B13D-498716262AF9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/InsertEmailTemplate.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

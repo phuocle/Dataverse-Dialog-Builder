@@ -1,0 +1,96 @@
+<form>
+    <header id="{e48c165e-435a-4448-848f-29a48076e937}">
+        <rows>
+            <row>
+                <cell id="{27ab568e-6561-4bb7-b6bc-4fa7100a1173}">
+                    <labels>
+                        <label description="Set Your Presence Status" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_setyourstatus" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{ac414e88-c791-424b-ba52-51a20e263bae}" name="{cc414c88-c791-424b-ba52-51c20a263bae}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{9ae058d6-4986-4c70-a7fb-25ddae83138a}" name="{9ea058d6-4986-4c70-a7fb-25ddba83138a}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ae414a88-c791-424b-ba52-51e20a263bae}">
+                                        <labels>
+                                            <label description="Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="presence_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetName>msdyn_presencestatus</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{473a8216-9cd0-435b-879b-542a0f705bfe}">
+        <rows>
+            <row>
+                <cell id="{a2635e65-adcb-498e-8b9e-a51cd25b523e}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{36a52be7-c6b8-4615-acfe-6901a6164e96}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogOKClick" libraryName="$webresource:PresenceEventHandlersLib/msdyn_cec_internal_presence_ci_library.js" handlerUniqueId="{4a1eceff-a8f0-4736-a4c7-a3c6c400e433}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogCancelClick" libraryName="$webresource:PresenceEventHandlersLib/msdyn_cec_internal_presence_ci_library.js" handlerUniqueId="{ab16b50e-8ca3-4503-8dee-4a2f148b78fe}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Microsoft.CIFramework.Internal.PresenceDialogControl.Instance.openPresenceDialogonLoad" libraryName="$webresource:PresenceEventHandlersLib/msdyn_cec_internal_presence_ci_library.js" handlerUniqueId="{eab73ae0-cbf8-4bd0-9b6f-3ba0633aa5e7}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_selectedValue" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

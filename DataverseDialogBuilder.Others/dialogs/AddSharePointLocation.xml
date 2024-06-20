@@ -1,0 +1,153 @@
+<form>
+    <formparameters>
+        <querystringparameter name="entity_Id" type="SafeString" />
+        <querystringparameter name="entity_Type_Code" type="Integer" />
+        <querystringparameter name="entity_Name" type="SafeString" />
+        <querystringparameter name="location_Id" type="SafeString" />
+        <querystringparameter name="location_Name" type="SafeString" />
+        <querystringparameter name="folder_Name" type="SafeString" />
+        <querystringparameter name="mode_Value" type="Integer" />
+        <querystringparameter name="regarding_Object_EntityName" type="SafeString" />
+        <querystringparameter name="last_Button_Clicked" type="SafeString" />
+    </formparameters>
+    <header id="{4b06de72-a11c-4939-a221-e7c940d46c18}">
+        <rows>
+            <row>
+                <cell id="{8dc3f188-bc5b-4e56-ae05-c725457b476c}">
+                    <labels>
+                        <label description="Add Location" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_addlocation" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{bd324006-a50e-4d17-a9dc-626293d7058d}" name="{bd324006-a50e-4d17-a9dc-626293d7058d}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{9ddec255-1887-4fd0-943a-0f0c707106f0}" name="{9ddec255-1887-4fd0-943a-0f0c707106f0}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3c9df672-073d-4ca8-8f54-f048a5f22204}">
+                                        <labels>
+                                            <label description="Create a new document location in Microsoft Dynamics 365" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_addlocation_locationname" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{37fe134b-a942-4524-b55d-b64bc5257635}">
+                                        <labels>
+                                            <label description="Display Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="documentlocation_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>160</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{80fd537c-c36c-4aa8-b1ff-81e46c6f22e5}">
+                                        <labels>
+                                            <label description="Create new folder at the specified parent site" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_addlocation_foldername" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3f5c1573-f302-4e5d-a17a-a6b7d88821b6}">
+                                        <labels>
+                                            <label description="Parent Site" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentsite_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>sharepointsite</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>sharepointdocumentlocation</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e9bce30c-0197-441c-bc29-c8e2895d31f4}">
+                                        <labels>
+                                            <label description="Folder Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="foldername_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>128</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8e7efe03-7a5a-47b3-b5a1-c4cbe4071ddd}">
+        <rows>
+            <row>
+                <cell id="{2216cd6d-979e-4d77-80bb-46d52fdead5c}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="save_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{e0773e91-6526-436a-87db-d51123eb90d0}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="DocumentManagement.SharePointAddLocation.OnLoadAddSharePointLocation" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{7798a663-7970-4306-a37f-66cf530e519d}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="save_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.SharePointAddLocation.OnClickAddEditSharePointLocation" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{f626cc67-5511-4613-8a23-112a53b60232}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.GenericUtilities.CloseDialog" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{094ffc56-8ca6-42cb-8913-ae9b3d78b13d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

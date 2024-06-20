@@ -1,0 +1,100 @@
+<form>
+    <hiddencontrols></hiddencontrols>
+    <formparameters>
+        <querystringparameter name="id_map" type="Object" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{4d3e33e9-b821-4dd9-84c1-d2ac1f615eac}" name="{4d3e33e9-b821-4dd9-84c1-d2ac1f615eac}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5c026802-0428-4304-9b1e-9296b816493c}" name="{5c026802-0428-4304-9b1e-9296b816493c}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5d540316-67b9-4c5b-947c-e7f5ae47b857}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="idSubject" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>subject</EntityLogicalName>
+                                                        <DefaultViewId>{fa1a7ef7-53e4-40a6-97d2-5935adaf1277}</DefaultViewId>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e3fa7bcb-67ae-4d72-978b-4537956833e0}">
+                                        <labels>
+                                            <label description="Sales Literature" languagecode="1033" />
+                                        </labels>
+                                        <control id="idSalesLiterature" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{086745bc-5b18-4504-8c75-1df4e819a72d}">
+        <rows>
+            <row>
+                <cell id="{ffe0d758-0ba8-427c-a15f-de2d268481aa}">
+                    <labels>
+                        <label description="Insert Sales Literature" languagecode="1033" />
+                    </labels>
+                    <control id="assignheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{ad296205-e093-4a2c-acb9-3edcb22f639a}">
+        <rows>
+            <row>
+                <cell id="{3e49dd97-7200-4769-a17f-217e5e2136c2}">
+                    <labels>
+                        <label description="Insert" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Dialogs.Common.CloseDialog" libraryName="new_MailAppScriptResource" handlerUniqueId="{76e3fa38-7fc8-4363-a902-33934cf8f52d}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="idSubject">
+            <Handlers>
+                <Handler functionName="Dialogs.SalesLiterature.HandleSubjectChange" libraryName="new_MailAppScriptResource" handlerUniqueId="{17c1d583-8a41-46bd-9491-d659a8789a90}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="idSalesLiterature">
+            <Handlers>
+                <Handler functionName="Dialogs.SalesLiterature.SetInsertDisabled" libraryName="new_MailAppScriptResource" handlerUniqueId="{05b3325f-a4e8-47c3-98f5-4370965a8cdf}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

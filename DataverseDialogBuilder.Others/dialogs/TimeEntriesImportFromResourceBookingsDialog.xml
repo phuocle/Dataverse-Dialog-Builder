@@ -1,0 +1,145 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_selectedIds" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_startDate" type="DateTime" />
+        <querystringparameter name="param_endDate" type="DateTime" />
+        <querystringparameter name="param_resourceId" type="SafeString" />
+    </formparameters>
+    <header id="{a7803091-da7a-4069-9954-baea3ba007a1}">
+        <rows>
+            <row>
+                <cell id="{7a478c64-a8af-4a26-a775-9587e91a06c8}">
+                    <labels>
+                        <label description="Import Resource Bookings" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_resourcebookingsimport" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{a3323a8f-b2c6-4c0e-8cd6-d517ec517fd2}" name="ResourceBookingsGridTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{ddd77e4b-747c-4a55-9ee3-ad46629ff24e}" name="ResourceBookingPickerSection">
+                            <labels>
+                                <label description="From week" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{38c03d87-e4d8-4e65-9de6-c8ee8d01ec79}">
+                                        <labels>
+                                            <label description="Starting on" languagecode="1033" />
+                                        </labels>
+                                        <control id="startDate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1545b14e-dcb9-4e3e-b3a0-d1eb3164f064}">
+                                        <labels>
+                                            <label description="Ending on" languagecode="1033" />
+                                        </labels>
+                                        <control id="endDate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0da753bc-d754-46ff-a09d-001e15ed2999}" colspan="1" rowspan="5">
+                                        <labels>
+                                            <label description="Select resource bookings to import" languagecode="1033" />
+                                        </labels>
+                                        <control id="SourceGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <ViewId>{9a6de510-22cf-e711-8122-000d3a29ec0b}</ViewId>
+                                                <TargetEntityType>bookableresourcebooking</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>true</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{a7ef04b8-527a-4dde-a4bc-bdd305355103}">
+        <rows>
+            <row>
+                <cell id="{d65e2da2-d53a-45ad-a6a4-d3ed722e7195}">
+                    <labels>
+                        <label description="Import" languagecode="1033" />
+                    </labels>
+                    <control id="Import" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{990329c8-4a26-45ce-8c1b-d9cd5bd1180a}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="Cancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceBookingsDialog.onLoad" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{f484c049-72d0-42e1-a9e3-e39f8afca0d6}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="startDate">
+            <Handlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceBookingsDialog.onStartDateChange" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{33810d6e-f3de-4ad6-a40a-1901c28e4380}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="endDate">
+            <Handlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceBookingsDialog.onEndDateChange" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{36e4205d-b9ce-446b-801f-23a917fb0ce1}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Cancel">
+            <Handlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceBookingsDialog.onCancel" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{ad5398bb-a632-424a-9bed-f302d65096c2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Import">
+            <Handlers>
+                <Handler functionName="msdyn.timeEntry.dialogs.timeEntriesImportFromResourceBookingsDialog.onConfirm" libraryName="msdyn_/TimeEntry/timeEntry.js" handlerUniqueId="{3d9c9568-51a4-436d-8d44-668eb5efc469}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/TimeEntry/timeEntry.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

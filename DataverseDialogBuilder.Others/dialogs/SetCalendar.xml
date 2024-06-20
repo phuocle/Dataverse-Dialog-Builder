@@ -1,0 +1,112 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_bookableResourceIds" type="Object" />
+    </formparameters>
+    <header id="{543AA208-469D-456E-8D78-62ADFB610B30}">
+        <rows>
+            <row>
+                <cell id="{5101D6F7-83F5-4236-846D-D6FFD5E65870}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="workTemplateHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="false" id="{07184C49-5EC3-4776-8C2B-2A07BC6702C6}" name="WorkHourTemplate" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="25%">
+                    <sections>
+                        <section showbar="false" columns="4" id="{c9a1d6ab-104f-4063-9220-90446f38e938}" name="Tab1_section1" height="auto" showlabel="true">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{FCFA1AAD-3683-47D8-A903-D83EC0C284DE}" colspan="2">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="workHourTemplateLookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{6240a128-ac89-4d2b-89f6-ba1cee63a1a3}</DefaultViewId>
+                                                        <EntityLogicalName>msdyn_workhourtemplate</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5283FE72-076E-41AC-90F7-F02EE0EE8C4A}" colspan="4">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="workTemplateNote" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{b6c459be-e8b0-4346-9cc4-192dfa6d5b52}">
+        <rows>
+            <row>
+                <cell id="{1DF4C9EE-5723-4D84-B538-6B7764CE3447}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{33C13EFE-507B-4EE9-8CE8-5AE731467AB7}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Initialize" libraryName="msdyn_/ScheduleCommon/Resource/Capacity/Scripts/WorkTemplateLookupViewModel.js" handlerUniqueId="{1677c3ef-68f8-40a5-b4c3-49b12ece2f29}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="ApplyWorkHourTemplate" libraryName="msdyn_/ScheduleCommon/Resource/Capacity/Scripts/WorkTemplateLookupViewModel.js" handlerUniqueId="{73B2BC9F-36E6-4BDF-9433-7FAEF1D13FC2}" enabled="true" parameters="false" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CloseSetCalendarDialog" libraryName="msdyn_/ScheduleCommon/Resource/Capacity/Scripts/WorkTemplateLookupViewModel.js" handlerUniqueId="{8E819A0F-2003-4B3F-9433-8483868D7A69}" enabled="true" parameters="false" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/fps/Utils/FpsUtils.js" />
+                <internaljscriptfile src="$webresource:msdyn_/fps/LocalizationLibrary/Localization.Library.js" />
+                <internaljscriptfile src="$webresource:msdyn_/fps/ScheduleBoard/F1SDK/InterDayBooking/Libraries/SDK.REST.js" />
+                <internaljscriptfile src="$webresource:msdyn_/fps/ScheduleBoard/F1SDK/InterDayBooking/Util/SendRequest.js" />
+                <internaljscriptfile src="$webresource:msdyn_/ScheduleCommon/Resource/Capacity/Scripts/WorkTemplateLookupViewModel.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

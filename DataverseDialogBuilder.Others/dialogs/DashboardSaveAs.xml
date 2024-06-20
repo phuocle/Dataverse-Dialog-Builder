@@ -1,0 +1,121 @@
+<form>
+    <hiddencontrols>
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <formparameters>
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="alert_text" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{c463d20a-c20e-4480-8272-b7e39aa27867}" name="{c463d20a-c20e-4480-8272-b7e39aa27867}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{40aa2e46-d3e4-4426-9eaf-b4e5be608b3a}" name="{40aa2e46-d3e4-4426-9eaf-b4e5be608b3a}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8c3bc09d-2980-4e98-b2af-fbeb5d2c394c}">
+                                        <labels>
+                                            <label description="Provide a name and description for this dashboard. The name will be visible in the dashboard list." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{af8ec35a-6cc7-4759-88d6-689f336ebe90}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="sName" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{50cd364f-806a-4344-a0f4-421126653af9}" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="sDescription" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" id="{3412e036-60a8-44e6-814b-c3531f6abb77}" name="{3412e036-60a8-44e6-814b-c3531f6abb77}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{276d1e78-a40a-4864-8cfb-0c6e3bccc16c}">
+                                        <labels>
+                                            <label description="Enable for mobile" languagecode="1033" />
+                                        </labels>
+                                        <control id="sIsTabletEnabled" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{ac4ac28e-adf1-448a-a42e-f6a2762d605c}">
+        <rows>
+            <row>
+                <cell id="{641c5ee7-1935-4c54-9323-0f3cd8e05406}">
+                    <labels>
+                        <label description="Dashboard Properties" languagecode="1033" />
+                    </labels>
+                    <control id="save_as_dashboard_header_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{139bae0e-0c5f-4950-998b-f46520fe642f}">
+        <rows>
+            <row>
+                <cell id="{295dd24b-1272-4383-84f6-0d7e0d465b4c}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{66d17556-aafe-45d1-b173-9c2bedf180d7}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.OnDashboardSave" libraryName="CRM/ClientUtility.js" handlerUniqueId="{f3adab41-4d02-4c8e-92ff-88567e530bb0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.OnDialogClose" libraryName="CRM/ClientUtility.js" handlerUniqueId="{673fd2d0-3985-4617-8f41-56bcb7a37911}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

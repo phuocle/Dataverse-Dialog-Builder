@@ -1,0 +1,96 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="description" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="actionCardId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="cardType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="message_id" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <formparameters>
+        <querystringparameter name="id_entityId" type="SafeString" />
+        <querystringparameter name="id_description" type="SafeString" />
+        <querystringparameter name="id_actionCardId" type="SafeString" />
+        <querystringparameter name="id_cardType" type="SafeString" />
+        <querystringparameter name="id_message_id" type="SafeString" />
+    </formparameters>
+    <header id="{509f3dbd-2a2d-4c4e-9ba5-c9631d27e4d1}">
+        <rows>
+            <row>
+                <cell id="{6047FA5A-A9F7-4CCE-BFBB-8090B4D8691B}">
+                    <labels>
+                        <label description="Complete PhoneCall" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_completephonecall" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{ec2118ae-dd66-4cc1-932d-08909a00163e}" name="{ec2118ae-dd66-4cc1-932d-08909a00163e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{4AB50AB1-64F2-4E52-B447-EC25FD38608B}" name="{4AB50AB1-64F2-4E52-B447-EC25FD38608B}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{14C682F6-29C6-4D8A-B2AD-0620B664527E}">
+                                        <labels>
+                                            <label description="Call Notes" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{EC77CE2C-CC05-482D-AC52-388E67B99930}">
+        <rows>
+            <row>
+                <cell id="{23E8037F-55AC-46C4-B949-BBBDDCE50374}">
+                    <labels>
+                        <label description="Complete" languagecode="1033" />
+                    </labels>
+                    <control id="complete_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{9CD1B4DB-59F1-4B93-8AC0-3F626B13407E}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="complete_id">
+            <Handlers>
+                <Handler functionName="Mscrm.ActionCardCommandBarActions.updatePhoneCallData" libraryName="cc_MscrmControls.ActionCards.ActionCardCommands/RelationshipAssistantCommands.js" handlerUniqueId="{AEA68E2E-711B-453D-9B9F-BF1C9FDBFDAC}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.ActionCardCommandBarActions.closeDialog" libraryName="cc_MscrmControls.ActionCards.ActionCardCommands/RelationshipAssistantCommands.js" handlerUniqueId="{D2E02E18-A7CB-4E11-9059-4E1A438C6808}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

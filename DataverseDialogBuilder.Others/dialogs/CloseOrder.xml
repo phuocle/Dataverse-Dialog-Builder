@@ -1,0 +1,139 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_salesorderid" type="UniqueId" />
+        <querystringparameter name="param_closedstate" type="Integer" />
+    </formparameters>
+    <header id="{267b3ad4-f2de-4ef3-b6f9-4848346e8041}">
+        <rows>
+            <row>
+                <cell id="{2175e4dc-71ca-4642-8052-1e8e6c400f89}">
+                    <labels>
+                        <label description="Close Order" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_closeorder" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{54cfe3a8-65d3-479e-b68d-61ae1f6091c3}" name="{71478242-e0f4-4178-9c85-5f020c7badda}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{e76d81bc-d950-4e31-a3d2-5f202fbd0b6b}" name="{d69b0330-47cf-4a6d-a477-b111ce3bbbea}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{69000c57-f5d5-450b-bb4d-94f16ff721df}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_closeorderdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4b725a41-b6c1-4b8f-a689-8e3f702b2a67}">
+                                        <labels>
+                                            <label description="Status Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="closeorderstatusreason_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>3</DefaultValue>
+                                                <OptionSetId>{9e1bdda2-b914-ef11-840b-6045bd575473}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e3d01777-ae82-408e-a674-20ffa1f6fbf4}">
+                                        <labels>
+                                            <label description="Close Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="closeorderdate_id" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>Date</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{41fc3318-ae94-4705-be0f-36bde7a4a735}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{844290ed-15fd-496e-9722-92ebd24100c5}">
+        <rows>
+            <row>
+                <cell id="{4b8c468d-8304-492b-a27f-92667cb6fcda}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{7d16f430-2659-4cdc-ad7f-65797d7e423c}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onLoadCloseOrderDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{a44b3a67-d015-43f3-a5f0-9208b36a2092}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCloseCloseOrderDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{6fa49e01-8704-4b00-b453-919812069505}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.dialogClose" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{864e4783-ab9a-4ce8-9b75-c5847606485f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/SalesOrder/SalesOrder_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Sales/CommandBarActions/SalesCommandBarActions.js" />
+                <internaljscriptfile src="/_static/_common/scripts/CommandBarActions.js" />
+                <internaljscriptfile src="$webresource:Marketing/CommandActions/Marketing_CommandActions.js" />
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Convert/Incident_convert_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

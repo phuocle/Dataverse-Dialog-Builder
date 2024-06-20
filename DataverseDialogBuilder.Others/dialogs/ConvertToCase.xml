@@ -1,0 +1,165 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_customerLookup" type="Object" />
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityTypeCode" type="Integer" />
+        <querystringparameter name="param_subject" type="SafeString" />
+        <querystringparameter name="param_ownerId" type="SafeString" />
+        <querystringparameter name="param_ownerType" type="SafeString" />
+        <querystringparameter name="param_ownerName" type="SafeString" />
+        <querystringparameter name="param_incidentId" type="SafeString" />
+        <querystringparameter name="param_saveActivity" type="SafeString" />
+        <querystringparameter name="param_openNewRecord" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{da7f5f3d-3481-414c-be4f-ecb526008027}" name="{da7f5f3d-3481-414c-be4f-ecb526008027}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{a8cc6a35-c69b-4be4-b3b8-70996f638165}" name="{a8cc6a35-c69b-4be4-b3b8-70996f638165}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ff77e2df-4762-4087-8103-7df20422473c}" showlabel="true">
+                                        <labels>
+                                            <label description="Specify the details of the new case." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{190e7bd5-1d5c-46f4-a905-637e656d09f7}" showlabel="true">
+                                        <labels>
+                                            <label description="Customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerLookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>contact</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2b60e7ce-a536-4029-bd30-543388ceacdd}" showlabel="true">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{FA1A7EF7-53E4-40A6-97D2-5935ADAF1277}</DefaultViewId>
+                                                        <EntityLogicalName>subject</EntityLogicalName>
+                                                        <UnboundLookupStyle>subject</UnboundLookupStyle>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3f6c7ae9-8d8d-4483-aab1-34fee58968da}" showlabel="true">
+                                        <labels>
+                                            <label description="Open the new case" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbOpenNew_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{dd0fc293-0044-4f9e-a22d-ef7b271e3baa}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0b74d898-11ba-4734-aec1-1bae1a336f74}" showlabel="true">
+                                        <labels>
+                                            <label description="Change the Service Activity status to Completed and close the form" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbSaveActivity_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{dd0fc293-0044-4f9e-a22d-ef7b271e3baa}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{399b71a7-bd56-4a9d-b193-e02670a445a5}">
+        <rows>
+            <row>
+                <cell id="{f135b3e6-840c-4dcb-947e-b5b937e98266}">
+                    <labels>
+                        <label description="Convert to Case" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_converttocase" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{a8e8ed55-1ecd-41f6-ae6f-f5d44d988b5c}">
+        <rows>
+            <row>
+                <cell id="{b49e0343-c47f-40b8-8769-9eaf2f0a4bb7}">
+                    <labels>
+                        <label description="Convert" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{698eab62-5d04-48e0-bb48-898327253363}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.convertToCaseClick" libraryName="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{d7d4eaab-5120-4234-b763-24ac8ddc61fa}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{c485b4f3-f89c-4736-96f7-48c6d7c857b8}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.convertToCaseOnLoad" libraryName="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{715BFC5E-B8CF-4D8A-91B2-789735CE3B63}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

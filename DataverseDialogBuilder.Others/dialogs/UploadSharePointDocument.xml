@@ -1,0 +1,159 @@
+<form>
+    <formparameters>
+        <querystringparameter name="last_Button_Clicked" type="SafeString" />
+        <querystringparameter name="regarding_Object_Id" type="SafeString" />
+        <querystringparameter name="regarding_Object_EntityName" type="SafeString" />
+        <querystringparameter name="folder_Name" type="SafeString" />
+        <querystringparameter name="location_Id" type="SafeString" />
+        <querystringparameter name="entity_Name" type="SafeString" />
+        <querystringparameter name="param_AttachmentFileName" type="SafeString" />
+        <querystringparameter name="relative_Location" type="SafeString" />
+        <querystringparameter name="id_UploadedFileSize" type="Integer" />
+    </formparameters>
+    <header id="{f0104a68-ddb3-4db1-9f24-e45b0000f38d}">
+        <rows>
+            <row>
+                <cell id="{c67577e9-f888-4422-98bf-c74b313872ec}">
+                    <labels>
+                        <label description="Upload Documents" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_uploadsharepointdocument" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{5131963e-f023-43cd-8d4e-f6aaa6af0ce2}" name="{5131963e-f023-43cd-8d4e-f6aaa6af0ce2}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{4409a694-e8bc-42ce-9e7d-999a22a0ca34}" name="{4409a694-e8bc-42ce-9e7d-999a22a0ca34}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b65d0f40-afe4-40bb-b8b1-83cfebd6cb82}">
+                                        <labels>
+                                            <label description="File Upload" languagecode="1033" />
+                                        </labels>
+                                        <control id="attachmentfile_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{edf312f7-f481-4308-846b-136428c2ce29}">
+                                            <parameters>
+                                                <MaxLength>142606336</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f3665f1a-89a2-46b3-8cae-1eb728893a13}">
+                                        <labels>
+                                            <label description="Maximum upload limit in Dynamics 365 is 50.00MB. Larger files can be uploaded directly in SharePoint." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_fileuploadlimit" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a345d9e2-b686-49b1-a314-e37367a63a9f}">
+                                        <labels>
+                                            <label description="Overwrite existing files" languagecode="1033" />
+                                        </labels>
+                                        <control id="overwrite_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{2d508b59-0668-4ef1-bb5b-e7ed890501c5}">
+        <rows>
+            <row>
+                <cell id="{e12b968e-7805-4ea1-b2ec-551f81432a26}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{6945c48d-b04a-4f39-b0cd-bd0824fe2775}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="DocumentManagement.SharePointDocumentUpload.OnLoadSharePointUplaodDocument" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{f39b7dab-e29f-4e0f-a056-92525554a036}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.SharePointDocumentUpload.UploadDocumentClickHandler" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{9aa90792-c6a6-4a45-8949-68811ad6dc02}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="DocumentManagement.GenericUtilities.CloseDialog" libraryName="SharePoint_main_system_library.js" handlerUniqueId="{1188fd4d-0d09-4884-939a-504467922060}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{edf312f7-f481-4308-846b-136428c2ce29}">
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="0">
+                <parameters>
+                    <value type="SingleLine.Text">attachmentfile_id</value>
+                    <filename type="SingleLine.Text">param_AttachmentFileName</filename>
+                    <size type="Whole.None">id_UploadedFileSize</size>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="1">
+                <parameters>
+                    <value type="SingleLine.Text">attachmentfile_id</value>
+                    <filename type="SingleLine.Text">param_AttachmentFileName</filename>
+                    <size type="Whole.None">id_UploadedFileSize</size>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="2">
+                <parameters>
+                    <value type="SingleLine.Text">attachmentfile_id</value>
+                    <filename type="SingleLine.Text">param_AttachmentFileName</filename>
+                    <size type="Whole.None">id_UploadedFileSize</size>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="3">
+                <parameters>
+                    <value type="SingleLine.Text">attachmentfile_id</value>
+                    <filename type="SingleLine.Text">param_AttachmentFileName</filename>
+                    <size type="Whole.None">id_UploadedFileSize</size>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

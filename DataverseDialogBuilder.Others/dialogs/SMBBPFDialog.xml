@@ -1,0 +1,106 @@
+<form>
+    <formparameters>
+        <querystringparameter type="SafeString" name="appmoduleid_param" />
+        <querystringparameter type="SafeString" name="solutionid_param" />
+        <querystringparameter type="SafeString" name="entitylist_param" />
+        <querystringparameter type="SafeString" name="shouldcreatebpf_param" />
+    </formparameters>
+    <tabs>
+        <tab id="{1316B81E-1E62-450B-83F0-5677060FCEC1}" name="{1316B81E-1E62-450B-83F0-5677060FCEC1}" expanded="true" locklevel="0" verticallayout="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{B9FDCE8D-86E8-463E-AA42-02A112F79192}" name="{B9FDCE8D-86E8-463E-AA42-02A112F79192}" columns="1" showbar="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{998C2A02-66D0-4A4E-9392-596106C4D121}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="NAMEOFBUSINESSPROCESSFLOWID" isunbound="true" isrequired="true" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
+                                            <parameters>
+                                                <IsTitle>true</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8E2C4F36-2F32-4149-92D8-6B644C9CD432}">
+                                        <labels>
+                                            <label description="Entity" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="ENTITYOPTIONSETID" isunbound="true" isrequired="true" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}">
+                                            <parameters>
+                                                <OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{F60510CE-D16C-476C-B4BA-4F638CEA89C3}">
+        <rows>
+            <row>
+                <cell id="{82236DBA-412B-4A41-96B5-6426D0951E16}">
+                    <labels>
+                        <label description="Create New Business Process" languagecode="1033" />
+                    </labels>
+                    <control id="createBusinessProcess_id" isunbound="true" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{55311AFA-471C-4279-8CF1-D8612B8CF12C}">
+        <rows>
+            <row>
+                <cell id="{BF418B27-6F9B-4678-AC9D-B13F366C42C9}">
+                    <labels>
+                        <label description="Launch Designer" languagecode="1033" />
+                    </labels>
+                    <control id="GOTOBPFDESIGNERID" isunbound="true" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{2B6D5501-01E9-41BF-9D78-8DA2FE51C780}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="CANCELID" isunbound="true" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" attribute="GOTOBPFDESIGNERID" active="false" application="false">
+            <Handlers>
+                <Handler passExecutionContext="false" parameters="" enabled="true" handlerUniqueId="{ce8f355d-0010-4299-a9bd-719e7d4cc0cd}" libraryName="$webresource:AppCommon/ControlWS/BPFDialog/BPFDialog.js" functionName="Mscrm.AppCommon.BPFDialog.goToBPFDesigner" />
+            </Handlers>
+        </event>
+        <event name="onclick" attribute="CANCELID" active="false" application="false">
+            <Handlers>
+                <Handler passExecutionContext="false" parameters="" enabled="true" handlerUniqueId="{ce8f355d-0010-4299-a9bd-719e7d4cc0cd}" libraryName="$webresource:AppCommon/ControlWS/BPFDialog/BPFDialog.js" functionName="Mscrm.AppCommon.BPFDialog.closeDialog" />
+            </Handlers>
+        </event>
+        <event name="onload" active="false" application="false">
+            <Handlers>
+                <Handler passExecutionContext="false" parameters="" enabled="true" handlerUniqueId="{b4abb24a-5c3e-4c31-babd-2a8b9232a972}" libraryName="$webresource:AppCommon/ControlWS/BPFDialog/BPFDialog.js" functionName="Mscrm.AppCommon.BPFDialog.OnLoad" />
+            </Handlers>
+        </event>
+    </events>
+</form>

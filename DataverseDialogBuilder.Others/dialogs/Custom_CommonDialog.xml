@@ -1,0 +1,121 @@
+<form>
+    <header id="{8DEBC9E0-99E7-483B-AB51-6FF6B1F0709F}">
+        <rows>
+            <row>
+                <cell id="{2F4F07FC-9BDB-45EA-B1BA-E68A8C71F663}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="DialogHeader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{D70A4E73-433D-4233-A04F-9908259FC6A7}" name="{A5ED94DB-0C29-4AD1-A840-A0EBB670A8F6}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="2" id="{7D962EEA-EBC5-416C-A88A-9DFA88F36A6B}" name="Section">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{57f8424c-9401-4ad6-b030-2dc9cdce38e9}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="DontShow_Checkbox" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{da927794-b538-4524-8a46-5895c3f24a57}"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{2916F619-7E1A-4C93-B02C-7328971C08FA}">
+        <rows>
+            <row>
+                <cell id="{11FC20F0-C747-4B78-91F0-93FF93932F7D}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="ok_btn" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{C7BC6431-A946-4872-8BDD-3955A5F1C08D}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="cancel">
+            <Handlers>
+                <Handler functionName="Sales.DialogUtility.CustomCommnDialog_Cancel" libraryName="AACWebResources/DialogUtility/msdynce_DialogUtility.js" handlerUniqueId="{8C157BFE-E5AA-4FF6-B29A-DC2F3E518F6D}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_btn">
+            <Handlers>
+                <Handler functionName="Sales.DialogUtility.CustomCommnDialog_Ok" libraryName="AACWebResources/DialogUtility/msdynce_DialogUtility.js" handlerUniqueId="{09AF925A-165A-43A5-9295-B6B69B7403E5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onLoad" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Sales.DialogUtility.CustomCommnDialog_Onload" libraryName="AACWebResources/DialogUtility/msdynce_DialogUtility.js" handlerUniqueId="{4ED40CDA-99CA-405D-AE08-906866D8175B}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_entityname" type="SafeString" />
+        <querystringparameter name="param_dialogtype" type="SafeString" />
+        <querystringparameter name="param_Header" type="SafeString" />
+        <querystringparameter name="param_grid_Control" type="Object" />
+        <querystringparameter name="param_records" type="Object" />
+        <querystringparameter name="param_dontShowCBValue" type="SafeString" />
+        <querystringparameter name="param_status" type="SafeString" />
+        <querystringparameter name="param_control" type="SafeString" />
+        <querystringparameter name="param_dialogdescription" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AACWebResources/DialogUtility/msdynce_DialogUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{da927794-b538-4524-8a46-5895c3f24a57}">
+            <customControl name="MscrmControls.CheckBoxControl.CheckBoxControl" formFactor="0">
+                <parameters>
+                    <dialogdescription type="SingleLine.Text">param_dialogdescription</dialogdescription>
+                    <value type="TwoOptions">param_dontShowCBValue</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.CheckBoxControl.CheckBoxControl" formFactor="1">
+                <parameters>
+                    <dialogdescription type="SingleLine.Text">param_dialogdescription</dialogdescription>
+                    <value type="TwoOptions">param_dontShowCBValue</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.CheckBoxControl.CheckBoxControl" formFactor="2">
+                <parameters>
+                    <dialogdescription type="SingleLine.Text">param_dialogdescription</dialogdescription>
+                    <value type="TwoOptions">param_dontShowCBValue</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

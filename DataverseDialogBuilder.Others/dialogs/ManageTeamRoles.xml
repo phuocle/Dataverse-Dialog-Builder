@@ -1,0 +1,129 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{DAB55F54-199A-4A36-9CDC-B6A9E383CE77}" name="{DAB55F54-199A-4A36-9CDC-B6A9E383CE77}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{2EC4EB74-9060-4AA8-B147-49C5D21BE3E1}" name="{2EC4EB74-9060-4AA8-B147-49C5D21BE3E1}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9F7DD29C-1C0A-404E-9711-B1012C48B79A}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectedRecords_label" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{668FB943-CAD2-4B34-840B-C4AAAEE86BDD}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="manageroles_cc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{38368B06-29B0-4A57-B969-94CB79F21F6A}">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{1EA88091-6ABA-4FE8-B631-CAB0DB894DCF}">
+        <rows>
+            <row>
+                <cell id="{D383194B-4D0A-4D70-BA82-F5E0FE972F60}">
+                    <labels>
+                        <label description="Manage Team Roles" languagecode="1033" />
+                    </labels>
+                    <control id="header_description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{F46C07A7-E5D9-45F4-99E3-998CFC195819}">
+        <rows>
+            <row>
+                <cell id="{FFBF14DC-FDD1-446B-83D6-822C6C19A6FE}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{A7EDF606-C5C4-407E-AF61-DE71C8DD4D72}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.ManageRoles.onOkClick" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{D9085CE0-5C9D-4B80-B907-BA1C769CED4E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.ManageRoles.onCancelClick" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{4C4E0C82-8125-4142-B9D0-2EA15E0609EB}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.ManageRoles.onDialogLoad" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{44237D35-79E4-4324-AB20-0CD5E25DED94}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{38368B06-29B0-4A57-B969-94CB79F21F6A}">
+            <customControl name="MscrmControls.AppCommon.RolesSelector" formFactor="0">
+                <parameters>
+                    <rowsData type="SingleLine.Text">rows_data</rowsData>
+                    <columnsDefinition type="SingleLine.Text">columns_definition</columnsDefinition>
+                    <selectedRecords type="SingleLine.Text">selected_records</selectedRecords>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.RolesSelector" formFactor="1">
+                <parameters>
+                    <rowsData type="SingleLine.Text">rows_data</rowsData>
+                    <columnsDefinition type="SingleLine.Text">columns_definition</columnsDefinition>
+                    <selectedRecords type="SingleLine.Text">selected_records</selectedRecords>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.RolesSelector" formFactor="2">
+                <parameters>
+                    <rowsData type="SingleLine.Text">rows_data</rowsData>
+                    <columnsDefinition type="SingleLine.Text">columns_definition</columnsDefinition>
+                    <selectedRecords type="SingleLine.Text">selected_records</selectedRecords>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="rows_data" type="SafeString" />
+        <querystringparameter name="columns_definition" type="SafeString" />
+        <querystringparameter name="selected_records" type="Object" />
+        <querystringparameter name="team_rolesmap" type="Object" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="total_records_selected" type="SafeString" />
+    </formparameters>
+</form>

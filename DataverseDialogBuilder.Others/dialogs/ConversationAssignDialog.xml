@@ -1,0 +1,100 @@
+<form>
+    <formparameters>
+        <querystringparameter name="is_dialog" type="Boolean" />
+        <querystringparameter name="entity_name" type="SafeString" />
+        <querystringparameter name="assign_to" type="SafeString" />
+        <querystringparameter name="is_assign_requested" type="Boolean" />
+        <querystringparameter name="selected_record_id" type="SafeString" />
+        <querystringparameter name="oc_endpoint_url" type="SafeString" />
+        <querystringparameter name="selected_record_agentAdId" type="SafeString" />
+        <querystringparameter name="selected_conversation_queueid" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{0817b048-b5e4-4d45-a416-885cd69b1f6b}" name="{0817b048-b5e4-4d45-a416-885cd69b1f6b}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{401a3f8f-76a9-405c-9394-afa2dc00d046}" name="{401a3f8f-76a9-405c-9394-afa2dc00d046}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6352839d-d38e-4f34-8491-15269dd75512}">
+                                        <labels>
+                                            <label description="Assign" languagecode="1033" />
+                                        </labels>
+                                        <control id="Assign_Conversation" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{e38518d4-bb72-42f8-9be0-a0241376f488}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{9099f1a0-5fc2-4bea-b3b7-d9027bfc4d82}">
+        <rows>
+            <row>
+                <cell id="{a58153f3-dc3a-4807-a7c3-7dad7b0eb348}">
+                    <labels>
+                        <label description="Assign conversations" languagecode="1033" />
+                    </labels>
+                    <control id="Assign_Title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{a3f829f6-b46d-4804-a2f7-61a44838e57f}">
+        <rows>
+            <row>
+                <cell id="{3c5e8ed5-79b6-411b-8e62-ca4f3a07e36f}">
+                    <labels>
+                        <label description="Assign" languagecode="1033" />
+                    </labels>
+                    <control id="assign_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{98edc497-6d09-4457-933e-f37713d6ecf0}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="true" attribute="assign_id">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.ConversationsAssignDialog.prototype.assignRecord" libraryName="msdyn_ConversationsAssignDialog.js" handlerUniqueId="{93275102-89B9-408B-BF99-4059DA6E0044}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.ConversationsAssignDialog.prototype.cancelDialog" libraryName="msdyn_ConversationsAssignDialog.js" handlerUniqueId="{B664427F-6CAE-4709-8475-977180D0930D}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{e38518d4-bb72-42f8-9be0-a0241376f488}">
+            <customControl name="MscrmControls.OCSupFilterControl.OCSupFilterControl" formFactor="0"></customControl>
+            <customControl name="MscrmControls.OCSupFilterControl.OCSupFilterControl" formFactor="1"></customControl>
+            <customControl name="MscrmControls.OCSupFilterControl.OCSupFilterControl" formFactor="2"></customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

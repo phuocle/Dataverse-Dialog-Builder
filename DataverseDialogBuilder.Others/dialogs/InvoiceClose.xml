@@ -1,0 +1,107 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_invoiceid" type="UniqueId" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_closedstate" type="Integer" />
+    </formparameters>
+    <header id="{5ae4a792-bd6a-46d7-aff0-f0441498ced1}">
+        <rows>
+            <row>
+                <cell id="{557ED5F8-C31C-468B-AEA2-96CD81AE978C}">
+                    <labels>
+                        <label description="Close Invoice" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_closeinvoice" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{18e96462-fbb9-4363-991a-6047c218ab52}" name="{8aa5571a-338c-4061-8da3-582882f86942}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{27919998-57f3-4b63-888f-88a4d2d56708}" name="{f159c709-9b64-4b18-84c3-0fba2cf0b69a}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{91f33607-96ef-43a0-a994-935e1a0f857e}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_closeinvoicedescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3110ac74-9cd4-4b20-902b-84c7c20456bb}">
+                                        <labels>
+                                            <label description="Status Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="closeinvoicestatusreason_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{6914b28a-b914-ef11-840b-6045bd575473}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{58d3c44f-86a0-4675-bad1-1aa25575d6b1}">
+        <rows>
+            <row>
+                <cell id="{2ab9c2ca-0ad0-4fd2-b477-5ab0718be686}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{fe75e8a9-132d-4086-ab7c-aba8d0e845b1}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onLoadCloseInvoiceDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{072ff090-3028-4f72-b2e0-373450bfdb66}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCloseCloseInvoiceDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{2bc0991d-5247-4829-b441-25ef3e1de577}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.dialogClose" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{894d4412-3433-435e-8784-71a9cc9c674d}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/Invoice/Invoice_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Sales/CommandBarActions/SalesCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,170 @@
+<form>
+    <hiddencontrols>
+        <data id="reminderOptionSelected" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="reminderTextSelected" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="reminderDateSelected" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="dateErrorText" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="recipientName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="footerTextOption1_single_recipient" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="footerTextOption1_ignore_recipient" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="footerTextOption2_single_recipient" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="footerTextOption2_ignore_recipient" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="footerTextOption3" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="invalidChoice" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="isEmailFollowedValue" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="now" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{00376A7F-7236-4A95-A7CD-55F41ECFDBF5}" name="{00376A7F-7236-4A95-A7CD-55F41ECFDBF5}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{A5660F2B-3F69-460E-A3F8-EAF7298688F7}" name="{A5660F2B-3F69-460E-A3F8-EAF7298688F7}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{FB184F8D-507F-403B-8B32-FA1DCC7B54F8}" showlabel="true">
+                                        <labels>
+                                            <label description="Set a reminder to follow up on this email." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{73485E59-F77B-457A-8EB0-C60AC8567896}" showlabel="true">
+                                        <labels>
+                                            <label description="Condition" languagecode="1033" />
+                                        </labels>
+                                        <control id="reminderOption" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{af2eda42-b233-43b6-aba0-745e1653f7e9}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{A3CB1180-FB8C-43D5-980B-D7336F060E1B}" showlabel="true">
+                                        <labels>
+                                            <label description="Remind by" languagecode="1033" />
+                                        </labels>
+                                        <control id="reminderDate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>DateTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" id="{3642DB26-9095-4177-A794-4507BAB60AA8}">
+                                        <labels>
+                                            <label description="Comment" languagecode="1033" />
+                                        </labels>
+                                        <control id="reminderText" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{F214AC90-49FE-42D5-AB5A-FA6ACE926462}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_textFooter" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters />
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{E8A96E38-4CE5-4D29-A6BF-CC7CA9C767D9}">
+        <rows>
+            <row>
+                <cell id="{3C032123-1AC3-42C9-AD63-E0AE02672D4A}">
+                    <labels>
+                        <label description="Set Reminder" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_setReminder" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{716B297E-9BD1-4515-9719-8524D74AA9A0}">
+        <rows>
+            <row>
+                <cell id="{4C375C3C-FA5B-491E-A92B-11A6E66AB3F4}">
+                    <labels>
+                        <label description="Ok" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{980E8D4F-C07C-4D47-9B00-989B679E9071}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.setReminderClick" libraryName="Email_main_system_library.js" handlerUniqueId="{5D5D8ABC-8E59-4615-B3D1-6D49B6FB6D5D}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.InternalUtilities.DialogUtility.closeDialog" libraryName="/_static/_common/scripts/CommandbarActions.js" handlerUniqueId="{D4B630FE-4C91-4543-8BB9-8F11B66579F4}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.setReminderOnLoad" libraryName="Email_main_system_library.js" handlerUniqueId="{998EA868-41B2-4B28-9A2C-5550BB134C48}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="reminderDate">
+            <Handlers>
+                <Handler functionName="Mscrm.setReminderOnChange" libraryName="Email_main_system_library.js" handlerUniqueId="{CB4D8015-5284-41ED-8308-EA0D8744D82F}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="reminderOption">
+            <Handlers>
+                <Handler functionName="Mscrm.setReminderOnChange" libraryName="Email_main_system_library.js" handlerUniqueId="{A548A8C1-469E-43D3-898C-BA7CE045FD2D}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="/_static/activities/email.js" />
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Email_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Marketing/CommandActions/Marketing_CommandActions.js" />
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Convert/Incident_convert_library.js" />
+                <internaljscriptfile src="$webresource:Service/Activities/activity.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

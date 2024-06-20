@@ -1,0 +1,185 @@
+<form>
+    <hiddencontrols>
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="selectedState" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="allowedTransitions" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="action" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="defaultCloseState" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="initialStartDate" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="initialEndDate" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <formparameters>
+        <querystringparameter name="entity_name" type="SafeString" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="entity_records" type="Object" />
+        <querystringparameter name="selected_state" type="Integer" />
+        <querystringparameter name="allowed_transitions" type="Object" />
+        <querystringparameter name="action_name" type="SafeString" />
+        <querystringparameter name="default_close_state" type="Integer" />
+        <querystringparameter name="initial_start_date" type="DateTime" />
+        <querystringparameter name="initial_end_date" type="DateTime" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{6d9687ca-d1fb-4eca-be84-3a07034ccef7}" name="{6d9687ca-d1fb-4eca-be84-3a07034ccef7}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" showlabel="false" columns="1" id="{7b205563-c5dd-4309-a6cf-e1c41f9732d8}" name="{7b205563-c5dd-4309-a6cf-e1c41f9732d8}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{72e2441f-0cd6-4c09-bd0e-a09951bad08e}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fedb3a71-19c8-4dad-9283-f59c0508734b}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="message_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6cd2812b-dcfd-47bf-b7da-fb655cacce64}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="State" languagecode="1033" />
+                                        </labels>
+                                        <control id="state_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f1b3e5dc-18be-45b9-821a-84fe319d3351}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="status_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d2a062b0-675f-4fbd-91a0-9efbfe60d93e}" showlabel="true" locklevel="0" visible="true">
+                                        <labels>
+                                            <label description="Start Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="start_date_id" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{534f4b27-1de7-4fe9-8e3c-5b752f40da22}" showlabel="true" locklevel="0" visible="true">
+                                        <labels>
+                                            <label description="End Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="end_date_id" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{517bf89e-aa5a-401a-a22b-26d99dd27e44}">
+        <rows>
+            <row>
+                <cell id="{81641348-650a-490b-b2f4-7b7f35aa9b2a}" showlabel="true">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{1c370496-60b8-43a4-9457-aaa1263a4503}">
+        <rows>
+            <row>
+                <cell id="{71bea1fa-4190-4f93-bdf5-35e161ae0740}" visible="false">
+                    <labels>
+                        <label description=" " languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{857d5fc6-c0da-48bc-8f03-302e9c054931}" visible="false">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.ChangeState.deactivateClick" libraryName="Main_system_library.js" handlerUniqueId="{a037842c-1125-4e46-ac5c-1e2d81daecf5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.ChangeState.changeStateCloseDialog" libraryName="Main_system_library.js" handlerUniqueId="{9559dc0e-51e5-4cd9-9dad-adeb712e8472}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Instance.onLoadCloseCampaignActivity" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{944f9d2d-386c-472b-9234-29fae81bfe95}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="XrmCore.Commands.ChangeState.onLoadSetState" libraryName="Main_system_library.js" handlerUniqueId="{49c9072a-9940-4917-81a6-051bbe5081c4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="state_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.ChangeState.onStateChange" libraryName="Main_system_library.js" handlerUniqueId="{c22d5d18-94b7-4ecd-bb25-fab40ac33865}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="start_date_id">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Instance.onChangeStartDateCloseCampaignActivity" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{de0dbcc1-2cb7-4133-a9fd-4ebb7e3fbb42}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="end_date_id">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Instance.onChangeEndDateCloseCampaignActivity" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{65f36f39-3f57-46fd-999e-b3543c8496d6}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/CampaignActivity/CampaignActivity_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

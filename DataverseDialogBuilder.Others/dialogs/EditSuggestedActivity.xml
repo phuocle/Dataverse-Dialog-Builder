@@ -1,0 +1,124 @@
+<form>
+    <header id="{8DEBC9E0-99E7-483B-AB51-6FF6B1F0709F}">
+        <rows>
+            <row>
+                <cell id="{FDFCC0DF-231D-4AC2-8471-4BD2EEAB6FD0}">
+                    <labels>
+                        <label description="Edit suggested activity" languagecode="1033" />
+                    </labels>
+                    <control id="EditsuggestedActivityHeader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{74A9BAAE-26CA-489C-AD72-AB2FA2F3EBD9}" name="{2B1D3232-9770-44C0-8E01-420A15E0ED34}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="2" id="{B5F9BAB6-1AF3-45E9-A974-DBDF884FEE19}" name="Section">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{588CD7FC-DB59-4BF1-8048-E6EC5EA46525}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_editsuggestedactivitycontrol" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3D09AB0F-A5E3-468B-98C9-6D4D9ECF377D}">
+                                        <labels>
+                                            <label description="Regarding" languagecode="1033" />
+                                        </labels>
+                                        <control id="editactivitylookup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
+                                                        <EntityLogicalName>contact</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>opportunity</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>lead</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{9A9219F6-FE5F-4303-B530-BB010EFC1F2C}">
+        <rows>
+            <row>
+                <cell id="{BDC7D64A-978E-45DB-9995-5EEF82B052B2}">
+                    <labels>
+                        <label description="Sync and connect" languagecode="1033" />
+                    </labels>
+                    <control id="save" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{0C2C27F0-E3E3-4C62-A4F2-41C6D168452B}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="cancel">
+            <Handlers>
+                <Handler functionName="Sales.SuggestedActivityCommandActions.ConfirmCancel" libraryName="AACWebResources/SuggestedActivity/msdynce_SuggestedActivity.js" handlerUniqueId="{36A2F347-86D0-4915-AF61-011DB570CACE}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="save">
+            <Handlers>
+                <Handler functionName="Sales.SuggestedActivityCommandActions.ConfirmSave" libraryName="AACWebResources/SuggestedActivity/msdynce_SuggestedActivity.js" handlerUniqueId="{95F5AA90-CF5E-41B1-840F-BC0D06EB7C10}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onLoad" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Sales.SuggestedActivityCommandActions.Onload" libraryName="AACWebResources/SuggestedActivity/msdynce_SuggestedActivity.js" handlerUniqueId="{677A92EA-7B61-453E-BCB3-B974CA44C511}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="Entity_Records" type="Object" />
+        <querystringparameter name="Entity_Grid" type="Object" />
+        <querystringparameter name="param_edit_activity_msg" type="SafeString" />
+        <querystringparameter name="param_regardingRecordId" type="SafeString" />
+        <querystringparameter name="param_entityName" type="SafeString" />
+        <querystringparameter name="param_recordName" type="SafeString" />
+        <querystringparameter name="param_status" type="SafeString" />
+        <querystringparameter name="param_control" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AACWebResources/SuggestedActivity/msdynce_SuggestedActivity.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

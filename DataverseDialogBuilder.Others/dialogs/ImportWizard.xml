@@ -1,0 +1,641 @@
+<form>
+    <formparameters>
+        <querystringparameter name="id_ImportId" type="SafeString" />
+        <querystringparameter name="id_ImportType" type="SafeString" />
+        <querystringparameter name="id_ImportFileType" type="Integer" />
+        <querystringparameter name="id_ImportFileName" type="SafeString" />
+        <querystringparameter name="id_ImportFileSize" type="SafeString" />
+        <querystringparameter name="id_ImportFileId" type="SafeString" />
+        <querystringparameter name="id_FieldDelimiter" type="SafeString" />
+        <querystringparameter name="id_EntityLogicalName" type="SafeString" />
+        <querystringparameter name="id_EntityLabel" type="SafeString" />
+        <querystringparameter name="id_HeaderColumnIndexesToBeIgnored" type="SafeString" />
+        <querystringparameter name="id_IsFirstRowHeader" type="SafeString" />
+        <querystringparameter name="id_DefaultOwnerType" type="SafeString" />
+        <querystringparameter name="id_DefaultOwner" type="SafeString" />
+        <querystringparameter name="id_DuplicateDetection" type="SafeString" />
+        <querystringparameter name="id_MapChanged" type="SafeString" />
+        <querystringparameter name="id_EntityKey" type="SafeString" />
+        <querystringparameter name="id_EntityKeyAttributes" type="SafeString" />
+        <querystringparameter name="id_UpsertMode" type="SafeString" />
+        <querystringparameter name="id_ImportMapName" type="SafeString" />
+        <querystringparameter name="id_IsMandatoryFieldValid" type="SafeString" />
+        <querystringparameter name="id_UploadedFileSize" type="Integer" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{a1b161e3-f8c3-48e6-b8eb-12efad4be0cd}" name="Import File Upload tab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabfooter id="{303f1bb7-3f05-423b-8b27-135b552b8375}">
+                <rows>
+                    <row>
+                        <cell id="{cd9b7088-728d-47b1-a9f0-cdf2a7ead223}">
+                            <labels>
+                                <label description="Close" languagecode="1033" />
+                            </labels>
+                            <control id="tab1footerclose" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{de13da57-74b4-4242-aab0-d320672db84d}">
+                            <labels>
+                                <label description="Next" languagecode="1033" />
+                            </labels>
+                            <control id="tab1footernext" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{d7c8d6ab-104f-4063-9220-90446f38e937}" name="Browse the file to be imported">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2695b7b7-5e22-447f-8ac8-a27e162f5e7e}" showlabel="true" visible="false">
+                                        <labels>
+                                            <label description="Activity Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="activityPointerType" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{738FD0C9-3477-4B7F-AF4C-D7CB9F67BFA3}">
+                                        <labels>
+                                            <label description="File Upload" languagecode="1033" />
+                                        </labels>
+                                        <control id="importfile_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{edf312f7-f481-4308-846b-136428c2ce29}">
+                                            <parameters>
+                                                <MaxLength>33554432</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{3211ca57-6162-4b2e-8442-02c3093dc059}" name="OwnerSettings">
+                            <labels>
+                                <label description="Owner For Imported Records" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{72459250-2a25-46c1-be49-e0a51505a6d3}">
+                                        <labels>
+                                            <label description="Select Owner For Imported Records" languagecode="1033" />
+                                        </labels>
+                                        <control id="owner_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>team</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab verticallayout="true" id="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" name="Import Data tab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabfooter id="{303f1bb7-3f05-423b-8b27-135b552b8376}">
+                <rows>
+                    <row>
+                        <cell id="{d01c7969-8648-45ad-834a-498b151c9627}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="tab2footerprevious" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{d01c7969-8648-45ad-834a-498b151c9628}">
+                            <labels>
+                                <label description="Review Mapping" languagecode="1033" />
+                            </labels>
+                            <control id="tab2footernext" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{168ef0b3-b7be-44f0-ba9f-f30f70ee4769}" name="Import Data settings">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{fdb69273-6173-4b13-a92a-80dd1a3d9e2d}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="id_DataDelimiter" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{4888a1a4-60b8-4ad7-8acf-bbfaeff167bc}">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{eef4f211-58cf-41e3-9bd0-60d01470cb2e}" name="Duplicate Data Settings For CSV">
+                            <labels>
+                                <label description="Duplicate Data Settings" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8e2a4a34-4f5b-46f4-936c-6784ca817926}" showlabel="true">
+                                        <labels>
+                                            <label description="Allow Duplicates" languagecode="1033" />
+                                        </labels>
+                                        <control id="allowDuplicatesInCSV" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{edf77173-78b3-4913-baa7-7d4a95bbdfd9}">
+                                            <parameters>
+                                                <OptionSetId>{e65b4190-7312-4403-99b5-1e837414e25d}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab verticallayout="true" id="{a1b161e3-f8c3-48e6-b8eb-12efad4be0ba}" name="Import mapping tab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabfooter id="{303f1bb7-3f05-423b-8b27-135b552b8377}">
+                <rows>
+                    <row>
+                        <cell id="{d01c7969-8648-45ad-834a-498b151c9629}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="tab3footerprevious" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{d01c7969-8648-45ad-834a-498b151c9630}">
+                            <labels>
+                                <label description="Finish Import" languagecode="1033" />
+                            </labels>
+                            <control id="tab3footernext" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{7dcfc61a-d021-4892-8229-ce46907066fc}" name="Import mapping">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{23486bef-1031-4480-9352-f10f1d080b2f}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="id_MapXml" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{f8a74a35-b7ca-4a35-8fbc-0cf1e32613d8}">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab verticallayout="true" id="{a1b161e3-f8c3-48e6-b8eb-12efad4be012}" name="Import Finish tab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabfooter id="{303f1bb7-3f05-423b-8b27-135b552b8378}">
+                <rows>
+                    <row>
+                        <cell id="{16c25d95-2f62-4ce0-bb8e-be080a9c708d}">
+                            <labels>
+                                <label description="Track Progress" languagecode="1033" />
+                            </labels>
+                            <control id="tab4footerprevious" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{d01c7969-8648-45ad-834a-498b151c9632}">
+                            <labels>
+                                <label description="Done" languagecode="1033" />
+                            </labels>
+                            <control id="tab4footernext" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{d7c8d6ab-104f-4063-9220-90446f38e940}" name="Your data has been successfully submitted for import">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3a3c65ae-dae1-4277-abb6-867e09c74ac3}">
+                                        <labels>
+                                            <label description="Your data has been submitted for import" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_datasubmitted" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab verticallayout="true" id="{0dfe1fb9-eaf2-46a5-8268-c5b8be2a6bbe}" name="Import Data Template tab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <tabfooter id="{548f7176-c63b-4c65-98bc-7d4b339a95be}">
+                <rows>
+                    <row>
+                        <cell id="{eed20f6a-02c0-466a-b362-9400d988e49f}">
+                            <labels>
+                                <label description="Back" languagecode="1033" />
+                            </labels>
+                            <control id="tab5footerprevious" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{13ad158b-305e-4f66-ad87-bb5d2a24ad21}">
+                            <labels>
+                                <label description="Review Mapping" languagecode="1033" />
+                            </labels>
+                            <control id="tab5footernext" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{239c638d-45d4-4289-afce-a7b22699c2ea}">
+                            <labels>
+                                <label description="Finish Import" languagecode="1033" />
+                            </labels>
+                            <control id="tab5footersubmit" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5e2b15ec-2a65-4ab8-ba1e-b20bd1e3ed1d}" name="Import Data Template settings">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3e11b2f5-42fd-45da-b910-d6f9f78da141}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="id_DataDelimiterTemplate" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{f0104971-ab4d-42fc-a3f3-367988a6929e}">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{a9be450d-f75d-4b13-8636-2d05daf09d50}" name="Duplicate Data Settings For XLSX">
+                            <labels>
+                                <label description="Duplicate Data Settings" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4149caf1-532e-44d1-9f3c-85697f1dc8c1}">
+                                        <labels>
+                                            <label description="Allow Duplicates" languagecode="1033" />
+                                        </labels>
+                                        <control id="allowDuplicatesInXlsx" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{153a5d3b-bb12-42ee-8002-168b397a9532}">
+                                            <parameters>
+                                                <OptionSetId>{e65b4190-7312-4403-99b5-1e837414e25d}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{ea28a1df-efe4-40f1-9f77-daafd7f05560}">
+        <rows>
+            <row>
+                <cell id="{e2fe672f-804a-4364-a887-1b24a50a39c2}">
+                    <labels>
+                        <label description="Import File Type" languagecode="1033" />
+                    </labels>
+                    <control id="formheader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="tab1footernext">
+            <Handlers>
+                <Handler functionName="uploadfile" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{ce8f355d-0010-4299-a9bd-719e7d4cc092}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab1footerclose">
+            <Handlers>
+                <Handler functionName="importFileUploadClose" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{B6FB4A64-9296-4A71-B4E2-22708C003F81}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab2footernext">
+            <Handlers>
+                <Handler functionName="reviewMapping" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{ce8f355d-0010-4299-a9bd-719e7d4cc091}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab2footerprevious">
+            <Handlers>
+                <Handler functionName="importSettingsBack" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{9b3e4e08-71d4-4955-9648-213b7702d7ab}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab3footerprevious">
+            <Handlers>
+                <Handler functionName="backToDelimiter" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{6e333d69-2331-42d6-9564-628a3798e605}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab3footernext">
+            <Handlers>
+                <Handler functionName="submitImportJob" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{cd9506ca-46f3-45b0-bed5-44a3bf8792d7}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab4footerprevious">
+            <Handlers>
+                <Handler functionName="navigateToImports" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{e1f9baf8-fb13-43f8-b7c7-21821c1f3431}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab4footernext">
+            <Handlers>
+                <Handler functionName="close_dialog" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{69b383d0-2091-44fb-bc61-a8aa6ffc7ca8}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="importSettingsOnLoad" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{3574bd9f-9620-4fd8-bf7d-f57addf8bf8f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="importMappingOnLoad" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{4ddd7092-7c41-4b48-b4a9-bba55098bdb1}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="importFileUploadOnLoad" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{8a39a727-9dc1-4370-8282-5e8b26ebe80a}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab5footerprevious">
+            <Handlers>
+                <Handler functionName="importSettingsBack" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{be4b422f-6c84-4772-a33b-7d768a9e6f05}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab5footersubmit">
+            <Handlers>
+                <Handler functionName="datasettingssubmitImportJob" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{f832615f-3da0-488a-887c-5efcbd69e092}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab5footernext">
+            <Handlers>
+                <Handler functionName="reviewMapping" libraryName="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" handlerUniqueId="{88cdb24e-d5ef-4deb-a3f7-1b085a01a45b}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{edf312f7-f481-4308-846b-136428c2ce29}">
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="0">
+                <parameters>
+                    <value type="SingleLine.Text">importfile_id</value>
+                    <filename type="SingleLine.Text">id_ImportFileName</filename>
+                    <size type="Whole.None">id_UploadedFileSize</size>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="1">
+                <parameters>
+                    <value type="SingleLine.Text">importfile_id</value>
+                    <filename type="SingleLine.Text">id_ImportFileName</filename>
+                    <size type="Whole.None">id_UploadedFileSize</size>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="2">
+                <parameters>
+                    <value type="SingleLine.Text">importfile_id</value>
+                    <filename type="SingleLine.Text">id_ImportFileName</filename>
+                    <size type="Whole.None">id_UploadedFileSize</size>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{4888a1a4-60b8-4ad7-8acf-bbfaeff167bc}">
+            <customControl name="MscrmControls.ImportExport.ImportSettings" formFactor="0">
+                <parameters>
+                    <IsFirstRowHeader type="Whole.None">id_IsFirstRowHeader</IsFirstRowHeader>
+                    <FieldDelimiter type="SingleLine.Text">id_FieldDelimiter</FieldDelimiter>
+                    <DataDelimiter type="SingleLine.Text">id_DataDelimiter</DataDelimiter>
+                    <ImportFileName type="SingleLine.Text">id_ImportFileName</ImportFileName>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                    <ImportFileSize type="SingleLine.Text">id_ImportFileSize</ImportFileSize>
+                    <EntityLogicalName type="SingleLine.Text">id_EntityLogicalName</EntityLogicalName>
+                    <UpsertMode type="SingleLine.Text">id_UpsertMode</UpsertMode>
+                    <EntityKey type="SingleLine.Text">id_EntityKey</EntityKey>
+                    <EntityKeyAttributes type="SingleLine.Text">id_EntityKeyAttributes</EntityKeyAttributes>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ImportExport.ImportSettings" formFactor="1">
+                <parameters>
+                    <IsFirstRowHeader type="Whole.None">id_IsFirstRowHeader</IsFirstRowHeader>
+                    <FieldDelimiter type="SingleLine.Text">id_FieldDelimiter</FieldDelimiter>
+                    <DataDelimiter type="SingleLine.Text">id_DataDelimiter</DataDelimiter>
+                    <ImportFileName type="SingleLine.Text">id_ImportFileName</ImportFileName>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                    <ImportFileSize type="SingleLine.Text">id_ImportFileSize</ImportFileSize>
+                    <EntityLogicalName type="SingleLine.Text">id_EntityLogicalName</EntityLogicalName>
+                    <UpsertMode type="SingleLine.Text">id_UpsertMode</UpsertMode>
+                    <EntityKey type="SingleLine.Text">id_EntityKey</EntityKey>
+                    <EntityKeyAttributes type="SingleLine.Text">id_EntityKeyAttributes</EntityKeyAttributes>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ImportExport.ImportSettings" formFactor="2">
+                <parameters>
+                    <IsFirstRowHeader type="Whole.None">id_IsFirstRowHeader</IsFirstRowHeader>
+                    <FieldDelimiter type="SingleLine.Text">id_FieldDelimiter</FieldDelimiter>
+                    <DataDelimiter type="SingleLine.Text">id_DataDelimiter</DataDelimiter>
+                    <ImportFileName type="SingleLine.Text">id_ImportFileName</ImportFileName>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                    <ImportFileSize type="SingleLine.Text">id_ImportFileSize</ImportFileSize>
+                    <EntityLogicalName type="SingleLine.Text">id_EntityLogicalName</EntityLogicalName>
+                    <UpsertMode type="SingleLine.Text">id_UpsertMode</UpsertMode>
+                    <EntityKey type="SingleLine.Text">id_EntityKey</EntityKey>
+                    <EntityKeyAttributes type="SingleLine.Text">id_EntityKeyAttributes</EntityKeyAttributes>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{f0104971-ab4d-42fc-a3f3-367988a6929e}">
+            <customControl name="MscrmControls.ImportExport.ImportSettings" formFactor="0">
+                <parameters>
+                    <IsFirstRowHeader type="Whole.None">id_IsFirstRowHeader</IsFirstRowHeader>
+                    <FieldDelimiter type="SingleLine.Text">id_FieldDelimiter</FieldDelimiter>
+                    <DataDelimiter type="SingleLine.Text">id_DataDelimiterTemplate</DataDelimiter>
+                    <ImportFileName type="SingleLine.Text">id_ImportFileName</ImportFileName>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                    <ImportFileSize type="SingleLine.Text">id_ImportFileSize</ImportFileSize>
+                    <EntityLogicalName type="SingleLine.Text">id_EntityLogicalName</EntityLogicalName>
+                    <UpsertMode type="SingleLine.Text">id_UpsertMode</UpsertMode>
+                    <EntityKey type="SingleLine.Text">id_EntityKey</EntityKey>
+                    <EntityKeyAttributes type="SingleLine.Text">id_EntityKeyAttributes</EntityKeyAttributes>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ImportExport.ImportSettings" formFactor="1">
+                <parameters>
+                    <IsFirstRowHeader type="Whole.None">id_IsFirstRowHeader</IsFirstRowHeader>
+                    <FieldDelimiter type="SingleLine.Text">id_FieldDelimiter</FieldDelimiter>
+                    <DataDelimiter type="SingleLine.Text">id_DataDelimiterTemplate</DataDelimiter>
+                    <ImportFileName type="SingleLine.Text">id_ImportFileName</ImportFileName>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                    <ImportFileSize type="SingleLine.Text">id_ImportFileSize</ImportFileSize>
+                    <EntityLogicalName type="SingleLine.Text">id_EntityLogicalName</EntityLogicalName>
+                    <UpsertMode type="SingleLine.Text">id_UpsertMode</UpsertMode>
+                    <EntityKey type="SingleLine.Text">id_EntityKey</EntityKey>
+                    <EntityKeyAttributes type="SingleLine.Text">id_EntityKeyAttributes</EntityKeyAttributes>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ImportExport.ImportSettings" formFactor="2">
+                <parameters>
+                    <IsFirstRowHeader type="Whole.None">id_IsFirstRowHeader</IsFirstRowHeader>
+                    <FieldDelimiter type="SingleLine.Text">id_FieldDelimiter</FieldDelimiter>
+                    <DataDelimiter type="SingleLine.Text">id_DataDelimiterTemplate</DataDelimiter>
+                    <ImportFileName type="SingleLine.Text">id_ImportFileName</ImportFileName>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                    <ImportFileSize type="SingleLine.Text">id_ImportFileSize</ImportFileSize>
+                    <EntityLogicalName type="SingleLine.Text">id_EntityLogicalName</EntityLogicalName>
+                    <UpsertMode type="SingleLine.Text">id_UpsertMode</UpsertMode>
+                    <EntityKey type="SingleLine.Text">id_EntityKey</EntityKey>
+                    <EntityKeyAttributes type="SingleLine.Text">id_EntityKeyAttributes</EntityKeyAttributes>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{f8a74a35-b7ca-4a35-8fbc-0cf1e32613d8}">
+            <customControl name="MscrmControls.ImportExport.ImportMappingControl" formFactor="0">
+                <parameters>
+                    <MapXml type="SingleLine.Text">id_MapXml</MapXml>
+                    <ImportFileName type="SingleLine.Text">id_ImportFileName</ImportFileName>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                    <ImportFileSize type="SingleLine.Text">id_ImportFileSize</ImportFileSize>
+                    <ImportId type="SingleLine.Text">id_ImportId</ImportId>
+                    <ImportFileId type="SingleLine.Text">id_ImportFileId</ImportFileId>
+                    <ImportMapName type="SingleLine.Text">id_ImportMapName</ImportMapName>
+                    <EntityKeyAttributes type="SingleLine.Text">id_EntityKeyAttributes</EntityKeyAttributes>
+                    <EntityLogicalName type="SingleLine.Text">id_EntityLogicalName</EntityLogicalName>
+                    <IsMandatoryFieldValid type="SingleLine.Text">id_IsMandatoryFieldValid</IsMandatoryFieldValid>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ImportExport.ImportMappingControl" formFactor="1">
+                <parameters>
+                    <MapXml type="SingleLine.Text">id_MapXml</MapXml>
+                    <ImportFileName type="SingleLine.Text">id_ImportFileName</ImportFileName>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                    <ImportFileSize type="SingleLine.Text">id_ImportFileSize</ImportFileSize>
+                    <ImportId type="SingleLine.Text">id_ImportId</ImportId>
+                    <ImportFileId type="SingleLine.Text">id_ImportFileId</ImportFileId>
+                    <ImportMapName type="SingleLine.Text">id_ImportMapName</ImportMapName>
+                    <EntityKeyAttributes type="SingleLine.Text">id_EntityKeyAttributes</EntityKeyAttributes>
+                    <EntityLogicalName type="SingleLine.Text">id_EntityLogicalName</EntityLogicalName>
+                    <IsMandatoryFieldValid type="SingleLine.Text">id_IsMandatoryFieldValid</IsMandatoryFieldValid>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ImportExport.ImportMappingControl" formFactor="2">
+                <parameters>
+                    <MapXml type="SingleLine.Text">id_MapXml</MapXml>
+                    <ImportFileName type="SingleLine.Text">id_ImportFileName</ImportFileName>
+                    <ImportFileType type="Whole.None">id_ImportFileType</ImportFileType>
+                    <ImportFileSize type="SingleLine.Text">id_ImportFileSize</ImportFileSize>
+                    <ImportId type="SingleLine.Text">id_ImportId</ImportId>
+                    <ImportFileId type="SingleLine.Text">id_ImportFileId</ImportFileId>
+                    <ImportMapName type="SingleLine.Text">id_ImportMapName</ImportMapName>
+                    <EntityKeyAttributes type="SingleLine.Text">id_EntityKeyAttributes</EntityKeyAttributes>
+                    <EntityLogicalName type="SingleLine.Text">id_EntityLogicalName</EntityLogicalName>
+                    <IsMandatoryFieldValid type="SingleLine.Text">id_IsMandatoryFieldValid</IsMandatoryFieldValid>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{edf77173-78b3-4913-baa7-7d4a95bbdfd9}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">allowDuplicatesInCSV</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">allowDuplicatesInCSV</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">allowDuplicatesInCSV</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{153a5d3b-bb12-42ee-8002-168b397a9532}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">allowDuplicatesInXlsx</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">allowDuplicatesInXlsx</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">allowDuplicatesInXlsx</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/ImportExport/ImportExport_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

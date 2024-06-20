@@ -1,0 +1,949 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_clonePrivileges" type="Boolean" />
+        <querystringparameter name="param_noteMigration" type="Boolean" />
+        <querystringparameter name="param_file_store_migration_status" type="SafeString" />
+        <querystringparameter name="param_file_store_migration_turnedon" type="Boolean" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{534851AA-9B12-4596-9A89-53DC6D449762}" name="{64087494-CA0B-40D0-942F-A5F6FFFB63BD}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{3bf5f10a-9a9b-4718-862d-b96f2e293dfa}" name="{3bf5f10a-9a9b-4718-862d-b96f2e293dfa}">
+                            <labels>
+                                <label description="Record types" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{147f1c9d-72eb-45c2-a7c2-58064538ee89}" showlabel="true">
+                                        <labels>
+                                            <label description="Select the record types for which you want to turn on knowledge base management." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_record_types" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{71EEEE1A-0019-4706-90BB-BB5D1443EC40}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="cc_embedded_knowledge_search" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{FC31E3E9-A830-435B-9DE4-FFCE2E4B74C6}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{AC9CFDC8-B30B-48A3-86AB-4DA0B8CD6E5D}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{0a5b96af-4b97-4013-90bc-1b31988d43bb}" name="{0a5b96af-4b97-4013-90bc-1b31988d43bb}">
+                            <labels>
+                                <label description="Support portal connection" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{43f4d8b2-2ae8-4de6-a112-1c69108fdaae}" showlabel="true">
+                                        <labels>
+                                            <label description="To share knowledge article as URLs, you’ll need to first set up an external portal and turn on the setting below." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_use_external_portal_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6b109a35-b0da-40ac-9617-50e0cb08b6f9}" showlabel="true">
+                                        <labels>
+                                            <label description="Use an external portal" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.useexternalportal_onchange" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="98325155-F554-4EF0-8E2A-06048956BB5E" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_use_external_portal" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{711CF908-61F4-4665-80A7-84429DADDF5E}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{be05b53a-0c16-4c05-86c8-9626c6b249f6}" name="{be05b53a-0c16-4c05-86c8-9626c6b249f6}" showlabel="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{C8583544-0BC0-456E-86E9-0BD4ADEDAC57}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ed1e186c-bd14-42ed-b053-378be28dc715}" showlabel="true">
+                                        <labels>
+                                            <label description="External links for knowledge articles are created in the URL format specified here. Insert {kbnum} as a placeholder in the URL format. It will be replaced by an actual knowledge article number. For example http://&lt;support portal URL&gt;/kb/{kbnum}" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_external_link_kb" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5b112f01-9fb8-4366-a98d-63a2728dbb23}" showlabel="true">
+                                        <labels>
+                                            <label description="URL format" languagecode="1033" />
+                                        </labels>
+                                        <control id="textbox_external_portal_url" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{C8583544-0BC0-456E-86E9-0BD4ADEDAC57}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{8ca788ec-c172-4761-adb4-20cefc2deec8}" name="{8ca788ec-c172-4761-adb4-20cefc2deec8}">
+                            <labels>
+                                <label description="Knowledge articles feedback" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3c76067c-608a-4219-a572-fb20e307800f}" showlabel="true">
+                                        <labels>
+                                            <label description="Enable users to provide feedback on knowledge articles from search control." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_enable_feeback_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{12e52b0f-c596-4b27-a72f-e62a781d1c5b}" showlabel="true">
+                                        <labels>
+                                            <label description="Enable feedback" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.usekmratings_onchange" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="E55EF237-95B3-4CFD-879E-5CA56E68F3A1" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_enable_km_rating" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{0FC9FD30-1881-45B2-8AC9-E9173CAACB80}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1F03DDA7-0523-42AF-A3AE-4265D841A119}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{bea9d75a-de2c-4766-8a82-34e09a6242b8}" name="{bea9d75a-de2c-4766-8a82-34e09a6242b8}" visible="false">
+                            <labels>
+                                <label description="Knowledge articles search filters" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{32117b8c-0e82-42ce-8674-a19671b43ba4}" showlabel="true">
+                                        <labels>
+                                            <label description="The filter configuration you do will apply on the form-based Knowledge search control, Knowledge search page, and productivity pane-based knowledge search control." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_enable_filter_customization_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{dc790019-e30f-41ae-93c7-4e5062f700ac}" showlabel="true">
+                                        <labels>
+                                            <label description="By setting Yes, you agree to use the Enable search filters feature and the Power Apps Maker filter configuration will be deactivated. You can enable it anytime by setting No." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_enable_filter_customization_info_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{85a865ce-3fd0-46de-9ec6-a07fe1429362}" showlabel="true">
+                                        <labels>
+                                            <label description="Enable search filters" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.enablefiltercustomization_onchange" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="1C2C1026-ED8F-476E-BF5C-673C7919FC05" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_enable_filter_customization" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{D2338582-760C-45BF-A8BE-0653BD08B3EA}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{47F0FC92-4770-4BD4-B198-3EA93EE37119}" showlabel="true">
+                                        <labels>
+                                            <label description="Allow agents to personalize the knowledge articles search filters" languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_enable_personalizeFilter" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{AF62D2EB-09BD-40C7-A33F-C5902A9FD57C}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{19BDEACB-5F90-46D7-880C-A9DF8C1BB848}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{877C3242-EE7E-48CA-BFC3-263A52A2DFE0}" name="personalized_language_section" visible="false">
+                            <labels>
+                                <label description="Knowledge articles authoring language" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6BBA23EE-1A7B-40B6-B08A-9F452F1137F6}" showlabel="true">
+                                        <labels>
+                                            <label description="Set default knowledge article authoring language for the users." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_enable_default_language_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{F4A06FB5-6BE6-454D-BA52-DFE9F4E5082E}" showlabel="true">
+                                        <labels>
+                                            <label description="Set default knowledge authoring language for your users." languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.languageSettings_onchange" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="98325155-F554-4EF0-8E2A-06048956BB5E" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_enableLanguageSettings_feature" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{AD68716F-B873-40D5-895F-6E771B5941BD}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{770FC674-2306-4944-A4EE-7C92B7F57EB0}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{903927B0-450E-4CE0-8A94-148BB3F41BE9}" name="language_settings_section" visible="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2DF18602-3EBD-4926-98F8-C0A1E6C33622}" showlabel="true">
+                                        <labels>
+                                            <label description="Set the default knowledge authoring language for your organization." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_enable_default_language_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{29C56CF3-7966-4976-8756-03B8B46B032E}" showlabel="true">
+                                        <labels>
+                                            <label description="Use organization’s UI language" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.personalize_onchange" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="98325155-F554-4EF0-8E2A-06048956BB5E" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_useOrgUI" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{1582534B-57D1-4E59-B3C1-5F5C757A016A}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{90CF7018-B5C1-4BF2-96EB-407905E7FA71}" showlabel="true">
+                                        <labels>
+                                            <label description="Select a language" languagecode="1033" />
+                                        </labels>
+                                        <control id="select_language_personalize" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" disabled="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{11998009-5E27-4E92-84E2-63FB0ECE44E4}</DefaultViewId>
+                                                        <EntityLogicalName>languagelocale</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{AC86274D-037A-4695-8C75-BD5DF95C44FE}" showlabel="true">
+                                        <labels>
+                                            <label description="Allow users to set their default knowledge authoring language in the personalization option." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_enable_language_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2A5AF713-4C45-4E3C-A8E6-40B63F304933}" showlabel="true">
+                                        <labels>
+                                            <label description="​Allow users to set default knowledge authoring language​" languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_enable_languagePersonalize" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{233F57DF-6993-4E0C-869B-EA395831F8E2}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{549974C5-3EC3-4C12-9FA0-3400805599F8}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{022D1EF0-CFB2-4C2D-B1EB-470F504C7408}" name="{022D1EF0-CFB2-4C2D-B1EB-470F504C7408}" showlabel="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0ACC7C23-6E5A-4051-8D43-DF39F97754E2}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="allentities" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1C8DD032-C6B8-48A9-91DF-03F1D1CB27D4}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectedentities" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9BA87C1B-1A67-436D-B865-CB63DCE158F1}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="initiallyselectedentities" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{AF695B5F-8B3B-4E4C-8750-138689BFD720}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="saveentitiesbatchurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{AFE89919-4740-4FE1-B57B-80803F70BFA1}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="updateentityurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{1C0647F1-A07A-45A9-A1E5-DBE8789CFCA0}" name="personalized_attachment_sync_preference" visible="true">
+                            <labels>
+                                <label description="Sync knowledge article attachments to portal" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{43A593D8-4DFB-43CF-B577-401B6D952B92}" showlabel="true">
+                                        <labels>
+                                            <label description="Automatically sync knowledge article attachments to notes attachments. Select &quot;Yes&quot; if you use knowledge article attachments in the portal. Select &quot;No&quot; if knowledge article attachments are for customer service applications only. Learn more at https://go.microsoft.com/fwlink/p/?linkid=2172080." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_enable_auto_sync_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3028FDC1-EB96-4874-B486-EF1D93725E5E}" showlabel="true">
+                                        <labels>
+                                            <label description="Sync attachments to portal" languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_enableAutoSync_feature" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{38692026-C048-4925-9D15-BAD6D0E60FBB}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{AAAC382E-807F-420B-8C5A-160B5FE9381F}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{37DA686D-1BF1-495B-8FE6-40C52C27E9AF}" name="safelisted_origins_section" visible="true">
+                            <labels>
+                                <label description="Origins allow list" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3ef37164-3a88-46ab-af27-ebfc3407e402}" showlabel="true">
+                                        <labels>
+                                            <label description="The origin links are required to ensure only safe links are added by the knowledge authors in the articles. Supported origins are HTTP or HTTPS protocol, IP address or domain name, and TCP port number. The knowledge authors must use the exact match of links in the articles." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_allowed_origins_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e69a2299-08e4-4800-aa3a-8c34c637b751}" showlabel="true">
+                                        <labels>
+                                            <label description="Example:" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_example_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fa27a1ef-5c35-4a6b-b430-d7d6a358b56a}" showlabel="true">
+                                        <labels>
+                                            <label description="https://www.contoso.com" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_example_origin_links_text_1" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ce69a2e3-b1a5-4d58-8e32-11cdd6a2381d}" showlabel="true">
+                                        <labels>
+                                            <label description="https://www.contoso.com:443" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_example_origin_links_text_2" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ACCE97CE-CCF9-4526-89CE-9E1EC72B4B10}" showlabel="true">
+                                        <labels>
+                                            <label description="Add origin links" languagecode="1033" />
+                                        </labels>
+                                        <control id="allowed_origins_list" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" uniqueid="{d3942154-c6ce-4977-b6ea-4c23f61a5f8b}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{C7A28CB1-C9BE-487C-A33B-FB52DE5035F5}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{68eb9477-a1ac-48d5-8bcc-792fe8263d7a}" name="{68eb9477-a1ac-48d5-8bcc-792fe8263d7a}">
+                            <labels>
+                                <label description="Knowledge search logic" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{84c99204-011e-4ce5-b87c-718e8b26fd33}" showlabel="true">
+                                        <labels>
+                                            <label description="By setting Yes, you agree to match all the search words to consider an article as a match when relevance search is enabled." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_set_default_search_operator_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{23023408-ef37-46e2-bf64-5f5410138642}" showlabel="true">
+                                        <labels>
+                                            <label description="Set search mode as all" languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_set_default_search_operator" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{da11b7b4-22e7-4d36-92f9-ddb3d8b3aa16}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cd824b30-4d69-4475-bd6f-8480c6e3872a}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="radio_suggest_as_you_type_enabled" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{01aa7d4a-c961-4996-a4a1-585f70997315}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{41259254-32BC-4099-93F1-779F3D98D153}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{1773C584-EA66-4AD6-97DC-E931DB350F38}" name="number_of_search_results_section" visible="false">
+                            <labels>
+                                <label description="Search results display count" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ECA77730-0E87-405F-9ED4-F09061780838}" showlabel="true">
+                                        <labels>
+                                            <label description="Set the number of results to be displayed for the users. The setting is applicable only to knowledge search in the app side pane and in the standalone mode." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_number_of_search_results_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{EEC8609C-60FA-4259-9590-28C08BCED62A}" showlabel="true">
+                                        <labels>
+                                            <label description="Results display count value" languagecode="1033" />
+                                        </labels>
+                                        <control id="optionset_number_of_search_results" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{f36cd6d3-9b39-4c4a-89ca-a68cbfd91e44}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{F71E9617-6510-440A-A17F-90F6618BE5CC}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{aaef397c-f572-4cff-b118-0878f4c238a8}" name="file_storage_section" visible="false">
+                            <labels>
+                                <label description="Storage" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2f639607-cc32-4f53-bc2a-6319e4b6d9a0}" showlabel="true">
+                                        <labels>
+                                            <label description="By enabling this feature, you save the knowledge article CONTENT field data in the Dataverse file storage for the newly created and ingested articles. This decreases database capacity usage and increases file capacity. After you enable this feature, smart assist article suggestions won't be available for newly created or updated articles." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_save_content_in_file_storage_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{da7a0ecf-13be-4782-a74a-0376eed56c23}" showlabel="true">
+                                        <labels>
+                                            <label description="Save content in file storage" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.enablefilestore_onchange" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="DAB9661D-1EAF-4104-92D0-618D731504F2" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_save_content_in_file_storage" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{3985505c-300e-4c31-a550-7342f949cdd0}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3c192e9c-a977-4070-9d32-a52fc6513eb9}" showlabel="true">
+                                        <labels>
+                                            <label description="Migrate your existing knowledge article content field data to Dataverse file storage. Smart assist article suggestions won't be available after you enable this feature for existing articles." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_migrate_data_to_file_storage_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1387ac27-a59e-4f64-87d6-2cb66e0766f8}" showlabel="true">
+                                        <labels>
+                                            <label description="Migrate data to file storage" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.migratetofilestore_onchange" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="59714EDF-2D97-45B7-96E7-712EC788B2DE" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_migrate_data_to_file_storage" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{6a64bad9-53a6-4e11-b479-d6068f54e770}">
+                                            <parameters>
+                                                <OptionSetId>{59D19024-72E4-45B9-8F90-56A5FC2A09EF}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8b7a0770-1bd0-4451-ba98-5e95e67417bf}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="migration_status_info_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{b8fa5f35-f224-4721-8b17-933ad3b455c3}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2d823120-b868-4aef-9d70-cf8700ad2d73}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{009801AC-FF38-41DA-8F34-CB023080DA2F}">
+        <rows>
+            <row>
+                <cell id="{c4e99671-7eb1-4992-8a2f-8c9d7e9b5f1c}">
+                    <labels>
+                        <label description="Settings" languagecode="1033" />
+                    </labels>
+                    <control id="embeddedknowledgesearchheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{113ADCE6-D87E-4D9B-AAB7-7190113F8853}">
+        <rows>
+            <row>
+                <cell id="{acb3da26-0065-4d7d-b4b9-babffb086fe4}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="save_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.form_onload" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="{F14DE1B9-051C-405A-AC76-9951E483C765}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="save_id">
+            <Handlers>
+                <Handler functionName="Mscrm.handle_save" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="{F14DE1B9-051C-405A-AC76-9951E483C765}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.onchange_handler" libraryName="msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="{F14DE1B9-051C-405A-AC76-9951E483C765}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagement/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{FC31E3E9-A830-435B-9DE4-FFCE2E4B74C6}">
+            <customControl formFactor="0" name="MscrmControls.EKSearch.EKSearchControl" />
+            <customControl formFactor="1" name="MscrmControls.EKSearch.EKSearchControl" />
+            <customControl formFactor="2" name="MscrmControls.EKSearch.EKSearchControl" />
+        </controlDescription>
+        <controlDescription forControl="{b8fa5f35-f224-4721-8b17-933ad3b455c3}">
+            <customControl formFactor="0" name="MscrmControls.KbMigrationStatusControl.KbMigrationStatusControl">
+                <parameters>
+                    <statusString type="SingleLine.Text">param_file_store_migration_status</statusString>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.KbMigrationStatusControl.KbMigrationStatusControl">
+                <parameters>
+                    <statusString type="SingleLine.Text">param_file_store_migration_status</statusString>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.KbMigrationStatusControl.KbMigrationStatusControl">
+                <parameters>
+                    <statusString type="SingleLine.Text">param_file_store_migration_status</statusString>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{711CF908-61F4-4665-80A7-84429DADDF5E}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_use_external_portal</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_use_external_portal</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_use_external_portal</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{0FC9FD30-1881-45B2-8AC9-E9173CAACB80}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_km_rating</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_km_rating</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_km_rating</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{D2338582-760C-45BF-A8BE-0653BD08B3EA}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_filter_customization</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_filter_customization</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_filter_customization</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{AF62D2EB-09BD-40C7-A33F-C5902A9FD57C}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_personalizeFilter</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_personalizeFilter</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_personalizeFilter</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{AD68716F-B873-40D5-895F-6E771B5941BD}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enableLanguageSettings_feature</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enableLanguageSettings_feature</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enableLanguageSettings_feature</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{1582534B-57D1-4E59-B3C1-5F5C757A016A}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_useOrgUI</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_useOrgUI</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_useOrgUI</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{233F57DF-6993-4E0C-869B-EA395831F8E2}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_languagePersonalize</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_languagePersonalize</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enable_languagePersonalize</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{d3942154-c6ce-4977-b6ea-4c23f61a5f8b}">
+            <customControl formFactor="0" name="MscrmControls.KbUnboundTagsControl.KbUnboundTagsControl">
+                <parameters>
+                    <value type="SingleLine.Text">allowed_origins_list</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.KbUnboundTagsControl.KbUnboundTagsControl">
+                <parameters>
+                    <value type="SingleLine.Text">allowed_origins_list</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.KbUnboundTagsControl.KbUnboundTagsControl">
+                <parameters>
+                    <value type="SingleLine.Text">allowed_origins_list</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{38692026-C048-4925-9D15-BAD6D0E60FBB}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enableAutoSync_feature</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enableAutoSync_feature</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_enableAutoSync_feature</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{da11b7b4-22e7-4d36-92f9-ddb3d8b3aa16}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_set_default_search_operator</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_set_default_search_operator</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_set_default_search_operator</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{3985505c-300e-4c31-a550-7342f949cdd0}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_save_content_in_file_storage</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_save_content_in_file_storage</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_save_content_in_file_storage</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{6a64bad9-53a6-4e11-b479-d6068f54e770}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_migrate_data_to_file_storage</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_migrate_data_to_file_storage</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_migrate_data_to_file_storage</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{01aa7d4a-c961-4996-a4a1-585f70997315}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_suggest_as_you_type_enabled</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_suggest_as_you_type_enabled</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value type="TwoOptions">radio_suggest_as_you_type_enabled</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

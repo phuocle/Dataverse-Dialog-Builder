@@ -1,0 +1,137 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{8495C1D4-55D8-41CE-AD73-35FE9508A96E}" name="{8495C1D4-55D8-41CE-AD73-35FE9508A96E}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{68B9AE11-18C7-4C9F-AA3F-187BD4C8129E}" name="{68B9AE11-18C7-4C9F-AA3F-187BD4C8129E}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{00A6EBBC-41AE-41AD-85EB-205B11560B6B}">
+                                        <labels>
+                                            <label description="Users:" languagecode="1033" />
+                                        </labels>
+                                        <control id="users_label" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6D74C4EA-A73D-4990-A215-96A8676551E9}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectedRecords_label" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8F4BF863-D659-4CF8-8CB2-66195688D223}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="removemembers_cc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{0A7DDD73-86A0-48BB-AA0A-3A2B5BD9FFA8}">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{9F3C8204-5178-42FC-859C-7AECF9583BD6}">
+        <rows>
+            <row>
+                <cell id="{EDEB0564-7868-409D-A86D-E965133D5017}">
+                    <labels>
+                        <label description="Remove Members From Team" languagecode="1033" />
+                    </labels>
+                    <control id="removemembersheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{E1BA409C-5FA5-428A-820D-D9BEFA1F5E61}">
+        <rows>
+            <row>
+                <cell id="{58FE3200-D289-41C7-AED3-EF281EE957AC}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{E5BDDC95-4705-455B-95BF-D5B7B608A749}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.RemoveMembers.onOkClick" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{CC866BA8-93E8-4601-B78C-D210E8CDA6DA}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.RemoveMembers.onCancelClick" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{5BA57B72-1D02-4EDD-ADCE-3AFCD6A955E4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.Team.RemoveMembers.onDialogLoad" libraryName="$webresource:AppCommon/ControlWS/Team/Team.js" handlerUniqueId="{E000CB82-B9DD-4A95-9C6F-6D0655A11701}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{0A7DDD73-86A0-48BB-AA0A-3A2B5BD9FFA8}">
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="0">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">entity_records</selectedEntities>
+                    <customLabel type="SingleLine.Text">custom_label</customLabel>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="1">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">entity_records</selectedEntities>
+                    <customLabel type="SingleLine.Text">custom_label</customLabel>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.PartyListWrapper" formFactor="2">
+                <parameters>
+                    <targetEntities type="SingleLine.Text">target_entities</targetEntities>
+                    <selectedEntities type="SingleLine.Text">entity_records</selectedEntities>
+                    <customLabel type="SingleLine.Text">custom_label</customLabel>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="target_entities" type="SafeString" />
+        <querystringparameter name="entity_records" type="Object" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="selected_records" type="Object" />
+        <querystringparameter name="total_records_selected" type="SafeString" />
+        <querystringparameter name="custom_label" type="SafeString" />
+    </formparameters>
+</form>

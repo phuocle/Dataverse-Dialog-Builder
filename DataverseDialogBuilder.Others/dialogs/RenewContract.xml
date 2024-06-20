@@ -1,0 +1,107 @@
+<form>
+    <header id="{0b900b1e-1e1c-437c-a6c4-a63e02bb6abc}">
+        <rows>
+            <row>
+                <cell id="{3bbddbb5-2bed-4f40-8d59-3a5b322a6604}">
+                    <labels>
+                        <label description="Renew Contract" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_renewcontract" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{2a0a75c3-5d66-44e7-9245-a770e09a1def}" name="{9f06b4bc-f74d-4c5b-abf4-a65cd7f68fc6}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{1b545afa-863b-4f9d-83dd-2db04ebd229b}" name="{3e47a85f-9d56-4b82-b9bd-047ef31bf258}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{53f0c328-f5be-41db-a159-025f7428d9a3}">
+                                        <labels>
+                                            <label description="We'll create a new contract and set its status to Draft or Invoiced depending on whether you renewed an expired or invoiced contract." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_descriptionrenewcontract" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2386c11a-f482-41e2-b04e-5e34e16c10e1}">
+                                        <labels>
+                                            <label description="Include canceled contract lines" languagecode="1033" />
+                                        </labels>
+                                        <control id="includeCanceledContractLines_id" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{ae38af03-9153-4d12-b074-b42055c15ee4}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{85fd0429-334f-4a07-a5c0-9fec31bce217}">
+        <rows>
+            <row>
+                <cell id="{ca6cdd9d-0073-4029-af2e-e366d965727d}">
+                    <labels>
+                        <label description="Renew" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{66bbea4b-d44a-4d6e-ac52-dcbf16a6d106}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.Contract.CommandBarActions.contractRenewOnLoad" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="{89ceeb60-9c69-4523-83ae-f348454b626b}" enabled="true" parameters="" passExecutionContext="false" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.Contract.CommandBarActions.contractRenewApplyChangesClick" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="{92a1fc4d-6ecd-4d25-988b-9c35f83a17af}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{eb7c46f3-576d-4aab-88dd-58286b758480}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+        <querystringparameter name="param_renewedContractId" type="UniqueId" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Contract/Contract_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

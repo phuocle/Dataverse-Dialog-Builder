@@ -1,0 +1,122 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{B4549088-44AD-449E-8201-1E6B81F357CC}" name="{B4549088-44AD-449E-8201-1E6B81F357CC}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" columns="1" id="{954E03D4-E8C3-4B46-8F27-0F95DCF501A3}" name="{954E03D4-E8C3-4B46-8F27-0F95DCF501A3}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1316DB54-165F-4BA0-9BCD-A5F740455ED7}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="SetWorkHourControl_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{6955C8FB-FDCB-41AF-830C-F14EC0645934}">
+                                            <parameters>
+                                                <MaxLength>2147483647</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{1DCF68C4-E22A-4FB4-9DF8-E7D5051718EB}">
+        <rows>
+            <row>
+                <cell id="{1814E2C8-1CD4-421E-A1D8-594E11B36811}">
+                    <labels>
+                        <label description="Set Work Hours" languagecode="1033" />
+                    </labels>
+                    <control id="createcalendarruleheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{EBB1C660-79F7-4C06-9BAA-3D89E8C60A18}">
+        <rows>
+            <row>
+                <cell id="{B097878C-C7E8-40F6-B412-E57D33338220}">
+                    <labels>
+                        <label description="Ok" languagecode="1033" />
+                    </labels>
+                    <control id="oktimesheetdetails_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{3330328D-775B-406F-8BC5-CB475B23ABFA}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="canceltimesheetdetails_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{6955C8FB-FDCB-41AF-830C-F14EC0645934}">
+            <customControl name="MscrmControls.AppCommon.SetWorkHour.SetWorkHourControl" formFactor="0">
+                <parameters>
+                    <setWorkHourControlInput type="SingleLine.Text">setWorkHourControl_Input</setWorkHourControlInput>
+                    <setWorkHourControlOutput type="SingleLine.Text">setWorkHourControl_Output</setWorkHourControlOutput>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.SetWorkHour.SetWorkHourControl" formFactor="1">
+                <parameters>
+                    <setWorkHourControlInput type="SingleLine.Text">setWorkHourControl_Input</setWorkHourControlInput>
+                    <setWorkHourControlOutput type="SingleLine.Text">setWorkHourControl_Output</setWorkHourControlOutput>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.AppCommon.SetWorkHour.SetWorkHourControl" formFactor="2">
+                <parameters>
+                    <setWorkHourControlInput type="SingleLine.Text">setWorkHourControl_Input</setWorkHourControlInput>
+                    <setWorkHourControlOutput type="SingleLine.Text">setWorkHourControl_Output</setWorkHourControlOutput>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="AppCommon.TimeSheet.onLoadTimeSheet" libraryName="$webresource:AppCommon/CalendarRule/CalendarRule_main_system_library.js" handlerUniqueId="{74964294-FC86-4216-87E7-E7620E08D01F}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="oktimesheetdetails_id">
+            <Handlers>
+                <Handler functionName="AppCommon.TimeSheet.okClickTimeSheet" libraryName="$webresource:AppCommon/CalendarRule/CalendarRule_main_system_library.js" handlerUniqueId="{2FD620BB-D4AB-42E8-9D74-85117FB08068}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="canceltimesheetdetails_id">
+            <Handlers>
+                <Handler functionName="AppCommon.TimeSheet.cancelClickTimeSheet" libraryName="$webresource:AppCommon/CalendarRule/CalendarRule_main_system_library.js" handlerUniqueId="{3D881604-FD05-4798-B799-35D3776F5941}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="setWorkHourControl_Input" type="Object" />
+        <querystringparameter name="setWorkHourControl_Output" type="Object" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:AppCommon/Localization/ResourceStringProvider.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

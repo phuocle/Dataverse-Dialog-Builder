@@ -1,0 +1,88 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_isProvisionCompleted" type="Integer" />
+    </formparameters>
+    <header id="{AC8D6F03-CF32-4200-94DC-3F31A35203F4}">
+        <rows>
+            <row>
+                <cell id="{B5D1E335-9621-4035-94B6-A79CD9193731}">
+                    <labels>
+                        <label description="IoT suggestions setup" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_configure_iot_suggestions_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{A819F510-61DB-4A87-996A-4BB662A0E50D}" IsUserDefined="1" name="IoTSuggestionsConfigurationDialogTab" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section name="WizardSection" showlabel="true" showbar="false" locklevel="0" id="{A499F3D6-B73F-484C-BC58-E424233453D1}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{17eb788a-0ab1-4f48-868d-96f059d4fe84}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="IoTSuggestionsWizardControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" isunbound="true" uniqueid="{8d6bae6b-a1a9-4cd8-b38f-b48f6576437a}"></control>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{ED790194-1B61-4558-8FE7-18CFD3522472}">
+        <rows>
+            <row />
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{8d6bae6b-a1a9-4cd8-b38f-b48f6576437a}">
+            <customControl formFactor="0" name="MscrmControls.Wizard.WizardControl">
+                <parameters>
+                    <inputValue type="Whole.None">param_isProvisionCompleted</inputValue>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Wizard.WizardControl">
+                <parameters>
+                    <inputValue type="Whole.None">param_isProvisionCompleted</inputValue>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Wizard.WizardControl">
+                <parameters>
+                    <inputValue type="Whole.None">param_isProvisionCompleted</inputValue>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="IoTConnector.IoTSettings.IoTSuggestionsDialog.onLoad" libraryName="$webresource:msdyn_/IoT/IoTSettings/IoTSuggestionsDialog/IoTSuggestionsDialog.js" handlerUniqueId="{48DE1462-2D61-465F-8ADE-E96CB3F1B917}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/IoT/IoTSettings/IoTSuggestionsDialog/IoTSuggestionsDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

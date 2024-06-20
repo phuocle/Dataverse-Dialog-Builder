@@ -1,0 +1,295 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{534851AA-9B12-4596-9A89-53DC6D449762}" name="{64087494-CA0B-40D0-942F-A5F6FFFB63BD}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{77C5BAEB-368E-443C-832C-53C12405A575}" name="{77C5BAEB-368E-443C-832C-53C12405A575}">
+                            <labels>
+                                <label description="Record Types" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1C42E509-5B6C-4D29-8001-713EE71D7B11}" showlabel="true">
+                                        <labels>
+                                            <label description="Select the record types for which you want to turn on knowledge base management." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_record_types" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{71EEEE1A-0019-4706-90BB-BB5D1443EC40}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="cc_embedded_knowledge_search" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{FC31E3E9-A830-435B-9DE4-FFCE2E4B74C6}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{AC9CFDC8-B30B-48A3-86AB-4DA0B8CD6E5D}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{AA52C471-6AC8-46B6-85E9-505F2C688A6A}" name="{AA52C471-6AC8-46B6-85E9-505F2C688A6A}">
+                            <labels>
+                                <label description="Support Portal Connection" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{68d336f0-2d17-4951-8496-0e0664814264}" showlabel="true">
+                                        <labels>
+                                            <label description="Select Yes to share Knowledge Articles as links." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_use_external_portal_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{20C5DFE4-C826-47AE-985C-EE9F966CBE82}" showlabel="true">
+                                        <labels>
+                                            <label description="Use an external portal. Select this option to send the article contents as the email body, instead of a link to the article" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.useexternalportal_onchange" libraryName="Service/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="98325155-F554-4EF0-8E2A-06048956BB5E" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_use_external_portal" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{B792504B-49F0-423B-B1AE-F962A8F6C8C7}" name="{B792504B-49F0-423B-B1AE-F962A8F6C8C7}" showlabel="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{C8583544-0BC0-456E-86E9-0BD4ADEDAC57}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1F5FAC8A-DCD2-4080-AF1D-CC333812C562}" showlabel="true">
+                                        <labels>
+                                            <label description="External links for KB articles are created in the URL format specified below" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_external_link_kb" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4750AE09-9935-4242-B114-5AC20BE3CE4D}" showlabel="true">
+                                        <labels>
+                                            <label description="URL format" languagecode="1033" />
+                                        </labels>
+                                        <control id="textbox_external_portal_url" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{C8583544-0BC0-456E-86E9-0BD4ADEDAC57}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{FA58E8F2-671C-4B5B-B481-058E37BBA2C0}" name="{FA58E8F2-671C-4B5B-B481-058E37BBA2C0}">
+                            <labels>
+                                <label description="Knowledge Articles Feedback" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a23570b3-fe5a-4969-aef7-7e63b179bcbb}" showlabel="true">
+                                        <labels>
+                                            <label description="Enable users to provide feedback on knowledge articles from search control." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_enable_feeback_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{E28829C0-7647-4F67-B671-7F770590484A}" showlabel="true">
+                                        <labels>
+                                            <label description="Enable users to provide feedback on knowledge articles from search control" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.usekmratings_onchange" libraryName="Service/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="E55EF237-95B3-4CFD-879E-5CA56E68F3A1" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_enable_km_rating" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{C8583544-0BC0-456E-86E9-0BD4ADEDAC57}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{B9C467E1-4D2B-430F-8815-3446FEA1CE2F}" name="{B9C467E1-4D2B-430F-8815-3446FEA1CE2F}">
+                            <labels>
+                                <label description="Knowledge Articles Inline Image" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a01db33e-e45d-4550-b46b-219cbe5f8a89}" showlabel="true">
+                                        <labels>
+                                            <label description="Enable users to use the inline image feature when authoring articles." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_enable_inlineimage_help_text" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{F62DA3FD-1523-49AE-8300-487AB9DE1E1A}" showlabel="true">
+                                        <labels>
+                                            <label description="Enable users to use the inline image feature when authoring articles" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.usecopypasteimage_onchange" libraryName="Service/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="4CCF8E93-EEAA-4110-B248-E4A1C57F6181" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="radio_enable_km_copypasteimage" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>false</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{022D1EF0-CFB2-4C2D-B1EB-470F504C7408}" name="{022D1EF0-CFB2-4C2D-B1EB-470F504C7408}" showlabel="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0ACC7C23-6E5A-4051-8D43-DF39F97754E2}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="allentities" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1C8DD032-C6B8-48A9-91DF-03F1D1CB27D4}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectedentities" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9BA87C1B-1A67-436D-B865-CB63DCE158F1}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="initiallyselectedentities" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{AF695B5F-8B3B-4E4C-8750-138689BFD720}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="saveentitiesbatchurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{AFE89919-4740-4FE1-B57B-80803F70BFA1}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="updateentityurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true" disabled="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{009801AC-FF38-41DA-8F34-CB023080DA2F}">
+        <rows>
+            <row>
+                <cell id="{6199BBA4-F2A9-4952-A245-648E6EEDB36E}">
+                    <labels>
+                        <label description="Embedded Knowledge Search" languagecode="1033" />
+                    </labels>
+                    <control id="embeddedknowledgesearchheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{113ADCE6-D87E-4D9B-AAB7-7190113F8853}">
+        <rows>
+            <row>
+                <cell id="{870453A6-DF2D-4AA1-A989-A1928531FF3D}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="save_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.form_onload" libraryName="Service/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="{F14DE1B9-051C-405A-AC76-9951E483C765}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="save_id">
+            <Handlers>
+                <Handler functionName="Mscrm.handle_save" libraryName="Service/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" handlerUniqueId="{F14DE1B9-051C-405A-AC76-9951E483C765}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Service/EmbeddedKnowledgeSearch/EmbeddedKnowledgeSearch_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{FC31E3E9-A830-435B-9DE4-FFCE2E4B74C6}">
+            <customControl formFactor="0" name="MscrmControls.EKSearch.EKSearchControl" />
+            <customControl formFactor="1" name="MscrmControls.EKSearch.EKSearchControl" />
+            <customControl formFactor="2" name="MscrmControls.EKSearch.EKSearchControl" />
+        </controlDescription>
+    </controlDescriptions>
+</form>

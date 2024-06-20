@@ -1,0 +1,139 @@
+<form>
+    <header id="{f303bd13-64f2-4776-a01c-b8fafb4cc598}">
+        <rows>
+            <row>
+                <cell id="{ffc86938-3e95-4abb-aca3-d00e4aed3dB3}">
+                    <labels>
+                        <label description="Create new translation" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_translateKnowledgeArticle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{08293e52-79c4-4e00-9cd8-30c53f1b9496}" name="{08293e52-79c4-4e00-9cd8-30c53f1b9496}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{021cf712-73eb-47ac-910b-033ad92661e6}" name="{021cf712-73eb-47ac-910b-033ad92661e6}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2873c142-ae7e-45c6-bd83-9096844dae9e}">
+                                        <labels>
+                                            <label description="Pick a Language" languagecode="1033" />
+                                        </labels>
+                                        <control id="translateLanguageLocale_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{11998009-5E27-4E92-84E2-63FB0ECE44E4}</DefaultViewId>
+                                                        <EntityLogicalName>languagelocale</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9b3fb5a8-f00e-4462-9498-96ac0ff9c95b}">
+                                        <labels>
+                                            <label description="Create new version" languagecode="1033" />
+                                        </labels>
+                                        <control id="versionType_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true" disabled="false">
+                                            <parameters>
+                                                <OptionSetId>{02d8df85-0a56-4703-bd58-545b3d2e5074}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c6b1255b-b07b-42db-8124-865f8cdae101}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_latestVersion" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0028cdc1-736d-4a92-a6fd-21c308c24e13}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_majorVersion" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0961c485-b45a-44de-89ce-3709b737dbf6}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_minorVersion" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{47cbc465-6c40-48ce-8842-032a3aa246fe}">
+        <rows>
+            <row>
+                <cell id="{47ff345f-07b8-4483-b719-34daa2c5a350}">
+                    <labels>
+                        <label description="Create" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{cd180606-9828-427f-9fc7-f5c61abf6f89}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onchange" application="false" active="false" attribute="translateLanguageLocale_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticle.CommandActions.getLatestVersion" libraryName="msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" handlerUniqueId="{9c75a045-24cf-4797-88c7-c7287f0bc793}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticle.CommandActions.translateKnowledgeArticle" libraryName="msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" handlerUniqueId="{e2913876-5898-4ec4-9691-86c0de721828}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticleUtility.closeDialog" libraryName="msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" handlerUniqueId="{3ad7407a-2b48-4825-afa0-0a4fef449588}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_knowledgeArticleId" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_articlePublicNumber" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

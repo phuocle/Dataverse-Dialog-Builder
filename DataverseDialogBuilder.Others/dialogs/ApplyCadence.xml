@@ -1,0 +1,158 @@
+<form>
+    <formparameters>
+        <querystringparameter name="params_entitytypename" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_salesCadenceId" type="SafeString" />
+        <querystringparameter name="param_entityselectedlist" type="SafeString" />
+        <querystringparameter name="params_filterxml" type="SafeString" />
+    </formparameters>
+    <header id="{65F8C5D2-60CF-459B-A91D-9148BDAA5596}">
+        <rows>
+            <row>
+                <cell id="{FEED3E16-FC79-4EFD-AC14-DA17E1D3C6E8}">
+                    <labels>
+                        <label description="Connect {0} to sequence" languagecode="1033" />
+                    </labels>
+                    <control id="applyCadenceTitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{EEEEEF5D-0699-4FB5-A3D9-6A20A3310614}">
+                    <labels>
+                        <label description="Select the sequence that you want to connect to the {0}." languagecode="1033" />
+                    </labels>
+                    <control id="applyCadenceDescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{785BDDD8-9DBE-4A2F-A327-349B1A526874}" name="AssociatedCadencesTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="AssociatedCadencesSection" showlabel="false" showbar="false" locklevel="0" id="{8160CE3A-EFD4-4199-863D-5CD6C5EF036C}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{84969980-455D-40DB-89F7-9063719D2B0B}" showlabel="false" colspan="1" auto="false" rowspan="10">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="ApplyCadenceSubgrid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{2965C78B-7D38-479E-B9BB-705C8299F462}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <MaxLength>8388608</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{3BE9D64E-DDFC-4D11-8A45-512CCBB6444A}">
+                <rows>
+                    <row>
+                        <cell id="{CD60E67D-0FCA-48B0-A64D-621A24F9A402}">
+                            <labels>
+                                <label description="Connect" languagecode="1033" />
+                            </labels>
+                            <control id="ApplyCadenceOnClickHandler" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                        <cell id="{FE529950-39A7-460E-9BCE-54999C43CE11}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="CancelOnClickHandler" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ApplyCadenceOnClickHandler">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ApplyCadenceAssignHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{10EB4CF5-A98E-4BFC-825D-266634070A0C}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Sales.SalesCadence.Instance.ApplyCadenceDlgOnLoadHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{14D8B885-22B8-432A-880A-037FF333FEBB}" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="CancelOnClickHandler">
+            <Handlers>
+                <Handler functionName="Sales.SalesCadence.Instance.DialogCancelHandler" libraryName="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" handlerUniqueId="{7BF9280F-1C77-4EB1-B24A-6DAA285D307F}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{2965C78B-7D38-479E-B9BB-705C8299F462}">
+            <customControl name="MscrmControls.SalesCadence.ApplyRecordsToSequenceDialog" formFactor="1">
+                <parameters>
+                    <entitylogicalname static="true" type="SingleLine.Text">msdyn_sequence</entitylogicalname>
+                    <regardingentity type="SingleLine.Text">params_entitytypename</regardingentity>
+                    <entityviewid static="true" type="SingleLine.Text">b7987bc3-5de7-4ff6-8572-4446099a2522</entityviewid>
+                    <filterxml type="SingleLine.Text">params_filterxml</filterxml>
+                    <displayQuickFind static="true" type="TwoOptions">true</displayQuickFind>
+                    <displayViewSelector static="true" type="TwoOptions">false</displayViewSelector>
+                    <isSingleRowSelection static="true" type="TwoOptions">true</isSingleRowSelection>
+                    <selectedrecords type="SingleLine.Text">param_entityselectedlist</selectedrecords>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SalesCadence.ApplyRecordsToSequenceDialog" formFactor="2">
+                <parameters>
+                    <entitylogicalname static="true" type="SingleLine.Text">msdyn_sequence</entitylogicalname>
+                    <regardingentity type="SingleLine.Text">params_entitytypename</regardingentity>
+                    <entityviewid static="true" type="SingleLine.Text">b7987bc3-5de7-4ff6-8572-4446099a2522</entityviewid>
+                    <filterxml type="SingleLine.Text">params_filterxml</filterxml>
+                    <displayQuickFind static="true" type="TwoOptions">true</displayQuickFind>
+                    <displayViewSelector static="true" type="TwoOptions">false</displayViewSelector>
+                    <isSingleRowSelection static="true" type="TwoOptions">true</isSingleRowSelection>
+                    <selectedrecords type="SingleLine.Text">param_entityselectedlist</selectedrecords>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SalesCadence.ApplyRecordsToSequenceDialog" formFactor="0">
+                <parameters>
+                    <entitylogicalname static="true" type="SingleLine.Text">msdyn_sequence</entitylogicalname>
+                    <regardingentity type="SingleLine.Text">params_entitytypename</regardingentity>
+                    <entityviewid static="true" type="SingleLine.Text">b7987bc3-5de7-4ff6-8572-4446099a2522</entityviewid>
+                    <filterxml type="SingleLine.Text">params_filterxml</filterxml>
+                    <displayQuickFind static="true" type="TwoOptions">true</displayQuickFind>
+                    <displayViewSelector static="true" type="TwoOptions">false</displayViewSelector>
+                    <isSingleRowSelection static="true" type="TwoOptions">true</isSingleRowSelection>
+                    <selectedrecords type="SingleLine.Text">param_entityselectedlist</selectedrecords>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SalesCadence/SalesCadence/msdyn_SalesCadence.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,82 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_result_description" type="SafeString" />
+        <querystringparameter name="param_request_type" type="SafeString" />
+    </formparameters>
+    <header id="{eeda8093-f392-4a87-9bad-c9c94e4fc95d}">
+        <rows>
+            <row>
+                <cell id="{e69b3a3a-0b1d-45b9-9efa-c377e77ec92a}">
+                    <labels>
+                        <label description="Merge Cases" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_mergecases" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{0d54f5a5-fab2-4804-af6b-90a9f0302c6d}" name="{0d54f5a5-fab2-4804-af6b-90a9f0302c6d}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{e6bc4a0f-0030-4f00-82fb-ffea39e83083}" name="{e6bc4a0f-0030-4f00-82fb-ffea39e83083}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{29591b06-a49a-46c4-bb5f-eeb92bb351be}">
+                                        <labels>
+                                            <label description="Cases merged successfully." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_mergeSucessMessage" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{bcff4adb-57e1-4178-8f6a-1534b0a3ce0a}">
+        <rows>
+            <row>
+                <cell id="{9a1f69d9-4326-4490-b98d-01883e5ae30a}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.mergeSuccessOnLoad" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{f5c798c3-dc92-43cc-9411-943d5f0bd2dc}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{8d0c211b-6a24-4965-b832-e91bcef990e5}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

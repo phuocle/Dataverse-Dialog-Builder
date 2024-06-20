@@ -1,0 +1,101 @@
+<form headerdensity="HighWithControls">
+    <header id="{1adee319-ed97-44dc-9887-c2938f5b8813}">
+        <rows>
+            <row>
+                <cell id="{1daaa5a7-55d4-4e4f-8ea7-5d0e959fdc1e}">
+                    <labels>
+                        <label description="Create a text message template" languagecode="1033" />
+                    </labels>
+                    <control id="createTemplateTitleId" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <formparameters>
+        <querystringparameter name="param_entityId" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{8711d27e-335e-4b20-9608-f595e32edb62}" name="{8711d27e-335e-4b20-9608-f595e32edb62}" showlabel="false" expanded="true" locklevel="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{f628f1ee-84ad-46ab-8cee-938e3641bd73}" labelid="{b1a45815-bf4e-45e8-9711-d864afb8d156}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8ccdb9e9-ca1f-4011-b692-50e4acf65dd5}" showlabel="true" labelid="{b009305c-31dc-4561-8ea3-fb0f5379f0cb}" locklevel="0">
+                                        <labels>
+                                            <label description="Template name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_title" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{91c0861f-674f-4b28-a720-f318f6e6f318}" locklevel="0" colspan="1" rowspan="1" labelid="{3f21c751-e470-4e00-99e1-d7cb89c759f4}">
+                                        <labels>
+                                            <label description="Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_category" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetName>msdyn_smstemplate_category</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4e3bce5c-94ee-43b0-8211-ea19b59fdcc2}" locklevel="0" colspan="1" rowspan="1" labelid="{edda2126-1453-40d3-a382-a783648f447b}">
+                                        <labels>
+                                            <label description="Language" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_language" classid="{671A9387-CA5A-4D1E-8AB7-06E39DDCF6B5}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{5982911c-7362-4580-adf3-ceca0d7f260c}">
+        <rows>
+            <row>
+                <cell id="{b44617bc-0682-4f28-8789-5338957b2e06}">
+                    <labels>
+                        <label description="Create" languagecode="1033" />
+                    </labels>
+                    <control id="createOrConvertId" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{b82b7b54-678b-4776-9b74-40cd56438b51}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelId" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions />
+    <events>
+        <event name="onclick" application="false" active="false" attribute="createOrConvertId">
+            <Handlers>
+                <Handler functionName="SalesOmniChannel.SMSTemplate.SMSDialog.create" libraryName="msdyn_SalesOmniChannel/SMSTemplate.Library.js" handlerUniqueId="{38db98d7-5130-48f3-9ad1-804b515bdcd0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelId">
+            <Handlers>
+                <Handler functionName="SalesOmniChannel.SMSTemplate.SMSDialog.close" libraryName="msdyn_SalesOmniChannel/SMSTemplate.Library.js" handlerUniqueId="{74c2b63b-a381-473d-9cdf-5b9c4dacc512}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

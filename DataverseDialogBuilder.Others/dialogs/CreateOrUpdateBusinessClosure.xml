@@ -1,0 +1,201 @@
+<form>
+    <header id="{22e6cd62-8e3e-4dbd-9860-e81337b75e1f}">
+        <rows>
+            <row>
+                <cell id="{185c94b1-6b04-4750-a7cc-9e678b35a30d}">
+                    <labels>
+                        <label description="Schedule a Business Closure" languagecode="1033" />
+                    </labels>
+                    <control id="header_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{5d4ed359-ba27-44bb-be8a-3f8c282cec03}">
+                    <labels>
+                        <label description="Specify the name and select the time of the business closure." languagecode="1033" />
+                    </labels>
+                    <control id="subheader01_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{29368b1a-f2ea-461f-a656-bff05865009e}" name="Business Closure" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{4fcfb88d-d62e-403f-afa6-751ff36a5f7a}" name="Details">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{767663e6-2ab6-4862-ad34-c16fb7a1b1fd}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_name_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6187dab0-dec5-4846-970e-7dde006a53bb}">
+                                        <labels>
+                                            <label description="All Day Event" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_alldayevent_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{467b0bc6-ffd2-41bf-8af9-e0aa2abd74f3}">
+                                            <parameters>
+                                                <OptionSetId>{ee89f0cc-4512-45ff-8a13-24deb5151471}</OptionSetId>
+                                                <DefaultValue>true</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3154d0f6-ab2b-47a9-9887-6136fad7b8a3}">
+                                        <labels>
+                                            <label description="Start" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_starttime_id" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f223817e-ff23-458b-a737-f3b14b739ef2}">
+                                        <labels>
+                                            <label description="End" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_endtime_id" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a3259f69-83c0-4589-baef-24f4f3dfbcf8}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="businessclosure_duration_id" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{6cb4c143-7542-423e-99c4-099085c8f74b}">
+        <rows>
+            <row>
+                <cell id="{a822fc07-b10d-4015-98f2-6d7e646d6b2f}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="businessclosure_ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{53fde34c-d30f-45cb-9bf9-8bf56271e67d}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="businessclosure_cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{3b415af0-e01c-4a6f-86ad-2a47bb758acd}">
+                    <labels>
+                        <label description="Help" languagecode="1033" />
+                    </labels>
+                    <control id="businessclosure_help_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="AppCommon.HolidayItem.HolidayItemInstance.businessClosureOnload" libraryName="AppCommon/HolidayItem/HolidayItem_main_system_library.js" handlerUniqueId="{613fd147-f12e-486a-8d86-221c43b06d2b}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="businessclosure_ok_id">
+            <Handlers>
+                <Handler functionName="AppCommon.HolidayItem.HolidayItemInstance.onClickOk" libraryName="AppCommon/HolidayItem/HolidayItem_main_system_library.js" handlerUniqueId="{c4388656-166e-4b19-839d-9abf80f855fe}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="businessclosure_cancel_id">
+            <Handlers>
+                <Handler functionName="AppCommon.HolidayItem.HolidayItemInstance.businessClosureOnClickCancel" libraryName="AppCommon/HolidayItem/HolidayItem_main_system_library.js" handlerUniqueId="{aff4bc5a-ff44-4034-8c2f-30418cb7d832}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="businessclosure_help_id">
+            <Handlers>
+                <Handler functionName="AppCommon.HolidayItem.HolidayItemInstance.businessClosureOnClickHelp" libraryName="AppCommon/HolidayItem/HolidayItem_main_system_library.js" handlerUniqueId="{38ac12c8-31bb-420d-8bd8-822d89706774}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="businessclosure_alldayevent_id">
+            <Handlers>
+                <Handler functionName="AppCommon.HolidayItem.HolidayItemInstance.businessClosureOnChangeAllDayEvent" libraryName="AppCommon/HolidayItem/HolidayItem_main_system_library.js" handlerUniqueId="{606a7c4b-ac88-453d-9ed8-d3221e16b1d3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="businessclosure_starttime_id">
+            <Handlers>
+                <Handler functionName="AppCommon.HolidayItem.HolidayItemInstance.businessClosureOnChangeStartTime" libraryName="AppCommon/HolidayItem/HolidayItem_main_system_library.js" handlerUniqueId="{5c730d94-d1f3-46d1-8d17-04dfedb3f01e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="businessclosure_endtime_id">
+            <Handlers>
+                <Handler functionName="AppCommon.HolidayItem.HolidayItemInstance.businessClosureOnChangeEndTime" libraryName="AppCommon/HolidayItem/HolidayItem_main_system_library.js" handlerUniqueId="{38786205-3f0f-41a6-b462-a99859cac097}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="businessclosure_duration_id">
+            <Handlers>
+                <Handler functionName="AppCommon.HolidayItem.HolidayItemInstance.businessClosureOnChangeDuration" libraryName="AppCommon/HolidayItem/HolidayItem_main_system_library.js" handlerUniqueId="{16066b2d-c0b7-4e68-9e4a-0cfde034bfbf}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="holidayItem_state" type="Object" />
+        <querystringparameter name="calendar_id" type="Object" />
+        <querystringparameter name="calendarRule_id" type="Object" />
+    </formparameters>
+    <controlDescriptions>
+        <controlDescription forControl="{467b0bc6-ffd2-41bf-8af9-e0aa2abd74f3}">
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="0">
+                <parameters>
+                    <value type="TwoOptions">businessclosure_alldayevent_id</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="1">
+                <parameters>
+                    <value type="TwoOptions">businessclosure_alldayevent_id</value>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FlipSwitch.FlipSwitchControl" formFactor="2">
+                <parameters>
+                    <value type="TwoOptions">businessclosure_alldayevent_id</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/HolidayItem/HolidayItem_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

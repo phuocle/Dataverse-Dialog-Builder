@@ -1,0 +1,197 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_msdyn_parentalert" type="SafeString" />
+        <querystringparameter name="param_msdyn_parentalertname" type="SafeString" />
+        <querystringparameter name="param_msdyn_device" type="SafeString" />
+        <querystringparameter name="param_msdyn_devicename" type="SafeString" />
+        <querystringparameter name="param_msdyn_parententityid" type="SafeString" />
+    </formparameters>
+    <header id="{9456236a-fbfb-404a-8403-7c27717b3873}">
+        <rows>
+            <row>
+                <cell id="{00EDEBDE-90CD-4646-ABF2-219F2E519CB0}">
+                    <labels>
+                        <label description="Send Command" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_command_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{120F2120-310B-49AB-B6FE-8A9EEBC9DFD7}" IsUserDefined="1" name="SendIoTCommandDialogTab" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section name="DeviceSection" showlabel="true" showbar="false" locklevel="0" id="{91210ABB-C919-49DF-AA87-F84BA1EF0645}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{BA354EE7-94EE-40EB-9484-34E5F5A7291F}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Device" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_device" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" disabled="false" isrequired="true" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>msdyn_iotdevice</EntityLogicalName>
+                                                        <DefaultViewId>{13C8A47C-EC96-45E7-8D0E-BC388A2CEF36}</DefaultViewId>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="CommandToSendSection" showlabel="true" showbar="false" locklevel="0" id="{B33853DA-9711-4E6E-A090-BB73A88680FD}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1B1DD749-1EB9-4EFE-8519-3105CF50333A}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Command" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_command" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" disabled="false" isunbound="true" uniqueid="{E4DD12A5-A520-40EF-A922-AEEBFD720F8C}">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>msdyn_iotdevicecommanddefinition</EntityLogicalName>
+                                                        <DefaultViewId>{bb72e8d0-b1f7-4388-9c92-bd1e76d09e05}</DefaultViewId>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{E481F319-68DC-48E6-9DE2-0DDBC5A789C4}" showlabel="false" locklevel="0" visible="false" auto="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_commandreference" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" disabled="false" isunbound="true" uniqueid="{3BFC7554-2D3E-45C2-8B6A-41E00D00D844}">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{17190713-B23E-4DD3-89DD-82EFAE5D32F4}" showlabel="true" locklevel="0" rowspan="4" auto="true">
+                                        <labels>
+                                            <label description="Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_message" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" isunbound="true" uniqueid="{2D290771-44AC-4B66-96C8-44FBD31031B3}">
+                                            <parameters>
+                                                <MaxLength>8192</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{1723D1B2-45A5-42B4-A8CC-36B7D7B78C1B}">
+        <rows>
+            <row>
+                <cell id="{445B5B3A-55FB-4C94-86C9-88FF2BD5F80E}">
+                    <labels>
+                        <label description="Send" languagecode="1033" />
+                    </labels>
+                    <control id="btnSendCommand" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{93B888E1-DD1E-43AD-9DD9-E9BE6EDCC455}">
+                    <labels>
+                        <label description="Advanced" languagecode="1033" />
+                    </labels>
+                    <control id="btnAdvanced" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{2D290771-44AC-4B66-96C8-44FBD31031B3}">
+            <customControl formFactor="0" name="MscrmControls.Metadata.MetadataControl">
+                <parameters>
+                    <value type="Multiple">msdyn_message</value>
+                    <ActionName static="true" type="SingleLine.Text">msdyn_GetIoTCommandMetadata</ActionName>
+                    <ActionParamName static="true" type="SingleLine.Text">IoTCommandDefinition</ActionParamName>
+                    <ActionParam type="SingleLine.Text">msdyn_commandreference</ActionParam>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Metadata.MetadataControl">
+                <parameters>
+                    <value type="Multiple">msdyn_message</value>
+                    <ActionName static="true" type="SingleLine.Text">msdyn_GetIoTCommandMetadata</ActionName>
+                    <ActionParamName static="true" type="SingleLine.Text">IoTCommandDefinition</ActionParamName>
+                    <ActionParam type="SingleLine.Text">msdyn_commandreference</ActionParam>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Metadata.MetadataControl">
+                <parameters>
+                    <value type="Multiple">msdyn_message</value>
+                    <ActionName static="true" type="SingleLine.Text">msdyn_GetIoTCommandMetadata</ActionName>
+                    <ActionParamName static="true" type="SingleLine.Text">IoTCommandDefinition</ActionParamName>
+                    <ActionParam type="SingleLine.Text">msdyn_commandreference</ActionParam>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="msdyn.IoTCommandDialog.onLoad" libraryName="$webresource:msdyn_/IoT/Command/CommandDialog.js" handlerUniqueId="{7ED634AC-1AB5-4BAA-B3BC-3280EC2F8865}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnSendCommand">
+            <Handlers>
+                <Handler functionName="msdyn.IoTCommandDialog.sendCommand" libraryName="msdyn_/IoT/Command/CommandDialog.js" handlerUniqueId="{8CA0EAED-5B10-4484-B687-57AA973E0EDA}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnAdvanced">
+            <Handlers>
+                <Handler functionName="msdyn.IoTCommandDialog.onClickAdvanced" libraryName="msdyn_/IoT/Command/CommandDialog.js" handlerUniqueId="{6F43BA06-F81E-4AAF-A2C3-3E74179B075B}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_device">
+            <Handlers>
+                <Handler functionName="msdyn.IoTCommandDialog.onChangeDevice" libraryName="msdyn_/IoT/Command/CommandDialog.js" handlerUniqueId="{C69B32EB-272B-4580-A727-2D6C919CF6C6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/IoT/Command/CommandDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

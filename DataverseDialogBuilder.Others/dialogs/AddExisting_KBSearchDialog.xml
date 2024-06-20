@@ -1,0 +1,113 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_entityId" type="SafeString" />
+        <querystringparameter name="param_entityTypeName" type="SafeString" />
+        <querystringparameter name="param_actionList" type="SafeString" />
+        <querystringparameter name="param_entityDisplayName" type="SafeString" />
+        <querystringparameter name="param_relationshipName" type="SafeString" />
+    </formparameters>
+    <header id="{f400d026-8324-4e5c-b146-4f21b2775e13}">
+        <rows>
+            <row>
+                <cell id="{e247c000-171b-4fee-8d2d-c510660d042d}">
+                    <labels>
+                        <label description="Add Existing Knowledge Articles" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_chooseKA" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{a29da061-3fe3-4978-860f-79b8a43a74f4}" name="{a29da061-3fe3-4978-860f-79b8a43a74f4}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{b19a1c45-a313-409e-a3b7-7a92749b9160}" name="{b19a1c45-a313-409e-a3b7-7a92749b9160}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a71482c4-5d9f-4664-8c14-a6221e4b4c0f}" showlabel="false" colspan="1" rowspan="12" auto="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectKA_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{5f9c875a-3a62-46d3-a1df-7d11ef718e93}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{eb0442d9-d155-4ff9-b777-41a83754f266}">
+        <rows>
+            <row>
+                <cell id="{f265558a-2412-43c1-8ba5-105c1a5eaa09}">
+                    <labels>
+                        <label description="Done" languagecode="1033" />
+                    </labels>
+                    <control id="done_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="done_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticleSubgridActions.Instance.closeDialog" libraryName="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleSubgrid/KnowledgeArticleSubgridLibrary.js" handlerUniqueId="{d6cc9670-e4a1-4724-b752-7d264daeb9f7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagementFeatureWebResource/KnowledgeArticleSubgrid/KnowledgeArticleSubgridLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{5f9c875a-3a62-46d3-a1df-7d11ef718e93}">
+            <customControl formFactor="0" name="MscrmControls.KnowledgeControl.KnowledgeControl">
+                <parameters>
+                    <DialogUniqueName static="true" type="SingleLine.Text">AssetCommon_KBSearchDialog</DialogUniqueName>
+                    <EntityTypeName static="false" type="SingleLine.Text">param_entityTypeName</EntityTypeName>
+                    <EntityId static="false" type="SingleLine.Text">param_entityId</EntityId>
+                    <ActionList static="false" type="SingleLine.Text">param_actionList</ActionList>
+                    <EntityDisplayName static="false" type="SingleLine.Text">param_entityDisplayName</EntityDisplayName>
+                    <RelationshipName static="false" type="SingleLine.Text">param_relationshipName</RelationshipName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.KnowledgeControl.KnowledgeControl">
+                <parameters>
+                    <DialogUniqueName static="true" type="SingleLine.Text">AssetCommon_KBSearchDialog</DialogUniqueName>
+                    <EntityTypeName static="false" type="SingleLine.Text">param_entityTypeName</EntityTypeName>
+                    <EntityId static="false" type="SingleLine.Text">param_entityId</EntityId>
+                    <ActionList static="false" type="SingleLine.Text">param_actionList</ActionList>
+                    <EntityDisplayName static="false" type="SingleLine.Text">param_entityDisplayName</EntityDisplayName>
+                    <RelationshipName static="false" type="SingleLine.Text">param_relationshipName</RelationshipName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.KnowledgeControl.KnowledgeControl">
+                <parameters>
+                    <DialogUniqueName static="true" type="SingleLine.Text">AssetCommon_KBSearchDialog</DialogUniqueName>
+                    <EntityTypeName static="false" type="SingleLine.Text">param_entityTypeName</EntityTypeName>
+                    <EntityId static="false" type="SingleLine.Text">param_entityId</EntityId>
+                    <ActionList static="false" type="SingleLine.Text">param_actionList</ActionList>
+                    <EntityDisplayName static="false" type="SingleLine.Text">param_entityDisplayName</EntityDisplayName>
+                    <RelationshipName static="false" type="SingleLine.Text">param_relationshipName</RelationshipName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

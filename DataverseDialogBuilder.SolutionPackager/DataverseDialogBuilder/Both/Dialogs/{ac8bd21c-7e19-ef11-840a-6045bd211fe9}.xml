@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dialog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="Preview Dataverse Dialog Builder" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="You can enter width, height, and move to tab when show preview Dataverse Dialog Builder." languagecode="1033" />
+  </Descriptions>
+  <FormId>{ac8bd21c-7e19-ef11-840a-6045bd211fe9}</FormId>
+  <UniqueName>pl_dataversedialogbuilder_preview</UniqueName>
+  <IsCustomizable>1</IsCustomizable>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsTabletEnabled>0</IsTabletEnabled>
+  <CanBeDeleted>1</CanBeDeleted>
+  <FormXml>
+    <forms type="dialog">
+      <form>
+        <events>
+          <event name="onload" application="false" active="false">
+            <Handlers>
+              <Handler functionName="DataverseDialogBuilder_Preview.OnLoad" libraryName="$webresource:pl_/js/DataverseDialogBuilder2.js" handlerUniqueId="{E804C93B-00CB-4A2F-97CF-7E8185E20D09}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+          </event>
+          <event name="onclick" application="false" active="false" attribute="pl_button_ok">
+            <Handlers>
+              <Handler functionName="DataverseDialogBuilder_Preview.OnClickOk" libraryName="$webresource:pl_/js/DataverseDialogBuilder2.js" handlerUniqueId="{F7029DFB-0A4B-43D7-922A-D76655E7A0DC}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+          </event>
+          <event name="onclick" application="false" active="false" attribute="pl_button_cancel">
+            <Handlers>
+              <Handler functionName="DataverseDialogBuilder_Preview.OnClickCancel" libraryName="$webresource:pl_/js/DataverseDialogBuilder2.js" handlerUniqueId="{8F83AD9A-0096-481E-BA3A-3CFE9BC40F72}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+          </event>
+        </events>
+        <header id="{6B3F262C-91C8-4AD7-875B-C400D8D28446}">
+          <rows>
+            <row>
+              <cell id="{74C6E726-5692-4A50-9C63-2B7108AB7CDB}" visible="true" rowspan="1">
+                <labels>
+                  <label description="Preview Dataverse Dialog Builder" languagecode="1033" />
+                </labels>
+                <control uniqueid="{381D1144-3CAE-4A76-9682-900F34AB12F9}" id="pl_label_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                  <parameters>
+                    <IsTitle>true</IsTitle>
+                  </parameters>
+                </control>
+              </cell>
+            </row>
+          </rows>
+        </header>
+        <tabs>
+          <tab id="{1D014DA6-D233-4C65-9802-C11BBC524BC4}" name="tab_main" visible="true" expanded="true" verticallayout="true" locklevel="0">
+            <labels>
+              <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+              <column width="100%">
+                <sections>
+                  <section id="{6677BA8F-D7CB-406A-B56D-EFE50E8B1D58}" name="section_main" labelwidth="115" showlabel="false" visible="true" celllabelalignment="Left" celllabelposition="Left">
+                    <labels>
+                      <label description="" languagecode="1033" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell id="{6E064552-7C3C-4044-8269-C723279F159D}" visible="true">
+                          <labels>
+                            <label description="Width" languagecode="1033" />
+                          </labels>
+                          <control uniqueid="{677C1535-0CA9-4B7A-8076-7ECF624F448D}" id="pl_width" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" isrequired="true" disabled="false" isunbound="true">
+                            <parameters>
+                              <MinValue>0</MinValue>
+                              <MaxValue>2000</MaxValue>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row>
+                        <cell id="{22037151-CA1B-4ABF-970C-8026A10F2906}" visible="true">
+                          <labels>
+                            <label description="Height" languagecode="1033" />
+                          </labels>
+                          <control uniqueid="{3C8764E0-B367-4A50-B980-ABE0E5974825}" id="pl_height" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" isrequired="true" disabled="false" isunbound="true">
+                            <parameters>
+                              <MinValue>0</MinValue>
+                              <MaxValue>2000</MaxValue>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+        <footer id="{8124313B-4BF2-4AAD-8220-DE43B52AB4C2}">
+          <rows>
+            <row>
+              <cell id="{03B375FF-BF4A-44F6-B5E1-4A4F72236157}" visible="true">
+                <labels>
+                  <label description="Ok" languagecode="1033" />
+                </labels>
+                <control uniqueid="{7F18B0D1-1738-4C8F-B693-004F0387E9C4}" id="pl_button_ok" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" disabled="false" isunbound="true" />
+              </cell>
+              <cell id="{C3FFDEDD-C049-4C0A-B6AF-72D6EBA5AA96}" visible="true">
+                <labels>
+                  <label description="Cancel" languagecode="1033" />
+                </labels>
+                <control uniqueid="{34C69A8A-CA8B-4FE3-8B5D-92E14B8E77E9}" id="pl_button_cancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" disabled="false" isunbound="true" />
+              </cell>
+            </row>
+          </rows>
+        </footer>
+      </form>
+    </forms>
+  </FormXml>
+</Dialog>

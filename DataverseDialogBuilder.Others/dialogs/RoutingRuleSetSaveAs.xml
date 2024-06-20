@@ -1,0 +1,192 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_RoutingRuleSetIdToClone" type="SafeString" />
+        <querystringparameter name="param_IsRefreshNeeded" type="Boolean" />
+        <querystringparameter name="param_RoutingRuleSetName" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{433dd9b7-3d5b-40dd-97f5-f7dec9c4c734}" name="general" locklevel="0" expanded="true">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{256b281c-7c09-44c7-bd3c-1cc764545e6f}" name="generalSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2bad9e05-25e2-4858-93bd-e41db38f0ada}">
+                                        <labels>
+                                            <label description="Save routing rule set as a copy or overwrite an existing routing rule set." languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{92eaca16-9c94-4f26-a2c9-8bd972961daa}">
+                                        <labels>
+                                            <label description="Save as" languagecode="1033" />
+                                        </labels>
+                                        <control id="copyType" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{9c217958-b192-4bb6-8642-90c9db40c386}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{139991f0-5e47-44d6-8484-92b44c8fb1d2}" name="createNewRecordSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{DF369763-E205-4675-8747-1598421E10CF}">
+                                        <labels>
+                                            <label description="Routing rule set name" languagecode="1033" />
+                                        </labels>
+                                        <control id="routingRuleSetCopyName" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{f2533c7d-ac08-4ddf-9041-e8dc32e26cc0}" name="OverwriteRecordSection" visible="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b5d7f7be-6de3-4100-b51d-cc093de2ceff}" visible="true">
+                                        <labels>
+                                            <label description="Select routing rule set" languagecode="1033" />
+                                        </labels>
+                                        <control id="routingRuleSetToOverwriteSelector" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{DE24757D-8B09-40DD-B5A4-1EDA99F5A372}</DefaultViewId>
+                                                        <EntityLogicalName>routingrule</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{12166259-e354-4568-8b4e-b48c3a194982}" visible="true">
+                                        <labels>
+                                            <label description="Backup original" languagecode="1033" />
+                                        </labels>
+                                        <control id="takeBackup" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{e6b01ca0-a27f-4b3c-99fa-e5f3ba39c013}">
+                                            <parameters>
+                                                <OptionSetId>{6c319958-b192-4bb6-8642-10c9db40c356}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{38F524AC-225C-4199-81D1-BB567F090CC7}">
+        <rows>
+            <row>
+                <cell id="{a221f304-1ab4-45ee-9e7a-aafb8d9045ec}">
+                    <labels>
+                        <label description="Save as" languagecode="1033" />
+                    </labels>
+                    <control id="formheader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{f421da73-7f1a-403c-8698-2f6c366bc0a1}">
+        <rows>
+            <row>
+                <cell id="{aec2983b-a4a0-4831-bfd7-ee7ed4915eaa}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="okayButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" disabled="false" />
+                </cell>
+                <cell id="{1a2dcb11-5da6-408c-aef2-2b9a446fece9}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{e6b01ca0-a27f-4b3c-99fa-e5f3ba39c013}">
+            <customControl formFactor="0" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value type="TwoOptions">takeBackup</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value type="TwoOptions">takeBackup</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value type="TwoOptions">takeBackup</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.RoutingRuleSaveAs.onLoadHandlerRoutingRuleSaveAs" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{dd2c9831-eb68-49dd-a61e-1645f9d9d6db}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="copyType">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.RoutingRuleSaveAs.onChangeCopyType" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{ff4c9831-eb68-49dd-a61e-1645f9d9d6db}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="routingRuleSetToOverwriteSelector">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.RoutingRuleSaveAs.onChangeRoutingRuleSetSelector" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{ff2c9831-eb98-49dd-a61e-1645f9d9d6db}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="routingRuleSetCopyName">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.RoutingRuleSaveAs.onChangeCopyRecordNameControl" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{ff2c9831-eb68-49ff-a61e-1645f9d9d6db}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="okayButton">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.RoutingRuleSaveAs.onClickOkayButtonSaveAs" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{ff2c9831-eb68-49dd-a91e-1645f9d5d6db}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelButton">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.onClickCancelButton" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{ff2c9831-eb68-49dd-a61e-1685f9d9d6db}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

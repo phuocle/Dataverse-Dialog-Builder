@@ -1,0 +1,117 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_isDraft" type="SafeString" />
+        <querystringparameter name="param_activityType" type="SafeString" />
+        <querystringparameter name="param_notificationsData" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{4AF523EA-2776-4C31-8D4F-FEA0D1F68408}" name="{F83E44C3-0AFF-4E70-A24E-A6612E4625DA}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{6ED01D1A-39B1-41FF-AA6F-D8BE57D2BE2D}" name="{745136BD-2344-4775-816F-52C5DDFFFF72}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{55A72FBA-0273-4337-A964-975AA4C5EDEF}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="sa_description2_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{AF2CB424-B5E6-49F4-9D77-2FA8977F1470}">
+        <rows>
+            <row>
+                <cell id="{41227421-EFFF-40EA-9FFD-D018F851208E}">
+                    <labels>
+                        <label description="Scheduling Alerts" languagecode="1033" />
+                    </labels>
+                    <control id="sa_schedulingalert_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{C229E1E0-471A-49CB-8F65-69DF20AD307F}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="sa_description1_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{BE38E40D-AD14-4532-B328-335B85EC0402}">
+        <rows>
+            <row>
+                <cell id="{42B738D4-81FF-4599-96F8-77E67B3BEBF8}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="sa_save_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{033DE6F0-7CDE-4598-B6BD-ECBDE3EA0FD7}">
+                    <labels>
+                        <label description="Schedule" languagecode="1033" />
+                    </labels>
+                    <control id="sa_schedule_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{28CF1F5F-6472-4A7D-9E60-4EDD0BDDA5FE}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="sa_cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="BookUtils.SchedulingConflictDialog.onLoad" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="{1C90617C-8F9F-474F-80EB-1949AF2B1767}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="sa_save_id">
+            <Handlers>
+                <Handler functionName="BookUtils.SchedulingConflictDialog.onSave" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="{2AC62302-7F02-4252-BDDC-B9B9E5B00BD3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="sa_cancel_id">
+            <Handlers>
+                <Handler functionName="BookUtils.SchedulingConflictDialog.closeDialog" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="{36E48BB4-FDF8-40CC-87BC-12D63226A03B}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="sa_schedule_id">
+            <Handlers>
+                <Handler functionName="BookUtils.SchedulingConflictDialog.onSchedule" libraryName="Service/ServiceAppointment/ServiceAppointment_main_system_library.js" handlerUniqueId="{AEAAAE3A-AE74-470F-84C7-20D3BFBF7CE6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Service/_static/Activities/serviceappointment/serviceappointment.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

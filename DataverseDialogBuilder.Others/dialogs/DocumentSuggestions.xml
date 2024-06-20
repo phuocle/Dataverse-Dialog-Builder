@@ -1,0 +1,162 @@
+<form>
+    <hiddencontrols>
+        <data id="entityId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityName" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="entityTypeCode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerId" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ownerType" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{4a60ef03-fcc9-4ad9-80e9-3a8326826b00}" name="{4a60ef03-fcc9-4ad9-80e9-3a8326826b00}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5ea59a5f-394a-4d3e-9dc0-1e4f3f55cfad}" name="{5ea59a5f-394a-4d3e-9dc0-1e4f3f55cfad}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{82637377-b814-484c-8655-39e681027898}">
+                                        <labels>
+                                            <label description="Here are the documents suggested for this record. You can view or copy suggested documents to this record." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{388e630a-23a2-46ee-88b3-0c2224d01b5f}">
+                                        <labels>
+                                            <label description="Select and copy documents" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_gridtext" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b5bd5cfc-8624-4d8e-9521-f160613ff0c9}" showlabel="false" colspan="1" rowspan="5">
+                                        <labels>
+                                            <label description="Document Suggestions" languagecode="1033" />
+                                        </labels>
+                                        <control id="documentrecommendations_id" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" isunbound="true">
+                                            <parameters>
+                                                <ViewId>{6180A110-645D-4F82-BAD7-20C56B416514}</ViewId>
+                                                <TargetEntityType>recommendeddocument</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <RecordsPerPage>8</RecordsPerPage>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row>
+                                    <cell id="{31f5838c-8167-487d-bc52-c635033bdb2c}" showlabel="true" visible="false">
+                                        <labels>
+                                            <label description="There are no destination document locations available. Please create a document location for this record." languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7027c182-5a9c-486f-891a-0d6f68755a24}" visible="false">
+                                        <labels>
+                                            <label description="Copy To" languagecode="1033" />
+                                        </labels>
+                                        <control id="documentlocations_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>sharepointdocumentlocation</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{2d7421ea-1e5e-40a2-9092-5b8d5c17dd1a}">
+        <rows>
+            <row>
+                <cell id="{b3add657-68e4-4213-b9df-1c28bcd908e6}">
+                    <labels>
+                        <label description="Document Suggestions" languagecode="1033" />
+                    </labels>
+                    <control id="suggestionsheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{74ef678f-19e6-4e64-8467-65b3b22366dc}">
+        <rows>
+            <row>
+                <cell id="{4725f044-692f-4153-84b2-f663a60441c8}" visible="true">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="viewother_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{39773c93-8267-4678-8ba7-cda376022657}" visible="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{1b056412-0514-4786-a35f-7ed8b55e75d7}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="viewother_id">
+            <Handlers>
+                <Handler functionName="Mscrm.CommandBarActions.viewOtherSuggestions" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{5ee0a5ad-ee95-4df2-802d-c39e71a20cfd}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.CommandBarActions.copySelectedDocuments" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{ad3efec5-3c9b-4665-b656-601c8d4d2712}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.InternalUtilities.DialogUtility.closeDialog" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{e085f25d-34b5-4f90-813f-60afd663c66b}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.CommandBarActions.populateDocumentSuggestionsDialogControls" libraryName="/_static/_common/scripts/CommandBarActions.js" handlerUniqueId="{bf127cac-06f3-47f3-8ae6-2b8a7f1a50a4}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

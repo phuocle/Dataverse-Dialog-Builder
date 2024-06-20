@@ -1,0 +1,69 @@
+<form>
+    <formparameters>
+        <querystringparameter name="interaction_context" type="Object" />
+        <querystringparameter name="returned_value" type="Object" />
+    </formparameters>
+    <header id="{51be5560-4be8-43cf-8482-6237038d6201}">
+        <rows>
+            <row>
+                <cell id="{aff56d5b-212a-4688-a13a-a95cfa004234}">
+                    <labels>
+                        <label description="Comments (optional)" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_comments_optional_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{BC600BD9-30E8-43E6-B610-F5D531D0947C}" showlabel="false" name="{BC600BD9-30E8-43E6-B610-F5D531D0947C}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" showlabel="false" id="{6107176B-D8B8-4A71-B896-C79E6F578DF3}" name="CopilotVerbatimFeedbackSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{08790E45-85CD-47B4-9361-2E9E58004090}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="idCopilotVerbatimFeedback" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{732DA6F9-AA59-4D54-BEC3-2CC631D2AA2F}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{732DA6F9-AA59-4D54-BEC3-2CC631D2AA2F}">
+            <customControl name="MscrmControls.CSIntelligence.AgentAssistChatControl" formFactor="0">
+                <parameters>
+                    <copilotInteractionContext type="SingleLine.Text">interaction_context</copilotInteractionContext>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.CSIntelligence.AgentAssistChatControl" formFactor="1">
+                <parameters>
+                    <copilotInteractionContext type="SingleLine.Text">interaction_context</copilotInteractionContext>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.CSIntelligence.AgentAssistChatControl" formFactor="2">
+                <parameters>
+                    <copilotInteractionContext type="SingleLine.Text">interaction_context</copilotInteractionContext>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

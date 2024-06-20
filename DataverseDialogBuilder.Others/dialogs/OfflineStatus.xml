@@ -1,0 +1,176 @@
+<form>
+    <formparameters>
+        <querystringparameter name="offline_status" type="Object" />
+        <querystringparameter name="offlinestatus_reason" type="Object" />
+        <querystringparameter name="offlinemetadata_sync" type="Object" />
+        <querystringparameter name="offline_enabled_json_string" type="Object" />
+        <querystringparameter name="offline_disabled_json_string" type="Object" />
+        <querystringparameter name="offline_enable_string" type="Object" />
+        <querystringparameter name="offline_disable_string" type="Object" />
+    </formparameters>
+    <header id="{658EBB93-72C2-4BD6-A5FF-F4AA6126BB4C}">
+        <rows>
+            <row>
+                <cell id="{96CAA035-69F3-4702-81B4-A2801C941114}">
+                    <labels>
+                        <label description="Offline Status" languagecode="1033" />
+                    </labels>
+                    <control id="assignheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{0173B240-2E17-48B3-8611-BD20AFBB7E74}" name="{C22A34C1-9B3B-4AC5-A9D4-4A1AF7ABB910}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{E339A882-9250-4986-942C-7AA40E542B65}" name="{848F3265-16F9-4B3A-8AC5-C6FC21461A04}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{07C4050F-50EA-4A6B-AA38-2097AB71B7B3}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="offlinestatus_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{b3954557-6053-42eb-979f-4a553d0a251f}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{86BBDDFA-DEE4-4117-AECF-BAE52651C7AF}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="offlineenabledentities_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{5F79548A-F230-4F57-A243-7234AD865283}">
+                                            <parameters>
+                                                <MaxLength>200000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3B8C4AF8-BFD6-4CCA-84DD-8189ED2FCC41}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="offlinedisabledentities_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{AAD9C4E6-204C-43D6-A372-7C9B9FC57A01}">
+                                            <parameters>
+                                                <MaxLength>200000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{abe1996b-689e-41ac-8733-527f9087e913}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="offlinedownloadmetadataupdatesbutton_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{5906f8af-27bb-4cc7-980e-cf6795ecc3b0}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{b3954557-6053-42eb-979f-4a553d0a251f}">
+            <customControl name="MscrmControls.Offline.OfflineStatusControl" formFactor="0">
+                <parameters>
+                    <OfflineStatus type="SingleLine.Text">offline_status</OfflineStatus>
+                    <OfflineStatusReason type="SingleLine.Text">offlinestatus_reason</OfflineStatusReason>
+                    <OfflineMetadataSyncRequired type="SingleLine.TextArea">offlinemetadata_sync</OfflineMetadataSyncRequired>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Offline.OfflineStatusControl" formFactor="1">
+                <parameters>
+                    <OfflineStatus type="SingleLine.Text">offline_status</OfflineStatus>
+                    <OfflineStatusReason type="SingleLine.Text">offlinestatus_reason</OfflineStatusReason>
+                    <OfflineMetadataSyncRequired type="SingleLine.TextArea">offlinemetadata_sync</OfflineMetadataSyncRequired>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Offline.OfflineStatusControl" formFactor="2">
+                <parameters>
+                    <OfflineStatus type="SingleLine.Text">offline_status</OfflineStatus>
+                    <OfflineStatusReason type="SingleLine.Text">offlinestatus_reason</OfflineStatusReason>
+                    <OfflineMetadataSyncRequired type="SingleLine.TextArea">offlinemetadata_sync</OfflineMetadataSyncRequired>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5F79548A-F230-4F57-A243-7234AD865283}">
+            <customControl name="MscrmControls.OfflineEntities.OfflineEntitiesControl" formFactor="0">
+                <parameters>
+                    <OfflineEntitiesAndLastSyncTime type="SingleLine.Text">offline_enabled_json_string</OfflineEntitiesAndLastSyncTime>
+                    <OfflineEntityStatus type="SingleLine.Text">offline_enable_string</OfflineEntityStatus>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfflineEntities.OfflineEntitiesControl" formFactor="1">
+                <parameters>
+                    <OfflineEntitiesAndLastSyncTime type="SingleLine.Text">offline_enabled_json_string</OfflineEntitiesAndLastSyncTime>
+                    <OfflineEntityStatus type="SingleLine.Text">offline_enable_string</OfflineEntityStatus>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfflineEntities.OfflineEntitiesControl" formFactor="2">
+                <parameters>
+                    <OfflineEntitiesAndLastSyncTime type="SingleLine.Text">offline_enabled_json_string</OfflineEntitiesAndLastSyncTime>
+                    <OfflineEntityStatus type="SingleLine.Text">offline_enable_string</OfflineEntityStatus>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{AAD9C4E6-204C-43D6-A372-7C9B9FC57A01}">
+            <customControl name="MscrmControls.OfflineEntities.OfflineEntitiesControl" formFactor="0">
+                <parameters>
+                    <OfflineEntitiesAndLastSyncTime type="SingleLine.Text">offline_disabled_json_string</OfflineEntitiesAndLastSyncTime>
+                    <OfflineEntityStatus type="SingleLine.Text">offline_disable_string</OfflineEntityStatus>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfflineEntities.OfflineEntitiesControl" formFactor="1">
+                <parameters>
+                    <OfflineEntitiesAndLastSyncTime type="SingleLine.Text">offline_disabled_json_string</OfflineEntitiesAndLastSyncTime>
+                    <OfflineEntityStatus type="SingleLine.Text">offline_disable_string</OfflineEntityStatus>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfflineEntities.OfflineEntitiesControl" formFactor="2">
+                <parameters>
+                    <OfflineEntitiesAndLastSyncTime type="SingleLine.Text">offline_disabled_json_string</OfflineEntitiesAndLastSyncTime>
+                    <OfflineEntityStatus type="SingleLine.Text">offline_disable_string</OfflineEntityStatus>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5906f8af-27bb-4cc7-980e-cf6795ecc3b0}">
+            <customControl name="MscrmControls.OfflineSyncButton.OfflineSyncButtonControl" formFactor="0">
+                <parameters>
+                    <OfflineMetadataSyncRequired type="SingleLine.TextArea">offlinemetadata_sync</OfflineMetadataSyncRequired>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfflineSyncButton.OfflineSyncButtonControl" formFactor="1">
+                <parameters>
+                    <OfflineMetadataSyncRequired type="SingleLine.TextArea">offlinemetadata_sync</OfflineMetadataSyncRequired>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OfflineSyncButton.OfflineSyncButtonControl" formFactor="2">
+                <parameters>
+                    <OfflineMetadataSyncRequired type="SingleLine.TextArea">offlinemetadata_sync</OfflineMetadataSyncRequired>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

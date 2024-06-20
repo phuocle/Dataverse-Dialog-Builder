@@ -1,0 +1,91 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_accesschecker_objectid" type="SafeString" />
+        <querystringparameter name="param_accesschecker_entityname" type="SafeString" />
+    </formparameters>
+    <header id="{A8709B47-5900-43BD-B1A4-107BD1E4725C}">
+        <rows>
+            <row>
+                <cell id="{8B1F6FB5-21B4-4573-91B8-03D5E53818C9}">
+                    <labels>
+                        <label description="Check Access" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_command_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{7373BA2A-B15C-4823-B091-0C8BCAEBB455}" name="AccessCheckerTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="AccessCheckerSection" showbar="false" locklevel="0" id="{51C2C522-531D-4A06-9F32-AE5E7038339C}" columns="1">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{A76AE4B3-98A0-4B71-B0D4-73E86F2BA07A}">
+                                        <labels>
+                                            <label description="Access Checker" languagecode="1033" />
+                                        </labels>
+                                        <control id="accesscheckercontrol" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" isrequired="true" isunbound="true" uniqueid="{1B2ADE61-8BA1-4EDE-9085-5B9F7084A31F}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{832D9BF9-2AA6-4F0C-9AA1-3E7AD00CEC6B}">
+        <rows>
+            <row>
+                <cell id="{399C2E48-0935-41ED-85A2-DABD05AE84AC}">
+                    <labels>
+                        <label description="Ok" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="okClicked" libraryName="accessChecker_closeDialog.js" handlerUniqueId="{8020d15c-1d80-4b31-9fd2-de14a6f037c8}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{1B2ADE61-8BA1-4EDE-9085-5B9F7084A31F}">
+            <customControl formFactor="0" name="MscrmControls.AccessChecker.AccessCheckerControl">
+                <parameters>
+                    <objectId type="SingleLine.Text">param_accesschecker_objectid</objectId>
+                    <entityName type="SingleLine.Text">param_accesschecker_entityname</entityName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.AccessChecker.AccessCheckerControl">
+                <parameters>
+                    <objectId type="SingleLine.Text">param_accesschecker_objectid</objectId>
+                    <entityName type="SingleLine.Text">param_accesschecker_entityname</entityName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.AccessChecker.AccessCheckerControl">
+                <parameters>
+                    <objectId type="SingleLine.Text">param_accesschecker_objectid</objectId>
+                    <entityName type="SingleLine.Text">param_accesschecker_entityname</entityName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

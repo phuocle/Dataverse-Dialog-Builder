@@ -1,0 +1,157 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_name" type="SafeString" />
+        <querystringparameter name="param_isamounttype" type="SafeString" />
+        <querystringparameter name="param_transactioncurrencyid" type="UniqueId" />
+        <querystringparameter name="param_transactioncurrencyname" type="SafeString" />
+        <querystringparameter name="param_crmwrpctoken" type="SafeString" />
+        <querystringparameter name="param_crmwrpctokentimestamp" type="SafeString" />
+    </formparameters>
+    <header id="{222dd451-f2de-4ef3-b6f9-4848346e8041}">
+        <rows>
+            <row>
+                <cell id="{77b251fa-71ca-4642-8052-1e8e6c400f89}">
+                    <labels>
+                        <label description="Create Discount List" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_creatediscountlist" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{40174fcd-65d3-479e-b68d-61ae1f6091c3}" name="{6b368cb8-e0f4-4178-9c85-5f020c7badda}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{f4d33ec8-d950-4e31-a3d2-5f202fbd0b6b}" name="{99581410-47cf-4a6d-a477-b111ce3bbbea}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{978de50e-f5d5-450b-bb4d-94f16ff721df}">
+                                        <labels>
+                                            <label description="Provide a name and select the type of discount for this new discount list. When you click OK, you can set up volume discounts through this list." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_creatediscountlistdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0540b41b-b6c1-4b8f-a689-8e3f702b2a67}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="creatediscountlistname_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>100</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5ea92dea-ae82-408e-a674-20ffa1f6fbf4}">
+                                        <labels>
+                                            <label description="Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="creatediscountlisttype_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetId>{a0e3ad84-b914-ef11-840b-6045bd575473}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{dc2d798a-ae94-4705-be0f-36bde7a4a735}">
+                                        <labels>
+                                            <label description="Currency" languagecode="1033" />
+                                        </labels>
+                                        <control id="creatediscountlistcurrency_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>transactioncurrency</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{168b8498-15fd-496e-9722-92ebd24100c5}">
+        <rows>
+            <row>
+                <cell id="{ae9c3957-8304-492b-a27f-92667cb6fcda}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{4d571946-2659-4cdc-ad7f-65797d7e423c}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onLoadCreateDiscountListDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{c2d9b1c9-d015-43f3-a5f0-9208b36a2092}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="creatediscountlisttype_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCreateDiscountListDialogTypeChanged" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{29915bb9-8704-4b00-b453-919812069505}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="creatediscountlistcurrency_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCreateDiscountListDialogCurrencyChanged" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{29915bc9-8704-4b00-b453-919812069505}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.onCloseCreateDiscountListDialog" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{19915bb9-8704-4b00-b453-919812069505}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Sales.CommandBarActions.Instance.dialogClose" libraryName="Sales/CommandBarActions/SalesCommandBarActions.js" handlerUniqueId="{dfc4f74d-ab9a-4ce8-9b75-c5847606485f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/SalesOrder/SalesOrder_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Sales/CommandBarActions/SalesCommandBarActions.js" />
+                <internaljscriptfile src="/_static/_common/scripts/CommandBarActions.js" />
+                <internaljscriptfile src="$webresource:Marketing/CommandActions/Marketing_CommandActions.js" />
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Convert/Incident_convert_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

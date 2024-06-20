@@ -1,0 +1,101 @@
+<form>
+    <header id="{7338c0b5-def3-4adb-907c-ed3e27a2a215}">
+        <rows>
+            <row>
+                <cell id="{83aa75b6-ef98-4ef7-90df-4ef4cd07dc90}">
+                    <labels>
+                        <label description="Reject Knowledge Article" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_rejectknowledgearticle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{ab80d509-13ca-45dd-83c7-479dfe317c5e}" name="{ab80d509-13ca-45dd-83c7-479dfe317c5e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{e7739751-fb18-427e-a5fb-bc4562def1e2}" name="{e7739751-fb18-427e-a5fb-bc4562def1e2}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2d1e9a58-d442-426c-b990-59eb9f810a13}">
+                                        <labels>
+                                            <label description="Are you sure you want to reject this knowledge article?" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_statusmessage" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a0009aef-4c8c-41ad-b92b-43eb76431632}">
+                                        <labels>
+                                            <label description="Reason for rejection" languagecode="1033" />
+                                        </labels>
+                                        <control id="reasonforrejection" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{954d207e-19ff-49ea-b5f1-419d38bb9018}">
+        <rows>
+            <row>
+                <cell id="{34ec3c8f-78af-4449-9611-c7c5757ea301}">
+                    <labels>
+                        <label description="Reject" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{3d7703ce-6a6d-476a-8ae7-316bbb1454ef}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticle.Instance.reviewRejected" libraryName="msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" handlerUniqueId="{e01b66d9-eef2-42c9-89b1-2363f1972b26}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticleUtility.closeDialog" libraryName="msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" handlerUniqueId="{2f7d0cb6-81ef-4ad6-b532-f58588e589cc}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_knowledgeArticleId" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_primaryauthorid" type="SafeString" />
+        <querystringparameter name="param_Review" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

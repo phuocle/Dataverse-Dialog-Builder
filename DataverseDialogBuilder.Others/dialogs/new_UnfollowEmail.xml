@@ -1,0 +1,184 @@
+<form>
+    <formparameters>
+        <querystringparameter name="analyzing_email_body_status_icon" type="SafeString" />
+        <querystringparameter name="removing_follow_info_status_icon" type="SafeString" />
+        <querystringparameter name="finishing_up_status_icon" type="SafeString" />
+    </formparameters>
+    <header id="{2F1D7682-8476-4441-BADA-37375B1C0AE9}">
+        <rows>
+            <row>
+                <cell id="{05055292-8E05-42F2-937A-B7983DBC7BD7}">
+                    <labels>
+                        <label description="Unfollow Recipient Activity " languagecode="1033" />
+                    </labels>
+                    <control id="header_unfollow" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" name="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section celllabelalignment="Left" celllabelposition="Left" labelwidth="300" showbar="false" columns="1" id="{d7c8d6ab-104f-4063-9220-90446f38e938}" name="statusBar">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{C6F88D6B-0A7A-442E-A09F-A6E874B1A0BE}">
+                                        <labels>
+                                            <label description="This email will be followed" languagecode="1033" />
+                                        </labels>
+                                        <control id="Status_Message" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>true</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{75FBD03A-015A-476F-A991-A40D6E88D8FC}" showlabel="false">
+                                        <labels>
+                                            <label description="Analyzing email body..." languagecode="1033" />
+                                        </labels>
+                                        <control id="AnalyzingEmailBody_Status" uniqueid="{77649C34-4BEF-417C-97EF-C7AB1E21DEB6}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>10</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{DFF22114-F08F-4C2A-B645-EFE1933F4342}" showlabel="false">
+                                        <labels>
+                                            <label description="Removing follow information..." languagecode="1033" />
+                                        </labels>
+                                        <control id="RemovingFollowInfo_Status" uniqueid="{D93A09BB-AD17-4745-8356-5CE58208E784}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>10</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{FBE2B61A-045E-4246-B70B-32B98EA40CE7}" showlabel="false">
+                                        <labels>
+                                            <label description="Finishing Up..." languagecode="1033" />
+                                        </labels>
+                                        <control id="FinishingUp_Status" uniqueid="{F74936B1-2663-42E0-B144-25459782E38C}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>10</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8502E246-CD1E-4DFE-8FA8-636C68813075}">
+        <rows>
+            <row>
+                <cell id="{9971BE6E-537F-4025-B266-A4657BA3B5EA}">
+                    <labels>
+                        <label description="Unfollow this Email" languagecode="1033" />
+                    </labels>
+                    <control id="Unfollow_Button" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{E8B1558D-DC71-46EB-909E-D251149A9B6E}">
+                    <labels>
+                        <label description="Done" languagecode="1033" />
+                    </labels>
+                    <control id="Done_Button" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{77649C34-4BEF-417C-97EF-C7AB1E21DEB6}">
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="0">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">analyzing_email_body_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="1">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">analyzing_email_body_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="2">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">analyzing_email_body_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{D93A09BB-AD17-4745-8356-5CE58208E784}">
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="0">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">removing_follow_info_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="1">
+                <parameters>
+                    <LabelIcon type="SingleLine.Text">removing_follow_info_status_icon</LabelIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="2">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">removing_follow_info_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{F74936B1-2663-42E0-B144-25459782E38C}">
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="0">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">finishing_up_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="1">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">finishing_up_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="2">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">finishing_up_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="Unfollow_Button">
+            <Handlers>
+                <Handler functionName="Dialogs.Unfollow.onUnfollowClick" libraryName="new_MailAppScriptResource" handlerUniqueId="{b421d59d-587d-4e84-b990-f30febf22693}" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Done_Button">
+            <Handlers>
+                <Handler functionName="Dialogs.Common.CloseDialog" libraryName="new_MailAppScriptResource" handlerUniqueId="{29d8a053-8502-42cd-a8e2-2bc72881fe37}" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Dialogs.Unfollow.onLoad" libraryName="new_MailAppScriptResource" handlerUniqueId="{1c9ad739-14d7-4136-ad2a-47d54f3f6e6d}" />
+            </Handlers>
+        </event>
+    </events>
+</form>

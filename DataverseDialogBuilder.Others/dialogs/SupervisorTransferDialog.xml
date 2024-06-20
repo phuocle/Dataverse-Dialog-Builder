@@ -1,0 +1,98 @@
+<form>
+    <formparameters>
+        <querystringparameter name="is_dialog" type="Boolean" />
+        <querystringparameter name="is_transfer_requested" type="Boolean" />
+        <querystringparameter name="selected_record_id" type="SafeString" />
+        <querystringparameter name="oc_endpoint_url" type="SafeString" />
+        <querystringparameter name="selected_record_agentAdId" type="SafeString" />
+        <querystringparameter name="selected_record_agentName" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{8bb14d38-d7b8-4839-940e-c2f5c9c6709d}" name="{8bb14d38-d7b8-4839-940e-c2f5c9c6709d}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{fa6801cc-7eb2-46ca-afd7-1a5e24d73c17}" name="{fa6801cc-7eb2-46ca-afd7-1a5e24d73c17}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{cabb3b63-36f6-472c-b988-3206053f42c3}">
+                                        <labels>
+                                            <label description="Transfer" languagecode="1033" />
+                                        </labels>
+                                        <control id="Transfer_Conversation" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{758b7598-8400-4ab5-a067-20d187e2b0be}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{4b69399a-7ffe-48ec-b598-3e1eff2e56ac}">
+        <rows>
+            <row>
+                <cell id="{6a127bd2-a90f-45c5-a552-d880335d0887}">
+                    <labels>
+                        <label description="Transfer conversations" languagecode="1033" />
+                    </labels>
+                    <control id="Transfer_Title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{f1b2e9bf-02df-4234-b5b3-c4bc603caf24}">
+        <rows>
+            <row>
+                <cell id="{0d8a796c-fba9-419c-9e63-bb46362d5285}">
+                    <labels>
+                        <label description="Transfer" languagecode="1033" />
+                    </labels>
+                    <control id="assign_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{b2e9a85d-c5fd-4e77-9a17-7452427fe47b}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="true" attribute="assign_id">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.SupervisorTransferDialog.prototype.transferRecord" libraryName="msdyn_SupervisorTransferDialog.js" handlerUniqueId="{93275102-89B9-408B-BF99-4059DA6E0044}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.SupervisorTransferDialog.prototype.cancelDialog" libraryName="msdyn_SupervisorTransferDialog.js" handlerUniqueId="{B664427F-6CAE-4709-8475-977180D0930D}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{758b7598-8400-4ab5-a067-20d187e2b0be}">
+            <customControl name="MscrmControls.OCSupFilterControl.OCSupFilterControl" formFactor="0"></customControl>
+            <customControl name="MscrmControls.OCSupFilterControl.OCSupFilterControl" formFactor="1"></customControl>
+            <customControl name="MscrmControls.OCSupFilterControl.OCSupFilterControl" formFactor="2"></customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

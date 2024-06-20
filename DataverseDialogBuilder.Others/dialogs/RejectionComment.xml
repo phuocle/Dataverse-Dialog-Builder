@@ -1,0 +1,101 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_description" type="SafeString" />
+    </formparameters>
+    <header id="{409bdf52-1fdf-46e8-af6d-251c41fa28eb}">
+        <rows>
+            <row>
+                <cell id="{35224701-7d8b-4de0-8b48-0855ccca8606}">
+                    <labels>
+                        <label description="Rejection Comments" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_rejectioncomment" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{e8dd9035-12f9-46f3-9275-7c192deed650}" name="{6f6dec6f-3fe5-4e05-bd80-d358eb93f28b}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{393767c1-06c8-4a78-b6e3-a6ebbbfcd35e}" name="{b4b3a40b-bbb9-4125-911b-5b57b9fb27fa}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d9d20021-7409-4567-8b2b-bacafbef3226}">
+                                        <labels>
+                                            <label description="Provide some information that can help the submitter." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_createrejectioncommentdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d0d019fa-c1b2-4b0b-961c-bf009a650f65}" rowspan="5">
+                                        <labels>
+                                            <label description="Add comment (optional)" languagecode="1033" />
+                                        </labels>
+                                        <control id="createrejectcioncomment_id" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true" isrequired="false">
+                                            <parameters>
+                                                <MaxLength>400</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8f7fbd6f-537a-4032-bc69-b041485e58a6}">
+        <rows>
+            <row>
+                <cell id="{7B97CA25-334E-46F8-8CFD-AAA7C6A7DB96}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{F07CF9CF-5598-424A-B670-C315D05A503C}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="onCloseCreateRejctionCommentDialog" libraryName="msdyn_/ProjectApprovals/Common/ProjectApprovalActions.js" handlerUniqueId="{6f8fda11-2d6a-461b-8a04-44940bc73b5b}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="dialogClose" libraryName="msdyn_/ProjectApprovals/Common/ProjectApprovalActions.js" handlerUniqueId="{08a801fe-8326-40d6-af47-ab542ca7d8c4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/ProjectApprovals/Common/ProjectApprovalActions.js" />
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,112 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_msdyn_workorderid" type="SafeString" />
+        <querystringparameter name="param_msdyn_incompletebooking" type="SafeString" />
+        <querystringparameter name="param_result" type="Boolean" />
+    </formparameters>
+    <header id="{e95a3a02-f40e-4a71-9013-9d4d109036a7}">
+        <rows>
+            <row>
+                <cell id="{7fbc9944-4903-496d-9957-47e968785ac3}">
+                    <labels>
+                        <label description="Complete Work Order" languagecode="1033" />
+                    </labels>
+                    <control id="header_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{c3c76f1e-2a4f-4bed-88de-311fb4be4fa9}">
+                    <labels>
+                        <label description="To complete this work order, any related incomplete bookings must be completed or cancelled; set related incomplete bookings to:" languagecode="1033" />
+                    </labels>
+                    <control id="header_description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true"></control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{2d4168df-6ecc-47c8-8cea-e82a3ac65d94}" IsUserDefined="1">
+            <labels>
+                <label description="Complete Work Order" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{96d889ff-c3f0-4730-859f-cc78bba54545}">
+                            <labels>
+                                <label description="Complete Work Order" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e6a61d3c-6ed0-4218-b48a-780aada813e3}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="Select booking status" languagecode="1033" />
+                                        </labels>
+                                        <control id="bookingStatus" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" disabled="false" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{93bd4308-6eaf-eb11-8237-000d3a9e4595}</DefaultViewId>
+                                                        <EntityLogicalName>bookingstatus</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{ec268122-30ba-4214-892a-72d55464b248}">
+        <rows>
+            <row>
+                <cell id="{688b2fd6-d478-44e6-98fb-6b1d1b6f5b3c}">
+                    <labels>
+                        <label description="Complete" languagecode="1033" />
+                    </labels>
+                    <control id="btnCompleteWorkOrder" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{94097d7a-ee70-4b68-ad62-97a38e315ad2}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="btnCancel" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CompleteBookingsDialog.Library.onDialogLoad" libraryName="$webresource:msdyn_/CompleteBookingsDialog/CompleteBookingsDialog.Library.js" handlerUniqueId="{4bfc01d8-83d2-4d73-acea-26f60125082b}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnCompleteWorkOrder">
+            <Handlers>
+                <Handler functionName="CompleteBookingsDialog.Library.onCompleteBookingsClick" libraryName="$webresource:msdyn_/CompleteBookingsDialog/CompleteBookingsDialog.Library.js" handlerUniqueId="{ec1f5b66-40cd-428b-b30a-baf20af265a4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnCancel">
+            <Handlers>
+                <Handler functionName="CompleteBookingsDialog.Library.onCancelClick" libraryName="$webresource:msdyn_/CompleteBookingsDialog/CompleteBookingsDialog.Library.js" handlerUniqueId="{8af7f1ea-b3c2-4b7a-adcc-8bab53903a11}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/CompleteBookingsDialog/CompleteBookingsDialog.Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

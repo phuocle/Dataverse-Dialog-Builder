@@ -1,0 +1,99 @@
+<form>
+    <header id="{619E7C0F-150C-462D-A564-5C5BEAECEA66}">
+        <rows>
+            <row>
+                <cell id="{305BA4F2-C155-4921-9EC6-11B73FFA5DDC}">
+                    <labels>
+                        <label description="Associate Category" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_ArticleToCategoryAssociation" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{31B8BC66-F891-44E2-A081-EFFD173C2E2C}" name="{31B8BC66-F891-44E2-A081-EFFD173C2E2C}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{026F1B34-B4CE-4D01-8779-74F0810F2833}" name="{026F1B34-B4CE-4D01-8779-74F0810F2833}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{73D25349-AC28-4EDC-9F6C-7CE564D02110}">
+                                        <labels>
+                                            <label description="Select Category to Associate with" languagecode="1033" />
+                                        </labels>
+                                        <control id="associateEntity_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{1FE1A98C-24D2-41BD-8D63-5CD6EAFE7582}</DefaultViewId>
+                                                        <EntityLogicalName>category</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{439687B0-ACAD-4248-9CD2-7758185E7ED0}">
+        <rows>
+            <row>
+                <cell id="{3778C43E-026F-4821-A1EF-3ECA830B25FF}">
+                    <labels>
+                        <label description="Associate" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{0281077E-F170-45C1-A83D-93C0247CEA7A}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticle.CommandActions.associate" libraryName="msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" handlerUniqueId="{8B3E2F4D-A1B1-4C6D-B14F-25A3FAAF646C}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="KnowledgeManagement.KnowledgeArticleUtility.closeDialog" libraryName="msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" handlerUniqueId="{B5B786A2-51E8-4375-ABB9-2C536B76296B}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_knowledgeArticleId" type="SafeString" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_associationType" type="SafeString" />
+        <querystringparameter name="param_statecode" type="Integer" />
+        <querystringparameter name="param_statuscode" type="Integer" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyncrm_/KnowledgeManagement/KnowledgeArticle/KnowledgeArticleMainSystemLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

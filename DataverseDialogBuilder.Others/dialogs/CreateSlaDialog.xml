@@ -1,0 +1,131 @@
+<form>
+    <hiddencontrols>
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{B2CCA7D2-55E5-4A14-AB43-71481223AE97}" name="{39C6DB05-F17D-412F-A0B6-4B9FE3431FE5}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" showlabel="false" columns="1" id="{FE120376-9F8F-41E6-9077-59B6B2ED2BD3}" name="{528487AA-3A76-4212-9CA4-66778214EB01}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{D4A107E7-805B-4064-8CBA-2AE803422891}" showlabel="true">
+                                        <labels>
+                                            <label description="Create a new SLA record" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{D2AD2A75-C19B-4D70-8903-8272E8533C42}" showlabel="true">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>100</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{614ED9A3-F0E7-42AB-B5C0-F7DEC0CDE25C}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Entity" languagecode="1033" />
+                                        </labels>
+                                        <control id="applicableEntity_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{a483e6d4-85ef-457a-9bf4-5dfff8381e88}</OptionSetId>
+                                                <DefaultValue>112</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{BFD910DF-16D4-4016-B6DA-7AE90E24DFC3}">
+        <rows>
+            <row>
+                <cell id="{8F522593-E02A-4BFC-AE2C-7ECFE11F2F3D}" showlabel="true">
+                    <labels>
+                        <label description="Create SLA" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{93D04D5E-EAEC-412E-B465-81ED7A313BC9}">
+        <rows>
+            <row>
+                <cell id="{8DCC6EFD-57DF-4639-87AD-0859B91406C9}" visible="false">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{EA492028-DEF0-40A6-A463-1F2C24121109}" visible="false">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.CreateSlaDialog.createSlaClick" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="{1FFA8CAA-1074-421D-9807-5DF25AE78381}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.InternalUtilities.DialogUtility.closeDialog" libraryName="/_static/_common/scripts/CommandbarActions.js" handlerUniqueId="{1AE990B6-1927-4A49-B4D0-FC8609574006}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.CreateSlaDialog.onLoadCreateSla" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="{CA6FA528-C20D-4D1E-A101-377A0D5FDDFD}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="applicableEntity_id">
+            <Handlers>
+                <Handler functionName="Mscrm.CreateSlaDialog.onChangeSlaEntity" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="{83B3D2C6-1803-47D7-B80D-9A75CD1D4744}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="/_static/_common/scripts/CommandbarActions.js" />
+                <internaljscriptfile src="$webresource:ServiceLevelAgreement/Sla/Sla_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Marketing/CommandActions/Marketing_CommandActions.js" />
+                <internaljscriptfile src="$webresource:Marketing/List/List_main_system_library.js" />
+                <internaljscriptfile src="$webresource:SharePoint_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Service/CommandBarActions/ServiceCommandBarActions.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Convert/Incident_convert_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

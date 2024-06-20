@@ -1,0 +1,127 @@
+<form>
+    <formparameters>
+        <querystringparameter name="entity_id" type="SafeString" />
+        <querystringparameter name="entity_name" type="SafeString" />
+        <querystringparameter name="process_instance_name" type="SafeString" />
+        <querystringparameter name="process_id" type="SafeString" />
+        <querystringparameter name="process_instance_id" type="SafeString" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+    </formparameters>
+    <header id="{08206F55-C836-48BF-846D-EE6F1633C0E2}">
+        <rows>
+            <row>
+                <cell id="{8E33E246-347A-4118-9BB6-8D46954FD058}">
+                    <labels>
+                        <label description="Switch Process" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_switch_process" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{30983E8C-308F-4BE1-BB2F-06C237398A91}" name="{30983E8C-308F-4BE1-BB2F-06C237398A91}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{864BFC3B-D59D-46DD-A293-5DEAB94CEAFD}" name="{864BFC3B-D59D-46DD-A293-5DEAB94CEAFD}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{B9DD82E4-EF4C-43C3-BCD5-2BF3DB4D019A}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="switchProcess_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{39F53A2F-F112-4A6D-8EBF-D571DFC6EE49}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{E3A6FD43-D25C-4E5F-A1D5-31225D980CF3}">
+        <rows>
+            <row>
+                <cell id="{66920D93-610F-4B18-A8EA-3E58A545ED0F}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{68A947EC-80AF-4454-BC4E-E7C6402751BC}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.ManageSwitchProcessDialogActions.onClickOk" libraryName="Main_system_library.js" handlerUniqueId="{86D6D11E-B51F-4B1D-806B-BDE4D99E8003}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.ManageSwitchProcessDialogActions.onClickCancel" libraryName="Main_system_library.js" handlerUniqueId="{2AB63F7A-7A10-4B6A-9D71-CEBF06CF42E9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{39F53A2F-F112-4A6D-8EBF-D571DFC6EE49}">
+            <customControl name="MscrmControls.Containers.SwitchProcessGridControl" formFactor="0">
+                <parameters>
+                    <EntityId type="SingleLine.Text">entity_id</EntityId>
+                    <EntityLogicalName type="SingleLine.Text">entity_name</EntityLogicalName>
+                    <ProcessId type="SingleLine.Text">process_id</ProcessId>
+                    <ProcessInstanceId type="SingleLine.Text">process_instance_id</ProcessInstanceId>
+                    <ProcessInstanceName type="SingleLine.Text">process_instance_name</ProcessInstanceName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.SwitchProcessGridControl" formFactor="1">
+                <parameters>
+                    <EntityId type="SingleLine.Text">entity_id</EntityId>
+                    <EntityLogicalName type="SingleLine.Text">entity_name</EntityLogicalName>
+                    <ProcessId type="SingleLine.Text">process_id</ProcessId>
+                    <ProcessInstanceId type="SingleLine.Text">process_instance_id</ProcessInstanceId>
+                    <ProcessInstanceName type="SingleLine.Text">process_instance_name</ProcessInstanceName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Containers.SwitchProcessGridControl" formFactor="2">
+                <parameters>
+                    <EntityId type="SingleLine.Text">entity_id</EntityId>
+                    <EntityLogicalName type="SingleLine.Text">entity_name</EntityLogicalName>
+                    <ProcessId type="SingleLine.Text">process_id</ProcessId>
+                    <ProcessInstanceId type="SingleLine.Text">process_instance_id</ProcessInstanceId>
+                    <ProcessInstanceName type="SingleLine.Text">process_instance_name</ProcessInstanceName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

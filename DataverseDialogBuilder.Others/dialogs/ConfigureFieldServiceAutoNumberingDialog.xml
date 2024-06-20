@@ -1,0 +1,144 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_callbackSuccess" type="Object" />
+        <querystringparameter name="param_initialEntityName" type="Object" />
+    </formparameters>
+    <header id="{d1ee06a6-8016-406f-a92a-b92307a6006e}">
+        <rows>
+            <row>
+                <cell id="{5fe0234e-f34e-4bf7-96de-1204a394e9f9}">
+                    <labels>
+                        <label description="Configure Auto-Numbering" languagecode="1033" />
+                    </labels>
+                    <control id="fsautonum_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{ffec3d21-e1bb-48ed-a650-c0aca6d3b72b}">
+                    <labels>
+                        <label description="Please select an entity and specify parameters for auto-numbering." languagecode="1033" />
+                    </labels>
+                    <control id="fsautonum_description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{8b42e92b-7920-4184-885e-a0dc38d9b268}" name="Field Service Auto-Numbering" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" IsUserDefined="0" id="{289cc8c6-6c40-441b-b50f-08c0b7684a80}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{f13a3feb-cd02-488a-bd20-214d13303d7d}">
+                                        <labels>
+                                            <label description="Entity" languagecode="1033" />
+                                        </labels>
+                                        <control id="fsautonum_entities" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetName>msdyn_fieldserviceautonumberingentities</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{bbc51a34-0043-4280-b4f1-5fe071be6421}">
+                                        <labels>
+                                            <label description="Prefix" languagecode="1033" />
+                                        </labels>
+                                        <control id="fsautonum_prefix" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{be38f030-50df-47d5-8781-bc3747d9521a}">
+                                        <labels>
+                                            <label description="Number Length" languagecode="1033" />
+                                        </labels>
+                                        <control id="fsautonum_numberLength" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1eb0da13-e0d7-4f7d-8aab-80647e2975de}">
+                                        <labels>
+                                            <label description="Starting Number" languagecode="1033" />
+                                        </labels>
+                                        <control id="fsautonum_startingNumber" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{a9b206f7-018e-4637-aed7-c577d8cdf64f}">
+        <rows>
+            <row>
+                <cell id="{a91b824a-fe73-4ffc-97df-fd00556018f7}">
+                    <labels>
+                        <label description="Apply" languagecode="1033" />
+                    </labels>
+                    <control id="btnApply" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{d7735f78-db4a-4963-9e7a-355c88937450}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="btnClose" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="btnApply">
+            <Handlers>
+                <Handler functionName="AutoNumbering.Library.onApply" libraryName="$webresource:msdyn_/AutoNumbering/AutoNumbering.Library.js" handlerUniqueId="{0B0E9AE8-4DE1-4151-8CC1-1AFAED9C3228}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="btnClose">
+            <Handlers>
+                <Handler functionName="AutoNumbering.Library.onClose" libraryName="$webresource:msdyn_/AutoNumbering/AutoNumbering.Library.js" handlerUniqueId="{56062E0C-0B22-4BF6-8579-590A64ECEB05}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="AutoNumbering.Library.onLoad" libraryName="$webresource:msdyn_/AutoNumbering/AutoNumbering.Library.js" handlerUniqueId="{571B0E62-7E88-42CA-8E32-2400BDA1C666}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="fsautonum_entities">
+            <Handlers>
+                <Handler functionName="AutoNumbering.Library.onEntityChange" libraryName="$webresource:msdyn_/AutoNumbering/AutoNumbering.Library.js" handlerUniqueId="{777084E0-9D8F-43C3-A772-AD0A5AC8A827}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/AutoNumbering/AutoNumbering.Library.js" />
+                <internaljscriptfile src="$webresource:msdyn_/Action/FieldServiceSystemAction/Sdk_msdyn_FieldServiceSystemAction_min.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,117 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_RoutingRuleId" type="SafeString" />
+        <querystringparameter name="param_SelectedRuleItemId" type="SafeString" />
+        <querystringparameter name="param_SelectedRuleItemName" type="SafeString" />
+        <querystringparameter name="param_IsMoveBefore" type="Boolean" />
+        <querystringparameter name="param_IsRefreshNeeded" type="Boolean" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{92d9c326-7a24-4703-9e53-17a359213142}" name="general" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{b57c19b8-e65e-4c23-a960-c374ef269641}" name="generalSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5808d385-47f1-43cd-8fb7-253d05437666}">
+                                        <labels>
+                                            <label description="Moves the selected routing rule item." languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{db9cddda-5119-47a7-8c2b-b9313d21c1ee}">
+                                        <labels>
+                                            <label description="Choose rule item" languagecode="1033" />
+                                        </labels>
+                                        <control id="ruleItemSelector" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{589471CA-8823-4850-9C48-141BD3D04F01}</DefaultViewId>
+                                                        <EntityLogicalName>routingruleitem</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{36e2ccc5-b279-4eed-aa47-9e3d711d6d81}">
+        <rows>
+            <row>
+                <cell id="{3c2e0e0d-fc85-4e6a-8b6b-834c8c6376f9}">
+                    <labels>
+                        <label description="Move" languagecode="1033" />
+                    </labels>
+                    <control id="formheader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{8d948540-bcec-4ec2-a369-5ecaf0518eb0}">
+        <rows>
+            <row>
+                <cell id="{d2a2f1bc-818d-48b5-a0bb-67cb2c6c24e2}">
+                    <labels>
+                        <label description="Ok" languagecode="1033" />
+                    </labels>
+                    <control id="okayButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" disabled="true" />
+                </cell>
+                <cell id="{97547f18-21e8-4490-baaf-8b69bc6dd643}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelButton" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.MoveRuleItem.onLoadHandlerMoveRuleItem" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{ff2c9776-eb68-49dd-a61e-1645f9d9d6db}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="okayButton">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.MoveRuleItem.onClickOkayButtonMoveRuleItem" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{ff2c9136-eb68-49dd-a61e-1645f9d9d6db}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelButton">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.onClickCancelButton" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{ff2c7634-eb68-49dd-a61e-1645f9d9d6db}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="ruleItemSelector">
+            <Handlers>
+                <Handler functionName="RoutingRule.CommandBarActions.DialogHandlers.MoveRuleItem.onChangeRuleItemSelector" libraryName="RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" handlerUniqueId="{ff2c8371-eb68-49dd-a61e-1645f9d9d6db}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:RoutingRule/CommandBarActions/RoutingRuleCommandBarActions.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

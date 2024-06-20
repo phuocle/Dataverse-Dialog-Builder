@@ -1,0 +1,114 @@
+<form>
+    <header id="{da06d0fc-875b-4c08-b9c8-3995c7231c06}">
+        <rows>
+            <row>
+                <cell id="{4a690ef8-d98c-4449-91b2-0702c370ac52}">
+                    <labels>
+                        <label description="Confirm Cancellation" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_cancelcase" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{5b9ce674-8064-41ef-8b4a-1534e8500ce8}" name="{1326d7bb-8560-4591-8a1a-3380bd45e239}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{6ca191f5-488e-4529-be80-416fa7c666d9}" name="{8aba451c-5a7c-4a30-b6d6-82bfb920ee84}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4d8fdb28-c387-4a81-b0cd-22255948305d}">
+                                        <labels>
+                                            <label description="Cancel this case. After it is cancelled, it can no longer be assigned. You can reactivate a cancelled case." languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_descriptioncancelcase" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3a564929-38cf-4e00-8a26-d47171685ccf}">
+                                        <labels>
+                                            <label description="Do you want to cancel this case?" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_textcancelcase" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{12a97e7c-a314-49e8-8b10-4afa872b46c0}" visible="false">
+                                        <labels>
+                                            <label description="Set case status to" languagecode="1033" />
+                                        </labels>
+                                        <control id="statusCode_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>6</DefaultValue>
+                                                <OptionSetId>{1478e2eb-b414-ef11-840b-6045bd575473}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{0cdae5a8-fbc7-44e6-8dcf-f4257f890dc6}">
+        <rows>
+            <row>
+                <cell id="{5e869d98-82e8-4e6d-bb8e-261ca9b7bab3}">
+                    <labels>
+                        <label description="Confirm" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" disabled="true" />
+                </cell>
+                <cell id="{d0a9d57f-f4d2-4d3c-934b-02f41a0bfadf}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.IncidentRibbon.CommandBarActions.caseCancelOnLoad" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{a4399e15-c461-432f-8809-6f19456df9ad}" enabled="true" parameters="" passExecutionContext="false" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.CommandBarActions.caseCancelApplyChangesClick" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{cce61a64-e73a-47a6-b28f-acc1ed543a3f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{be67155a-092b-40f6-b296-8b9887c96ec0}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_entityId" type="UniqueId" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

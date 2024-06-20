@@ -1,0 +1,95 @@
+<form>
+    <header id="{aa98393b-3963-48a8-8bef-5bdbb4fce4e2}">
+        <rows>
+            <row>
+                <cell id="{c0bec42f-3725-4bd9-9579-962ad01af61f}">
+                    <labels>
+                        <label description="Confirm Set Default" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_setdefaultdialog" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{a5840f1d-21c7-4d9a-901a-23db43f07dd1}" name="{5dca3b3e-5083-433d-8a5b-f966204a0585}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{c126efaf-e538-41c7-9419-a27c0eca0dd4}" name="{21f65104-0071-46d1-a0f7-de7557bd9537}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{10b874ee-552f-48f0-8374-533be2dd5627}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_setdefaultdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{4a630641-df37-4dc5-81f5-542799b03308}">
+        <rows>
+            <row>
+                <cell id="{cc61032a-0cd4-4236-89a0-c68bcc2a00bf}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{f1fb41fc-6fa1-4b0d-b43c-171a7c68482b}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.Entitlement.CommandBarActions.onLoadSetDefaultEntitlement" libraryName="Service/Entitlement/Entitlement_main_system_library.js" handlerUniqueId="{3a500fcb-9326-4a65-b087-71276674d40b}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.Entitlement.CommandBarActions.setDefaultEntitlementDialogConfirmClick" libraryName="Service/Entitlement/Entitlement_main_system_library.js" handlerUniqueId="{0226bf22-8b60-46af-aeb1-fd6d31e7778f}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{65e5b8fb-1a0a-4d34-bd1a-d7738c3156c6}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Entitlement/Entitlement_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <formparameters>
+        <querystringparameter name="param_previousDefaultEntitlementId" type="UniqueId" />
+        <querystringparameter name="param_currentDefaultEntitlementId" type="UniqueId" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_doesDefaultEntitlementExist" type="Boolean" />
+    </formparameters>
+</form>

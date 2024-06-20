@@ -1,0 +1,210 @@
+<form>
+    <formparameters>
+        <querystringparameter name="action_name" type="SafeString" />
+        <querystringparameter name="activity_serialized" type="SafeString" />
+        <querystringparameter name="activity_type" type="SafeString" />
+        <querystringparameter name="entity_id" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="channel_name" type="SafeString" />
+        <querystringparameter name="form_values_phonecall" type="SafeString" />
+    </formparameters>
+    <header id="{8b2bda96-5174-4245-9f93-4150281b7395}">
+        <rows>
+            <row>
+                <cell id="{26f56450-5dc0-41f9-be54-0358a9da7823}">
+                    <labels>
+                        <label description="New Phone Calls" languagecode="1033" />
+                    </labels>
+                    <control id="dialog_header_title" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{c66020c9-4869-4a15-b1bd-2d8c2dc64a2e}" name="{c66020c9-4869-4a15-b1bd-2d8c2dc64a2e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{41256bc7-9472-44b9-a0a8-802b89616b4b}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{938e5ea7-231a-49a0-a7ff-18b7a8346c0f}">
+                                        <labels>
+                                            <label description="Fill out this form to create new phone calls for the members you selected in the marketing list. To add this phone call as a new phone call in each member's record, click Distribute." languagecode="1033" />
+                                        </labels>
+                                        <control id="dialog_subtitle" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" id="{45996eaa-012a-4f5d-ab20-cf1eb91c0ae8}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{42babd29-a82c-4694-85cb-7a5fbbc2ebc1}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_priority_code" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>1</DefaultValue>
+                                                <OptionSetId>{f54ab74b-886f-4885-8dbe-8c1d61bf93a4}</OptionSetId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f3e04195-d63c-4d95-ac57-52bee7104e77}">
+                                        <labels>
+                                            <label description="Due" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_scheduled_end" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" isunbound="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{dfd92f79-d60e-49da-9b30-ea169d607731}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3db96cc3-35a7-4a8c-9e26-1bc25c6e9d12}" rowspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_description" classid="{E0DECE4B-6FC8-4A8f-A065-082708572369}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>4000000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{97ebe8bc-b312-4bd5-add4-601e00e2574a}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="phonecall_actual_duration_minutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{E3DE1338-ED3C-4B0E-A196-C238318D5798}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customized_form_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{E692331D-A452-48D2-947E-4F2FC06D5B58}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{326deb23-1cda-4f98-b371-82122200f11a}">
+        <rows>
+            <row>
+                <cell id="{52c6c8a9-5d02-463e-8e99-1ebcaddb69a9}">
+                    <labels>
+                        <label description="Help" languagecode="1033" />
+                    </labels>
+                    <control id="help_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{4b971225-21e2-45ab-b11f-733308f37ade}">
+                    <labels>
+                        <label description="Distribute" languagecode="1033" />
+                    </labels>
+                    <control id="distribute_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{ac56bb23-9f33-4fc2-92a5-069a985f363f}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewPhoneCalls.onDialogLoaded" libraryName="Marketing/ActivityCreation/Marketing_ActivityCreation.js" handlerUniqueId="{944f9d2d-386c-472b-9234-29fae81bfe95}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="help_id">
+            <Handlers>
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onHelpButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{7308b73a-5c28-4656-ab64-c91fbcb45956}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="distribute_id">
+            <Handlers>
+                <Handler functionName="Marketing.ActivityCreation.NewPhoneCalls.onConfirmClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{5730ac13-3ab9-4524-88c7-1c9f11b29107}" enabled="true" parameters="" passExecutionContext="false" />
+                <Handler functionName="Marketing.CampaignActivity.Distribution.onDistributeActivityButtonClicked" libraryName="Marketing/CampaignActivity/CampaignActivity_main_system_library.js" handlerUniqueId="{5730ac13-3ab9-4524-88c7-1c9f11b29107}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Marketing.DialogUtil.closeDialog" libraryName="Marketing/ClientCommon/Marketing_ClientCommon.js" handlerUniqueId="{cf2d8480-1a22-4d9a-adc9-b5b8578ff03f}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/CampaignActivity/CampaignActivity_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{E692331D-A452-48D2-947E-4F2FC06D5B58}">
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="0">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4210</EntityName>
+                    <FormValues type="SafeString">form_values_phonecall</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="1">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4210</EntityName>
+                    <FormValues type="SafeString">form_values_phonecall</FormValues>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.EnterpriseMarketing.CustomizedFormInDialog" formFactor="2">
+                <parameters>
+                    <EntityName static="true" type="Whole.None">4210</EntityName>
+                    <FormValues type="SafeString">form_values_phonecall</FormValues>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

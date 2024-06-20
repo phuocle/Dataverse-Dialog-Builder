@@ -1,0 +1,88 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <header id="{4740259E-4B52-4E13-A4F4-FC09A35A92BF}">
+        <rows>
+            <row>
+                <cell id="{40A34083-B41D-4775-A824-3614A92F9445}">
+                    <labels>
+                        <label description="Save email" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_attachfilealerttitle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{DE125067-63D7-4728-8A01-2EB8EA684AAE}" name="{DE125067-63D7-4728-8A01-2EB8EA684AAE}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{54847C05-6B6A-4222-950F-1233E5DF80AB}" name="{54847C05-6B6A-4222-950F-1233E5DF80AB}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4E97BEA7-4DDD-4CDA-B912-835A87A644D2}" showlabel="true">
+                                        <labels>
+                                            <label description="To attach a file, draft must be saved" languagecode="1033" />
+                                        </labels>
+                                        <control id="attachfilealertmessage_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{A85DFECD-46F5-456A-AE91-14491151B8B2}">
+        <rows>
+            <row>
+                <cell id="{7714C3F3-714D-49FD-A20F-056C8968836A}">
+                    <labels>
+                        <label description="Save and attach file" languagecode="1033" />
+                    </labels>
+                    <control id="saveandattachfile_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{BA51E3B1-2DDF-4D5F-BAB6-2689E65E8702}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Sales.Email.Instance.dialogClose" libraryName="Sales/Email/ContextualEmail_main_system_library.js" handlerUniqueId="{0A8384FE-F9B5-4B86-81B7-776D78C9FF8D}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="saveandattachfile_id">
+            <Handlers>
+                <Handler functionName="Sales.Email.Instance.saveAndAttachFile" libraryName="Sales/Email/ContextualEmail_main_system_library.js" handlerUniqueId="{129A17EF-4EDA-4D15-8C68-1AF44FE17641}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/Email/ContextualEmail_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,283 @@
+<form>
+    <formparameters>
+        <querystringparameter name="is_email_tracked" type="Boolean" />
+        <querystringparameter name="help_link_url" type="SafeString" />
+        <querystringparameter name="retrieving_crm_data_status_icon" type="SafeString" />
+        <querystringparameter name="adding_follow_info_status_icon" type="SafeString" />
+        <querystringparameter name="finishing_up_status_icon" type="SafeString" />
+        <querystringparameter name="recipients_records" type="Object" />
+    </formparameters>
+    <header id="{2F1D7682-8476-4441-BADA-37375B1C0AE9}">
+        <rows>
+            <row>
+                <cell id="{2F1277AF-CD33-4C1A-89C1-815B5AD27F7B}">
+                    <labels>
+                        <label description="Follow Recipient Activity " languagecode="1033" />
+                    </labels>
+                    <control id="header_follow" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" name="{a1b161e3-f8c3-48e6-b8eb-12efad4be0dc}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section celllabelalignment="Left" celllabelposition="Left" labelwidth="300" showbar="false" columns="1" id="{d7c8d6ab-104f-4063-9220-90446f38e938}" name="statusBar">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2853d1e0-9b19-454b-9e99-0213aeac116e}">
+                                        <labels>
+                                            <label description="This email isn't being followed" languagecode="1033" />
+                                        </labels>
+                                        <control id="Status_Message" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6EE7EC84-FE80-4618-B97E-CC7B44903728}" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{53650624-D92C-4995-8129-AA383C4608FC}" name="statusControls">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{589F1EA6-4B84-48F2-8B01-9ACE382894B7}" showlabel="false">
+                                        <labels>
+                                            <label description="Retrieving Dynamics 365 data..." languagecode="1033" />
+                                        </labels>
+                                        <control id="RetrievingCRMData_Status" uniqueid="{EF1003B8-392F-49A1-9136-0BC8BA671E8B}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>10</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{223FC9EF-7224-47E9-A385-DFDA7675C3E0}" showlabel="false">
+                                        <labels>
+                                            <label description="Adding follow info..." languagecode="1033" />
+                                        </labels>
+                                        <control id="AddingFollowInfo_Status" uniqueid="{476216a8-27f1-4b58-85f9-e1c5fc0ad3cf}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>10</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{875FDC13-CABF-4F4F-AC5B-9A0C5A10F108}" showlabel="false">
+                                        <labels>
+                                            <label description="Finishing Up..." languagecode="1033" />
+                                        </labels>
+                                        <control id="FinishingUp_Status" uniqueid="{e0226eb8-a9ab-4c26-95df-d58c5fda557e}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>10</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6EE7EC84-FE80-4618-B97E-CC7B44903728}" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" celllabelalignment="Left" celllabelposition="Left" labelwidth="300" id="{12d2dd0d-ddc1-4821-a964-3679b9db2975}" name="recommendation">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3f1f200c-9192-4571-bb74-43f14950a3f2}">
+                                        <labels>
+                                            <label description="We recommend clicking Follow right before you send the email." languagecode="1033" />
+                                        </labels>
+                                        <control id="Recommend_Message" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <IsTitle>true</IsTitle>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{12e1fc6b-f42d-48b9-84a0-f94d3da2bcc7}" showlabel="false">
+                                        <labels>
+                                            <label description="Here's why" languagecode="1033" />
+                                        </labels>
+                                        <control id="HereIsWhy_Link" uniqueid="{1b80d4d2-3135-414a-8a66-e91900d9fdc4}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2753fbae-ab23-453c-a900-c9204fa46dfa}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="RecipientsList" uniqueid="{a8e13d9e-4f18-4f2c-8c43-24542a1ac39b}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>10000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{2CBB18F5-3C50-4844-8176-7E3D60C0F745}">
+        <rows>
+            <row>
+                <cell id="{b2481b0b-9fab-4822-8407-783939d8ff8b}">
+                    <labels>
+                        <label description="Follow this Email " languagecode="1033" />
+                    </labels>
+                    <control id="Follow_Button" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{f8ff4e93-c742-4509-b870-20ea9ded57f3}">
+                    <labels>
+                        <label description="Done" languagecode="1033" />
+                    </labels>
+                    <control id="Done_Button" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{EF1003B8-392F-49A1-9136-0BC8BA671E8B}">
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="0">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">retrieving_crm_data_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="1">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">retrieving_crm_data_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="2">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">retrieving_crm_data_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{476216a8-27f1-4b58-85f9-e1c5fc0ad3cf}">
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="0">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">adding_follow_info_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="1">
+                <parameters>
+                    <LabelIcon type="SingleLine.Text">adding_follow_info_status_icon</LabelIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="2">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">adding_follow_info_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{e0226eb8-a9ab-4c26-95df-d58c5fda557e}">
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="0">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">finishing_up_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="1">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">finishing_up_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.StatusLabel.StatusLabelControl" formFactor="2">
+                <parameters>
+                    <StatusIcon type="SingleLine.Text">finishing_up_status_icon</StatusIcon>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{1b80d4d2-3135-414a-8a66-e91900d9fdc4}">
+            <customControl name="MscrmControls.UnboundHyperlinkControl.UnboundHyperlinkControl" formFactor="0">
+                <parameters>
+                    <LinkUrl type="SingleLine.Text">help_link_url</LinkUrl>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.UnboundHyperlinkControl.UnboundHyperlinkControl" formFactor="1">
+                <parameters>
+                    <LinkUrl type="SingleLine.Text">help_link_url</LinkUrl>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.UnboundHyperlinkControl.UnboundHyperlinkControl" formFactor="2">
+                <parameters>
+                    <LinkUrl type="SingleLine.Text">help_link_url</LinkUrl>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{a8e13d9e-4f18-4f2c-8c43-24542a1ac39b}">
+            <customControl name="MscrmControls.MailApp.FollowRestrictedRecipientsControl" formFactor="0">
+                <parameters>
+                    <Records type="SingleLine.Text">recipients_records</Records>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.MailApp.FollowRestrictedRecipientsControl" formFactor="1">
+                <parameters>
+                    <Records type="SingleLine.Text">recipients_records</Records>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.MailApp.FollowRestrictedRecipientsControl" formFactor="2">
+                <parameters>
+                    <Records type="SingleLine.Text">recipients_records</Records>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="Follow_Button">
+            <Handlers>
+                <Handler functionName="Dialogs.Follow.onFollowClick" libraryName="new_MailAppScriptResource" handlerUniqueId="{b421d59d-587d-4e84-b990-f30febf22693}" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="Done_Button">
+            <Handlers>
+                <Handler functionName="Dialogs.Common.CloseDialog" libraryName="new_MailAppScriptResource" handlerUniqueId="{29d8a053-8502-42cd-a8e2-2bc72881fe37}" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Dialogs.Follow.onLoad" libraryName="new_MailAppScriptResource" handlerUniqueId="{1c9ad739-14d7-4136-ad2a-47d54f3f6e6d}" />
+            </Handlers>
+        </event>
+    </events>
+</form>

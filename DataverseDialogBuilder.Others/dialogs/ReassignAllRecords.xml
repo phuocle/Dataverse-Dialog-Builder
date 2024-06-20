@@ -1,0 +1,143 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{12EA0EAB-7387-4E3C-B75C-BFF6D216D385}" name="{12EA0EAB-7387-4E3C-B75C-BFF6D216D385}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{04219BC7-5D54-46D0-B33B-2D74A450D4D8}" name="{04219BC7-5D54-46D0-B33B-2D74A450D4D8}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{73c72d64-db8c-4906-a958-74812931bd3f}">
+                                        <labels>
+                                            <label description="Select the user or team to assign all the records owned by the current user or team." languagecode="1033" />
+                                        </labels>
+                                        <control id="reassignRecordsDescription_Label" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{23F97593-378A-43D7-9B4C-67C261CFCD9A}">
+                                        <labels>
+                                            <label description="Note that this will move all records owned by the selected user or team regardless of state.  Also this will unpublish any workflows that you assign to another user. Before the assigned workflows can be used, the new owner must publish them again." languagecode="1033" />
+                                        </labels>
+                                        <control id="reassignRecordsNote_Label" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{FC3E2C68-1B86-4B55-B4D4-F913178B662C}">
+                                        <labels>
+                                            <label description="Assign to" languagecode="1033" />
+                                        </labels>
+                                        <control id="rdoMe_id" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{14af8dca-bede-49b2-b6b2-67d017113d7b}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2F1F4DF6-D38C-4B61-A702-D62FE0528535}">
+                                        <labels>
+                                            <label description="Another user or team" languagecode="1033" />
+                                        </labels>
+                                        <control id="systemuserview_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>systemuser</EntityLogicalName>
+                                                    </TargetEntity>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>team</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{15B363AD-514F-43E9-8F62-51E654DC1E6B}">
+        <rows>
+            <row>
+                <cell id="{7083D4D4-FE28-4F74-9B8F-E08C56D9F884}">
+                    <labels>
+                        <label description="Reassign Records" languagecode="1033" />
+                    </labels>
+                    <control id="assignheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{BDDFB200-5B5B-4538-A34E-6ADC31673020}">
+        <rows>
+            <row>
+                <cell id="{CC5D8B69-6426-4CA0-9994-323FEE62DB5A}">
+                    <labels>
+                        <label description="Reassign" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{DFD154A4-96EE-49A4-9BF5-BF080AA0571A}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser.Reassign.assignDialogAssignClick" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{3D4A8E76-8C68-4819-AAFC-4FF3C7D0F09A}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser.Reassign.assignCloseDialog" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{667F3782-7D1D-4B86-BD13-F35A3989B188}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="rdoMe_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser.Reassign.assignDialogAssignToChange" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{AD40D425-0E21-4ACC-89EE-1061613CA98C}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser.Reassign.assignDialogOnLoad" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{0A2639DB-B37E-406A-8105-E17ABFDA55CB}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="systemuserview_id">
+            <Handlers>
+                <Handler functionName="Mscrm.AppCommon.SystemUser.Reassign.assignDialogSystemUserChange" libraryName="$webresource:AppCommon/ControlWS/SystemUser/SystemUser.js" handlerUniqueId="{041B3130-4F6B-4B0A-BAF2-05BE93D61EE0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="entity_name" type="SafeString" />
+        <querystringparameter name="entity_type_code" type="SafeString" />
+        <querystringparameter name="selected_records_count" type="PositiveInteger" />
+        <querystringparameter name="entity_records" type="Object" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="owner_id" type="SafeString" />
+        <querystringparameter name="owner_type" type="SafeString" />
+        <querystringparameter name="entity_id" type="SafeString" />
+    </formparameters>
+</form>

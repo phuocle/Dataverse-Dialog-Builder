@@ -1,0 +1,150 @@
+<form>
+    <formparameters>
+        <querystringparameter name="input_entityid" type="SafeString" />
+        <querystringparameter name="input_seriesid" type="SafeString" />
+        <querystringparameter name="input_records" type="Object" />
+        <querystringparameter name="input_lastButtonClicked" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{02a13d13-f240-49a1-ba23-8e14c273e46c}" name="{02a13d13-f240-49a1-ba23-8e14c273e46c}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{aeb96b91-46b0-410b-a465-61ececa6085f}" name="{aeb96b91-46b0-410b-a465-61ececa6085f}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{87405735-b095-4f15-b1b4-d4ab199d3c7d}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="deletedescription_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7e22bed3-fe8c-4362-8c30-d476232f909e}">
+                                        <labels>
+                                            <label description="Delete this occurrence" languagecode="1033" />
+                                        </labels>
+                                        <control id="deleteoccurrence_id" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{e65b4190-7312-4403-99b5-1e837414e25d}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9369d791-190a-4352-a412-9eb61a72f219}">
+                                        <labels>
+                                            <label description="Delete the series [Keep completed past instances]" languagecode="1033" />
+                                        </labels>
+                                        <control id="deleteserieskeepcompleted_id" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{e65b4190-7312-4403-99b5-1e837414e25d}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{20b98764-47d7-49c6-b673-6a6c73a6122b}">
+                                        <labels>
+                                            <label description="Delete the series [All instances]" languagecode="1033" />
+                                        </labels>
+                                        <control id="deleteseriesallinstances_id" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{e65b4190-7312-4403-99b5-1e837414e25d}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{555ecd87-1e78-404f-bcd9-af6c3d034000}">
+        <rows>
+            <row>
+                <cell id="{0d55a2fc-2e18-43ba-a012-fc559158ad2c}">
+                    <labels>
+                        <label description="Confirm Delete Appointment" languagecode="1033" />
+                    </labels>
+                    <control id="seriesactionheader_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{3091a71b-284a-4daa-acda-d74f6a4e82a2}">
+        <rows>
+            <row>
+                <cell id="{64e2b431-42c3-4400-8e9d-1996b828692a}">
+                    <labels>
+                        <label description="Ok" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{e08b4ab6-93f1-4f5a-9fec-5767679d315a}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Activities.DeleteAppointmentRecord.SeriesActionDialogOkClick" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{0966f8f9-eeef-4884-a61e-62bdce60c953}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Activities.DeleteAppointmentRecord.SeriesActionDialogCancelClick" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{7a010a59-a078-4996-9454-170c05b0bb6b}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="deleteoccurrence_id">
+            <Handlers>
+                <Handler functionName="Activities.DeleteAppointmentRecord.SeriesActionDialogFirstOptionChange" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{f6f342d8-3484-4901-b1e4-933f25368ef9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="deleteserieskeepcompleted_id">
+            <Handlers>
+                <Handler functionName="Activities.DeleteAppointmentRecord.SeriesActionDialogSecondOptionChange" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{bd3814cb-c51c-487f-9507-f6ab6b3df664}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="deleteseriesallinstances_id">
+            <Handlers>
+                <Handler functionName="Activities.DeleteAppointmentRecord.SeriesActionDialogThirdOptionChange" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="{c806b363-4e46-4a0e-855a-0c110c60452e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.DeleteAppointmentRecord.SeriesActionDialogDeleteAppointmentOnLoad" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="4926605f-5ec1-40e6-9e5a-1e72721b4b8f" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Appointment_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

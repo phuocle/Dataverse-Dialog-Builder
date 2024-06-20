@@ -1,0 +1,78 @@
+<form>
+    <header id="{C2CF50F9-B162-476D-801F-63BBF86D8C88}">
+        <rows>
+            <row>
+                <cell id="{47D3F569-D09B-4800-BE5E-2F390796C597}">
+                    <labels>
+                        <label description="Macro Run" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_macrosmonitor" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{D24EE346-DF53-420C-A26D-C149F322B522}" name="{7C947822-AF45-4C0B-BFEB-22C84C4524D1}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{E92CFD49-4270-46DE-931D-A60BC388E4FD}" name="{2339F5EF-9B6F-4E1B-B463-35D0372CD5FD}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6185D861-7043-484F-ABCC-766D870D7EAF}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="macrosname_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MaxLength>200</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{864BCA07-4D52-4532-A690-417173F042E8}" rowspan="16" showlabel="false">
+                                        <labels>
+                                            <label description="Macro Monitor" languagecode="1033" />
+                                        </labels>
+                                        <control id="monitor_id" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true">
+                                            <parameters>
+                                                <Url></Url>
+                                                <PassParameters>true</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Microsoft.Macros.Utility.monitorDialogOnLoadHandler" libraryName="$webresource:CRMClients/msdyn_ProductivityMacrosComponent_internal_library.js" handlerUniqueId="{4EA010D8-93BC-4E05-8CA1-882AD5CA7815}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="record_Id" type="SafeString" />
+    </formparameters>
+</form>

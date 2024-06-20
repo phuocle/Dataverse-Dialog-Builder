@@ -1,0 +1,60 @@
+﻿{
+  "servers": [
+    {
+      "profile": "DataverseDialogBuilder.CustomAction",
+      "solution": "DataverseDialogBuilder",
+      "folder": "bin\\Debug",
+      "includefiles": [
+        "DataverseDialogBuilder.CustomAction.dll"
+      ],
+      "excludefiles": [
+      ]
+    }
+  ],
+  "webresources": [
+    {
+      "profile": "BUILD_AND_DEPLOY_ALL",
+      "solution": "DataverseDialogBuilder",
+      "rootfolder": "",
+      "includefiles": [
+        "js\\**.js",
+        "css\\**.css",
+        "html\\**.html",
+        "images\\**.png"
+      ],
+      "excludefiles": [
+      ],
+      "dependencies": [
+      ]
+    }
+  ],
+  "solutionpackagers": [
+    {
+      "profile": "Extract-DataverseDialogBuilder",
+      "solution": "DataverseDialogBuilder",
+      "rootfolder": "",
+      "solutiontype": "Both",
+      "folder": "DataverseDialogBuilder",
+      "type": "Extract",
+      "mapfile": ""
+    },
+    {
+      "profile": "Pack-DataverseDialogBuilder",
+      "solution": "DataverseDialogBuilder",
+      "rootfolder": "",
+      "solutiontype": "Both",
+      "folder": "DataverseDialogBuilder",
+      "type": "Pack",
+      "mapfile": ""
+    }
+  ],
+  "generators": [
+    {
+      "profile": "LATEBOUND",
+      "type": "CSharp",
+      "rootnamespace": "DataverseDialogBuilder.Shared.Entities",
+      "rootfolder": "",
+      "entities": "folder"
+    }
+  ]
+}

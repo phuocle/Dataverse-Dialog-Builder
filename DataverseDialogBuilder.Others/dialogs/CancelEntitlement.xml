@@ -1,0 +1,97 @@
+<form>
+    <hiddencontrols>
+        <data id="entityIds" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <header id="{0f33c212-5a26-465c-9ba6-6a94b7192d7c}">
+        <rows>
+            <row>
+                <cell id="{1217a146-3ffc-4753-bc8d-bb7ac1d21ee3}">
+                    <labels>
+                        <label description="Confirm Cancellation" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_cancelEntitlementDialog" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{2b80ac1e-fbff-4e9d-a192-13919bda5a69}" name="{ff5f5c8d-0585-42e1-a79a-13b22ffa5913}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{e11d9936-c293-442c-ac25-16254b9d986f}" name="{bcd49d61-e206-4ec8-bac1-84183b5c0ce3}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c60c7417-648f-4df8-8d89-5f2e4bc657a9}">
+                                        <labels>
+                                            <label description="Are you sure you want to cancel this entitlement?" languagecode="1033" />
+                                        </labels>
+                                        <control id="lbl_cancelEntitlementDialogDescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{29b1ea25-a088-4532-bd9e-d6a0bb30943e}">
+        <rows>
+            <row>
+                <cell id="{f3acad0f-9852-44a3-8b18-5e3e21c5ec51}">
+                    <labels>
+                        <label description="Confirm" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{a3bd1605-4797-4d6d-8bf9-378e1acad670}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="CrmService.Entitlement.CommandBarActions.onLoadCancelEntitlement" libraryName="Service/Entitlement/Entitlement_main_system_library.js" handlerUniqueId="{badc8f5a-4f01-4383-9501-0ffedcc3b18c}" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.Entitlement.CommandBarActions.cancelEntitlementDialogConfirmClick" libraryName="Service/Entitlement/Entitlement_main_system_library.js" handlerUniqueId="{9d2387ed-7ad5-4701-8206-b1425ea7cf78}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.CommandBarActions.Instance.closeDialog" libraryName="Service/CommandBarActions/ServiceCommandBarActions.js" handlerUniqueId="{be67155a-092b-40f6-b296-8b9887c96ec0}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Service/Entitlement/Entitlement_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <formparameters>
+        <querystringparameter name="param_entityRecords" type="Object" />
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+    </formparameters>
+</form>

@@ -1,0 +1,258 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButtonClicked" type="SafeString" />
+        <querystringparameter name="param_name" type="SafeString" />
+        <querystringparameter name="param_agreementIds" type="Object" />
+        <querystringparameter name="param_newAgreementId" type="SafeString" />
+        <querystringparameter name="param_navigateToNewAgreement" type="SafeString" />
+    </formparameters>
+    <header id="{37a97444-1ff3-4133-9104-01acbe99dc14}">
+        <rows>
+            <row>
+                <cell id="{5de95691-db29-4634-8324-6f8356c5ece7}">
+                    <labels>
+                        <label description="Copy Agreement" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{9449561E-C7CA-4752-BFE9-79A1DA51B2F1}">
+                    <labels>
+                        <label description="Copy Agreement" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_agreementdescription" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>false</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{e8dd9035-12f9-46f3-9275-7c192deed650}" name="{6f6dec6f-3fe5-4e05-bd80-d358eb93f28b}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" IsUserDefined="0" id="{393767c1-06c8-4a78-b6e3-a6ebbbfcd35e}" labelid="{b4b3a40b-bbb9-4125-911b-5b57b9fb27fa}">
+                            <labels>
+                                <label description="Agreement Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{649f05da-89df-4ab7-9091-a133f4d1f395}">
+                                        <labels>
+                                            <label description="Service Account" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtServiceAccount" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ff6bbcaf-b56d-4964-be50-a86be76af31f}">
+                                        <labels>
+                                            <label description="Billing Account" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtBillingAccount" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}</DefaultViewId>
+                                                        <EntityLogicalName>account</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d1491169-b8d8-4bf6-9250-2b6ee4d8b552}">
+                                        <labels>
+                                            <label description="Start Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="dtStartDate" classid="{5b773807-9fb2-42db-97c3-7a91eff8Adff}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b3ce1978-aa9f-4c84-b136-58e6c9ff2a7a}">
+                                        <labels>
+                                            <label description="End Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="dtEndDate" classid="{5b773807-9fb2-42db-97c3-7a91eff8Adff}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section showbar="false" IsUserDefined="0" id="{170147b6-bd28-49a6-b6d7-a2acbfc85353}" labelid="{c2c1a3ae-9783-4bd9-b760-f866c2a1b17b}">
+                            <labels>
+                                <label description="Items To Copy" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{57b8cc35-eedd-4820-a3d3-2ad5acbaf199}">
+                                        <labels>
+                                            <label description="Set Originating Agreement" languagecode="1033" />
+                                        </labels>
+                                        <control id="rdOriginAgreement" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{de213875-fb93-41e6-8624-60963b5f7f05}">
+                                        <labels>
+                                            <label description="Copy Booking Setups" languagecode="1033" />
+                                        </labels>
+                                        <control id="rdBookignSetup" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3d9e5148-5f14-448e-a966-6a73e0ca953d}">
+                                        <labels>
+                                            <label description="Copy Booking Incidents" languagecode="1033" />
+                                        </labels>
+                                        <control id="rdBookingIncident" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1a24a599-a37a-4f48-9a63-2ced3c1d409d}">
+                                        <labels>
+                                            <label description="Copy Booking Service Tasks" languagecode="1033" />
+                                        </labels>
+                                        <control id="rdServiceTask" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9a968a58-efbf-4e20-a358-4cf3af7263e9}">
+                                        <labels>
+                                            <label description="Copy Booking Products and Booking Services" languagecode="1033" />
+                                        </labels>
+                                        <control id="rdBookingProductService" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d7feeec1-0cbf-423e-be85-32de792682f4}">
+                                        <labels>
+                                            <label description="Copy Invoice Setups" languagecode="1033" />
+                                        </labels>
+                                        <control id="rdInvoiceSetup" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d17f2023-b7e1-4a4f-8f26-4c984f218ef7}">
+                                        <labels>
+                                            <label description="Copy Invoice Products" languagecode="1033" />
+                                        </labels>
+                                        <control id="rdInvoiceProduct" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>1</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8f7fbd6f-537a-4032-bc69-b041485e58a6}">
+        <rows>
+            <row>
+                <cell id="{E5EBEB27-E6C1-4AA3-BE0F-D8CACB186EE3}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{f427f22c-4a34-440f-a7d1-25bd7d62786e}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdyn_/fps/Utils/FpsUtils.js" libraryUniqueId="{2359e0b1-41b3-4f7d-9be1-d6d864c77554}" />
+        <Library name="msdyn_/fps/LocalizationLibrary/Localization.Library.js" libraryUniqueId="{0621eea0-91ef-4112-8d68-8a78711fba11}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false">
+            <Handlers>
+                <Handler functionName="CopyAgreement.Library.OnDialogOpen" libraryName="$webresource:msdyn_/CopyAgreementDialog/CopyAgreementDialog.js" handlerUniqueId="{1d19156f-3425-4db5-8b10-ee8aa1f7eba5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CopyAgreement.Library.proceedToCopyAgreement" libraryName="$webresource:msdyn_/CopyAgreementDialog/CopyAgreementDialog.js" handlerUniqueId="{d6685621-6cb5-4cd8-84c8-5f096954f22f}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CopyAgreement.Library.closeDialog" libraryName="$webresource:msdyn_/CopyAgreementDialog/CopyAgreementDialog.js" handlerUniqueId="{7574b0bf-83bd-4f72-af61-7880c6cdba43}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="txtServiceAccount">
+            <Handlers>
+                <Handler functionName="CopyAgreement.Library.SetBillingAccount" libraryName="$webresource:msdyn_/CopyAgreementDialog/CopyAgreementDialog.js" handlerUniqueId="{58B28D2F-9B74-4214-BA38-A0003A65B476}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/CopyAgreementDialog/CopyAgreementDialog.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

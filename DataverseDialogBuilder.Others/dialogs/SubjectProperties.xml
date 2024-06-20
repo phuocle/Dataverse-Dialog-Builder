@@ -1,0 +1,90 @@
+<form>
+    <hiddencontrols />
+    <header id="{3710c054-5fa9-4716-9245-9df01843cd7d}">
+        <rows>
+            <row>
+                <cell id="{656dc7a6-1f62-4fc3-bc2d-351c7c0a0d6e}">
+                    <labels>
+                        <label description="Subject Properties" languagecode="1033" />
+                    </labels>
+                    <control id="subjectproperties_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" isrequired="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{bedcc4f2-9cb6-4885-9d84-523ed1b566bb}" name="{7106b9e2-c1fa-4477-8ef1-a7e218c84c9a}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{0d178f79-69eb-4e7b-995a-f69074d8e0f6}" name="{50a0edcf-e66e-4487-8900-54f67d369af2}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6d16205d-b83a-41d5-8860-76e5dff83b94}">
+                                        <labels>
+                                            <label description="Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject_title_id" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" isunbound="true" disabled="false" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1d7cb334-ff29-442b-ab80-842ccda3b51e}">
+                                        <labels>
+                                            <label description="Parent Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{FA1A7EF7-53E4-40A6-97D2-5935ADAF1277}</DefaultViewId>
+                                                        <EntityLogicalName>subject</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ecfd1bdc-3f0b-438b-91bc-36d96aecaff6}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject_description_id" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="subjectPropertiesDialogOnLoad" libraryName="AppCommon/Subject/SubjectLibrary.js" handlerUniqueId="9c76ae84-cd0f-4b78-b90b-88c0509f9ed7" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:AppCommon/Subject/SubjectLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <formparameters>
+        <querystringparameter name="selected_subjectId" type="Object" />
+    </formparameters>
+</form>

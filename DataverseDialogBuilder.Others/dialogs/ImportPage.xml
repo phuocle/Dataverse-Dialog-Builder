@@ -1,0 +1,97 @@
+<form>
+    <hiddencontrols />
+    <tabs>
+        <tab verticallayout="true" id="{9a8eb9a6-5a8c-485f-979f-6f4085eeb29a}" name="{9a8eb9a6-5a8c-485f-979f-6f4085eeb29a}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{7dcfc61a-d021-4892-8229-ce46907066fc}" name="{7dcfc61a-d021-4892-8229-ce46907066fc}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{95323262-e1eb-44bc-b0bb-cd32a589de48}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="importcontrol_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{90aef33f-8f4b-4106-9735-7a67e1b220a5}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{79981f55-d184-47b0-b2e6-1742ded6a105}">
+        <rows>
+            <row>
+                <cell id="{a43ca526-666e-4fcb-a6b2-de751dc95387}">
+                    <labels>
+                        <label description="Import Data" languagecode="1033" />
+                    </labels>
+                    <control id="assignheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{ee8de039-aa94-44d2-ad0e-7fe4f1dec69d}">
+        <rows>
+            <row>
+                <cell id="{281bfa96-9b55-4d79-9490-9389f45d896f}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="close_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{e149b28c-103b-4737-8c5e-74eb465660e5}">
+                    <labels>
+                        <label description="Next" languagecode="1033" />
+                    </labels>
+                    <control id="next_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="next_id">
+            <Handlers>
+                <Handler functionName="opendialog" libraryName="ImportExport_library.js" handlerUniqueId="{3ba4b13c-e782-499c-906c-fb366526654e}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="close_id">
+            <Handlers>
+                <Handler functionName="back" libraryName="ImportExport_library.js" handlerUniqueId="{d1241e33-491f-43b2-87bf-411814108fd9}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ImportExport_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{90aef33f-8f4b-4106-9735-7a67e1b220a5}">
+            <customControl name="MscrmControls.ImportExport.ImportControl" formFactor="0">
+                <parameters />
+            </customControl>
+            <customControl name="MscrmControls.ImportExport.ImportControl" formFactor="1">
+                <parameters />
+            </customControl>
+            <customControl name="MscrmControls.ImportExport.ImportControl" formFactor="2">
+                <parameters />
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

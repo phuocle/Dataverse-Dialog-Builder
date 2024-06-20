@@ -1,0 +1,139 @@
+<form>
+    <hiddencontrols>
+        <data id="lastButtonClicked" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="records" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="selectedState" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="allowedTransitions" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="action" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="defaultCloseState" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{dcf7aed9-7b29-4826-b779-a76d354b8835}" name="{dcf7aed9-7b29-4826-b779-a76d354b8835}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" showlabel="false" columns="1" id="{23f9a443-d10a-4058-8714-a24e0f5a5e2c}" name="{23f9a443-d10a-4058-8714-a24e0f5a5e2c}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8ea5d9d0-d562-48b1-a093-0c368d514457}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="description_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d296209c-8611-4d5c-9cd7-a8eeeb45f0a2}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="message_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{054a2563-b1b1-4885-a441-e7cb92367c7a}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="State" languagecode="1033" />
+                                        </labels>
+                                        <control id="state_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{61cc31c9-b29c-42e5-ba84-ffd3a39dcbd0}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="status_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <OptionSetId>{00000000-0000-0000-0000-000000000000}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{a4cf51e6-b92e-4f12-9a76-66f86b3804cd}">
+        <rows>
+            <row>
+                <cell id="{6ddd2b47-c437-4f6d-a9e2-3a81d954d542}" showlabel="true">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="title_id" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{1b904995-d7aa-4ff1-9775-a1e498317103}">
+        <rows>
+            <row>
+                <cell id="{b3b8696b-daa8-47ef-84d2-d53ed48ca826}" visible="false">
+                    <labels>
+                        <label description=" " languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{17fa6d96-637c-4a7e-b552-6a5c4e4ed476}" visible="false">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.ChangeState.deactivateClick" libraryName="Main_system_library.js" handlerUniqueId="{a037842c-1125-4e46-ac5c-1e2d81daecf5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.ChangeState.changeStateCloseDialog" libraryName="Main_system_library.js" handlerUniqueId="{9559dc0e-51e5-4cd9-9dad-adeb712e8472}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.ChangeState.onLoadSetState" libraryName="Main_system_library.js" handlerUniqueId="{49c9072a-9940-4917-81a6-051bbe5081c4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="state_id">
+            <Handlers>
+                <Handler functionName="XrmCore.Commands.ChangeState.onStateChange" libraryName="Main_system_library.js" handlerUniqueId="{c22d5d18-94b7-4ecd-bb25-fab40ac33865}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="entity_name" type="SafeString" />
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="entity_records" type="Object" />
+        <querystringparameter name="selected_state" type="Integer" />
+        <querystringparameter name="allowed_transitions" type="Object" />
+        <querystringparameter name="action_name" type="SafeString" />
+        <querystringparameter name="default_close_state" type="Integer" />
+    </formparameters>
+</form>

@@ -1,0 +1,517 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_parentPage" type="Object" />
+    </formparameters>
+    <header id="{6224F7A2-E831-42D0-B3F4-712D38275971}">
+        <rows>
+            <row>
+                <cell id="{52ADFA05-88F2-4246-BD66-EB34D0EAE2A7}">
+                    <labels>
+                        <label description="Recurrence" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_recurrencetitle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{387d8867-2ee3-4773-ac60-864a27d5c57e}" name="{3b38b787-6f6a-4484-9ab0-be9a2f2fde72}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{300d4334-34f0-4cb2-9ee8-e4f1014062e3}" name="{8f3ac5de-20a3-4bbc-8242-c4b4e48bf48b}">
+                            <labels>
+                                <label description="Recurrence Pattern" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{bbbdfc37-7402-4f2c-8c90-056768b0081b}">
+                                        <labels>
+                                            <label description="Repeat" languagecode="1033" />
+                                        </labels>
+                                        <control id="recurrence_pattern" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350000</DefaultValue>
+                                                <OptionSetName>msdyn_recurrencepattern</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{2E270F15-A94E-4EBF-AE15-32C00F8A611F}" name="section_daily">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{53191134-3338-47fb-900d-d8477aacb99a}">
+                                        <labels>
+                                            <label description="Repeat by" languagecode="1033" />
+                                        </labels>
+                                        <control id="daily_recurrence_pattern" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350000</DefaultValue>
+                                                <OptionSetName>msdyn_dailyrecurrence</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5E98FCD2-E7F1-402C-A547-3B09AC6D459B}">
+                                        <labels>
+                                            <label description="Every (#specified) day(s)" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtDailyRecurrence" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>1000000000</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{8B1FEE7B-3D87-4A11-BF83-169F16C3AEC6}" name="section_weekly">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{53191134-3338-47fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="Repeat every (#specified) week(s) on days selected below" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtWeeklyRecurEvery" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>1000000000</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53191134-3338-47fb-900d-d8477bbcb74a}">
+                                        <labels>
+                                            <label description="Sunday" languagecode="1033" />
+                                        </labels>
+                                        <control id="Recurrence_WeekDay_0" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53191134-3338-47fb-900d-d8477cccb74a}">
+                                        <labels>
+                                            <label description="Monday" languagecode="1033" />
+                                        </labels>
+                                        <control id="Recurrence_WeekDay_1" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53191134-3338-47fb-900d-d9477bbcb74a}">
+                                        <labels>
+                                            <label description="Tuesday" languagecode="1033" />
+                                        </labels>
+                                        <control id="Recurrence_WeekDay_2" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53191134-3338-47fb-900d-d8477bbcc84a}">
+                                        <labels>
+                                            <label description="Wednesday" languagecode="1033" />
+                                        </labels>
+                                        <control id="Recurrence_WeekDay_3" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{E51D3301-44A2-4AB7-8A6A-78D5DD8BB888}">
+                                        <labels>
+                                            <label description="Thursday" languagecode="1033" />
+                                        </labels>
+                                        <control id="Recurrence_WeekDay_4" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{24D8A352-C5C8-4AAB-9D73-4BBA20121D8F}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53192234-3338-47fb-900d-d8477bbcb74a}">
+                                        <labels>
+                                            <label description="Friday" languagecode="1033" />
+                                        </labels>
+                                        <control id="Recurrence_WeekDay_5" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53201134-3338-47fb-900d-d8477bbcb74a}">
+                                        <labels>
+                                            <label description="Saturday" languagecode="1033" />
+                                        </labels>
+                                        <control id="Recurrence_WeekDay_6" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <OptionSetId>{46288455-55e7-43ca-98e7-e957c77f2414}</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{FF7E42C8-20E7-45BD-9D74-5BF6E0EF58A8}" name="section_monthly">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{53191134-3338-48fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="Repeat by" languagecode="1033" />
+                                        </labels>
+                                        <control id="monthly_recurrence_pattern" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350000</DefaultValue>
+                                                <OptionSetName>msdyn_monthlyrecurrence</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0CB3CA21-86AF-4207-A9F5-3EAC79BD8EC1}">
+                                        <labels>
+                                            <label description="The day of month" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtMonthlyRecurrenceDay" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>1000000000</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{E11FC8CD-90CB-4756-83DA-D7023A3AA9EE}">
+                                        <labels>
+                                            <label description="Every (#specified) month(s)" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtMonthlyRecurrenceDayOfEveryMonth" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>1000000000</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53191135-3338-47fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="On" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddMonthlyThe" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350000</DefaultValue>
+                                                <OptionSetName>msdyn_recuron</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53192134-3338-47fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="The day of week" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddMonthlyTheDay" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350001</DefaultValue>
+                                                <OptionSetName>msdyn_recurrenceday</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{64191134-3338-47fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="Every (#specified) month(s)" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtMonthlyTheofEvery" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>1000000000</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{5EE610CC-B3EE-475D-A173-EC9C5DB4117B}" name="section_yearly">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{53191134-3438-47fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="Repeat by" languagecode="1033" />
+                                        </labels>
+                                        <control id="yearly_recurrence_pattern" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350000</DefaultValue>
+                                                <OptionSetName>msdyn_yearlyrecurrence</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53191134-3338-33fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="The day of month" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtYearlyDay" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>1000000000</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{54561134-3338-47fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="The month of year" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddYearlyMonth" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350000</DefaultValue>
+                                                <OptionSetName>msdyn_monthofyear</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53198294-3338-47fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="On" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddYearlyThe" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350000</DefaultValue>
+                                                <OptionSetName>msdyn_recuron</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53191134-8493-47fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="The day of week" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddYearlyTheDay" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350001</DefaultValue>
+                                                <OptionSetName>msdyn_recurrenceday</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53191134-3338-47fb-900d-d0977aacb74a}">
+                                        <labels>
+                                            <label description="The month of year" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddYearlyTheMonth" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350000</DefaultValue>
+                                                <OptionSetName>msdyn_monthofyear</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{C6ACBC1B-15D2-4988-8781-3429BBF11392}" name="{AC959455-17D5-4A43-A9C7-401C8FC8AEA6}">
+                            <labels>
+                                <label description="Range of Recurrence" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7b6d8d7d-a065-4497-99d0-d55cf1a7dde3}">
+                                        <labels>
+                                            <label description="Start Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="dtRecurrenceStartDate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{57791134-3338-47fb-900d-d8477aacb74a}">
+                                        <labels>
+                                            <label description="End Date Behavior" languagecode="1033" />
+                                        </labels>
+                                        <control id="ddRangeofRecurrence" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" disabled="false" isrequired="true">
+                                            <parameters>
+                                                <DefaultValue>192350000</DefaultValue>
+                                                <OptionSetName>msdyn_rangeofrecurrence</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5348c475-5005-4bb9-9f23-697bcc46b172}">
+                                        <labels>
+                                            <label description="Number of Occurrences" languagecode="1033" />
+                                        </labels>
+                                        <control id="txtRecurrenceRangeEndAfter" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" isunbound="true" isrequired="true">
+                                            <parameters>
+                                                <MinValue>1</MinValue>
+                                                <MaxValue>1000000000</MaxValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1abcf0cb-9059-4576-83d2-461d842829a0}">
+                                        <labels>
+                                            <label description="End Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="dtRecurrenceEndDate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{A736D0FB-7976-4360-ACEA-0F7499274EC6}" name="{26CFB1E8-7297-42DA-8D87-563ED288C7F5}">
+                            <labels>
+                                <label description="Custom Dates" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{AD640E2B-F728-4B3E-B9BE-74138877F96B}">
+                                        <labels>
+                                            <label description="Add Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="dtCustomDate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" isunbound="true" isrequired="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{E452F462-406B-405D-A577-3FB1F4BCB582}" rowspan="2">
+                                        <labels>
+                                            <label description="Dates" languagecode="1033" />
+                                        </labels>
+                                        <control id="dtCustomAllDates" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" isunbound="true" isrequired="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{f117bae3-f7bf-49e4-a2af-700e9a40665a}">
+        <rows>
+            <row>
+                <cell id="{1397a40c-e59e-47d7-bb3d-c7f59638ac02}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{512ad12b-c90c-4103-a3fb-f9b4dae6007d}">
+                    <labels>
+                        <label description="CANCEL" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false">
+            <Handlers>
+                <Handler functionName="Recurrence.Library.OnDialogOpen" libraryName="$webresource:msdyn_/Recurrence/Recurrence.Library.js" handlerUniqueId="{482e512a-9122-4015-9d60-1e59f9cd128a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" attribute="monthly_recurrence_pattern">
+            <Handlers>
+                <Handler functionName="Recurrence.Library.SetMonthlyChildElementVisibility" libraryName="$webresource:msdyn_/Recurrence/Recurrence.Library.js" handlerUniqueId="{06896d86-b695-4fb0-9946-251df9d29008}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" attribute="yearly_recurrence_pattern">
+            <Handlers>
+                <Handler functionName="Recurrence.Library.SetYearlyChildElementVisibility" libraryName="$webresource:msdyn_/Recurrence/Recurrence.Library.js" handlerUniqueId="{06896d86-b695-4fb0-9946-251df9d29008}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" attribute="recurrence_pattern">
+            <Handlers>
+                <Handler functionName="Recurrence.Library.SetSectionVisibility" libraryName="$webresource:msdyn_/Recurrence/Recurrence.Library.js" handlerUniqueId="{2995d4a3-3c56-40a6-9846-7b546173bfab}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" attribute="ddRangeofRecurrence">
+            <Handlers>
+                <Handler functionName="Recurrence.Library.SetRangeOfRecurrenceVisibility" libraryName="$webresource:msdyn_/Recurrence/Recurrence.Library.js" handlerUniqueId="{2995d4a3-3c56-40a6-9846-7b546173bfab}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" attribute="daily_recurrence_pattern">
+            <Handlers>
+                <Handler functionName="Recurrence.Library.SetDailySectionVisibility" libraryName="$webresource:msdyn_/Recurrence/Recurrence.Library.js" handlerUniqueId="{2995d4a3-3c56-40a6-9846-7b546173bfab}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Recurrence.Library.SaveRecurrenceSettings" libraryName="$webresource:msdyn_/Recurrence/Recurrence.Library.js" handlerUniqueId="{2995d4a3-3c56-40a6-9846-7b546173bfab}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" attribute="dtCustomDate">
+            <Handlers>
+                <Handler functionName="Recurrence.Library.AddCustomDate" libraryName="$webresource:msdyn_/Recurrence/Recurrence.Library.js" handlerUniqueId="{06896d86-b695-4fb0-9946-251df9d29008}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="Recurrence.Library.Close" libraryName="$webresource:msdyn_/Recurrence/Recurrence.Library.js" handlerUniqueId="{2995d4a3-3c56-40a6-9846-7b546173bfab}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_/Recurrence/Recurrence.Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>
