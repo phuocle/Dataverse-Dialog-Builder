@@ -53,12 +53,15 @@ export default (editor, opts = {}) => {
                 logicalname: ``,
             });
         }
-        else if (
-            component.is('LabelComponent') ||
-            component.is('ControlTextboxComponent') ||
-            component.is('ControlTextAreaComponent') ||
-            component.is('ControlDateTimeComponent')
-        ) {
+        //else if (
+        //    component.is('LabelComponent') ||
+        //    component.is('ControlTextboxComponent') ||
+        //    component.is('ControlTextAreaComponent') ||
+        //    component.is('ControlDateTimeComponent') ||
+        //    component.is('ControlNumberComponent')
+        //) {
+        else
+        {
             component.setAttributes({
                 ...component.getAttributes(),
                 uniqueid: `${uuidv4().toUpperCase()}`,
