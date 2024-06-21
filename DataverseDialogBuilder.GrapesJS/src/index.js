@@ -6,6 +6,7 @@ import loadCommands_Buttons from './commands_button'
 import loadPanels from './panels'
 import loadTraits from './traits'
 import * as Crm from './crm'
+import { v4 as uuidv4 } from 'uuid';
 
 export default (editor, opts = {}) => {
     const options = {
@@ -25,6 +26,41 @@ export default (editor, opts = {}) => {
         editor.addComponents(Const.NewDDB);
         const dc = editor.DomComponents;
         editor.select(dc.getComponents().at(0));
+    });
+    editor.on('component:clone', (component) => {
+        if (component.is('EventComponent')) {
+            component.setAttributes({
+                ...component.getAttributes(),
+                uniqueid: `${uuidv4().toUpperCase()}`,
+                func: ``,
+            });
+        }
+        else if (component.is('ParameterComponent')) {
+            component.setAttributes({
+                ...component.getAttributes(),
+                logicalname: ``,
+            });
+        }
+        else if (component.is('JavaScriptComponent')) {
+            component.setAttributes({
+                ...component.getAttributes(),
+                lib: ``,
+            });
+        }
+        else if (component.is('LabelComponent')) {
+            component.setAttributes({
+                ...component.getAttributes(),
+                uniqueid: `${uuidv4().toUpperCase()}`,
+                id: `${uuidv4().toUpperCase()}`,
+                logicalname: ``,
+            });
+        }
+        else if (component.is('ButtonComponent')) {
+            component.setAttributes({
+                ...component.getAttributes(),
+                logicalname: ``,
+            });
+        }
     });
     editor.on('component:add', (component) => {
         if (component.is('HeaderComponent')) {

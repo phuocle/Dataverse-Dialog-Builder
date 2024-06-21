@@ -15,7 +15,7 @@ export default (editor, options) => {
                 defaults: {
                     name: 'JavaScript',
                     classes: ['DDBJavaScript'],
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     hoverable: false,
                     draggable: '.DDBMetadata',
@@ -55,6 +55,8 @@ export default (editor, options) => {
                     if (!Helper.isEmpty(attr.lib)) {
                         model.getTrait('button_lib').attributes.text = attr.lib;
                     }
+                    else
+                        model.getTrait('button_lib').attributes.text = `Select Library Name`;
                     model?.view?.render();
                 },
                 toFormXml() {

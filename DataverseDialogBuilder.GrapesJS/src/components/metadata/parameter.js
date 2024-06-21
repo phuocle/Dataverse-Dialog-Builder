@@ -15,7 +15,7 @@ export default (editor, options) => {
                 defaults: {
                     name: 'Parameter',
                     classes: ['DDBParameter'],
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     hoverable: false,
                     draggable: '.DDBMetadata',
