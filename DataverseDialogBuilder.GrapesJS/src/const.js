@@ -54,5 +54,5 @@ export const OpenDDB = `<fieldset class='DDBMetadata'><legend>Metadata</legend><
 </fieldset>`;
 
 export const IconFindEvent = 'fa fa-hand-o-up';
-export const DisplayNone = '';// 'display:none;';
+export const DisplayNone = 'display:none;';
 export const ToolbarFindEvent = 'tlb-find-event';
