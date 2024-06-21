@@ -1,6 +1,7 @@
 export const OnlyOneMetadata = 'You can add only 1 metadata';
 export const OnlyOneHeader = 'You can add only 1 header';
 export const OnlyOneTabHeader = 'You can add only 1 tab header';
+export const OnlyTwoLabelInHeader = 'You can add only 2 label in header';
 export const OnlyOneFooter = 'You can add only 1 footer';
 export const OnlyOneTabFooter = 'You can add only 1 tab footer';
 export const OnlyOneTabs = 'You can add only 1 tabs';
