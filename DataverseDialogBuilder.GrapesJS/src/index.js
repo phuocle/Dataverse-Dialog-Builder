@@ -1,4 +1,3 @@
-import Helper from './helper';
 import * as Const from './const';
 import loadComponents from './components';
 import loadBlocks from './blocks';
@@ -9,17 +8,19 @@ import loadTraits from './traits'
 import * as Crm from './crm'
 
 export default (editor, opts = {}) => {
-  const options = { ...{
-  },  ...opts };
+    const options = {
+        ...{
+        }, ...opts
+    };
 
-  loadCommands(editor, options);
-  loadCommands_Buttons(editor, options);
-  loadPanels(editor, options);
-  loadComponents(editor, options);
-  loadBlocks(editor, options);
-  loadTraits(editor, options);
+    loadCommands(editor, options);
+    loadCommands_Buttons(editor, options);
+    loadPanels(editor, options);
+    loadComponents(editor, options);
+    loadBlocks(editor, options);
+    loadTraits(editor, options);
 
-  editor.on('load', () => {
+    editor.on('load', () => {
         editor.Panels.getButton('views', 'open-blocks').set('active', true);
         editor.addComponents(Const.NewDDB);
         const dc = editor.DomComponents;
@@ -64,8 +65,7 @@ export default (editor, opts = {}) => {
         if (component.is('LabelComponent')) {
             const parent = component.parent();
             if (parent.is('HeaderComponent')) {
-                if (parent.find('.DDBLabel').length > 2)
-                {
+                if (parent.find('.DDBLabel').length > 2) {
                     Crm.ShowAlert(Const.OnlyTwoLabelInHeader);
                     component.remove();
                 }
@@ -161,8 +161,8 @@ export default (editor, opts = {}) => {
             const para_entitylogicalname = component.get('traits').where({ name: 'para_entitylogicalname' })[0];
             para_entitylogicalname.set('options', options);
         }
-        //if (component.is("wrapper")) {
-        //    component.set('badgable', false);
-        //}
+        if (component.is("wrapper")) {
+            component.set('badgable', false);
+        }
     });
 };
