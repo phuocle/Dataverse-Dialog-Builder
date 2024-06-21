@@ -19,7 +19,7 @@ export default (editor, options) => {
                     name: 'OptionSet',
                     classes: ['DDBControlOptionSet'],
 
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     highlightable: false,
                     hoverable: false,
@@ -61,6 +61,7 @@ export default (editor, options) => {
                             type: 'text',
                             name: 'label',
                             label: 'Label',
+                            default: '???'
                         },
                         {
                             type: 'select',
@@ -77,6 +78,7 @@ export default (editor, options) => {
                             label: 'Is Dynamic?',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -84,6 +86,7 @@ export default (editor, options) => {
                             label: 'Required',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -91,6 +94,7 @@ export default (editor, options) => {
                             label: 'Disabled',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -98,6 +102,7 @@ export default (editor, options) => {
                             label: 'Visible',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         }
                     ],
                 },
@@ -108,13 +113,6 @@ export default (editor, options) => {
                         model.addAttributes({
                             id: uuidv4().toUpperCase(),
                             uniqueid: uuidv4().toUpperCase(),
-                            label: 'Label',
-                            optionsettype: 'OptionSet',
-                            visible: '1',
-                            disabled: '0',
-                            optionsetname: '',
-                            optionsetid: '',
-                            dynamic: '0'
                         });
                     }
                     model.listenTo(model, 'change:attributes:logicalname', model.changedOptionSet);
@@ -259,7 +257,7 @@ export default (editor, options) => {
                         }
                         if (comp.view.el.classList.contains(`DDBControlControl`)) {
                             const dynamicText = attr.dynamic === `1` ? `DYNAMIC` : '';
-                            comp.view.el.innerHTML = `${attr.optionsettype.toUpperCase()} ${dynamicText}</span>`;
+                            comp.view.el.innerHTML = `${attr.optionsettype?.toUpperCase() ?? '???'} ${dynamicText}</span>`;
                         }
                     });
                     return this;

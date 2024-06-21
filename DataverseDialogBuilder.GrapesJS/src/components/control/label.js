@@ -17,7 +17,7 @@ export default (editor, options) => {
                 defaults: {
                     name: 'Label',
                     classes: ['DDBLabel'],
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     hoverable: false,
                     draggable: '.DDBHeader, .DDBTabHeader, .DDBSection',
@@ -57,11 +57,13 @@ export default (editor, options) => {
                             type: 'text',
                             name: 'label',
                             label: 'Label',
+                            default: '???'
                         },
                         {
                             type: 'number',
                             name: 'rows',
                             label: 'Rows (*)',
+                            default: '1'
                         },
                         {
                             type: 'checkbox',
@@ -69,6 +71,7 @@ export default (editor, options) => {
                             label: 'Is Title',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -76,6 +79,7 @@ export default (editor, options) => {
                             label: 'Visible',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         }
                     ],
                 },
@@ -85,11 +89,7 @@ export default (editor, options) => {
                     if (Helper.isEmpty(attr.id)) {
                         model.addAttributes({
                             id: uuidv4().toUpperCase(),
-                            uniqueid: uuidv4().toUpperCase(),
-                            label: 'Label',
-                            rows: 1,
-                            visible: '1',
-                            istitle: '0',
+                            uniqueid: uuidv4().toUpperCase()
                         });
                     }
                     model.listenTo(model, 'change:attributes:logicalname', model.changedLabel);
@@ -98,7 +98,7 @@ export default (editor, options) => {
                     model.listenTo(model, 'change:attributes:rows', model.changedLabel);
                     model.listenTo(model, 'change:attributes:visible', model.changedLabel);
                     const parent = model.parent();
-                    if (parent.is('SectionComponent')) {
+                    if (parent?.is('SectionComponent')) {
                         const trait = model.getTrait('istitle');
                         trait.set('attributes', { style: 'display: none' });
                     }

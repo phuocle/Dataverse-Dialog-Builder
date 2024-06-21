@@ -18,7 +18,7 @@ export default (editor, options) => {
                 defaults: {
                     name: 'Chart',
                     classes: ['DDBControlChart'],
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     highlightable: false,
                     hoverable: false,
@@ -59,6 +59,7 @@ export default (editor, options) => {
                             type: 'text',
                             name: 'label',
                             label: 'Label',
+                            default: '???'
                         },
                         {
                             type: 'text-readonly',
@@ -103,6 +104,7 @@ export default (editor, options) => {
                             label: 'View Picker?',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -110,11 +112,13 @@ export default (editor, options) => {
                             label: 'Chart Picker?',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'number',
                             name: 'rows',
                             label: 'Rows (*)',
+                            default: '5'
                         },
                         {
                             type: 'checkbox',
@@ -122,6 +126,7 @@ export default (editor, options) => {
                             label: 'Visible',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         }
                     ],
                 },
@@ -132,8 +137,6 @@ export default (editor, options) => {
                         model.addAttributes({
                             id: uuidv4().toUpperCase(),
                             uniqueid: uuidv4().toUpperCase(),
-                            rows: 5,
-                            visible: '1',
                         });
                     }
                     model.listenTo(model, 'change:attributes:logicalname', model.changedChart);

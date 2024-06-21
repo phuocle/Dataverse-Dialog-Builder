@@ -18,7 +18,7 @@ export default (editor, options) => {
                 defaults: {
                     name: 'Subgrid',
                     classes: ['DDBControlSubgrid'],
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     highlightable: false,
                     hoverable: false,
@@ -59,6 +59,7 @@ export default (editor, options) => {
                             type: 'text',
                             name: 'label',
                             label: 'Label',
+                            default: '???'
                         },
                         {
                             type: 'text-readonly',
@@ -96,6 +97,7 @@ export default (editor, options) => {
                             type: 'number',
                             name: 'perpage',
                             label: 'Records Per Page (*)',
+                            default: '5'
                         },
                         {
                             type: 'checkbox',
@@ -103,6 +105,7 @@ export default (editor, options) => {
                             label: 'Contextual?',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -110,6 +113,7 @@ export default (editor, options) => {
                             label: 'Quick Find?',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -117,11 +121,13 @@ export default (editor, options) => {
                             label: 'View Picker?',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'number',
                             name: 'rows',
                             label: 'Rows (*)',
+                            default: '5'
                         },
                         {
                             type: 'checkbox',
@@ -129,6 +135,7 @@ export default (editor, options) => {
                             label: 'Visible',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         }
                     ],
                 },
@@ -138,10 +145,7 @@ export default (editor, options) => {
                     if (Helper.isEmpty(attr.id)) {
                         model.addAttributes({
                             id: uuidv4().toUpperCase(),
-                            uniqueid: uuidv4().toUpperCase(),
-                            visible: '1',
-                            perpage: 5,
-                            rows: 5,
+                            uniqueid: uuidv4().toUpperCase()
                         });
                     }
                     model.listenTo(model, 'change:attributes:logicalname', model.changedSubgrid);

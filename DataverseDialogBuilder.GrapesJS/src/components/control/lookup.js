@@ -19,7 +19,7 @@ export default (editor, options) => {
                     name: 'Lookup',
                     classes: ['DDBControlLookup'],
 
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     highlightable: false,
                     hoverable: false,
@@ -61,6 +61,7 @@ export default (editor, options) => {
                             type: 'text',
                             name: 'label',
                             label: 'Label',
+                            default: '???'
                         },
 
                         {
@@ -233,6 +234,7 @@ export default (editor, options) => {
                             label: 'Disable View Picker',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -240,6 +242,7 @@ export default (editor, options) => {
                             label: 'Disable Quick Find',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -247,6 +250,7 @@ export default (editor, options) => {
                             label: 'Disable Mru',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         },
                         {
                             type: 'checkbox',
@@ -254,6 +258,7 @@ export default (editor, options) => {
                             label: 'Auto Resolve',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         },
                         {
                             type: 'checkbox',
@@ -261,6 +266,7 @@ export default (editor, options) => {
                             label: 'Use Main Form Dialog For Create',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         },
                         {
                             type: 'checkbox',
@@ -268,6 +274,7 @@ export default (editor, options) => {
                             label: 'Use Main Form Dialog For Edit',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         },
 
                         {
@@ -276,6 +283,7 @@ export default (editor, options) => {
                             label: 'Required',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -283,6 +291,7 @@ export default (editor, options) => {
                             label: 'Disabled',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -290,6 +299,7 @@ export default (editor, options) => {
                             label: 'Visible',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         }
                     ],
                 },
@@ -300,17 +310,6 @@ export default (editor, options) => {
                         model.addAttributes({
                             id: uuidv4().toUpperCase(),
                             uniqueid: uuidv4().toUpperCase(),
-                            label: 'Label',
-
-                            disableviewpicker: '0',
-                            disablequickfind: '0',
-                            disablemru: '0',
-                            autoresolve: '1',
-                            usemainformdialogforcreate: '0',
-                            usemainformdialogforedit: '0',
-
-                            visible: '1',
-                            disabled: '0',
                         });
                     }
                     model.listenTo(model, 'change:attributes:logicalname', model.changedLookup);

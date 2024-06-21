@@ -18,7 +18,7 @@ export default (editor, options) => {
                     name: 'Iframe',
                     classes: ['DDBControlIframe'],
 
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     highlightable: false,
                     hoverable: false,
@@ -60,11 +60,13 @@ export default (editor, options) => {
                             type: 'text',
                             name: 'label',
                             label: 'Label',
+                            default: '???'
                         },
                         {
                             type: 'number',
                             name: 'rows',
                             label: 'Rows (*)',
+                            default: '5'
                         },
                         {
                             type: 'text',
@@ -77,6 +79,7 @@ export default (editor, options) => {
                             label: 'Pass Parameters',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -84,6 +87,7 @@ export default (editor, options) => {
                             label: 'Security',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -91,6 +95,7 @@ export default (editor, options) => {
                             label: 'Scrolling',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -98,6 +103,7 @@ export default (editor, options) => {
                             label: 'Border',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -105,6 +111,7 @@ export default (editor, options) => {
                             label: 'Show On Mobile Client',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -112,6 +119,7 @@ export default (editor, options) => {
                             label: 'Visible',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         }
                     ],
                 },
@@ -122,9 +130,6 @@ export default (editor, options) => {
                         model.addAttributes({
                             id: uuidv4().toUpperCase(),
                             uniqueid: uuidv4().toUpperCase(),
-                            label: 'Label',
-                            rows: 3,
-                            visible: '1',
                         });
                     }
                     model.listenTo(model, 'change:attributes:logicalname', model.changedIframe);

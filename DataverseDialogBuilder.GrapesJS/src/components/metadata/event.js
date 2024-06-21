@@ -16,7 +16,7 @@ export default (editor, options) => {
                 defaults: {
                     name: 'Event',
                     classes: ['DDBEvent'],
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     hoverable: false,
                     draggable: '.DDBMetadata',
@@ -72,6 +72,7 @@ export default (editor, options) => {
                             label: 'Execution Context',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         },
                         {
                             type: 'text',
@@ -86,7 +87,6 @@ export default (editor, options) => {
                     if (Helper.isEmpty(attr.uniqueid)) {
                         model.addAttributes({
                             uniqueid: uuidv4().toUpperCase(),
-                            context: '1'
                         });
                     }
                     model.listenTo(model, 'change:attributes:func', model.changedEvent);
