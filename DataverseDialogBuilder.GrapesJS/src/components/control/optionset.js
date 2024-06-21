@@ -117,7 +117,6 @@ export default (editor, options) => {
                             dynamic: '0'
                         });
                     }
-                    model.set('toolbar', [...model.get('toolbar'), { attributes: { class: Const.IconFindEvent }, command: Const.ToolbarFindEvent}]);
                     model.listenTo(model, 'change:attributes:logicalname', model.changedOptionSet);
                     model.listenTo(model, 'change:attributes:label', model.changedOptionSet);
                     model.listenTo(model, 'change:attributes:optionsettype', model.changedOptionSet);

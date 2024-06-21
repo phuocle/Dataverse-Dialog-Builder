@@ -107,7 +107,6 @@ export default (editor, options) => {
                             disabled: '0',
                         });
                     }
-                    model.set('toolbar', [...model.get('toolbar'), { attributes: { class: Const.IconFindEvent }, command: Const.ToolbarFindEvent}]);
                     model.listenTo(model, 'change:attributes:logicalname', model.changedDropDown);
                     model.listenTo(model, 'change:attributes:label', model.changedDropDown);
                     model.listenTo(model, 'change:attributes:dropdowntype', model.changedDropDown);

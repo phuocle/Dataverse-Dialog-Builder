@@ -134,7 +134,6 @@ export default (editor, options) => {
                             twooptionsname: ''
                         });
                     }
-                    model.set('toolbar', [...model.get('toolbar'), { attributes: { class: Const.IconFindEvent }, command: Const.ToolbarFindEvent}]);
                     model.listenTo(model, 'change:attributes:logicalname', model.changedTwoOptions);
                     model.listenTo(model, 'change:attributes:label', model.changedTwoOptions);
                     model.listenTo(model, 'change:attributes:twooptionstype', model.changedTwoOptions);

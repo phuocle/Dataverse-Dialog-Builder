@@ -68,16 +68,10 @@ const helpers = {
     },
     msg: (editor, message, callback) => {
         try {
-            Crm.ShowAlertWithCallback(message, callback, null);
+            Crm.ShowAlert(message);
         }
         catch {
-            const modal = editor.Modal;
-            modal.setTitle(Const.Error);
-            modal.setContent(message);
-            modal
-                .open()
-                .getModel()
-                .once('change:open', () => callback());
+            callback();
         }
     },
     msgInformation: (editor, message, callback) => {

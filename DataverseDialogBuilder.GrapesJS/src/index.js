@@ -1,4 +1,3 @@
-import Helper from './helper';
 import * as Const from './const';
 import loadComponents from './components';
 import loadBlocks from './blocks';
@@ -6,19 +5,22 @@ import loadCommands from './commands'
 import loadCommands_Buttons from './commands_button'
 import loadPanels from './panels'
 import loadTraits from './traits'
+import * as Crm from './crm'
 
 export default (editor, opts = {}) => {
-  const options = { ...{
-  },  ...opts };
+    const options = {
+        ...{
+        }, ...opts
+    };
 
-  loadCommands(editor, options);
-  loadCommands_Buttons(editor, options);
-  loadPanels(editor, options);
-  loadComponents(editor, options);
-  loadBlocks(editor, options);
-  loadTraits(editor, options);
+    loadCommands(editor, options);
+    loadCommands_Buttons(editor, options);
+    loadPanels(editor, options);
+    loadComponents(editor, options);
+    loadBlocks(editor, options);
+    loadTraits(editor, options);
 
-  editor.on('load', () => {
+    editor.on('load', () => {
         editor.Panels.getButton('views', 'open-blocks').set('active', true);
         editor.addComponents(Const.NewDDB);
         const dc = editor.DomComponents;
@@ -28,41 +30,45 @@ export default (editor, opts = {}) => {
         if (component.is('HeaderComponent')) {
             const parent = component.parent();
             if (parent.find('.DDBHeader').length > 1) {
-                Helper.msg(editor, Const.OnlyOneHeader, () => {
-                    component.remove();
-                });
+                Crm.ShowAlert(Const.OnlyOneHeader);
+                component.remove();
             }
         }
         if (component.is('FooterComponent')) {
             const parent = component.parent();
             if (parent.find('.DDBFooter').length > 1) {
-                Helper.msg(editor, Const.OnlyOneFooter, () => {
-                    component.remove();
-                });
+                Crm.ShowAlert(Const.OnlyOneFooter);
+                component.remove();
             }
         }
         if (component.is('TabHeaderComponent')) {
             const parent = component.parent();
             if (parent.find('.DDBTabHeader').length > 1) {
-                Helper.msg(editor, Const.OnlyOneTabHeader, () => {
-                    component.remove();
-                });
+                Crm.ShowAlert(Const.OnlyOneTabHeader);
+                component.remove();
             }
         }
         if (component.is('TabFooterComponent')) {
             const parent = component.parent();
             if (parent.find('.DDBTabFooter').length > 1) {
-                Helper.msg(editor, Const.OnlyOneTabFooter, () => {
-                    component.remove();
-                });
+                Crm.ShowAlert(Const.OnlyOneTabFooter);
+                component.remove();
             }
         }
         if (component.is('SectionComponent')) {
             const parent = component.parent();
             if (parent.find('.DDBSection').length > 3) {
-                Helper.msg(editor, Const.Only3Section, () => {
+                Crm.ShowAlert(Const.Only3Section);
+                component.remove();
+            }
+        }
+        if (component.is('LabelComponent')) {
+            const parent = component.parent();
+            if (parent.is('HeaderComponent')) {
+                if (parent.find('.DDBLabel').length > 2) {
+                    Crm.ShowAlert(Const.OnlyTwoLabelInHeader);
                     component.remove();
-                });
+                }
             }
         }
     });
