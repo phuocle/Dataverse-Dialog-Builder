@@ -155,8 +155,8 @@ export default (editor, opts = {}) => {
             const para_entitylogicalname = component.get('traits').where({ name: 'para_entitylogicalname' })[0];
             para_entitylogicalname.set('options', options);
         }
-        if (component.is("wrapper")) {
-            component.set('badgable', false);
-        }
+        //if (component.is("wrapper")) {
+        //    component.set('badgable', false);
+        //}
     });
 };
