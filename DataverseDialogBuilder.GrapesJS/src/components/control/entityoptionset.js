@@ -18,7 +18,7 @@ export default (editor, options) => {
                     name: 'EntityOptionSet',
                     classes: ['DDBControlEntityOptionSet'],
 
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     highlightable: false,
                     hoverable: false,
@@ -60,6 +60,7 @@ export default (editor, options) => {
                             type: 'text',
                             name: 'label',
                             label: 'Label',
+                            default: '???'
                         },
                         {
                             type: 'select',
@@ -72,6 +73,7 @@ export default (editor, options) => {
                             label: 'Required',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -79,6 +81,7 @@ export default (editor, options) => {
                             label: 'Disabled',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '0'
                         },
                         {
                             type: 'checkbox',
@@ -86,6 +89,7 @@ export default (editor, options) => {
                             label: 'Visible',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         }
                     ],
                 },
@@ -96,9 +100,6 @@ export default (editor, options) => {
                         model.addAttributes({
                             id: uuidv4().toUpperCase(),
                             uniqueid: uuidv4().toUpperCase(),
-                            label: 'Label',
-                            visible: '1',
-                            disabled: '0',
                         });
                     }
                     model.listenTo(model, 'change:attributes:logicalname', model.changedEntityOptionSet);

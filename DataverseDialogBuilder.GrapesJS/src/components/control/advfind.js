@@ -18,7 +18,7 @@ export default (editor, options) => {
                     name: 'AdvFind',
                     classes: ['DDBControlAdvFind'],
 
-                    copyable: false,
+                    copyable: true,
                     badgable: false,
                     highlightable: false,
                     hoverable: false,
@@ -82,6 +82,7 @@ export default (editor, options) => {
                             label: 'Visible',
                             valueTrue: '1',
                             valueFalse: '0',
+                            default: '1'
                         }
                     ],
                 },
@@ -92,7 +93,6 @@ export default (editor, options) => {
                         model.addAttributes({
                             id: uuidv4().toUpperCase(),
                             uniqueid: uuidv4().toUpperCase(),
-                            visible: '1',
                         });
                     }
                     model.listenTo(model, 'change:attributes:logicalname', model.changedAdvFind);

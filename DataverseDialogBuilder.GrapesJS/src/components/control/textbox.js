@@ -77,7 +77,6 @@ export default (editor, options) => {
                             type: 'number',
                             name: 'maxlength',
                             label: 'Max Length (*)',
-                            default: '100'
                         },
                         {
                             type: 'checkbox',
