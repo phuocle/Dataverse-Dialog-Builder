@@ -57,6 +57,7 @@ export default (editor, options) => {
                             type: 'text',
                             name: 'label',
                             label: 'Label',
+                            default: '???'
                         },
                         {
                             type: 'number',

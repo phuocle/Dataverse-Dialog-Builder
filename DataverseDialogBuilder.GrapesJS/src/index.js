@@ -47,17 +47,22 @@ export default (editor, opts = {}) => {
                 lib: ``,
             });
         }
-        else if (component.is('LabelComponent')) {
+        else if (component.is('ButtonComponent')) {
+            component.setAttributes({
+                ...component.getAttributes(),
+                logicalname: ``,
+            });
+        }
+        else if (
+            component.is('LabelComponent') ||
+            component.is('ControlTextboxComponent') ||
+            component.is('ControlTextAreaComponent') ||
+            component.is('ControlDateTimeComponent')
+        ) {
             component.setAttributes({
                 ...component.getAttributes(),
                 uniqueid: `${uuidv4().toUpperCase()}`,
                 id: `${uuidv4().toUpperCase()}`,
-                logicalname: ``,
-            });
-        }
-        else if (component.is('ButtonComponent')) {
-            component.setAttributes({
-                ...component.getAttributes(),
                 logicalname: ``,
             });
         }
