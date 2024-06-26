@@ -21,7 +21,7 @@ export default (editor, options) => {
                     highlightable: false,
                     hoverable: false,
                     draggable: '.DDBSections',
-                    droppable: '.DDBLabel, .DDBControlTextbox, .DDBControlDateTime, .DDBControlNumber, .DDBControlLookup, .DDBControlRegarding, .DDBControlIframe, .DDBControlSpacer, .DDBControlTextArea, .DDBControlDropDown, .DDBControlOptionSet, .DDBControlTwoOptions, .DDBControlSubgrid, .DDBControlChart, .DDBControlAdvFind, .DDBControlAdvFindResult, .DDBControlAdvFindAndResult, .DDBControlRichTextBox, .DDBControlEntityOptionSet, .DDBControlUpload, .DDBControlUnknown, .DDBControlMultiselectLookup',
+                    droppable: '.DDBLabel, .DDBControlTextBox, .DDBControlDateTime, .DDBControlNumber, .DDBControlLookup, .DDBControlRegarding, .DDBControlIframe, .DDBControlSpacer, .DDBControlTextArea, .DDBControlDropDown, .DDBControlOptionSet, .DDBControlTwoOptions, .DDBControlSubgrid, .DDBControlChart, .DDBControlAdvFind, .DDBControlAdvFindResult, .DDBControlAdvFindAndResult, .DDBControlRichTextBox, .DDBControlEntityOptionSet, .DDBControlUpload, .DDBControlUnknown, .DDBControlMultiselectLookup',
                     traits: [
                         {
                             type: 'text-readonly',

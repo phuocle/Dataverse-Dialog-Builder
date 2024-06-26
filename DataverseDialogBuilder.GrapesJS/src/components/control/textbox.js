@@ -5,18 +5,18 @@ import * as GUID from '../../guid';
 
 export default (editor, options) => {
     return {
-        type: 'ControlTextboxComponent',
+        type: 'ControlTextBoxComponent',
         methods: {
             isComponent: (el) => {
-                if (el && el.classList && el.classList.contains('DDBControlTextbox')) {
-                    return { type: 'ControlTextboxComponent' };
+                if (el && el.classList && el.classList.contains('DDBControlTextBox')) {
+                    return { type: 'ControlTextBoxComponent' };
                 }
                 return false;
             },
             model: {
                 defaults: {
-                    name: 'Textbox',
-                    classes: ['DDBControlTextbox'],
+                    name: 'TextBox',
+                    classes: ['DDBControlTextBox'],
 
                     copyable: true,
                     badgable: false,
@@ -45,7 +45,7 @@ export default (editor, options) => {
                             type: 'text-readonly',
                             name: 'type',
                             label: 'Type',
-                            value: 'Textbox'
+                            value: 'TextBox'
                         },
                         {
                             type: 'text',
@@ -64,7 +64,7 @@ export default (editor, options) => {
                         {
                             type: 'select',
                             name: 'textboxtype',
-                            label: 'Textbox Type (*)',
+                            label: 'TextBox Type (*)',
                             options: [
                                 { id: 'Text', name: 'Text' },
                                 { id: 'Email', name: 'Email' },
@@ -113,15 +113,15 @@ export default (editor, options) => {
                             uniqueid: uuidv4().toUpperCase(),
                         });
                     }
-                    model.listenTo(model, 'change:attributes:logicalname', model.changedTextbox);
-                    model.listenTo(model, 'change:attributes:label', model.changedTextbox);
-                    model.listenTo(model, 'change:attributes:textboxtype', model.changedTextbox);
-                    model.listenTo(model, 'change:attributes:maxlength', model.changedTextbox);
-                    model.listenTo(model, 'change:attributes:required', model.changedTextbox);
-                    model.listenTo(model, 'change:attributes:disabled', model.changedTextbox);
-                    model.listenTo(model, 'change:attributes:visible', model.changedTextbox);
+                    model.listenTo(model, 'change:attributes:logicalname', model.changedTextBox);
+                    model.listenTo(model, 'change:attributes:label', model.changedTextBox);
+                    model.listenTo(model, 'change:attributes:textboxtype', model.changedTextBox);
+                    model.listenTo(model, 'change:attributes:maxlength', model.changedTextBox);
+                    model.listenTo(model, 'change:attributes:required', model.changedTextBox);
+                    model.listenTo(model, 'change:attributes:disabled', model.changedTextBox);
+                    model.listenTo(model, 'change:attributes:visible', model.changedTextBox);
                 },
-                changedTextbox() {
+                changedTextBox() {
                     this?.view?.render();
                 },
                 getClassId() {

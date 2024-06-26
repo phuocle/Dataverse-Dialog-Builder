@@ -66,7 +66,7 @@ export default (editor, options) => {
                         {
                             type: 'select',
                             name: 'twooptionstype',
-                            label: 'Type (*)',
+                            label: 'TwoOptions Type (*)',
                             options: [
                                 { id: 'Dropdown', name: 'Dropdown' },
                                 { id: 'Checkbox', name: 'Checkbox' },
@@ -83,8 +83,8 @@ export default (editor, options) => {
                         {
                             type: 'button',
                             name: 'button_entitylogicalname01',
-                            label: 'Local EntityLogicalName (*)',
-                            text: 'Select Local EntityLogicalName',
+                            label: 'Local Entity Logical Name (*)',
+                            text: 'Select Local Entity Logical Name',
                             full: true,
                             command: 'trait_button_select_entity_01'
                         },

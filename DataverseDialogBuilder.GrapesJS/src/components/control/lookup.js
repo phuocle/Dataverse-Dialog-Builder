@@ -67,7 +67,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'entitylogicalname01',
-                            label: 'EntityLogicalName 01 (*)',
+                            label: 'Entity Logical Name 01 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }
@@ -75,7 +75,7 @@ export default (editor, options) => {
                         {
                             type: 'button',
                             name: 'button_entitylogicalname01',
-                            label: 'EntityLogicalName 01 (*)',
+                            label: 'Entity Logical Name 01 (*)',
                             text: '&nbsp;',
                             full: true,
                             command: 'trait_button_select_entity_01'
@@ -83,7 +83,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'viewid01',
-                            label: 'ViewId 01 (*)',
+                            label: 'View Id 01 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }
@@ -100,7 +100,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'entitylogicalname02',
-                            label: 'EntityLogicalName 02 (*)',
+                            label: 'Entity Logical Name 02 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }
@@ -108,7 +108,7 @@ export default (editor, options) => {
                         {
                             type: 'button',
                             name: 'button_entitylogicalname02',
-                            label: 'EntityLogicalName 02 (*)',
+                            label: 'Entity Logical Name 02 (*)',
                             text: '&nbsp;',
                             full: true,
                             command: 'trait_button_select_entity_02'
@@ -116,7 +116,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'viewid02',
-                            label: 'ViewId 02 (*)',
+                            label: 'View Id 02 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }
@@ -133,7 +133,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'entitylogicalname03',
-                            label: 'EntityLogicalName 03 (*)',
+                            label: 'Entity Logical Name 03 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }
@@ -141,7 +141,7 @@ export default (editor, options) => {
                         {
                             type: 'button',
                             name: 'button_entitylogicalname03',
-                            label: 'EntityLogicalName 03 (*)',
+                            label: 'Entity Logical Name 03 (*)',
                             text: '&nbsp;',
                             full: true,
                             command: 'trait_button_select_entity_03'
@@ -149,7 +149,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'viewid03',
-                            label: 'ViewId 03 (*)',
+                            label: 'View Id 03 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }
@@ -166,7 +166,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'entitylogicalname04',
-                            label: 'EntityLogicalName 04 (*)',
+                            label: 'Entity Logical Name 04 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }
@@ -174,7 +174,7 @@ export default (editor, options) => {
                         {
                             type: 'button',
                             name: 'button_entitylogicalname04',
-                            label: 'EntityLogicalName 04 (*)',
+                            label: 'Entity Logical Name 04 (*)',
                             text: '&nbsp;',
                             full: true,
                             command: 'trait_button_select_entity_04'
@@ -182,7 +182,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'viewid04',
-                            label: 'ViewId 04 (*)',
+                            label: 'View Id 04 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }
@@ -199,7 +199,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'entitylogicalname05',
-                            label: 'EntityLogicalName 05 (*)',
+                            label: 'Entity Logical Name 05 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }
@@ -207,7 +207,7 @@ export default (editor, options) => {
                         {
                             type: 'button',
                             name: 'button_entitylogicalname05',
-                            label: 'EntityLogicalName 05 (*)',
+                            label: 'Entity Logical Name 05 (*)',
                             text: '&nbsp;',
                             full: true,
                             command: 'trait_button_select_entity_05'
@@ -215,7 +215,7 @@ export default (editor, options) => {
                         {
                             type: 'text-readonly',
                             name: 'viewid05',
-                            label: 'ViewId 05 (*)',
+                            label: 'View Id 05 (*)',
                             attributes: {
                                 style: Const.DisplayNone
                             }

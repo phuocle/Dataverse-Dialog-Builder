@@ -45,7 +45,7 @@ export default (editor, options) => {
                             type: 'text-readonly',
                             name: 'type',
                             label: 'Type',
-                            value: 'Textarea'
+                            value: 'TextArea'
                         },
                         {
                             type: 'text',

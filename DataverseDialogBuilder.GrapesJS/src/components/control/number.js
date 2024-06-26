@@ -65,7 +65,7 @@ export default (editor, options) => {
                         {
                             type: 'select',
                             name: 'numbertype',
-                            label: 'Type (*)',
+                            label: 'Number Type (*)',
                             options: [
                                 { id: 'WholeNumber', name: 'Whole Number' },
                                 { id: 'DecimalNumber', name: 'Decimal Number' },

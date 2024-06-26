@@ -112,10 +112,10 @@ const helpers = {
         return '1033';
     },
     isComponentSupportPCF: (comp) => {
-        return comp.is('ControlChartComponent') || comp.is('ControlDateTimeComponent') || comp.is('ControlDropDownComponent') || comp.is('ControlIframeComponent') || comp.is('ControlLookupComponent') || comp.is('ControlNumberComponent') || comp.is('ControlOptionSetComponent') || comp.is('ControlSubgridComponent') || comp.is('ControlTextAreaComponent') || comp.is('ControlTextboxComponent') || comp.is('ControlTwoOptionsComponent');
+        return comp.is('ControlChartComponent') || comp.is('ControlDateTimeComponent') || comp.is('ControlDropDownComponent') || comp.is('ControlIframeComponent') || comp.is('ControlLookupComponent') || comp.is('ControlNumberComponent') || comp.is('ControlOptionSetComponent') || comp.is('ControlSubgridComponent') || comp.is('ControlTextAreaComponent') || comp.is('ControlTextBoxComponent') || comp.is('ControlTwoOptionsComponent');
     },
     isComponentSupportOnChange: (comp) => {
-        return comp.is('ControlDateTimeComponent') || comp.is('ControlDropDownComponent') || comp.is('ControlLookupComponent') || comp.is('ControlNumberComponent') || comp.is('ControlOptionSetComponent') || comp.is('ControlTextAreaComponent') || comp.is('ControlTextboxComponent') || comp.is('ControlTwoOptionsComponent');
+        return comp.is('ControlDateTimeComponent') || comp.is('ControlDropDownComponent') || comp.is('ControlLookupComponent') || comp.is('ControlNumberComponent') || comp.is('ControlOptionSetComponent') || comp.is('ControlTextAreaComponent') || comp.is('ControlTextBoxComponent') || comp.is('ControlTwoOptionsComponent');
     },
     escapeXml: (unsafe) => {
         return unsafe?.replace(/[<>&'"]/g, (c) => {
@@ -277,7 +277,7 @@ const helpers = {
     </parameters>`;
                 controlDescription += getControlDescription(attr.uniqueid, `${ControlName.MscrmControls_AppCommon_PartyListWrapper}`, parameters);
             });
-            editor.getWrapper().find('.DDBControlTextbox').map((comp) => {
+            editor.getWrapper().find('.DDBControlTextBox').map((comp) => {
                 const attr = comp.getAttributes();
                 const parameters = `
     <parameters>
