@@ -68,25 +68,25 @@ export default (editor, opts = {}) => {
         content: `<div class='DDBButton'></div>`
     });
     blockManager.add('block_textbox', {
-        label: 'Textbox',
+        label: 'TextBox',
         category: '03. Control',
         attributes: { class: 'fa fa-pencil-square-o' },
-        content: `<div class='DDBControlTextbox'><div class='DDBControlLabel'></div><div class='DDBControlControl'></div></div>`
+        content: `<div class='DDBControlTextBox'><div class='DDBControlLabel'></div><div class='DDBControlControl'></div></div>`
     });
     blockManager.add('block_textarea', {
-        label: 'Textarea',
+        label: 'TextArea',
         category: '03. Control',
         attributes: { class: 'fa fa-sticky-note-o' },
         content: `<div class='DDBControlTextArea'><div class='DDBControlLabel'></div><div class='DDBControlControl'></div></div>`
     });
     blockManager.add('block_rich_text_box', {
-        label: 'Rich Textbox',
+        label: 'RichTextBox',
         category: '03. Control',
         attributes: { class: 'fa fa-paragraph' },
         content: `<div class='DDBControlRichTextBox'><div class='DDBControlLabel'></div><div class='DDBControlControl'></div></div>`
     });
     blockManager.add('block_datetime', {
-        label: 'Datetime',
+        label: 'DateTime',
         category: '03. Control',
         attributes: { class: 'fa fa-calendar' },
         content: `<div class='DDBControlDateTime'><div class='DDBControlLabel'></div><div class='DDBControlControl'></div></div>`

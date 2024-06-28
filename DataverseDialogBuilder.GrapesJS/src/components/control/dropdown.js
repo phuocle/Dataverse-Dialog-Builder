@@ -65,7 +65,7 @@ export default (editor, options) => {
                         {
                             type: 'select',
                             name: 'dropdowntype',
-                            label: 'Type (*)',
+                            label: 'Dropdown Type (*)',
                             options: [
                                 { id: 'Language', name: 'Language' },
                                 { id: 'TimeZone', name: 'Time Zone' },

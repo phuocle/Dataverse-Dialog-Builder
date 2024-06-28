@@ -65,7 +65,7 @@ export default (editor, options) => {
                         {
                             type: 'select',
                             name: 'datetimetype',
-                            label: 'Type (*)',
+                            label: 'DateTime Type (*)',
                             options: [
                                 { id: 'Date', name: 'Date' },
                                 { id: 'DateAndTime', name: 'DateAndTime' },

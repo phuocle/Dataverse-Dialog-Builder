@@ -66,7 +66,7 @@ export default (editor, options) => {
                         {
                             type: 'select',
                             name: 'optionsettype',
-                            label: 'Type (*)',
+                            label: 'OptionSet Type (*)',
                             options: [
                                 { id: 'OptionSet', name: 'OptionSet' },
                                 { id: 'MultiSelect OptionSet', name: 'MultiSelect OptionSet' },
@@ -182,8 +182,8 @@ export default (editor, options) => {
                             model.addTrait({
                                 type: 'button',
                                 name: 'button_entitylogicalname01',
-                                label: 'Local EntityLogicalName (*)',
-                                text: 'Select Local EntityLogicalName',
+                                label: 'Local Entity Logical Name (*)',
+                                text: 'Select Local Entity Logical Name',
                                 full: true,
                                 command: 'trait_button_select_entity_01'
                             }, { at: 9 });

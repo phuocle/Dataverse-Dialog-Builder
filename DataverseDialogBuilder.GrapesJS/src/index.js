@@ -55,7 +55,7 @@ export default (editor, opts = {}) => {
         }
         //else if (
         //    component.is('LabelComponent') ||
-        //    component.is('ControlTextboxComponent') ||
+        //    component.is('ControlTextBoxComponent') ||
         //    component.is('ControlTextAreaComponent') ||
         //    component.is('ControlDateTimeComponent') ||
         //    component.is('ControlNumberComponent')
