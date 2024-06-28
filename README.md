@@ -1,4 +1,3 @@
-# Dataverse Dialog Builder
 Welcome to ```Dataverse Dialog Builder```, a managed solution helps you build Microsoft Dataverse OOB dialogs, such as the ```Assign dialog```, ```Close Opportunity dialog```, ...
 
 If you are a Microsoft Dataverse developer, especially when working on model-driven app, you encounter a lot of dialogs like the ones shown in the images below.\
