@@ -65,12 +65,12 @@ export default (editor, options) => {
                         {
                             type: 'select',
                             name: 'para_attachment_file_name',
-                            label: 'Attachment File Name (SafeString) (*)'
+                            label: 'Parameter Attachment File Name (SafeString) (*)'
                         },
                         {
                             type: 'select',
                             name: 'para_uploaded_file_size',
-                            label: 'Uploaded File Size (Integer) (*)'
+                            label: 'Parameter Uploaded File Size (Integer) (*)'
                         },
                         {
                             type: 'checkbox',
