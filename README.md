@@ -1,6 +1,6 @@
 Welcome to ```Dataverse Dialog Builder```, a managed solution helps you build Microsoft Dataverse OOB dialogs, such as the ```Assign dialog```, ```Close Opportunity dialog```, ...
 
-If you are a Microsoft Dataverse developer, especially when working on model-driven app, you encounter a lot of dialogs like the ones shown in the images below.\
+If you are a ```Microsoft Dataverse developer```, especially when working on model-driven app, you encounter a lot of dialogs like the ones shown in the images below.\
 ![OOB](DataverseDialogBuilder.Others/images/oob.gif)
 
 # Questions:
@@ -10,16 +10,16 @@ If you are a Microsoft Dataverse developer, especially when working on model-dri
 **2.** But I don't see any documents that Microsoft refers to regarding this?
 > Yes, there are no documents.
 
-**3.** I understand that if there are no documents from Microsoft, and you can achieve this in the model-driven app, it means you are writing ```unsupported code```?
+**3.** I understand that if there are no documents from Microsoft, and you can achieve this in the model-driven app, it means you are writing **```unsupported code```**?
 > Yes, you corrected.
 
-**4.** ```Unsupported code```?
+**4.** **```Unsupported code```**?
 > Yes, until now. But I believe that in the future, this will be ```supported```. Let's see.
 
 **5.** It very risk for our projects?
 > I don't think so. If you believe it is, you can close the browser and not read anything.
 
-**6.** Ok, tell my why ```unsupported code```?
+**6.** Ok, tell my why **```unsupported code```**?
 > Because we used ```2``` functions that not list in the Microsoft documents.
 ```js
 Xrm.Navigation.openDialog(...)
@@ -89,4 +89,4 @@ The following links are from a Google search. The first post dates back to 2018,
 >Note: solution ```DataverseDialogBuilder.sln``` uses [DynamicsCrm.DevKit](https://github.com/phuocle/Dynamics-Crm-DevKit), which I also built.
 
 # Conclusion
-```Unsupported code```! However, I believe that in the future, this will become ```supported code```. Why? Well, in ```Question 12, Answer 2```, I showed you ```323``` dialog files (and perhaps there will be even more in the future) that I obtained from Microsoft ```first-party apps```. If Microsoft modifies the ```2``` functions I mentioned earlier, we can debug and adapt them, just like they do with their ```first-party apps```. I don’t think Microsoft would deprecate dialogs and then they need to rebuild them across all their ```first-party apps```.
+**```Unsupported code```**, However, I believe that in the future, this will become ```supported code```. Why? Well, in ```Question 12, Answer 2```, I showed you ```323``` dialog files (and perhaps there will be even more in the future) that I obtained from Microsoft ```first-party apps```. If Microsoft modifies the ```2``` functions I mentioned earlier, we can debug and adapt them, just like they do with their ```first-party apps```. I don’t think Microsoft would deprecate dialogs and then they need to rebuild them across all their ```first-party apps```.
