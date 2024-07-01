@@ -35,8 +35,8 @@ formContext.ui.moveTo(...)
 > 2. Once you've built a ```dialog``` using ```Dataverse Dialog Builder```, you can use it across various platforms, including ```Desktop Web```, ```Mobile Web```, ```Mobile App```, ```Dynamics 365 App for Outlook```, ```Unified Service Desk```, ```Omnichannel```, ```...```
 
 **9.** Show me some dialogs you've built?
->Absolutely! I, [PhuocLe](https://github.com/phuocle), can confirm that I have built several dialogs and successfully run them in production for many years.\
-![Production](DataverseDialogBuilder.Others/images/production.gif)
+>Absolutely! I can confirm that I have built several dialogs and successfully run them in production for many years.\
+![production](DataverseDialogBuilder.Others/images/production.gif)
 
 **10.** Crm Dialog?
 >```Crm Dialog``` was the initial version of the ```Dataverse Dialog Builder```. Subsequently, it was renamed to ```Dataverse Dialog Builder```.
@@ -45,7 +45,7 @@ formContext.ui.moveTo(...)
 >If you go to the [Crm Dialog](https://github.com/phuocle/crmdialog) repository, you will see my last committed code in this repository from many years ago. In this repository, I shared a blog post about [crmdialog](https://www.phuocle.net/post/2020-06-20-crmdialog) that I wrote on June 20, 2020. The initial version involved many manual tasks and required careful reading of the ```Crm Dialog``` documents. That's why I reworked it, and the ```Dataverse Dialog Builder``` was born.
 
 **12.** How you do that?
->1. If you are a Microsoft Dataverse developer, you are likely familiar with some form types: ```Main```, ```Quick Create```, ```Quick View```, ```Card```, ```...```. But did you know that there is another form type called ```Dialog``` (```OptionSet value = 8```)? You can build a ```FetchXml``` query with the filter value ```8``` for the attribute ```type``` in the ```systemform``` entity in your current environment to retrieve all your dialogs.
+>1. If you are a ```Microsoft Dataverse developer```, you are likely familiar with some form types: ```Main```, ```Quick Create```, ```Quick View```, ```Card```, ```...```. But did you know that there is another form type called ```Dialog``` (```OptionSet value = 8```)? You can build a ```FetchXml``` query with the filter value ```8``` for the attribute ```type``` in the ```systemform``` entity in your current environment to retrieve all your dialogs.
 >2. Navigate to the [DataverseDialogBuilder.Others\dialogs](https://github.com/phuocle/Dataverse-Dialog-Builder/tree/main/DataverseDialogBuilder.Others/dialogs) folder, where you'll find ```323``` dialog files that I obtained from Microsoft ```first-party apps```. I believe these files will continue to grow in the future as more ```first-party apps``` are developed by Microsoft.
 > 3. Consider a scenario where you need to examine a single file. Your task involves manually constructing the ```FormXml``` and subsequently saving it to the ```systemform``` entity. This manual process can be challenging. However, the ```Dataverse Dialog Builder``` solution simplifies this by assisting you in building ```FormXml``` and seamlessly saving it back to the ```systemform``` entity.
 
