@@ -54,12 +54,6 @@ export default (editor, options) => {
                             }
                         },
                         {
-                            type: 'text',
-                            name: 'label',
-                            label: 'Label',
-                            default: '???'
-                        },
-                        {
                             type: 'text-readonly',
                             name: 'lib',
                             label: 'Configuration File',
@@ -83,22 +77,6 @@ export default (editor, options) => {
                         },
                         {
                             type: 'checkbox',
-                            name: 'required',
-                            label: 'Required',
-                            valueTrue: '1',
-                            valueFalse: '0',
-                            default: '0'
-                        },
-                        {
-                            type: 'checkbox',
-                            name: 'disabled',
-                            label: 'Disabled',
-                            valueTrue: '1',
-                            valueFalse: '0',
-                            default: '0'
-                        },
-                        {
-                            type: 'checkbox',
                             name: 'visible',
                             label: 'Visible',
                             valueTrue: '1',
@@ -117,8 +95,6 @@ export default (editor, options) => {
                         });
                     }
                     model.listenTo(model, 'change:attributes:logicalname', model.changedRichTextBox);
-                    model.listenTo(model, 'change:attributes:required', model.changedRichTextBox);
-                    model.listenTo(model, 'change:attributes:disabled', model.changedRichTextBox);
                     model.listenTo(model, 'change:attributes:visible', model.changedRichTextBox);
                     model.listenTo(model, 'change:attributes:rows', model.changedRichTextBox);
                     model.changedRichTextBox();
@@ -146,7 +122,7 @@ export default (editor, options) => {
         <labels>
             <label description='' languagecode='${Helper.getLanguageCode(editor)}' />
         </labels>
-        <control uniqueid='{${Helper.toGuidWithDefaultNewGuid(attr.uniqueid)}}' id='${attr.logicalname}' classid='${GUID.PLACE_HOLDER_CONTROL}' isrequired='${Helper.toTrueFalse(attr.required)}' disabled='${Helper.toTrueFalse(attr.disabled)}' isunbound='true' />
+        <control uniqueid='{${Helper.toGuidWithDefaultNewGuid(attr.uniqueid)}}' id='${attr.logicalname}' classid='${GUID.PLACE_HOLDER_CONTROL}' isrequired='false' disabled='false' isunbound='true' />
     </cell>
 </row>
 ${rowsAdded}
@@ -159,12 +135,10 @@ ${rowsAdded}
                     const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.rows) ? 'BackgroundRed' : '';
                     const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
                     const rowsClass = Helper.isEmpty(attr.rows) || Number(attr.rows) <= 10 ? `Row${attr.rows}` : 'Row10';
-                    const requiredText = attr.required === '1' ? Const.Required : '';
-                    const disabledIcon = attr.disabled === '1' ? Const.IconLock : '';
                     model.onAll((comp) => {
                         if (comp.view.el.classList.contains('DDBControlLabel')) {
                             comp.setClass(`DDBControlLabel ${errorClass} ${visibleClass}`);
-                            comp.view.el.innerHTML = `${disabledIcon} RICH TEXT BOX ${requiredText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
+                            comp.view.el.innerHTML = `RICH TEXT BOX ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                         }
                         if (comp.view.el.classList.contains('DDBControlControl')) {
                             comp.setClass(`DDBControlControl ${rowsClass}`);
