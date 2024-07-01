@@ -57,12 +57,6 @@ export default (editor, options) => {
                             }
                         },
                         {
-                            type: 'number',
-                            name: 'rows',
-                            label: 'Rows (*)',
-                            default: '5'
-                        },
-                        {
                             type: 'select',
                             name: 'para_fetchxml',
                             label: 'Parameter FetchXml (SafeString) (*)'
@@ -71,6 +65,12 @@ export default (editor, options) => {
                             type: 'select',
                             name: 'para_entitylogicalname',
                             label: 'Parameter Entity Logical Name (SafeString) (*)'
+                        },
+                        {
+                            type: 'number',
+                            name: 'rows',
+                            label: 'Rows (*)',
+                            default: '5'
                         },
                         {
                             type: 'checkbox',

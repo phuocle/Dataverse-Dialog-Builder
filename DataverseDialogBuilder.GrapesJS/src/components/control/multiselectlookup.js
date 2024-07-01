@@ -69,11 +69,6 @@ export default (editor, options) => {
                         },
                         {
                             type: 'select',
-                            name: 'para_selectedentities',
-                            label: 'Parameter Selected Entities (SafeString) (*)'
-                        },
-                        {
-                            type: 'select',
                             name: 'para_isdisabled',
                             label: 'Parameter Is Disabled (SafeString) (*)'
                         },
@@ -81,6 +76,11 @@ export default (editor, options) => {
                             type: 'select',
                             name: 'para_disablemru',
                             label: 'Parameter Disable Mru (SafeString) (*)'
+                        },
+                        {
+                            type: 'select',
+                            name: 'para_selectedentities',
+                            label: 'Parameter Selected Entities (SafeString) (*)'
                         },
                         {
                             type: 'checkbox',

@@ -1124,7 +1124,7 @@ export default (editor, opts = {}) => {
             const visualizationid_NewAccountsByMonth = await Crm.GetVisualizationId("account", "New Accounts By Month");
             const totalTabs = 20;
             const tabs = editor.getComponents().filter(c => c.attributes.type === 'TabsComponent')[0];
-            //TA01
+
             const tab01 = tabs.findType('TabComponent')[0];
             {
                 tab01.setAttributes({ ...tab01.getAttributes(), logicalname: 'pl_tab_label' });
@@ -1175,8 +1175,6 @@ export default (editor, opts = {}) => {
 
                 const hide = tab01_section.append(block_label)[0];
                 hide.setAttributes({ ...hide.getAttributes(), logicalname: 'pl_label_hide', label: 'HIDE', rows: '1', required: '1', disabled: '1', visible: `0` });
-
-                //const spacer = tab01_section.append(block_spacer)[0];
 
                 const tab01_tabheader = tab01.append(block_tabheader, { at: 0 })[0];
                 const tab01_tabheader_label1 = tab01_tabheader.append(block_label)[0];

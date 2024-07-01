@@ -58,23 +58,23 @@ export default (editor, options) => {
                         },
                         {
                             type: 'select',
-                            name: 'para_fetchxml',
-                            label: 'Parameter FetchXml (SafeString) (*)'
-                        },
-                        {
-                            type: 'select',
                             name: 'para_entitylogicalname',
                             label: 'Parameter Entity Logical Name (SafeString) (*)'
                         },
                         {
                             type: 'select',
-                            name: 'para_validationerrormessage',
-                            label: 'Parameter Validation Error Message (SafeString) (*)'
+                            name: 'para_fetchxml',
+                            label: 'Parameter FetchXml (SafeString) (*)'
                         },
                         {
                             type: 'select',
                             name: 'para_isvalid',
                             label: 'Parameter Is Valid (Boolean) (*)'
+                        },
+                        {
+                            type: 'select',
+                            name: 'para_validationerrormessage',
+                            label: 'Parameter Validation Error Message (SafeString) (*)'
                         },
                         {
                             type: 'checkbox',
