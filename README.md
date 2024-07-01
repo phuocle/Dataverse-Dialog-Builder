@@ -28,7 +28,7 @@ Xrm.Navigation.openDialog(...)
 formContext.ui.moveTo(...)
 ```
 **7.** Not list in the Microsoft document?
-> Yes, [here](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-navigation), and [here](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/formcontext-ui). And you ```don't``` see ```2``` functions I mention above. Mean ```unsupported code```.
+> Yes, [here](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-navigation), and [here](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/formcontext-ui). And you ```don't``` see ```2``` functions I mention above. Mean **```unsupported code```**.
 
 **8.** What are the benefits of using ```Dataverse Dialog Builder```?
 > 1. If you ignore the ```2``` functions I mentioned above, all your knowledge of ```JavaScript``` and ```WebApi``` remains the same as what you're already familiar with. For example, you have an ```OnLoad``` event on form, then you can access ```formContext```. Then, you can use ```getAttribute``` to get or set values, manipulate controls with ```getControl``` to hide or show them, ```addPreSearch``` logic to filter lookup, or ```addOnChange``` logic, or trigger ```fireOnChange```, ... In essence, ```dialog``` are similar to the ```main``` form you've known before.
@@ -53,7 +53,7 @@ formContext.ui.moveTo(...)
 >Yes, I meticulously examined each file, analyzed them one by one, manually constructed ```FormXml```, and experimented with updating the ```systemform``` entity to observe errors and results. This process was labor-intensive, spanning many days, months, and even years. Subsequently, I extracted conventions from the ```FormXml```, which I later leveraged to create ```Dataverse Dialog Builder```.
 
 # Links
-The following links are from a Google search. The first post dates back to 2018, which is six years ago. Surprisingly, the ```dialog``` is still functional, and nothing has changed with the ```2``` functions I mentioned earlier. This suggests that the remains ```unsupported code``` but still works.
+The following links are from a Google search. The first post dates back to 2018, which is six years ago. Surprisingly, the ```dialog``` is still functional, and nothing has changed with the ```2``` functions I mentioned earlier. This suggests that the remains **```unsupported code```** but still works.
 
 * July 22, 2018 [Custom Dialog Boxes - Part 1](https://bguidinger.com/blog/custom-dialog-boxes-part-1)
 * July 29, 2018 [Custom Dialog Boxes - Part 2](https://bguidinger.com/blog/custom-dialog-boxes-part-2)
