@@ -20,14 +20,14 @@ If you are a ```Microsoft Dataverse developer```, especially when working on mod
 > I don't think so. If you believe it is, you can close the browser and not read anything.
 
 **6.** Ok, tell my why **```unsupported code```**?
-> Because we used ```2``` functions that not list in the Microsoft documents.
+> Because we used ```2``` functions that are not listed in the Microsoft documents.
 ```js
 Xrm.Navigation.openDialog(...)
 ```
 ```js
 formContext.ui.moveTo(...)
 ```
-**7.** Not list in the Microsoft document?
+**7.** Not listed in the Microsoft document?
 > Yes, [here](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/xrm-navigation), and [here](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/reference/formcontext-ui). And you ```don't``` see ```2``` functions I mention above. Mean **```unsupported code```**.
 
 **8.** What are the benefits of using ```Dataverse Dialog Builder```?
