@@ -72,6 +72,19 @@
                                         <control id="notification" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
                                     </cell>
                                 </row>
+                                <row>
+                                    <cell id="{7421947B-2594-44F7-A12F-899B5C8099D6}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="bulkQualifyInfo" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{cf632180-a740-40dd-9842-5f5649a8a154}">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
                             </rows>
                         </section>
                     </sections>
@@ -100,7 +113,7 @@
             <row>
                 <cell id="{ACB5693F-DDBB-4BF9-AC95-C96BEA77991A}">
                     <labels>
-                        <label description="OK" languagecode="1033" />
+                        <label description="Qualify" languagecode="1033" />
                     </labels>
                     <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
                 </cell>
@@ -138,4 +151,23 @@
             </clientincludes>
         </internalresources>
     </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{cf632180-a740-40dd-9842-5f5649a8a154}">
+            <customControl name="MscrmControls.BulkQualifyInfo.BulkQualifyInfoControl" formFactor="0">
+                <parameters>
+                    <Inputs type="SingleLine.Text">BulkQualifyInfoControl_inputs</Inputs>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.BulkQualifyInfo.BulkQualifyInfoControl" formFactor="1">
+                <parameters>
+                    <Inputs type="SingleLine.Text">BulkQualifyInfoControl_inputs</Inputs>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.BulkQualifyInfo.BulkQualifyInfoControl" formFactor="2">
+                <parameters>
+                    <Inputs type="SingleLine.Text">BulkQualifyInfoControl_inputs</Inputs>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
 </form>

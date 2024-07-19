@@ -45,7 +45,7 @@
                                         <control id="resolutionType_id" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" isunbound="true" isrequired="true">
                                             <parameters>
                                                 <DefaultValue>-1</DefaultValue>
-                                                <OptionSetId>{1478e2eb-b414-ef11-840b-6045bd575473}</OptionSetId>
+                                                <OptionSetId>{c261ab65-9a0f-ef11-9f8a-6045bd1d8b49}</OptionSetId>
                                             </parameters>
                                         </control>
                                     </cell>
@@ -102,6 +102,19 @@
                                         </control>
                                     </cell>
                                 </row>
+                                <row>
+                                    <cell id="{2960624c-2345-4cde-a356-99d835398068}">
+                                        <labels>
+                                            <label description="Propose new knowledge article for this case" languagecode="1033" />
+                                        </labels>
+                                        <control id="propose_ka" classid="{b0c6723a-8503-4fd7-bb28-c8a06ac933c2}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetId>52ecd72f-da52-44fd-be99-4573a422b83b</OptionSetId>
+                                                <DefaultValue>0</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
                             </rows>
                         </section>
                     </sections>
@@ -150,6 +163,7 @@
         <querystringparameter name="param_time_spent" type="Integer" />
         <querystringparameter name="param_lastButtonClicked" type="SafeString" />
         <querystringparameter name="param_entityId" type="UniqueId" />
+        <querystringparameter name="param_proposeNewKA" type="Boolean" />
     </formparameters>
     <clientresources>
         <internalresources>

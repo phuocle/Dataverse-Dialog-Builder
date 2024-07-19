@@ -1,0 +1,103 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_leadId" type="SafeString" />
+        <querystringparameter name="param_qualifyStatus" type="Integer" />
+        <querystringparameter name="param_parentAccountId" type="Object" />
+        <querystringparameter name="param_parentContactId" type="Object" />
+        <querystringparameter name="param_parentAccountName" type="Object" />
+        <querystringparameter name="param_parentContactName" type="Object" />
+        <querystringparameter name="param_isLeadQualificationInProgress" type="Boolean" />
+        <querystringparameter name="param_entityReferenceSetV2Request" type="Object" />
+        <querystringparameter name="param_entityReferenceSetV2Response" type="Object" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{305509B1-F16A-4B0E-B441-A42386D4442B}" name="{305509B1-F16A-4B0E-B441-A42386D4442B}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{70643b4f-2d93-4c58-96de-4e9c11aaa3db}" name="{c204da45-3eca-4ac2-be05-228829d68623}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9bc1363e-5667-4657-8080-daf8ac33f52d}" visible="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="qualify_lead_mdd_v2_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{91fc948e-1571-49f5-8b81-4a03ca20d95a}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8EC81A4A-9738-449F-9A95-9FC2D307332C}">
+        <rows>
+            <row>
+                <cell id="{ACB5693F-DDBB-4BF9-AC95-C96BEA77991A}">
+                    <labels>
+                        <label description="Qualify" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="Mscrm.LeadCommandActions.convertLeadOnQualifyV2ClickHandler" libraryName="MarketingSales/Lead/Lead_main_system_library.js" handlerUniqueId="{E4C22301-0E05-4F97-9373-0A6E60ECAF9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{91fc948e-1571-49f5-8b81-4a03ca20d95a}">
+            <customControl name="MscrmControls.QualifyLeadV2.QualifyLeadV2Control" formFactor="0">
+                <parameters>
+                    <LeadId type="SingleLine.Text">param_leadId</LeadId>
+                    <QualifyStatus type="Whole.None">param_qualifyStatus</QualifyStatus>
+                    <AccountId type="Object">param_parentAccountId</AccountId>
+                    <ContactId type="Object">param_parentContactId</ContactId>
+                    <AccountName type="Object">param_parentAccountName</AccountName>
+                    <ContactName type="Object">param_parentContactName</ContactName>
+                    <IsQualificationInProgress type="TwoOptions">param_isLeadQualificationInProgress</IsQualificationInProgress>
+                    <EntityCollectionRequestParam type="Object">param_entityReferenceSetV2Request</EntityCollectionRequestParam>
+                    <EntityReferenceResponseParam type="Object">param_entityReferenceSetV2Response</EntityReferenceResponseParam>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.QualifyLeadV2.QualifyLeadV2Control" formFactor="1">
+                <parameters>
+                    <LeadId type="SingleLine.Text">param_leadId</LeadId>
+                    <QualifyStatus type="Whole.None">param_qualifyStatus</QualifyStatus>
+                    <AccountId type="Object">param_parentAccountId</AccountId>
+                    <ContactId type="Object">param_parentContactId</ContactId>
+                    <AccountName type="Object">param_parentAccountName</AccountName>
+                    <ContactName type="Object">param_parentContactName</ContactName>
+                    <IsQualificationInProgress type="TwoOptions">param_isLeadQualificationInProgress</IsQualificationInProgress>
+                    <EntityCollectionRequestParam type="Object">param_entityReferenceSetV2Request</EntityCollectionRequestParam>
+                    <EntityReferenceResponseParam type="Object">param_entityReferenceSetV2Response</EntityReferenceResponseParam>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.QualifyLeadV2.QualifyLeadV2Control" formFactor="2">
+                <parameters>
+                    <LeadId type="SingleLine.Text">param_leadId</LeadId>
+                    <QualifyStatus type="Whole.None">param_qualifyStatus</QualifyStatus>
+                    <AccountId type="Object">param_parentAccountId</AccountId>
+                    <ContactId type="Object">param_parentContactId</ContactId>
+                    <AccountName type="Object">param_parentAccountName</AccountName>
+                    <ContactName type="Object">param_parentContactName</ContactName>
+                    <IsQualificationInProgress type="TwoOptions">param_isLeadQualificationInProgress</IsQualificationInProgress>
+                    <EntityCollectionRequestParam type="Object">param_entityReferenceSetV2Request</EntityCollectionRequestParam>
+                    <EntityReferenceResponseParam type="Object">param_entityReferenceSetV2Response</EntityReferenceResponseParam>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>
