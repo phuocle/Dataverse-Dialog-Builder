@@ -1,0 +1,215 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{9a3bc882-cf49-4d59-91d5-5f7c791df058}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{1a369244-0e41-47ba-89d2-a7be8064a3ef}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{df9899a0-5db9-4de0-984f-11adaf5c68fa}" colspan="3">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cde6ee86-0d15-811c-6494-c922e3589d20}" showlabel="true" locklevel="1" colspan="3">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" uniqueid="{32d994ea-96ac-6e95-5d80-da345d5129d0}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b087b77b-e038-7957-2949-cd4122b0b2ac}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Configuration ID" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_displayoutboundconfigurationid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_displayoutboundconfigurationid" disabled="true" uniqueid="{127bdc5d-66dd-4464-8f84-0119b6d8322c}" />
+                                    </cell>
+                                    <cell id="{ea3627f0-7e8f-4dba-8d8a-d94fdb8e6470}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="CopyConfigurationID" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_CopyConfigurationID" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>msdyn_CopyConfigurationID.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <WebResourceId>{CA92E984-0CC8-EA11-A812-000D3A193A19}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{20ed98c9-b325-4c07-9a8c-f3e9aac00d88}" colspan="3" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Show in timeline" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_showinactivities" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_showinactivities" disabled="false" uniqueid="{b50c0a72-d4ce-4cfc-a53b-37ddaa3a55d4}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{34e69754-c706-5160-0640-2aec4a41bc25}" colspan="3" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Channel type" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_channel" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_channel" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e3803032-5d1a-8847-c484-d20d8e4094a4}" colspan="3" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Channel" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_channelid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_channelid" uniqueid="{20909c4d-3e48-420f-8746-ee9f988c888c}" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{80947688-9224-e8e7-b037-25d0621a6495}" colspan="3" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Message template" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_messagetemplate" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_messagetemplate" disabled="false" uniqueid="{a2d91b5c-817a-9353-6791-3b4d4aeb2644}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>true</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <Navigation></Navigation>
+    <controlDescriptions>
+        <controlDescription forControl="{20909c4d-3e48-420f-8746-ee9f988c888c}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>msdyn_channelid</datafieldname>
+                    <datafieldname>msdyn_channeldisplayname</datafieldname>
+                    <datafieldname>msdyn_secondarychannelid</datafieldname>
+                    <datafieldname>msdyn_secondarychanneldisplayname</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.ChannelPicklistControl.ChannelPicklistControl">
+                <parameters>
+                    <channelidvalue>msdyn_channelid</channelidvalue>
+                    <channeldisplaynamevalue>msdyn_channeldisplayname</channeldisplaynamevalue>
+                    <secondarychannelid>msdyn_secondarychannelid</secondarychannelid>
+                    <secondarychanneldisplayname>msdyn_secondarychanneldisplayname</secondarychanneldisplayname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ChannelPicklistControl.ChannelPicklistControl">
+                <parameters>
+                    <channelidvalue>msdyn_channelid</channelidvalue>
+                    <channeldisplaynamevalue>msdyn_channeldisplayname</channeldisplaynamevalue>
+                    <secondarychannelid>msdyn_secondarychannelid</secondarychannelid>
+                    <secondarychanneldisplayname>msdyn_secondarychanneldisplayname</secondarychanneldisplayname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ChannelPicklistControl.ChannelPicklistControl">
+                <parameters>
+                    <channelidvalue>msdyn_channelid</channelidvalue>
+                    <channeldisplaynamevalue>msdyn_channeldisplayname</channeldisplaynamevalue>
+                    <secondarychannelid>msdyn_secondarychannelid</secondarychannelid>
+                    <secondarychanneldisplayname>msdyn_secondarychanneldisplayname</secondarychanneldisplayname>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{b50c0a72-d4ce-4cfc-a53b-37ddaa3a55d4}">
+            <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" formFactor="0">
+                <parameters>
+                    <datafieldname>msdyn_showinactivities</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value>msdyn_showinactivities</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+                <parameters>
+                    <value>msdyn_showinactivities</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdyn_OmniChannelOutboundConfig.js" libraryUniqueId="{03ecb629-9bc7-44ff-9061-4db38aa0160a}" />
+    </formLibraries>
+    <events>
+        <event name="onchange" active="true" application="true" attribute="msdyn_channel">
+            <InternalHandlers>
+                <Handler functionName="OmniChannelPackage.OutboundConfiguration.Instance.onChannelTypeChanged" libraryName="msdyn_OmniChannelOutboundConfig.js" handlerUniqueId="{5c2873a0-c5e1-475a-a02e-9c160c9c2b80}" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="msdyn_channel" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" active="true" application="true" attribute="msdyn_channelid">
+            <InternalHandlers>
+                <Handler functionName="OmniChannelPackage.OutboundConfiguration.Instance.onChannelChanged" libraryName="msdyn_OmniChannelOutboundConfig.js" handlerUniqueId="{a586b71c-d962-494c-bfb4-e3c3eed4d299}" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="msdyn_channelid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onload" active="true" application="true">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OutboundConfiguration.Instance.onFormLoad" libraryName="msdyn_OmniChannelOutboundConfig.js" handlerUniqueId="{a43b40f9-8612-4bca-b10c-e9c9aec9c9fd}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onsave" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OutboundConfiguration.Instance.checkSelectedChannelValueOnSave" libraryName="msdyn_OmniChannelOutboundConfig.js" handlerUniqueId="{e0a68b69-35e4-4b7b-83e9-223b95a6702c}" enabled="true" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OutboundConfiguration.Instance.onLoadDisableFields" libraryName="msdyn_OmniChannelOutboundConfig.js" handlerUniqueId="{f27f77dc-812a-4578-ad9e-954bc90bfb14}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OutboundConfiguration.Instance.onLoadFilterChannelType" libraryName="msdyn_OmniChannelOutboundConfig.js" handlerUniqueId="{22f4d6a0-0ed6-4261-8516-4f22d093e3ed}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OutboundConfiguration.Instance.onLoadSetDisplayOutboundConfigurationId" libraryName="msdyn_OmniChannelOutboundConfig.js" handlerUniqueId="{1851699f-3405-4ada-b8a2-0d10d3d9bf68}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

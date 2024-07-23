@@ -1,0 +1,381 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{bbc19972-389b-44e7-84be-5fb4a10efc86}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{82d0f447-89ec-43cc-8093-6bf98b8530cb}" name="{82d0f447-89ec-43cc-8093-6bf98b8530cb}" columns="11" locklevel="0" labelwidth="130" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c25c9572-b6b2-460d-9569-87b0187fe59a}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                                    </cell>
+                                    <cell id="{83bde180-56ed-1699-a661-94484cd1cb33}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Is Template" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_istemplate" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_istemplate" disabled="true" uniqueid="{614bdec0-8519-8018-a48c-cc65c5d2de7a}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a26b5771-2c1b-487e-86a1-3164502fb3ee}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" uniqueid="{c31e582b-19c9-4b81-dec6-33c0576cbe5d}" />
+                                    </cell>
+                                    <cell id="{d40016fc-3d4c-4b0c-aedf-0faee34479d6}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{24bd81c4-1aa8-663e-92b0-c3508847310e}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Requirement Group Template" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_requirementgrouptemplateid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_requirementgrouptemplateid" disabled="false" uniqueid="{d40c8b38-e91e-ce06-e670-78383506b2e9}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <DefaultViewId>{CE70939E-C9AE-E711-8123-000D3AFD2C6A}</DefaultViewId>
+                                                <AvailableViewIds>{0799910B-38FB-4F71-9AEC-6419E3139077},{CE70939E-C9AE-E711-8123-000D3AFD2C6A}</AvailableViewIds>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{04b3280c-b2c4-cc8d-3348-85650c1ce4e5}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Requirements_Section" showlabel="false" showbar="false" locklevel="0" id="{b9e5d4a7-4541-837b-42ee-e3d2046c885c}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Requirements" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{28c14c12-bb0b-1e50-8e19-ce8ae051bc93}" showlabel="false" colspan="1" auto="false" rowspan="6">
+                                        <labels>
+                                            <label description="Resource Requirements (Requirement Group)" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResourceRequirements" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" indicationOfSubgrid="true" uniqueid="{BC0313A7-B98D-922D-6AA0-56DE37D99325}">
+                                            <parameters>
+                                                <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>msdyn_requirementgroup_resourcerequirement_requirementgroupid</RelationshipName>
+                                                <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>4</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <Navigation>
+        <NavBar>
+            <NavBarByRelationshipItem RelationshipName="msdyn_requirementgroup_requirementrelationship_requirementgroupid" Sequence="10000" Area="Info" Id="nav_msdyn_requirementgroup_requirementrelationship_requirementgroupid" Show="false">
+                <Titles>
+                    <Title LCID="1033" Text="Requirement Relationships" />
+                    <Title LCID="1025" Text="علاقات المتطلبات" />
+                    <Title LCID="1026" Text="Релации на изискване" />
+                    <Title LCID="1027" Text="Relacions de requisits" />
+                    <Title LCID="1029" Text="Vztahy požadavků" />
+                    <Title LCID="1030" Text="Kravsrelationer" />
+                    <Title LCID="1031" Text="Anforderungsbeziehungen" />
+                    <Title LCID="1032" Text="Σχέσεις απαιτήσεων" />
+                    <Title LCID="3082" Text="Relaciones de requisitos" />
+                    <Title LCID="1061" Text="Nõudeseosed" />
+                    <Title LCID="1069" Text="Eskakizun-erlazioak" />
+                    <Title LCID="1035" Text="Tarpeen suhteet" />
+                    <Title LCID="1036" Text="Relations de besoin" />
+                    <Title LCID="1110" Text="Relacións do requisito" />
+                    <Title LCID="1037" Text="קשרי דרישות" />
+                    <Title LCID="1081" Text="आवश्यकता संबंध" />
+                    <Title LCID="1050" Text="Odnosi uvjeta" />
+                    <Title LCID="1038" Text="Követelmény kapcsolatai" />
+                    <Title LCID="1057" Text="Relasi Persyaratan" />
+                    <Title LCID="1040" Text="Relazioni requisiti" />
+                    <Title LCID="1041" Text="要件関連付け" />
+                    <Title LCID="1087" Text="Талап қарым-қатынастары" />
+                    <Title LCID="1042" Text="요구 사항 관계" />
+                    <Title LCID="1063" Text="Reikalavimo ryšiai" />
+                    <Title LCID="1062" Text="Prasību attiecības" />
+                    <Title LCID="1086" Text="Perhubungan Keperluan" />
+                    <Title LCID="1044" Text="Kravrelasjoner" />
+                    <Title LCID="1043" Text="Vereisterelaties" />
+                    <Title LCID="1045" Text="Relacje wymagań" />
+                    <Title LCID="1046" Text="Relacionamentos de Requisito" />
+                    <Title LCID="2070" Text="Relações de Requisitos" />
+                    <Title LCID="1048" Text="Relații de cerințe" />
+                    <Title LCID="1049" Text="Отношения требований" />
+                    <Title LCID="1051" Text="Vzťahy požiadavky" />
+                    <Title LCID="1060" Text="Odnosi zahtev" />
+                    <Title LCID="3098" Text="Релације захтева" />
+                    <Title LCID="2074" Text="Relacije zahteva" />
+                    <Title LCID="1053" Text="Kravrelationer" />
+                    <Title LCID="1054" Text="ความสัมพันธ์ของความต้องการ" />
+                    <Title LCID="1055" Text="Gereksinim İlişkileri" />
+                    <Title LCID="1058" Text="Зв’язки вимог" />
+                    <Title LCID="1066" Text="Mối quan hệ Yêu cầu" />
+                    <Title LCID="2052" Text="要求关系" />
+                    <Title LCID="3076" Text="需求關聯" />
+                    <Title LCID="1028" Text="需求關聯" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem RelationshipName="msdyn_requirementgroup_resourcerequirement_requirementgroupid" Sequence="10002" Area="Info" Id="nav_msdyn_requirementgroup_resourcerequirement_requirementgroupid" Show="false">
+                <Titles>
+                    <Title LCID="1033" Text="Resource Requirements" />
+                    <Title LCID="1025" Text="متطلبات الموارد" />
+                    <Title LCID="1026" Text="Изисквания за ресурси" />
+                    <Title LCID="1027" Text="Requisits de recursos" />
+                    <Title LCID="1029" Text="Požadavky na zdroje" />
+                    <Title LCID="1030" Text="Ressourcekrav" />
+                    <Title LCID="1031" Text="Ressourcenanforderungen" />
+                    <Title LCID="1032" Text="Απαιτήσεις πόρων" />
+                    <Title LCID="3082" Text="Requisitos de recursos" />
+                    <Title LCID="1061" Text="Ressursinõuded" />
+                    <Title LCID="1069" Text="Baliabide-eskakizunak" />
+                    <Title LCID="1035" Text="Resurssitarpeet" />
+                    <Title LCID="1036" Text="Besoins en ressources" />
+                    <Title LCID="1110" Text="Requisitos dos recursos" />
+                    <Title LCID="1037" Text="דרישות משאב" />
+                    <Title LCID="1081" Text="संसाधन आवश्यकताएँ" />
+                    <Title LCID="1050" Text="Zahtjevi resursa" />
+                    <Title LCID="1038" Text="Erőforrás-követelmények" />
+                    <Title LCID="1057" Text="Persyaratan Sumber Daya" />
+                    <Title LCID="1040" Text="Requisiti di risorsa" />
+                    <Title LCID="1041" Text="リソース要件" />
+                    <Title LCID="1087" Text="Ресурс талаптары" />
+                    <Title LCID="1042" Text="리소스 요구 사항" />
+                    <Title LCID="1063" Text="Išteklių reikalavimai" />
+                    <Title LCID="1062" Text="Resursu prasības" />
+                    <Title LCID="1086" Text="Keperluan Sumber" />
+                    <Title LCID="1044" Text="Ressurskrav" />
+                    <Title LCID="1043" Text="Resourcevereisten" />
+                    <Title LCID="1045" Text="Wymagania zasobów" />
+                    <Title LCID="1046" Text="Requisitos de Recurso" />
+                    <Title LCID="2070" Text="Requisitos de Recurso" />
+                    <Title LCID="1048" Text="Cerințe resurse" />
+                    <Title LCID="1049" Text="Требования ресурсов" />
+                    <Title LCID="1051" Text="Požiadavky na zdroje" />
+                    <Title LCID="1060" Text="Zahteve za vir" />
+                    <Title LCID="3098" Text="Захтеви за ресурсом" />
+                    <Title LCID="2074" Text="Zahtevi za resursom" />
+                    <Title LCID="1053" Text="Resurskrav" />
+                    <Title LCID="1054" Text="ความต้องการทรัพยากร" />
+                    <Title LCID="1055" Text="Kaynak Gereksinimleri" />
+                    <Title LCID="1058" Text="Вимоги до ресурсів" />
+                    <Title LCID="1066" Text="Yêu cầu Nguồn lực" />
+                    <Title LCID="2052" Text="资源要求" />
+                    <Title LCID="3076" Text="資源需求" />
+                    <Title LCID="1028" Text="資源需求" />
+                </Titles>
+            </NavBarByRelationshipItem>
+        </NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عام" />
+                    <Title LCID="1026" Text="Общо" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Fælles" />
+                    <Title LCID="1031" Text="Gemeinsam" />
+                    <Title LCID="1032" Text="Κοινή" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Üldine" />
+                    <Title LCID="1069" Text="Ohikoa" />
+                    <Title LCID="1035" Text="Yhteiset" />
+                    <Title LCID="1036" Text="Commun" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="נפוץ" />
+                    <Title LCID="1081" Text="साधारण" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Általános" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Байланысты" />
+                    <Title LCID="1042" Text="일반" />
+                    <Title LCID="1063" Text="Bendras" />
+                    <Title LCID="1062" Text="Kopējā informācija" />
+                    <Title LCID="1086" Text="Biasa" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Algemeen" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comun" />
+                    <Title LCID="1049" Text="Общее" />
+                    <Title LCID="1051" Text="Spoločné" />
+                    <Title LCID="1060" Text="Splošno" />
+                    <Title LCID="3098" Text="Уобичајено" />
+                    <Title LCID="2074" Text="Uobičajeno" />
+                    <Title LCID="1053" Text="Standard" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Спільні" />
+                    <Title LCID="1066" Text="Thông thường" />
+                    <Title LCID="2052" Text="通用" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Processessioner" />
+                    <Title LCID="1031" Text="Prozesssitzungen" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διεργασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesu-saioak" />
+                    <Title LCID="1035" Text="Prosessin istunnot" />
+                    <Title LCID="1036" Text="Sessions de traitement" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1037" Text="הפעלות תהליך" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Sesije procesa" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Sesi Proses" />
+                    <Title LCID="1040" Text="Sessioni di processo" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1087" Text="Өңдеу сеанстары" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="1063" Text="Apdorojimo seansai" />
+                    <Title LCID="1062" Text="Procesu sesijas" />
+                    <Title LCID="1086" Text="Sesi Proses" />
+                    <Title LCID="1044" Text="Prosessøkter" />
+                    <Title LCID="1043" Text="Sessies voor proces" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Sessões de Processo" />
+                    <Title LCID="2070" Text="Sessões de Processamento" />
+                    <Title LCID="1048" Text="Sesiuni de proces" />
+                    <Title LCID="1049" Text="Сеансы процесса" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje procesa" />
+                    <Title LCID="3098" Text="Сесије процеса" />
+                    <Title LCID="2074" Text="Sesije procesa" />
+                    <Title LCID="1053" Text="Processessioner" />
+                    <Title LCID="1054" Text="เซสชันของกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси процесів" />
+                    <Title LCID="1066" Text="Phiên quá trình" />
+                    <Title LCID="2052" Text="流程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <controlDescriptions>
+        <controlDescription forControl="{BC0313A7-B98D-922D-6AA0-56DE37D99325}">
+            <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                <parameters>
+                    <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                    <IsUserView>false</IsUserView>
+                    <RelationshipName>msdyn_requirementgroup_resourcerequirement_requirementgroupid</RelationshipName>
+                    <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                    <AutoExpand>Fixed</AutoExpand>
+                    <EnableQuickFind>false</EnableQuickFind>
+                    <EnableViewPicker>false</EnableViewPicker>
+                    <ViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewIds>
+                    <EnableJumpBar>false</EnableJumpBar>
+                    <ChartGridMode>All</ChartGridMode>
+                    <VisualizationId />
+                    <IsUserChart>false</IsUserChart>
+                    <EnableChartPicker>true</EnableChartPicker>
+                    <RecordsPerPage>4</RecordsPerPage>
+                    <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.RequirementGroupControl.RequirementGroupControl">
+                <parameters>
+                    <data-set name="RequirementGroupControl">
+                        <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <RelationshipName>msdyn_requirementgroup_resourcerequirement_requirementgroupid</RelationshipName>
+                        <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</FilteredViewIds>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.RequirementGroupControl.RequirementGroupControl">
+                <parameters>
+                    <data-set name="RequirementGroupControl">
+                        <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <RelationshipName>msdyn_requirementgroup_resourcerequirement_requirementgroupid</RelationshipName>
+                        <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</FilteredViewIds>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.RequirementGroupControl.RequirementGroupControl">
+                <parameters>
+                    <data-set name="RequirementGroupControl">
+                        <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <RelationshipName>msdyn_requirementgroup_resourcerequirement_requirementgroupid</RelationshipName>
+                        <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</FilteredViewIds>
+                    </data-set>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdyn_/ScheduleCommon/Requirement/Scripts/RequirementGroupActions.js" libraryUniqueId="{add15aa5-d640-1371-1105-3444a261a6b9}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="onLoadRequirementGroupForm" libraryName="msdyn_/ScheduleCommon/Requirement/Scripts/RequirementGroupActions.js" handlerUniqueId="{0c1c231a-2a1c-6459-58be-19a4c1a385bd}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

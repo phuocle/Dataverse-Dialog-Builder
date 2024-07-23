@@ -1,0 +1,119 @@
+<form showImage="true">
+    <tabs>
+        <tab name="UserInfoTab" id="{9ec50ab9-7967-4e01-aa70-c03962162be7}" IsUserDefined="0" showlabel="false" expanded="true" locklevel="0" labelid="{4175e952-7186-48c7-80fc-cba2a41c2f59}">
+            <labels>
+                <label description="User Information Tab" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="user information" showlabel="false" showbar="true" id="{9b914e4e-027c-4e9c-90d7-59daed00fd53}" IsUserDefined="0" locklevel="0" labelid="{b81ceedd-504c-444f-8e8b-b16cb3c5c8c5}">
+                            <labels>
+                                <label description="User Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0364af50-8d98-4bd0-8bb5-6aa0fd29130c}" labelid="{3662743d-d307-4bb7-9839-55af8fd66333}">
+                                        <labels>
+                                            <label description="Primary Email" languagecode="1033" />
+                                        </labels>
+                                        <control id="internalemailaddress" classid="{ADA2203E-B4CD-49be-9DDF-234642B43B52}" datafieldname="internalemailaddress" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4c4ed691-f7c5-4c79-8bf7-0ff263e31c0e}" visible="false" labelid="{92790feb-ae07-4001-a857-a1c7cd1f18ca}">
+                                        <labels>
+                                            <label description="Address" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_composite" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="address1_composite" uniqueid="{6e595ea0-be27-45ba-0463-ea977bc3b3ed}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{619e0f76-643a-4de7-922b-e4c005c7ece6}" showlabel="true" locklevel="0" labelid="{fb6e8c5f-d5e3-4382-8456-0e21127aca40}">
+                                        <labels>
+                                            <label description="Home Address" languagecode="1033" />
+                                        </labels>
+                                        <control id="address1_line1" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="address1_line1" disabled="false" uniqueid="{16316B9C-1039-4371-82C5-F01A9FC5EC97}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4dd1943a-3a66-45c9-a319-306bb0ca7de2}" showlabel="false" rowspan="3" colspan="1" auto="false" labelid="{c919d179-0d6b-4ecc-a0c3-dce29a97caaa}">
+                                        <labels>
+                                            <label description="Map View" languagecode="1033" />
+                                        </labels>
+                                        <control id="mapcontrol" classid="{62B0DF79-0464-470F-8AF7-4483CFEA0C7D}">
+                                            <parameters>
+                                                <AddressField>address1_composite</AddressField>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{16316B9C-1039-4371-82C5-F01A9FC5EC97}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>address1_line1</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="Microsoft.AddressInputUCI">
+                <parameters>
+                    <Address>address1_line1</Address>
+                    <Street1>address1_line1</Street1>
+                    <Street2>address1_line2</Street2>
+                    <Street3>address1_line3</Street3>
+                    <City>address1_city</City>
+                    <StateOrProvince>address1_stateorprovince</StateOrProvince>
+                    <CountryOrRegion>address1_country</CountryOrRegion>
+                    <ZipOrPostalCode>address1_postalcode</ZipOrPostalCode>
+                    <WriteToPrimaryField static="true" type="Enum">True</WriteToPrimaryField>
+                    <AddressFormFormat static="true" type="Enum">LegacyFormat</AddressFormFormat>
+                    <KeyProvider static="true" type="Enum">FS</KeyProvider>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="Microsoft.AddressInputUCI">
+                <parameters>
+                    <Address>address1_line1</Address>
+                    <Street1>address1_line1</Street1>
+                    <Street2>address1_line2</Street2>
+                    <Street3>address1_line3</Street3>
+                    <City>address1_city</City>
+                    <StateOrProvince>address1_stateorprovince</StateOrProvince>
+                    <CountryOrRegion>address1_country</CountryOrRegion>
+                    <ZipOrPostalCode>address1_postalcode</ZipOrPostalCode>
+                    <WriteToPrimaryField static="true" type="Enum">True</WriteToPrimaryField>
+                    <AddressFormFormat static="true" type="Enum">LegacyFormat</AddressFormFormat>
+                    <KeyProvider static="true" type="Enum">FS</KeyProvider>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="Microsoft.AddressInputUCI">
+                <parameters>
+                    <Address>address1_line1</Address>
+                    <Street1>address1_line1</Street1>
+                    <Street2>address1_line2</Street2>
+                    <Street3>address1_line3</Street3>
+                    <City>address1_city</City>
+                    <StateOrProvince>address1_stateorprovince</StateOrProvince>
+                    <CountryOrRegion>address1_country</CountryOrRegion>
+                    <ZipOrPostalCode>address1_postalcode</ZipOrPostalCode>
+                    <WriteToPrimaryField static="true" type="Enum">True</WriteToPrimaryField>
+                    <AddressFormFormat static="true" type="Enum">LegacyFormat</AddressFormFormat>
+                    <KeyProvider static="true" type="Enum">FS</KeyProvider>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <DisplayConditions FallbackForm="true" Order="8">
+        <Role Id="{c737e307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+        <Role Id="{183ce307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+    </DisplayConditions>
+</form>

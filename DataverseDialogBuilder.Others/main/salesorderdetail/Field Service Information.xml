@@ -1,0 +1,801 @@
+<form shownavigationbar="true" showImage="false" maxWidth="1900">
+    <hiddencontrols>
+        <data id="salesorderid" datafieldname="salesorderid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="shipto_addressid" datafieldname="shipto_addressid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="salesorderstatecode" datafieldname="salesorderstatecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="producttypecode" datafieldname="producttypecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="servicemaintenanceline" id="{aba6e4e6-4eeb-a44c-ab84-15386e194206}" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{4c288f41-07e4-400a-807b-e424045e6ea3}">
+            <labels>
+                <label description="Service Maintenance Line" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="servicemaintenanceline" showlabel="false" showbar="false" locklevel="0" id="{209e7881-d33d-e533-c053-2d8e9403026c}" IsUserDefined="0" layout="varwidth" columns="111" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{dc173e00-02f0-4a99-946e-89a5410e712d}">
+                            <labels>
+                                <label description="Service Maintenance Line" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2ebe29db-1808-45c8-941d-d3710d5515a4}" labelid="{4a4a53b0-776f-4cbb-8736-031fcfd9614a}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="productdescription" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="productdescription" uniqueid="{2858d27a-46bb-0c78-6178-d724914db712}" disabled="false" />
+                                    </cell>
+                                    <cell id="{394d7aaa-3c51-43ca-90de-cc1622a5a411}" showlabel="true" locklevel="0" labelid="{da083052-b2e8-4ac3-a703-b1161a085965}">
+                                        <labels>
+                                            <label description="Agreement" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_agreement" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_agreement" disabled="false" />
+                                    </cell>
+                                    <cell id="{583c3db9-19c9-4783-bb9a-289a4548dca8}" labelid="{c1d82bba-50e3-4f07-9e17-a8b8cc78a036}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Estimated Value" languagecode="1033" />
+                                        </labels>
+                                        <control id="priceperunit" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="priceperunit" uniqueid="{7d58cbc7-6264-7485-949a-700169ae0469}" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{de373736-188c-398b-2589-a47327c3e264}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                    <cell id="{4b7b0d5a-d2e6-7d69-25a1-50e41a359374}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                    <cell colspan="1" id="{2d89b4ed-93db-40ec-b2e7-f06c89f80130}" labelid="{f87bc651-494b-4107-8e47-303154af8505}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Pricing" languagecode="1033" />
+                                        </labels>
+                                        <control id="ispriceoverridden" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="ispriceoverridden" uniqueid="{75705516-e710-93b6-954a-803097354e22}" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ee6c3aa9-b462-9d11-3776-e498e3a3b074}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                    <cell id="{7e8b77bb-2076-10ab-5678-de18b0bd4c21}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                    <cell id="{24731762-b9eb-9007-e607-b7d841e84740}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Currency" languagecode="1033" />
+                                        </labels>
+                                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" disabled="false" uniqueid="{ba68bdb4-c258-c2ab-2d4a-74ded62155ee}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{CD5625B0-DDA8-4EE2-B13F-B9331E027C8A}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="general" verticallayout="true" id="{4e8d7ae2-111d-4000-ba52-fe686a794009}" IsUserDefined="0" labelid="{372626c1-a578-49cd-af39-3b851631f20a}" locklevel="0" expanded="true" showlabel="false" visible="false">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="sales order detail information" showlabel="false" showbar="false" id="{5b540fa6-ad51-40b3-a260-06619fd03773}" IsUserDefined="0" columns="11" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{e4051614-2794-49a4-a5ba-30f7d24def5f}">
+                            <labels>
+                                <label description="Sales Order Detail Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7452c272-6372-4a84-b152-187477f13601}" showlabel="true" locklevel="0" labelid="{741c1e71-1de0-429a-8507-572714d9211a}">
+                                        <labels>
+                                            <label description="Select Product" languagecode="1033" />
+                                        </labels>
+                                        <control id="isproductoverridden" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="isproductoverridden" uniqueid="{925bbe20-c5c9-3841-7a66-c377c9cdab52}" disabled="false" />
+                                    </cell>
+                                    <cell id="{7e9a8c96-bd30-477d-94a6-85286dbe47bc}" labelid="{55350a4f-083f-4a91-ada9-cb930c8b4360}">
+                                        <labels>
+                                            <label description="Unit" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.uomid_setadditionalparams" libraryName="Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" handlerUniqueId="2360fae9-e945-433c-b6c1-9004a1270791" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="salesorderid" />
+                                                            <dependency id="productid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="uomid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="uomid">
+                                            <parameters>
+                                                <DefaultViewId>{26FF4574-E5B3-468d-B879-8BB27225D70B}</DefaultViewId>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{835a6e09-770b-4cb5-8fcc-83663c95fca8}" labelid="{f6c3fb27-10b4-43e0-b800-29d12121e003}">
+                                        <labels>
+                                            <label description="Existing Product" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.productid_setadditionalparams" libraryName="Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" handlerUniqueId="dceaca22-d390-4c72-bc42-f03b80dcadbd" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="salesorderid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="productid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="productid">
+                                            <parameters>
+                                                <DefaultViewReadOnly>true</DefaultViewReadOnly>
+                                                <ViewPickerReadOnly>true</ViewPickerReadOnly>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <DefaultViewId>{BCC509EE-1444-4a95-AED2-128EFD85FFD5}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{7b840297-ab91-83a5-5ed4-58c22ea82567}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="pricing" showlabel="true" showbar="true" id="{7ebb1c72-592d-4145-8911-13180b5087d6}" IsUserDefined="0" labelid="{8d1b8c09-0401-486d-b194-fc4972f982a0}">
+                            <labels>
+                                <label description="Pricing" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8fc6bbe8-796b-48a8-acbc-8ca0e4418f80}" labelid="{6f486764-420c-4bbe-be68-ed81e00b343d}">
+                                        <labels>
+                                            <label description="Volume Discount" languagecode="1033" />
+                                        </labels>
+                                        <control id="volumediscountamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="volumediscountamount" />
+                                    </cell>
+                                    <cell id="{d6de9899-69dc-2e51-cd51-95d320d310cd}" showlabel="false" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Line Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_linetype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_linetype" disabled="false" uniqueid="{6019b545-2cd7-32d4-00dd-79d9c5c67841}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4e2fff37-b37d-4129-a58e-e062616f2334}" labelid="{6acfc481-3ed5-47fe-965e-54ba1a94855b}">
+                                        <labels>
+                                            <label description="Quantity" languagecode="1033" />
+                                        </labels>
+                                        <control id="quantity" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="quantity" uniqueid="{39a6d14d-54b6-bded-b6c8-3cbca0889aec}" />
+                                    </cell>
+                                    <cell id="{86e5ba52-2209-4c51-90ab-4eefbd4bba44}" showlabel="false" labelid="{c7e5e9b3-4db9-4e15-a189-14523340f82a}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{486d3223-fa16-40bd-b133-27146e83ccd8}" labelid="{4f48d981-45f3-4704-99c8-078ef9bf9009}">
+                                        <labels>
+                                            <label description="Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="baseamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="baseamount" disabled="true" />
+                                    </cell>
+                                    <cell id="{1e471219-88c2-43dd-9ca5-bd8a5c54bf90}" showlabel="false" labelid="{658f049c-7a89-453c-89a7-ada9d3bd7948}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b50456d4-7ad4-4e32-b722-1d8b95945c45}" labelid="{b6f10625-5c60-4452-a041-d02c6b122146}">
+                                        <labels>
+                                            <label description="Manual Discount" languagecode="1033" />
+                                        </labels>
+                                        <control id="manualdiscountamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="manualdiscountamount" />
+                                    </cell>
+                                    <cell id="{7a4620f1-dd32-4089-98bf-a9d08fa6a267}" showlabel="false" labelid="{ac9da8ac-206f-4fb4-90d8-3919e6d06cc3}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{54b85184-17f0-4f9a-892c-b7494e9c6ec1}" labelid="{159e7e8d-0f4a-4565-9ed1-1f0607886745}">
+                                        <labels>
+                                            <label description="Tax" languagecode="1033" />
+                                        </labels>
+                                        <control id="tax" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="tax" />
+                                    </cell>
+                                    <cell id="{756ddf67-16f4-4b36-a9ba-a5c4fb7711d0}" showlabel="false" labelid="{636d8141-7259-4fc6-b2ea-5e1d24bcf768}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{47c05c86-5375-48f6-a6ca-0aab60776462}" labelid="{e8a17412-9253-4c18-8472-8e586deea596}">
+                                        <labels>
+                                            <label description="Extended Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="extendedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="extendedamount" disabled="true" />
+                                    </cell>
+                                    <cell id="{31b65bc4-dcce-96b2-db8a-67ba24e9d3cb}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="delivery" id="{c5d67899-3924-4246-9c38-d17836f05142}" IsUserDefined="0" labelid="{842dd29f-c328-41b4-b770-adf2b8135a76}" locklevel="0" expanded="true" showlabel="false" visible="false">
+            <labels>
+                <label description="Delivery" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="delivery information" showlabel="false" showbar="false" id="{949113be-5a65-4533-b40e-00aafba92e9c}" IsUserDefined="0" labelid="{0066c191-deb8-4b3f-a16c-e4a4d394c7f4}">
+                            <labels>
+                                <label description="Delivery Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{eb5a7dde-8962-4352-8bec-449f9063262e}" labelid="{4d5c050d-1bd4-401f-99dc-4fceaa030c49}">
+                                        <labels>
+                                            <label description="Requested Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="requestdeliveryby" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="requestdeliveryby" />
+                                    </cell>
+                                    <cell id="{39f1b61f-f9e2-4170-8f46-b0c367a7e943}" labelid="{665f30eb-6ca9-4d31-89da-3ebb3e36b3f6}">
+                                        <labels>
+                                            <label description="Salesperson" languagecode="1033" />
+                                        </labels>
+                                        <control id="salesrepid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="salesrepid" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="fulfillment" showlabel="true" showbar="true" id="{493958b1-f610-427e-99b1-ba51bedba0dc}" IsUserDefined="0" labelid="{4c12f0c0-b5d9-45ee-82a6-9d361bf709f2}">
+                            <labels>
+                                <label description="Fulfillment" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{f862e8ed-9bac-43dd-9bd4-88a05faf5157}" labelid="{05764606-d631-47a5-8c6a-e126bd8e9c6c}">
+                                        <labels>
+                                            <label description="Shipped" languagecode="1033" />
+                                        </labels>
+                                        <control id="quantityshipped" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="quantityshipped" />
+                                    </cell>
+                                    <cell id="{1184d88d-aee2-4c6f-aca9-c9b5259e437f}" showlabel="false" labelid="{8ecbed45-d2c3-4a95-9570-905fe82f9a18}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{43197447-8554-4db6-b99a-ea6f9016fbe9}" labelid="{ec669aef-dbbb-4450-8385-f359cc188275}">
+                                        <labels>
+                                            <label description="Back Ordered" languagecode="1033" />
+                                        </labels>
+                                        <control id="quantitybackordered" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="quantitybackordered" />
+                                    </cell>
+                                    <cell id="{ad0a650f-548e-4910-beda-0197b31574d8}" showlabel="false" labelid="{00d09d5b-99a9-46e6-9bb9-e7212497469c}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e605e9d5-3995-41b0-b973-fa66078019e8}" labelid="{e8cd06ce-fc4d-4e44-8fba-a87779e79e00}">
+                                        <labels>
+                                            <label description="Canceled" languagecode="1033" />
+                                        </labels>
+                                        <control id="quantitycancelled" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="quantitycancelled" />
+                                    </cell>
+                                    <cell id="{8d8e0f90-bfc7-48da-b60a-809943706a81}" showlabel="false" labelid="{8a137553-c426-4756-9a26-77aeea249a03}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="address" id="{cbd278bb-704b-4465-87fb-e4dc83742ed9}" IsUserDefined="0" labelid="{bdb885c5-1a06-4b20-94fa-31dfa6c28b80}" locklevel="0" expanded="true" showlabel="false" visible="false">
+            <labels>
+                <label description="Address" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="ship to address" showlabel="true" showbar="true" id="{9576ac1d-c840-40f4-9603-77af4e5108d9}" IsUserDefined="0" labelid="{3b3b52d1-ddcc-4192-9ba6-2b976658ac6e}">
+                            <labels>
+                                <label description="Ship To Address" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{2cea5591-7994-48d7-b9b0-0caf6cc072a4}" labelid="{e9172322-4c86-4515-bc5a-2f004c885436}">
+                                        <labels>
+                                            <label description="Ship To" languagecode="1033" />
+                                        </labels>
+                                        <control id="willcall" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="willcall" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f09e31e5-235e-411a-8d5c-4b62dfd11b50}" labelid="{6eaba1ba-7cb5-4af6-a1f3-11856e78732d}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_name" />
+                                    </cell>
+                                    <cell id="{9da4b2fd-8dc7-4361-bbfa-725e32546692}" labelid="{995408cc-3645-47ac-acf5-13725755227f}">
+                                        <labels>
+                                            <label description="ZIP/Postal Code" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_postalcode" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_postalcode" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1aef7d65-e704-4eee-8f2d-cb707cd7ff7e}" labelid="{4bab6ee7-89e8-4616-9695-80c1c4cd604c}">
+                                        <labels>
+                                            <label description="Street 1" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_line1" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_line1" />
+                                    </cell>
+                                    <cell id="{a5eb1e49-af65-4a07-be05-c134b1e5fb00}" labelid="{b838e8ca-44ca-407b-a723-131e8c173bce}">
+                                        <labels>
+                                            <label description="Country/Region" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_country" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_country" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d4768174-0c9c-4bd0-96d9-c2a461a1fe12}" labelid="{d0b1b20d-cd97-4209-b134-4efac1f1efb6}">
+                                        <labels>
+                                            <label description="Street 2" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_line2" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_line2" />
+                                    </cell>
+                                    <cell id="{64ee9615-1288-40d7-ae3d-d9d963559126}" labelid="{37454a9a-878e-4b07-b763-5ef047116558}">
+                                        <labels>
+                                            <label description="Phone" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_telephone" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_telephone" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{556d8f31-11a0-4c30-ab09-e48a93971358}" labelid="{267b8511-fcf7-4fdb-ac6d-3923a30b8567}">
+                                        <labels>
+                                            <label description="Street 3" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_line3" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_line3" />
+                                    </cell>
+                                    <cell id="{10a40777-c5f4-4512-91f6-d14908a7136e}" labelid="{6cb453e7-0104-4721-a2a5-3aa27dc58a4e}">
+                                        <labels>
+                                            <label description="Fax" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_fax" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_fax" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{38aad80a-0f40-4a04-96bd-24c0b550ec3a}" labelid="{1b5ebab8-4847-4a4c-a66e-114b53cadad0}">
+                                        <labels>
+                                            <label description="City" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_city" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_city" />
+                                    </cell>
+                                    <cell id="{7fa8fb0f-2897-462e-b7de-5624efa4718e}" labelid="{2cc0f841-2eee-4ad1-ba75-03cbb59a969b}">
+                                        <labels>
+                                            <label description="Freight Terms" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_freighttermscode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="shipto_freighttermscode" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fe8f8d9d-8f16-4bf9-8260-f674d69f0408}" labelid="{61077f7e-3162-444e-b9fa-04db0e61d320}">
+                                        <labels>
+                                            <label description="State/Province" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_stateorprovince" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_stateorprovince" />
+                                    </cell>
+                                    <cell id="{e45ce1bc-b734-4d19-a1bb-819d7b0a6fad}" labelid="{d496eb6a-0fe5-4b20-9153-c320bbf4f387}">
+                                        <labels>
+                                            <label description="Address Contact" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_contactname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_contactname" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" handlerUniqueId="ba803c2c-b530-4aac-beaf-e74176f66f60" enabled="true">
+                    <dependencies>
+                        <dependency id="quantity" />
+                        <dependency id="productid" />
+                        <dependency id="uomid" />
+                        <dependency id="isproductoverridden" />
+                        <dependency id="productdescription" />
+                        <dependency id="ispriceoverridden" />
+                        <dependency id="priceperunit" />
+                        <dependency id="willcall" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+            <Handlers>
+                <Handler handlerUniqueId="{c2c98d5c-7ab7-90b7-1075-ca0ea1170cb0}" functionName="FS.OrderLine.Library.Load" libraryName="msdyn_/Order/OrderLine.Library.js" enabled="true" passExecutionContext="true" parameters="" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="isproductoverridden">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.isproductoverridden_onchange" libraryName="Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" handlerUniqueId="a5757cc0-261b-4c4a-8450-5a6c8c96720c" enabled="true">
+                    <dependencies>
+                        <dependency id="productid" />
+                        <dependency id="uomid" />
+                        <dependency id="productdescription" />
+                        <dependency id="ispriceoverridden" />
+                        <dependency id="priceperunit" />
+                        <dependency id="quantity" />
+                        <dependency id="quantityshipped" />
+                        <dependency id="quantitybackordered" />
+                        <dependency id="quantitycancelled" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="productid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.productid_onchange" libraryName="Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" handlerUniqueId="2bdc1f42-348f-48dd-a39a-1ede3ca42371" enabled="true">
+                    <dependencies>
+                        <dependency id="uomid" />
+                        <dependency id="quantity" />
+                        <dependency id="quantityshipped" />
+                        <dependency id="quantitybackordered" />
+                        <dependency id="quantitycancelled" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="uomid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.uomid_onchange" libraryName="Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" handlerUniqueId="bca05759-c5dc-4584-b6a4-02ed7daea10f" enabled="true">
+                    <dependencies>
+                        <dependency id="salesorderid" />
+                        <dependency id="productid" />
+                        <dependency id="quantity" />
+                        <dependency id="quantityshipped" />
+                        <dependency id="quantitybackordered" />
+                        <dependency id="quantitycancelled" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="ispriceoverridden">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.ispriceoverridden_onchange" libraryName="Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" handlerUniqueId="d77b8189-fd53-4728-8092-da0db9e8e5f7" enabled="true">
+                    <dependencies>
+                        <dependency id="priceperunit" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="willcall">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.willcall_onchange" libraryName="Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" handlerUniqueId="eeee2895-eabf-4b92-831a-c0c22b1c5731" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" handlerUniqueId="7a63529c-ae3c-4087-b28c-7f817f724f0a" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="quantity" />
+                        <dependency id="priceperunit" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/SalesOrderDetail/SalesOrderDetail_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عامة" />
+                    <Title LCID="1026" Text="Общи" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Fælles" />
+                    <Title LCID="1031" Text="Gemeinsam verwendet" />
+                    <Title LCID="1032" Text="Κοινό" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Levinud" />
+                    <Title LCID="1069" Text="Ohikoak" />
+                    <Title LCID="1035" Text="Yhteiset" />
+                    <Title LCID="1036" Text="Éléments communs" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="פריטים נפוצים" />
+                    <Title LCID="1081" Text="सामान्य" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Közös" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Жалпы" />
+                    <Title LCID="1042" Text="일반" />
+                    <Title LCID="1063" Text="Įprasta" />
+                    <Title LCID="1062" Text="Kopējs" />
+                    <Title LCID="1086" Text="Umum" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Algemeen" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comun" />
+                    <Title LCID="1049" Text="Общее" />
+                    <Title LCID="1051" Text="Bežné" />
+                    <Title LCID="1060" Text="Skupno" />
+                    <Title LCID="3098" Text="Уобичајено" />
+                    <Title LCID="2074" Text="Uobičajeno" />
+                    <Title LCID="1053" Text="Gemensam" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Загальне" />
+                    <Title LCID="1066" Text="Thông thường" />
+                    <Title LCID="2052" Text="公用" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1025" Text="المبيعات" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Ventes" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1087" Text="Сатылым" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="1063" Text="Pardavimas" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="3098" Text="Продаја" />
+                    <Title LCID="2074" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1025" Text="الخدمة" />
+                    <Title LCID="1026" Text="Обслужване" />
+                    <Title LCID="1027" Text="Servei" />
+                    <Title LCID="1029" Text="Služby" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Υπηρεσία" />
+                    <Title LCID="3082" Text="Servicio" />
+                    <Title LCID="1061" Text="Teenindus" />
+                    <Title LCID="1069" Text="Zerbitzua" />
+                    <Title LCID="1035" Text="Palvelu" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Servizo" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1081" Text="सेवा" />
+                    <Title LCID="1050" Text="Usluga" />
+                    <Title LCID="1038" Text="Szolgáltatás" />
+                    <Title LCID="1057" Text="Layanan" />
+                    <Title LCID="1040" Text="Servizio" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1087" Text="Қызмет" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="1063" Text="Aptarnavimas" />
+                    <Title LCID="1062" Text="Serviss" />
+                    <Title LCID="1086" Text="Perkhidmatan" />
+                    <Title LCID="1044" Text="Service" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Usługa" />
+                    <Title LCID="1046" Text="Serviço" />
+                    <Title LCID="2070" Text="Serviço" />
+                    <Title LCID="1048" Text="Serviciu" />
+                    <Title LCID="1049" Text="Сервис" />
+                    <Title LCID="1051" Text="Služba" />
+                    <Title LCID="1060" Text="Storitev" />
+                    <Title LCID="3098" Text="Услуга" />
+                    <Title LCID="2074" Text="Usluga" />
+                    <Title LCID="1053" Text="Tjänst" />
+                    <Title LCID="1054" Text="การบริการ" />
+                    <Title LCID="1055" Text="Servis" />
+                    <Title LCID="1058" Text="Послуга" />
+                    <Title LCID="1066" Text="Dịch vụ" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1025" Text="التسويق" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="3098" Text="Маркетинг" />
+                    <Title LCID="2074" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Processessioner" />
+                    <Title LCID="1031" Text="Prozesssitzungen" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διεργασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesu-saioak" />
+                    <Title LCID="1035" Text="Prosessin istunnot" />
+                    <Title LCID="1036" Text="Sessions de traitement" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1037" Text="הפעלות תהליך" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Sesije procesa" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Sesi Proses" />
+                    <Title LCID="1040" Text="Sessioni processo" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1087" Text="Процесс сеанстары" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="1063" Text="Apdorojimo seansai" />
+                    <Title LCID="1062" Text="Apstrādes sesijas" />
+                    <Title LCID="1086" Text="Proses Sesi" />
+                    <Title LCID="1044" Text="Prosessøkter" />
+                    <Title LCID="1043" Text="Processessies" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Sessões de Processo" />
+                    <Title LCID="2070" Text="Sessões de Processo" />
+                    <Title LCID="1048" Text="Sesiuni de proces" />
+                    <Title LCID="1049" Text="Сеансы процесса" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje procesov" />
+                    <Title LCID="3098" Text="Сесије процеса" />
+                    <Title LCID="2074" Text="Sesije procesa" />
+                    <Title LCID="1053" Text="Processessioner" />
+                    <Title LCID="1054" Text="เซสชันของกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси процесів" />
+                    <Title LCID="1066" Text="Giao dịch quy trình" />
+                    <Title LCID="2052" Text="进程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <formLibraries>
+        <Library name="msdyn_/Order/OrderLine.Library.js" libraryUniqueId="{e90ec181-9e05-1298-53b6-e08780161892}" />
+    </formLibraries>
+    <controlDescriptions />
+    <DisplayConditions Order="1">
+        <Role Id="{c737e307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+        <Role Id="{183ce307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+    </DisplayConditions>
+</form>

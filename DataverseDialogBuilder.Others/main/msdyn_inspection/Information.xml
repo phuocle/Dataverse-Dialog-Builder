@@ -1,0 +1,131 @@
+<form headerdensity="HighReadOnlyValues">
+    <tabs>
+        <tab verticallayout="true" id="{5b128d40-6c06-43bb-9357-608b66262519}" IsUserDefined="1" name="{5b128d40-6c06-43bb-9357-608b66262519}" expanded="true" locklevel="0" showlabel="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section visible="false" showlabel="false" showbar="false" IsUserDefined="0" id="{128b2e25-e25d-42dd-9a81-f5395e17d2b2}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5b524554-4ce4-468e-8d73-75df6a9b37f7}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7a1b4840-37b3-2867-4399-33eb97176426}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_description" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ddece0ac-1870-4f72-a187-6d48b1ca292b}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="InspectionFormSection" showlabel="false" showbar="false" locklevel="0" id="{b5ce4350-9a50-d4a4-ee0c-195a614e87ec}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7a0d61b9-a215-e384-a066-dd7638aabe92}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_state" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_state" disabled="true" uniqueid="{e2910331-c568-62c1-e075-71c28101c67e}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{704d5069-aa15-01db-4ca7-5e6abd2b6dba}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="surveydefinition" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_surveydefinition" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_surveydefinition" disabled="false" uniqueid="{71979b86-5d44-4a04-80a0-54b7d437c03f}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{fc96addd-bdd2-4d5a-8535-a706d786018e}" columns="111">
+        <rows>
+            <row>
+                <cell id="{c6127877-087e-457b-b8bf-ec581825879b}" showlabel="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{1e39fc88-47f9-4992-96d5-ffc358ae42ed}" showlabel="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{899e151c-a82d-2dca-8bd4-0052033d5731}" showlabel="true" locklevel="0">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="header_msdyn_state" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_state" disabled="true" uniqueid="{3811b380-bd73-2267-e38b-77b98a938b2e}" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <controlDescriptions>
+        <controlDescription forControl="{71979b86-5d44-4a04-80a0-54b7d437c03f}">
+            <customControl id="{E0DECE4B-6FC8-4a8f-A065-082708572369}">
+                <parameters>
+                    <datafieldname>msdyn_surveydefinition</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.InspectionControls.SurveyControl">
+                <parameters>
+                    <SurveyJSON>msdyn_surveydefinition</SurveyJSON>
+                    <IsPreview static="true" type="SingleLine.Text">true</IsPreview>
+                    <IsReadOnly static="true" type="SingleLine.Text">true</IsReadOnly>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.InspectionControls.SurveyControl">
+                <parameters>
+                    <SurveyJSON>msdyn_surveydefinition</SurveyJSON>
+                    <IsPreview static="true" type="SingleLine.Text">true</IsPreview>
+                    <IsReadOnly static="true" type="SingleLine.Text">true</IsReadOnly>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="msdyn_MscrmControls.InspectionControls.SurveyControl">
+                <parameters>
+                    <SurveyJSON>msdyn_surveydefinition</SurveyJSON>
+                    <IsPreview static="true" type="SingleLine.Text">true</IsPreview>
+                    <IsReadOnly static="true" type="SingleLine.Text">true</IsReadOnly>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdyn_/Inspection/Inspection.Library.js" libraryUniqueId="{825b18a7-3c26-6d04-d666-4370b032067d}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Inspection.Library.LoadInspectionType" libraryName="msdyn_/Inspection/Inspection.Library.js" handlerUniqueId="{432ed17e-125b-251d-170b-715aaca373b7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

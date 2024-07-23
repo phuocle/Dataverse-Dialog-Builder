@@ -1,0 +1,427 @@
+<form>
+    <hiddencontrols>
+        <data id="statecode" datafieldname="statecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="contractid" datafieldname="contractid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="general" id="{29ccb4aa-b08f-405f-b878-c18eff62d8e7}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="header" showlabel="true" showbar="true" id="{4ff59a3c-3f68-487f-a335-826e98969ce0}" IsUserDefined="0">
+                            <labels>
+                                <label description="Header" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5211f5e2-3d8b-400c-a847-c39872ab5cdb}">
+                                        <labels>
+                                            <label description="Contract ID" languagecode="1033" />
+                                        </labels>
+                                        <control id="contractnumber" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="contractnumber" disabled="true" />
+                                    </cell>
+                                    <cell id="{c1f849f0-55bc-468d-b986-324856a7b486}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{d1a6b310-bcbe-48e4-b886-06f88673beb9}">
+                                        <labels>
+                                            <label description="Contract Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="title" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7609dc20-3b0d-40aa-9744-39c264b5c944}">
+                                        <labels>
+                                            <label description="Customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="customerid" />
+                                    </cell>
+                                    <cell id="{40de5b94-fecb-4824-bcf6-c4da8207b908}">
+                                        <labels>
+                                            <label description="Contract Address" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.serviceaddress_setadditionalparams_0" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="9940796e-8168-47dc-a83a-253804648cad" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="customerid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="serviceaddress" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="serviceaddress">
+                                            <parameters>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1ea64f4b-ddc4-448c-9453-f209300255ed}">
+                                        <labels>
+                                            <label description="Contract Start Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="activeon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="activeon" />
+                                    </cell>
+                                    <cell id="{dded460a-ee15-4d77-9729-ae9277efafc0}">
+                                        <labels>
+                                            <label description="Contract End Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="expireson" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="expireson" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{de376bc9-b45a-43a6-b112-5767dbfeecf1}">
+                                        <labels>
+                                            <label description="Duration In Days" languagecode="1033" />
+                                        </labels>
+                                        <control id="duration" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="duration" />
+                                    </cell>
+                                    <cell id="{5ac63304-205c-43bb-af5d-6a1230e13963}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="billing information" showlabel="true" showbar="true" id="{4b043fb0-1ed0-4044-a212-fa8e7b94617e}" IsUserDefined="0">
+                            <labels>
+                                <label description="Billing Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c6e8c713-5185-42e6-8b21-9ddf2ecd2d70}">
+                                        <labels>
+                                            <label description="Bill To Customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="billingcustomerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="billingcustomerid" />
+                                    </cell>
+                                    <cell id="{d3a70b58-39e8-493b-a6e7-9a2bb2db8c88}">
+                                        <labels>
+                                            <label description="Bill To Address" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.billtoaddress_setadditionalparams" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="7eb92c93-27bc-4405-a1ed-f18d1fdd862d" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="billingcustomerid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="billtoaddress" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="billtoaddress">
+                                            <parameters>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d5e2bfb1-98c0-4449-a847-c3da0826523d}">
+                                        <labels>
+                                            <label description="Billing Start Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="billingstarton" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="billingstarton" />
+                                    </cell>
+                                    <cell id="{5a05b0a7-a7c4-46d3-b60c-6a51fc8a5a54}">
+                                        <labels>
+                                            <label description="Billing End Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="billingendon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="billingendon" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{70e4fb33-88d6-4287-b184-59b17c64483a}">
+                                        <labels>
+                                            <label description="Billing Frequency" languagecode="1033" />
+                                        </labels>
+                                        <control id="billingfrequencycode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="billingfrequencycode" />
+                                    </cell>
+                                    <cell id="{367c1697-0fa0-4579-927b-c2d4cffeb12b}">
+                                        <labels>
+                                            <label description="Cancellation Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="cancelon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="cancelon" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="pricing" showlabel="true" showbar="true" id="{24591791-4725-48c1-bcad-b8637ab3a3b6}" IsUserDefined="0">
+                            <labels>
+                                <label description="Pricing" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ff077387-caa9-410f-9430-882c22553a83}">
+                                        <labels>
+                                            <label description="Currency" languagecode="1033" />
+                                        </labels>
+                                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" />
+                                    </cell>
+                                    <cell id="{8c50dd7f-c700-4be3-b1db-434665335a04}" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a322e995-e791-413c-a0ed-e11df5612e67}">
+                                        <labels>
+                                            <label description="Total Price" languagecode="1033" />
+                                        </labels>
+                                        <control id="totalprice" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="totalprice" />
+                                    </cell>
+                                    <cell id="{5dfa9a75-a603-4a8b-a66a-85b8e78ef7f7}">
+                                        <labels>
+                                            <label description="Total Discount" languagecode="1033" />
+                                        </labels>
+                                        <control id="totaldiscount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="totaldiscount" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d7cb8e0e-942b-45a9-9b5e-d81ac0c4d447}">
+                                        <labels>
+                                            <label description="Net Price" languagecode="1033" />
+                                        </labels>
+                                        <control id="netprice" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="netprice" />
+                                    </cell>
+                                    <cell id="{9399ee90-9fea-4396-b1d5-7d3af8a1a8bb}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="details" id="{010d7bfd-32c7-4890-972e-36cf98e3eabb}" IsUserDefined="0">
+            <labels>
+                <label description="Details" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="contract type" showlabel="true" showbar="true" id="{ee048810-853d-4996-bb6d-15cc81e36e57}" IsUserDefined="0">
+                            <labels>
+                                <label description="Contract Type" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{dfeceef4-d164-4207-8552-de01a5eb1f40}">
+                                        <labels>
+                                            <label description="Discount" languagecode="1033" />
+                                        </labels>
+                                        <control id="usediscountaspercentage" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="usediscountaspercentage" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f801bcfa-90e6-4177-b29b-d1a15fd9830d}">
+                                        <labels>
+                                            <label description="Service Level" languagecode="1033" />
+                                        </labels>
+                                        <control id="contractservicelevelcode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="contractservicelevelcode" />
+                                    </cell>
+                                    <cell id="{7efbe92a-214a-4452-85ae-928651f501c7}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="history" showlabel="true" showbar="true" id="{3a5fbad5-912a-4f97-824d-13ad5a11ff09}" IsUserDefined="0">
+                            <labels>
+                                <label description="History" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7d55a40c-2b7a-40f9-834f-ee6d7ce7030d}">
+                                        <labels>
+                                            <label description="Originating Contract" languagecode="1033" />
+                                        </labels>
+                                        <control id="originatingcontract" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="originatingcontract" disabled="true">
+                                            <parameters>
+                                                <DefaultViewId>{646DE3EE-EBFB-4d19-8A44-4A619505E188}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{12e40476-409e-4bbb-9294-cb35f84321c8}">
+                                        <labels>
+                                            <label description="Contract Template" languagecode="1033" />
+                                        </labels>
+                                        <control id="contracttemplateid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="contracttemplateid" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cb175d4c-6880-4a2b-8be1-a5140e8e4689}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                    <cell id="{c79ab134-f0e7-4c0f-b349-e4a2ec41a548}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="description" showlabel="true" showbar="true" id="{04d169f9-c91c-4226-89b2-88182dcd492a}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Description" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{1a554e10-c2fb-415f-996f-3e08c3c9e486}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="contractlanguage" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="contractlanguage" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="notes" id="{480E88AC-78D7-472d-A356-95D812BEBCBE}" IsUserDefined="0" expanded="false">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="notes" showlabel="false" showbar="false" id="{4EF1FFA8-0831-4cde-B34D-9FAA902A03D3}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{5b4a062a-cac7-4ebe-9152-da2697421d07}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="c8f51c9e-2ba6-456c-9e36-0c0144f48e06" enabled="true">
+                    <dependencies>
+                        <dependency id="expireson" />
+                        <dependency id="activeon" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="customerid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.customerid_onchange" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="6b524758-d169-4959-99bc-90d73bfd5ba1" enabled="true">
+                    <dependencies>
+                        <dependency id="serviceaddress" />
+                        <dependency id="billingcustomerid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="serviceaddress">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.serviceaddress_onchange" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="ff96bf4d-b9bf-46bf-9796-279ddb68381e" enabled="true">
+                    <dependencies>
+                        <dependency id="customerid" />
+                        <dependency id="billingcustomerid" />
+                        <dependency id="billtoaddress" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="activeon">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.activeon_onchange" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="74ca0e0b-781d-46fd-918c-7cb963f3ecfa" enabled="true">
+                    <dependencies>
+                        <dependency id="expireson" />
+                        <dependency id="billingstarton" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="expireson">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.expireson_onchange" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="723e0da4-bb7b-4c9f-a834-35e1b615a463" enabled="true">
+                    <dependencies>
+                        <dependency id="activeon" />
+                        <dependency id="billingendon" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="billingcustomerid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.billingcustomerid_onchange" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="2cf93b4f-cb53-41aa-91e4-4d63a4b70752" enabled="true">
+                    <dependencies>
+                        <dependency id="billtoaddress" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="billingstarton">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.billingstarton_onchange" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="a9794902-e727-4883-8726-17b551207928" enabled="true">
+                    <dependencies>
+                        <dependency id="billingendon" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="billingendon">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.billingendon_onchange" libraryName="Service/Contract/Contract_main_system_library.js" handlerUniqueId="1667942d-3c89-4842-9cc8-38f387f3b10c" enabled="true">
+                    <dependencies>
+                        <dependency id="billingstarton" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Service/Contract/Contract_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

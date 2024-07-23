@@ -1,0 +1,76 @@
+<form shownavigationbar="false" showImage="false" maxWidth="1920">
+    <header id="{1d4351ec-31f4-4c0f-bf14-42d06b7fa568}" showcommandbar="false" showbody="false" showtabnavigator="false">
+        <rows>
+            <row>
+                <cell id="{732afe96-f710-4032-b72f-06f0855e2e52}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab name="tab1_summary" id="{89a597c8-178c-44bf-9600-5cc6500a2c60}" IsUserDefined="0" locklevel="0" showlabel="false" expanded="true" contenttype="expandAvailableSpace">
+            <labels>
+                <label description="Work Distribution" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="34%">
+                    <sections>
+                        <section name="tab_3_section_1" showlabel="false" showbar="false" locklevel="0" id="{dd2df3b8-0040-4f8b-b7f1-de81436cc07c}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="General information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{81715a79-e2c7-1a1a-165b-cb34456442d0}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="Channel" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_streamsource" datafieldname="msdyn_streamsource" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{61fbd414-a79c-4da7-9e41-09dd7f3d91a8}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{fa10494a-5aad-4de8-ad0c-59c5abf9a64f}" visible="false">
+        <rows>
+            <row>
+                <cell id="{33e6f356-2189-4cba-a415-c7000400c424}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{61fbd414-a79c-4da7-9e41-09dd7f3d91a8}">
+            <customControl id="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}">
+                <parameters>
+                    <datafieldname>msdyn_streamsource</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.ModernAdmin.WorkstreamVirtualHubWrapperControl">
+                <parameters>
+                    <streamSource>msdyn_streamsource</streamSource>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ModernAdmin.WorkstreamVirtualHubWrapperControl">
+                <parameters>
+                    <streamSource>msdyn_streamsource</streamSource>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ModernAdmin.WorkstreamVirtualHubWrapperControl">
+                <parameters>
+                    <streamSource>msdyn_streamsource</streamSource>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

@@ -1,0 +1,181 @@
+<form enablerelatedinformation="false">
+    <hiddencontrols>
+        <data id="ConvertRuleId" datafieldname="convertruleid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ConditionXml" datafieldname="conditionxml" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" />
+        <data id="WorkflowId" datafieldname="workflowid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="ConditionBuilder" verticallayout="true" id="{9f0afd75-c1a5-48a6-aef0-d8195277a8d3}" IsUserDefined="0" showlabel="true">
+            <labels>
+                <label description="Condition builder" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="New_Condition" showlabel="true" showbar="false" id="{49bfead5-86a7-41ce-9a75-9e0693168cd3}" IsUserDefined="0">
+                            <labels>
+                                <label description="Condition" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{d6bafafe-586a-4045-8fa9-09761e64d699}">
+                                        <labels>
+                                            <label description="Condition name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row height="auto">
+                                    <cell auto="true" showlabel="true" locklevel="0" rowspan="9" colspan="1" id="{8cd51f95-59ac-44cf-a0fd-944b4d7bc5d1}" visible="false">
+                                        <labels>
+                                            <label description="Condition that must pass to continue (pass if blank)" languagecode="1033" />
+                                        </labels>
+                                        <control id="arc_condition_config_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{97cda5bc-d3a7-4b47-8e73-28f34714e4cf}" datafieldname="conditionxml" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Actions_To_Take" showlabel="true" showbar="false" id="{af7f720e-4206-4b7d-b240-2107eab0592e}" IsUserDefined="0">
+                            <labels>
+                                <label description="Actions to take" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d4a2013b-3c23-4732-90c9-912dab45bae2}" showlabel="true" locklevel="0" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Record to create" languagecode="1033" />
+                                        </labels>
+                                        <control id="arc_primary_create_control" classid="{f9a8a302-114e-466a-b582-6771b2ae0d92}" datafieldname="primarycreateentitylogicalname" disabled="false" uniqueid="{abf5d75a-aa0b-4028-b788-7af4bfdfb307}"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="true" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{b3107836-8664-4d8f-b252-bfb59b8cc646}">
+                                        <labels>
+                                            <label description="Configure in Microsoft Power Automate" languagecode="1033" />
+                                        </labels>
+                                        <control id="configure_child_flow" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{6ea9c164-8e38-4b4f-abef-4339f8857015}" isunbound="true" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row height="auto">
+                                    <cell id="{64dabcc5-076a-4af6-b952-4bd5e1f0e674}" showlabel="false" colspan="1" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Disclaimer" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_Disclaimer" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>AutomaticRecordCreation/ConfirmInformationDisclaimer.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <WebResourceId>{C3BE5209-41EE-443A-B194-9A021C138D21}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <DisplayConditions Order="2">
+        <Everyone />
+    </DisplayConditions>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="ARC.ARCRuleItemMainSystemLibrary.RuleItemForm_onload" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="50ceeb7c-f219-445d-b158-7de11125f201" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="name">
+            <InternalHandlers>
+                <Handler functionName="ARC.ARCRuleItemMainSystemLibrary.Form_convertruleitemNameOnChange" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="50393760-cf44-4791-8829-166d2e62bf05" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="ARC.ARCRuleItemMainSystemLibrary.RuleItemForm_onsave" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="ba66ef90-dbbf-44b6-a2aa-9c44a3b69873" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{97cda5bc-d3a7-4b47-8e73-28f34714e4cf}">
+            <customControl name="MscrmControls.ConditionBuilder.ItemConditionBuilderControl" formFactor="0">
+                <parameters>
+                    <fetchxml type="SingleLine.Text">conditionxml</fetchxml>
+                    <parentid type="Lookup.Simple">convertruleid</parentid>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConditionBuilder.ItemConditionBuilderControl" formFactor="1">
+                <parameters>
+                    <fetchxml type="SingleLine.Text">conditionxml</fetchxml>
+                    <parentid type="Lookup.Simple">convertruleid</parentid>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.ConditionBuilder.ItemConditionBuilderControl" formFactor="2">
+                <parameters>
+                    <fetchxml type="SingleLine.Text">conditionxml</fetchxml>
+                    <parentid type="Lookup.Simple">convertruleid</parentid>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{abf5d75a-aa0b-4028-b788-7af4bfdfb307}">
+            <customControl name="MscrmControls.PrimaryCreate.PrimaryCreateOptionSetControl" formFactor="0">
+                <parameters>
+                    <value type="SingleLine.Text">primarycreateentitylogicalname</value>
+                    <convertruleitemid type="Guid">convertruleitemid</convertruleitemid>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.PrimaryCreate.PrimaryCreateOptionSetControl" formFactor="1">
+                <parameters>
+                    <value type="SingleLine.Text">primarycreateentitylogicalname</value>
+                    <convertruleitemid type="Guid">convertruleitemid</convertruleitemid>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.PrimaryCreate.PrimaryCreateOptionSetControl" formFactor="2">
+                <parameters>
+                    <value type="SingleLine.Text">primarycreateentitylogicalname</value>
+                    <convertruleitemid type="Guid">convertruleitemid</convertruleitemid>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{6ea9c164-8e38-4b4f-abef-4339f8857015}">
+            <customControl name="MscrmControls.OpenFlowControl" formFactor="0">
+                <parameters>
+                    <childflowid type="Lookup.Simple">workflowid</childflowid>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OpenFlowControl" formFactor="1">
+                <parameters>
+                    <childflowid type="Lookup.Simple">workflowid</childflowid>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.OpenFlowControl" formFactor="2">
+                <parameters>
+                    <childflowid type="Lookup.Simple">workflowid</childflowid>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AutomaticRecordCreation/ARC/ARC_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

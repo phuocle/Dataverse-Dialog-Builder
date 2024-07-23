@@ -1,0 +1,693 @@
+<form shownavigationbar="true" showImage="false" maxWidth="1900">
+    <tabs>
+        <tab verticallayout="true" id="{92e04d00-d34c-4aae-b8a9-b2f7e65b9f15}" IsUserDefined="1" labelid="{548e5613-816a-4bdc-ba2c-5c03ca39e40c}" name="fstab_general" locklevel="0" expanded="true" showlabel="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="28%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{d003525e-e6ea-462d-95d7-fa5da1ed2bf7}" name="fstab_general_section_general" columns="1" locklevel="0" labelwidth="200" celllabelalignment="Left" celllabelposition="Left" labelid="{80b1a22e-4fb6-490f-b28c-def98fc08000}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6db57740-53be-2915-27ee-a454eeab9e29}" showlabel="true" locklevel="0" labelid="{ebe5f421-38b3-4254-93e9-81a9752e182d}">
+                                        <labels>
+                                            <label description="Task Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_tasktype" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_tasktype" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d213b4d3-8a87-e262-a3c2-880b747dcab4}" showlabel="true" locklevel="0" labelid="{d5e7304e-4dd4-4f92-ba25-16c629940ef8}">
+                                        <labels>
+                                            <label description="Estimated Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_estimatedduration" classid="{AA987274-CE4E-4271-A803-66164311A958}" datafieldname="msdyn_estimatedduration" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{20a8c03c-d725-da5a-4e9c-b51d2c1aa98d}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Has Inspection" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_inspectionenabled" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_inspectionenabled" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5810e2a9-8c3e-2dea-84dd-5e7bdbd6a6c3}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Inspection Template" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_inspection" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_inspection" disabled="true" uniqueid="{8439c62c-a24e-5cd2-0a90-bd9c667c00a7}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{42F38D8E-6416-4497-BD7B-26C41F6A78B0}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2d07764a-a96e-674e-7c9b-a68758555cd9}" showlabel="true" locklevel="0" colspan="1" rowspan="5" labelid="{976f9543-3867-4cba-ab1a-06fcb2c47cf3}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_description" disabled="false" uniqueid="{ed75e90d-60d9-be93-79c7-886d4d20c2b1}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="InspectionFormSection_Mobile" showlabel="true" showbar="false" locklevel="0" id="{d42d54a9-c542-b907-c69d-699a53db622c}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Inspection Preview (read-only)" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{549bb984-09db-cde6-1b3b-e5c7b68a61d9}" showlabel="false" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="SurveyControl" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_surveyresponse" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_inspection" disabled="false" uniqueid="{8354372A-B847-D475-0AA9-29666939C574}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="fstab_general_section_service_task_relates_to" showlabel="true" showbar="false" locklevel="0" id="{b54bb2ca-da6c-2174-0420-7c3394430463}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="200" celllabelalignment="Left" celllabelposition="Left" labelid="{4de74591-48cb-4caa-bbc8-396554bcd891}">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ae572589-7b7c-7d12-3455-88cbcc43ac9a}" showlabel="true" locklevel="0" labelid="{5d3ae18c-63f0-4d2a-948a-8a9b09420031}">
+                                        <labels>
+                                            <label description="Agreement Booking Setup" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_agreementbookingsetup" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_agreementbookingsetup" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <DefaultViewId>{ECA9CCCD-8C77-4F36-A22A-CB8E1BF8A0F7}</DefaultViewId>
+                                                <FilterRelationshipName>msdyn_msdyn_agreement_msdyn_agreementbookingsetup_Agreement</FilterRelationshipName>
+                                                <DependentAttributeName>msdyn_agreementbookingservicetask.msdyn_agreement</DependentAttributeName>
+                                                <DependentAttributeType>msdyn_agreement</DependentAttributeType>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c18dbdd9-760c-264d-c721-6d8964395e01}" showlabel="true" locklevel="0" labelid="{410a071b-4efa-4f03-af0d-f5f270ce5cd2}">
+                                        <labels>
+                                            <label description="Agreement Booking Incident" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_agreementbookingincident" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_agreementbookingincident" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{C0BD129D-1E44-4297-A24A-9A27CC047C79}</DefaultViewId>
+                                                <FilterRelationshipName>msdyn_msdyn_agreement_msdyn_agreementbookingincident_Agreement</FilterRelationshipName>
+                                                <DependentAttributeName>msdyn_agreementbookingservicetask.msdyn_agreement</DependentAttributeName>
+                                                <DependentAttributeType>msdyn_agreement</DependentAttributeType>
+                                                <AllowFilterOff>true</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{92352594-0b98-b093-8041-1694105aa7de}" showlabel="true" locklevel="0" labelid="{3009c208-3613-4d57-a363-1636ddc7e53b}">
+                                        <labels>
+                                            <label description="Agreement" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_agreement" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_agreement" disabled="true">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{0E202E69-7E40-4559-BD44-D1C1029E84E1}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{595737c2-c107-cccb-7b69-62780d46946c}" showlabel="true" locklevel="0" labelid="{bd9f3607-8e2e-496d-9fb6-38b1e114aa2a}">
+                                        <labels>
+                                            <label description="Customer Asset" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_customerasset" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_customerasset" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="44%">
+                    <sections>
+                        <section name="fstab_general_section_3" showlabel="false" showbar="false" locklevel="0" id="{cb7ec867-7972-5b05-9e8c-bb0b7d77a636}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows></rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="28%">
+                    <sections>
+                        <section name="fstab_general_section_4" showlabel="false" showbar="false" locklevel="0" id="{02736ee4-188a-1ec7-8234-eb8227b8dea9}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows></rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="fstab_other" id="{27d89ec9-72e4-a001-d4e7-43113d78ba62}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false" labelid="{ba16965a-b5cf-41c8-8230-07ebcab25eae}" visible="false" availableforphone="false">
+            <labels>
+                <label description="Related To" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="28%">
+                    <sections>
+                        <section name="fstab_other_section" showlabel="false" showbar="false" locklevel="0" id="{3c75c9c4-3013-63c4-9706-a1921d1aa5cd}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c62f701a-3a0d-4a39-b443-39922914cad4}" showlabel="true" locklevel="0" labelid="{cb06293a-b7a6-491e-84ad-e8a683733f76}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f5d5299e-799b-4b83-aa15-20960a06501a}" labelid="{bd4414c2-c1e5-4195-84f1-125bc1becf9e}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{76219dce-4347-9285-292c-8de6853a15e3}" showlabel="true" locklevel="0" labelid="{82b1b0aa-c64e-48dd-aae9-81543c6e4703}">
+                                        <labels>
+                                            <label description="Line Order" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_lineorder" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="msdyn_lineorder" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="44%">
+                    <sections>
+                        <section name="fstab_other_section_2" showlabel="false" showbar="false" locklevel="0" id="{568bad05-18c7-9307-4ba8-e86e920e94c6}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows></rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="28%">
+                    <sections>
+                        <section name="fstab_other_section_3" showlabel="false" showbar="false" locklevel="0" id="{e7aaa5e5-a9bb-8793-0d24-a4ac11b9b5c3}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows></rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab id="{ce945ef6-8ee2-46a4-8e48-b489a59f8e42}" IsUserDefined="0" expanded="false" labelid="{bfb9f89c-ae54-4f56-8bc2-ab3ea27b9bc4}" name="fstab_sub_grids" locklevel="0" showlabel="true">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="28%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{46b8ee44-9ed5-4075-b317-968dae7ba425}" IsUserDefined="0" height="auto" labelid="{fda7aef8-60ca-41d1-b82c-c357c5061ccc}" name="fstab_sub_grids_section" columns="1" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="1" showlabel="false" rowspan="2" auto="false" id="{4b08821b-48e8-458c-8fd6-16662190abb6}" labelid="{cd9066e0-c731-4d25-ab98-41c5204f8ca6}" locklevel="0">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-c143-495e-a496-c962e5b4488e}" uniqueid="{14163179-cde0-a365-2d1c-6d46ba51441e}" disabled="false">
+                                            <parameters>
+                                                <DefaultTabId>ActivitiesTab</DefaultTabId>
+                                                <ShowArticleTab>false</ShowArticleTab>
+                                                <SelectDefaultLanguage>00000000-0000-0000-0000-000000000000</SelectDefaultLanguage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="44%">
+                    <sections>
+                        <section name="fstab_sub_grids_section_2" showlabel="false" showbar="false" locklevel="0" id="{6a015903-298c-4d85-0429-c444568c158c}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows></rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="28%">
+                    <sections>
+                        <section name="fstab_sub_grids_section_3" showlabel="false" showbar="false" locklevel="0" id="{bc0a478d-61a2-ae37-9593-560b67b58644}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows></rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{c41476ca-bc83-4d69-a6ce-f48006e17cb2}">
+        <rows></rows>
+    </footer>
+    <Navigation>
+        <NavBar>
+            <NavBarByRelationshipItem RelationshipName="hardcoded_{B7196B13-6B9D-42CD-BD58-B19A3953126F}navProcessSessions" Sequence="9700" Area="ProcessCenter" Id="navProcessSessions">
+                <Titles>
+                    <Title LCID="1033" Text="Real Time Processes" />
+                    <Title LCID="1025" Text="عمليات في الوقت الحقيقي" />
+                    <Title LCID="1026" Text="Процеси в реално време" />
+                    <Title LCID="1027" Text="Processos en temps real" />
+                    <Title LCID="1029" Text="Procesy v reálném čase" />
+                    <Title LCID="1030" Text="Processer i realtid" />
+                    <Title LCID="1031" Text="Echtzeitprozesse" />
+                    <Title LCID="1032" Text="Διαδικασίες πραγματικού χρόνου" />
+                    <Title LCID="3082" Text="Procesos en tiempo real" />
+                    <Title LCID="1061" Text="Reaalajalised protsessid" />
+                    <Title LCID="1069" Text="Denbora errealeko prozesuak" />
+                    <Title LCID="1035" Text="Reaaliaikaiset prosessit" />
+                    <Title LCID="1036" Text="Processus en temps réel" />
+                    <Title LCID="1110" Text="Procesos en tempo real" />
+                    <Title LCID="1037" Text="תהליכים בזמן אמת" />
+                    <Title LCID="1081" Text="रीयल-टाइम प्रक्रियाएँ" />
+                    <Title LCID="1050" Text="Procesi u stvarnom vremenu" />
+                    <Title LCID="1038" Text="Valós idejű folyamatok" />
+                    <Title LCID="1057" Text="Proses Real-Time" />
+                    <Title LCID="1040" Text="Processi in tempo reale" />
+                    <Title LCID="1041" Text="リアルタイム プロセス" />
+                    <Title LCID="1087" Text="Ағымдағы уақыттағы процестер" />
+                    <Title LCID="1042" Text="실시간 프로세스" />
+                    <Title LCID="1063" Text="Procesai tikruoju laiku" />
+                    <Title LCID="1062" Text="Reāllaika procesi" />
+                    <Title LCID="1086" Text="Proses Masa Nyata" />
+                    <Title LCID="1044" Text="Sanntidsprosesser" />
+                    <Title LCID="1043" Text="Realtime-processen" />
+                    <Title LCID="1045" Text="Procesy w czasie rzeczywistym" />
+                    <Title LCID="1046" Text="Processos em Tempo Real" />
+                    <Title LCID="2070" Text="Processos em Tempo Real" />
+                    <Title LCID="1048" Text="Procese în timp real" />
+                    <Title LCID="1049" Text="Процессы в реальном времени" />
+                    <Title LCID="1051" Text="Procesy v reálnom čase" />
+                    <Title LCID="1060" Text="Procesi v realnem času" />
+                    <Title LCID="3098" Text="Процеси у реалном времену" />
+                    <Title LCID="2074" Text="Procesi u realnom vremenu" />
+                    <Title LCID="1053" Text="Realtidsprocesser" />
+                    <Title LCID="1054" Text="กระบวนการในเวลาจริง" />
+                    <Title LCID="1055" Text="Gerçek Zamanlı İşlemler" />
+                    <Title LCID="1058" Text="Процеси в режимі реального часу" />
+                    <Title LCID="1066" Text="Quy trình trong Thời gian Thực" />
+                    <Title LCID="2052" Text="实时流程" />
+                    <Title LCID="3076" Text="即時程序" />
+                    <Title LCID="1028" Text="即時程序" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem Icon="$webresource:msdyn_/Icons/Sitemap/WorkOrder_32.png" RelationshipName="msdyn_msdyn_agreementbookingservicetask_msdyn_workorderservicetask_AgreementBookingServiceTask" Sequence="10000" Area="Info" Id="nav_msdyn_msdyn_agreementbookingservicetask_msdyn_workorderservicetask_AgreementBookingServiceTask" Show="false">
+                <Titles>
+                    <Title LCID="1033" Text="Work Order Service Tasks" />
+                    <Title LCID="1025" Text="مهام خدمة أمر العمل" />
+                    <Title LCID="1026" Text="Задачи за услуги за работна поръчка" />
+                    <Title LCID="1027" Text="Tasques de servei de l'ordre de treball" />
+                    <Title LCID="1029" Text="Úkoly související se službami na pracovních příkazech" />
+                    <Title LCID="1030" Text="Serviceopgaver i arbejdsordre" />
+                    <Title LCID="1031" Text="Arbeitsauftragsserviceaufgaben" />
+                    <Title LCID="1032" Text="Εργασίες υπηρεσίας παραγγελίας εργασίας" />
+                    <Title LCID="3082" Text="Tareas de servicio de orden de trabajo" />
+                    <Title LCID="1061" Text="Töökäsu hooldustoimingud" />
+                    <Title LCID="1069" Text="Lan-eskaeren zerbitzuen zereginak" />
+                    <Title LCID="1035" Text="Työtilauksen palvelutehtävät" />
+                    <Title LCID="1036" Text="Tâches de service de l'ordre de travail" />
+                    <Title LCID="1110" Text="Tarefas de servizo do pedido de traballo" />
+                    <Title LCID="1037" Text="משימות שירות בהזמנת עבודה" />
+                    <Title LCID="1081" Text="कार्य ऑर्डर सेवा कार्य" />
+                    <Title LCID="1050" Text="Zadaci za usluge na radnom nalogu" />
+                    <Title LCID="1038" Text="Munkarendelés szolgáltatási feladatai" />
+                    <Title LCID="1057" Text="Tugas Layanan Perintah Kerja" />
+                    <Title LCID="1040" Text="Attività servizio ordine di lavoro" />
+                    <Title LCID="1041" Text="作業指示書サービス タスク" />
+                    <Title LCID="1087" Text="Жұмысқа тапсырыс қызметінің тапсырмалары" />
+                    <Title LCID="1042" Text="작업 주문 서비스 작업" />
+                    <Title LCID="1063" Text="Darbo užsakymo aptarnavimo užduotys" />
+                    <Title LCID="1062" Text="Darba pasūtījuma servisa uzdevumi" />
+                    <Title LCID="1086" Text="Tugas Perkhidmatan Pesanan Kerja" />
+                    <Title LCID="1044" Text="Serviceoppgaver for arbeidsordre" />
+                    <Title LCID="1043" Text="Servicetaken voor werkorders" />
+                    <Title LCID="1045" Text="Zadania serwisowe objęte zleceniem pracy" />
+                    <Title LCID="1046" Text="Tarefas de Serviço de Ordem de Serviço" />
+                    <Title LCID="2070" Text="Tarefas de Serviço da Ordem de Intervenção" />
+                    <Title LCID="1048" Text="Activități de serviciu din comanda de lucru" />
+                    <Title LCID="1049" Text="Задачи сервиса по заказу на работу" />
+                    <Title LCID="1051" Text="Úlohy služieb objednávok prác" />
+                    <Title LCID="1060" Text="Storitvena opravila delovnega naloga" />
+                    <Title LCID="3098" Text="Сервисни задаци радног налога" />
+                    <Title LCID="2074" Text="Servisni zadaci radnog naloga" />
+                    <Title LCID="1053" Text="Tjänstuppgifter för arbetsorder" />
+                    <Title LCID="1054" Text="งานการบริการของใบสั่งงาน" />
+                    <Title LCID="1055" Text="İş Emri Servis Görevleri" />
+                    <Title LCID="1058" Text="Завдання з обслуговування для наряду-замовлення" />
+                    <Title LCID="1066" Text="Công việc Dịch vụ Lệnh sản xuất" />
+                    <Title LCID="2052" Text="工作订单服务任务" />
+                    <Title LCID="3076" Text="工單服務工作" />
+                    <Title LCID="1028" Text="工單服務工作" />
+                </Titles>
+            </NavBarByRelationshipItem>
+        </NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عامة" />
+                    <Title LCID="1026" Text="Общи" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Almindelig" />
+                    <Title LCID="1031" Text="Allgemein" />
+                    <Title LCID="1032" Text="Κοινά" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Üldine" />
+                    <Title LCID="1069" Text="Ohikoa" />
+                    <Title LCID="1035" Text="Yhteiset" />
+                    <Title LCID="1036" Text="Éléments communs" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="פריטים נפוצים" />
+                    <Title LCID="1081" Text="सामान्य" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Általános" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Жалпы" />
+                    <Title LCID="1042" Text="일반" />
+                    <Title LCID="1063" Text="Įprasta" />
+                    <Title LCID="1062" Text="Kopējs" />
+                    <Title LCID="1086" Text="Umum" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Algemeen" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comun" />
+                    <Title LCID="1049" Text="Общие" />
+                    <Title LCID="1051" Text="Spoločné" />
+                    <Title LCID="1060" Text="Običajno" />
+                    <Title LCID="3098" Text="Уобичајено" />
+                    <Title LCID="2074" Text="Uobičajeno" />
+                    <Title LCID="1053" Text="Gemensam" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Звичайний" />
+                    <Title LCID="1066" Text="Thông thường" />
+                    <Title LCID="2052" Text="公用" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1025" Text="المبيعات" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Ventes" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1087" Text="Сатылым" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="1063" Text="Pardavimas" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="3098" Text="Продаја" />
+                    <Title LCID="2074" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1025" Text="الخدمة" />
+                    <Title LCID="1026" Text="Услуга" />
+                    <Title LCID="1027" Text="Servei" />
+                    <Title LCID="1029" Text="Služby" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Υπηρεσία" />
+                    <Title LCID="3082" Text="Servicio" />
+                    <Title LCID="1061" Text="Teenindus" />
+                    <Title LCID="1069" Text="Zerbitzua" />
+                    <Title LCID="1035" Text="Palvelu" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Servizo" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1081" Text="सेवा" />
+                    <Title LCID="1050" Text="Usluga" />
+                    <Title LCID="1038" Text="Szolgáltatás" />
+                    <Title LCID="1057" Text="Layanan" />
+                    <Title LCID="1040" Text="Servizio" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1087" Text="Қызмет" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="1063" Text="Aptarnavimas" />
+                    <Title LCID="1062" Text="Serviss" />
+                    <Title LCID="1086" Text="Perkhidmatan" />
+                    <Title LCID="1044" Text="Service" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Usługa" />
+                    <Title LCID="1046" Text="Serviço" />
+                    <Title LCID="2070" Text="Serviço" />
+                    <Title LCID="1048" Text="Serviciu" />
+                    <Title LCID="1049" Text="Сервис" />
+                    <Title LCID="1051" Text="Služba" />
+                    <Title LCID="1060" Text="Storitev" />
+                    <Title LCID="3098" Text="Услуга" />
+                    <Title LCID="2074" Text="Usluga" />
+                    <Title LCID="1053" Text="Tjänst" />
+                    <Title LCID="1054" Text="การบริการ" />
+                    <Title LCID="1055" Text="Servis" />
+                    <Title LCID="1058" Text="Служба" />
+                    <Title LCID="1066" Text="Dịch vụ" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1025" Text="التسويق" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="3098" Text="Маркетинг" />
+                    <Title LCID="2074" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Processessioner" />
+                    <Title LCID="1031" Text="Prozesssitzungen" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διεργασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesu-saioak" />
+                    <Title LCID="1035" Text="Prosessin istunnot" />
+                    <Title LCID="1036" Text="Sessions de traitement" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1037" Text="הפעלות תהליך" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Sesije procesa" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Sesi Proses" />
+                    <Title LCID="1040" Text="Sessioni processo" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1087" Text="Процесс сеанстары" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="1063" Text="Apdorojimo seansai" />
+                    <Title LCID="1062" Text="Apstrādes sesijas" />
+                    <Title LCID="1086" Text="Proses Sesi" />
+                    <Title LCID="1044" Text="Prosessøkter" />
+                    <Title LCID="1043" Text="Processessies" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Sessões de Processo" />
+                    <Title LCID="2070" Text="Sessões de Processo" />
+                    <Title LCID="1048" Text="Sesiuni de proces" />
+                    <Title LCID="1049" Text="Сеансы процесса" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje procesov" />
+                    <Title LCID="3098" Text="Сесије процеса" />
+                    <Title LCID="2074" Text="Sesije procesa" />
+                    <Title LCID="1053" Text="Processessioner" />
+                    <Title LCID="1054" Text="เซสชันของกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси процесів" />
+                    <Title LCID="1066" Text="Giao dịch quy trình" />
+                    <Title LCID="2052" Text="进程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <formLibraries>
+        <Library name="msdyn_/AgreementBookingServiceTask/AgreementBookingServiceTask.js" libraryUniqueId="{6ce991c7-74be-7c37-9dee-6b8d72943e9d}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler handlerUniqueId="{c978b92d-9380-d964-89eb-84edb927a9c2}" functionName="AgreementBookingServiceTasks.Library.Load" libraryName="msdyn_/AgreementBookingServiceTask/AgreementBookingServiceTask.js" enabled="true" passExecutionContext="true" parameters="" />
+                <Handler functionName="AgreementBookingServiceTaskHelper.Library.Load" libraryName="msdyn_/AgreementBookingServiceTask/AgreementBookingServiceTask.js" handlerUniqueId="{983a9429-a66d-0716-1a97-198b05d856a6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{8354372A-B847-D475-0AA9-29666939C574}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>msdyn_inspection</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.InspectionControls.SurveyControl">
+                <parameters>
+                    <SurveyJSON>msdyn_inspection</SurveyJSON>
+                    <Inspection type="Lookup.Simple">msdyn_inspection</Inspection>
+                    <IsReadOnly static="true" type="SingleLine.Text">true</IsReadOnly>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.InspectionControls.SurveyControl">
+                <parameters>
+                    <SurveyJSON>msdyn_inspection</SurveyJSON>
+                    <Inspection type="Lookup.Simple">msdyn_inspection</Inspection>
+                    <IsReadOnly static="true" type="SingleLine.Text">true</IsReadOnly>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="msdyn_MscrmControls.InspectionControls.SurveyControl">
+                <parameters>
+                    <SurveyJSON>msdyn_inspection</SurveyJSON>
+                    <Inspection type="Lookup.Simple">msdyn_inspection</Inspection>
+                    <IsReadOnly static="true" type="SingleLine.Text">true</IsReadOnly>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <DisplayConditions Order="2">
+        <Role Id="{DC08BFDE-DA92-E111-9D8C-000C2959F9B8}" />
+    </DisplayConditions>
+</form>

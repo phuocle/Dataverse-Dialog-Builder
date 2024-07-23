@@ -1,0 +1,186 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{ab62223f-e41b-6f11-a701-00155d2a9007}" IsUserDefined="0" name="general">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="section 1" showlabel="false" showbar="false" locklevel="0" id="{414e90c9-2271-c8a3-3447-cde5be61c503}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115">
+                            <labels>
+                                <label description="Section 1" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{83080e96-aa48-3351-7284-38a3a9c8679b}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                                    </cell>
+                                    <cell id="{86d489b4-4a5f-49a3-a4d0-60b8ba1ea2fd}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e56972de-0404-1c50-6465-bce37b320164}" showlabel="true" colspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="description" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="url option" showlabel="true" showbar="false" id="{35d87308-3c80-4b8b-b461-fb9513cd2d0b}" IsUserDefined="0">
+                            <labels>
+                                <label description="URL Options" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{98F49EA4-2D0C-4584-8721-E9585F6034C3}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="URL Type" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.urloption_onchange" libraryName="SharePointSite_main_system_library.js" handlerUniqueId="5cb5cd0a-62ad-4ba7-9fc5-354a0a92eeb6" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="absoluteurl" />
+                                                            <dependency id="parentsite" />
+                                                            <dependency id="relativeurl" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="urloption" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ae22b006-098d-3e55-59da-e8b252724283}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Absolute URL" languagecode="1033" />
+                                        </labels>
+                                        <control id="absoluteurl" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="absoluteurl" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d113b562-435c-a75c-b06e-2188235c53a0}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Parent Site" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentsite" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="parentsite" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9e368948-7d2e-5db4-82eb-3cca8d4c06b8}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Relative URL" languagecode="1033" />
+                                        </labels>
+                                        <control id="relativeurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="relativeurl" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b4ed19c3-ecc1-4217-babe-ed674ec4276b}" showlabel="true" locklevel="1" colspan="1">
+                                        <labels>
+                                            <label description="List component is installed" languagecode="1033" />
+                                        </labels>
+                                        <control id="isgridpresent" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="isgridpresent" disabled="false" />
+                                    </cell>
+                                    <cell id="{6c4bcecf-c693-4181-be98-e0e12863e9c5}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{96ba0a63-11c1-a86c-dc5b-75a2d386e49d}" showlabel="true" locklevel="0" colspan="2">
+                                        <labels>
+                                            <label description="Allow Embedding of Power BI Reports" languagecode="1033" />
+                                        </labels>
+                                        <control id="ispowerbisite" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="ispowerbisite" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="url validation" showlabel="true" showbar="false" locklevel="1" id="{c8d0e8e1-0087-bea8-8132-e87553897636}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="URL Validation" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{265b5487-ae7c-82a1-988c-b92c2a3ca91c}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Last Validation Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="validationstatus" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="validationstatus" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{381521b5-9ea8-9605-9199-7d53222982e3}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Last Validated" languagecode="1033" />
+                                        </labels>
+                                        <control id="lastvalidated" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="lastvalidated" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b668d6e1-32b8-5a4c-602e-250e5b88618d}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Additional Information" languagecode="1033" />
+                                        </labels>
+                                        <control id="validationstatuserrorcode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="validationstatuserrorcode" disabled="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="SharePointSite_main_system_library.js" handlerUniqueId="0a2e1193-90c6-4aff-a9a8-733fec05df01" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <footer id="{c4756e0d-215e-4955-807a-7a72989de193}">
+        <rows>
+            <row>
+                <cell id="{0c2b264d-74e3-47ac-8846-3649e631fdc9}">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="footer_statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SharePointSite_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar>
+            <NavBarByRelationshipItem RelationshipName="sharepointsite_parentsite_sharepointsite" Id="navSharePointSubSites" Icon="/_imgs/ico_18_9502.png" TitleResourceId="DocumentManagement.Settings.Child.SharePointSites" />
+            <NavBarByRelationshipItem RelationshipName="sharepointdocumentlocation_parent_sharepointsite" Id="navSubDocumentLocations" Icon="/_imgs/ico_18_9508.png" TitleResourceId="DocumentManagement.Settings.Child.SharePointLocations" />
+        </NavBar>
+    </Navigation>
+</form>

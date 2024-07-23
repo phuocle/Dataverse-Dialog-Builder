@@ -1,0 +1,128 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{ccfbc646-3511-47d7-bb91-445534769c91}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="price level information" showlabel="false" showbar="false" id="{d8100726-ce2e-4c1f-bde9-64e4d3193dd8}" IsUserDefined="0">
+                            <labels>
+                                <label description="Price Level Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{b24a4d11-f621-4815-95db-fb49d6796278}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7b4b1e9c-c928-45e3-a0f9-320b408121e8}">
+                                        <labels>
+                                            <label description="Start Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="begindate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="begindate" />
+                                    </cell>
+                                    <cell id="{cce47454-6a77-4894-8961-21943913507f}">
+                                        <labels>
+                                            <label description="End Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="enddate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="enddate" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c5def34a-ba2e-47ca-bcda-8ea40f1fdbf3}">
+                                        <labels>
+                                            <label description="Currency" languagecode="1033" />
+                                        </labels>
+                                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" />
+                                    </cell>
+                                    <cell id="{faa903f5-05eb-48fd-9978-d1bce666c3d3}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="description" showlabel="true" showbar="true" id="{52f87784-335e-4968-abeb-5ba3e8fa334e}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Description" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{fcf759f3-6b97-42f4-bfdf-ad99a053603b}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{648432B7-9415-42b6-9C80-DF75EBC39B3D}">
+        <rows>
+            <row>
+                <cell id="{785B6F5A-2603-424d-BDA6-386BE50784D6}">
+                    <labels>
+                        <label description="Status " languagecode="1033" />
+                    </labels>
+                    <control id="footer_statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload_pricelevel" libraryName="ProductManagement/PriceLevel/PriceLevel_main_system_library.js" handlerUniqueId="f3703837-7532-45dc-b8c6-4fa1c54119fc" enabled="true">
+                    <dependencies>
+                        <dependency id="enddate" />
+                        <dependency id="begindate" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="begindate">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.begindate_onchange" libraryName="ProductManagement/PriceLevel/PriceLevel_main_system_library.js" handlerUniqueId="dad601e1-e502-41ae-b3ce-88db5af55f41" enabled="true">
+                    <dependencies>
+                        <dependency id="enddate" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="enddate">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.enddate_onchange" libraryName="ProductManagement/PriceLevel/PriceLevel_main_system_library.js" handlerUniqueId="ec3fcb19-86db-4860-bd2b-87197b452af8" enabled="true">
+                    <dependencies>
+                        <dependency id="begindate" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ProductManagement/PriceLevel/PriceLevel_main_system_library.js" />
+            </clientincludes>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_ENDDATE_LT_STARTDATE" resourceid="Web.products.pricelevel.EndDateEarlierThanStartDate" />
+            </clientvariables>
+        </internalresources>
+    </clientresources>
+</form>

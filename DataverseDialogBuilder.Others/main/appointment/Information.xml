@@ -1,0 +1,285 @@
+<form>
+    <hiddencontrols>
+        <data id="activityid" datafieldname="activityid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="seriesid" datafieldname="seriesid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="organizer" datafieldname="organizer" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="statuscode" datafieldname="statuscode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="instancetypecode" datafieldname="instancetypecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="appointment" verticallayout="true" id="{6C7EDBF5-39CD-437c-A2D5-BA02355D285A}" IsUserDefined="0">
+            <labels>
+                <label description="Appointment" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="general information" showlabel="false" showbar="false" locklevel="0" id="{844DE7EE-AD12-4301-B10F-9CC5D1EA1F0F}" IsUserDefined="0" layout="varwidth" columns="11">
+                            <labels>
+                                <label description="General Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{02db07aa-8245-4c98-b6e0-9ca3b524eb5f}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="subject" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{d1d86802-ae88-4c0c-a87e-ce3860c395d5}">
+                                        <labels>
+                                            <label description="Location" languagecode="1033" />
+                                        </labels>
+                                        <control id="location" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="location" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="1" rowspan="1" colspan="2" id="{aa6a666b-b488-4bff-b6ba-3da354389d42}">
+                                        <labels>
+                                            <label description="Regarding" languagecode="1033" />
+                                        </labels>
+                                        <control id="regardingobjectid" classid="{F3015350-44A2-4aa0-97B5-00166532B5E9}" datafieldname="regardingobjectid" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="scheduling information" showlabel="true" showbar="true" locklevel="1" id="{4F40F21E-AB16-446f-9EFD-BD3F3FAAB634}" IsUserDefined="0" layout="varwidth" columns="11">
+                            <labels>
+                                <label description="Scheduling Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="1" rowspan="1" colspan="2" id="{44049430-b656-4f77-a9e0-d7faf6eed732}">
+                                        <labels>
+                                            <label description="Required" languagecode="1033" />
+                                        </labels>
+                                        <control id="requiredattendees" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="requiredattendees" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{267cbd23-f2ac-441c-b313-2e8763dec053}">
+                                        <labels>
+                                            <label description="Optional" languagecode="1033" />
+                                        </labels>
+                                        <control id="optionalattendees" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="optionalattendees" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{b56cec0d-f4bd-4c32-b109-a8493827ec29}">
+                                        <labels>
+                                            <label description="Start Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="scheduledstart" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="scheduledstart" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{2aded54d-2ada-4f81-8b6c-bf882895a53c}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="scheduleddurationminutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" datafieldname="scheduleddurationminutes" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{6bc51b1c-566c-44ee-b036-b051e3159842}">
+                                        <labels>
+                                            <label description="End Time" languagecode="1033" />
+                                        </labels>
+                                        <control id="scheduledend" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="scheduledend" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{cd8ba373-9a85-467c-9e74-04795af7755c}">
+                                        <labels>
+                                            <label description="All Day Event" languagecode="1033" />
+                                        </labels>
+                                        <control id="isalldayevent" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="isalldayevent" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="1" rowspan="1" colspan="1" id="{138e47a8-3b2f-4065-a209-57fc6ff5ea47}">
+                                        <labels>
+                                            <label description="Show Time As" languagecode="1033" />
+                                        </labels>
+                                        <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="1" rowspan="1" colspan="1" id="{998edd7b-4f37-4f9d-8998-c7914ed35fa8}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="prioritycode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="prioritycode" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="appointment description" showlabel="false" showbar="false" locklevel="0" id="{86EB037C-1F69-44b4-920E-7DE3B1641F8C}" IsUserDefined="0" layout="varwidth" columns="11" height="auto">
+                            <labels>
+                                <label description="Appointment Description" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="true" showlabel="false" locklevel="0" rowspan="7" colspan="2" id="{6fac42af-766a-487d-8a4f-782a926723f0}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="attachments" verticallayout="true" id="{045F8960-4E73-4BD1-BAD9-4C202898C77B}" IsUserDefined="0" locklevel="0">
+            <labels>
+                <label description="Attachments" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="attachments" showlabel="false" showbar="false" locklevel="0" id="{6467EF08-0C7F-4AF2-AA26-087819B9B8DC}" height="auto" IsUserDefined="0" layout="varheight" columns="11">
+                            <labels>
+                                <label description="Attachments" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell colspan="2" rowspan="7" showlabel="false" auto="true" id="{91299B36-9297-49D2-A100-5BAFE125F084}">
+                                        <labels>
+                                            <label description="Attachment" languagecode="1033" />
+                                        </labels>
+                                        <control id="attachmentsGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <TargetEntityType>activitymimeattachment</TargetEntityType>
+                                                <ViewId>{270DE234-E469-4806-9C7E-8D94901CD521}</ViewId>
+                                                <RelationshipName>appointment_activity_mime_attachment</RelationshipName>
+                                                <RecordsPerPage>5</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="notes" id="{32f14e18-9a3a-4544-8543-8ec73039739b}" IsUserDefined="0" locklevel="0" expanded="false">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="notes" showlabel="false" showbar="false" id="{6F415A8B-509B-4e16-A519-A2A88F1AB943}" IsUserDefined="0" height="auto" columns="11">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{b19a4b23-a8b0-4762-afaf-c551cb209837}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab id="{A0A52124-8019-4a51-9DAE-D85CD6227FFF}" IsUserDefined="0" locklevel="0" name="{A0A52124-8019-4a51-9DAE-D85CD6227FFF}">
+            <labels>
+                <label description="Details" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" locklevel="0" id="{6DAA79FB-7C18-428f-9219-7A146BAC5AE8}" IsUserDefined="0" layout="varwidth" columns="11" name="{6DAA79FB-7C18-428f-9219-7A146BAC5AE8}">
+                            <labels>
+                                <label description="Appointment Details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" id="{fd93e5cf-7611-457e-a8de-34165406b5fe}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" id="{b315c1ae-be9d-4cbb-b221-a323e4a73e0a}">
+                                        <labels>
+                                            <label description="Organizer" languagecode="1033" />
+                                        </labels>
+                                        <control id="organizer" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="organizer" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{37aaf525-e123-423d-98c3-db46eef44033}">
+                                        <labels>
+                                            <label description="Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="category" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="category" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{6532e740-5abd-4fd1-9679-3d46b946942b}">
+                                        <labels>
+                                            <label description="Sub-Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="subcategory" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="subcategory" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.Appointment.formOnLoad" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="53c66106-3c6e-4fa2-b569-bef97d304230" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="isalldayevent">
+            <InternalHandlers>
+                <Handler functionName="Activities.Appointment.isAllDayEventOnChange" libraryName="Activities/SystemLibraries/Appointment_main_system_library.js" handlerUniqueId="a254303d-a7f9-4e54-94b8-be488afd1bf3" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="scheduledstart" />
+                        <dependency id="scheduledend" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Appointment_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <DisplayConditions FallbackForm="true" Order="4">
+        <Everyone />
+    </DisplayConditions>
+</form>

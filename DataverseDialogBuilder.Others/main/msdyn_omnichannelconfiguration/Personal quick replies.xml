@@ -1,0 +1,57 @@
+<form shownavigationbar="false" showImage="false" maxWidth="1920">
+    <tabs>
+        <tab name="personal_message_settings" id="{02869692-1a5a-41ed-8b74-6d03527f4aba}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" labelid="{cbef5144-045d-42f8-9852-b99684c021d4}">
+            <labels>
+                <label description="Personal quick replies" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="personal_messaages_settings_section" showlabel="false" showbar="false" locklevel="0" id="{2c2428f9-b06a-4c50-a09c-3fa760f4fa2c}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{acb922c0-186f-49a6-a3ed-d84048fb27ee}">
+                            <labels>
+                                <label description="Personal messages" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d87a3047-8a0b-4661-b13c-0fa5b4e6fa19}" showlabel="true" locklevel="0" visible="true">
+                                        <labels>
+                                            <label description="Allow agents to create personal quick replies" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_ispersonalmessagesenabled" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_ispersonalmessagesenabled" disabled="false" uniqueid="{5D2AA1B5-0A66-B0B3-0CAE-7C52AD3250DC}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{5D2AA1B5-0A66-B0B3-0CAE-7C52AD3250DC}">
+            <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+                <parameters>
+                    <datafieldname>msdyn_ispersonalmessagesenabled</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value>msdyn_ispersonalmessagesenabled</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value>msdyn_ispersonalmessagesenabled</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value>msdyn_ispersonalmessagesenabled</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <DisplayConditions Order="5">
+        <Everyone />
+    </DisplayConditions>
+</form>

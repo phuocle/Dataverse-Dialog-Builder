@@ -1,0 +1,68 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{e5420355-eb73-427a-a5bc-6d4c45b0f88e}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="uom schedule information" showlabel="false" showbar="false" id="{545e98c3-c05b-4794-8239-08a2f43f9164}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="UOM Schedule Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{7a401926-968c-418e-9383-a7c00e92fd93}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{7a401926-968c-418e-9383-a7c00e92f555}" visible="false">
+                                        <labels>
+                                            <label description="Base Unit name" languagecode="1033" />
+                                        </labels>
+                                        <control id="baseuomname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="baseuomname" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" rowspan="5" auto="true" id="{f02eaa01-0dd3-44a5-bc80-45ac958e7fc4}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="ProductManagement/UoMSchedule/UoMSchedule_main_system_library.js" handlerUniqueId="4d8baab8-278f-4ae7-96dd-5de3aeea4699" enabled="true" />
+            </InternalHandlers>
+            <dependencies>
+                <dependency id="name" />
+                <dependency id="baseuomname" />
+            </dependencies>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ProductManagement/UoMSchedule/UoMSchedule_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

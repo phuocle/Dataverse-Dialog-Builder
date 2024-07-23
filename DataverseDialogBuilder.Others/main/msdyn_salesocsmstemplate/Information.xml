@@ -1,0 +1,152 @@
+<form headerdensity="HighReadOnlyValues">
+    <tabs>
+        <tab verticallayout="true" id="{9b879a87-3d8a-4e1b-927d-69191e39d9b2}" IsUserDefined="1" contenttype="singleComponent">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{264dd525-5fac-4374-8c89-f6d6fd0a6670}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a04af815-4ef5-4ab5-a600-1b31d3c96238}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="smstemplatecontrol" languagecode="1033" />
+                                        </labels>
+                                        <control id="smstemplatecontrol" classid="{F9A8A302-114E-466A-B582-6771B2AF1E03}" uniqueid="{3cede46c-8be9-9885-047e-5e67e3618637}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{78aa7871-b4f9-4d84-a83d-c2c576451859}" visible="false" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" uniqueid="{ed70a51b-06f7-458d-9703-56dfb8091bde}" datafieldname="msdyn_title" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{de98dc06-e0d1-46f6-87fe-24be702864af}" showlabel="true" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" uniqueid="{c9439d72-a02e-94dc-115b-196a880a5071}" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{24cdecc9-ea29-5400-57ed-990ca05c89d7}" showlabel="true" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_category" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_category" disabled="false" uniqueid="{d8d045b5-2ee0-b8e1-76b9-49ddd821d718}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{eec00560-e2ec-9d27-2ac7-37b6a6713447}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Language" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_language" classid="{671A9387-CA5A-4d1e-8AB7-06E39DDCF6B5}" datafieldname="msdyn_language" disabled="true" uniqueid="{8a69cabe-c7a7-8ec9-5190-037d79702998}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0c40ce40-602d-4e61-2e2a-52481c8dcc52}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_templatetext" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_templatetext" disabled="false" uniqueid="{a088b9e9-76ec-6d3d-d728-8bd44116d262}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d8f49d16-166c-45b3-983d-7229b4fd58da}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Placeholders" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_placeholders" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_placeholders" disabled="false" uniqueid="{c13cf36e-189d-4b73-95bc-f7eb1c0106bd}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{3cede46c-8be9-9885-047e-5e67e3618637}">
+            <customControl formFactor="0" name="msdyn_SalesOmniChannel.SMSTemplateControl">
+                <parameters>
+                    <templateId>msdyn_salesocsmstemplateid</templateId>
+                    <templateName>msdyn_title</templateName>
+                    <category>msdyn_category</category>
+                    <message>msdyn_templatetext</message>
+                    <placeholders>msdyn_placeholders</placeholders>
+                    <language>msdyn_language</language>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="msdyn_SalesOmniChannel.SMSTemplateControl">
+                <parameters>
+                    <templateId>msdyn_salesocsmstemplateid</templateId>
+                    <templateName>msdyn_title</templateName>
+                    <category>msdyn_category</category>
+                    <message>msdyn_templatetext</message>
+                    <placeholders>msdyn_placeholders</placeholders>
+                    <language>msdyn_language</language>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="msdyn_SalesOmniChannel.SMSTemplateControl">
+                <parameters>
+                    <templateId>msdyn_salesocsmstemplateid</templateId>
+                    <templateName>msdyn_title</templateName>
+                    <category>msdyn_category</category>
+                    <message>msdyn_templatetext</message>
+                    <placeholders>msdyn_placeholders</placeholders>
+                    <language>msdyn_language</language>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <header id="{e6581404-b7b3-484c-9fc6-2a6fc1e52cd4}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left" showcommandbar="true" showbody="false" showtabnavigator="false">
+        <rows>
+            <row>
+                <cell id="{40a3ee87-9347-4829-9b03-2e459fc1bf35}" showlabel="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{31d46a05-cc12-4328-8d3d-da3145a445a3}" showlabel="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{9e4c9457-a809-4595-9df7-cadc2a956d95}" showlabel="false">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <events>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler libraryName="$webresource:msdyn_SalesOmniChannel/SMSTemplate.Library.js" functionName="SalesOmniChannel.SMSTemplate.SMSTemplateForm.onSave" handlerUniqueId="c15cdc44-8173-86b5-ba62-bd92d7053a5a" passExecutionContext="true" enabled="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_SalesOmniChannel/SMSTemplate.Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

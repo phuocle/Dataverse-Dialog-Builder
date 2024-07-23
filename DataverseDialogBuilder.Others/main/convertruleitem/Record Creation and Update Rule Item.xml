@@ -1,0 +1,161 @@
+<form enablerelatedinformation="true">
+    <hiddencontrols>
+        <data id="ConditionXml" datafieldname="conditionxml" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="PropertiesXml" datafieldname="propertiesxml" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="QueueId" datafieldname="queueid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ConvertRuleId" datafieldname="convertruleid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{a190ecb2-59e1-442e-8508-b7fc4084d678}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Name" showlabel="false" showbar="false" id="{1C6764A9-CA64-465F-8B90-A14192540D45}" labelwidth="300" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="2" colspan="2" id="{463998C9-0512-484F-A2EB-942B876415C5}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="ConditionControl" showlabel="true" showbar="true" id="{897F0D9D-2C60-493D-B62E-19D169BA3B20}" labelwidth="300" IsUserDefined="0">
+                            <labels>
+                                <label description="Condition" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="false" locklevel="0" rowspan="9" colspan="2" id="{1E338C85-5DBE-49A0-8702-89EF103723FD}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="CaseProperties" showlabel="true" showbar="true" id="{FD22B14D-D5D9-4220-91A7-BF2C9015242D}" labelwidth="300" IsUserDefined="0" visible="false">
+                            <labels>
+                                <label description="Case Properties" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="false" locklevel="0" rowspan="9" colspan="2" id="{5536C648-0352-4C04-82B7-C7CF403A66D3}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="RegardingSettingsection" showlabel="true" showbar="false" IsUserDefined="0" id="{119ba69d-464f-4693-83c9-0707c26ef947}" locklevel="1" visible="false">
+                            <labels>
+                                <label description="Create record and set as the regarding of the source activity" languagecode="1033" />
+                            </labels>
+                        </section>
+                        <section name="primaryactionsection" showlabel="true" showbar="false" IsUserDefined="0" id="{1DD72002-36E8-477F-A1D4-9F28C5A6155F}" locklevel="1" visible="false">
+                            <labels>
+                                <label description="Create record and set as the regarding of the source activity" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="false" locklevel="0" rowspan="3" colspan="2" id="{EEBA51E1-0A8E-4406-BD9C-214677335186}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="secondaryactionsection" showlabel="true" showbar="false" IsUserDefined="0" id="{13ef2dfe-31df-4c1c-9da1-9c80900785bb}" locklevel="1" visible="false">
+                            <labels>
+                                <label description="SPECIFY OTHER ACTIONS" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="false" locklevel="0" rowspan="9" colspan="2" id="{fb51aa60-9b88-4d62-92bb-026ed6d963c2}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="ConvertRuleItem_main_system_library.js" handlerUniqueId="06022bed-cda1-4ecc-bfd1-0eafc397c9aa" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="ConvertRuleItem_main_system_library.js" handlerUniqueId="9CE5BD12-B7C2-44C0-8A4E-62BEA4A2D60C" enabled="true">
+                    <dependencies>
+                        <dependency id="conditionxml" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="/_static/cs/ServiceEntityValidations.js" />
+                <internaljscriptfile src="$webresource:ConvertRuleItem_main_system_library.js" />
+            </clientincludes>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_ERROR_MISSING_CRI" resourceid="Web.ServiceItem.edit.aspx" />
+                <internaljscriptvariable name="LOCID_LINK_DESCRIPTION" resourceid="Web.ConvertRuleItem.HelpLink.Description" />
+                <internaljscriptvariable name="LOCID_SECTION_LABEL" resourceid="Web.ConvertRuleItem.Section.label" />
+                <internaljscriptvariable name="LOCID_SECTION_EMPTY_MESSAGE" resourceid="Web.ConvertRuleItem.Section.EmptyMessage" />
+                <internaljscriptvariable name="LOCID_CONDITION_EMPTY_MESSAGE" resourceid="Web.ConvertRuleItem.Section.ConditionEmptyMessage" />
+                <internaljscriptvariable name="LOCID_HELPLINK_TEXT" resourceid="Web.ConvertRule.Propertybag.HelpLink.Text" />
+            </clientvariables>
+        </internalresources>
+    </clientresources>
+    <DisplayConditions FallbackForm="true" Order="1">
+        <Everyone />
+    </DisplayConditions>
+</form>

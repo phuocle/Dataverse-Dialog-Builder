@@ -1,0 +1,110 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{01921f2e-b28e-4570-8773-43cc9bafeba6}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="discount type information" showlabel="false" showbar="false" id="{f1047d61-8111-43ea-938f-f7a9c462d485}" IsUserDefined="0">
+                            <labels>
+                                <label description="Discount Type Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7cb67531-f493-467c-9cab-3c52458cf8b9}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                    <cell id="{0a9fb721-7278-44a3-8496-6970f49b7437}">
+                                        <labels>
+                                            <label description="Currency" languagecode="1033" />
+                                        </labels>
+                                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e2ad729a-bb64-4c6e-a39e-85e5ebd35006}">
+                                        <labels>
+                                            <label description="Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="isamounttype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="isamounttype" disabled="false" />
+                                    </cell>
+                                    <cell id="{a079e543-62dc-4ca2-ae62-9a69d74fd2bd}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="description" showlabel="true" showbar="true" locklevel="0" id="{b21060e4-0732-4bb6-9321-65950129b745}" IsUserDefined="0" layout="varwidth" columns="11" height="auto">
+                            <labels>
+                                <label description="Description" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="true" showlabel="false" locklevel="0" rowspan="5" colspan="2" id="{42f9cc65-89b4-4d44-be81-2d600d3e9e58}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{983513D5-3476-4e1b-9E04-1F4255DA6437}">
+        <rows>
+            <row>
+                <cell id="{7C7AFFE2-3C3C-4490-8261-C66F09052EF4}">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="footer_statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.discountTypeMainSystemLibraryWebResource.discountList_FormOnLoad" libraryName="Sales/DiscountType/DiscountType_main_system_library.js" handlerUniqueId="1c947c7a-c6b3-4073-802b-c13d0fef0e6c" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="isamounttype" />
+                        <dependency id="transactioncurrencyid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="isamounttype">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.discountTypeMainSystemLibraryWebResource.discountType_OnChange" libraryName="Sales/DiscountType/DiscountType_main_system_library.js" handlerUniqueId="0dfb31e5-7cbc-480d-bd6c-2827efe8a129" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="isamounttype" />
+                        <dependency id="transactioncurrencyid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Sales/DiscountType/DiscountType_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

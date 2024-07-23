@@ -1,0 +1,556 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{c0dade4d-57f9-4d3e-b132-fa6cec4c38a7}" IsUserDefined="1" name="{fbab524e-5b3c-4db1-8a8a-74366b17d549}">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{76d2f0a0-457b-4682-82fa-20d162fc6147}" name="{2b6a953d-2f2f-4ca4-8d4e-7637c1c9a42f}" columns="11">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" colspan="2" id="{610abcff-776c-4c37-ac56-4a43241da414}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_name" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{ca09c3e2-3dd4-4262-a45a-e8e5e69825fb}">
+                                        <labels>
+                                            <label description="Website" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_websiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="mspp_websiteid" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{7f372a96-ac29-4ba0-802c-62c49ea10273}">
+                                        <labels>
+                                            <label description="Parent Page" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_parentpageid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="mspp_parentpageid" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{D4CF44E9-AB6F-4612-9550-CA85F81E8920}</DefaultViewId>
+                                                <AvailableViewIds>{02204C0D-BE6D-4501-B984-EDD6008C4E26},{CCF0527C-5D3B-4DD3-A783-108F5EC38431},{D4CF44E9-AB6F-4612-9550-CA85F81E8920}</AvailableViewIds>
+                                                <FilterRelationshipName>mspp_website_webpage</FilterRelationshipName>
+                                                <DependentAttributeName>mspp_webfile.mspp_websiteid</DependentAttributeName>
+                                                <DependentAttributeType>mspp_website</DependentAttributeType>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{c240601b-e1f6-4685-b243-b0a1f3a49248}">
+                                        <labels>
+                                            <label description="Partial Url" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_partialurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_partialurl" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" id="{468b6bdb-3e3d-45ac-a62c-74372fcc62d6}">
+                                        <labels>
+                                            <label description="Display Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_displaydate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="mspp_displaydate" disabled="false" />
+                                    </cell>
+                                    <cell id="{b5fe1543-0e88-4166-a992-02966aa8064a}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Publishing State" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_publishingstateid" datafieldname="mspp_publishingstateid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{E55A246A-9999-4669-A4F1-FD001D302A40}</DefaultViewId>
+                                                <FilterRelationshipName>mspp_website_publishingstate</FilterRelationshipName>
+                                                <DependentAttributeName>mspp_webfile.mspp_websiteid</DependentAttributeName>
+                                                <DependentAttributeType>mspp_website</DependentAttributeType>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{27257f3c-6a1f-4aa8-9eca-e2535c6127b9}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Release Date" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_releasedate" datafieldname="mspp_releasedate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                                    </cell>
+                                    <cell id="{0f9e9460-a65d-4532-9f55-59dacfbeb926}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Expiration Date" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_expirationdate" datafieldname="mspp_expirationdate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{de5b726c-43c8-cd05-6e95-745951a8be0c}" showlabel="false" colspan="2" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="File Content" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_file_attachment_html" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_file_attachment/file_attachment.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <WebResourceId>{D0438EF1-8C7A-4241-AB8C-94649DEBEEB5}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false" active="false" />
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f297ce31-fc67-4b03-ab18-4785a077f23f}" showlabel="true" colspan="2" locklevel="0">
+                                        <labels>
+                                            <label description="Cloud Blob Address" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_cloudblobaddress" datafieldname="mspp_cloudblobaddress" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{479f176e-687d-42c4-9125-7072af34bf1e}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Content-Disposition" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_contentdisposition" datafieldname="mspp_contentdisposition" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" />
+                                    </cell>
+                                    <cell id="{db6beb90-d704-4e5e-a18f-54ed7dae9509}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{76c287a7-1f99-4eb9-bbf5-98d1a1f937d5}" name="{fbab524e-5b3c-4db1-8a8a-74366b17d549}_section_2" IsUserDefined="0" columns="11" showbar="true" showlabel="true" locklevel="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" layout="varwidth">
+                            <labels>
+                                <label description="Content" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{44781891-80e3-4ba7-a04b-b1097d40e279}" showlabel="true" colspan="2" locklevel="0">
+                                        <labels>
+                                            <label description="Title" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_title" datafieldname="mspp_title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9714cf8b-30d7-4958-a594-91e6869777aa}" showlabel="true" colspan="2" locklevel="0" rowspan="4" auto="false" visible="false">
+                                        <labels>
+                                            <label description="Summary" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_summary" datafieldname="mspp_summary" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row>
+                                    <cell id="{817f1ddc-ab34-489a-b8cd-e4de04c383a8}" showlabel="true" colspan="2" rowspan="16" auto="false">
+                                        <labels>
+                                            <label description="Summary (HTML)" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_mspp_summary_monaco" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_monaco/monaco_html.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>field=mspp_summary</Data>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies>
+                                                    <dependency id="mspp_summary" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section id="{f2f50e28-c860-454b-b0f8-df36e0f14b5a}" name="{fbab524e-5b3c-4db1-8a8a-74366b17d549}_section_3" IsUserDefined="0" columns="11" showbar="true" showlabel="true" locklevel="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="130" layout="varwidth">
+                            <labels>
+                                <label description="File Options" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8091b62f-3e33-4446-818b-7c46aecd73c4}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Allow Origin" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_alloworigin" datafieldname="mspp_alloworigin" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" uniqueid="{6bc75c2a-1b77-1bc7-8d45-06d94291bbce}" />
+                                    </cell>
+                                    <cell id="{a7015c19-f004-452a-8074-5f660ccb86b7}" showlabel="true" colspan="1" locklevel="0" rowspan="1" auto="false">
+                                        <labels>
+                                            <label description="Hidden From Sitemap" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_hiddenfromsitemap" datafieldname="mspp_hiddenfromsitemap" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{0432fa26-4e49-4955-adf3-adbfb16eb413}" name="{fbab524e-5b3c-4db1-8a8a-74366b17d549}_section_4" IsUserDefined="0" columns="11" showbar="true" showlabel="true" locklevel="0" celllabelposition="Left" celllabelalignment="Left" labelwidth="115" layout="varwidth">
+                            <labels>
+                                <label description="Miscellaneous" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{08bcba91-8441-4db2-bc8c-b08a4cf93ba4}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Display Order" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_displayorder" datafieldname="mspp_displayorder" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" />
+                                    </cell>
+                                    <cell id="{a2bdf3bf-96b5-4d1b-ad4b-20bac2ab8abf}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Master Web File" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_masterwebfileid" datafieldname="mspp_masterwebfileid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2b41bf9e-a77c-4554-9b79-f946c9948e10}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Exclude From Search" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_excludefromsearch" datafieldname="mspp_excludefromsearch" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" />
+                                    </cell>
+                                    <cell id="{bad56cf8-fffe-4654-9e5d-1f8a060f71ab}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{948214b3-b4b2-4c80-bc85-f15a4abd5d95}" columns="1">
+        <rows>
+            <row>
+                <cell id="{a191e1ad-e8e0-4aba-98d5-6794f37f7b71}">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="footer_statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <Navigation>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1026" Text="Общо" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Fælles" />
+                    <Title LCID="1031" Text="Gemeinsam verwendet" />
+                    <Title LCID="1032" Text="Κοινή" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Ühine" />
+                    <Title LCID="1069" Text="Ohikoa" />
+                    <Title LCID="1035" Text="Yleinen" />
+                    <Title LCID="1036" Text="Commun" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1081" Text="एक समान" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Közös" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1087" Text="Жалпы мәлімет" />
+                    <Title LCID="1063" Text="Bendrasis" />
+                    <Title LCID="1062" Text="Kopējā informācija" />
+                    <Title LCID="1086" Text="Biasa" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Gemeenschappelijk" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Elemente comune" />
+                    <Title LCID="1049" Text="Общие" />
+                    <Title LCID="1051" Text="Bežné" />
+                    <Title LCID="1060" Text="Skupno" />
+                    <Title LCID="3098" Text="Заједничко" />
+                    <Title LCID="2074" Text="Zajedničko" />
+                    <Title LCID="9242" Text="Zajedničko" />
+                    <Title LCID="1053" Text="Gemensamt" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Спільні" />
+                    <Title LCID="1066" Text="Phổ biến" />
+                    <Title LCID="1025" Text="العامة" />
+                    <Title LCID="1037" Text="פריטים נפוצים" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1042" Text="공통" />
+                    <Title LCID="10266" Text="Заједничко" />
+                    <Title LCID="2052" Text="公用" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Vente" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1087" Text="Сатылым" />
+                    <Title LCID="1063" Text="Pardavimas" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="3098" Text="Продаја" />
+                    <Title LCID="2074" Text="Prodaja" />
+                    <Title LCID="9242" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="1025" Text="‏المبيعات‬" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="10266" Text="Продаја" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1026" Text="Услуга" />
+                    <Title LCID="1027" Text="Servei" />
+                    <Title LCID="1029" Text="Služby" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Υπηρεσία" />
+                    <Title LCID="3082" Text="Servicio" />
+                    <Title LCID="1061" Text="Teenindus" />
+                    <Title LCID="1069" Text="Zerbitzua" />
+                    <Title LCID="1035" Text="Palvelu" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Servizo" />
+                    <Title LCID="1081" Text="सेवा" />
+                    <Title LCID="1050" Text="Usluga" />
+                    <Title LCID="1038" Text="Szolgáltatás" />
+                    <Title LCID="1057" Text="Layanan" />
+                    <Title LCID="1040" Text="Servizio" />
+                    <Title LCID="1087" Text="Қызмет" />
+                    <Title LCID="1063" Text="Tarnyba" />
+                    <Title LCID="1062" Text="Serviss" />
+                    <Title LCID="1086" Text="Perkhidmatan" />
+                    <Title LCID="1044" Text="Service" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Obsługa klienta" />
+                    <Title LCID="1046" Text="Serviço" />
+                    <Title LCID="2070" Text="Serviço" />
+                    <Title LCID="1048" Text="Servicii" />
+                    <Title LCID="1049" Text="Сервис" />
+                    <Title LCID="1051" Text="Služba" />
+                    <Title LCID="1060" Text="Storitev" />
+                    <Title LCID="3098" Text="Услуге" />
+                    <Title LCID="2074" Text="Usluge" />
+                    <Title LCID="9242" Text="Usluge" />
+                    <Title LCID="1053" Text="Service" />
+                    <Title LCID="1054" Text="การบริการ" />
+                    <Title LCID="1055" Text="Servis" />
+                    <Title LCID="1058" Text="Обслуговування" />
+                    <Title LCID="1066" Text="Dịch vụ" />
+                    <Title LCID="1025" Text="الخدمة" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="10266" Text="Услуге" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="3098" Text="Маркетинг" />
+                    <Title LCID="2074" Text="Marketing" />
+                    <Title LCID="9242" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="1025" Text="التسويق‬" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="10266" Text="Маркетинг" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Processes" />
+                    <Title LCID="1026" Text="Процеси" />
+                    <Title LCID="1027" Text="Processos" />
+                    <Title LCID="1029" Text="Procesy" />
+                    <Title LCID="1030" Text="Processer" />
+                    <Title LCID="1031" Text="Prozesse" />
+                    <Title LCID="1032" Text="Διεργασίες" />
+                    <Title LCID="3082" Text="Procesos" />
+                    <Title LCID="1061" Text="Protsessid" />
+                    <Title LCID="1069" Text="Prozesuak" />
+                    <Title LCID="1035" Text="Prosessit" />
+                    <Title LCID="1036" Text="Processus" />
+                    <Title LCID="1110" Text="Procesos" />
+                    <Title LCID="1081" Text="प्रक्रियाएँ" />
+                    <Title LCID="1050" Text="Procesi" />
+                    <Title LCID="1038" Text="Folyamatok" />
+                    <Title LCID="1057" Text="Proses" />
+                    <Title LCID="1040" Text="Processi" />
+                    <Title LCID="1087" Text="Процестер" />
+                    <Title LCID="1063" Text="Procesai" />
+                    <Title LCID="1062" Text="Procesi" />
+                    <Title LCID="1086" Text="Proses" />
+                    <Title LCID="1044" Text="Prosesser" />
+                    <Title LCID="1043" Text="Processen" />
+                    <Title LCID="1045" Text="Procesy" />
+                    <Title LCID="1046" Text="Processos" />
+                    <Title LCID="2070" Text="Processos" />
+                    <Title LCID="1048" Text="Procese" />
+                    <Title LCID="1049" Text="Процессы" />
+                    <Title LCID="1051" Text="Procesy" />
+                    <Title LCID="1060" Text="Procesi" />
+                    <Title LCID="3098" Text="Процеси" />
+                    <Title LCID="2074" Text="Procesi" />
+                    <Title LCID="9242" Text="Procesi" />
+                    <Title LCID="1053" Text="Processer" />
+                    <Title LCID="1054" Text="กระบวนการ" />
+                    <Title LCID="1055" Text="İşlemler" />
+                    <Title LCID="1058" Text="Процеси" />
+                    <Title LCID="1066" Text="Quy trình" />
+                    <Title LCID="1025" Text="العمليات" />
+                    <Title LCID="1037" Text="תהליכים" />
+                    <Title LCID="1041" Text="プロセス" />
+                    <Title LCID="1042" Text="프로세스" />
+                    <Title LCID="10266" Text="Процеси" />
+                    <Title LCID="2052" Text="流程" />
+                    <Title LCID="3076" Text="程序" />
+                    <Title LCID="1028" Text="程序" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+        <NavBar />
+    </Navigation>
+    <formLibraries>
+        <Library name="mspp_entities/mspp_webfile/mspp_webfilehandler.js" libraryUniqueId="{3acd7993-84b6-4dfc-9c9a-a89af9daff40}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="mspp.mspp_webfile.on_form_load" libraryName="mspp_entities/mspp_webfile/mspp_webfilehandler.js" handlerUniqueId="{c255ba30-4f0e-48a0-8e6a-0db1fde33830}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

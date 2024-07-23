@@ -1,0 +1,101 @@
+<form>
+    <hiddencontrols>
+        <data id="uomscheduleid" datafieldname="uomscheduleid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{c3ce80a2-45f6-4623-969e-ab7ed7536267}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="unit of measure information" showlabel="false" showbar="false" id="{fd8b6cae-67bc-4cd7-81a0-ab510ab9e3ec}" IsUserDefined="0">
+                            <labels>
+                                <label description="Unit of Measure Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5c664ccb-e0a8-b075-a912-b49379b2b980}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Unit Schedule" languagecode="1033" />
+                                        </labels>
+                                        <control id="uomscheduleid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="uomscheduleid" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>true</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{2D013A3A-07CD-4163-8208-8E8E605492F4}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{74b07187-9daa-4ae4-b685-23239a44ac44}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{0bb33a09-c289-4abe-86fa-75d5f1de0b85}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{0b72b934-3e2b-4157-bc5c-7038a5a8880f}">
+                                        <labels>
+                                            <label description="Quantity" languagecode="1033" />
+                                        </labels>
+                                        <control id="quantity" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="quantity" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{13362ac9-8995-40c8-9c76-81097975dd0a}">
+                                        <labels>
+                                            <label description="Base Unit" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.baseuom_setadditionalparams" libraryName="ProductManagement/UoM/UoM_main_system_library.js" handlerUniqueId="1ee0e754-ed9f-4e67-a26d-0a8045af3896" enabled="true" passExecutionContext="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="baseuom" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="baseuom">
+                                            <parameters>
+                                                <DisableMru>true</DisableMru>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="ProductManagement/UoM/UoM_main_system_library.js" handlerUniqueId="4d8baab8-278f-4ae7-96dd-5de3aeea4687" enabled="true" />
+            </InternalHandlers>
+            <dependencies>
+                <dependency id="quantity" />
+                <dependency id="baseuom" />
+            </dependencies>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ProductManagement/UoM/UoM_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

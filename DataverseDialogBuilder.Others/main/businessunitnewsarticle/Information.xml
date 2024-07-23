@@ -1,0 +1,79 @@
+<form>
+    <tabs>
+        <tab name="announcement" verticallayout="true" id="{fddbc8d6-746c-4380-a730-928f6cf44e92}" IsUserDefined="0">
+            <labels>
+                <label description="Announcement" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="announcement information" showlabel="false" showbar="false" id="{cf544665-6d91-4649-b96d-d8edc007c8a3}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Announcement Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{4684db5e-82a6-4ec1-ab05-879301028174}">
+                                        <labels>
+                                            <label description="Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="articletitle" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="articletitle" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" rowspan="5" auto="true" id="{a7e9e9e5-e5fc-4ae0-99e7-73f23bfb5bfc}">
+                                        <labels>
+                                            <label description="Body" languagecode="1033" />
+                                        </labels>
+                                        <control id="newsarticle" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="newsarticle" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                        <section name="additional settings" showlabel="true" showbar="true" id="{14787f6e-241d-4b77-85db-d8fc2ea8187e}" IsUserDefined="0">
+                            <labels>
+                                <label description="Additional Settings" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{c00a4693-ba26-484c-a9c4-0c0296a0d7cd}">
+                                        <labels>
+                                            <label description="More Information URL" languagecode="1033" />
+                                        </labels>
+                                        <control id="articleurl" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="articleurl" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{36d83a2d-808e-4bae-81c7-e6566570c813}">
+                                        <labels>
+                                            <label description="Expiration Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="activeuntil" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="activeuntil" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="BusinessUnitNewsArticle_main_system_library.js" handlerUniqueId="da1edd19-b822-4167-915b-096dec179dea" enabled="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:BusinessUnitNewsArticle_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

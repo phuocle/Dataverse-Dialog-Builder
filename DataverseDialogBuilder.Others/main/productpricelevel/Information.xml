@@ -1,0 +1,321 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{f0ea3480-0e13-452b-b9dd-55f790355af5}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="price list item information" labelwidth="125" showlabel="false" showbar="false" id="{2ea2e594-a61b-424c-87d1-47b0251f1914}" IsUserDefined="0">
+                            <labels>
+                                <label description="Price List Item Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{17cc8b3b-7504-45b6-b4f4-1ff454980458}">
+                                        <labels>
+                                            <label description="Price List" languagecode="1033" />
+                                        </labels>
+                                        <control id="pricelevelid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pricelevelid" />
+                                    </cell>
+                                    <cell id="{a5f53021-73b4-45c1-8776-90e5bffca640}">
+                                        <labels>
+                                            <label description="Currency" languagecode="1033" />
+                                        </labels>
+                                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ae7f0822-a70a-46d7-9c61-24aeae71260a}">
+                                        <labels>
+                                            <label description="Product" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.productid_onafterselect" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="29f7db4b-f5f0-415e-a834-fabd5a3859cb" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="uomid" />
+                                                            <dependency id="uomscheduleid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="productid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="productid" />
+                                    </cell>
+                                    <cell id="{4a27e3f9-0e2c-4149-b7d1-8820c61e574c}">
+                                        <labels>
+                                            <label description="Discount List" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.discounttypeid_setadditionalparams" libraryName="Sales/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="1b831199-7b7f-4834-8a0a-e63784a6ece7" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="transactioncurrencyid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="discounttypeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="discounttypeid">
+                                            <parameters>
+                                                <DefaultViewReadOnly>true</DefaultViewReadOnly>
+                                                <ViewPickerReadOnly>true</ViewPickerReadOnly>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <DefaultViewId>{00000000-0000-0000-00AA-000010015100}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c7d56e46-4a2f-48af-a187-1a8a7d109b21}">
+                                        <labels>
+                                            <label description="Unit" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onclick" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.uomid_onclick" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="6089daf4-a8a5-4dc9-881f-38334382da52" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="productid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.uomid_setadditionalparams" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="34c51254-c63e-4d77-8a0c-ebc163ddd52d" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="uomscheduleid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="uomid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="uomid" />
+                                    </cell>
+                                    <cell id="{02d0b343-e8fd-48ff-ab1c-d76fb37ad28c}">
+                                        <labels>
+                                            <label description="Quantity Selling Option" languagecode="1033" />
+                                        </labels>
+                                        <control id="quantitysellingcode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="quantitysellingcode" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="pricing" labelwidth="125" showlabel="true" showbar="true" id="{09a7422c-06ee-4077-8129-c10c919f0078}" IsUserDefined="0">
+                            <labels>
+                                <label description="Pricing" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{723c7d47-df99-4c25-b88e-7823a4137748}">
+                                        <labels>
+                                            <label description="Pricing Method" languagecode="1033" />
+                                        </labels>
+                                        <control id="pricingmethodcode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="pricingmethodcode" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1172f447-f840-4551-a4d0-3dd6160f204f}">
+                                        <labels>
+                                            <label description="Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="amount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="amount" />
+                                    </cell>
+                                    <cell id="{39861dc2-a016-41ac-9169-7ff7df4e487e}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ed9c8160-f39b-479a-a24a-0a814ef29b20}">
+                                        <labels>
+                                            <label description="Percentage" languagecode="1033" />
+                                        </labels>
+                                        <control id="percentage" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="percentage" />
+                                    </cell>
+                                    <cell id="{30c9b2d1-a87a-4e6c-a12b-ff4ee6659bb5}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="rounding" labelwidth="125" showlabel="true" showbar="true" id="{208a7451-a186-4205-bbdc-461a95fbde5c}" IsUserDefined="0">
+                            <labels>
+                                <label description="Rounding" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{70e3f688-5db9-4051-bc55-34a2452f1a78}">
+                                        <labels>
+                                            <label description="Rounding Policy" languagecode="1033" />
+                                        </labels>
+                                        <control id="roundingpolicycode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="roundingpolicycode" />
+                                    </cell>
+                                    <cell id="{7842c1b6-1076-471d-bf1c-d3e5f3712e46}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{024545c4-db79-46d4-af87-a7ca41bac5fc}">
+                                        <labels>
+                                            <label description="Rounding Option" languagecode="1033" />
+                                        </labels>
+                                        <control id="roundingoptioncode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="roundingoptioncode" />
+                                    </cell>
+                                    <cell id="{6df269b1-b5c5-4523-b5e1-496152bd2cfe}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{29a148c3-9382-4293-91e8-bca266c120e8}">
+                                        <labels>
+                                            <label description="Rounding Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="roundingoptionamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="roundingoptionamount" />
+                                    </cell>
+                                    <cell id="{349d0c9c-cc9f-4a67-a70c-5f3fa47f3106}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload_productpricelevel" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="67520171-c834-4450-a559-5cdcf8724635" enabled="true">
+                    <dependencies>
+                        <dependency id="uomid" />
+                        <dependency id="percentage" />
+                        <dependency id="amount" />
+                        <dependency id="pricingmethodcode" />
+                        <dependency id="roundingpolicycode" />
+                        <dependency id="roundingoptioncode" />
+                        <dependency id="roundingoptionamount" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave_productpricelevel" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="f84a818e-7cec-4439-aa5e-534d42dbf5e8" enabled="true">
+                    <dependencies>
+                        <dependency id="amount" />
+                        <dependency id="percentage" />
+                        <dependency id="roundingpolicycode" />
+                        <dependency id="pricingmethodcode" />
+                        <dependency id="roundingoptioncode" />
+                        <dependency id="roundingoptionamount" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="pricelevelid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.pricelevelid_onchange" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="5300ae48-30f8-41b2-93e1-0e84eb46bd33" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="transactioncurrencyid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="productid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.productid_onchange" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="3800d942-2d39-48bc-bc63-b7726f2eac61" enabled="true">
+                    <dependencies>
+                        <dependency id="uomid" />
+                        <dependency id="uomscheduleid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="pricingmethodcode">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.pricingmethodcode_onchange" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="2d151db1-947b-4b5d-912e-fffd1dff94b2" enabled="true">
+                    <dependencies>
+                        <dependency id="amount" />
+                        <dependency id="percentage" />
+                        <dependency id="roundingoptionamount" />
+                        <dependency id="roundingoptioncode" />
+                        <dependency id="roundingpolicycode" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="percentage">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.percentage_onchange" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="c5a5ada5-9984-4dee-b96c-d0d1fc0628df" enabled="true">
+                    <dependencies>
+                        <dependency id="pricingmethodcode" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="roundingpolicycode">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.roundingpolicycode_onchange" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="8f71d23e-927d-4ab4-834b-2d897208379e" enabled="true">
+                    <dependencies>
+                        <dependency id="roundingoptionamount" />
+                        <dependency id="roundingoptioncode" />
+                        <dependency id="roundingpolicycode" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="roundingoptioncode">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.roundingoptioncode_onchange" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="a9fb8713-aab2-436d-81e2-109ca8ec7413" enabled="true">
+                    <dependencies>
+                        <dependency id="roundingoptionamount" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="roundingoptionamount">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.roundingoptionamount_onchange" libraryName="ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" handlerUniqueId="d25f0876-677f-41af-b1d2-08806b3392d9" enabled="true">
+                    <dependencies>
+                        <dependency id="roundingoptionamount" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ProductManagement/ProductPriceLevel/ProductPriceLevel_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Sales/ProductPriceLevel/ProductPriceLevel_main_system_library.js" />
+            </clientincludes>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_MISSING_UOM_GROUP" resourceid="Web.products.productpricelevel.edit.aspx_12" />
+                <internaljscriptvariable name="LOCID_INV_ROUAMT_ENDSIN_OPT" resourceid="Web.products.productpricelevel.edit.aspx_113" />
+                <internaljscriptvariable name="LOCID_INV_ROUAMT_MULTIPLEOF_OPT" resourceid="Web.products.productpricelevel.edit.aspx_106" />
+                <internaljscriptvariable name="LOCID_INV_PER_PEROFLIST_PM" resourceid="Web.products.productpricelevel.edit.aspx_153" />
+                <internaljscriptvariable name="LOCID_INV_PER_PERMARKUP_PM" resourceid="Web.products.productpricelevel.edit.aspx_157" />
+                <internaljscriptvariable name="LOCID_INV_PER_PERMARGIN_PM" resourceid="Web.products.productpricelevel.edit.aspx_161" />
+            </clientvariables>
+        </internalresources>
+    </clientresources>
+    <hiddencontrols>
+        <data id="uomscheduleid" datafieldname="uomscheduleid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+</form>

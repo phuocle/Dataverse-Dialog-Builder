@@ -1,0 +1,150 @@
+<form shownavigationbar="false">
+    <hiddencontrols>
+        <data id="ConditionXml" datafieldname="conditionxml" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{27faa9b3-8400-4763-b87f-7cd09866628b}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{a497efad-88e8-4edf-8a8c-86b53cc64011}">
+                            <labels>
+                                <label description="Channel Access Profile Rule Items" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b0c3034d-5b9d-47ea-a91e-21527980e46b}" colspan="2">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{95125b43-c675-4eb6-8292-89bd08b5ed86}" colspan="2" rowspan="5">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="RuleCriteria" verticallayout="true" id="{d2009055-5b6a-49f4-b4f2-af768b261178}" IsUserDefined="0">
+            <labels>
+                <label description="Rule Criteria" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="ConditionControl" showlabel="true" showbar="true" id="{5967de1f-006a-4209-92bc-ef8de3ba7f69}" labelwidth="300" IsUserDefined="0">
+                            <labels>
+                                <label description="If Conditions" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="false" locklevel="0" rowspan="9" colspan="2" id="{13cbf097-3f92-43c6-8a3d-ec192cddc6c1}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="rule then conditions" showlabel="true" showbar="true" locklevel="0" id="{f434a4ee-5008-4d5b-8875-96533c12761c}" IsUserDefined="0">
+                            <labels>
+                                <label description="Then Conditions" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{514556ec-defa-4f8c-aa9c-02d06ce36f95}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Assign Profile" languagecode="1033" />
+                                        </labels>
+                                        <control id="associatedProfile" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="associatedchannelaccessprofile" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="notes" id="{a23e5405-3a0d-4470-b155-0d18bc0aa0ea}" IsUserDefined="0" expanded="false">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="notes" showlabel="true" showbar="true" id="{825a1f42-0d86-4e83-b73b-3a899db46917}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="false" id="{1d557e50-ddb4-421a-922c-403ee153878a}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.ChannelAccessProfileRuleItemMainSystemLibraryWebResource.formOnLoad" libraryName="ChannelAccessProfileRuleItem_main_system_library.js" handlerUniqueId="58387651-2d56-4c91-b8a8-1aaa806bc387" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.ChannelAccessProfileRuleItemMainSystemLibraryWebResource.formOnSave" libraryName="ChannelAccessProfileRuleItem_main_system_library.js" handlerUniqueId="2a0b9e6d-4c82-4d13-8030-d4481528a13e" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="conditionxml" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_ASSIGNPROFILEREQD" resourceid="ChannelAccessProfileRuleItemForm.AssignProfileRequired" />
+                <internaljscriptvariable name="LOCID_CONDITIONREQD" resourceid="ChannelAccessProfileRuleItemForm.ConditionRequired" />
+                <internaljscriptvariable name="LOCID_XMLPARSEEXCEPTION" resourceid="Error_Message_0x80041a04" />
+            </clientvariables>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ChannelAccessProfileRuleItem_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

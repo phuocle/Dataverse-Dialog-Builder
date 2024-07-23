@@ -1,0 +1,487 @@
+<form enablerelatedinformation="false">
+    <hiddencontrols>
+        <data id="queueid" datafieldname="queueid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ConvertRuleId" datafieldname="convertruleid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="StateCode" datafieldname="statecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <header id="{a566d473-e3f1-4332-84ed-244ab39fefea}" celllabelposition="Top" columns="1111" labelwidth="115">
+        <rows>
+            <row>
+                <cell id="{f22e327b-fc70-4eb1-a57d-4986cdd1b522}" showlabel="true">
+                    <labels>
+                        <label description="Created on" languagecode="1033" />
+                    </labels>
+                    <control id="header_createdon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="true" />
+                </cell>
+                <cell id="{3b2cdde3-6f02-44ea-a580-7d422b2e7915}">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="header_statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab name="Basic" id="{8c20638d-160c-4df4-942b-b809bb55c58d}" IsUserDefined="0" locklevel="1" showlabel="true">
+            <labels>
+                <label description="Basic" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="75%">
+                    <sections>
+                        <section name="Details" showlabel="true" showbar="false" id="{eec6a6ad-155a-4f02-9075-304b7ac32530}" IsUserDefined="0">
+                            <labels>
+                                <label description="Step one: details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{33fea781-1024-4070-88c4-06479f76e031}">
+                                        <labels>
+                                            <label description="Rule name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{1e2d0ade-90a3-42f4-bc1b-ba2e677b6751}">
+                                        <labels>
+                                            <label description="Queue to monitor" languagecode="1033" />
+                                        </labels>
+                                        <control id="queueid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="queueid" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" visible="true" locklevel="0" rowspan="1" colspan="1" id="{7ea3a0a9-c542-4155-b849-4595ab36f9a9}">
+                                        <labels>
+                                            <label description="Activity type to monitor" languagecode="1033" />
+                                        </labels>
+                                        <control id="sourcechanneltypecode" classid="{f9a8a302-114e-466a-b582-6771b2ae0d92}" datafieldname="sourcechanneltypecode" disabled="false" uniqueid="{9108e51a-4ea8-4f0d-b1bb-d52a982b1118}"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{19eb0aa7-35d8-40e5-86c3-41ddc019daa3}" visible="false">
+                                        <labels>
+                                            <label description="ARC Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="convertruletype" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="convertruletype" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Conditions_To_Evaluate" showlabel="true" showbar="false" id="{9A1F8CE5-B224-45A0-BB01-8C7ECFB3CC0D}" labelwidth="250" IsUserDefined="0">
+                            <labels>
+                                <label description="Step two: conditions to evaluate and actions to take" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{93ae3041-7d4e-426c-8f36-2cf460b89b47}" showlabel="false" colspan="1" auto="false" rowspan="5">
+                                        <labels>
+                                            <label description="Record Creation and Update Rule Items" languagecode="1033" />
+                                        </labels>
+                                        <control id="ConvertRuleItemsGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{02b21ce4-7f77-4451-bfb2-db300236c56c}</ViewId>
+                                                <RelationshipName>convertrule_convertruleitem</RelationshipName>
+                                                <TargetEntityType>convertruleitem</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>100</RecordsPerPage>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="Frequently_Used_Configurations" visible="true" showlabel="true" showbar="true" id="{e3a5d152-9cfd-4365-9867-dee2155dd21c}" IsUserDefined="0">
+                            <labels>
+                                <label description="Step three: additional actions to take after matching with a condition" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{71f80b01-8232-4f30-afd0-248acd2a6c1a}">
+                                        <labels>
+                                            <label description="Automatically reply to email" languagecode="1033" />
+                                        </labels>
+                                        <control id="SendAutomaticResponse" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="sendautomaticresponse" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="2" colspan="1" visible="false" id="{aeadeef1-2a37-4f84-8101-f5cba862a5ce}">
+                                        <labels>
+                                            <label description="Select email template" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResponseTemplateId" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="responsetemplateid" disabled="false">
+                                            <parameters>
+                                                <DefaultViewId>{5096D5CE-1A3C-4856-B996-007E41199427}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="25%">
+                    <sections>
+                        <section name="Basic_empty_section" showlabel="false" showbar="false" id="{184c2d48-2a91-4440-bab6-21fb7b767eba}" labelwidth="250" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="Advanced" id="{a49f2a9b-65af-4d2d-bf80-cd357f14593d}" IsUserDefined="0" locklevel="1" showlabel="true">
+            <labels>
+                <label description="Advanced" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="75%">
+                    <sections>
+                        <section name="Before_Evaluating_Conditions" visible="true" showlabel="true" showbar="true" id="{da780984-a505-43db-a0a0-5358ea91fb3b}" labelwidth="340" IsUserDefined="0">
+                            <labels>
+                                <label description="Before evaluating conditions..." languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{22b3a0bd-3b09-4a53-b787-dce87b264ad6}">
+                                        <labels>
+                                            <label description="Allow emails from unknown senders" languagecode="1033" />
+                                        </labels>
+                                        <control id="AllowUnknownSender" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="allowunknownsender" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" visible="false" id="{127e68a8-b6ad-406b-8b2b-67fecff90b76}">
+                                        <labels>
+                                            <label description="Manage unknown senders by" languagecode="1033" />
+                                        </labels>
+                                        <control id="SenderResolutionOption" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="senderresolutionoption" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{43fd3536-0fb2-4c64-ab9e-e5e6aeeb3619}">
+                                        <labels>
+                                            <label description="Require a valid entitlement on the connected case" languagecode="1033" />
+                                        </labels>
+                                        <control id="CheckActiveEntitlement" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="checkactiveentitlement" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{30ccb45f-4c9b-4a66-8d1d-95b0af23fc81}">
+                                        <labels>
+                                            <label description="Wait for a specific amount of time after the connected case has been resolved" languagecode="1033" />
+                                        </labels>
+                                        <control id="CheckIfResolved" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="checkifresolved" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" visible="false" id="{78efe9ea-bc80-4bb1-a6b6-2f8d25e89157}">
+                                        <labels>
+                                            <label description="Select the amount of time" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResolvedSince" classid="{AA987274-CE4E-4271-A803-66164311A958}" datafieldname="resolvedsince" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Advanced_Settings" visible="true" showlabel="true" showbar="true" id="{03070422-cd5e-41d2-83fc-468f7bf4e961}" labelwidth="340" IsUserDefined="0">
+                            <labels>
+                                <label description="Advanced settings" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{72d631f0-326e-4aca-be20-64f113ff1fac}">
+                                        <labels>
+                                            <label description="Owner whose permissions the rule uses to run" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="25%">
+                    <sections>
+                        <section name="Advanced_empty_section" showlabel="false" showbar="false" id="{333cd73b-d3e9-4389-a04b-9d34a08c24e2}" labelwidth="250" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="ActivityMonitor" id="{08f3e711-c638-47c1-93f2-13739bcd09bc}" IsUserDefined="0" locklevel="1" showlabel="true">
+            <labels>
+                <label description="Activity monitor" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Activity_Monitor" showlabel="true" showbar="false" id="{44714c70-b69f-45e4-95af-c305eff2114d}" labelwidth="250" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{db22e071-9a8d-40c9-b9d7-348df31ee4e7}" showlabel="false" auto="false">
+                                        <labels>
+                                            <label description="Activity monitors" languagecode="1033" />
+                                        </labels>
+                                        <control id="ActivityMonitorsGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{2a9487b4-8684-4962-bd8d-04472ba737d7}</ViewId>
+                                                <RelationshipName>convertrule_activitymonitor</RelationshipName>
+                                                <TargetEntityType>activitymonitor</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>10</RecordsPerPage>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="tabUCMigrationDetail" id="{4E295E1B-D1F1-465E-B84A-BB21051193FF}" IsUserDefined="0" locklevel="1" showlabel="true">
+            <labels>
+                <label description="Migration details" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="75%">
+                    <sections>
+                        <section name="Migration" visible="true" showlabel="true" showbar="true" id="{F7B7D4B7-BEAA-4355-A15D-ED38717D8C19}" labelwidth="340" IsUserDefined="0">
+                            <labels>
+                                <label description="Migration details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{C1AFCCF8-8F6B-4952-8341-9FB38BEDD6ED}">
+                                        <labels>
+                                            <label description="Mark as complete" languagecode="1033" />
+                                        </labels>
+                                        <control id="migrationtoggle" isunbound="false" classid="{f9a8a302-114e-466a-b582-6771b2ae0d92}" datafieldname="convertruletype" uniqueid="{A8D23B54-25FA-4EA4-8424-4E450459C3CC}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="1" rowspan="1" colspan="1" id="{71A19CDD-BC99-447E-BA34-A291BC56FE25}">
+                                        <labels>
+                                            <label description="Migration status" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_migrationstatus" isunbound="false" classid="{f9a8a302-114e-466a-b582-6771b2ae0d92}" datafieldname="convertruletype" disabled="true" uniqueid="{C7CE4278-1A62-4D13-8B68-17DA7AD8002B}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="1" rowspan="1" colspan="1" id="{18AA9AC8-B24C-439D-BDC0-E1A41D102703}">
+                                        <labels>
+                                            <label description="Problem details" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_migrationstatus_details" isunbound="false" classid="{f9a8a302-114e-466a-b582-6771b2ae0d92}" datafieldname="convertruletype" disabled="true" uniqueid="{C7F50D2F-F3FA-4A61-BF06-0FCBB0FC5E74}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <DisplayConditions Order="2">
+        <Everyone />
+    </DisplayConditions>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.Form_onload" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="a352535c-ff7e-4bf6-8a26-688462521bcc" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="name">
+            <Handlers>
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.Form_convertruleNameOnChange" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="67efc78c-2b87-4ee5-9c6c-1a919adb366f" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="sourcechanneltypecode">
+            <Handlers>
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.sourcechanneltypecode_onchange" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="3bbd9527-90cb-4efd-81e9-2195e083721d" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="allowunknownsender">
+            <Handlers>
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.AllowUnknownSender_onchange" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="7bb96ace-94cd-44e3-8428-8a376482765b" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="checkifresolved">
+            <Handlers>
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.CheckIfResolved_onchange" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="0c6a225a-c4df-4d72-a227-9a9d8f5896a2" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="sendautomaticresponse">
+            <Handlers>
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.SendAutomaticResponse_onchange" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="d4f583ae-2ff0-41dc-8ff2-0b8e2efc9828" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="convertruletype">
+            <Handlers>
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.ConvertRuleType_onchange" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="9c20a489-f16f-459d-b4d7-291e8768454b" enabled="true" />
+            </Handlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.Form_onsave" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="31674305-9da4-4dae-9f8b-c49c3ce43669" enabled="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{9108e51a-4ea8-4f0d-b1bb-d52a982b1118}">
+            <customControl name="MscrmControls.SourceActivity.SourceActivityOptionSetControl" formFactor="0">
+                <parameters>
+                    <value type="SingleLine.Text">sourcechanneltypecode</value>
+                    <convertruleId type="Guid">convertruleid</convertruleId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SourceActivity.SourceActivityOptionSetControl" formFactor="1">
+                <parameters>
+                    <value type="SingleLine.Text">sourcechanneltypecode</value>
+                    <convertruleId type="Guid">convertruleid</convertruleId>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.SourceActivity.SourceActivityOptionSetControl" formFactor="2">
+                <parameters>
+                    <value type="SingleLine.Text">sourcechanneltypecode</value>
+                    <convertruleId type="Guid">convertruleid</convertruleId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{C7CE4278-1A62-4D13-8B68-17DA7AD8002B}">
+            <customControl id="{f9a8a302-114e-466a-b582-6771b2ae0d92}">
+                <parameters>
+                    <datafieldname>convertruletype</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>convertruletype</fetchxml>
+                    <parentid type="SingleLine.Text">convertruleid</parentid>
+                    <parentType static="true" type="SingleLine.Text">convertrule</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationstatus</statusType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>convertruletype</fetchxml>
+                    <parentid type="SingleLine.Text">convertruleid</parentid>
+                    <parentType static="true" type="SingleLine.Text">convertrule</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationstatus</statusType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>convertruletype</fetchxml>
+                    <parentid type="SingleLine.Text">convertruleid</parentid>
+                    <parentType static="true" type="SingleLine.Text">convertrule</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationstatus</statusType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{C7F50D2F-F3FA-4A61-BF06-0FCBB0FC5E74}">
+            <customControl id="{f9a8a302-114e-466a-b582-6771b2ae0d92}">
+                <parameters>
+                    <datafieldname>convertruletype</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>convertruletype</fetchxml>
+                    <parentid type="SingleLine.Text">convertruleid</parentid>
+                    <parentType static="true" type="SingleLine.Text">convertrule</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationdetails</statusType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>convertruletype</fetchxml>
+                    <parentid type="SingleLine.Text">convertruleid</parentid>
+                    <parentType static="true" type="SingleLine.Text">convertrule</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationdetails</statusType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>convertruletype</fetchxml>
+                    <parentid type="SingleLine.Text">convertruleid</parentid>
+                    <parentType static="true" type="SingleLine.Text">convertrule</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationdetails</statusType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{A8D23B54-25FA-4EA4-8424-4E450459C3CC}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.MigrationStatusToggleControl">
+                <parameters>
+                    <value>convertruletype</value>
+                    <parentid type="SingleLine.Text">convertruleid</parentid>
+                    <parentType static="true" type="SingleLine.Text">convertrule</parentType>
+                    <statecode type="SingleLine.Text">statecode</statecode>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.MigrationStatusToggleControl">
+                <parameters>
+                    <value>convertruletype</value>
+                    <parentid type="SingleLine.Text">convertruleid</parentid>
+                    <parentType static="true" type="SingleLine.Text">convertrule</parentType>
+                    <statecode type="SingleLine.Text">statecode</statecode>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.MigrationStatusToggleControl">
+                <parameters>
+                    <value>convertruletype</value>
+                    <parentid type="SingleLine.Text">convertruleid</parentid>
+                    <parentType static="true" type="SingleLine.Text">convertrule</parentType>
+                    <statecode type="SingleLine.Text">statecode</statecode>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AutomaticRecordCreation/ARC/ARC_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <formparameters>
+        <querystringparameter name="tab_name" type="SafeString" />
+    </formparameters>
+</form>

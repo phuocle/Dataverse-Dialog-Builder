@@ -1,0 +1,119 @@
+<form>
+    <hiddencontrols>
+        <data id="isamounttype" datafieldname="isamounttype" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{0c66c8da-6dd0-4f36-8285-48e6e7ace84b}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="discount information" showlabel="false" showbar="false" id="{c2e1f9fa-1a3c-4482-b82e-8ff1069863a1}" IsUserDefined="0">
+                            <labels>
+                                <label description="Discount Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{ab4e5409-728c-42fc-b671-0993c5869340}">
+                                        <labels>
+                                            <label description="Discount Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="discounttypeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="discounttypeid">
+                                            <parameters>
+                                                <DefaultViewReadOnly>true</DefaultViewReadOnly>
+                                                <ViewPickerReadOnly>true</ViewPickerReadOnly>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                                <DefaultViewId>{00000000-0000-0000-00AA-000010015100}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{86eda123-1209-45d2-abba-d8833b5dd3ff}">
+                                        <labels>
+                                            <label description="Begin Quantity" languagecode="1033" />
+                                        </labels>
+                                        <control id="lowquantity" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="lowquantity" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{b7eaaa6b-bb4c-4ff4-acee-51164485467d}">
+                                        <labels>
+                                            <label description="End Quantity" languagecode="1033" />
+                                        </labels>
+                                        <control id="highquantity" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="highquantity" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{0ffed656-7772-448b-90fb-003893c47361}">
+                                        <labels>
+                                            <label description="Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="amount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="amount" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{4f7ff10d-7160-487e-b567-d3e4ee69e4f6}">
+                                        <labels>
+                                            <label description="Percentage" languagecode="1033" />
+                                        </labels>
+                                        <control id="percentage" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="percentage" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="Sales/Discount/Discount_main_system_library.js" handlerUniqueId="16306678-ab70-45bb-be50-cd00eae9520b" enabled="true">
+                    <dependencies>
+                        <dependency id="percentage" />
+                        <dependency id="amount" />
+                        <dependency id="discounttypeid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="Sales/Discount/Discount_main_system_library.js" handlerUniqueId="35f41862-807a-424f-a95c-e2ccffd7ba0b" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="lowquantity" />
+                        <dependency id="highquantity" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="discounttypeid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onchange" libraryName="Sales/Discount/Discount_main_system_library.js" handlerUniqueId="c713157e-8377-499e-b309-efa59d3f2900" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="percentage" />
+                        <dependency id="amount" />
+                        <dependency id="discounttypeid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_END_QTY_LESS_BEGIN_QTY" resourceid="Web.products.discounttypeitem.edit.aspx_21" />
+            </clientvariables>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/Discount/Discount_main_system_library.js" />
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:Sales/ClientCommon/Sales_ClientCommon.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

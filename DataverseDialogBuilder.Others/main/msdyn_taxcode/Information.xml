@@ -1,0 +1,889 @@
+<form shownavigationbar="true">
+    <tabs>
+        <tab verticallayout="true" id="{26d5d268-db58-4a08-b54e-76c36f9eb366}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section showlabel="true" showbar="false" IsUserDefined="0" id="{4d579314-87a5-42c6-a46d-4519287d9a2b}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{81f60d2d-14b9-4faa-b5de-156727f68d77}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                                    </cell>
+                                    <cell id="{c31ba59e-1ae6-d95a-a6ad-30b904e8dbe1}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Act as Tax Group" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_actastaxgroup" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_actastaxgroup" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{302b9c16-c362-06ad-b4b8-5024499307c7}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Tax Rate %" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_taxrate" classid="{0D2C745A-E5A8-4c8f-BA63-C6D3BB604660}" datafieldname="msdyn_taxrate" disabled="false" />
+                                    </cell>
+                                    <cell id="{49c72d5a-171e-4cb5-aa65-70be9f20d109}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="50%">
+                    <sections>
+                        <section showlabel="true" showbar="false" IsUserDefined="0" id="{a064cde2-56ba-636a-8ee0-0592077ea505}">
+                            <labels>
+                                <label description="Items Taxable" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{841ce524-09e6-e8c8-0884-48ea0314b6d8}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Products Taxable" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_productstaxable" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_productstaxable" disabled="false" />
+                                    </cell>
+                                    <cell id="{8e512dee-65be-1687-a698-c77cc6c1256c}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Agreement Taxable" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_agreementtaxable" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_agreementtaxable" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0ca4672a-e813-136a-506c-97ed3567262c}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Services Taxable" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_servicestaxable" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_servicestaxable" disabled="false" />
+                                    </cell>
+                                    <cell id="{57536049-ddb9-7721-2b85-0d9026bdece2}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="f1tab_taxinfo" id="{2766151b-a73b-9299-30d5-252e374a7024}" IsUserDefined="0" locklevel="0" showlabel="false" expanded="false" visible="false">
+            <labels>
+                <label description="Tax Information" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%"></column>
+            </columns>
+        </tab>
+        <tab name="taxcodedetailstab" id="{6e80b0ae-43bb-de81-3a4b-4a3475754dda}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false" visible="false">
+            <labels>
+                <label description="Tax Code Details" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="taxcodedetailssection" showlabel="false" showbar="false" locklevel="0" id="{459dd14e-be8c-9ec1-246e-c80c43261ae4}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                            <labels>
+                                <label description="Tax Code Details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{32d317da-16e4-74c8-14ec-127118613c6b}" showlabel="false" colspan="1" auto="true" rowspan="4">
+                                        <labels>
+                                            <label description="Tax Code Items (Tax Code)" languagecode="1033" />
+                                        </labels>
+                                        <control id="taxcodedetailsgrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{B6B06D55-B763-E111-8633-000C2959F9B8}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>msdyn_msdyn_taxcode_msdyn_taxcodedetail_ParentTaxCode</RelationshipName>
+                                                <TargetEntityType>msdyn_taxcodedetail</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{96604EEB-C529-47E9-B7A6-3F16FDA2444E},{B6B06D55-B763-E111-8633-000C2959F9B8}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>250</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab id="{12743cc7-1639-4c21-aeae-6a6142ba8a2d}" IsUserDefined="0" expanded="false">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{b9e55d62-5612-44af-b235-718536281291}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{a21d1631-cd6a-425c-af2a-e004cc985f73}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-c143-495e-a496-c962e5b4488e}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{4d991ca4-b2f1-4219-9c04-fb37badd68d1}">
+        <rows>
+            <row>
+                <cell id="{c304dcde-3fec-4da6-9877-b2fa34ef13e9}">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="footer_statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <Navigation>
+        <NavBar>
+            <NavBarByRelationshipItem Icon="$webresource:msdyn_/Icons/Sitemap/Currency_32.png" RelationshipName="msdyn_msdyn_taxcode_msdyn_taxcodedetail_TaxCode" Id="nav_msdyn_msdyn_taxcode_msdyn_taxcodedetail_TaxCode" Area="Service" Sequence="1001" Show="false">
+                <Titles>
+                    <Title LCID="1033" Text="Tax Code Groups" />
+                    <Title LCID="1025" Text="مجموعة رموز الضريبة" />
+                    <Title LCID="1026" Text="Групи за данъчен код" />
+                    <Title LCID="1027" Text="Grups de codi impositiu" />
+                    <Title LCID="1029" Text="Skupiny daňových kódů" />
+                    <Title LCID="1030" Text="Momskodegrupper" />
+                    <Title LCID="1031" Text="Steuercodegruppen" />
+                    <Title LCID="1032" Text="Ομάδες κωδικών φόρων" />
+                    <Title LCID="3082" Text="Grupos de códigos impositivos" />
+                    <Title LCID="1061" Text="Maksukoodi rühmad" />
+                    <Title LCID="1069" Text="Zerga-kodeen multzoak" />
+                    <Title LCID="1035" Text="Verokoodiryhmät" />
+                    <Title LCID="1036" Text="Groupes de code taxe" />
+                    <Title LCID="1110" Text="Grupos do código fiscal" />
+                    <Title LCID="1037" Text="קבוצות קודי מס" />
+                    <Title LCID="1081" Text="कर कोड समूह" />
+                    <Title LCID="1050" Text="Grupe poreznih kôdova" />
+                    <Title LCID="1038" Text="Adókódcsoportok" />
+                    <Title LCID="1057" Text="Grup Kode Pajak" />
+                    <Title LCID="1040" Text="Gruppi di codici imposta" />
+                    <Title LCID="1041" Text="税コード グループ" />
+                    <Title LCID="1087" Text="Салық кодының топтары" />
+                    <Title LCID="1042" Text="세금 코드 그룹" />
+                    <Title LCID="1063" Text="Mokesčių kodų grupės" />
+                    <Title LCID="1062" Text="Nodokļu kodu grupas" />
+                    <Title LCID="1086" Text="Kumpulan Kod Cukai" />
+                    <Title LCID="1044" Text="Avgiftskodegrupper" />
+                    <Title LCID="1043" Text="Belastingcodegroepen" />
+                    <Title LCID="1045" Text="Grupy kodów podatków" />
+                    <Title LCID="1046" Text="Grupos de Códigos de Imposto" />
+                    <Title LCID="2070" Text="Grupos de Códigos do Imposto" />
+                    <Title LCID="1048" Text="Grupuri de coduri de impozit" />
+                    <Title LCID="1049" Text="Группы кодов налогов" />
+                    <Title LCID="1051" Text="Skupiny kódov daní" />
+                    <Title LCID="1060" Text="Skupine kod davkov" />
+                    <Title LCID="3098" Text="Шифре група пореза" />
+                    <Title LCID="2074" Text="Šifre grupa poreza" />
+                    <Title LCID="1053" Text="Momskodgrupper" />
+                    <Title LCID="1054" Text="กลุ่มรหัสภาษี" />
+                    <Title LCID="1055" Text="Vergi Kodu Grupları" />
+                    <Title LCID="1058" Text="Групи кодів податків" />
+                    <Title LCID="1066" Text="Nhóm Mã Thuế" />
+                    <Title LCID="2052" Text="税务代码组" />
+                    <Title LCID="3076" Text="稅碼群組" />
+                    <Title LCID="1028" Text="稅碼群組" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem Icon="$webresource:msdyn_/Icons/Sitemap/Currency_32.png" RelationshipName="msdyn_msdyn_taxcode_msdyn_taxcodedetail_ParentTaxCode" Id="nav_msdyn_msdyn_taxcode_msdyn_taxcodedetail_ParentTaxCode" Show="true" Area="Service" Sequence="1002">
+                <Titles>
+                    <Title LCID="1033" Text="Tax Code Details" />
+                    <Title LCID="1025" Text="تفاصيل رمز الضريبة" />
+                    <Title LCID="1026" Text="Подробности за данъчни кодове" />
+                    <Title LCID="1027" Text="Detalls del codi impositiu" />
+                    <Title LCID="1029" Text="Podrobnosti daňových kódů" />
+                    <Title LCID="1030" Text="Momskodedetaljer" />
+                    <Title LCID="1031" Text="Steuercodedetails" />
+                    <Title LCID="1032" Text="Λεπτομέρειες κωδικού φόρου" />
+                    <Title LCID="3082" Text="Detalles de código impositivo" />
+                    <Title LCID="1061" Text="Maksukoodi üksikasjad" />
+                    <Title LCID="1069" Text="Zerga-kodearen xehetasunak" />
+                    <Title LCID="1035" Text="Verokoodin tiedot" />
+                    <Title LCID="1036" Text="Détails du code de taxe" />
+                    <Title LCID="1110" Text="Detalles do código fiscal" />
+                    <Title LCID="1037" Text="פרטי קוד מס" />
+                    <Title LCID="1081" Text="कर कोड विवरण" />
+                    <Title LCID="1050" Text="Pojedinosti poreznog kôda" />
+                    <Title LCID="1038" Text="Adókód részletei" />
+                    <Title LCID="1057" Text="Rincian Kode Pajak" />
+                    <Title LCID="1040" Text="Dettagli codice imposta" />
+                    <Title LCID="1041" Text="税コードの詳細" />
+                    <Title LCID="1087" Text="Салық кодының мәліметтері" />
+                    <Title LCID="1042" Text="세금 코드 세부 정보" />
+                    <Title LCID="1063" Text="Mokesčio kodo informacija" />
+                    <Title LCID="1062" Text="Nodokļu koda informācija" />
+                    <Title LCID="1086" Text="Butiran Kod Cukai" />
+                    <Title LCID="1044" Text="Detaljer for avgiftskode" />
+                    <Title LCID="1043" Text="Belastingcodedetails" />
+                    <Title LCID="1045" Text="Szczegóły kodu podatku" />
+                    <Title LCID="1046" Text="Detalhes do Código de Imposto" />
+                    <Title LCID="2070" Text="Detalhes do Código do Imposto" />
+                    <Title LCID="1048" Text="Detalii cod de impozit" />
+                    <Title LCID="1049" Text="Сведения о коде налогов" />
+                    <Title LCID="1051" Text="Podrobnosti kódu dane" />
+                    <Title LCID="1060" Text="Podrobnosti kode davka" />
+                    <Title LCID="3098" Text="Детаљи шифре пореза" />
+                    <Title LCID="2074" Text="Detalji šifre poreza" />
+                    <Title LCID="1053" Text="Momskoddetaljer" />
+                    <Title LCID="1054" Text="รายละเอียดรหัสภาษี" />
+                    <Title LCID="1055" Text="Vergi Kodu Ayrıntıları" />
+                    <Title LCID="1058" Text="Відомості про коди податків" />
+                    <Title LCID="1066" Text="Chi tiết Mã Thuế" />
+                    <Title LCID="2052" Text="税码详细信息" />
+                    <Title LCID="3076" Text="稅碼詳細資料" />
+                    <Title LCID="1028" Text="稅碼詳細資料" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem RelationshipName="hardcoded_{B7196B13-6B9D-42CD-BD58-B19A3953126F}navProcessSessions" Sequence="9700" Area="ProcessCenter" Id="navProcessSessions">
+                <Titles>
+                    <Title LCID="1033" Text="Real Time Processes" />
+                    <Title LCID="1025" Text="عمليات في الوقت الحقيقي" />
+                    <Title LCID="1026" Text="Процеси в реално време" />
+                    <Title LCID="1027" Text="Processos en temps real" />
+                    <Title LCID="1029" Text="Procesy v reálném čase" />
+                    <Title LCID="1030" Text="Processer i realtid" />
+                    <Title LCID="1031" Text="Echtzeitprozesse" />
+                    <Title LCID="1032" Text="Διαδικασίες πραγματικού χρόνου" />
+                    <Title LCID="3082" Text="Procesos en tiempo real" />
+                    <Title LCID="1061" Text="Reaalajalised protsessid" />
+                    <Title LCID="1069" Text="Denbora errealeko prozesuak" />
+                    <Title LCID="1035" Text="Reaaliaikaiset prosessit" />
+                    <Title LCID="1036" Text="Processus en temps réel" />
+                    <Title LCID="1110" Text="Procesos en tempo real" />
+                    <Title LCID="1037" Text="תהליכים בזמן אמת" />
+                    <Title LCID="1081" Text="रीयल-टाइम प्रक्रियाएँ" />
+                    <Title LCID="1050" Text="Procesi u stvarnom vremenu" />
+                    <Title LCID="1038" Text="Valós idejű folyamatok" />
+                    <Title LCID="1057" Text="Proses Real-Time" />
+                    <Title LCID="1040" Text="Processi in tempo reale" />
+                    <Title LCID="1041" Text="リアルタイム プロセス" />
+                    <Title LCID="1087" Text="Ағымдағы уақыттағы процестер" />
+                    <Title LCID="1042" Text="실시간 프로세스" />
+                    <Title LCID="1063" Text="Procesai tikruoju laiku" />
+                    <Title LCID="1062" Text="Reāllaika procesi" />
+                    <Title LCID="1086" Text="Proses Masa Nyata" />
+                    <Title LCID="1044" Text="Sanntidsprosesser" />
+                    <Title LCID="1043" Text="Realtime-processen" />
+                    <Title LCID="1045" Text="Procesy w czasie rzeczywistym" />
+                    <Title LCID="1046" Text="Processos em Tempo Real" />
+                    <Title LCID="2070" Text="Processos em Tempo Real" />
+                    <Title LCID="1048" Text="Procese în timp real" />
+                    <Title LCID="1049" Text="Процессы в реальном времени" />
+                    <Title LCID="1051" Text="Procesy v reálnom čase" />
+                    <Title LCID="1060" Text="Procesi v realnem času" />
+                    <Title LCID="3098" Text="Процеси у реалном времену" />
+                    <Title LCID="2074" Text="Procesi u realnom vremenu" />
+                    <Title LCID="1053" Text="Realtidsprocesser" />
+                    <Title LCID="1054" Text="กระบวนการในเวลาจริง" />
+                    <Title LCID="1055" Text="Gerçek Zamanlı İşlemler" />
+                    <Title LCID="1058" Text="Процеси в режимі реального часу" />
+                    <Title LCID="1066" Text="Quy trình trong Thời gian Thực" />
+                    <Title LCID="2052" Text="实时流程" />
+                    <Title LCID="3076" Text="即時程序" />
+                    <Title LCID="1028" Text="即時程序" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem RelationshipName="msdyn_msdyn_taxcode_account_SalesTaxCode" Id="nav_msdyn_msdyn_taxcode_account_SalesTaxCode" Area="Service" Show="false" Sequence="1003">
+                <Titles>
+                    <Title LCID="1033" Text="Accounts" />
+                    <Title LCID="1025" Text="العملاء" />
+                    <Title LCID="1026" Text="Акаунти" />
+                    <Title LCID="1027" Text="Comptes" />
+                    <Title LCID="1029" Text="Obchodní vztahy" />
+                    <Title LCID="1030" Text="Firmaer" />
+                    <Title LCID="1031" Text="Firmen" />
+                    <Title LCID="1032" Text="Λογαριασμοί" />
+                    <Title LCID="3082" Text="Cuentas" />
+                    <Title LCID="1061" Text="Ettevõtted" />
+                    <Title LCID="1069" Text="Kontuak" />
+                    <Title LCID="1035" Text="Asiakkaat" />
+                    <Title LCID="1036" Text="Comptes" />
+                    <Title LCID="1110" Text="Contas" />
+                    <Title LCID="1037" Text="תיקי לקוחות" />
+                    <Title LCID="1081" Text="खाते" />
+                    <Title LCID="1050" Text="Kupci" />
+                    <Title LCID="1038" Text="Partnerek" />
+                    <Title LCID="1057" Text="Akun" />
+                    <Title LCID="1040" Text="Account" />
+                    <Title LCID="1041" Text="取引先企業" />
+                    <Title LCID="1087" Text="Тіркелгілер" />
+                    <Title LCID="1042" Text="거래처" />
+                    <Title LCID="1063" Text="Klientai" />
+                    <Title LCID="1062" Text="Uzņēmumi" />
+                    <Title LCID="1086" Text="Akaun" />
+                    <Title LCID="1044" Text="Forretningsforbindelser" />
+                    <Title LCID="1043" Text="Accounts" />
+                    <Title LCID="1045" Text="Klienci" />
+                    <Title LCID="1046" Text="Contas" />
+                    <Title LCID="2070" Text="Contas" />
+                    <Title LCID="1048" Text="Conturi" />
+                    <Title LCID="1049" Text="Организации" />
+                    <Title LCID="1051" Text="Obchodné vzťahy" />
+                    <Title LCID="1060" Text="Kupci" />
+                    <Title LCID="3098" Text="Пословни контакти" />
+                    <Title LCID="2074" Text="Poslovni kontakti" />
+                    <Title LCID="1053" Text="Konton" />
+                    <Title LCID="1054" Text="ลูกค้าองค์กร" />
+                    <Title LCID="1055" Text="Firmalar" />
+                    <Title LCID="1058" Text="Бізнес-партнери" />
+                    <Title LCID="1066" Text="Khách hàng" />
+                    <Title LCID="2052" Text="客户" />
+                    <Title LCID="3076" Text="客戶" />
+                    <Title LCID="1028" Text="客戶" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem Icon="$webresource:msdyn_/Icons/Sitemap/WorkOrder_32.png" RelationshipName="msdyn_msdyn_taxcode_msdyn_workorder_TaxCode" Id="nav_msdyn_msdyn_taxcode_msdyn_workorder_TaxCode" Area="Service" Show="false" Sequence="1004">
+                <Titles>
+                    <Title LCID="1033" Text="Work Orders" />
+                    <Title LCID="1025" Text="أوامر العمل" />
+                    <Title LCID="1026" Text="Работни поръчки" />
+                    <Title LCID="1027" Text="Ordres de treball" />
+                    <Title LCID="1029" Text="Pracovní příkazy" />
+                    <Title LCID="1030" Text="Arbejdsordrer" />
+                    <Title LCID="1031" Text="Arbeitsaufträge" />
+                    <Title LCID="1032" Text="Παραγγελίες εργασίας" />
+                    <Title LCID="3082" Text="Órdenes de trabajo" />
+                    <Title LCID="1061" Text="Töökorraldused" />
+                    <Title LCID="1069" Text="Lan-eskaerak" />
+                    <Title LCID="1035" Text="Työtilaukset" />
+                    <Title LCID="1036" Text="Ordres de travail" />
+                    <Title LCID="1110" Text="Pedidos de traballo" />
+                    <Title LCID="1037" Text="הזמנות עבודה" />
+                    <Title LCID="1081" Text="कार्य ऑर्डर" />
+                    <Title LCID="1050" Text="Radni nalozi" />
+                    <Title LCID="1038" Text="Munkarendelések" />
+                    <Title LCID="1057" Text="Perintah Kerja" />
+                    <Title LCID="1040" Text="Ordini di lavoro" />
+                    <Title LCID="1041" Text="作業指示書" />
+                    <Title LCID="1087" Text="Жұмысқа тапсырыстар" />
+                    <Title LCID="1042" Text="작업 주문" />
+                    <Title LCID="1063" Text="Darbo užsakymai" />
+                    <Title LCID="1062" Text="Darba pasūtījumi" />
+                    <Title LCID="1086" Text="Pesanan Kerja" />
+                    <Title LCID="1044" Text="Arbeidsordrer" />
+                    <Title LCID="1043" Text="Werkorders" />
+                    <Title LCID="1045" Text="Zlecenia pracy" />
+                    <Title LCID="1046" Text="Ordens de Serviço" />
+                    <Title LCID="2070" Text="Ordens de Intervenção" />
+                    <Title LCID="1048" Text="Comenzi de lucru" />
+                    <Title LCID="1049" Text="Заказы на работу" />
+                    <Title LCID="1051" Text="Objednávky prác" />
+                    <Title LCID="1060" Text="Delovni nalogi" />
+                    <Title LCID="3098" Text="Радни налози" />
+                    <Title LCID="2074" Text="Radni nalozi" />
+                    <Title LCID="1053" Text="Arbetsorder" />
+                    <Title LCID="1054" Text="ใบสั่งงาน" />
+                    <Title LCID="1055" Text="İş Emirleri" />
+                    <Title LCID="1058" Text="Наряди-замовлення" />
+                    <Title LCID="1066" Text="Lệnh Sản xuất" />
+                    <Title LCID="2052" Text="工作订单" />
+                    <Title LCID="3076" Text="工單" />
+                    <Title LCID="1028" Text="工單" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem Icon="$webresource:msdyn_/Icons/Sitemap/ServiceAgreement_32.png" RelationshipName="msdyn_msdyn_taxcode_msdyn_agreement_SalesTaxCode" Sequence="10000" Area="Info" Id="nav_msdyn_msdyn_taxcode_msdyn_agreement_SalesTaxCode" Show="false">
+                <Titles>
+                    <Title LCID="1033" Text="Agreements" />
+                    <Title LCID="1025" Text="الاتفاقيات" />
+                    <Title LCID="1026" Text="Споразумения" />
+                    <Title LCID="1027" Text="Acords" />
+                    <Title LCID="1029" Text="Smlouvy" />
+                    <Title LCID="1030" Text="Aftaler" />
+                    <Title LCID="1031" Text="Vereinbarungen" />
+                    <Title LCID="1032" Text="Συμβάσεις" />
+                    <Title LCID="3082" Text="Acuerdos" />
+                    <Title LCID="1061" Text="Lepped" />
+                    <Title LCID="1069" Text="Hitzarmenak" />
+                    <Title LCID="1035" Text="Sopimukset" />
+                    <Title LCID="1036" Text="Contrats" />
+                    <Title LCID="1110" Text="Acordos" />
+                    <Title LCID="1037" Text="הסכמים" />
+                    <Title LCID="1081" Text="अनुबंध" />
+                    <Title LCID="1050" Text="Ugovori" />
+                    <Title LCID="1038" Text="Szerződések" />
+                    <Title LCID="1057" Text="Perjanjian" />
+                    <Title LCID="1040" Text="Contratti" />
+                    <Title LCID="1041" Text="契約" />
+                    <Title LCID="1087" Text="Келісімдер" />
+                    <Title LCID="1042" Text="계약" />
+                    <Title LCID="1063" Text="Sutartys" />
+                    <Title LCID="1062" Text="Līgumi" />
+                    <Title LCID="1086" Text="Perjanjian" />
+                    <Title LCID="1044" Text="Avtaler" />
+                    <Title LCID="1043" Text="Overeenkomsten" />
+                    <Title LCID="1045" Text="Umowy" />
+                    <Title LCID="1046" Text="Contratos" />
+                    <Title LCID="2070" Text="Contratos" />
+                    <Title LCID="1048" Text="Acorduri" />
+                    <Title LCID="1049" Text="Соглашения" />
+                    <Title LCID="1051" Text="Zmluvy" />
+                    <Title LCID="1060" Text="Pogodbe" />
+                    <Title LCID="3098" Text="Уговори" />
+                    <Title LCID="2074" Text="Ugovori" />
+                    <Title LCID="1053" Text="Avtal" />
+                    <Title LCID="1054" Text="ข้อตกลง" />
+                    <Title LCID="1055" Text="Sözleşmeler" />
+                    <Title LCID="1058" Text="Угоди" />
+                    <Title LCID="1066" Text="Thỏa thuận" />
+                    <Title LCID="2052" Text="协议" />
+                    <Title LCID="3076" Text="合約" />
+                    <Title LCID="1028" Text="合約" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem Icon="$webresource:msdyn_/Icons/Sitemap/PurchaseOrder_32.png" RelationshipName="msdyn_msdyn_taxcode_msdyn_purchaseorderbill_TaxCode" Sequence="10000" Area="Info" Id="nav_msdyn_msdyn_taxcode_msdyn_purchaseorderbill_TaxCode" Show="false">
+                <Titles>
+                    <Title LCID="1033" Text="Purchase Order Bill" />
+                    <Title LCID="1025" Text="فاتورة أمر الشراء" />
+                    <Title LCID="1026" Text="Сметка за поръчка за покупка" />
+                    <Title LCID="1027" Text="Factura d'ordre de compra" />
+                    <Title LCID="1029" Text="Faktura nákupní objednávky" />
+                    <Title LCID="1030" Text="Regning i indkøbsordre" />
+                    <Title LCID="1031" Text="Bestellungsrechnung" />
+                    <Title LCID="1032" Text="Χρέωση παραγγελίας αγοράς" />
+                    <Title LCID="3082" Text="Factura de pedido de compra" />
+                    <Title LCID="1061" Text="Ostutellimuse arve" />
+                    <Title LCID="1069" Text="Erosketa-eskaeraren faktura" />
+                    <Title LCID="1035" Text="Ostotilauksen lasku" />
+                    <Title LCID="1036" Text="Facture de bon de commande" />
+                    <Title LCID="1110" Text="Factura de pedido de compra" />
+                    <Title LCID="1037" Text="חשבון הזמנת רכש" />
+                    <Title LCID="1081" Text="क्रय ऑर्डर बिल" />
+                    <Title LCID="1050" Text="Račun za narudžbenicu" />
+                    <Title LCID="1038" Text="Megrendelés számlája" />
+                    <Title LCID="1057" Text="Tagihan Pesanan Pembelian" />
+                    <Title LCID="1040" Text="Fatturazione ordine di acquisto" />
+                    <Title LCID="1041" Text="発注書の請求" />
+                    <Title LCID="1087" Text="Сатып алуға тапсырыс шоты" />
+                    <Title LCID="1042" Text="구매 주문 청구서" />
+                    <Title LCID="1063" Text="Pirkimo užsakymo sąskaita" />
+                    <Title LCID="1062" Text="Pirkšanas pasūtījuma rēķins" />
+                    <Title LCID="1086" Text="Bil Pesanan Pembelian" />
+                    <Title LCID="1044" Text="Bestillingsfaktura" />
+                    <Title LCID="1043" Text="Factuur voor inkooporders" />
+                    <Title LCID="1045" Text="Rachunek do zamówienia zakupu" />
+                    <Title LCID="1046" Text="Fatura de Ordem de Compra" />
+                    <Title LCID="2070" Text="Fatura da Nota de Encomenda" />
+                    <Title LCID="1048" Text="Factură comandă de achiziționare" />
+                    <Title LCID="1049" Text="Счет по заказу на покупку" />
+                    <Title LCID="1051" Text="Faktúra nákupnej objednávky" />
+                    <Title LCID="1060" Text="Obračun naročilnice" />
+                    <Title LCID="3098" Text="Рачун за куповину" />
+                    <Title LCID="2074" Text="Račun za kupovinu" />
+                    <Title LCID="1053" Text="Inköpsorderfaktura" />
+                    <Title LCID="1054" Text="ใบเรียกเก็บเงินของใบสั่งซื้อ" />
+                    <Title LCID="1055" Text="Satın Alma Siparişi Faturası" />
+                    <Title LCID="1058" Text="Рахунок за замовленням на придбання" />
+                    <Title LCID="1066" Text="Hóa đơn Đơn đặt hàng" />
+                    <Title LCID="2052" Text="采购订单帐单" />
+                    <Title LCID="3076" Text="採購單帳單" />
+                    <Title LCID="1028" Text="採購單帳單" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem Icon="$webresource:msdyn_/Icons/Sitemap/RMA_32.png" RelationshipName="msdyn_msdyn_taxcode_msdyn_rma_TaxCode" Sequence="10000" Area="Info" Id="nav_msdyn_msdyn_taxcode_msdyn_rma_TaxCode" Show="false">
+                <Titles>
+                    <Title LCID="1033" Text="RMAs" />
+                    <Title LCID="1025" Text="تفويضات بإرجاع المواد (RMAs)" />
+                    <Title LCID="1026" Text="RMA" />
+                    <Title LCID="1027" Text="RMA" />
+                    <Title LCID="1029" Text="Povolení vrácení zboží" />
+                    <Title LCID="1030" Text="RMA'er" />
+                    <Title LCID="1031" Text="RMAs" />
+                    <Title LCID="1032" Text="RMA" />
+                    <Title LCID="3082" Text="RMA" />
+                    <Title LCID="1061" Text="RMA-d" />
+                    <Title LCID="1069" Text="RMAk" />
+                    <Title LCID="1035" Text="Palautukset" />
+                    <Title LCID="1036" Text="Autorisations de retours marchandises" />
+                    <Title LCID="1110" Text="RMA" />
+                    <Title LCID="1037" Text="אישורי RMA" />
+                    <Title LCID="1081" Text="RMA" />
+                    <Title LCID="1050" Text="Ovlaštenja za povrat robe" />
+                    <Title LCID="1038" Text="Visszáruengedélyek" />
+                    <Title LCID="1057" Text="RMA" />
+                    <Title LCID="1040" Text="NAR" />
+                    <Title LCID="1041" Text="RMA" />
+                    <Title LCID="1087" Text="Тауарларды қайтаруға рұқсаттар" />
+                    <Title LCID="1042" Text="RMA" />
+                    <Title LCID="1063" Text="RMA" />
+                    <Title LCID="1062" Text="RMA" />
+                    <Title LCID="1086" Text="RMA" />
+                    <Title LCID="1044" Text="ARM-er" />
+                    <Title LCID="1043" Text="RMA's" />
+                    <Title LCID="1045" Text="Autoryzacje zwrotu" />
+                    <Title LCID="1046" Text="ADMs" />
+                    <Title LCID="2070" Text="RMAs" />
+                    <Title LCID="1048" Text="Autorizări de returnare a mărfii" />
+                    <Title LCID="1049" Text="RMA" />
+                    <Title LCID="1051" Text="Povolenia na návrat materiálu" />
+                    <Title LCID="1060" Text="RMA-ji" />
+                    <Title LCID="3098" Text="Повраћаји снабдевачу" />
+                    <Title LCID="2074" Text="Povraćaji snabdevaču" />
+                    <Title LCID="1053" Text="RMA:er" />
+                    <Title LCID="1054" Text="RMA" />
+                    <Title LCID="1055" Text="RMA'lar" />
+                    <Title LCID="1058" Text="RMA" />
+                    <Title LCID="1066" Text="RMA (Ủy quyền Trả lại Hàng hóa)" />
+                    <Title LCID="2052" Text="RMA" />
+                    <Title LCID="3076" Text="RMA" />
+                    <Title LCID="1028" Text="RMA" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem Icon="$webresource:msdyn_/Icons/Sitemap/RTV_32.png" RelationshipName="msdyn_msdyn_taxcode_msdyn_rtv_TaxCode" Sequence="10000" Area="Info" Id="nav_msdyn_msdyn_taxcode_msdyn_rtv_TaxCode" Show="false">
+                <Titles>
+                    <Title LCID="1033" Text="RTVs" />
+                    <Title LCID="1025" Text="عمليات الإرجاع إلى البائع (RTVs)" />
+                    <Title LCID="1026" Text="RTV" />
+                    <Title LCID="1027" Text="Devolucions a proveïdor (RTV)" />
+                    <Title LCID="1029" Text="Vrácení dodavateli" />
+                    <Title LCID="1030" Text="RTV'er" />
+                    <Title LCID="1031" Text="RTVs" />
+                    <Title LCID="1032" Text="RTV" />
+                    <Title LCID="3082" Text="RTV" />
+                    <Title LCID="1061" Text="RTV-d" />
+                    <Title LCID="1069" Text="RTVak" />
+                    <Title LCID="1035" Text="Toimittajalle tehtävät palautukset" />
+                    <Title LCID="1036" Text="Retours fournisseur" />
+                    <Title LCID="1110" Text="RTV" />
+                    <Title LCID="1037" Text="אישורי RTV" />
+                    <Title LCID="1081" Text="RTV" />
+                    <Title LCID="1050" Text="Povrati dobavljaču" />
+                    <Title LCID="1038" Text="Visszáruk a szállítónak" />
+                    <Title LCID="1057" Text="RTV" />
+                    <Title LCID="1040" Text="RTV" />
+                    <Title LCID="1041" Text="RTV" />
+                    <Title LCID="1087" Text="Жеткізушіге қайтарулар" />
+                    <Title LCID="1042" Text="RTV" />
+                    <Title LCID="1063" Text="RTV" />
+                    <Title LCID="1062" Text="RTV (atgriešanas)" />
+                    <Title LCID="1086" Text="Dikembalikan Ke Vendor (RTV)" />
+                    <Title LCID="1044" Text="RTV-er" />
+                    <Title LCID="1043" Text="RTV's" />
+                    <Title LCID="1045" Text="Zwroty do dostawcy" />
+                    <Title LCID="1046" Text="RTVs" />
+                    <Title LCID="2070" Text="RTVs" />
+                    <Title LCID="1048" Text="Returnări la furnizor" />
+                    <Title LCID="1049" Text="RTV" />
+                    <Title LCID="1051" Text="Vrátenie dodávateľom" />
+                    <Title LCID="1060" Text="RTV-ji" />
+                    <Title LCID="3098" Text="Повраћаји продавцу" />
+                    <Title LCID="2074" Text="Povraćaji prodavcu" />
+                    <Title LCID="1053" Text="RTV:er" />
+                    <Title LCID="1054" Text="RTV" />
+                    <Title LCID="1055" Text="RTV'ler" />
+                    <Title LCID="1058" Text="Повернення постачальнику" />
+                    <Title LCID="1066" Text="RTV (Trả về cho Nhà cung cấp)" />
+                    <Title LCID="2052" Text="RTV" />
+                    <Title LCID="3076" Text="RTV" />
+                    <Title LCID="1028" Text="RTV" />
+                </Titles>
+            </NavBarByRelationshipItem>
+        </NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Details" />
+                    <Title LCID="1025" Text="التفاصيل" />
+                    <Title LCID="1026" Text="Подробности" />
+                    <Title LCID="1027" Text="Detalls" />
+                    <Title LCID="1029" Text="Podrobnosti" />
+                    <Title LCID="1030" Text="Detaljer" />
+                    <Title LCID="1031" Text="Details" />
+                    <Title LCID="1032" Text="Λεπτομέρειες" />
+                    <Title LCID="3082" Text="Detalles" />
+                    <Title LCID="1061" Text="Üksikasjad" />
+                    <Title LCID="1069" Text="Xehetasunak" />
+                    <Title LCID="1035" Text="Tiedot" />
+                    <Title LCID="1036" Text="Détails" />
+                    <Title LCID="1110" Text="Detalles" />
+                    <Title LCID="1037" Text="פרטים" />
+                    <Title LCID="1081" Text="विवरण" />
+                    <Title LCID="1050" Text="Pojedinosti" />
+                    <Title LCID="1038" Text="Részletek" />
+                    <Title LCID="1057" Text="Rincian" />
+                    <Title LCID="1040" Text="Dettagli" />
+                    <Title LCID="1041" Text="詳細" />
+                    <Title LCID="1087" Text="Мәліметтер" />
+                    <Title LCID="1042" Text="세부 정보" />
+                    <Title LCID="1063" Text="Išsami informacija" />
+                    <Title LCID="1062" Text="Detalizēta informācija" />
+                    <Title LCID="1086" Text="Butiran" />
+                    <Title LCID="1044" Text="Detaljer" />
+                    <Title LCID="1043" Text="Details" />
+                    <Title LCID="1045" Text="Szczegóły" />
+                    <Title LCID="1046" Text="Detalhes" />
+                    <Title LCID="2070" Text="Detalhes" />
+                    <Title LCID="1048" Text="Detalii" />
+                    <Title LCID="1049" Text="Сведения" />
+                    <Title LCID="1051" Text="Podrobnosti" />
+                    <Title LCID="1060" Text="Podrobnosti" />
+                    <Title LCID="3098" Text="Детаљи" />
+                    <Title LCID="2074" Text="Detalji" />
+                    <Title LCID="1053" Text="Information" />
+                    <Title LCID="1054" Text="รายละเอียด" />
+                    <Title LCID="1055" Text="Ayrıntılar" />
+                    <Title LCID="1058" Text="Докладно" />
+                    <Title LCID="1066" Text="Chi tiết" />
+                    <Title LCID="2052" Text="详细信息" />
+                    <Title LCID="3076" Text="詳細資料​​" />
+                    <Title LCID="1028" Text="詳細資料" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عامة" />
+                    <Title LCID="1026" Text="Общи" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Almindelig" />
+                    <Title LCID="1031" Text="Allgemein" />
+                    <Title LCID="1032" Text="Κοινά" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Ühine" />
+                    <Title LCID="1069" Text="Ohikoak" />
+                    <Title LCID="1035" Text="Yhteiset" />
+                    <Title LCID="1036" Text="Éléments communs" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="פריטים נפוצים" />
+                    <Title LCID="1081" Text="सामान्य" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Általános" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Жалпы" />
+                    <Title LCID="1042" Text="일반" />
+                    <Title LCID="1063" Text="Įprasta" />
+                    <Title LCID="1062" Text="Kopējs" />
+                    <Title LCID="1086" Text="Umum" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Algemeen" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comun" />
+                    <Title LCID="1049" Text="Общие" />
+                    <Title LCID="1051" Text="Spoločné" />
+                    <Title LCID="1060" Text="Skupno" />
+                    <Title LCID="3098" Text="Уобичајено" />
+                    <Title LCID="2074" Text="Uobičajeno" />
+                    <Title LCID="1053" Text="Gemensam" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Загальне" />
+                    <Title LCID="1066" Text="Thông thường" />
+                    <Title LCID="2052" Text="公用" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1025" Text="المبيعات" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Ventes" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1087" Text="Сатылым" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="1063" Text="Pardavimas" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="3098" Text="Продаја" />
+                    <Title LCID="2074" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1025" Text="التسويق" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="3098" Text="Маркетинг" />
+                    <Title LCID="2074" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷​​" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Processessioner" />
+                    <Title LCID="1031" Text="Prozesssitzungen" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διεργασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesu-saioak" />
+                    <Title LCID="1035" Text="Prosessin istunnot" />
+                    <Title LCID="1036" Text="Sessions de traitement" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1037" Text="הפעלות תהליך" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Sesije procesa" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Sesi Proses" />
+                    <Title LCID="1040" Text="Sessioni processo" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1087" Text="Процесс сеанстары" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="1063" Text="Apdorojimo seansai" />
+                    <Title LCID="1062" Text="Apstrādes sesijas" />
+                    <Title LCID="1086" Text="Proses Sesi" />
+                    <Title LCID="1044" Text="Prosessøkter" />
+                    <Title LCID="1043" Text="Processessies" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Processar Sessões" />
+                    <Title LCID="2070" Text="Sessões de Processo" />
+                    <Title LCID="1048" Text="Sesiuni de proces" />
+                    <Title LCID="1049" Text="Сеансы процесса" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje procesov" />
+                    <Title LCID="3098" Text="Сесије процеса" />
+                    <Title LCID="2074" Text="Sesije procesa" />
+                    <Title LCID="1053" Text="Processessioner" />
+                    <Title LCID="1054" Text="เซสชันของกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси процесів" />
+                    <Title LCID="1066" Text="Phiên Quá trình" />
+                    <Title LCID="2052" Text="进程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <DisplayConditions FallbackForm="true">
+        <Everyone />
+    </DisplayConditions>
+    <formLibraries>
+        <Library name="msdyn_/TaxCode/TaxCode.Library.js" libraryUniqueId="{2a0d4546-dea2-221e-c846-906b01ca5ccd}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="TaxCode.Library.Load" libraryName="msdyn_/TaxCode/TaxCode.Library.js" handlerUniqueId="{d7a707c0-7743-abd0-697c-472c90a9dbed}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

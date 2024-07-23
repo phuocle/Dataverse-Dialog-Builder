@@ -1,0 +1,126 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{23ca68c0-bde9-4d73-884b-419a7610b5c6}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="33%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{2e1f221e-4879-4095-828a-dfb7a7a2235a}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{779d3306-1c0b-4cc6-9c7a-44cca0750ca3}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3fe8ab75-8bef-4743-b8ba-6c8eac81c178}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0d618e83-c64a-a530-ea9b-3440e0dd1588}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rating Model" languagecode="1033" />
+                                        </labels>
+                                        <control id="ratingmodel" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ratingmodel" disabled="true" uniqueid="{1a96229c-d983-6b92-aeb1-c0816a48add8}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{44F02E07-3873-481A-A880-50EF4D5EF529}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{09a9bd1c-0499-8916-7d28-1dd5c508a229}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Value" languagecode="1033" />
+                                        </labels>
+                                        <control id="value" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="value" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{250c6532-37b2-3399-1a94-4922c5918ae9}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Is Default" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_isdefault" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_isdefault" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="66%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{8cfd6a1b-8b36-4321-994c-45250e54467f}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="false" rowspan="15" auto="false" id="{ab25cf47-94ee-40ff-b56d-43888e6b798c}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-c143-495e-a496-c962e5b4488e}">
+                                            <parameters>
+                                                <DefaultTabId>NotesTab</DefaultTabId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <formLibraries>
+        <Library name="msdyn_/Libraries/jQuery/jquery.js" libraryUniqueId="{a8eecd29-978e-a197-c1ad-6db31a684b2d}" />
+        <Library name="msdyn_/Libraries/require/require.js" libraryUniqueId="{eb5d19e2-b8b3-cacd-49be-a05a9dcb285a}" />
+        <Library name="msdyn_/Libraries/SDK.Soap/Sdk.Soap.min.js" libraryUniqueId="{66d1e4de-e298-aa3e-775c-2cb339992a59}" />
+        <Library name="msdyn_/RatingModel/Scripts/MainFormScript.js" libraryUniqueId="{9c875dbc-a3a0-0b70-34ed-0b0c4ac9b506}" />
+    </formLibraries>
+    <events>
+        <event name="onchange" application="false" active="false" attribute="ratingmodel">
+            <Handlers>
+                <Handler functionName="onRatingModelChange" libraryName="msdyn_/RatingModel/Scripts/MainFormScript.js" handlerUniqueId="{d4eb223e-d5b7-5a34-d90d-ba7722839a54}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="onMainFormLoad_RatingValue" libraryName="msdyn_/RatingModel/Scripts/MainFormScript.js" handlerUniqueId="{64d84e10-5678-3e3b-89b1-c1b0b1a1c54e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

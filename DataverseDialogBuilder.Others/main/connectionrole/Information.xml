@@ -1,0 +1,143 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{c57d52d7-6f04-4ad7-8a4c-ae1bdda15f55}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="55%">
+                    <sections>
+                        <section name="step1" showlabel="true" showbar="true" id="{33a098e0-b9cd-4874-a125-a8e17701b853}" IsUserDefined="0" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Step 1: Describe the connection role" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{bae4ed70-a1ca-4913-a145-428e711fa14c}" colspan="2">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{984b2a3e-9577-4269-ae15-19df9ea25ed6}" colspan="2">
+                                        <labels>
+                                            <label description="Connection Role Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="category" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="category" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3f661f66-1387-47b0-b220-3260cb8759b8}" rowspan="5" auto="true" colspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="50%">
+                    <sections>
+                        <section name="step2" showlabel="true" showbar="true" id="{e018a095-06ee-4eb4-9b6e-0bb9ac96bb81}" IsUserDefined="0" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Step 2: Select record types" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell showlabel="false" id="{775839c5-2d3a-4b57-b83b-63ef79203417}" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Record Types" languagecode="1033" />
+                                        </labels>
+                                        <control id="connectionroleobjecttypecodelist" classid="{821ACF1A-7E46-4A0C-965D-FE14A57D78C7}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{b0a70b0d-568c-10d3-1a3d-01c997a061c1}" showlabel="false" showbar="false" id="{b0a70b0d-568c-10d3-1a3d-01c997a061c1}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115">
+                            <labels>
+                                <label description="Section1" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{250c4d3c-e91a-d36a-56a6-100ca9448e67}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                    <cell id="{1ec34971-bdde-e1d3-1e4c-8883d7100097}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="reciprocalroles" verticallayout="true" id="{222cf5a9-15f0-456d-a4ad-848682ada4b9}" IsUserDefined="0">
+            <labels>
+                <label description="Matching Connection Roles" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="roleGrid" showlabel="true" showbar="false" id="{88175a67-90a1-42a9-a34a-3a06625ad9a5}" IsUserDefined="0" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Step 3: List matching connection roles (optional)" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" rowspan="5" showlabel="false" auto="true" id="{b0e06105-48fd-4cdf-a589-722e731b9b55}">
+                                        <labels>
+                                            <label description="Connection Roles" languagecode="1033" />
+                                        </labels>
+                                        <control id="reciprocalRoleGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <TargetEntityType>connectionrole</TargetEntityType>
+                                                <ViewId>{80AE85A6-EAB4-434F-B5B2-370A4E46DB75}</ViewId>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                                                <RelationshipName>connectionroleassociation_association</RelationshipName>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="ConnectionRole_Main_System_Library.js" handlerUniqueId="0dca92fc-0fc2-49c5-930d-0961b74c272f" passExecutionContext="true" enabled="true"></Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ConnectionRole_Main_System_Library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

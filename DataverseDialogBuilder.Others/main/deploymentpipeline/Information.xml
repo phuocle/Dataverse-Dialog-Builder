@@ -1,0 +1,594 @@
+<form headerdensity="HighWithControls">
+    <tabs>
+        <tab verticallayout="true" id="{2455562d-efb9-43d2-bbe1-bd3ea54ba9d7}" IsUserDefined="1" name="{2455562d-efb9-43d2-bbe1-bd3ea54ba9d7}" locklevel="0" expanded="true" showlabel="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="true" showbar="true" IsUserDefined="0" id="{b3ac8a1c-4654-4f49-8f7e-12f0db21bbac}" name="{b3ac8a1c-4654-4f49-8f7e-12f0db21bbac}" columns="11" locklevel="0" labelwidth="130" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Pipeline Details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c2c0d568-1f41-4c0e-ac81-a341c4b8f3c4}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                    <cell id="{ed45b895-5166-2d1c-46a7-53801d6bd703}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="AI deployment notes (U.S. only)" languagecode="1033" />
+                                        </labels>
+                                        <control id="enableaideploymentnotes" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="enableaideploymentnotes" disabled="false" uniqueid="{011acbb5-9eb3-3a75-6571-7403eecadb00}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{32db853d-7e47-e74e-d77d-7a9d95bb46ec}" showlabel="true" locklevel="0" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" disabled="false" />
+                                    </cell>
+                                    <cell id="{1ae8a3de-6342-e3c9-8935-38d850348a7d}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="EnableAINotesDisclaimer" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_EnableAINotesDisclaimer" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>ms_EnableAISuggestedDeploymentNotesDisclaimer</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>no</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <WebResourceId>{5BE67F0A-7A1B-EE11-8F77-6045BDE23485}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{138c4918-5d76-41ad-821b-9e12db47871f}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Allow redeployments of older versions" languagecode="1033" />
+                                        </labels>
+                                        <control id="enableredeployment" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="enableredeployment" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{200309c0-3d3a-6403-204e-d6e066a4458b}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cb229b04-2b9f-4af7-98f4-d1933c92c874}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" uniqueid="{c512c37b-590b-71a2-2d62-c168dbbe3c79}" />
+                                    </cell>
+                                    <cell id="{553e6aa7-d874-8a87-37b5-5178d47653d9}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="developmentEnvironments" showlabel="true" showbar="false" locklevel="0" id="{d26e918a-e35a-22c2-9612-9ac5a5212e3d}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="To enable this content, save the record." languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{245bc0de-2ad7-0c69-d706-c5b13a601c76}" showlabel="true" colspan="1" auto="false" rowspan="7">
+                                        <labels>
+                                            <label description="Linked Development Environments" languagecode="1033" />
+                                        </labels>
+                                        <control id="developmentEnvironments" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{a03d1e74-d519-a28d-1c99-b192149133e7}">
+                                            <parameters>
+                                                <ViewId>{AE8C401A-73BB-EC11-B40D-000D3AC4662A}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>deploymentpipeline_deploymentenvironment</RelationshipName>
+                                                <TargetEntityType>deploymentenvironment</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{06CDFA02-5FFE-4905-9481-222B5DA21DFB},{AE8C401A-73BB-EC11-B40D-000D3AC4662A}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>4</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                                <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="DeploymentStages" showlabel="false" showbar="false" locklevel="0" id="{9da53d88-0d99-223d-4092-eaa350656b29}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Deployment Stages" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{72aa5bbb-d7d5-ee39-4bab-9daeeb3d4066}" showlabel="true" colspan="1" auto="false" rowspan="7">
+                                        <labels>
+                                            <label description="Deployment Stages (Deployment Pipeline)" languagecode="1033" />
+                                        </labels>
+                                        <control id="deploymentstage" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{b5698e4a-6dde-c378-d4d1-70dc6c10bde3}">
+                                            <parameters>
+                                                <ViewId>{4A08137D-7033-4996-AD51-8B6E604A3FE7}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>deploymentpipeline_deploymentstage</RelationshipName>
+                                                <TargetEntityType>deploymentstage</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{4A08137D-7033-4996-AD51-8B6E604A3FE7}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>4</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="tab_2" id="e29c4ccf-ee64-4866-88c5-95bc72dfbee9" IsUserDefined="0" locklevel="0" showlabel="true">
+            <labels>
+                <label description="Deployment stages" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="tab_2_section_1" id="67a6ab02-bf60-48e7-b722-9ea32268bfc2" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Deployment stages" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{b0ef5e4c-82d1-4e62-9208-aeea0bf0a04a}" rowspan="4" colspan="1" auto="true">
+                                        <labels>
+                                            <label description="New SG control 1654567267160" languagecode="1033" />
+                                        </labels>
+                                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <RecordsPerPage>4</RecordsPerPage>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>true</EnableViewPicker>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <TargetEntityType>deploymentstage</TargetEntityType>
+                                                <ViewId>{4A08137D-7033-4996-AD51-8B6E604A3FE7}</ViewId>
+                                                <ViewIds>{4A08137D-7033-4996-AD51-8B6E604A3FE7}</ViewIds>
+                                                <RelationshipName>deploymentpipeline_deploymentstage</RelationshipName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="RunHistory" id="7d0a2b83-b39c-4e74-ac70-e1f89b2e377f" IsUserDefined="0" locklevel="0" showlabel="true">
+            <labels>
+                <label description="Run history" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="pipelineRunHistory" id="26b0e211-8811-4cce-9f34-76dc91e173b1" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" height="auto">
+                            <labels>
+                                <label description="Pipeline Run History" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{cdbf38d2-3d06-4d43-b73f-3a53550bbd07}" rowspan="5" colspan="1" auto="true" showlabel="true">
+                                        <labels>
+                                            <label description="To show current pipeline, filter the first column." languagecode="1033" />
+                                        </labels>
+                                        <control indicationOfSubgrid="true" id="Pipeline_RunHistory" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{7E4E6696-6881-2D85-C4C8-856B12415C62}">
+                                            <parameters>
+                                                <RecordsPerPage>15</RecordsPerPage>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <TargetEntityType>deploymentstagerun</TargetEntityType>
+                                                <ViewId>{B27780CF-F8E5-EC11-BB3C-0022482AE716}</ViewId>
+                                                <ViewIds>{B27780CF-F8E5-EC11-BB3C-0022482AE716}</ViewIds>
+                                                <VisualizationId>{5CFB86E1-F3EC-EC11-BB3D-0022482AE716}</VisualizationId>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                                <IsUserView>false</IsUserView>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <IsUserChart>false</IsUserChart>
+                                                <RelationshipName />
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عام" />
+                    <Title LCID="1026" Text="Общо" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Fælles" />
+                    <Title LCID="1031" Text="Allgemein" />
+                    <Title LCID="1032" Text="Κοινός" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Ühine" />
+                    <Title LCID="1069" Text="Ohikoa" />
+                    <Title LCID="1035" Text="Yhteiset" />
+                    <Title LCID="1036" Text="Commun" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="‏‫‏‫פריטים נפוצים‬" />
+                    <Title LCID="1081" Text="सामान्य" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Közös" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Comune" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Жалпы мәлімет" />
+                    <Title LCID="1042" Text="공통" />
+                    <Title LCID="1063" Text="Bendroji informacija" />
+                    <Title LCID="1062" Text="Kopējie objekti" />
+                    <Title LCID="1086" Text="Biasa" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Gemeenschappelijk" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comun" />
+                    <Title LCID="1049" Text="Общее" />
+                    <Title LCID="1051" Text="Bežné" />
+                    <Title LCID="1060" Text="Skupno" />
+                    <Title LCID="3098" Text="Заједничко" />
+                    <Title LCID="2074" Text="Zajedničko" />
+                    <Title LCID="1053" Text="Gemensamt" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Спільні" />
+                    <Title LCID="1066" Text="Chung" />
+                    <Title LCID="2052" Text="公用" />
+                    <Title LCID="3076" Text="通用" />
+                    <Title LCID="1028" Text="通用" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1025" Text="‏‏المبيعات‬" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Vente" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1087" Text="Сатылым" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="1063" Text="Pardavimai" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="3098" Text="Продаја" />
+                    <Title LCID="2074" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1025" Text="الخدمة" />
+                    <Title LCID="1026" Text="Услуга" />
+                    <Title LCID="1027" Text="Servei" />
+                    <Title LCID="1029" Text="Služby" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Υπηρεσία" />
+                    <Title LCID="3082" Text="Servicio" />
+                    <Title LCID="1061" Text="Teenindus" />
+                    <Title LCID="1069" Text="Zerbitzua" />
+                    <Title LCID="1035" Text="Palvelu" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Servizo" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1081" Text="सेवा" />
+                    <Title LCID="1050" Text="Usluga" />
+                    <Title LCID="1038" Text="Szolgáltatás" />
+                    <Title LCID="1057" Text="Layanan" />
+                    <Title LCID="1040" Text="Servizio" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1087" Text="Қызмет" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="1063" Text="Priežiūra" />
+                    <Title LCID="1062" Text="Serviss" />
+                    <Title LCID="1086" Text="Perkhidmatan" />
+                    <Title LCID="1044" Text="Tjeneste" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Usługa" />
+                    <Title LCID="1046" Text="Serviço" />
+                    <Title LCID="2070" Text="Serviço" />
+                    <Title LCID="1048" Text="Serviciu" />
+                    <Title LCID="1049" Text="Сервис" />
+                    <Title LCID="1051" Text="Služba" />
+                    <Title LCID="1060" Text="Storitev" />
+                    <Title LCID="3098" Text="Услуге" />
+                    <Title LCID="2074" Text="Usluge" />
+                    <Title LCID="1053" Text="Service" />
+                    <Title LCID="1054" Text="การบริการ" />
+                    <Title LCID="1055" Text="Servis" />
+                    <Title LCID="1058" Text="Обслуговування" />
+                    <Title LCID="1066" Text="Dịch vụ" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1025" Text="التسويق" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="3098" Text="Маркетинг" />
+                    <Title LCID="2074" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Proces-sessioner" />
+                    <Title LCID="1031" Text="Prozesssitzungen" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διεργασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesuen saioak" />
+                    <Title LCID="1035" Text="Käsittelyistunnot" />
+                    <Title LCID="1036" Text="Sessions de processus" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1037" Text="הפעלות תהליכים‬" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Procesne sesije" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Sesi Proses" />
+                    <Title LCID="1040" Text="Elabora sessioni" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1087" Text="Өңдеу сеанстары" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="1063" Text="Procesų seansai" />
+                    <Title LCID="1062" Text="Procesa sesijas" />
+                    <Title LCID="1086" Text="Sesi Proses" />
+                    <Title LCID="1044" Text="Prosessøkter" />
+                    <Title LCID="1043" Text="Processessies" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Sessões do Processo" />
+                    <Title LCID="2070" Text="Sessões de Processamento" />
+                    <Title LCID="1048" Text="Sesiuni de proces" />
+                    <Title LCID="1049" Text="Сеансы процессов" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje procesov" />
+                    <Title LCID="3098" Text="Сесије обраде" />
+                    <Title LCID="2074" Text="Sesije obrade" />
+                    <Title LCID="1053" Text="Bearbetningssessioner" />
+                    <Title LCID="1054" Text="เซสชันของกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси процесів" />
+                    <Title LCID="1066" Text="Phiên xử lý" />
+                    <Title LCID="2052" Text="流程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <controlDescriptions>
+        <controlDescription forControl="{7E4E6696-6881-2D85-C4C8-856B12415C62}">
+            <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                <parameters />
+            </customControl>
+            <customControl formFactor="0" name="Microsoft.PowerApps.PowerAppsOneGrid">
+                <parameters>
+                    <data-set name="Items">
+                        <ViewId>{B27780CF-F8E5-EC11-BB3C-0022482AE716}</ViewId>
+                        <columnsDefaultView />
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>deploymentstagerun</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{B27780CF-F8E5-EC11-BB3C-0022482AE716}</FilteredViewIds>
+                    </data-set>
+                    <EnableEditing static="true" type="Enum">no</EnableEditing>
+                    <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+                    <EnableRangeSelection static="true" type="Enum">yes</EnableRangeSelection>
+                    <EnableJumpBar static="true" type="Enum">no</EnableJumpBar>
+                    <EnablePagination static="true" type="Enum">no</EnablePagination>
+                    <EnableStatusColumn static="true" type="Enum">yes</EnableStatusColumn>
+                    <EnableDropdownColor static="true" type="Enum">yes</EnableDropdownColor>
+                    <EnableTypeIcons static="true" type="Enum">no</EnableTypeIcons>
+                    <NavigationTypesAllowed static="true" type="Enum">all</NavigationTypesAllowed>
+                    <ReflowBehavior static="true" type="Enum">Reflow</ReflowBehavior>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="Microsoft.PowerApps.PowerAppsOneGrid">
+                <parameters>
+                    <data-set name="Items">
+                        <ViewId>{B27780CF-F8E5-EC11-BB3C-0022482AE716}</ViewId>
+                        <columnsDefaultView />
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>deploymentstagerun</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{B27780CF-F8E5-EC11-BB3C-0022482AE716}</FilteredViewIds>
+                    </data-set>
+                    <EnableEditing static="true" type="Enum">no</EnableEditing>
+                    <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+                    <EnableRangeSelection static="true" type="Enum">yes</EnableRangeSelection>
+                    <EnableJumpBar static="true" type="Enum">no</EnableJumpBar>
+                    <EnablePagination static="true" type="Enum">no</EnablePagination>
+                    <EnableStatusColumn static="true" type="Enum">yes</EnableStatusColumn>
+                    <EnableDropdownColor static="true" type="Enum">yes</EnableDropdownColor>
+                    <EnableTypeIcons static="true" type="Enum">no</EnableTypeIcons>
+                    <NavigationTypesAllowed static="true" type="Enum">all</NavigationTypesAllowed>
+                    <ReflowBehavior static="true" type="Enum">Reflow</ReflowBehavior>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="Microsoft.PowerApps.PowerAppsOneGrid">
+                <parameters>
+                    <data-set name="Items">
+                        <ViewId>{B27780CF-F8E5-EC11-BB3C-0022482AE716}</ViewId>
+                        <columnsDefaultView />
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>deploymentstagerun</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{B27780CF-F8E5-EC11-BB3C-0022482AE716}</FilteredViewIds>
+                    </data-set>
+                    <EnableEditing static="true" type="Enum">no</EnableEditing>
+                    <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+                    <EnableRangeSelection static="true" type="Enum">yes</EnableRangeSelection>
+                    <EnableJumpBar static="true" type="Enum">no</EnableJumpBar>
+                    <EnablePagination static="true" type="Enum">no</EnablePagination>
+                    <EnableStatusColumn static="true" type="Enum">yes</EnableStatusColumn>
+                    <EnableDropdownColor static="true" type="Enum">yes</EnableDropdownColor>
+                    <EnableTypeIcons static="true" type="Enum">no</EnableTypeIcons>
+                    <NavigationTypesAllowed static="true" type="Enum">all</NavigationTypesAllowed>
+                    <ReflowBehavior static="true" type="Enum">Reflow</ReflowBehavior>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <header id="{02378822-ffb9-4a0a-938d-5107dfd4fcd1}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows></rows>
+    </header>
+    <footer id="{07d6ed1a-00b6-440a-89ef-4edc9afe9925}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows></rows>
+    </footer>
+    <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+    </DisplayConditions>
+</form>

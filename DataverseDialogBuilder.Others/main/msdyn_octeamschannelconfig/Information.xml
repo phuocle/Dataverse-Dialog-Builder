@@ -1,0 +1,724 @@
+<form shownavigationbar="false">
+    <tabs>
+        <tab verticallayout="true" id="{d00f867f-54a4-4975-86da-301a4b056901}" IsUserDefined="1" name="{d00f867f-54a4-4975-86da-301a4b056901}" locklevel="0" expanded="true" showlabel="true">
+            <labels>
+                <label description="Account setup" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="true" showbar="false" IsUserDefined="0" id="{cebdd0fc-0f5e-4cd8-8296-b9435e27e894}" labelid="{43af62e3-18bf-4c54-a0bf-84d9bf4d394d}" name="Section_Step_1">
+                            <labels>
+                                <label description="Step 1: Account details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{864b260f-ad90-4b5c-8cdc-d1c9b2225fe9}" showlabel="false" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="TeamsInstructions" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_TeamsInstructions" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}">
+                                            <parameters>
+                                                <Url>msdyn_TeamsLabelTemplate.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>no</Scrolling>
+                                                <Border>false</Border>
+                                                <WebResourceId>{BD36E809-F10A-42F7-9050-9FA6D293F0EC}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{06d9e9d0-8bd5-da63-1c1e-be7de5e0332b}" showlabel="true" locklevel="0" labelid="{2598bbf3-8e1c-4398-863c-3cfff09bda19}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_teamsappname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_teamsappname" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{04771822-d3f1-4a54-af3e-bd96ba3fcac0}" labelid="{57708d74-ec1f-45f4-a088-40464255174d}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Section_Step_2" id="8b9e90bf-5e5d-4a2e-ae33-e7860c49b94f" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Step 2: Work distribution" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{50950a93-76b7-4384-8b4e-d05724e4b74d}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Work Stream" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_liveworkstreamid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_liveworkstreamid" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>true</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <DefaultViewId>{F5278368-BC7F-41CD-98B3-51528B3E8628}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Section_Step_3" id="840e4d97-96ca-4b55-8d77-ee34800f6ff2" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Step 3: Callback information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7f570414-3f53-430f-84aa-e2f563fe2e24}" showlabel="false" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="TeamsCallback" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_TeamsCallback" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}">
+                                            <parameters>
+                                                <Url>msdyn_TeamsLabelTemplate.html</Url>
+                                                <PassParameters>true</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <WebResourceId>{F18E6A61-6D81-425E-8692-DC5EB9D6E491}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d9397117-445d-6856-c5a0-8425ca1300e4}" showlabel="true" locklevel="1" labelid="{51a77962-12c0-4520-a11f-3714d556aa3a}">
+                                        <labels>
+                                            <label description="Bot ID" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_botid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_botid" disabled="true" uniqueid="{02161442-5201-1be4-d2b3-b54e7e519082}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="GeneralSetting_tab" id="{2351c5d9-ba39-12c1-3ccc-b0c1520081e0}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="General settings" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="GeneralSetting_tab_GeneralInformation_section" showlabel="true" showbar="false" locklevel="0" id="{1555147d-5678-9c62-3ee6-55eab33bc763}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="General information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d01d8c13-91a9-9742-a036-41bd37caea0b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Language" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_ocwidgetlanguage" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_ocwidgetlanguage" disabled="false" uniqueid="{511a5aa1-3969-259e-172a-080349458d08}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{0418BE8D-8BC0-4358-A253-14F0DF30F909}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="GeneralSetting_tab_fileattachment_section" showlabel="true" showbar="false" locklevel="0" id="{77ac12dc-a061-5a8b-a620-02a5d9112d9e}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="File attachments" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{00c4488d-5018-c9e1-096d-a85aa74298eb}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Enable file attachments for customers" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_enablefileattachmentsforcustomers" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_enablefileattachmentsforcustomers" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e0a34828-39c5-2c12-0aea-2814b750ec50}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Enable file attachments for agents" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_enablefileattachmentsforagents" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="msdyn_enablefileattachmentsforagents" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="AutomatedMessages_tab" id="{701b748e-6b2e-88c3-a60a-9b408e4a71b5}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Automated messages" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="tab_3_section_1" showlabel="false" showbar="false" locklevel="0" id="{095e0ee3-e94e-2742-d9e0-cd5ba834dda5}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{147cb4b7-75b3-3229-c162-b61d8add81be}" showlabel="false" colspan="1" auto="false" rowspan="6">
+                                        <labels>
+                                            <label description="Localization Data" languagecode="1033" />
+                                        </labels>
+                                        <control id="instance_CustomSystemMessage" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" indicationOfSubgrid="true" uniqueid="{0587AE78-5B4C-EBC2-A2A9-88751E0A09C5}">
+                                            <parameters>
+                                                <ViewId>{79916B99-8FA1-EA11-A812-000D3A1AB88B}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName />
+                                                <TargetEntityType>msdyn_oclocalizationdata</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{38D83FB1-BFFF-459D-B5F4-F28294601D15},{79916B99-8FA1-EA11-A812-000D3A1AB88B}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>4</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <events>
+                <event name="tabstatechange" application="false" active="false">
+                    <Handlers>
+                        <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.filterLocalizationDataPerInstance" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{73168ea4-322b-db15-8d27-791de4253888}" enabled="true" parameters="" passExecutionContext="true" />
+                    </Handlers>
+                </event>
+            </events>
+        </tab>
+        <tab name="Survey" id="{93B1E38A-0D17-478B-86D2-CC4C95916BA3}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Surveys" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Survey_section_1" showlabel="true" showbar="false" locklevel="0" id="{C2BEBCC5-5336-420B-9D41-D85BBA1837A6}" IsUserDefined="0" layout="varwidth" columns="3" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Post-conversation survey" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1EFBBE6B-5AF6-466E-B1C3-12009B077903}" showlabel="false" colspan="3" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Post Conversation Survey Disclaimer" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_postconversationsurveydisclaimer" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>msdyn_PostConversationSurveyDisclaimer.html</Url>
+                                                <PassParameters>true</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <Data>PreviewLinkLabel=OC_Preview_Link_Label,PreviewLinkURL=https://aka.ms/sbrpreview </Data>
+                                                <WebResourceId>{C6A89F5E-7EA8-44E4-9309-69D2320E9A91}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{E9DB56F4-A12B-4529-AD29-5BA719EE8B09}" showlabel="true" colspan="3" locklevel="0">
+                                        <labels>
+                                            <label description="Turn on" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_postconversationsurveyenable" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_postconversationsurveyenable" disabled="false" uniqueid="{B0694195-AF00-4E2A-A5BB-1E989E01A8AC}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{66159B3B-397B-4BDC-B333-9790974817BB}" showlabel="false" colspan="3" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="SurveyIdentifier" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_postconversationsurveyidentifier" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_postconversationsurveyidentifier" disabled="true" uniqueid="{CADC3434-B5D1-48C5-A43E-21445731936C}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{CB3AE485-F73D-4D66-9EF1-22E8CC3FA499}" showlabel="true" colspan="2" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Dynamics 365 Customer Voice survey" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_postconversationsurvey" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_postconversationsurvey" disabled="false" uniqueid="{9FF68DCE-D460-421B-8767-E203FEAEE137}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{8ABDF0D7-9284-4782-84CC-5E4E8E457103}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{2A253305-DB16-47AA-94CC-C88DAA031940}" showlabel="false" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="FormsProButton" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_FormsProButton" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>msdyn_FormsProButton.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>no</Scrolling>
+                                                <Border>false</Border>
+                                                <WebResourceId>{349991B0-0BDB-EA11-A813-000D3A9C7902}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9F234F38-6FA8-4996-ADD5-BEE820B72000}" showlabel="true" colspan="3" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="How should we send the survey?" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_postconversationsurveymode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_postconversationsurveymode" disabled="false" uniqueid="{3AAA752F-1C7A-4DA4-8BC4-CFC7A149F201}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{51823363-D83E-454D-BDD2-21D25AA8E7D8}" showlabel="true" colspan="3" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Post-conversation survey message" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_postconversationsurveymessagetext" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_postconversationsurveymessagetext" disabled="false" uniqueid="{68DF7FD9-FB5D-416A-A637-14041A84CDD1}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <Navigation>
+        <NavBar />
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عام‬" />
+                    <Title LCID="1026" Text="Общо" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Fælles" />
+                    <Title LCID="1031" Text="Allgemein" />
+                    <Title LCID="1032" Text="Κοινές" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Ühine" />
+                    <Title LCID="1069" Text="Ohikoa" />
+                    <Title LCID="1035" Text="Yhteiset" />
+                    <Title LCID="1036" Text="Commun" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="‏‫‏‫‏‫פריטים נפוצים‬‬‬‬" />
+                    <Title LCID="1081" Text="सामान्य" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Közös" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Ортақ" />
+                    <Title LCID="1042" Text="일반" />
+                    <Title LCID="1063" Text="Bendra" />
+                    <Title LCID="1062" Text="Kopējā informācija" />
+                    <Title LCID="1086" Text="Biasa" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Algemeen" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comun" />
+                    <Title LCID="1049" Text="Общее" />
+                    <Title LCID="1051" Text="Spoločné" />
+                    <Title LCID="1060" Text="Skupno" />
+                    <Title LCID="3098" Text="Уобичајено" />
+                    <Title LCID="2074" Text="Uobičajeno" />
+                    <Title LCID="1053" Text="Gemensamt" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Спільні" />
+                    <Title LCID="1066" Text="Thông thường" />
+                    <Title LCID="2052" Text="通用" />
+                    <Title LCID="3076" Text="通用" />
+                    <Title LCID="1028" Text="通用" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1025" Text="المبيعات" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Ventes" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1087" Text="Сатылымдар" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="1063" Text="Pardavimas" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="3098" Text="Продаја" />
+                    <Title LCID="2074" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1025" Text="الخدمة" />
+                    <Title LCID="1026" Text="Услуга" />
+                    <Title LCID="1027" Text="Servei" />
+                    <Title LCID="1029" Text="Služby" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Υπηρεσία" />
+                    <Title LCID="3082" Text="Servicio" />
+                    <Title LCID="1061" Text="Teenindus" />
+                    <Title LCID="1069" Text="Zerbitzua" />
+                    <Title LCID="1035" Text="Palvelu" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Servizo" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1081" Text="सेवा" />
+                    <Title LCID="1050" Text="Usluga" />
+                    <Title LCID="1038" Text="Szolgáltatás" />
+                    <Title LCID="1057" Text="Layanan" />
+                    <Title LCID="1040" Text="Servizio" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1087" Text="Қызмет" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="1063" Text="Aptarnavimas" />
+                    <Title LCID="1062" Text="Serviss" />
+                    <Title LCID="1086" Text="Perkhidmatan" />
+                    <Title LCID="1044" Text="Tjeneste" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Usługa" />
+                    <Title LCID="1046" Text="Serviço" />
+                    <Title LCID="2070" Text="Serviço" />
+                    <Title LCID="1048" Text="Servicii" />
+                    <Title LCID="1049" Text="Сервис" />
+                    <Title LCID="1051" Text="Služba" />
+                    <Title LCID="1060" Text="Storitev" />
+                    <Title LCID="3098" Text="Услуге" />
+                    <Title LCID="2074" Text="Usluge" />
+                    <Title LCID="1053" Text="Service" />
+                    <Title LCID="1054" Text="การบริการ" />
+                    <Title LCID="1055" Text="Servis" />
+                    <Title LCID="1058" Text="Обслуговування" />
+                    <Title LCID="1066" Text="Dịch vụ" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1025" Text="التسويق‬" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="3098" Text="Маркетинг" />
+                    <Title LCID="2074" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Processessioner" />
+                    <Title LCID="1031" Text="Prozesssitzungen" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διεργασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesu-saioak" />
+                    <Title LCID="1035" Text="Käsittelyistunnot" />
+                    <Title LCID="1036" Text="Sessions de processus" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1037" Text="הפעלות תהליך" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Procesne sesije" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Sesi Proses" />
+                    <Title LCID="1040" Text="Sessioni di processo" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1087" Text="Процесс сеанстары" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="1063" Text="Procesų seansai" />
+                    <Title LCID="1062" Text="Procesa sesijas" />
+                    <Title LCID="1086" Text="Sesi Proses" />
+                    <Title LCID="1044" Text="Behandle økter" />
+                    <Title LCID="1043" Text="Sessies voor proces" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Processar Sessões" />
+                    <Title LCID="2070" Text="Sessões de Processamento" />
+                    <Title LCID="1048" Text="Sesiuni de proces" />
+                    <Title LCID="1049" Text="Сеансы процессов" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje obdelave" />
+                    <Title LCID="3098" Text="Сесије процеса" />
+                    <Title LCID="2074" Text="Sesije procesa" />
+                    <Title LCID="1053" Text="Processessioner" />
+                    <Title LCID="1054" Text="เซสชันกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси процесів" />
+                    <Title LCID="1066" Text="Phiên quá trình" />
+                    <Title LCID="2052" Text="流程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <formLibraries>
+        <Library name="msdyn_PostConversationSurvey.js" libraryUniqueId="{1733274B-B609-499E-8B8A-5961AF65233B}" />
+        <Library name="msdyn_OmniChannelSystemMessage.js" libraryUniqueId="{07324654-e2ee-4084-2c89-01366a727c94}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.tryAssignDefaultLanguages" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{6C88C7E4-F315-4C1F-AB9E-75D5A94B76DE}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.HideAutomatedMessageTabForCreateNew" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{7CAB34ED-2E9F-4820-9DA4-853EF0D78C90}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.filterLocalizationDataPerInstance" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{5C2E2F3C-1414-47EF-BF5A-255E0D88D696}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.tryExpandCustomSystemMessageTabOnLoad" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{d7e44c52-7de2-496a-8402-c88d7d04f8d8}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="OmniChannelPackage.PostConversationSurvey.onLoad" libraryName="msdyn_PostConversationSurvey.js" handlerUniqueId="{4F2F2AAE-7559-4CBF-90EF-9A962A22CCE7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onrecordselect" application="false" active="false" relationship="" control="instance_CustomSystemMessage">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.disableLanguageSelection" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{73619056-71b0-256d-7384-0a7078dcebdc}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onsave" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.PostConversationSurvey.onSave" libraryName="msdyn_PostConversationSurvey.js" handlerUniqueId="{5825AF1C-B38E-4A5A-AA11-26D32D0150C4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_postconversationsurvey">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.PostConversationSurvey.OnSurveySelection" libraryName="msdyn_PostConversationSurvey.js" handlerUniqueId="{890F4ACE-ED26-4995-B7C9-8A8D3D7860E6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_postconversationsurveyenable">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.PostConversationSurvey.setVisibilityOfSurveyField" libraryName="msdyn_PostConversationSurvey.js" handlerUniqueId="{52C68E33-A49F-4002-BC1B-D707F8C72B45}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_postconversationsurveymode">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.PostConversationSurvey.onSurveyModeSelection" libraryName="msdyn_PostConversationSurvey.js" handlerUniqueId="{918F5458-FC42-43DF-9348-BDF611034AC9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{B0694195-AF00-4E2A-A5BB-1E989E01A8AC}">
+            <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+                <parameters>
+                    <datafieldname>msdyn_postconversationsurveyenable</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value>msdyn_postconversationsurveyenable</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value>msdyn_postconversationsurveyenable</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value>msdyn_postconversationsurveyenable</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{0587AE78-5B4C-EBC2-A2A9-88751E0A09C5}">
+            <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" formFactor="0">
+                <parameters>
+                    <ViewId>{79916B99-8FA1-EA11-A812-000D3A1AB88B}</ViewId>
+                    <IsUserView>false</IsUserView>
+                    <RelationshipName />
+                    <TargetEntityType>msdyn_oclocalizationdata</TargetEntityType>
+                    <AutoExpand>Fixed</AutoExpand>
+                    <EnableQuickFind>false</EnableQuickFind>
+                    <EnableViewPicker>false</EnableViewPicker>
+                    <ViewIds>{38D83FB1-BFFF-459D-B5F4-F28294601D15},{79916B99-8FA1-EA11-A812-000D3A1AB88B}</ViewIds>
+                    <EnableJumpBar>false</EnableJumpBar>
+                    <ChartGridMode>All</ChartGridMode>
+                    <VisualizationId />
+                    <IsUserChart>false</IsUserChart>
+                    <EnableChartPicker>true</EnableChartPicker>
+                    <RecordsPerPage>4</RecordsPerPage>
+                    <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+                <parameters>
+                    <data-set name="Grid">
+                        <ViewId>{79916B99-8FA1-EA11-A812-000D3A1AB88B}</ViewId>
+                        <columnsDefaultView />
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>msdyn_oclocalizationdata</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{38D83FB1-BFFF-459D-B5F4-F28294601D15},{79916B99-8FA1-EA11-A812-000D3A1AB88B}</FilteredViewIds>
+                    </data-set>
+                    <EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
+                    <EnableEditing static="true" type="Enum">yes</EnableEditing>
+                    <ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+                    <ListLayoutDirection static="true" type="Enum">Vertical</ListLayoutDirection>
+                    <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+                    <HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+                <parameters>
+                    <data-set name="Grid">
+                        <ViewId>{79916B99-8FA1-EA11-A812-000D3A1AB88B}</ViewId>
+                        <columnsDefaultView />
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>msdyn_oclocalizationdata</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{38D83FB1-BFFF-459D-B5F4-F28294601D15},{79916B99-8FA1-EA11-A812-000D3A1AB88B}</FilteredViewIds>
+                    </data-set>
+                    <EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
+                    <EnableEditing static="true" type="Enum">yes</EnableEditing>
+                    <ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+                    <ListLayoutDirection static="true" type="Enum">Vertical</ListLayoutDirection>
+                    <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+                    <HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="param_showCustomSystemMessageTab" type="Boolean" />
+    </formparameters>
+</form>

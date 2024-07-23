@@ -1,0 +1,586 @@
+<form>
+    <ancestor id="{1736184C-35AF-476B-A86A-37BA05FEE9A1}" />
+    <tabs>
+        <tab name="Summary" verticallayout="true" id="{04CFF7C6-EB96-4F78-B26C-BE0854438E25}" IsUserDefined="0" showlabel="true">
+            <labels>
+                <label description="Summary" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="29%">
+                    <sections>
+                        <section name="Information" showlabel="true" showbar="false" locklevel="0" id="{27191228-9D0F-46F0-92AF-750C1EA18590}" IsUserDefined="0" layout="varwidth" columns="1">
+                            <labels>
+                                <label description="INFORMATION" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{2C0CE238-3476-4C89-99B5-DB721E00FC9A}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="subject" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5782FC2C-4F3E-44D3-92E7-7A546CDEFE82}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{72B4350F-0EA2-4341-8C80-1C827E9FA1AB}">
+                                        <labels>
+                                            <label description="No. of Successes" languagecode="1033" />
+                                        </labels>
+                                        <control id="successcount" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="successcount" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{A8EA0FC7-AD4D-4742-9CF9-B7E16BB12DF5}">
+                                        <labels>
+                                            <label description="No. of Failures" languagecode="1033" />
+                                        </labels>
+                                        <control id="failurecount" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="failurecount" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" locklevel="0" rowspan="5" auto="true" colspan="1" id="{22306296-9369-48EB-994A-982C224C00A3}">
+                                        <labels>
+                                            <label description="Error Details" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="42%">
+                    <sections>
+                        <section name="RELATED PANE" showlabel="false" showbar="false" id="{0C808C38-0606-44B7-8EAA-832397C7EAAA}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="RELATED PANE" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="14" auto="true" id="{41241F55-FABC-4322-B61E-0CB24FA1D226}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="29%">
+                    <sections>
+                        <section id="{6ac0caf6-e1a8-4fc0-98c1-9cc89245eaa1}" name="selectedMembers" layout="varwidth" columns="1" showlabel="true" labelwidth="190" showbar="false" IsUserDefined="0" locklevel="0">
+                            <labels>
+                                <label description="SELECTED MEMBERS" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{139d4123-dd50-ad49-245c-b1b1e22c591a}" showlabel="false" auto="false">
+                                        <labels>
+                                            <label description="Selected Accounts" languagecode="1033" />
+                                        </labels>
+                                        <control id="accounts" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{59e57080-0cc2-e211-9b83-00155d89b902}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_Accounts</RelationshipName>
+                                                <TargetEntityType>account</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d6a690bc-64b5-c97c-6536-c184ceb721c9}" showlabel="false" auto="false">
+                                        <labels>
+                                            <label description="Selected Contacts" languagecode="1033" />
+                                        </labels>
+                                        <control id="contacts" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{14EA1914-0E2C-4918-8ECA-60930324F18F}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_Contacts</RelationshipName>
+                                                <TargetEntityType>contact</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c04224d0-0974-e325-9187-2d2c838bb845}" showlabel="false" auto="false">
+                                        <labels>
+                                            <label description="Selected Leads" languagecode="1033" />
+                                        </labels>
+                                        <control id="leads" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{49FD0049-F06B-4130-90DF-F50C34111DF7}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_Leads</RelationshipName>
+                                                <TargetEntityType>lead</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f6d610f2-46a4-40a3-8372-d2df2683fb51}" showlabel="false" auto="false" visible="false">
+                                        <labels>
+                                            <label description="Selected Leads" languagecode="1033" />
+                                        </labels>
+                                        <control id="leads_uci" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{52A8CDAD-F056-4CAD-88DF-59E05706B343}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_logs</RelationshipName>
+                                                <TargetEntityType>bulkoperationlog</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{36bf96da-28d4-410e-a237-9e792e1b9449}" showlabel="false" auto="false" visible="false">
+                                        <labels>
+                                            <label description="Selected Accounts" languagecode="1033" />
+                                        </labels>
+                                        <control id="accounts_uci" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{CCD61D4D-432E-430E-9422-ECD1BF0F70EE}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_logs</RelationshipName>
+                                                <TargetEntityType>bulkoperationlog</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c714f050-b014-4012-a5e8-bd0b28a76d0c}" showlabel="false" auto="false" visible="false">
+                                        <labels>
+                                            <label description="Selected Contacts" languagecode="1033" />
+                                        </labels>
+                                        <control id="contacts_uci" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{A1F46A28-42B3-41C0-82ED-725C92C03B5D}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_logs</RelationshipName>
+                                                <TargetEntityType>bulkoperationlog</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{CC0C718B-A0FD-424E-8A0E-1EEF78465C6E}" name="excludedMembers" layout="varwidth" columns="1" showlabel="true" labelwidth="190" showbar="false" IsUserDefined="0" locklevel="0">
+                            <labels>
+                                <label description="EXCLUDED MEMBERS" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{C85BFF37-1B6B-49D9-8D02-BF31BEAE8361}" showlabel="false" auto="false">
+                                        <labels>
+                                            <label description="Excluded Contacts" languagecode="1033" />
+                                        </labels>
+                                        <control id="excluded_contacts_uci" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{AC88F090-79C5-4B0E-9627-664B4B763EDB}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_logs</RelationshipName>
+                                                <TargetEntityType>bulkoperationlog</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8066038a-558e-4faa-9171-d2ac1ad6bb7f}" showlabel="false" auto="false">
+                                        <labels>
+                                            <label description="Excluded Accounts" languagecode="1033" />
+                                        </labels>
+                                        <control id="excluded_accounts_uci" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{A18BFAB2-DE19-4872-B876-A05381EABB64}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_logs</RelationshipName>
+                                                <TargetEntityType>bulkoperationlog</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6ba1e67d-f6d9-441c-a947-56ab4bf0f0d4}" showlabel="false" auto="false">
+                                        <labels>
+                                            <label description="Excluded Leads" languagecode="1033" />
+                                        </labels>
+                                        <control id="excluded_leads_uci" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{0DF385A5-C08A-481A-A264-7800B7931CF5}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_logs</RelationshipName>
+                                                <TargetEntityType>bulkoperationlog</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="Responses" id="{85ee8d21-8800-8773-61dd-0d0c951ed580}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Responses" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Responses" showlabel="true" showbar="false" locklevel="0" id="{4552e3d3-e790-ce56-25ac-cb3012955cd4}" IsUserDefined="0" layout="varwidth" columns="1">
+                            <labels>
+                                <label description="RESPONSES" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2cb1cb4a-e898-9125-b1b8-0e194be611c3}" showlabel="false" colspan="1" auto="false" rowspan="6">
+                                        <labels>
+                                            <label description="Campaign Responses" languagecode="1033" />
+                                        </labels>
+                                        <control id="Responses" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{83300948-D118-4c6d-90B8-89F068290830}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>BulkOperation_CampaignResponse</RelationshipName>
+                                                <TargetEntityType>campaignresponse</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>6</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{6EA2BE54-4C61-460F-B0A0-F321A4D6C17B}" celllabelposition="Top" columns="1111" labelwidth="115">
+        <rows>
+            <row>
+                <cell id="{E0EE7120-5625-4556-B66E-9165A26FF118}">
+                    <labels>
+                        <label description="Created On" languagecode="1033" />
+                    </labels>
+                    <control id="header_createdon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="true" />
+                </cell>
+                <cell id="{913692CD-A731-4BA9-966C-C9E67EEE6226}">
+                    <labels>
+                        <label description="Members Type" languagecode="1033" />
+                    </labels>
+                    <control id="header_targetedrecordtypecode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="targetedrecordtypecode" disabled="true" />
+                </cell>
+                <cell id="{6EB2883F-CDD1-4231-A457-0035BBBC8E7A}">
+                    <labels>
+                        <label description="Activity Type" languagecode="1033" />
+                    </labels>
+                    <control id="header_createdrecordtypecode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="createdrecordtypecode" disabled="true" />
+                </cell>
+                <cell id="{1A01D684-A05F-4CF7-B989-EB9D7EEEE79D}">
+                    <labels>
+                        <label description="Status Reason" languagecode="1033" />
+                    </labels>
+                    <control id="header_statuscode" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="statuscode" disabled="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Marketing.BulkOperation.Instance.formOnLoad" libraryName="Marketing/BulkOperation/BulkOperation_main_system_library.js" handlerUniqueId="8F8301EB-E336-4496-BF49-05ADD785BBB7" enabled="true">
+                    <dependencies>
+                        <dependency id="targetedrecordtypecode" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Marketing/BulkOperation/BulkOperation_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Marketing/ClientCommon/Marketing_ClientCommon.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar>
+            <NavBarByRelationshipItem RelationshipName="BulkOperation_ActivityPointers" Id="navRelationshipActivities" TitleResourceId="Left_Nav_Area_Relationships" Sequence="10" Area="Info" Show="true">
+                <Titles>
+                    <Title LCID="1033" Text="Activities" />
+                    <Title LCID="1025" Text="الأنشطة" />
+                    <Title LCID="1026" Text="Дейности" />
+                    <Title LCID="1027" Text="Activitats" />
+                    <Title LCID="1029" Text="Aktivity" />
+                    <Title LCID="1030" Text="Aktiviteter" />
+                    <Title LCID="1031" Text="Aktivitäten" />
+                    <Title LCID="1032" Text="Δραστηριότητες" />
+                    <Title LCID="3082" Text="Actividades" />
+                    <Title LCID="1061" Text="Tegevused" />
+                    <Title LCID="1069" Text="Jarduerak" />
+                    <Title LCID="1035" Text="Aktiviteetit" />
+                    <Title LCID="1036" Text="Activités" />
+                    <Title LCID="1110" Text="Actividades" />
+                    <Title LCID="1037" Text="פעילויות" />
+                    <Title LCID="1081" Text="गतिविधियाँ" />
+                    <Title LCID="1050" Text="Aktivnosti" />
+                    <Title LCID="1038" Text="Tevékenységek" />
+                    <Title LCID="1057" Text="Aktivitas" />
+                    <Title LCID="1040" Text="Impegni" />
+                    <Title LCID="1041" Text="活動" />
+                    <Title LCID="1087" Text="Әрекеттер" />
+                    <Title LCID="1042" Text="활동 " />
+                    <Title LCID="1063" Text="Veiklos" />
+                    <Title LCID="1062" Text="Darbības" />
+                    <Title LCID="1086" Text="Aktiviti" />
+                    <Title LCID="1044" Text="Aktiviteter" />
+                    <Title LCID="1043" Text="Activiteiten" />
+                    <Title LCID="1045" Text="Działania" />
+                    <Title LCID="1046" Text="Atividades" />
+                    <Title LCID="2070" Text="Atividades" />
+                    <Title LCID="1048" Text="Activități" />
+                    <Title LCID="1049" Text="Действия" />
+                    <Title LCID="1051" Text="Aktivity" />
+                    <Title LCID="1060" Text="dejavnosti" />
+                    <Title LCID="10266" Text="Активности" />
+                    <Title LCID="9242" Text="Aktivnosti" />
+                    <Title LCID="1053" Text="Aktiviteter" />
+                    <Title LCID="1054" Text="กิจกรรม" />
+                    <Title LCID="1055" Text="Etkinlikler" />
+                    <Title LCID="1058" Text="Справи" />
+                    <Title LCID="1066" Text="Hoạt động" />
+                    <Title LCID="2052" Text="活动" />
+                    <Title LCID="3076" Text="活動" />
+                    <Title LCID="1028" Text="活動" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem RelationshipName="BulkOperation_logs" Id="navRelationshipBulkOperationLogs" TitleResourceId="Left_Nav_Area_Relationships" Sequence="10" Area="Info" Show="true">
+                <Titles>
+                    <Title LCID="1033" Text="Members" />
+                    <Title LCID="1025" Text="الأعضاء" />
+                    <Title LCID="1026" Text="Членове" />
+                    <Title LCID="1027" Text="Membres" />
+                    <Title LCID="1029" Text="Členové" />
+                    <Title LCID="1030" Text="Medlemmer" />
+                    <Title LCID="1031" Text="Mitglieder" />
+                    <Title LCID="1032" Text="Μέλη" />
+                    <Title LCID="3082" Text="Miembros" />
+                    <Title LCID="1061" Text="Liikmed" />
+                    <Title LCID="1069" Text="Kideak" />
+                    <Title LCID="1035" Text="Jäsenet" />
+                    <Title LCID="1036" Text="Membres" />
+                    <Title LCID="1110" Text="Membros" />
+                    <Title LCID="1037" Text="חברים" />
+                    <Title LCID="1081" Text="सदस्य" />
+                    <Title LCID="1050" Text="Članovi" />
+                    <Title LCID="1038" Text="Tagok" />
+                    <Title LCID="1057" Text="Anggota" />
+                    <Title LCID="1040" Text="Membri" />
+                    <Title LCID="1041" Text="メンバー" />
+                    <Title LCID="1087" Text="Мүшелері" />
+                    <Title LCID="1042" Text="구성원" />
+                    <Title LCID="1063" Text="Nariai" />
+                    <Title LCID="1062" Text="Dalībnieki" />
+                    <Title LCID="1086" Text="Ahli" />
+                    <Title LCID="1044" Text="Medlemmer" />
+                    <Title LCID="1043" Text="Leden" />
+                    <Title LCID="1045" Text="Członkowie" />
+                    <Title LCID="1046" Text="Membros" />
+                    <Title LCID="2070" Text="Membros" />
+                    <Title LCID="1048" Text="Membri" />
+                    <Title LCID="1049" Text="Участники" />
+                    <Title LCID="1051" Text="Členovia" />
+                    <Title LCID="1060" Text="Člani" />
+                    <Title LCID="10266" Text="Чланови" />
+                    <Title LCID="9242" Text="Članovi" />
+                    <Title LCID="1053" Text="Medlemmar" />
+                    <Title LCID="1054" Text="สมาชิก" />
+                    <Title LCID="1055" Text="Üyeler" />
+                    <Title LCID="1058" Text="Учасники" />
+                    <Title LCID="1066" Text="Thành viên" />
+                    <Title LCID="2052" Text="成员" />
+                    <Title LCID="3076" Text="成員" />
+                    <Title LCID="1028" Text="成員" />
+                </Titles>
+            </NavBarByRelationshipItem>
+        </NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عام" />
+                    <Title LCID="1026" Text="Общо" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Fælles" />
+                    <Title LCID="1031" Text="Allgemein" />
+                    <Title LCID="1032" Text="Κοινές" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Üldine" />
+                    <Title LCID="1069" Text="Ohikoa" />
+                    <Title LCID="1035" Text="Yleinen" />
+                    <Title LCID="1036" Text="Commun" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="‏‫פריטים נפוצים" />
+                    <Title LCID="1081" Text="सामान्य" />
+                    <Title LCID="1050" Text="Zajednički" />
+                    <Title LCID="1038" Text="Általános" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Comune" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Ортақ" />
+                    <Title LCID="1042" Text="일반" />
+                    <Title LCID="1063" Text="Bendroji" />
+                    <Title LCID="1062" Text="Vispārīgs" />
+                    <Title LCID="1086" Text="Biasa" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Algemeen" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comun" />
+                    <Title LCID="1049" Text="Общее" />
+                    <Title LCID="1051" Text="Spoločné" />
+                    <Title LCID="1060" Text="Splošno" />
+                    <Title LCID="10266" Text="Уобичајено" />
+                    <Title LCID="9242" Text="Uobičajeno" />
+                    <Title LCID="1053" Text="Standard" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Спільні" />
+                    <Title LCID="1066" Text="Thông thường" />
+                    <Title LCID="2052" Text="公共" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <DisplayConditions FallbackForm="true" Order="1">
+        <Everyone />
+    </DisplayConditions>
+</form>

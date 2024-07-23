@@ -1,0 +1,94 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{5e3947eb-c08c-4629-a53e-fd7d3f04d78c}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{12dab939-b42f-4d56-8637-730f43054585}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{742468d2-74f3-45f7-a5f7-c31cf32a79eb}" showlabel="true" visible="false">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a8cdc9cf-9c07-46d9-b9b8-387e80f8334b}" visible="false">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{43cf020d-be4a-4e8a-a806-7f616f0952bc}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Not-to-exceed type" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_ntetype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="msdyn_ntetype" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ad6b8645-1b8e-445b-8afc-95e54e8d225b}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Applied amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_appliedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="msdyn_appliedamount" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{537dec65-27ef-4a97-a5d2-78888190feaa}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="System selected amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_nteamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="msdyn_nteamount" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c2391c3c-1ec6-438d-97ea-5db3684d2d00}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Not-to-exceed source" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_ntesource" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="msdyn_ntesource" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7a06b3be-edcc-4e43-a4e9-00cfdf62a89c}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Not-to-exceed" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_nottoexceed" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_nottoexceed" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b79ce950-7c96-48da-9c6b-da58eeb5d34c}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Work order" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_workorder" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_workorder" disabled="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <formLibraries>
+        <Library name="msdyn_/WorkOrderNTE/WorkOrderNTE.Library.js" libraryUniqueId="{407ecd33-0044-4ac2-be64-b6ea77b28b9d}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="true">
+            <Handlers>
+                <Handler handlerUniqueId="{c5f96aba-6f1e-4553-a359-e4f9fe0fcb4a}" functionName="FS.WorkOrderNTE.Library.Load" libraryName="msdyn_/WorkOrderNTE/WorkOrderNTE.Library.js" enabled="true" passExecutionContext="true" parameters="" />
+            </Handlers>
+        </event>
+    </events>
+</form>

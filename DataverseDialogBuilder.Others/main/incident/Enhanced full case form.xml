@@ -1,0 +1,1383 @@
+<form enablerelatedinformation="false" shownavigationbar="true" hasmargin="false" headerdensity="HighWithControls" showinformselector="true">
+    <ancestor id="{4a63c8d1-6c1e-48ec-9db4-3e6c7155334c}" />
+    <hiddencontrols>
+        <data id="routecase" datafieldname="routecase" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="masterid" datafieldname="masterid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs showlabels="true">
+        <tab name="general" verticallayout="true" id="{564b9a08-4626-46f5-8bd8-3d31e17a8873}" IsUserDefined="0" labelid="{9d6e9f7c-5fb8-47a7-8d84-a6f1b8c14d4c}">
+            <labels>
+                <label description="Details" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section name="slaTimer" id="429a242b-44b0-4ff2-bf53-723edb3a67f8" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="SLA Timer" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{eee9bb7b-4f21-4ddb-b7cf-89b025bd10f5}" colspan="1" rowspan="1" showlabel="false">
+                                        <labels>
+                                            <label description="SLA Timer" languagecode="1033" />
+                                        </labels>
+                                        <control indicationOfSubgrid="true" id="slatimer" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{4CD4BEF5-DCB7-4276-B324-4E4F3DCF4DCB}">
+                                            <parameters>
+                                                <TargetEntityType>slakpiinstance</TargetEntityType>
+                                                <ViewId>{0696602a-b187-4baf-8c12-3395ac7fd454}</ViewId>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>slakpiinstance_incident</RelationshipName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Details" showlabel="true" labelwidth="102" showbar="false" id="{009d6b41-2e89-4e88-888a-5a85069812cf}" IsUserDefined="0" locklevel="0" celllabelposition="Left" labelid="{877909e0-01b8-47f4-a7a6-679bea967005}">
+                            <labels>
+                                <label description="Basic details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{08532c7c-464a-441f-aef9-4adb326fc293}" colspan="1" rowspan="1" showlabel="false">
+                                        <labels>
+                                            <label description="Due and Overdue Activities" languagecode="1033" />
+                                        </labels>
+                                        <control id="Activities" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" indicationOfSubgrid="true" uniqueid="{EA781C55-0DC8-4CF3-9581-DBAF8D861848}">
+                                            <parameters>
+                                                <ViewId>{00000000-0000-0000-00AA-000010001900}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>Incident_ActivityPointers</RelationshipName>
+                                                <TargetEntityType>activitypointer</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>5000</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{63fd0a57-d1f0-4204-b921-e8f42d81faa6}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="casetypecodecreate" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="casetypecode" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b579ee22-ced2-44ed-0bb8-8290e9b23164}" showlabel="true" locklevel="0" labelid="{ae01dcfe-4b77-43e3-90db-275a27d7c0a8}" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="customerid" disabled="false" uniqueid="{34b0780d-6815-2d17-eaed-eb5a1bad9521}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{70cc3529-ab81-650b-3bd0-3147ba77667d}" showlabel="true" locklevel="0" labelid="{91d272af-7129-476e-89f9-b614431a3b23}">
+                                        <labels>
+                                            <label description="Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="title" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e41713a5-756a-48b8-8b50-78a110be3b9e}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="casetypecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="casetypecode" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2973ce06-0486-461f-9381-48a174703d01}" labelid="{28f0bd75-eba6-45da-b7bb-120e65dc0b5a}" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Product" languagecode="1033" />
+                                        </labels>
+                                        <control id="productid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="productid">
+                                            <parameters>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                                <DefaultViewId>{58afc3c5-8add-4552-98cb-473bc8f75619}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" id="{7d716e7b-bccd-4984-afce-02c47a9753c4}" labelid="{829a8f89-e2a0-4d03-ba96-3b512975fa31}" colspan="1">
+                                        <labels>
+                                            <label description="Serial Number" languagecode="1033" />
+                                        </labels>
+                                        <control id="productserialnumber" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="productserialnumber" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b6f69544-6287-4b8a-b60c-3d66f1cac75d}" userspacer="0" labelid="{b0657f85-3861-41de-b7df-365a56f0e2ac}" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="subjectid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="subjectid" uniqueid="{DC0C32C2-9F49-4FE0-8F65-6AF1B77C7B1F}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{76d17ce6-ce11-da3c-aeee-e2886e506221}" showlabel="true" locklevel="0" labelid="{3087d99a-22c1-46b9-8323-ae33bf3bef3f}" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Origin" languagecode="1033" />
+                                        </labels>
+                                        <control id="caseorigincode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="caseorigincode" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{06c03248-3a7c-4390-a9cb-9e04c67af769}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="prioritycode" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="prioritycode" disabled="false" uniqueid="{02922400-8D31-1A3A-8A6B-6354B6A019A7}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{314d562e-f94f-488e-809f-d955f6bad0aa}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Case Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="statuscode" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="statuscode" disabled="false" uniqueid="{2C359F9F-E627-4659-BAA8-00E3F0F9CA26}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{959273e2-e600-3b18-6572-763b94414e67}" showlabel="true" locklevel="0" labelid="{835fd596-f012-42c7-a4c9-cb5669b5eb19}">
+                                        <labels>
+                                            <label description="Entitlement" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onclick" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.entitlementid_onclick" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="7ec5c88c-1333-4d0f-8743-18f1793bcf49" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="customerid" />
+                                                            <dependency id="productid" />
+                                                            <dependency id="primarycontactid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.entitlementid_setadditionalparams" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="2c712050-5072-422b-b80c-108e3f479810" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="customerid" />
+                                                            <dependency id="productid" />
+                                                            <dependency id="primarycontactid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="entitlementid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="entitlementid" disabled="false">
+                                            <parameters>
+                                                <DefaultViewId>{e7ea283b-0490-4956-939b-3325e0798fb8}</DefaultViewId>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                                <AllowFilterOff>true</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f1666d82-c919-4cba-a277-24b45cfdd4ca}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Escalated" languagecode="1033" />
+                                        </labels>
+                                        <control id="isescalated" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="isescalated" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9a7c56a5-4244-4f8f-ad2f-ff5d798c68fb}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Escalated On" languagecode="1033" />
+                                        </labels>
+                                        <control id="escalatedon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="escalatedon" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{496229b9-be84-44b4-9024-f0d869f2d272}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Created On" languagecode="1033" />
+                                        </labels>
+                                        <control id="createdon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4b0aaf3f-4e96-4679-9b60-084974ee40c1}" locklevel="0" colspan="1" rowspan="1">
+                                        <labels>
+                                            <label description="Parent Case" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentcaseid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="parentcaseid" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="queueitemdetails" id="f3e29b17-0b58-441e-bccf-aa70eb70bae8" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Queue item details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{887a102a-e3d3-4582-87d9-950bc3a736f1}" colspan="1" rowspan="1" showlabel="false">
+                                        <labels>
+                                            <label description="Queue item details" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_queueitemdetailscontrol" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="productserialnumber" disabled="false" uniqueid="{64C33355-5068-4E33-B51E-D492F5502F88}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="caseassociation" id="34249079-470f-4204-af82-c84a353703e0" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Case associations" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{3d398155-ba89-485c-95eb-10b061eff174}" colspan="1" rowspan="1" showlabel="false">
+                                        <labels>
+                                            <label description="Case associations" languagecode="1033" />
+                                        </labels>
+                                        <control indicationOfSubgrid="true" id="case_associations_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{9EBE5B9B-C138-471B-99E8-EE940A6CB861}">
+                                            <parameters>
+                                                <TargetEntityType>knowledgearticleincident</TargetEntityType>
+                                                <ViewId>{4CE7D553-9BBA-4D8F-B209-899AF9D3937C}</ViewId>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>knowledgearticle_incidents</RelationshipName>
+                                                <ViewIds>{4CE7D553-9BBA-4D8F-B209-899AF9D3937C}</ViewIds>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="general_section_10" id="86e13dba-d7c9-43a5-a930-41b6d0695dbe" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="New Section" languagecode="1033" />
+                            </labels>
+                            <rows></rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="50%">
+                    <sections>
+                        <section name="copilot_summary_section" id="d69ee1db-30a5-38d5-8041-851ad392a201" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false">
+                            <labels>
+                                <label description="Copilot Summary Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{871010b3-ca77-756a-a200-61bc40c2ca3d}" colspan="1" rowspan="1" visible="false" showlabel="false">
+                                        <labels>
+                                            <label description="Copilot Summary" languagecode="1033" />
+                                        </labels>
+                                        <control id="traversedpath" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="traversedpath" uniqueid="{55056116-B59C-8C3E-C6CC-0D76DE8B76A7}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="attachment" id="84edf9a7-4d21-4577-b2f7-d2068508e586" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Attachments" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{82161970-1a2c-4954-984a-dc59fda42987}" colspan="1" rowspan="1" showlabel="false">
+                                        <labels>
+                                            <label description="Pre Create Entity Attachments Id" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_precreateattachmentsid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_precreateattachmentsid" uniqueid="{A0CD1C6F-4DF6-4894-966F-E3E87C9A9E85}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="description" id="f8e1c18d-f392-4566-9661-95ac8a9a53f2" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Description" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2D8C61A2-7CFC-4DD8-A8AF-2CB82760E559}" showlabel="false" locklevel="0" rowspan="8" auto="false" labelid="{381dbe87-0c8a-4b73-a6fc-38c9a93cb0bd}" colspan="1">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="description" disabled="false" uniqueid="{C95C66C7-D753-33CE-31B0-200075A225BC}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="Timeline" showlabel="false" showbar="false" locklevel="0" id="{17121364-e800-15aa-72d5-e29d247cbd40}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" visible="true">
+                            <labels>
+                                <label description="Timeline_Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{13c7a7e6-e0d6-158e-481b-6019da596603}" showlabel="true" rowspan="15" auto="false" colspan="1" locklevel="0">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-c143-495e-a496-c962e5b4488e}" uniqueid="{02529aa0-dede-a565-6971-191560cb21ed}" disabled="false">
+                                            <parameters>
+                                                <UClientUniqueName>Timeline</UClientUniqueName>
+                                                <UClientModules>Activities,Notes,Posts</UClientModules>
+                                                <UClientDefaultModuleForCreateExperience>Notes</UClientDefaultModuleForCreateExperience>
+                                                <UClientShowFilterPane>true</UClientShowFilterPane>
+                                                <UClientExpandFilterPane>false</UClientExpandFilterPane>
+                                                <UClientOrderBy>descending</UClientOrderBy>
+                                                <UClientRecordPerPage>10</UClientRecordPerPage>
+                                                <UClientEnableWhatsNewFilter>false</UClientEnableWhatsNewFilter>
+                                                <UClientSortActivitiesByValue>modifiedon</UClientSortActivitiesByValue>
+                                                <UClientDisplayActivityHeaderUsing>defaultformat</UClientDisplayActivityHeaderUsing>
+                                                <UClientCreateActivityUsing>quickcreateform</UClientCreateActivityUsing>
+                                                <UClientDisplayActivityUsing>cardform</UClientDisplayActivityUsing>
+                                                <UClientActivityCardMap>appointment:4201:,campaignactivity:4402:,campaignresponse:4401:,incidentresolution:4206:,email:4202:,fax:4204:,letter:4207:,opportunityclose:4208:,phonecall:4210:,task:4212:,msdyn_ocliveworkitem:10429:,msfp_alert:10338:,msfp_surveyinvite:10348:,msfp_surveyresponse:10350:,msdyn_ocsession:10446:,chat:10093:</UClientActivityCardMap>
+                                                <DefaultTabId>ActivitiesTab</DefaultTabId>
+                                                <OrderByActivityWall>descending</OrderByActivityWall>
+                                                <SortActivityWall>modifiedon</SortActivityWall>
+                                                <EmailConversationView>true</EmailConversationView>
+                                                <ShowArticleTab>false</ShowArticleTab>
+                                                <SelectDefaultLanguage>00000000-0000-0000-0000-000000000000</SelectDefaultLanguage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="notes" id="1ddc6b20-d543-4a3d-9b09-e963c5a031be" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="true">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{178e6e79-5849-8472-4a21-1870c919087d}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="PreCreateNotesId" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_precreatenotesid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_precreatenotesid" disabled="false" uniqueid="{69E59756-C6EB-C1CB-EB49-AA9A250EDC3D}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="Tab_Attachment" id="bc7db749-0ee0-4d18-860a-908003276980" IsUserDefined="0" locklevel="0" showlabel="true">
+            <labels>
+                <label description="Attachments" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="attachmentSection" id="8f310539-e372-40b2-8697-3506b0362819" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ed7f71e0-0419-4148-ae82-d0becb0b76e4}" locklevel="0" colspan="1" rowspan="1" showlabel="false">
+                                        <labels>
+                                            <label description="Pre Create Entity Attachments Id" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_precreateattachmentsid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_precreateattachmentsid" disabled="false" uniqueid="{ECF0804A-09B9-4031-A3CC-938A757430D3}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{CF9CD80E-17E4-438D-9705-5575B9BDF2D1}" celllabelposition="Top" columns="1111" labelwidth="115">
+        <rows>
+            <row>
+                <cell id="{2e6df00b-7ea2-406e-8340-681ae4445302}" locklevel="0" colspan="1" rowspan="1">
+                    <labels>
+                        <label description="Case Number" languagecode="1033" />
+                    </labels>
+                    <control id="header_ticketnumber" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="ticketnumber" disabled="false" />
+                </cell>
+                <cell id="{5e1e7fba-952d-44c5-a517-700941fd9b7f}" locklevel="0" colspan="1" rowspan="1">
+                    <labels>
+                        <label description="Case Status" languagecode="1033" />
+                    </labels>
+                    <control id="header_statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                </cell>
+                <cell id="{fdfbade5-7f2f-4ab2-9f66-b142bb262656}" locklevel="0" colspan="1" rowspan="1">
+                    <labels>
+                        <label description="Priority" languagecode="1033" />
+                    </labels>
+                    <control id="header_prioritycode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="prioritycode" disabled="false" />
+                </cell>
+                <cell id="{52956bdc-e8c7-c177-621c-266b5bd2a9ee}" showlabel="true" locklevel="0">
+                    <labels>
+                        <label description="Owner" languagecode="1033" />
+                    </labels>
+                    <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="76e18454-eeba-47c3-8a9d-6d701c77fbcc" enabled="true">
+                    <dependencies>
+                        <dependency id="contractid" />
+                        <dependency id="contractdetailid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+            <Handlers>
+                <Handler functionName="ModernCaseManagement.ModernCaseManagementLibrary.modernCaseMainFormOnLoad" libraryName="ModernCaseManagement/Incident/msdyn_ModernCaseManagement.js" handlerUniqueId="{926a49a1-55d2-4af5-909c-6896bad00733}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="Mscrm.CSIntelligence.CopilotCaseSummary.setVisibilityOfCaseSummary" libraryName="msdyn_CopilotCaseSummaryLibrary.js" handlerUniqueId="{d781eac2-a5bf-4d9a-aff2-69f59fe6840d}" enabled="true" parameters="&quot;traversedpath&quot;" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.IncidentMainSystemLibraryWebResource.form_OnSave" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="ed27ea24-dc09-47be-8af3-52721df36d96" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Service/Incident/Incident_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+                <internalcssfile src="/_tree/tree.css.aspx" />
+            </clientincludes>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_ERROR_MISSING_CUSTOMER" resourceid="Web.cs.cases.edit.MissingCustomer" />
+            </clientvariables>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar>
+            <NavBarByRelationshipItem RelationshipName="Incident_ActivityPointers" Id="navActivities" Icon="/_imgs/ico_18_act.gif" Sequence="10" Area="Info">
+                <Privileges>
+                    <Privilege Entity="" Privilege="ReadActivity" />
+                </Privileges>
+                <Titles>
+                    <Title LCID="1033" Text="Activities" />
+                    <Title LCID="1025" Text="الأنشطة" />
+                    <Title LCID="1026" Text="Дейности" />
+                    <Title LCID="1027" Text="Activitats" />
+                    <Title LCID="1029" Text="Aktivity" />
+                    <Title LCID="1030" Text="Aktiviteter" />
+                    <Title LCID="1031" Text="Aktivitäten" />
+                    <Title LCID="1032" Text="Δραστηριότητες" />
+                    <Title LCID="3082" Text="Actividades" />
+                    <Title LCID="1061" Text="Tegevused" />
+                    <Title LCID="1069" Text="Jarduerak" />
+                    <Title LCID="1035" Text="Aktiviteetit" />
+                    <Title LCID="1036" Text="Activités" />
+                    <Title LCID="1110" Text="Actividades" />
+                    <Title LCID="1037" Text="פעילויות" />
+                    <Title LCID="1081" Text="गतिविधियाँ" />
+                    <Title LCID="1050" Text="Aktivnosti" />
+                    <Title LCID="1038" Text="Tevékenységek" />
+                    <Title LCID="1057" Text="Aktivitas" />
+                    <Title LCID="1040" Text="Impegni" />
+                    <Title LCID="1041" Text="活動" />
+                    <Title LCID="1087" Text="Әрекеттер" />
+                    <Title LCID="1042" Text="활동" />
+                    <Title LCID="1063" Text="Veiklos" />
+                    <Title LCID="1062" Text="Darbības" />
+                    <Title LCID="1086" Text="Aktiviti" />
+                    <Title LCID="1044" Text="Aktiviteter" />
+                    <Title LCID="1043" Text="Activiteiten" />
+                    <Title LCID="1045" Text="Działania" />
+                    <Title LCID="1046" Text="Atividades" />
+                    <Title LCID="2070" Text="Atividades" />
+                    <Title LCID="1048" Text="Activități" />
+                    <Title LCID="1049" Text="Действия" />
+                    <Title LCID="1051" Text="Aktivity" />
+                    <Title LCID="1060" Text="Dejavnosti" />
+                    <Title LCID="3098" Text="Активности" />
+                    <Title LCID="2074" Text="Aktivnosti" />
+                    <Title LCID="1053" Text="Aktiviteter" />
+                    <Title LCID="1054" Text="กิจกรรม" />
+                    <Title LCID="1055" Text="Etkinlikler" />
+                    <Title LCID="1058" Text="Справи" />
+                    <Title LCID="1066" Text="Hoạt động" />
+                    <Title LCID="2052" Text="活动" />
+                    <Title LCID="3076" Text="活動" />
+                    <Title LCID="1028" Text="活動" />
+                </Titles>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem RelationshipName="Incident_ActivityPointers" Id="navActivityHistory" TitleResourceId="Tab_Label_History" Icon="/_imgs/ico_18_history.gif" ViewId="21E2B905-6FDB-470d-8517-AD69B4C01268" Sequence="20" Area="Info">
+                <Privileges>
+                    <Privilege Entity="" Privilege="ReadActivity" />
+                </Privileges>
+                <Titles>
+                    <Title LCID="1033" Text="Closed Activities" />
+                    <Title LCID="1025" Text="أنشطة مغلقة" />
+                    <Title LCID="1026" Text="Приключени дейности" />
+                    <Title LCID="1027" Text="Activitats tancades" />
+                    <Title LCID="1029" Text="Uzavřené aktivity" />
+                    <Title LCID="1030" Text="Lukkede aktiviteter" />
+                    <Title LCID="1031" Text="Geschlossene Aktivitäten" />
+                    <Title LCID="1032" Text="Κλειστές δραστηριότητες" />
+                    <Title LCID="3082" Text="Actividades cerradas" />
+                    <Title LCID="1061" Text="Suletud tegevused" />
+                    <Title LCID="1069" Text="Itxitako jarduerak" />
+                    <Title LCID="1035" Text="Suljetut aktiviteetit" />
+                    <Title LCID="1036" Text="Activités fermées" />
+                    <Title LCID="1110" Text="Actividades pechadas" />
+                    <Title LCID="1037" Text="פעילויות סגורות" />
+                    <Title LCID="1081" Text="बंद गतिविधियाँ" />
+                    <Title LCID="1050" Text="Zatvorene aktivnosti" />
+                    <Title LCID="1038" Text="Lezárt tevékenységek" />
+                    <Title LCID="1057" Text="Aktivitas Tertutup" />
+                    <Title LCID="1040" Text="Impegni chiusi" />
+                    <Title LCID="1041" Text="クローズした活動" />
+                    <Title LCID="1087" Text="Жабық әрекеттер" />
+                    <Title LCID="1042" Text="종료된 활동" />
+                    <Title LCID="1063" Text="Uždarytos veiklos" />
+                    <Title LCID="1062" Text="Slēgtās darbības" />
+                    <Title LCID="1086" Text="Aktiviti Ditutup" />
+                    <Title LCID="1044" Text="Lukkede aktiviteter" />
+                    <Title LCID="1043" Text="Gesloten activiteiten" />
+                    <Title LCID="1045" Text="Zamknięte działania" />
+                    <Title LCID="1046" Text="Atividades Fechadas" />
+                    <Title LCID="2070" Text="Atividades Fechadas" />
+                    <Title LCID="1048" Text="Activități închise" />
+                    <Title LCID="1049" Text="Закрытые действия" />
+                    <Title LCID="1051" Text="Uzavreté aktivity" />
+                    <Title LCID="1060" Text="Zaprte dejavnosti" />
+                    <Title LCID="3098" Text="Затворене активности" />
+                    <Title LCID="2074" Text="Zatvorene aktivnosti" />
+                    <Title LCID="1053" Text="Stängda aktiviteter" />
+                    <Title LCID="1054" Text="กิจกรรมที่ปิด" />
+                    <Title LCID="1055" Text="Kapalı Etkinlikler" />
+                    <Title LCID="1058" Text="Закриті справи" />
+                    <Title LCID="1066" Text="Hoạt động đã đóng" />
+                    <Title LCID="2052" Text="已结束的活动" />
+                    <Title LCID="3076" Text="結束的活動" />
+                    <Title LCID="1028" Text="結束的活動" />
+                </Titles>
+            </NavBarByRelationshipItem>
+        </NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عام" />
+                    <Title LCID="1026" Text="Общо" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Fælles" />
+                    <Title LCID="1031" Text="Gemeinsam verwendet" />
+                    <Title LCID="1032" Text="Κοινά" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Ühine" />
+                    <Title LCID="1069" Text="Ohikoa" />
+                    <Title LCID="1035" Text="Yhteiset" />
+                    <Title LCID="1036" Text="Commun" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="פריטים נפוצים‬‬" />
+                    <Title LCID="1081" Text="एक समान" />
+                    <Title LCID="1050" Text="Zajedničko" />
+                    <Title LCID="1038" Text="Közös" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Жалпы" />
+                    <Title LCID="1042" Text="일반" />
+                    <Title LCID="1063" Text="Bendrasis" />
+                    <Title LCID="1062" Text="Vispārējs" />
+                    <Title LCID="1086" Text="Biasa" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Gemeenschappelijk" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comune" />
+                    <Title LCID="1049" Text="Общее" />
+                    <Title LCID="1051" Text="Bežné" />
+                    <Title LCID="1060" Text="Skupno" />
+                    <Title LCID="3098" Text="Уобичајено" />
+                    <Title LCID="2074" Text="Uobičajeno" />
+                    <Title LCID="1053" Text="Allmänt" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Спільні" />
+                    <Title LCID="1066" Text="Chung" />
+                    <Title LCID="2052" Text="公用" />
+                    <Title LCID="3076" Text="通用" />
+                    <Title LCID="1028" Text="通用" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1025" Text="‏‏المبيعات‬" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Vente" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1087" Text="Сатылым" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="1063" Text="Pardavimas" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="3098" Text="Продаја" />
+                    <Title LCID="2074" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1025" Text="الخدمة" />
+                    <Title LCID="1026" Text="Услуга" />
+                    <Title LCID="1027" Text="Servei" />
+                    <Title LCID="1029" Text="Služby" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Υπηρεσία" />
+                    <Title LCID="3082" Text="Servicio" />
+                    <Title LCID="1061" Text="Teenindus" />
+                    <Title LCID="1069" Text="Zerbitzua" />
+                    <Title LCID="1035" Text="Palvelu" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Servizo" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1081" Text="सेवा" />
+                    <Title LCID="1050" Text="Usluga" />
+                    <Title LCID="1038" Text="Szolgáltatás" />
+                    <Title LCID="1057" Text="Layanan" />
+                    <Title LCID="1040" Text="Servizio" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1087" Text="Қызмет" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="1063" Text="Tarnyba" />
+                    <Title LCID="1062" Text="Serviss" />
+                    <Title LCID="1086" Text="Perkhidmatan" />
+                    <Title LCID="1044" Text="Tjeneste" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Usługa" />
+                    <Title LCID="1046" Text="Serviço" />
+                    <Title LCID="2070" Text="Serviço" />
+                    <Title LCID="1048" Text="Servicii" />
+                    <Title LCID="1049" Text="Сервис" />
+                    <Title LCID="1051" Text="Služba" />
+                    <Title LCID="1060" Text="Storitev" />
+                    <Title LCID="3098" Text="Услуга" />
+                    <Title LCID="2074" Text="Usluge" />
+                    <Title LCID="1053" Text="Tjänst" />
+                    <Title LCID="1054" Text="การบริการ" />
+                    <Title LCID="1055" Text="Servis" />
+                    <Title LCID="1058" Text="Служба" />
+                    <Title LCID="1066" Text="Dịch vụ" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1025" Text="التسويق‬" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="3098" Text="Маркетинг" />
+                    <Title LCID="2074" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Behandl sessioner" />
+                    <Title LCID="1031" Text="Prozesssitzungen" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διαδικασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesu-saioak" />
+                    <Title LCID="1035" Text="Prosessi-istunnot" />
+                    <Title LCID="1036" Text="Sessions de processus" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1037" Text="הפעלות תהליך‬" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Sesije procesa" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Proses Sesi" />
+                    <Title LCID="1040" Text="Sessioni di processo" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1087" Text="Өңдеу сеанстары" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="1063" Text="Apdorojimo seansai" />
+                    <Title LCID="1062" Text="Apstrādes sesijas" />
+                    <Title LCID="1086" Text="Sesi Proses" />
+                    <Title LCID="1044" Text="Prosessøkter" />
+                    <Title LCID="1043" Text="Processessies" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Sessões de Processo" />
+                    <Title LCID="2070" Text="Sessões de Processamento" />
+                    <Title LCID="1048" Text="Sesiuni de procesare" />
+                    <Title LCID="1049" Text="Сеансы процессов" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje procesa" />
+                    <Title LCID="3098" Text="Сесије процеса" />
+                    <Title LCID="2074" Text="Sesije procesa" />
+                    <Title LCID="1053" Text="Bearbetningssessioner" />
+                    <Title LCID="1054" Text="เซสชันกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси процесів" />
+                    <Title LCID="1066" Text="Phiên xử lý" />
+                    <Title LCID="2052" Text="流程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <controlDescriptions>
+        <controlDescription forControl="{3ff9a528-dd50-4aca-8f10-2e5ed73513ad}">
+            <customControl formFactor="2" name="MscrmControls.CardFeedContainer.CardFeedContainer">
+                <parameters>
+                    <data-set name="SubGrid">
+                        <ViewId>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>actioncard</TargetEntityType>
+                        <FilteredViewIds>{92AFD454-0F2E-4397-A1C8-05E37C6AfD699}</FilteredViewIds>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                    <EntityTypeCode static="true" type="Decimal">112</EntityTypeCode>
+                    <Location static="true" type="Decimal">1</Location>
+                    <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.CardFeedContainer.CardFeedContainer">
+                <parameters>
+                    <data-set name="SubGrid">
+                        <ViewId>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>actioncard</TargetEntityType>
+                        <FilteredViewIds>{92AFD454-0F2E-4397-A1C8-05E37C6AfD699}</FilteredViewIds>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                    <EntityTypeCode static="true" type="Decimal">112</EntityTypeCode>
+                    <Location static="true" type="Decimal">1</Location>
+                    <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.CardFeedContainer.CardFeedContainer">
+                <parameters>
+                    <data-set name="SubGrid">
+                        <ViewId>{92AFD454-0F2E-4397-A1C8-05E37C6AD699}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>actioncard</TargetEntityType>
+                        <FilteredViewIds>{92AFD454-0F2E-4397-A1C8-05E37C6AfD699}</FilteredViewIds>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                    <EntityTypeCode static="true" type="Decimal">112</EntityTypeCode>
+                    <Location static="true" type="Decimal">1</Location>
+                    <msinternal.isvisibleinmocaonly static="true">true</msinternal.isvisibleinmocaonly>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{69E59756-C6EB-C1CB-EB49-AA9A250EDC3D}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>msdyn_precreatenotesid</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.NotesControl">
+                <parameters>
+                    <preCreateNotesId>msdyn_precreatenotesid</preCreateNotesId>
+                    <isQuickCreateForm static="true" type="Enum">0</isQuickCreateForm>
+                    <marginStart static="true" type="Whole.None">0</marginStart>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.NotesControl">
+                <parameters>
+                    <preCreateNotesId>msdyn_precreatenotesid</preCreateNotesId>
+                    <isQuickCreateForm static="true" type="Enum">0</isQuickCreateForm>
+                    <marginStart static="true" type="Whole.None">0</marginStart>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.NotesControl">
+                <parameters>
+                    <preCreateNotesId>msdyn_precreatenotesid</preCreateNotesId>
+                    <isQuickCreateForm static="true" type="Enum">0</isQuickCreateForm>
+                    <marginStart static="true" type="Whole.None">0</marginStart>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{C95C66C7-D753-33CE-31B0-200075A225BC}">
+            <customControl id="{E0DECE4B-6FC8-4a8f-A065-082708572369}">
+                <parameters>
+                    <datafieldname>description</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.RichTextEditor.RichTextEditorControl">
+                <parameters>
+                    <value>description</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.RichTextEditor.RichTextEditorControl">
+                <parameters>
+                    <value>description</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.RichTextEditor.RichTextEditorControl">
+                <parameters>
+                    <value>description</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{02922400-8D31-1A3A-8A6B-6354B6A019A7}">
+            <customControl id="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}">
+                <parameters>
+                    <datafieldname>prioritycode</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.OptionSetWrapper">
+                <parameters>
+                    <boundProperty type="OptionSet">prioritycode</boundProperty>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.OptionSetWrapper">
+                <parameters>
+                    <boundProperty type="OptionSet">prioritycode</boundProperty>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.OptionSetWrapper">
+                <parameters>
+                    <boundProperty type="OptionSet">prioritycode</boundProperty>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{2C359F9F-E627-4659-BAA8-00E3F0F9CA26}">
+            <customControl id="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}">
+                <parameters>
+                    <datafieldname>statuscode</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.OptionSetWrapper">
+                <parameters>
+                    <boundProperty type="OptionSet">statuscode</boundProperty>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.OptionSetWrapper">
+                <parameters>
+                    <boundProperty type="OptionSet">statuscode</boundProperty>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.OptionSetWrapper">
+                <parameters>
+                    <boundProperty type="OptionSet">statuscode</boundProperty>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{A0CD1C6F-4DF6-4894-966F-E3E87C9A9E85}">
+            <customControl id="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>msdyn_precreateattachmentsid</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.AttachmentListControl">
+                <parameters>
+                    <msdyn_precreateattachmentsid type="SingleLine.Text">msdyn_precreateattachmentsid</msdyn_precreateattachmentsid>
+                    <marginStart static="true" type="Whole.None">-20</marginStart>
+                    <maximumControlheight static="true" type="Whole.None">200</maximumControlheight>
+                    <showAttachmentTitle static="true" type="Enum">1</showAttachmentTitle>
+                    <showConversationAttachments type="Enum" static="true">1</showConversationAttachments>
+                    <showDirectUploadAttachments type="Enum" static="true">1</showDirectUploadAttachments>
+                    <showEmailAttachments type="Enum" static="true">1</showEmailAttachments>
+                    <showNotesAttachments type="Enum" static="true">1</showNotesAttachments>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.AttachmentListControl">
+                <parameters>
+                    <msdyn_precreateattachmentsid type="SingleLine.Text">msdyn_precreateattachmentsid</msdyn_precreateattachmentsid>
+                    <marginStart static="true" type="Whole.None">-20</marginStart>
+                    <maximumControlheight static="true" type="Whole.None">200</maximumControlheight>
+                    <showAttachmentTitle static="true" type="Enum">1</showAttachmentTitle>
+                    <showConversationAttachments type="Enum" static="true">1</showConversationAttachments>
+                    <showDirectUploadAttachments type="Enum" static="true">1</showDirectUploadAttachments>
+                    <showEmailAttachments type="Enum" static="true">1</showEmailAttachments>
+                    <showNotesAttachments type="Enum" static="true">1</showNotesAttachments>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.AttachmentListControl">
+                <parameters>
+                    <msdyn_precreateattachmentsid type="SingleLine.Text">msdyn_precreateattachmentsid</msdyn_precreateattachmentsid>
+                    <marginStart static="true" type="Whole.None">-20</marginStart>
+                    <maximumControlheight static="true" type="Whole.None">200</maximumControlheight>
+                    <showAttachmentTitle static="true" type="Enum">1</showAttachmentTitle>
+                    <showConversationAttachments type="Enum" static="true">1</showConversationAttachments>
+                    <showDirectUploadAttachments type="Enum" static="true">1</showDirectUploadAttachments>
+                    <showEmailAttachments type="Enum" static="true">1</showEmailAttachments>
+                    <showNotesAttachments type="Enum" static="true">1</showNotesAttachments>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{4CD4BEF5-DCB7-4276-B324-4E4F3DCF4DCB}">
+            <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                <parameters />
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.SlaTimer.SlaTimerControl">
+                <parameters>
+                    <data-set name="dataSetGrid_1">
+                        <TargetEntityType>slakpiinstance</TargetEntityType>
+                        <ViewId>{0696602a-b187-4baf-8c12-3395ac7fd454}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>slakpiinstance_incident</RelationshipName>
+                        <FilteredViewIds />
+                    </data-set>
+                    <Update_Frequency type="Enum" static="true">30</Update_Frequency>
+                    <EnableNegativeTimer type="Enum" static="true">0</EnableNegativeTimer>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.SlaTimer.SlaTimerControl">
+                <parameters>
+                    <data-set name="dataSetGrid_1">
+                        <TargetEntityType>slakpiinstance</TargetEntityType>
+                        <ViewId>{0696602a-b187-4baf-8c12-3395ac7fd454}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>slakpiinstance_incident</RelationshipName>
+                        <FilteredViewIds />
+                    </data-set>
+                    <Update_Frequency type="Enum" static="true">30</Update_Frequency>
+                    <EnableNegativeTimer type="Enum" static="true">0</EnableNegativeTimer>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.SlaTimer.SlaTimerControl">
+                <parameters>
+                    <data-set name="dataSetGrid_1">
+                        <TargetEntityType>slakpiinstance</TargetEntityType>
+                        <ViewId>{0696602a-b187-4baf-8c12-3395ac7fd454}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>slakpiinstance_incident</RelationshipName>
+                        <FilteredViewIds />
+                    </data-set>
+                    <Update_Frequency type="Enum" static="true">30</Update_Frequency>
+                    <EnableNegativeTimer type="Enum" static="true">0</EnableNegativeTimer>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{9EBE5B9B-C138-471B-99E8-EE940A6CB861}">
+            <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                <parameters>
+                    <TargetEntityType>knowledgearticleincident</TargetEntityType>
+                    <ViewId>{4CE7D553-9BBA-4D8F-B209-899AF9D3937C}</ViewId>
+                    <EnableViewPicker>false</EnableViewPicker>
+                    <IsUserView>false</IsUserView>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.DatasetControls.AssociatedGridControl">
+                <parameters>
+                    <data-set name="sampleDataSet">
+                        <TargetEntityType>knowledgearticleincident</TargetEntityType>
+                        <ViewId>{4ce7d553-9bba-4d8f-b209-899af9d3937c}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>knowledgearticle_incidents</RelationshipName>
+                        <FilteredViewIds>{4CE7D553-9BBA-4D8F-B209-899AF9D3937C}</FilteredViewIds>
+                    </data-set>
+                    <data-set name="sampleDataSet2">
+                        <TargetEntityType>connection</TargetEntityType>
+                        <ViewId>{23fb1036-e41d-4d75-8aa7-27569b5b6512}</ViewId>
+                        <IsUserView>false</IsUserView>
+                    </data-set>
+                    <data-set name="sampleDataSet3">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{00000000-0000-0000-00aa-000010001030}</ViewId>
+                        <IsUserView>false</IsUserView>
+                    </data-set>
+                    <data-set name="sampleDataSet4">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{00000000-0000-0000-00aa-000010001030}</ViewId>
+                        <IsUserView>false</IsUserView>
+                    </data-set>
+                    <controlHeaderGrid1 type="SingleLine.Text" static="true">Knowledge articles</controlHeaderGrid1>
+                    <controlHeaderGrid2 type="SingleLine.Text" static="true">Similar cases</controlHeaderGrid2>
+                    <controlHeaderGrid3 type="SingleLine.Text" static="true">Merged cases</controlHeaderGrid3>
+                    <controlHeaderGrid4 type="SingleLine.Text" static="true">Child cases</controlHeaderGrid4>
+                    <grid2RelationshipName type="SingleLine.Text" static="true">incident_connections1</grid2RelationshipName>
+                    <grid3RelationshipName type="SingleLine.Text" static="true">incident_master_incident</grid3RelationshipName>
+                    <grid4RelationshipName type="SingleLine.Text" static="true">incident_parent_incident</grid4RelationshipName>
+                    <grid3CustomizerControlFullName type="SingleLine.Text" static="true">MscrmControls.CustomCellControl.CustomCellControl</grid3CustomizerControlFullName>
+                    <grid4CustomizerControlFullName type="SingleLine.Text" static="true">MscrmControls.CustomCellControl.CustomCellControl</grid4CustomizerControlFullName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.DatasetControls.AssociatedGridControl">
+                <parameters>
+                    <data-set name="sampleDataSet">
+                        <TargetEntityType>knowledgearticleincident</TargetEntityType>
+                        <ViewId>{4ce7d553-9bba-4d8f-b209-899af9d3937c}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>knowledgearticle_incidents</RelationshipName>
+                        <FilteredViewIds>{4CE7D553-9BBA-4D8F-B209-899AF9D3937C}</FilteredViewIds>
+                    </data-set>
+                    <data-set name="sampleDataSet2">
+                        <TargetEntityType>connection</TargetEntityType>
+                        <ViewId>{23fb1036-e41d-4d75-8aa7-27569b5b6512}</ViewId>
+                        <IsUserView>false</IsUserView>
+                    </data-set>
+                    <data-set name="sampleDataSet3">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{00000000-0000-0000-00aa-000010001030}</ViewId>
+                        <IsUserView>false</IsUserView>
+                    </data-set>
+                    <data-set name="sampleDataSet4">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{00000000-0000-0000-00aa-000010001030}</ViewId>
+                        <IsUserView>false</IsUserView>
+                    </data-set>
+                    <controlHeaderGrid1 type="SingleLine.Text" static="true">Knowledge articles</controlHeaderGrid1>
+                    <controlHeaderGrid2 type="SingleLine.Text" static="true">Similar cases</controlHeaderGrid2>
+                    <controlHeaderGrid3 type="SingleLine.Text" static="true">Merged cases</controlHeaderGrid3>
+                    <controlHeaderGrid4 type="SingleLine.Text" static="true">Child cases</controlHeaderGrid4>
+                    <grid2RelationshipName type="SingleLine.Text" static="true">incident_connections1</grid2RelationshipName>
+                    <grid3RelationshipName type="SingleLine.Text" static="true">incident_master_incident</grid3RelationshipName>
+                    <grid4RelationshipName type="SingleLine.Text" static="true">incident_parent_incident</grid4RelationshipName>
+                    <grid3CustomizerControlFullName type="SingleLine.Text" static="true">MscrmControls.CustomCellControl.CustomCellControl</grid3CustomizerControlFullName>
+                    <grid4CustomizerControlFullName type="SingleLine.Text" static="true">MscrmControls.CustomCellControl.CustomCellControl</grid4CustomizerControlFullName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.DatasetControls.AssociatedGridControl">
+                <parameters>
+                    <data-set name="sampleDataSet">
+                        <TargetEntityType>knowledgearticleincident</TargetEntityType>
+                        <ViewId>{4ce7d553-9bba-4d8f-b209-899af9d3937c}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>knowledgearticle_incidents</RelationshipName>
+                        <FilteredViewIds>{4CE7D553-9BBA-4D8F-B209-899AF9D3937C}</FilteredViewIds>
+                    </data-set>
+                    <data-set name="sampleDataSet2">
+                        <TargetEntityType>connection</TargetEntityType>
+                        <ViewId>{23fb1036-e41d-4d75-8aa7-27569b5b6512}</ViewId>
+                        <IsUserView>false</IsUserView>
+                    </data-set>
+                    <data-set name="sampleDataSet3">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{00000000-0000-0000-00aa-000010001030}</ViewId>
+                        <IsUserView>false</IsUserView>
+                    </data-set>
+                    <data-set name="sampleDataSet4">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{00000000-0000-0000-00aa-000010001030}</ViewId>
+                        <IsUserView>false</IsUserView>
+                    </data-set>
+                    <controlHeaderGrid1 type="SingleLine.Text" static="true">Knowledge articles</controlHeaderGrid1>
+                    <controlHeaderGrid2 type="SingleLine.Text" static="true">Similar cases</controlHeaderGrid2>
+                    <controlHeaderGrid3 type="SingleLine.Text" static="true">Merged cases</controlHeaderGrid3>
+                    <controlHeaderGrid4 type="SingleLine.Text" static="true">Child cases</controlHeaderGrid4>
+                    <grid2RelationshipName type="SingleLine.Text" static="true">incident_connections1</grid2RelationshipName>
+                    <grid3RelationshipName type="SingleLine.Text" static="true">incident_master_incident</grid3RelationshipName>
+                    <grid4RelationshipName type="SingleLine.Text" static="true">incident_parent_incident</grid4RelationshipName>
+                    <grid3CustomizerControlFullName type="SingleLine.Text" static="true">MscrmControls.CustomCellControl.CustomCellControl</grid3CustomizerControlFullName>
+                    <grid4CustomizerControlFullName type="SingleLine.Text" static="true">MscrmControls.CustomCellControl.CustomCellControl</grid4CustomizerControlFullName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{EA781C55-0DC8-4CF3-9581-DBAF8D861848}">
+            <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                <parameters>
+                    <ViewId>{00000000-0000-0000-00AA-000010001900}</ViewId>
+                    <IsUserView>false</IsUserView>
+                    <RelationshipName>Incident_ActivityPointers</RelationshipName>
+                    <TargetEntityType>activitypointer</TargetEntityType>
+                    <AutoExpand>Fixed</AutoExpand>
+                    <EnableQuickFind>false</EnableQuickFind>
+                    <EnableViewPicker>false</EnableViewPicker>
+                    <ViewIds />
+                    <EnableJumpBar>false</EnableJumpBar>
+                    <ChartGridMode>All</ChartGridMode>
+                    <VisualizationId>{EDF35649-5293-DE11-97D4-00155DA3B01E}</VisualizationId>
+                    <IsUserChart>false</IsUserChart>
+                    <EnableChartPicker>true</EnableChartPicker>
+                    <RecordsPerPage>5000</RecordsPerPage>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.CustomerService.DueOpenActivitiesControl">
+                <parameters>
+                    <data-set name="Grid">
+                        <ViewId>{00000000-0000-0000-00AA-000010001900}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <RelationshipName>Incident_ActivityPointers</RelationshipName>
+                        <TargetEntityType>activitypointer</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                    <tabName static="true" type="SingleLine.Text">navActivities</tabName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.CustomerService.DueOpenActivitiesControl">
+                <parameters>
+                    <data-set name="Grid">
+                        <ViewId>{00000000-0000-0000-00AA-000010001900}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <RelationshipName>Incident_ActivityPointers</RelationshipName>
+                        <TargetEntityType>activitypointer</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                    <tabName static="true" type="SingleLine.Text">navActivities</tabName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.CustomerService.DueOpenActivitiesControl">
+                <parameters>
+                    <data-set name="Grid">
+                        <ViewId>{00000000-0000-0000-00AA-000010001900}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <RelationshipName>Incident_ActivityPointers</RelationshipName>
+                        <TargetEntityType>activitypointer</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                    </data-set>
+                    <tabName static="true" type="SingleLine.Text">navActivities</tabName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{64C33355-5068-4E33-B51E-D492F5502F88}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>productserialnumber</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.QueueItemControl">
+                <parameters>
+                    <value>productserialnumber</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.QueueItemControl">
+                <parameters>
+                    <value>productserialnumber</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.QueueItemControl">
+                <parameters>
+                    <value>productserialnumber</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{ECF0804A-09B9-4031-A3CC-938A757430D3}">
+            <customControl id="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>msdyn_precreateattachmentsid</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.AttachmentListControl">
+                <parameters>
+                    <msdyn_precreateattachmentsid type="SingleLine.Text">msdyn_precreateattachmentsid</msdyn_precreateattachmentsid>
+                    <marginStart static="true" type="Whole.None">-20</marginStart>
+                    <maximumControlheight static="true" type="Whole.None">200</maximumControlheight>
+                    <showAttachmentTitle static="true" type="Enum">1</showAttachmentTitle>
+                    <showConversationAttachments type="Enum" static="true">1</showConversationAttachments>
+                    <showDirectUploadAttachments type="Enum" static="true">1</showDirectUploadAttachments>
+                    <showEmailAttachments type="Enum" static="true">1</showEmailAttachments>
+                    <showNotesAttachments type="Enum" static="true">1</showNotesAttachments>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.AttachmentListControl">
+                <parameters>
+                    <msdyn_precreateattachmentsid type="SingleLine.Text">msdyn_precreateattachmentsid</msdyn_precreateattachmentsid>
+                    <marginStart static="true" type="Whole.None">-20</marginStart>
+                    <maximumControlheight static="true" type="Whole.None">200</maximumControlheight>
+                    <showAttachmentTitle static="true" type="Enum">1</showAttachmentTitle>
+                    <showConversationAttachments type="Enum" static="true">1</showConversationAttachments>
+                    <showDirectUploadAttachments type="Enum" static="true">1</showDirectUploadAttachments>
+                    <showEmailAttachments type="Enum" static="true">1</showEmailAttachments>
+                    <showNotesAttachments type="Enum" static="true">1</showNotesAttachments>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.AttachmentListControl">
+                <parameters>
+                    <msdyn_precreateattachmentsid type="SingleLine.Text">msdyn_precreateattachmentsid</msdyn_precreateattachmentsid>
+                    <marginStart static="true" type="Whole.None">-20</marginStart>
+                    <maximumControlheight static="true" type="Whole.None">200</maximumControlheight>
+                    <showAttachmentTitle static="true" type="Enum">1</showAttachmentTitle>
+                    <showConversationAttachments type="Enum" static="true">1</showConversationAttachments>
+                    <showDirectUploadAttachments type="Enum" static="true">1</showDirectUploadAttachments>
+                    <showEmailAttachments type="Enum" static="true">1</showEmailAttachments>
+                    <showNotesAttachments type="Enum" static="true">1</showNotesAttachments>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{DC0C32C2-9F49-4FE0-8F65-6AF1B77C7B1F}">
+            <customControl id="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" formFactor="0">
+                <parameters>
+                    <datafieldname>subjectid</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl id="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" formFactor="1">
+                <parameters>
+                    <datafieldname>subjectid</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.CustomerService.SelectionTreeViewControl">
+                <parameters>
+                    <selectedSubject>
+                        <BindAttribute>subjectid</BindAttribute>
+                        <DefaultViewId>00000000-0000-0000-0000-000000000000</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType />
+                        <AvailableViewIds />
+                        <AllowFilterOff>true</AllowFilterOff>
+                        <DisableQuickFind>true</DisableQuickFind>
+                        <DisableViewPicker>true</DisableViewPicker>
+                    </selectedSubject>
+                    <treeViewConfig static="true" type="SingleLine.Text">{\"viewSize\":\"medium\"}</treeViewConfig>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{55056116-B59C-8C3E-C6CC-0D76DE8B76A7}">
+            <customControl id="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>traversedpath</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.CSIntelligence.CopilotCaseSummaryControl">
+                <parameters>
+                    <CaseSummary type="Multiple">traversedpath</CaseSummary>
+                    <IncidentId type="SingleLine.Text">incidentid</IncidentId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.CSIntelligence.CopilotCaseSummaryControl">
+                <parameters>
+                    <CaseSummary type="Multiple">traversedpath</CaseSummary>
+                    <IncidentId type="SingleLine.Text">incidentid</IncidentId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.CSIntelligence.CopilotCaseSummaryControl">
+                <parameters>
+                    <CaseSummary type="Multiple">traversedpath</CaseSummary>
+                    <IncidentId type="SingleLine.Text">incidentid</IncidentId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <footer id="{87f48bb0-8611-4251-b5a3-189a97be8c9d}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows></rows>
+    </footer>
+    <formLibraries>
+        <Library name="ModernCaseManagement/Incident/msdyn_ModernCaseManagement.js" libraryUniqueId="{9545916a-6463-4e54-b737-6ed780446825}" />
+        <Library name="msdyn_CopilotCaseSummaryLibrary.js" libraryUniqueId="{bfd0987d-7f37-4ff3-97a1-14ea96a22718}" />
+    </formLibraries>
+    <DisplayConditions FallbackForm="false" Order="29">
+        <Role Id="{c737e307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+        <Role Id="{183ce307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+        <Role Id="{b2a2f470-5e24-45d5-adab-7613c5022318}" />
+        <Role Id="{3DAC4D9E-568C-E611-80D4-00155D42A122}" />
+        <Role Id="{507bdc86-1a76-4529-9332-fd126af1b97a}" />
+    </DisplayConditions>
+</form>

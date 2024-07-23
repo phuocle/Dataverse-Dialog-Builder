@@ -1,0 +1,283 @@
+<form shownavigationbar="false">
+    <hiddencontrols>
+        <data id="ConditionXml" datafieldname="conditionxml" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="General" id="{07dc7d2f-d046-4a0e-ba66-0c6679b36565}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="30%">
+                    <sections>
+                        <section name="Rule Item Information" showlabel="true" showbar="true" locklevel="0" id="{6446dd89-9fda-4914-ac6d-f698db443562}" IsUserDefined="0" layout="varwidth" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Rule Item Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{f421da73-7f1a-403c-8698-2f6c366bc0a1}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" showlabel="true" rowspan="5" id="{8d948540-bcec-4ec2-a369-5ecaf0518eb0}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="70%">
+                    <sections>
+                        <section name="ConditionControl" showlabel="true" showbar="true" id="{2e869488-9a63-446e-a8e0-ef0aaf298018}" labelwidth="300" IsUserDefined="0" locklevel="0" layout="varwidth" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Rule Criteria" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="false" locklevel="0" rowspan="9" colspan="2" id="{c38f1b10-978a-4112-bb1f-44d64e414c77}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="ConditionControl_uc" showlabel="true" showbar="true" id="{1026B4D6-D5EB-41AF-AF33-D07B07BACFE8}" labelwidth="300" IsUserDefined="0" locklevel="0" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Rule Criteria" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="true" showlabel="false" locklevel="0" rowspan="9" colspan="2" id="{3e3e8b82-22d7-4d53-be2d-0354f5814e12}" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="appConditionBuilder_uc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{00840FA8-A0CF-425F-8CB2-AC7F46549D00}" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                        <section name="Then Condition" showlabel="true" showbar="true" locklevel="0" id="{35794b72-e864-457f-bf98-caa5b3365357}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Action" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b2575c65-005b-4abd-b451-ce2d915e760e}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Route to" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.routeoption_onchange" libraryName="RoutingRuleItem_main_system_library.js" handlerUniqueId="52c7b384-150d-41cb-8e27-abc3ba909adc" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="routedqueueid" />
+                                                            <dependency id="assignobjectid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="routeoption" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b57b15c8-e65e-4c23-a960-c374ef269641}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Route to" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_routeto" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_routeto" disabled="true" />
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.routeoption_onchange" libraryName="RoutingRule/RoutingRuleItem/RoutingRuleItem_main_system_library.js" handlerUniqueId="7c316ddf-e527-4a51-99eb-14dc2a6468c3" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="routedqueueid" />
+                                                            <dependency id="assignobjectid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{92d9c326-7a24-4703-9e53-17a359213142}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Add to Queue" languagecode="1033" />
+                                        </labels>
+                                        <control id="routedqueueid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="routedqueueid">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>true</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{91ac41f6-3ee9-4815-98bb-764e35557bcb}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Assign to User/Team" languagecode="1033" />
+                                        </labels>
+                                        <control id="assignobjectid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="assignobjectid" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="notes" id="{433dd9b7-3d5b-40dd-97f5-f7dec9c4c734}" IsUserDefined="0" expanded="true">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="notes" showlabel="false" showbar="true" id="{156b281c-7c09-44c7-bd3c-ebc764545e6f}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="7" auto="false" id="{36e2ccc5-b279-4eed-aa47-9e3d711d6d81}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="RoutingRuleItem_main_system_library.js" handlerUniqueId="a90ed162-e120-4f8f-82f8-3f9bd47b2b43" enabled="true" passExecutionContext="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.RoutingRuleItem.Instance.onLoadSetValue" libraryName="msdyn_RoutingRuleItemSettings.js" handlerUniqueId="{fa1775a3-09df-484e-93eb-9c98812160ed}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="RoutingRuleItem_main_system_library.js" handlerUniqueId="815cc9db-8be6-429c-bfca-c25eedd8cafe" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="conditionxml" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_ASSIGNOBJIDREQD" resourceid="RoutingRuleItemForm.AssignObjectIdRequired" />
+                <internaljscriptvariable name="LOCID_ROUTEQUEUEIDREQD" resourceid="RoutingRuleItemForm.RouteQueueIdRequired" />
+                <internaljscriptvariable name="LOCID_ERROR_MISSING_ROUTETO" resourceid="Web.RoutingRuleItem.edit.aspx" />
+                <internaljscriptvariable name="LOCID_ERROR_MISSING_CODNTION_REF" resourceid="Web.ServiceItem.edit.aspx" />
+                <internaljscriptvariable name="LOCID_ERROR_MISSING_ALL" resourceid="Web.RoutingRuleItem.edit.aspx_2" />
+                <internaljscriptvariable name="LOCID_ERROR_CREATE_WEB" resourceid="RoutingRuleItemForm.CreateRuleItemInWeb" />
+                <internaljscriptvariable name="LOCID_ERROR_EDIT_WEB" resourceid="RoutingRuleItemForm.EditRuleItemInWeb" />
+            </clientvariables>
+            <clientincludes>
+                <internaljscriptfile src="/_static/cs/ServiceEntityValidations.js" />
+                <internaljscriptfile src="$webresource:RoutingRuleItem_main_system_library.js" />
+                <internaljscriptfile src="$webresource:RoutingRule/RoutingRuleItem/RoutingRuleItem_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <formparameters>
+        <querystringparameter name="param_parentEntityId" type="SafeString" />
+        <querystringparameter name="param_parentAttributeEntityLogicalName" type="SafeString" />
+    </formparameters>
+    <header id="{38F524AC-225C-4199-81D1-BB567F090CC7}" celllabelposition="Top" columns="11111">
+        <rows>
+            <row>
+                <cell id="{97128492-AF98-420F-B079-C768760C8FC0}" showlabel="false" colspan="4" userspacer="true">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="header_ParentRuleSpacer1" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                </cell>
+                <cell id="{F40C2842-FC44-4169-A2C6-D686EAC90FC5}" showlabel="true">
+                    <labels>
+                        <label description="Routing Rule Set" languagecode="1033" />
+                    </labels>
+                    <control id="header_parentroutingruleid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="routingruleid" disabled="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <controlDescriptions>
+        <controlDescription forControl="{00840FA8-A0CF-425F-8CB2-AC7F46549D00}">
+            <customControl formFactor="0" name="MscrmControls.ConditionBuilder.ItemConditionBuilderControl">
+                <parameters>
+                    <fetchxml type="SingleLine.Text">conditionxml</fetchxml>
+                    <parentid type="Lookup.Simple">routingruleid</parentid>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ConditionBuilder.ItemConditionBuilderControl">
+                <parameters>
+                    <fetchxml type="SingleLine.Text">conditionxml</fetchxml>
+                    <parentid type="Lookup.Simple">routingruleid</parentid>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ConditionBuilder.ItemConditionBuilderControl">
+                <parameters>
+                    <fetchxml type="SingleLine.Text">conditionxml</fetchxml>
+                    <parentid type="Lookup.Simple">routingruleid</parentid>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdyn_RoutingRuleItemSettings.js" libraryUniqueId="{4d5363cb-cc97-45a4-88d8-0915f6511f94}" />
+    </formLibraries>
+</form>

@@ -1,0 +1,56 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{b3e4b561-5f01-4bfd-aade-3cb82bbe68f2}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{4a6f16ab-b75e-48de-b4dc-50dacc921614}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5b881273-caca-4aee-954b-f9caa8ddaef5}">
+                                        <labels>
+                                            <label description="SLA KPI Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_slakpiname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_slakpiname" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8b286d2d-bceb-e09a-a18a-515e1ec350d0}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="SLA Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_slatype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_slatype" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fa11fb2c-46f8-4f6e-b89b-66e3a4ea86cb}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <formLibraries>
+        <Library name="msdyn_/FieldServiceSlaConfiguration/FieldService.FieldServiceSlaConfiguration.js" libraryUniqueId="{b849adc2-c47e-1473-8c33-9b04365bc666}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="FieldService.FieldServiceSlaConfiguration.Library.Load" libraryName="msdyn_/FieldServiceSlaConfiguration/FieldService.FieldServiceSlaConfiguration.js" handlerUniqueId="{6c7db189-d4c5-beb7-6484-601ee2268ca8}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

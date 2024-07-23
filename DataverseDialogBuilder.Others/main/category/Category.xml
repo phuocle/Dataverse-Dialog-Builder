@@ -1,0 +1,111 @@
+<form>
+    <tabs>
+        <tab id="{4A751D2D-D70E-4648-B26C-AAC247641DB8}" showlabel="true" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{932A6FEA-DA90-4F9F-8F11-27C0407E3A1F}" showlabel="true" showbar="true" IsUserDefined="0" name="General">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{358EBDD6-136D-4DCE-B5E3-28134E262991}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="title" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2A11E155-15F3-4CAE-9562-0274547D7942}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6988B777-E5DA-4AB4-A28B-758F061AA2C8}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Display Order" languagecode="1033" />
+                                        </labels>
+                                        <control id="sequencenumber" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="sequencenumber" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ECED90A8-9171-4ECE-962C-C55C634E8A35}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Parent Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentcategoryid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="parentcategoryid" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6BE61B7C-49AE-4DB6-B6FF-E08285C54F3D}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Category Number" languagecode="1033" />
+                                        </labels>
+                                        <control id="categorynumber" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="categorynumber" disabled="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="AssociatedCategories" id="{A2DAC844-14FA-4454-8136-C8CA51C5AB6E}" showlabel="true" IsUserDefined="0">
+            <labels>
+                <label description="Associated Categories" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Associated Categories" showlabel="false" showbar="false" locklevel="0" id="{EE181435-CF8A-4CF1-808D-0630A1A5B099}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="150">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5E05E93A-141E-497E-878D-5CF7F6ED8E9F}" showlabel="true" colspan="1" auto="false" rowspan="6">
+                                        <labels>
+                                            <label description="Child Categories" languagecode="1033" />
+                                        </labels>
+                                        <control id="AssociatedCategoriesGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{F9D2D076-C806-4DB1-A24B-92B91D78FF22}</ViewId>
+                                                <RelationshipName>category_parent_category</RelationshipName>
+                                                <TargetEntityType>category</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <IsUserView>false</IsUserView>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <ViewIds>{F9D2D076-C806-4DB1-A24B-92B91D78FF22}</ViewIds>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>10</RecordsPerPage>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+</form>

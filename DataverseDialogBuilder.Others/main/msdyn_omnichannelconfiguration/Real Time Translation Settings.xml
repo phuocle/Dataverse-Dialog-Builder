@@ -1,0 +1,143 @@
+<form>
+    <tabs>
+        <tab name="Real Time Translation" id="{a70e6bf7-7e64-4511-a756-dcb22896ce3f}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Summary" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="tab_3_section_1" showlabel="true" showbar="false" locklevel="0" id="{d1cb27ed-91a6-4b73-801d-19450550d118}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="General Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{aab42ee4-103d-42df-b58a-dc9f0d28d010}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="featureEnableTerms" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_featureEnableTerms" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>msdyn_LanguageTranslationPrivacyDisclaimer.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <WebResourceId>{A28E7C8C-7EAD-EA11-A81B-000D3AC3180C}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1f285e71-aa5d-4b19-a488-07fc676ce29b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Turn on" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_enablerealtimetranslation" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_enablerealtimetranslation" disabled="false" uniqueid="{06A20914-2C1A-76D4-8AE6-C41AB9D62C36}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{58d5712e-b8c3-b5c4-a70c-b681c217b69a}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Default input language" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_defaultagentinputlanguage" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_defaultagentinputlanguage" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="RealTimeTranslation_section_2" showlabel="true" showbar="false" locklevel="0" id="{420ce861-ccc8-2330-3359-0d0ccc77d446}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Web resource" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c49609d9-b8d0-ea1c-7d49-43a590ab51e1}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Language translation webresource documentation info" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_ocpreviewterms" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>msdyn_LanguageTranslationDocDisclaimer.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <WebResourceId>{047D118E-7FAD-EA11-A81B-000D3AC3180C}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d1690759-8014-e665-e395-d08b5971a0cc}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Web resource URL" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_translationwebresourceurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_translationwebresourceurl" disabled="false" uniqueid="{7b5b0cd6-5c08-ac73-224c-38d6e8855d71}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{06A20914-2C1A-76D4-8AE6-C41AB9D62C36}">
+            <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+                <parameters>
+                    <datafieldname>msdyn_enablerealtimetranslation</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value>msdyn_enablerealtimetranslation</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value>msdyn_enablerealtimetranslation</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FlipSwitch.FlipSwitchControl">
+                <parameters>
+                    <value>msdyn_enablerealtimetranslation</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdyn_RealTimeTranslationAdminSetting.js" libraryUniqueId="{3da3950a-9463-b013-e385-616b1ed24443}" />
+    </formLibraries>
+    <events>
+        <event name="onsave" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.RealTimeTranslationAdminSetting.onSave" libraryName="msdyn_RealTimeTranslationAdminSetting.js" handlerUniqueId="{8da07456-27ea-5a94-9a21-41a98d7c9cb0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.RealTimeTranslationAdminSetting.onLoad" libraryName="msdyn_RealTimeTranslationAdminSetting.js" handlerUniqueId="{1e25b6be-c9c0-41a7-57c5-6803c8b7a1ca}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_enablerealtimetranslation">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.RealTimeTranslationAdminSetting.OnRTTEnable" libraryName="msdyn_RealTimeTranslationAdminSetting.js" handlerUniqueId="{e5d457a5-9ea9-ddc4-0921-20304134eaeb}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_translationwebresourceurl">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.RealTimeTranslationAdminSetting.onSave" libraryName="msdyn_RealTimeTranslationAdminSetting.js" handlerUniqueId="{c3833750-362b-e57e-b0b2-53681e285a9a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

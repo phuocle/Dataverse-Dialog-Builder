@@ -1,0 +1,152 @@
+<form shownavigationbar="true" showImage="false" maxWidth="1900">
+    <hiddencontrols>
+        <data id="isvalidated" datafieldname="isvalidated" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="GENERALINFORMATION_TAB" id="{1ac2d765-e042-4f07-8cfb-132f9fce1e3e}" IsUserDefined="0" showlabel="false" expanded="true">
+            <labels>
+                <label description="General Information" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="25%">
+                    <sections>
+                        <section showlabel="true" showbar="false" IsUserDefined="0" id="{36630b39-4cf6-4156-bdff-61d8831d18d9}" name="property_bag_properties_1" columns="1" layout="varwidth">
+                            <labels>
+                                <label description="GENERAL INFORMATION" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a098913a-bfa4-47e6-82ee-ca51d373c9d9}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{761c66ef-2a01-42cc-bb9f-da1ab8854afc}" showlabel="true" locklevel="0" rowspan="4">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row></row>
+                                <row></row>
+                                <row></row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="50%">
+                    <sections>
+                        <section name="MOBILE OFFLINE PROFILE ITEMS" showlabel="false" showbar="false" id="{f8aa2616-feb5-46b0-8a9e-06fbef8c91d4}" IsUserDefined="0" columns="1" labelwidth="115" celllabelposition="Left" layout="varwidth">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e75148b8-c583-4a37-97b2-a5060edec5fe}" showlabel="true" colspan="1" rowspan="5" auto="false">
+                                        <labels>
+                                            <label description="MOBILE OFFLINE PROFILE ITEM DETAILS" languagecode="1033" />
+                                        </labels>
+                                        <control id="profileitemgrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <TargetEntityType>mobileofflineprofileitem</TargetEntityType>
+                                                <ViewId>{d19a680d-6335-4e1f-b93c-d7fdc41e1ae0}</ViewId>
+                                                <RelationshipName>MobileOfflineProfile_MobileOfflineProfileItem</RelationshipName>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>15</RecordsPerPage>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                                <IsUserView>false</IsUserView>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="25%">
+                    <sections>
+                        <section showlabel="false" labelwidth="115" showbar="false" IsUserDefined="0" id="{6b44149d-d6bd-4edf-b781-deb0b6f09c05}" name="profile_users" columns="1" layout="varwidth">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8a6941f6-d0e2-4ad3-a213-ebcb730ec914}" showlabel="true" colspan="1" rowspan="5" auto="false">
+                                        <labels>
+                                            <label description="USERS" languagecode="1033" />
+                                        </labels>
+                                        <control id="SystemUserGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <ViewId>{e5d893d1-2b1f-46e5-8ea4-25562567ccce}</ViewId>
+                                                <RelationshipName>MobileOfflineProfile_SystemUser</RelationshipName>
+                                                <TargetEntityType>systemuser</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>15</RecordsPerPage>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                                <IsUserView>false</IsUserView>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <IsUserChart>false</IsUserChart>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="MobileOfflineProfile_main_system_library.js" handlerUniqueId="1f188198-fe98-4845-93e2-2397a3ff4b06" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="isvalidated">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.componentstate_onchange" libraryName="MobileOfflineProfile_main_system_library.js" handlerUniqueId="7ef49221-85c9-4225-8e0f-b31fa22e226f" enabled="true">
+                    <dependencies>
+                        <dependency id="isvalidated" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="/_static/_grid/cmds/util.js" />
+                <internaljscriptfile src="$webresource:MobileOfflineProfile_main_system_library.js" />
+            </clientincludes>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_PROFILE_NOTPUBLISHED" resourceid="Message_Profile_NotPublished" />
+                <internaljscriptvariable name="LOCID_PROFILE_PUBLISHED" resourceid="Message_Profile_Published" />
+            </clientvariables>
+        </internalresources>
+    </clientresources>
+</form>

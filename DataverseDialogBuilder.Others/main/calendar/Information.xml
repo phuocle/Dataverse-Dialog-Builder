@@ -1,0 +1,92 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{5aa3971f-e1d1-4d78-976e-4df2de039335}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="section 1" showlabel="false" showbar="false" id="{c36b8a26-a52e-4c7c-84d1-225c2d0f6191}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Section 1" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{5eb0b4ee-2393-4ca6-8e77-882611b87f9e}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{b2bd8708-32b6-42db-8807-6cc0330d5452}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Holidays List" showlabel="true" showbar="false" id="{87006cb9-d611-43ea-bcc3-d1b8aab2df73}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Holidays" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{3af4846a-e11c-47d6-a1fc-a287e5ff8c39}" showlabel="false" colspan="2" auto="false">
+                                        <labels>
+                                            <label description="Calendar type" languagecode="1033" />
+                                        </labels>
+                                        <control id="holidayListcontrol_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="type" disabled="false" uniqueid="{80483FDE-2203-4AC8-A71B-84AF6474B246}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="AppCommon.Calendar.Instance.onSaveClickForCalendarForm" libraryName="$webresource:AppCommon/Calendar/Calendar_main_system_library.js" handlerUniqueId="{5CC9E62B-5185-4174-AD1A-171910C3937E}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="AppCommon.Calendar.Instance.onLoadForCalendarForm" libraryName="$webresource:AppCommon/Calendar/Calendar_main_system_library.js" handlerUniqueId="{428A7EFC-9ACB-4219-80BC-BC0228CC82A7}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{80483FDE-2203-4AC8-A71B-84AF6474B246}">
+            <customControl formFactor="0" name="MscrmControls.AppCommon.CustomerServiceSchedule.HolidayListControl">
+                <parameters>
+                    <holidayListControlInput>type</holidayListControlInput>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.AppCommon.CustomerServiceSchedule.HolidayListControl">
+                <parameters>
+                    <holidayListControlInput>type</holidayListControlInput>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.AppCommon.CustomerServiceSchedule.HolidayListControl">
+                <parameters>
+                    <holidayListControlInput>type</holidayListControlInput>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:AppCommon/Localization/ResourceStringProvider.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>
