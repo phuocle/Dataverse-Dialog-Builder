@@ -1,5 +1,6 @@
 ﻿using DataverseDialogBuilder.Console.Debug;
 using DataverseDialogBuilder.Shared;
+using System;
 
 namespace DataverseDialogBuilder.Console.CustomAction
 {
@@ -188,6 +189,19 @@ namespace DataverseDialogBuilder.Console.CustomAction
             };
             var context = Helper.GetCustomActionExecutionContext;
             context.InputParameters["f"] = "ParseLocalOptionSet";
+            context.InputParameters["input"] = SimpleJson.SerializeObject(input);
+            var serviceProvider = Helper.GetServiceProvider(context, AppSettings.Service);
+            var plugin = new DataverseDialogBuilder.CustomAction.PostDataverseDialogBuilderSynchronous();
+            plugin.Execute(serviceProvider);
+        }
+
+        internal static void GetLanguageCode()
+        {
+            var input = new
+            {
+            };
+            var context = Helper.GetCustomActionExecutionContext;
+            context.InputParameters["f"] = "GetLanguageCode";
             context.InputParameters["input"] = SimpleJson.SerializeObject(input);
             var serviceProvider = Helper.GetServiceProvider(context, AppSettings.Service);
             var plugin = new DataverseDialogBuilder.CustomAction.PostDataverseDialogBuilderSynchronous();
