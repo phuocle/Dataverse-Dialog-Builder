@@ -1,0 +1,639 @@
+<form shownavigationbar="true" showImage="false" maxWidth="1920">
+    <hiddencontrols>
+        <data id="directioncode" datafieldname="directioncode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="statecode" datafieldname="statecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="attachmentopencount" datafieldname="attachmentopencount" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="linksclickedcount" datafieldname="linksclickedcount" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="replycount" datafieldname="replycount" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="opencount" datafieldname="opencount" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="parentactivityid" datafieldname="parentactivityid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="templateid" datafieldname="templateid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="isemailfollowed" datafieldname="isemailfollowed" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="followemailuserpreference" datafieldname="followemailuserpreference" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="emailreminderstatus" datafieldname="emailreminderstatus" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="emailremindertype" datafieldname="emailremindertype" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="emailremindertext" datafieldname="emailremindertext" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="emailreminderexpirytime" datafieldname="emailreminderexpirytime" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="delayedemailsendtime" datafieldname="delayedemailsendtime" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="statuscode" datafieldname="statuscode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="notififcations" datafieldname="notifications" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <ancestor id="{0D1E47FF-12B2-4F53-9090-BEE951B98CB4}" />
+    <tabs>
+        <tab name="Email" id="{844b5e32-5b0b-a608-9d14-0191e0ee3898}" IsUserDefined="0" locklevel="0" showlabel="false" expanded="true" labelid="{88cd57ed-a949-4e42-a71c-494e359df170}">
+            <labels>
+                <label description="Email" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="recipient information" showlabel="false" showbar="false" locklevel="0" id="{879d2e96-82f6-4643-9bcd-232cb946bebc}" IsUserDefined="0" layout="varwidth" columns="11" labelid="{b1ec6293-b3ac-4563-9993-df0854943670}" height="auto">
+                            <labels>
+                                <label description="Recipient information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{9257B3A4-703D-4810-B5E1-850CC98EDB99}" labelid="{820cd657-2163-436a-8b5c-085254e9e063}">
+                                        <labels>
+                                            <label description="From" languagecode="1033" />
+                                        </labels>
+                                        <control id="from" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="from" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{789EB1FB-707A-4EE4-8703-00D497EAB254}" labelid="{1bd6991d-476b-43b5-996b-df3653fd806a}">
+                                        <labels>
+                                            <label description="To" languagecode="1033" />
+                                        </labels>
+                                        <control id="to" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="to" disabled="false">
+                                            <parameters>
+                                                <ResolveEmailAddress>true</ResolveEmailAddress>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{F8685CC5-23A6-40A1-976A-8231FEDED19C}" labelid="{77e84caf-78df-4a4c-a93f-0acc9b8911a6}">
+                                        <labels>
+                                            <label description="Cc" languagecode="1033" />
+                                        </labels>
+                                        <control id="cc" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="cc" disabled="false">
+                                            <parameters>
+                                                <ResolveEmailAddress>true</ResolveEmailAddress>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{BD2B7462-E3A4-4343-B594-B64885E4025B}" labelid="{98b101d7-e39c-40c6-950f-1e5769db5057}">
+                                        <labels>
+                                            <label description="Bcc" languagecode="1033" />
+                                        </labels>
+                                        <control id="bcc" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="bcc" disabled="false">
+                                            <parameters>
+                                                <ResolveEmailAddress>true</ResolveEmailAddress>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{0F309E61-AC65-4D7B-9A30-0D12B7FA9B9D}" labelid="{c01f2fe7-8678-4cad-9411-7ad3c3e5163c}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="subject" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" rowspan="5" showlabel="false" auto="true" id="{32F9BBBA-7748-4399-A752-ED189566C13C}" labelid="{f70d01c6-b42e-4c1d-b39f-f55f750e8241}">
+                                        <labels>
+                                            <label description="Attachment" languagecode="1033" />
+                                        </labels>
+                                        <control id="attachmentsGrid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" indicationOfSubgrid="true" uniqueid="{7E3510EE-3B92-4DC3-A5DE-ED07F5C5F839}">
+                                            <parameters>
+                                                <ViewId>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>email_activity_mime_attachment</RelationshipName>
+                                                <TargetEntityType>activitymimeattachment</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>10</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="12" id="{BE55AEDB-BA0B-4A7A-99A1-8C9089724AE2}" labelid="{b7e42eb8-9fa9-4dbb-8dc6-9545f3928776}" locklevel="0">
+                                        <labels>
+                                            <label description="Email body" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="description" disabled="false" uniqueid="{F14AAAA7-9CD8-4A9B-AD4D-262C622B2208}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="Regarding information" showlabel="false" showbar="false" locklevel="0" id="{CD014F1A-F427-462C-A5F9-A2E4FED857DA}" IsUserDefined="0" layout="varwidth" columns="11" labelid="{27051b4a-74a0-46b8-86f9-550287075a92}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{5652933F-B91C-469C-A59D-AF96052D8959}" labelid="{ccb42e6e-ccc3-409a-b58d-da9dcfd90bc8}">
+                                        <labels>
+                                            <label description="Regarding" languagecode="1033" />
+                                        </labels>
+                                        <control id="regardingobjectid" classid="{F3015350-44A2-4aa0-97B5-00166532B5E9}" datafieldname="regardingobjectid" disabled="false" uniqueid="{40e29151-0c46-1820-b684-33a111d10cb5}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="Email_Engagement" id="{57d10ea2-558c-781b-381e-84a271555a05}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Email Engagement" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="33%">
+                    <sections>
+                        <section name="emailengagementactions" showlabel="false" showbar="true" locklevel="1" id="{96263001-0250-194a-a0db-6799aea87a6b}" height="auto" IsUserDefined="0" layout="varheight" columns="11" labelid="{91FBF317-4DCF-40D8-9C92-2AEE7EDDD9EC}" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="EMAIL ENGAGEMENT" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell colspan="2" rowspan="1" showlabel="false" auto="true" id="{443de52b-8402-5ea2-8b04-dcc712892181}" labelid="{7E620BAD-4E3A-4FE0-ACF5-106E00DDC642}" locklevel="1">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="emailengagementactionscontrol" classid="{F454228D-1D25-4319-E12F-D27968BC0234}" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Emailrecipient_section_6" showlabel="false" showbar="false" locklevel="1" id="{4E6F622F-A21C-48A9-88EB-1AC2EC2DB9B5}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="RECIPIENT ACTIVITY" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell auto="true" colspan="2" showlabel="false" locklevel="1" rowspan="1" id="{003cad40-d513-dd51-a1dd-e80bd6e4ce59}" labelid="{FCDB4963-567D-4981-8104-886B601A2BC4}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="emailrecipientactivitycontrol" classid="{26E9760F-7454-40DE-BB07-F6DCCCB82040}" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="67%"></column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{9B740295-1A0A-4F85-B379-F2839E79EDB8}" columns="1111" celllabelposition="Top" labelwidth="115">
+        <rows>
+            <row>
+                <cell showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{D7ED5F96-9521-4216-A7CE-D379AE17D4EB}" labelid="{7372441d-e939-4316-9770-a597141697bd}">
+                    <labels>
+                        <label description="Priority" languagecode="1033" />
+                    </labels>
+                    <control id="header_prioritycode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="prioritycode" disabled="false" />
+                </cell>
+                <cell showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{21E90158-C988-4A2B-B2CF-EFFC1B6A39E5}" labelid="{4259916b-fc26-499e-9338-8619c00658c4}">
+                    <labels>
+                        <label description="Due" languagecode="1033" />
+                    </labels>
+                    <control id="header_scheduledend" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="scheduledend" disabled="false" />
+                </cell>
+                <cell showlabel="true" id="{B2BF0ABF-A0A0-4F8A-BD37-1EB0DD04F6BA}" labelid="{5ae36b1e-4f98-4753-8bb0-fa920b5ec270}">
+                    <labels>
+                        <label description="Status Reason" languagecode="1033" />
+                    </labels>
+                    <control id="header_statecode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="true" />
+                </cell>
+                <cell showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{ABED2190-C9EF-461C-892A-A3751F827825}" labelid="{f03768b8-5773-466c-a19b-cb5c06ba472e}">
+                    <labels>
+                        <label description="Owner" languagecode="1033" />
+                    </labels>
+                    <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{063E5C3B-ED4E-4DCA-A8B5-520FF0B77781}" columns="1" celllabelposition="Left" celllabelalignment="Left" labelwidth="115">
+        <rows>
+            <row>
+                <cell id="{FB4B455C-DADF-43B6-8B6C-C9C35ABAFEC6}" labelid="{51da711b-b6b4-4289-8e77-1afa87f20bbf}">
+                    <labels>
+                        <label description="Followed" languagecode="1033" />
+                    </labels>
+                    <control id="footer_emailfollowed" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="isemailfollowed" disabled="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{3F50BEC9-28E0-491D-BDA9-FF9B4D8A2BAD}" labelid="{e2e3067e-9aa8-4d4e-9f29-e8e9091319a3}">
+                    <labels>
+                        <label description="Reminder Set" languagecode="1033" />
+                    </labels>
+                    <control id="footer_emailremainderset" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="isemailreminderset" disabled="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{7E3510EE-3B92-4DC3-A5DE-ED07F5C5F839}">
+            <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                <parameters>
+                    <ViewId>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</ViewId>
+                    <IsUserView>false</IsUserView>
+                    <RelationshipName>email_activity_mime_attachment</RelationshipName>
+                    <TargetEntityType>activitymimeattachment</TargetEntityType>
+                    <AutoExpand>Fixed</AutoExpand>
+                    <EnableQuickFind>false</EnableQuickFind>
+                    <EnableViewPicker>false</EnableViewPicker>
+                    <ViewIds>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</ViewIds>
+                    <EnableJumpBar>false</EnableJumpBar>
+                    <ChartGridMode>All</ChartGridMode>
+                    <VisualizationId />
+                    <IsUserChart>false</IsUserChart>
+                    <EnableChartPicker>true</EnableChartPicker>
+                    <RecordsPerPage>10</RecordsPerPage>
+                    <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.Grid.ReadOnlyGrid">
+                <parameters>
+                    <data-set name="Grid">
+                        <ViewId>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <RelationshipName>email_activity_mime_attachment</RelationshipName>
+                        <TargetEntityType>activitymimeattachment</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</FilteredViewIds>
+                    </data-set>
+                    <EnableGroupBy static="true" type="Enum">no</EnableGroupBy>
+                    <EnableEditing static="true" type="Enum">no</EnableEditing>
+                    <ReflowBehavior static="true" type="Enum">ListOnly</ReflowBehavior>
+                    <ListLayoutDirection static="true" type="Enum">Horizontal</ListLayoutDirection>
+                    <EnableSubGridAutoCollapse static="true" type="Enum">true</EnableSubGridAutoCollapse>
+                    <EnableFiltering static="true" type="Enum">no</EnableFiltering>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Grid.ReadOnlyGrid">
+                <parameters>
+                    <data-set name="Grid">
+                        <ViewId>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <RelationshipName>email_activity_mime_attachment</RelationshipName>
+                        <TargetEntityType>activitymimeattachment</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</FilteredViewIds>
+                    </data-set>
+                    <EnableGroupBy static="true" type="Enum">no</EnableGroupBy>
+                    <EnableEditing static="true" type="Enum">no</EnableEditing>
+                    <ReflowBehavior static="true" type="Enum">ListOnly</ReflowBehavior>
+                    <ListLayoutDirection static="true" type="Enum">Horizontal</ListLayoutDirection>
+                    <EnableSubGridAutoCollapse static="true" type="Enum">true</EnableSubGridAutoCollapse>
+                    <EnableFiltering static="true" type="Enum">no</EnableFiltering>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Grid.ReadOnlyGrid">
+                <parameters>
+                    <data-set name="Grid">
+                        <ViewId>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <RelationshipName>email_activity_mime_attachment</RelationshipName>
+                        <TargetEntityType>activitymimeattachment</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{314D697C-C2F0-4CA1-A129-CE68CE9A0454}</FilteredViewIds>
+                    </data-set>
+                    <EnableGroupBy static="true" type="Enum">no</EnableGroupBy>
+                    <EnableEditing static="true" type="Enum">no</EnableEditing>
+                    <ReflowBehavior static="true" type="Enum">ListOnly</ReflowBehavior>
+                    <ListLayoutDirection static="true" type="Enum">Horizontal</ListLayoutDirection>
+                    <EnableSubGridAutoCollapse static="true" type="Enum">true</EnableSubGridAutoCollapse>
+                    <EnableFiltering static="true" type="Enum">no</EnableFiltering>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{F14AAAA7-9CD8-4A9B-AD4D-262C622B2208}">
+            <customControl id="{6F3FB987-393B-4d2d-859F-9D0F0349B6AD}">
+                <parameters>
+                    <datafieldname>description</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.RichTextEditor.RichTextEditorControl">
+                <parameters>
+                    <value>description</value>
+                    <configUrl static="true" type="SingleLine.URL">/WebResources/Activities/SystemLibraries/msdyn_EmailRTEconfig.js</configUrl>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.RichTextEditor.RichTextEditorControl">
+                <parameters>
+                    <value>description</value>
+                    <configUrl static="true" type="SingleLine.URL">/WebResources/Activities/SystemLibraries/msdyn_EmailRTEconfig.js</configUrl>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.RichTextEditor.RichTextEditorControl">
+                <parameters>
+                    <value>description</value>
+                    <configUrl static="true" type="SingleLine.URL">/WebResources/Activities/SystemLibraries/msdyn_EmailRTEconfig.js</configUrl>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.Email.formOnload" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="ecdfe4d8-d6d3-4d21-ab68-8ea75bb30a79" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="Activities.Email.NotifyPanelSubjectChange" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="{706607A8-4424-4C9A-847A-602FC8035B48}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+            <Handlers>
+                <Handler functionName="EmailEngagement.hideEeTab" libraryName="msdyn_/EnhancedEmailForm/Scripts/EnhancedEmail_form.js" handlerUniqueId="{4398d8a5-808c-a20c-2eac-ae704b57719a}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="SalesCopilot.Copilot.copilotHelper.loadCopilotControlInSidePane" libraryName="$webresource:msdyn_SalesCopilot/Copilot.Library.js" handlerUniqueId="{3fbb34d1-4472-4b4a-be9b-84a1052bd5e2}" passExecutionContext="false" enabled="true" parameters="" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="subject">
+            <Handlers>
+                <Handler functionName="Activities.Email.NotifyPanelSubjectChange" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="{706607A8-4424-4C9A-847A-602FC8035B48}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="regardingobjectid">
+            <Handlers>
+                <Handler functionName="SalesCopilot.Copilot.copilotHelper.loadCopilotControlOnChangeOfRegarding" libraryName="$webresource:msdyn_SalesCopilot/Copilot.Library.js" handlerUniqueId="{c0878d02-87e6-4523-9bbc-e75fe5ec171e}" passExecutionContext="false" enabled="true" parameters="" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Email_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <formLibraries>
+        <Library name="$webresource:msdyn_SalesCopilot/Copilot.Library.js" libraryUniqueId="{7ce2ea06-471e-4728-80b8-0fa747fe2fd3}" />
+        <Library name="msdyn_/EnhancedEmailForm/Scripts/EnhancedEmail_form.js" libraryUniqueId="{4bcc4109-8d95-89d6-638d-95a558188bb4}" />
+    </formLibraries>
+    <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="Common" />
+                    <Title LCID="1026" Text="Common" />
+                    <Title LCID="1027" Text="Common" />
+                    <Title LCID="1029" Text="Common" />
+                    <Title LCID="1030" Text="Common" />
+                    <Title LCID="1031" Text="Common" />
+                    <Title LCID="1032" Text="Common" />
+                    <Title LCID="3082" Text="Common" />
+                    <Title LCID="1061" Text="Common" />
+                    <Title LCID="1069" Text="Common" />
+                    <Title LCID="1035" Text="Common" />
+                    <Title LCID="1036" Text="Common" />
+                    <Title LCID="1110" Text="Common" />
+                    <Title LCID="1037" Text="Common" />
+                    <Title LCID="1081" Text="Common" />
+                    <Title LCID="1050" Text="Common" />
+                    <Title LCID="1038" Text="Common" />
+                    <Title LCID="1057" Text="Common" />
+                    <Title LCID="1040" Text="Common" />
+                    <Title LCID="1041" Text="Common" />
+                    <Title LCID="1087" Text="Common" />
+                    <Title LCID="1042" Text="Common" />
+                    <Title LCID="1063" Text="Common" />
+                    <Title LCID="1062" Text="Common" />
+                    <Title LCID="1086" Text="Common" />
+                    <Title LCID="1044" Text="Common" />
+                    <Title LCID="1043" Text="Common" />
+                    <Title LCID="1045" Text="Common" />
+                    <Title LCID="1046" Text="Common" />
+                    <Title LCID="2070" Text="Common" />
+                    <Title LCID="1048" Text="Common" />
+                    <Title LCID="1049" Text="Common" />
+                    <Title LCID="1051" Text="Common" />
+                    <Title LCID="1060" Text="Common" />
+                    <Title LCID="10266" Text="Common" />
+                    <Title LCID="9242" Text="Common" />
+                    <Title LCID="1053" Text="Common" />
+                    <Title LCID="1054" Text="Common" />
+                    <Title LCID="1055" Text="Common" />
+                    <Title LCID="1058" Text="Common" />
+                    <Title LCID="1066" Text="Common" />
+                    <Title LCID="2052" Text="Common" />
+                    <Title LCID="3076" Text="Common" />
+                    <Title LCID="1028" Text="Common" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1025" Text="Sales" />
+                    <Title LCID="1026" Text="Sales" />
+                    <Title LCID="1027" Text="Sales" />
+                    <Title LCID="1029" Text="Sales" />
+                    <Title LCID="1030" Text="Sales" />
+                    <Title LCID="1031" Text="Sales" />
+                    <Title LCID="1032" Text="Sales" />
+                    <Title LCID="3082" Text="Sales" />
+                    <Title LCID="1061" Text="Sales" />
+                    <Title LCID="1069" Text="Sales" />
+                    <Title LCID="1035" Text="Sales" />
+                    <Title LCID="1036" Text="Sales" />
+                    <Title LCID="1110" Text="Sales" />
+                    <Title LCID="1037" Text="Sales" />
+                    <Title LCID="1081" Text="Sales" />
+                    <Title LCID="1050" Text="Sales" />
+                    <Title LCID="1038" Text="Sales" />
+                    <Title LCID="1057" Text="Sales" />
+                    <Title LCID="1040" Text="Sales" />
+                    <Title LCID="1041" Text="Sales" />
+                    <Title LCID="1087" Text="Sales" />
+                    <Title LCID="1042" Text="Sales" />
+                    <Title LCID="1063" Text="Sales" />
+                    <Title LCID="1062" Text="Sales" />
+                    <Title LCID="1086" Text="Sales" />
+                    <Title LCID="1044" Text="Sales" />
+                    <Title LCID="1043" Text="Sales" />
+                    <Title LCID="1045" Text="Sales" />
+                    <Title LCID="1046" Text="Sales" />
+                    <Title LCID="2070" Text="Sales" />
+                    <Title LCID="1048" Text="Sales" />
+                    <Title LCID="1049" Text="Sales" />
+                    <Title LCID="1051" Text="Sales" />
+                    <Title LCID="1060" Text="Sales" />
+                    <Title LCID="10266" Text="Sales" />
+                    <Title LCID="9242" Text="Sales" />
+                    <Title LCID="1053" Text="Sales" />
+                    <Title LCID="1054" Text="Sales" />
+                    <Title LCID="1055" Text="Sales" />
+                    <Title LCID="1058" Text="Sales" />
+                    <Title LCID="1066" Text="Sales" />
+                    <Title LCID="2052" Text="Sales" />
+                    <Title LCID="3076" Text="Sales" />
+                    <Title LCID="1028" Text="Sales" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1025" Text="Service" />
+                    <Title LCID="1026" Text="Service" />
+                    <Title LCID="1027" Text="Service" />
+                    <Title LCID="1029" Text="Service" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Service" />
+                    <Title LCID="3082" Text="Service" />
+                    <Title LCID="1061" Text="Service" />
+                    <Title LCID="1069" Text="Service" />
+                    <Title LCID="1035" Text="Service" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Service" />
+                    <Title LCID="1037" Text="Service" />
+                    <Title LCID="1081" Text="Service" />
+                    <Title LCID="1050" Text="Service" />
+                    <Title LCID="1038" Text="Service" />
+                    <Title LCID="1057" Text="Service" />
+                    <Title LCID="1040" Text="Service" />
+                    <Title LCID="1041" Text="Service" />
+                    <Title LCID="1087" Text="Service" />
+                    <Title LCID="1042" Text="Service" />
+                    <Title LCID="1063" Text="Service" />
+                    <Title LCID="1062" Text="Service" />
+                    <Title LCID="1086" Text="Service" />
+                    <Title LCID="1044" Text="Service" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Service" />
+                    <Title LCID="1046" Text="Service" />
+                    <Title LCID="2070" Text="Service" />
+                    <Title LCID="1048" Text="Service" />
+                    <Title LCID="1049" Text="Service" />
+                    <Title LCID="1051" Text="Service" />
+                    <Title LCID="1060" Text="Service" />
+                    <Title LCID="10266" Text="Service" />
+                    <Title LCID="9242" Text="Service" />
+                    <Title LCID="1053" Text="Service" />
+                    <Title LCID="1054" Text="Service" />
+                    <Title LCID="1055" Text="Service" />
+                    <Title LCID="1058" Text="Service" />
+                    <Title LCID="1066" Text="Service" />
+                    <Title LCID="2052" Text="Service" />
+                    <Title LCID="3076" Text="Service" />
+                    <Title LCID="1028" Text="Service" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1025" Text="Marketing" />
+                    <Title LCID="1026" Text="Marketing" />
+                    <Title LCID="1027" Text="Marketing" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Marketing" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Marketing" />
+                    <Title LCID="1069" Text="Marketing" />
+                    <Title LCID="1035" Text="Marketing" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Marketing" />
+                    <Title LCID="1037" Text="Marketing" />
+                    <Title LCID="1081" Text="Marketing" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Marketing" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1041" Text="Marketing" />
+                    <Title LCID="1087" Text="Marketing" />
+                    <Title LCID="1042" Text="Marketing" />
+                    <Title LCID="1063" Text="Marketing" />
+                    <Title LCID="1062" Text="Marketing" />
+                    <Title LCID="1086" Text="Marketing" />
+                    <Title LCID="1044" Text="Marketing" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Marketing" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Marketing" />
+                    <Title LCID="10266" Text="Marketing" />
+                    <Title LCID="9242" Text="Marketing" />
+                    <Title LCID="1053" Text="Marketing" />
+                    <Title LCID="1054" Text="Marketing" />
+                    <Title LCID="1055" Text="Marketing" />
+                    <Title LCID="1058" Text="Marketing" />
+                    <Title LCID="1066" Text="Marketing" />
+                    <Title LCID="2052" Text="Marketing" />
+                    <Title LCID="3076" Text="Marketing" />
+                    <Title LCID="1028" Text="Marketing" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="Process Sessions" />
+                    <Title LCID="1026" Text="Process Sessions" />
+                    <Title LCID="1027" Text="Process Sessions" />
+                    <Title LCID="1029" Text="Process Sessions" />
+                    <Title LCID="1030" Text="Process Sessions" />
+                    <Title LCID="1031" Text="Process Sessions" />
+                    <Title LCID="1032" Text="Process Sessions" />
+                    <Title LCID="3082" Text="Process Sessions" />
+                    <Title LCID="1061" Text="Process Sessions" />
+                    <Title LCID="1069" Text="Process Sessions" />
+                    <Title LCID="1035" Text="Process Sessions" />
+                    <Title LCID="1036" Text="Process Sessions" />
+                    <Title LCID="1110" Text="Process Sessions" />
+                    <Title LCID="1037" Text="Process Sessions" />
+                    <Title LCID="1081" Text="Process Sessions" />
+                    <Title LCID="1050" Text="Process Sessions" />
+                    <Title LCID="1038" Text="Process Sessions" />
+                    <Title LCID="1057" Text="Process Sessions" />
+                    <Title LCID="1040" Text="Process Sessions" />
+                    <Title LCID="1041" Text="Process Sessions" />
+                    <Title LCID="1087" Text="Process Sessions" />
+                    <Title LCID="1042" Text="Process Sessions" />
+                    <Title LCID="1063" Text="Process Sessions" />
+                    <Title LCID="1062" Text="Process Sessions" />
+                    <Title LCID="1086" Text="Process Sessions" />
+                    <Title LCID="1044" Text="Process Sessions" />
+                    <Title LCID="1043" Text="Process Sessions" />
+                    <Title LCID="1045" Text="Process Sessions" />
+                    <Title LCID="1046" Text="Process Sessions" />
+                    <Title LCID="2070" Text="Process Sessions" />
+                    <Title LCID="1048" Text="Process Sessions" />
+                    <Title LCID="1049" Text="Process Sessions" />
+                    <Title LCID="1051" Text="Process Sessions" />
+                    <Title LCID="1060" Text="Process Sessions" />
+                    <Title LCID="10266" Text="Process Sessions" />
+                    <Title LCID="9242" Text="Process Sessions" />
+                    <Title LCID="1053" Text="Process Sessions" />
+                    <Title LCID="1054" Text="Process Sessions" />
+                    <Title LCID="1055" Text="Process Sessions" />
+                    <Title LCID="1058" Text="Process Sessions" />
+                    <Title LCID="1066" Text="Process Sessions" />
+                    <Title LCID="2052" Text="Process Sessions" />
+                    <Title LCID="3076" Text="Process Sessions" />
+                    <Title LCID="1028" Text="Process Sessions" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+</form>

@@ -1,0 +1,104 @@
+<form>
+    <hiddencontrols>
+        <data id="relationshipdata" datafieldname="relationshipdata" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="mobileofflineprofileitemid" datafieldname="mobileofflineprofileitemid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="relationshipdisplayname" datafieldname="relationshipdisplayname" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="profileitemassociationentityfilter" datafieldname="profileitemassociationentityfilter" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="GENERALINFORMATION_TAB" verticallayout="true" id="{5f55e2e5-3bcd-41b2-93a6-4ccddc0960a5}" IsUserDefined="0" showlabel="false" expanded="true">
+            <labels>
+                <label description="General Information" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="80%">
+                    <sections>
+                        <section name="General" celllabelposition="Left" columns="1" showlabel="false" showbar="false" id="{eca90c11-9176-4483-80c3-0356a65d1c34}" IsUserDefined="0" layout="varwidth" labelwidth="210">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" id="{31f8333f-3530-43e6-91d3-a7c493117858}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{dc51c924-09ee-49f3-a31d-5b1c38c341ed}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Created On" languagecode="1033" />
+                                        </labels>
+                                        <control id="createdon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" visible="false" locklevel="0" id="{1ce87e6d-9963-4c04-84d3-842c44e65806}">
+                                        <labels>
+                                            <label description="Entity Relationship" languagecode="1033" />
+                                        </labels>
+                                        <control id="selectedrelationshipsschema" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="selectedrelationshipsschema" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" visible="false" locklevel="0" id="{28899bd2-8c2d-4ecb-b5af-0d374487f060}">
+                                        <labels>
+                                            <label description="Entity Relationship" languagecode="1033" />
+                                        </labels>
+                                        <control id="relationshipname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="relationshipname" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{16cca434-deb6-4b70-acd0-fe34647c1c47}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="MobileOfflineProfileItemAssociation_main_system_library.js" handlerUniqueId="{817AF455-3046-4524-AFF3-0FA283BD77B6}" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="MobileOfflineProfileItemAssociation_main_system_library.js" handlerUniqueId="{4429C38A-3440-4297-AEC2-C7AB53968D24}" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_MOPI_ASSOCIATION_FILTER" resourceid="MobileOfflineProfileItemAssociationFilters_LinkTitle" />
+            </clientvariables>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:MobileOfflineProfileItemAssociation_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

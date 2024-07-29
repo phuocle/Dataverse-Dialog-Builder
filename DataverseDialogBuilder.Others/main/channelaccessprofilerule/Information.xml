@@ -1,0 +1,111 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{4368c300-2bf7-4e43-a411-d0f990e037de}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="60%">
+                    <sections>
+                        <section name="profile rule set information" showlabel="false" showbar="false" id="{b5029498-cdac-402a-8d0c-de1d027504ae}" IsUserDefined="0">
+                            <labels>
+                                <label description="Profile Rule Set Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{e62985ca-ba43-4386-af02-4d5cfe263390}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" showlabel="true" rowspan="3" id="{2aa9bb00-5357-438b-ac76-86e0b29e70fe}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                                <row></row>
+                                <row>
+                                    <cell id="{caac0210-035d-40ea-a502-1a4444477aa3}" showlabel="true" colspan="2" auto="false" rowspan="5">
+                                        <labels>
+                                            <label description="Channel Access Profile Rule Items" languagecode="1033" />
+                                        </labels>
+                                        <control id="ProfileRuleItems" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{c58f9f0a-5f6e-46bf-af7f-e32304e2e63d}</ViewId>
+                                                <RelationshipName>profilerule_entries</RelationshipName>
+                                                <TargetEntityType>channelaccessprofileruleitem</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>200</RecordsPerPage>
+                                                <IsUserView>false</IsUserView>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                        <section name="notes" showlabel="true" showbar="true" id="{AF3EA60A-034B-4FFA-827F-36ABAE6A4A84}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="7" auto="false" id="{8051C568-1F2F-43BC-B3F0-2BC49D47A419}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{AA8C194A-8C7A-492A-9B0D-E89284324ACE}" celllabelposition="Top">
+        <rows>
+            <row>
+                <cell id="{147ae8c3-3bf9-4681-a47c-9e9bc4d383a9}">
+                    <labels>
+                        <label description="Status Reason" languagecode="1033" />
+                    </labels>
+                    <control id="header_statuscode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                </cell>
+                <cell id="{bb5e0e49-1ea8-47fb-96aa-fd05aa19cc20}">
+                    <labels>
+                        <label description="Owner" languagecode="1033" />
+                    </labels>
+                    <control id="ownerid" datafieldname="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+</form>

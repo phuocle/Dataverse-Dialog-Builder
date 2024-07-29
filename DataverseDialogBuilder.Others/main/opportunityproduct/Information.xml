@@ -1,0 +1,278 @@
+<form>
+    <hiddencontrols>
+        <data id="opportunityid" datafieldname="opportunityid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="producttypecode" datafieldname="producttypecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="propertyconfigurationstatus" datafieldname="propertyconfigurationstatus" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{69ca981e-9abe-4c5b-904b-f9bb062e46e7}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="opportunity product information" showlabel="false" showbar="false" id="{29c8908b-9121-420c-878e-e72a8c0b3096}" IsUserDefined="0">
+                            <labels>
+                                <label description="Opportunity Product Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5d80e2e8-bc67-49f0-9486-da676e7b2d3e}">
+                                        <labels>
+                                            <label description="Select Product" languagecode="1033" />
+                                        </labels>
+                                        <control id="isproductoverridden" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="isproductoverridden" />
+                                    </cell>
+                                    <cell id="{bedd03b2-b424-410e-9993-9fef30af1178}">
+                                        <labels>
+                                            <label description="Write-In Product" languagecode="1033" />
+                                        </labels>
+                                        <control id="productdescription" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="productdescription" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8dc28ae4-9726-4a24-9828-d529ad560128}">
+                                        <labels>
+                                            <label description="Existing Product" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setAdditionalParams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.productid_setadditionalparams" libraryName="Sales/OpportunityProduct/OpportunityProduct_main_system_library.js" handlerUniqueId="ca1d6c1c-8b71-46e0-be56-db641f872ec8" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="opportunityid" />
+                                                            <dependency id="productid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="productid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="productid">
+                                            <parameters>
+                                                <DefaultViewReadOnly>true</DefaultViewReadOnly>
+                                                <ViewPickerReadOnly>false</ViewPickerReadOnly>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DisableMru>false</DisableMru>
+                                                <AvailableViewIds>{06377234-F167-47E7-BD5E-F7CC61B82F99},{6ABCA607-018D-4042-A8A7-56A6A1190483},{8BA625B2-6A2A-4735-BAB2-0C74AE8442A4}</AvailableViewIds>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{5eb34b3e-1758-41a1-8ac9-0b84b1a53d3e}">
+                                        <labels>
+                                            <label description="Unit" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setAdditionalParams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.uomid_setadditionalparams" libraryName="Sales/OpportunityProduct/OpportunityProduct_main_system_library.js" handlerUniqueId="0bdf2921-99a6-422a-b2ca-9d7f06a978ad" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="opportunityid" />
+                                                            <dependency id="productid" />
+                                                            <dependency id="uomid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="uomid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="uomid">
+                                            <parameters>
+                                                <DefaultViewReadOnly>true</DefaultViewReadOnly>
+                                                <ViewPickerReadOnly>true</ViewPickerReadOnly>
+                                                <DisableViewPicker>true</DisableViewPicker>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="pricing" showlabel="true" showbar="true" id="{3285b1e6-980b-4229-baf8-2c42b35eb859}" IsUserDefined="0">
+                            <labels>
+                                <label description="Pricing" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{7e91e7a0-3e61-4cae-8caa-a7093099993b}">
+                                        <labels>
+                                            <label description="Pricing" languagecode="1033" />
+                                        </labels>
+                                        <control id="ispriceoverridden" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="ispriceoverridden" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{45f35909-fe6f-4372-afc9-229b474226d2}">
+                                        <labels>
+                                            <label description="Price per unit" languagecode="1033" />
+                                        </labels>
+                                        <control id="priceperunit" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="priceperunit" />
+                                    </cell>
+                                    <cell id="{00a16904-3546-41d0-8371-507b1eb8799d}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7aa7ead9-d5a9-495c-9709-531dab6979dc}">
+                                        <labels>
+                                            <label description="Volume Discount" languagecode="1033" />
+                                        </labels>
+                                        <control id="volumediscountamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="volumediscountamount" />
+                                    </cell>
+                                    <cell id="{3eb453eb-88b7-4621-a058-f52e4d6445ab}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b0a19043-efde-4503-9a29-5b5b00b9483e}">
+                                        <labels>
+                                            <label description="Quantity" languagecode="1033" />
+                                        </labels>
+                                        <control id="quantity" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="quantity" />
+                                    </cell>
+                                    <cell id="{baf50011-7860-463a-bb47-f306a45d59d6}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{efdc44b0-5a03-4bc4-bdb3-cfb93aedda06}">
+                                        <labels>
+                                            <label description="Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="baseamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="baseamount" disabled="true" />
+                                    </cell>
+                                    <cell id="{bbf8a3e5-9e4a-4fb3-9af3-c306ccf0c4db}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6d296836-172b-42a6-92c9-771243c17f1f}">
+                                        <labels>
+                                            <label description="Manual Discount" languagecode="1033" />
+                                        </labels>
+                                        <control id="manualdiscountamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="manualdiscountamount" />
+                                    </cell>
+                                    <cell id="{0abe929b-b372-45ec-ae6b-ec8083adeacb}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0a538493-93dc-47d5-8dc9-6fa1edb6118d}">
+                                        <labels>
+                                            <label description="Tax" languagecode="1033" />
+                                        </labels>
+                                        <control id="tax" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="tax" />
+                                    </cell>
+                                    <cell id="{5b61c66f-06ff-47c1-af22-d29c88129ea6}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b90a4e92-2c35-408d-b80a-70ed60d288cc}">
+                                        <labels>
+                                            <label description="Extended amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="extendedamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="extendedamount" disabled="true" />
+                                    </cell>
+                                    <cell id="{af96b465-e664-4b87-9cfd-75c432737efa}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.OpportunityProductMainSystemLibraryWebResource.formOnLoad" libraryName="Sales/OpportunityProduct/OpportunityProduct_main_system_library.js" handlerUniqueId="b923ae50-9933-4ee4-801c-b3c903c36d66" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="quantity" />
+                        <dependency id="productid" />
+                        <dependency id="uomid" />
+                        <dependency id="isproductoverridden" />
+                        <dependency id="productdescription" />
+                        <dependency id="ispriceoverridden" />
+                        <dependency id="priceperunit" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="isproductoverridden">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.isproductoverridden_onchange" libraryName="Sales/OpportunityProduct/OpportunityProduct_main_system_library.js" handlerUniqueId="cd5165aa-d7a8-4993-9dc9-47e5889a11f6" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="productid" />
+                        <dependency id="uomid" />
+                        <dependency id="productdescription" />
+                        <dependency id="ispriceoverridden" />
+                        <dependency id="priceperunit" />
+                        <dependency id="quantity" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="productid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.productid_onchange" libraryName="Sales/OpportunityProduct/OpportunityProduct_main_system_library.js" handlerUniqueId="5d0c9503-ce49-4cbf-95fc-47d85ab8d1fd" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="quantity" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="uomid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.uomid_onchange" libraryName="Sales/OpportunityProduct/OpportunityProduct_main_system_library.js" handlerUniqueId="268ced03-adde-4081-ba42-3d6aa9cc9656" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="opportunityid" />
+                        <dependency id="productid" />
+                        <dependency id="quantity" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="ispriceoverridden">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.ispriceoverridden_onchange" libraryName="Sales/OpportunityProduct/OpportunityProduct_main_system_library.js" handlerUniqueId="39199630-a922-41d9-b672-5beff8a5cda0" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="priceperunit" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="Sales/OpportunityProduct/OpportunityProduct_main_system_library.js" handlerUniqueId="f455e2e0-c5e1-47a3-be3a-d32fe0ab0804" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="quantity" />
+                        <dependency id="priceperunit" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/OpportunityProduct/OpportunityProduct_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

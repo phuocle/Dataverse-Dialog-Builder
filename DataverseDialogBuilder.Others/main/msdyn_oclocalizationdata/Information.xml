@@ -1,0 +1,74 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{67489580-d521-4ea2-8994-03c6d8f7d16b}" IsUserDefined="1" name="{67489580-d521-4ea2-8994-03c6d8f7d16b}" locklevel="0" expanded="true" showlabel="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{51e7dadb-658a-4415-a6ed-3416d4b64ed6}" name="{51e7dadb-658a-4415-a6ed-3416d4b64ed6}" columns="1" locklevel="0" labelwidth="130" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{edadc515-41d3-47a0-0a02-9ca1e5970bab}" showlabel="true" colspan="1" auto="false">
+                                        <labels>
+                                            <label description="Automated message" languagecode="1033" />
+                                        </labels>
+                                        <control id="System_Message_View" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="msdyn_systemmessageid" disabled="false">
+                                            <parameters>
+                                                <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="msdyn_ocsystemmessage"&gt;138dd085-8ed0-40e3-850a-a57650ef27f3&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                                                <ControlMode>Edit</ControlMode>
+                                                <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{bb1ad832-dc82-64a8-1863-5b7559cb5e6a}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Language code" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_customerlanguageid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_customerlanguageid" disabled="true" uniqueid="{aa4ce31d-03ac-4545-d6e3-10aea3134150}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{0418BE8D-8BC0-4358-A253-14F0DF30F909}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{df440296-8ab3-45aa-8796-f7468cf261f4}" showlabel="true" locklevel="0" colspan="1">
+                                        <labels>
+                                            <label description="Localized text" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_localizedtext" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_localizedtext" uniqueid="{c47dc32d-d094-814d-2b09-a0e6824c8e56}" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <DisplayConditions Order="1" FallbackForm="true">
+        <Everyone />
+    </DisplayConditions>
+    <formLibraries>
+        <Library name="msdyn_OmniChannelSystemMessage.js" libraryUniqueId="{56155aa9-51f3-405c-b537-cb806ecbe6d4}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmniChannelSystemMessage.Instance.loadDefaultLocalizationDataForm" libraryName="msdyn_OmniChannelSystemMessage.js" handlerUniqueId="{11ba7a15-4668-4bf1-8d70-96f78b1869cb}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

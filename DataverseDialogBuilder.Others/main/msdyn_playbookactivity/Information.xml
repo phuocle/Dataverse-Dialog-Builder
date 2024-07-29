@@ -1,0 +1,157 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{e552192b-a316-4135-9009-03f8ad99e15b}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="40%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{edae5a97-1e49-47a7-b5cd-d0de1ad34ba7}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{27a9dad4-d40e-46a0-85e8-29bf57bbe471}" visible="false">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_subject" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{bc5b38f8-4895-4cb5-a51e-35a6657e70b1}" visible="false">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{945cc4bc-579d-7003-7e48-cc9c3149a299}" showlabel="false">
+                                        <labels>
+                                            <label description="Playbook Activity JSON" languagecode="1033" />
+                                        </labels>
+                                        <control id="playbookactivity_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_playbookactivity_json" disabled="false" uniqueid="{7b8c5623-e315-3b79-3dcc-0a4810e67651}">
+                                            <parameters>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="60%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{23645239-7469-49fe-8edb-981939696792}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e3507a76-b1a4-4fbd-97fe-6c8258125d0e}" visible="false">
+                                        <labels>
+                                            <label description="Activity Logical name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_activityLogicalName" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_activityLogicalName" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="documents_sharepoint" id="{599e7622-8003-4da8-87c7-20d55bd56611}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" visible="false">
+            <labels>
+                <label description="Files" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="documents_sharepoint_section" showlabel="false" showbar="false" locklevel="0" id="{dca40a55-4d28-4eb7-a4a7-a89569fccd9a}" IsUserDefined="0" layout="varwidth" columns="1">
+                            <labels>
+                                <label description="Documents Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{c6c2530d-d370-47c7-8ed3-bff589ba3d9d}" showlabel="false" colspan="1" auto="false" rowspan="7">
+                                        <labels>
+                                            <label description="Documents" languagecode="1033" />
+                                        </labels>
+                                        <control id="DocumentsSubGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{120bf213-0f82-4fb2-ae4f-a233eb4e0eaa}">
+                                            <parameters>
+                                                <ViewId>{0016F9F3-41CC-4276-9D11-04308D15858D}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>msdyn_playbookactivity_SharePointDocuments</RelationshipName>
+                                                <TargetEntityType>sharepointdocument</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>true</EnableViewPicker>
+                                                <ViewIds />
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>10</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{7b8c5623-e315-3b79-3dcc-0a4810e67651}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>msdyn_playbookactivity_json</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="PlaybookControls.ActivityForm.PBActivityControl">
+                <parameters>
+                    <JsonData>msdyn_playbookactivity_json</JsonData>
+                    <playbookActivityType>msdyn_activityLogicalName</playbookActivityType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="PlaybookControls.ActivityForm.PBActivityControl">
+                <parameters>
+                    <JsonData>msdyn_playbookactivity_json</JsonData>
+                    <playbookActivityType>msdyn_activityLogicalName</playbookActivityType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="PlaybookControls.ActivityForm.PBActivityControl">
+                <parameters>
+                    <JsonData>msdyn_playbookactivity_json</JsonData>
+                    <playbookActivityType>msdyn_activityLogicalName</playbookActivityType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="PlaybookService.PlaybookActivityDialog.onSaveClickForActivityForm" libraryName="$webresource:Playbook/PlaybookActivity/PlaybookActivityDialog_main_system_library.js" handlerUniqueId="{92fc6939-a630-4b62-9fef-f54c4117dfa3}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="PlaybookService.PlaybookActivityDialog.onLoadForActivityForm" libraryName="$webresource:Playbook/PlaybookActivity/PlaybookActivityDialog_main_system_library.js" handlerUniqueId="{18f7ed7a-1b0b-4305-a891-b21c1a83376d}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+</form>

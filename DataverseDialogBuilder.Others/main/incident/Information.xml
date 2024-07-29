@@ -1,0 +1,409 @@
+<form enablerelatedinformation="true">
+    <tabs>
+        <tab name="tab_recordwall" id="{e94e6ac4-12db-bc8c-ec81-8b20c5987655}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false" labelid="{dec94b8d-c8ea-4f70-acfe-74e28df517d4}">
+            <labels>
+                <label description="What's New" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="tab_recordwall_section_1" showlabel="false" showbar="false" locklevel="0" id="{ac0addcc-a626-6c98-40ee-b11edac36204}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{b770f9b1-a842-4400-950e-be6afb1ba64e}">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{be13b312-b6ac-83d7-34e1-e90dc1ecbec7}" showlabel="false" colspan="1" auto="false" rowspan="15" labelid="{4960f976-6f32-4ff4-baed-5d382f5e3310}">
+                                        <labels>
+                                            <label description="RecordWall" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_RecordWall" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>msdyn_/RecordWall.htm</Url>
+                                                <PassParameters>true</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="0">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <events>
+                <event name="tabstatechange" application="false" active="false">
+                    <Handlers>
+                        <Handler functionName="ActivityFeeds.Form.CustomizationUtils.updateRecordWallRenderingState" libraryName="msdyn_/ActivityFeeds.Form.js" handlerUniqueId="{9beb6ce6-2666-8033-a406-3d68d44b9592}" enabled="true" parameters="" passExecutionContext="true" />
+                    </Handlers>
+                </event>
+            </events>
+        </tab>
+        <tab name="general" verticallayout="true" id="{06a2992a-9cc9-41a5-8f37-d2b2214fdde1}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="overview" showlabel="true" showbar="true" id="{51999b68-4b4c-439b-bb51-1b49edae03a9}" IsUserDefined="0">
+                            <labels>
+                                <label description="Overview" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{7aebc69c-c3bb-4489-a1f2-9faf3c8b363c}">
+                                        <labels>
+                                            <label description="Case Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="title" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{82172fc9-a003-4203-87e6-73c8808ae942}">
+                                        <labels>
+                                            <label description="Customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="customerid" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a9859c32-0cdc-41b5-8e7e-3eb173cab4a8}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="subjectid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="subjectid" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{7f21a1bc-48b1-4423-860b-0efa5cfa7712}">
+                                        <labels>
+                                            <label description="Case Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="casetypecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="casetypecode" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{0653f522-18a7-41d4-a1ae-56164cb8b300}">
+                                        <labels>
+                                            <label description="Origin" languagecode="1033" />
+                                        </labels>
+                                        <control id="caseorigincode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="caseorigincode" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{504fce47-f175-41d7-a747-27a0c9963acc}">
+                                        <labels>
+                                            <label description="Satisfaction" languagecode="1033" />
+                                        </labels>
+                                        <control id="customersatisfactioncode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="customersatisfactioncode" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="assignment information" showlabel="true" showbar="true" id="{34d53885-5bbb-4711-a9ab-1b55928fd020}" IsUserDefined="0">
+                            <labels>
+                                <label description="Assignment Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dae3e345-a070-4428-be90-ab0a926ca354}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                    <cell id="{4a23dbed-e8cc-4a80-b63c-91e40968a6ec}">
+                                        <labels>
+                                            <label description="Status Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{4e5d56cd-eb6a-4ec5-9ac2-499a90f87cf5}">
+                                        <labels>
+                                            <label description="Follow Up By" languagecode="1033" />
+                                        </labels>
+                                        <control id="followupby" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="followupby" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{4887a827-87a9-47ac-8cff-84aa1336649d}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="prioritycode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="prioritycode" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="contract and product information" showlabel="true" showbar="true" id="{af10583d-3e30-4e24-9e5d-d2a84638abe2}" IsUserDefined="0" locklevel="0">
+                            <labels>
+                                <label description="Contract and Product Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e0d2da00-1940-41ec-a875-80032bfd503a}">
+                                        <labels>
+                                            <label description="Contract" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onclick" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.contractid_onclick" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="87f2b857-dbc6-4f77-aca1-7c0ece5f7397" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="customerid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.contractid_setadditionalparams" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="9566a6fa-17cb-4167-a063-ced0202c8dbd" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="customerid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="contractid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="contractid">
+                                            <parameters>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                                <DefaultViewId>{646DE3EE-EBFB-4d19-8A44-4A619505E188}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" id="{be75eccd-45f3-4b40-95a5-69551b1e453a}">
+                                        <labels>
+                                            <label description="Product" languagecode="1033" />
+                                        </labels>
+                                        <control id="productid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="productid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                                <DefaultViewId>{58afc3c5-8add-4552-98cb-473bc8f75619}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{05ad2293-47dc-4119-a655-4a317a1a7838}">
+                                        <labels>
+                                            <label description="Contract Line" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onclick" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.contractdetailid_onclick" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="67b91487-9411-4619-8f6f-3e5363a99cdb" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="contractid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="contractdetailid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="contractdetailid">
+                                            <parameters>
+                                                <FilterRelationshipName>contract_line_items</FilterRelationshipName>
+                                                <DependentAttributeName>incident.contractid</DependentAttributeName>
+                                                <DependentAttributeType>contract</DependentAttributeType>
+                                                <DefaultViewId>{8FA2705C-7E4C-4c0e-B611-4593B35A4C9E}</DefaultViewId>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                                <AllowFilterOff>true</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" id="{84b93c76-6856-4ab9-ad6a-173c86e9685e}">
+                                        <labels>
+                                            <label description="Serial Number" languagecode="1033" />
+                                        </labels>
+                                        <control id="productserialnumber" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="productserialnumber" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{fe76512f-1e10-41e0-bf1b-abc9433d861c}">
+                                        <labels>
+                                            <label description="Service Level" languagecode="1033" />
+                                        </labels>
+                                        <control id="contractservicelevelcode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="contractservicelevelcode" disabled="false" />
+                                    </cell>
+                                    <cell id="{45b0b358-578d-4b16-bbd3-981350b17338}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="notesandkb" id="{ecec23bf-2417-4bdc-a019-0a6aca6c2500}" IsUserDefined="0" expanded="false">
+            <labels>
+                <label description="Notes and Article" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="notes" showlabel="true" showbar="true" id="{7147a561-6867-49c1-8914-acac76cb6bbf}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{00ca23ab-800f-4c81-b265-6623a9821bfe}">
+                                        <labels>
+                                            <label description="Conversation Tabs" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                        <section name="kb article" labelwidth="160" showlabel="true" showbar="true" locklevel="1" id="{e7405683-b295-4b3f-8c52-6fdc8b736a9c}" IsUserDefined="0">
+                            <labels>
+                                <label description="KB ARTICLES" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{5fe36484-a978-4069-b390-fe9400809aaa}">
+                                        <labels>
+                                            <label description="Knowledge Base Article" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onshowdialog" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.kbarticleid_onshowdialog" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="ce03893e-6980-45de-9f21-b1582c9dc936" enabled="true" passExecutionContext="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="kbarticleid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="kbarticleid">
+                                            <parameters>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" id="{cd51ce63-1e6c-453f-95db-ffaaa477984f}">
+                                        <labels>
+                                            <label description="KB Viewer" languagecode="1033" />
+                                        </labels>
+                                        <control id="kbviewer" classid="{a62b6fa9-169e-406c-b1aa-eab828cb6026}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="1b5e628c-097e-41dc-a6ab-51fadd5de253" enabled="true">
+                    <dependencies>
+                        <dependency id="contractid" />
+                        <dependency id="contractdetailid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="customerid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.customerid_onchange" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="d806cf5a-b111-40ee-a955-3261d2c7df9b" enabled="true">
+                    <dependencies>
+                        <dependency id="contractid" />
+                        <dependency id="contractdetailid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="contractid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.contractid_onchange" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="1dc4d1d2-2005-45f7-9dba-1e05f7b2da47" enabled="true">
+                    <dependencies>
+                        <dependency id="contractdetailid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="contractdetailid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.contractdetailid_onchange" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="19563fdc-e3db-4902-ab6c-e50e9ea58ce1" enabled="true">
+                    <dependencies>
+                        <dependency id="contractid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="kbarticleid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.kbarticleid_onchange" libraryName="Service/Incident/Incident_main_system_library.js" handlerUniqueId="ce637d74-526a-411b-8e4b-604f112ad7b5" enabled="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internalcssfile src="/_tree/tree.css.aspx" />
+                <internaljscriptfile src="$webresource:Service/Incident/Incident_main_system_library.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+                <internaljscriptfile src="$webresource:Service/Incident/Convert/Incident_convert_library.js" />
+            </clientincludes>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_ERROR_MISSING_CUSTOMER" resourceid="Web.cs.cases.edit.MissingCustomer" />
+            </clientvariables>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar>
+            <NavBarByRelationshipItem RelationshipName="Incident_ActivityPointers" Id="navActivities" Icon="/_imgs/ico_18_act.gif">
+                <Privileges>
+                    <Privilege Entity="" Privilege="ReadActivity" />
+                </Privileges>
+            </NavBarByRelationshipItem>
+            <NavBarByRelationshipItem RelationshipName="Incident_ActivityPointers" Id="navActivityHistory" TitleResourceId="Tab_Label_History" Icon="/_imgs/ico_18_history.gif" ViewId="21E2B905-6FDB-470d-8517-AD69B4C01268" Sequence="20">
+                <Privileges>
+                    <Privilege Entity="" Privilege="ReadActivity" />
+                </Privileges>
+            </NavBarByRelationshipItem>
+        </NavBar>
+    </Navigation>
+    <hiddencontrols>
+        <data id="FirstResponseSLAStatus" datafieldname="firstresponseslastatus" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="ResolveBySLAStatus" datafieldname="resolvebyslastatus" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <DisplayConditions FallbackForm="true" Order="3">
+        <Everyone />
+    </DisplayConditions>
+    <formLibraries>
+        <Library name="msdyn_/ActivityFeeds.Form.js" libraryUniqueId="{4181da4c-6d13-ba3c-c859-be404e4ee2e3}" />
+    </formLibraries>
+</form>

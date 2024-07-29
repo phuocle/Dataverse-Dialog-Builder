@@ -1,0 +1,54 @@
+<form shownavigationbar="false" showinformselector="false" showImage="false" maxWidth="1920">
+    <header id="{1d4351ec-31f4-4c0f-bf14-42d06b7fa568}" showcommandbar="false" showbody="false" showtabnavigator="false">
+        <rows />
+    </header>
+    <tabs>
+        <tab name="tab1_summary" id="{3ccdc59a-3e44-42fc-b846-abec5769e14a}" IsUserDefined="0" locklevel="0" showlabel="false" expanded="true" contenttype="expandAvailableSpace">
+            <labels>
+                <label description="Intelligent swarming" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="34%">
+                    <sections>
+                        <section name="tab_3_section_1" showlabel="false" showbar="false" locklevel="0" id="{3a681993-2938-45fe-be58-bdba73759f1d}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="General information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{81715a79-e2c7-1a1a-165b-cb34456442d0}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="Channel" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_swarm" classid="{F9A8A304-114E-466A-B582-6771B2AE0D92}" uniqueid="{a22bdd37-4233-4d83-a72b-65547f538383}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Swarming.SwarmingLibrary.handleRedirection" libraryName="Swarming/msdyn_Swarming.js" handlerUniqueId="{27D1301E-8002-4E5E-A1EE-EDE6740372EB}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <footer id="{fa10494a-5aad-4de8-ad0c-59c5abf9a64f}" visible="false">
+        <rows />
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{a22bdd37-4233-4d83-a72b-65547f538383}">
+            <customControl id="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}"></customControl>
+            <customControl formFactor="0" name="msdyn_MscrmControls.Swarm.SwarmingHubHostControl"></customControl>
+            <customControl formFactor="1" name="msdyn_MscrmControls.Swarm.SwarmingHubHostControl"></customControl>
+            <customControl formFactor="2" name="msdyn_MscrmControls.Swarm.SwarmingHubHostControl"></customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <DisplayConditions FallbackForm="true" Order="2">
+        <Everyone />
+    </DisplayConditions>
+</form>

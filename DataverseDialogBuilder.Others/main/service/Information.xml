@@ -1,0 +1,735 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{cb563510-a69a-45ca-a4d9-0491ac708a3a}" IsUserDefined="1" expanded="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{c56fa3c5-6d0e-4838-b7f7-fab556764bba}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{88fdcc17-897e-47f2-a7d9-85b1860b2c7b}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                    <cell id="{a3ee3b09-e73a-a426-5547-da4b848283a0}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Initial Status Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="initialstatuscode" classid="{5D68B988-0661-4DB2-BC3E-17598AD3BE6C}" datafieldname="initialstatuscode" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{756d17b9-c6a1-3844-4c57-6d773c1b2954}" showlabel="true" colspan="2" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Scheduling Engine" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_SchedulingEngine" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_SchedulingEngine" disabled="false" uniqueid="{eea1ea56-c769-4ba8-5560-6dd9c8ad3558}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" showlabel="true" rowspan="4" auto="false" id="{258be3b0-ae1f-4deb-a83b-a07f658a2638}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="scheduling" showlabel="true" showbar="true" id="{2f747309-6a79-4949-b145-194289b3dc4d}" IsUserDefined="0">
+                            <labels>
+                                <label description="Scheduling" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dc7b8eb6-60a9-eab7-1d51-182e77314573}" showlabel="true" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Default Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="duration" classid="{AA987274-CE4E-4271-A803-66164311A958}" datafieldname="duration" disabled="false" uniqueid="{ad3a4c5c-eac5-dabd-4260-e535b7647328}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3253d6ae-a0a4-ceee-c4ee-851be5931114}" showlabel="true" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Start Activities Every" languagecode="1033" />
+                                        </labels>
+                                        <control id="granularity" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="granularity" disabled="false" uniqueid="{86c4700c-6dc7-d4a4-e554-892b7c103c17}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c819a41a-4345-c106-b28b-d8e7c38da54e}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Beginning At" languagecode="1033" />
+                                        </labels>
+                                        <control id="anchoroffset" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="anchoroffset" disabled="false" uniqueid="{8a263335-da72-d4c7-c499-99524753735d}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5ccaee15-3d15-7316-a29e-802a1a02cd94}" showlabel="true" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Required Resources" languagecode="1033" />
+                                        </labels>
+                                        <control id="resourcespecid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="resourcespecid" disabled="false" uniqueid="{6a3b478a-e712-baa0-9b31-63028b469010}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{4FB07F79-8E75-4C91-91CE-120DE6B91A03}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{87236c16-3a3e-499a-a656-3be9c4a729e1}" showlabel="true" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="isschedulable" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="isschedulable" disabled="false" uniqueid="{a16b57a1-4ac9-7742-44cd-11001c317da9}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9a694865-5ebc-86b5-9954-c249add208a2}" showlabel="false" colspan="1" auto="false" rowspan="11">
+                                        <labels>
+                                            <label description="Scheduling" languagecode="1033" />
+                                        </labels>
+                                        <control id="IFRAME_Scheduling" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}">
+                                            <parameters>
+                                                <Url>/SM/services/scheduling.aspx</Url>
+                                                <Border>false</Border>
+                                                <Security>false</Security>
+                                                <Scrolling>no</Scrolling>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="scheduling_uci" showlabel="true" showbar="false" locklevel="0" id="{8137b3b1-2326-4ef5-91df-02fa4999da00}" IsUserDefined="0">
+                            <labels>
+                                <label description="Scheduling" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{27adca5c-7dd9-4d49-911f-f47127dee511}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Default Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="duration_uci" classid="{AA987274-CE4E-4271-A803-66164311A958}" datafieldname="duration" disabled="false" uniqueid="{96cc6fcc-9f98-4443-894b-2887d6ec8eea}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a057da59-98b6-41ac-b4e4-1b133c357e40}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Start Activities Every" languagecode="1033" />
+                                        </labels>
+                                        <control id="granularity_uci" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="granularity" disabled="false" uniqueid="{A8ECCF54-52DE-4540-9337-87EF19F08184}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fe801658-f5dd-4f41-8623-30adfa99b209}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Beginning At" languagecode="1033" />
+                                        </labels>
+                                        <control id="anchoroffset_uci" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="anchoroffset" disabled="false" uniqueid="{A74AAA26-5701-450F-8A58-440534FACA65}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="Resource Requirements" verticallayout="true" id="{dc25ecd9-16b4-4c07-9e4e-cbda5e4f26cd}">
+            <labels>
+                <label description="Resource Requirements" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{c56fa3c5-6d0e-4838-b7f7-fab556764bba}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                        </section>
+                        <section name="ResourceRequirement" showlabel="false" showbar="false" locklevel="0" id="{4b1a3166-81c1-00b3-73c4-17950777dbce}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Requirement Group" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ada725bb-c1a0-53b4-953c-7e67b48caa9a}" showlabel="false" colspan="1" auto="false" rowspan="6">
+                                        <labels>
+                                            <label description="Requirement Group" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResourceRequirements" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" indicationOfSubgrid="true" uniqueid="{11230CDC-652A-B2C4-495A-4C735005E90D}" datafieldname="msdyn_requirementgroupid">
+                                            <parameters>
+                                                <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName />
+                                                <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>4</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="required resources" id="{a88fa943-6ffb-4638-9790-b8ae60dc53bd}" IsUserDefined="0" locklevel="0" expanded="false" showlabel="true" visible="true">
+            <labels>
+                <label description="Required Resources" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="resources" showlabel="false" showbar="false" locklevel="1" id="{92904f1c-fdaf-4666-8980-a30806252c96}" IsUserDefined="0" layout="varwidth" columns="11" height="auto">
+                            <labels>
+                                <label description="Resources" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="false" auto="true" colspan="2" rowspan="13" id="{0a324b22-3ce6-4a08-ba29-55570c6bfa8f}">
+                                        <labels>
+                                            <label description="RuleTree" languagecode="1033" />
+                                        </labels>
+                                        <control id="IFRAME_RuleTree" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}">
+                                            <parameters>
+                                                <Url>/SM/ResourceSpecs/edit.aspx</Url>
+                                                <Security>false</Security>
+                                                <Preload>true</Preload>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="required_resources_uci" id="{3349945e-52e2-17e0-2932-d632191c957e}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false" visible="false">
+            <labels>
+                <label description="Required Resources" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="tab_3_section_1" showlabel="false" showbar="true" locklevel="0" id="{c8014421-0e96-4bc4-887d-0d4b27b1a3dd}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Required Resources" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{397b565c-b0c9-2ecc-70d1-6da86326c871}" showlabel="false" locklevel="1">
+                                        <labels>
+                                            <label description="Required Resources" languagecode="1033" />
+                                        </labels>
+                                        <control id="resourcespecid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="resourcespecid" disabled="false" uniqueid="{664D8581-9B48-1B6E-D11B-1D12D6DC7609}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{4FB07F79-8E75-4C91-91CE-120DE6B91A03}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="Service/Service/Service_main_system_library.js" handlerUniqueId="29f61f07-d90c-43bd-a6b5-ee2a10799a7c" enabled="true" />
+            </InternalHandlers>
+            <Handlers>
+                <Handler functionName="CrmCoreServiceScheduling.Service.onLoadHandler" libraryName="msdyn_/CoreServiceScheduling/Service/Service_CoreServiceScheduling.js" handlerUniqueId="{169bcaa9-1156-43bb-8de5-6551f935053d}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="Service/Service/Service_main_system_library.js" handlerUniqueId="eb06e3f6-77ee-44d2-946f-3c52a54682e1" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+            <Handlers>
+                <Handler functionName="CrmCoreServiceScheduling.Service.onSaveHandler" libraryName="msdyn_/CoreServiceScheduling/Service/Service_CoreServiceScheduling.js" handlerUniqueId="{c599cfc6-cbb8-4537-9d9d-19b0df53d538}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Service/Service/Service_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar />
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عام" />
+                    <Title LCID="1026" Text="Общи" />
+                    <Title LCID="1027" Text="Comuna" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Almindelig" />
+                    <Title LCID="1031" Text="Gemeinsam verwendet" />
+                    <Title LCID="1032" Text="Κοινή" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Üldine" />
+                    <Title LCID="1069" Text="Ohikoak" />
+                    <Title LCID="1035" Text="Yleiset" />
+                    <Title LCID="1036" Text="Commun" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="פריטים נפוצים‬" />
+                    <Title LCID="1081" Text="सामान्य" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Általános" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Жалпы" />
+                    <Title LCID="1042" Text="일반" />
+                    <Title LCID="1063" Text="Bendras" />
+                    <Title LCID="1062" Text="Kopējā informācija" />
+                    <Title LCID="1086" Text="Umum" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Algemeen" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comun" />
+                    <Title LCID="1049" Text="Общие" />
+                    <Title LCID="1051" Text="Spoločné" />
+                    <Title LCID="1060" Text="Skupno" />
+                    <Title LCID="10266" Text="Уобичајено" />
+                    <Title LCID="9242" Text="Uobičajeno" />
+                    <Title LCID="1053" Text="Gemensamt" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Спільна" />
+                    <Title LCID="1066" Text="Thông thường" />
+                    <Title LCID="2052" Text="通用" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1025" Text="المبيعات" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Ventes" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1087" Text="Сатылым" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="1063" Text="Pardavimas" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="10266" Text="Продаја" />
+                    <Title LCID="9242" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1025" Text="خدمة" />
+                    <Title LCID="1026" Text="Услуга" />
+                    <Title LCID="1027" Text="Servei" />
+                    <Title LCID="1029" Text="Služby" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Εξυπηρέτηση" />
+                    <Title LCID="3082" Text="Servicio" />
+                    <Title LCID="1061" Text="Teenindus" />
+                    <Title LCID="1069" Text="Zerbitzua" />
+                    <Title LCID="1035" Text="Palvelu" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Servizo" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1081" Text="सेवा" />
+                    <Title LCID="1050" Text="Usluga" />
+                    <Title LCID="1038" Text="Szolgáltatás" />
+                    <Title LCID="1057" Text="Layanan" />
+                    <Title LCID="1040" Text="Servizio" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1087" Text="Қызмет" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="1063" Text="Aptarnavimas" />
+                    <Title LCID="1062" Text="Serviss" />
+                    <Title LCID="1086" Text="Perkhidmatan" />
+                    <Title LCID="1044" Text="Service" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Service" />
+                    <Title LCID="1046" Text="Serviços" />
+                    <Title LCID="2070" Text="Serviço" />
+                    <Title LCID="1048" Text="Serviciu" />
+                    <Title LCID="1049" Text="Сервис" />
+                    <Title LCID="1051" Text="Služba" />
+                    <Title LCID="1060" Text="Storitev" />
+                    <Title LCID="10266" Text="Услуга" />
+                    <Title LCID="9242" Text="Usluga" />
+                    <Title LCID="1053" Text="Service" />
+                    <Title LCID="1054" Text="การบริการ" />
+                    <Title LCID="1055" Text="Servis" />
+                    <Title LCID="1058" Text="Обслуговування" />
+                    <Title LCID="1066" Text="Dịch vụ" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1025" Text="التسويق" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="10266" Text="Маркетинг" />
+                    <Title LCID="9242" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷​​" />
+                    <Title LCID="1028" Text="行銷​​" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Processessioner" />
+                    <Title LCID="1031" Text="Prozesssitzungen" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διαδικασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesu-saioak" />
+                    <Title LCID="1035" Text="Prosessi-istunnot" />
+                    <Title LCID="1036" Text="Sessions de traitement" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1037" Text="הפעלות תהליך" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Sesije procesa" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Sesi Proses" />
+                    <Title LCID="1040" Text="Sessioni processo" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1087" Text="Процестік сеанстар" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="1063" Text="Procesų seansai" />
+                    <Title LCID="1062" Text="Apstrādes sesijas" />
+                    <Title LCID="1086" Text="Sesi Proses" />
+                    <Title LCID="1044" Text="Prosessøkter" />
+                    <Title LCID="1043" Text="Processessies" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Sessões de Processo" />
+                    <Title LCID="2070" Text="Sessões de Processamento" />
+                    <Title LCID="1048" Text="Sesiuni de proces" />
+                    <Title LCID="1049" Text="Сеансы процессов" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje procesa" />
+                    <Title LCID="10266" Text="Сесије процеса" />
+                    <Title LCID="9242" Text="Sesije procesa" />
+                    <Title LCID="1053" Text="Bearbeta sessioner" />
+                    <Title LCID="1054" Text="เซสชันของกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси обробки" />
+                    <Title LCID="1066" Text="Phiên quá trình" />
+                    <Title LCID="2052" Text="流程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <controlDescriptions>
+        <controlDescription forControl="{664D8581-9B48-1B6E-D11B-1D12D6DC7609}">
+            <customControl id="{270BD3DB-D9AF-4782-9025-509E298DEC0A}">
+                <parameters>
+                    <datafieldname>resourcespecid</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.ServiceConfigControl.ServiceConfigTree">
+                <parameters>
+                    <treeObject>
+                        <BindAttribute>resourcespecid</BindAttribute>
+                        <DefaultViewId>{4FB07F79-8E75-4C91-91CE-120DE6B91A03}</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType />
+                        <AvailableViewIds />
+                        <AllowFilterOff>false</AllowFilterOff>
+                        <DisableQuickFind>false</DisableQuickFind>
+                        <DisableViewPicker>false</DisableViewPicker>
+                    </treeObject>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ServiceConfigControl.ServiceConfigTree">
+                <parameters>
+                    <treeObject>
+                        <BindAttribute>resourcespecid</BindAttribute>
+                        <DefaultViewId>{4FB07F79-8E75-4C91-91CE-120DE6B91A03}</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType />
+                        <AvailableViewIds />
+                        <AllowFilterOff>false</AllowFilterOff>
+                        <DisableQuickFind>false</DisableQuickFind>
+                        <DisableViewPicker>false</DisableViewPicker>
+                    </treeObject>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ServiceConfigControl.ServiceConfigTree">
+                <parameters>
+                    <treeObject>
+                        <BindAttribute>resourcespecid</BindAttribute>
+                        <DefaultViewId>{4FB07F79-8E75-4C91-91CE-120DE6B91A03}</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType />
+                        <AvailableViewIds />
+                        <AllowFilterOff>false</AllowFilterOff>
+                        <DisableQuickFind>false</DisableQuickFind>
+                        <DisableViewPicker>false</DisableViewPicker>
+                    </treeObject>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{A74AAA26-5701-450F-8A58-440534FACA65}">
+            <customControl id="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}">
+                <parameters>
+                    <datafieldname>anchoroffset</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time>anchoroffset</time>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time>anchoroffset</time>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ServiceTime.ServiceTimeControl">
+                <parameters>
+                    <time>anchoroffset</time>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{A8ECCF54-52DE-4540-9337-87EF19F08184}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>granularity</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.ServiceDuration.ServiceDurationControl">
+                <parameters>
+                    <duration>granularity</duration>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ServiceDuration.ServiceDurationControl">
+                <parameters>
+                    <duration>granularity</duration>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ServiceDuration.ServiceDurationControl">
+                <parameters>
+                    <duration>granularity</duration>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{11230CDC-652A-B2C4-495A-4C735005E90D}">
+            <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                <parameters>
+                    <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                    <IsUserView>false</IsUserView>
+                    <RelationshipName />
+                    <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                    <AutoExpand>Fixed</AutoExpand>
+                    <EnableQuickFind>false</EnableQuickFind>
+                    <EnableViewPicker>false</EnableViewPicker>
+                    <ViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewIds>
+                    <EnableJumpBar>false</EnableJumpBar>
+                    <ChartGridMode>All</ChartGridMode>
+                    <VisualizationId />
+                    <IsUserChart>false</IsUserChart>
+                    <EnableChartPicker>true</EnableChartPicker>
+                    <RecordsPerPage>4</RecordsPerPage>
+                    <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.RequirementGroupControl.RequirementGroupControl">
+                <parameters>
+                    <data-set name="RequirementGroupControl">
+                        <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</FilteredViewIds>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.RequirementGroupControl.RequirementGroupControl">
+                <parameters>
+                    <data-set name="RequirementGroupControl">
+                        <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</FilteredViewIds>
+                    </data-set>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.RequirementGroupControl.RequirementGroupControl">
+                <parameters>
+                    <data-set name="RequirementGroupControl">
+                        <ViewId>{887AA16C-C5CD-4447-90B5-113DE222D73E}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <TargetEntityType>msdyn_resourcerequirement</TargetEntityType>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <FilteredViewIds>{887AA16C-C5CD-4447-90B5-113DE222D73E}</FilteredViewIds>
+                    </data-set>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdyn_/CoreServiceScheduling/Service/Service_CoreServiceScheduling.js" libraryUniqueId="{12e86b7c-9f18-4ff2-b068-2ea25ab432e9}" />
+    </formLibraries>
+</form>

@@ -1,0 +1,55 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{acb1bcfa-6591-4c82-a317-f58d83946c79}" IsUserDefined="0">
+            <labels>
+                <label description="Resolution" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="information" showlabel="false" showbar="false" locklevel="0" id="{e53bea03-bc24-4c69-b505-a3e096abb7bd}" IsUserDefined="0" layout="varwidth" columns="11">
+                            <labels>
+                                <label description="Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{56c2484c-830d-9c75-64e8-1555b0de1b56}" showlabel="true" locklevel="0" rowspan="1" colspan="2">
+                                        <labels>
+                                            <label description="Resolution Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="resolutiontypecode" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="resolutiontypecode" disabled="false"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{68c76a79-3fea-4628-a51e-6c1cdebd4fa6}">
+                                        <labels>
+                                            <label description="Resolution" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="subject" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <hiddencontrols>
+        <data id="incidentid" datafieldname="incidentid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" />
+    </hiddencontrols>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.GridCommandActions.incidentResolutionMainFormOnLoad" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{3c8c0cd1-e356-4f82-82e0-3fb6e69dac4a}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

@@ -1,0 +1,92 @@
+<form>
+    <header id="{2784dbb3-6ec5-4e4c-a06d-905be8801a41}">
+        <rows>
+            <row>
+                <cell id="{5b23ea8f-3bdd-4656-abba-d7ff098ba523}">
+                    <labels>
+                        <label description="Predictive score reasons" languagecode="1033" />
+                    </labels>
+                    <control id="FormHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <formparameters>
+        <querystringparameter name="param_ScoreReasonjsonData" type="Object" />
+        <querystringparameter name="param_attributeName" type="SafeString" />
+        <querystringparameter name="param_regardingId" type="SafeString" />
+        <querystringparameter name="param_regardingEntityName" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab id="{c51ae380-f95e-4df3-9ab7-1431c039a04d}" verticallayout="true" name="Tab">
+            <labels>
+                <label description="This is a tab." languagecode="1033" />
+            </labels>
+            <tabfooter id="{592a0b7a-8cfb-42de-ac71-dddf252cb5ec}">
+                <rows>
+                    <row>
+                        <cell id="{07d2ffed-d776-4668-a6a5-b1150966a1ee}">
+                            <labels>
+                                <label description="Ok" languagecode="1033" />
+                            </labels>
+                            <control id="tab1footerok" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{6de3f09a-9401-4a4c-8c88-5d30e5cc6e8e}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="tab1footercancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{f8abafc6-c21f-4581-9ac6-f7971f21bf2f}" showbar="true" showlabel="false" columns="1" name="Section">
+                            <labels>
+                                <label description="These details will show in your email or survey." languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{49b16f8a-17f0-4085-a07b-2ae1ad26e93e}" showlabel="false" rowspan="10">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="IFRAME_ScoreReason" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true">
+                                            <parameters>
+                                                <Scrolling>auto</Scrolling>
+                                                <Security>false</Security>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="tab1footercancel">
+            <Handlers>
+                <Handler functionName="SalesPremiumService.CommandBarActions.OnClick_Close" libraryName="$webresource:SalesPremium_CommandBarActions_library.js" handlerUniqueId="{3A6D69B0-F8A3-4603-8E3D-5E08DD0BEEA6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab1footerok">
+            <Handlers>
+                <Handler functionName="SalesPremiumService.CommandBarActions.OnClick_Ok" libraryName="$webresource:SalesPremium_CommandBarActions_library.js" handlerUniqueId="{053C7719-1305-4CA0-B46F-15659C1DFE13}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="SalesPremiumService.CommandBarActions.OnLoad_SetSurveyVariables" libraryName="$webresource:SalesPremium_CommandBarActions_library.js" handlerUniqueId="{712d0e1a-1638-4b61-a261-c23ff35b0d33}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+</form>

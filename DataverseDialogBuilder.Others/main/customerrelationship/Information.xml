@@ -1,0 +1,109 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{6a4fc8cd-8387-4aa5-865d-61f7ceb9aaa5}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="information" showlabel="false" showbar="false" locklevel="0" id="{c5d35217-15e3-49a5-8659-12a891b083c2}" IsUserDefined="0" layout="varheight" columns="11">
+                            <labels>
+                                <label description="Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{eb1177a7-f7da-4b1a-aed8-ffe0088e3177}">
+                                        <labels>
+                                            <label description="Party 1" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="customerid" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{a4aca5af-7201-4fc5-a10f-ed7f950c16fb}">
+                                        <labels>
+                                            <label description="Party 2" languagecode="1033" />
+                                        </labels>
+                                        <control id="partnerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="partnerid" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{e425a578-1b60-4537-90b8-bfecfc74e82b}">
+                                        <labels>
+                                            <label description="Role 1" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerroleid" classid="{5F986642-5961-4d9f-AB5E-643D71E231E9}" datafieldname="customerroleid" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{f913abff-99d1-4627-b20f-75fe1f4ffdbb}">
+                                        <labels>
+                                            <label description="Role 2" languagecode="1033" />
+                                        </labels>
+                                        <control id="partnerroleid" classid="{5F986642-5961-4d9f-AB5E-643D71E231E9}" datafieldname="partnerroleid" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="1" showlabel="true" rowspan="5" auto="true" id="{0ab5eaf3-b57c-4015-8f44-422e33eb7543}">
+                                        <labels>
+                                            <label description="Description 1" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerroledescription" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="customerroledescription" />
+                                    </cell>
+                                    <cell colspan="1" showlabel="true" rowspan="5" auto="true" id="{599f18ff-0ebb-401e-8bc3-bb416335a4fd}">
+                                        <labels>
+                                            <label description="Description 2" languagecode="1033" />
+                                        </labels>
+                                        <control id="partnerroledescription" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="partnerroledescription" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="CustomerRelationship_main_system_library.js" handlerUniqueId="cd729dd6-54c7-49de-9ce8-a62b95b3c41b" enabled="true">
+                    <dependencies>
+                        <dependency id="customerid" />
+                        <dependency id="partnerid" />
+                        <dependency id="customerroleid" />
+                        <dependency id="partnerroleid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="customerid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.customerid_onchange" libraryName="CustomerRelationship_main_system_library.js" handlerUniqueId="0a5add5e-3fb3-485a-8927-3e10a093188b" enabled="true">
+                    <dependencies>
+                        <dependency id="customerroleid" />
+                        <dependency id="partnerroleid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="partnerid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.partnerid_onchange" libraryName="CustomerRelationship_main_system_library.js" handlerUniqueId="93a0a69e-902d-4614-b1bb-c98055c49df4" enabled="true">
+                    <dependencies>
+                        <dependency id="customerroleid" />
+                        <dependency id="partnerroleid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CustomerRelationship_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

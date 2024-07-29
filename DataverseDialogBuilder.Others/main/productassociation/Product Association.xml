@@ -1,0 +1,184 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{d313e190-ac6d-46d8-b5e2-ee88272a0a3a}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{786064f6-5912-47ee-8e9a-4e6b772bacbb}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{09ae1b81-0b17-acbd-7e8a-14b12147da65}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Bundle" languagecode="1033" />
+                                        </labels>
+                                        <control id="productid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="productid" disabled="true">
+                                            <parameters>
+                                                <DefaultViewId>{DD35464E-BB9D-4575-9270-BA09DB4244C1}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c32b60e0-b65b-2dee-4039-9394854eb532}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Product" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.associatedproduct_setadditionalparams" libraryName="ProductManagement/ProductAssociation/ProductAssociation_main_system_library.js" handlerUniqueId="d448f395-8424-40ba-97b0-d2b1512cadeb" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="uomid" />
+                                                            <dependency id="uomscheduleid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.associatedproduct_onafterselect" libraryName="ProductManagement/ProductAssociation/ProductAssociation_main_system_library.js" handlerUniqueId="179bab0a-7c72-4270-849a-8b654f1d5682" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="uomid" />
+                                                            <dependency id="uomscheduleid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="associatedproduct" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="associatedproduct" disabled="false">
+                                            <parameters>
+                                                <DefaultViewId>{89A80F99-F388-412A-ADD2-D75C6ACD930F}</DefaultViewId>
+                                                <DisableMru>true</DisableMru>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8157ad33-be8b-01a6-2ce5-b1a2ed126182}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Quantity" languagecode="1033" />
+                                        </labels>
+                                        <control id="quantity" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="quantity" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{DFC8F565-D408-4DA4-8F0D-BB746409CF0B}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Required/Optional" languagecode="1033" />
+                                        </labels>
+                                        <control id="productisrequired" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="productisrequired" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{89F54C96-F578-437D-A66A-B07B2F574DB1}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Units" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.uomid_setadditionalparams" libraryName="ProductManagement/ProductAssociation/ProductAssociation_main_system_library.js" handlerUniqueId="ebe81390-b97f-4702-b6f9-1084e1ae0612" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="uomscheduleid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="uomid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="uomid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="product_association_dynamic_properties" id="{96A9F169-A4C9-46F9-B727-222BA4D93B1A}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" visible="false">
+            <labels>
+                <label description="PRODUCT PROPERTIES" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="product_association_dynamic_properties_section" showlabel="false" showbar="false" locklevel="0" id="{1a503faf-5fca-4bb0-8c8b-12d05a28613e}" IsUserDefined="0" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8543d69e-2556-4fc4-b9a0-07db097fdf65}" showlabel="false" auto="false" rowspan="7" colspan="2">
+                                        <labels>
+                                            <label description="Product Properties" languagecode="1033" />
+                                        </labels>
+                                        <control id="product_association_dynamic_properties" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{63ABC191-F333-47E1-9F3F-EF1CBF8DF1C0}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>Product_DynamicProperty</RelationshipName>
+                                                <TargetEntityType>dynamicproperty</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>5</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="ProductManagement/ProductAssociation/ProductAssociation_main_system_library.js" handlerUniqueId="5795267e-05c0-4bb2-845b-8b65a54be199" enabled="true">
+                    <dependencies>
+                        <dependency id="uomid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="associatedproduct">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.associatedproduct_onchange" libraryName="ProductManagement/ProductAssociation/ProductAssociation_main_system_library.js" handlerUniqueId="ed131fec-4c5f-4bb8-b15f-4a86593bc5a7" enabled="true">
+                    <dependencies>
+                        <dependency id="uomid" />
+                        <dependency id="uomscheduleid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ProductManagement/ProductAssociation/ProductAssociation_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

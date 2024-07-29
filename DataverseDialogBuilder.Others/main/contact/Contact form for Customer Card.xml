@@ -1,0 +1,198 @@
+<form showImage="true" headerdensity="HighWithControls" showinformselector="false">
+    <tabs>
+        <tab name="Card Tab" id="fbcb51fb-fb51-4be1-9437-1d84499a5481" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{e320e0e8-d69a-4f68-a2a7-bd27f803ea4f}">
+            <labels>
+                <label description="Card Tab" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Customer card" id="222f1f40-e866-4deb-9d71-f1995ae2e707" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{40a0bdec-f927-4bb6-9743-fb37d4377577}">
+                            <labels>
+                                <label description="Customer card" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{dd09be9a-8f05-4d9a-8c72-b5e04de2af52}" colspan="1" rowspan="1" labelid="{ff643abc-24af-4b27-bc27-d1bfe1c7b19d}">
+                                        <labels>
+                                            <label description="Account Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentcustomerid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" datafieldname="parentcustomerid" uniqueid="{b29d692b-4061-49f0-8073-6ff0680124f4}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Recent cases" id="4eff7af1-9673-4ba0-8473-e0e155d4b902" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{6a9b3774-3059-4d47-8763-7d4e48785a9d}">
+                            <labels>
+                                <label description="Recent cases" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{8b192fed-6181-4ef2-bc4e-4dbb540122ea}" colspan="1" rowspan="1" showlabel="false" labelid="{3285afb5-9055-4c10-a3c4-91b214028348}">
+                                        <labels>
+                                            <label description="New recent cases" languagecode="1033" />
+                                        </labels>
+                                        <control indicationOfSubgrid="true" id="cc_1662431725068" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{e9eb42e1-ed07-469e-8935-63f53f0aae35}">
+                                            <parameters>
+                                                <TargetEntityType>incident</TargetEntityType>
+                                                <ViewId>{1ffc069e-b296-4a1e-9768-2b8ca570f40a}</ViewId>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>incident_customer_contacts</RelationshipName>
+                                                <ViewIds>{00000000-0000-0000-00AA-000010001028},{1ffc069e-b296-4a1e-9768-2b8ca570f40a}</ViewIds>
+                                                <VisualizationId>{4143B74E-4A07-4D01-9FFE-2CDCAA4208FD}</VisualizationId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{3ff9aa06-4e43-41ce-afa9-22a038af5c19}" celllabelposition="Top" columns="1" labelwidth="115" showcommandbar="false" showbody="false" showtabnavigator="false">
+        <rows>
+            <row>
+                <cell id="{24be01cc-16a6-8eea-8916-42d20a1097ae}" showlabel="true" locklevel="1" labelid="{fdf601ae-8088-4a5b-b398-a0595da1f3d5}">
+                    <labels>
+                        <label description="Owner" languagecode="1033" />
+                    </labels>
+                    <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{542e581d-cca1-5e40-e6d9-d67a9d1468b4}" showlabel="true" locklevel="0" colspan="1" rowspan="1" labelid="{21837cf0-1fa8-45fc-8dcf-fa13887c34a9}">
+                    <labels>
+                        <label description="Full Name" languagecode="1033" />
+                    </labels>
+                    <control id="header_fullname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="fullname" disabled="false" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <controlDescriptions>
+        <controlDescription forControl="{b29d692b-4061-49f0-8073-6ff0680124f4}">
+            <customControl id="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>parentcustomerid</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.CustomerCard">
+                <parameters>
+                    <property1 type="Lookup.Customer">parentcustomerid</property1>
+                    <property2 type="SingleLine.Email">emailaddress1</property2>
+                    <property3 type="SingleLine.Text">mobilephone</property3>
+                    <property4 type="OptionSet">preferredcontactmethodcode</property4>
+                    <property8 type="Enum" static="true">address1_composite</property8>
+                    <enableEditing type="Enum" static="true">1</enableEditing>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                    <marginStart static="true" type="Whole.None">0</marginStart>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.CustomerCard">
+                <parameters>
+                    <property1 type="Lookup.Customer">parentcustomerid</property1>
+                    <property2 type="SingleLine.Email">emailaddress1</property2>
+                    <property3 type="SingleLine.Text">mobilephone</property3>
+                    <property4 type="OptionSet">preferredcontactmethodcode</property4>
+                    <property8 type="Enum" static="true">address1_composite</property8>
+                    <enableEditing type="Enum" static="true">1</enableEditing>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                    <marginStart static="true" type="Whole.None">0</marginStart>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.CustomerCard">
+                <parameters>
+                    <property1 type="Lookup.Customer">parentcustomerid</property1>
+                    <property2 type="SingleLine.Email">emailaddress1</property2>
+                    <property3 type="SingleLine.Text">mobilephone</property3>
+                    <property4 type="OptionSet">preferredcontactmethodcode</property4>
+                    <property8 type="Enum" static="true">address1_composite</property8>
+                    <enableEditing type="Enum" static="true">1</enableEditing>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                    <marginStart static="true" type="Whole.None">0</marginStart>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{e9eb42e1-ed07-469e-8935-63f53f0aae35}">
+            <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                <parameters>
+                    <TargetEntityType>incident</TargetEntityType>
+                    <ViewId>{1ffc069e-b296-4a1e-9768-2b8ca570f40a}</ViewId>
+                    <EnableViewPicker>false</EnableViewPicker>
+                    <IsUserView>false</IsUserView>
+                    <RelationshipName>incident_customer_contacts</RelationshipName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.RecentRecords">
+                <parameters>
+                    <data-set name="Grid">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{1ffc069e-b296-4a1e-9768-2b8ca570f40a}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>incident_customer_contacts</RelationshipName>
+                        <FilteredViewIds />
+                    </data-set>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.RecentRecords">
+                <parameters>
+                    <data-set name="Grid">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{1ffc069e-b296-4a1e-9768-2b8ca570f40a}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>incident_customer_contacts</RelationshipName>
+                        <FilteredViewIds />
+                    </data-set>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.RecentRecords">
+                <parameters>
+                    <data-set name="Grid">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{1ffc069e-b296-4a1e-9768-2b8ca570f40a}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>incident_customer_contacts</RelationshipName>
+                        <FilteredViewIds />
+                    </data-set>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <footer id="{90cd2e76-e5d7-4a4c-9a17-faa2a12dc301}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+            <row>
+                <cell id="{2b6adbaf-af40-43f0-a017-61b7eb3b5556}" showlabel="false" labelid="{17b38871-4c5e-4599-86b4-3cfee2f49cfb}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{aae68f5e-66b6-4e75-a29b-c84e1780647a}" showlabel="false" labelid="{8517a279-9502-4db2-aa1e-9713dc3858ea}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{8f2e1b86-7cdf-45b2-9101-15146bd6d303}" showlabel="false" labelid="{2fc58fcd-e193-44cc-aff7-e05b2cef54f2}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <DisplayConditions FallbackForm="false" Order="30">
+        <Role Id="{c737e307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+        <Role Id="{183ce307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+        <Role Id="{b2a2f470-5e24-45d5-adab-7613c5022318}" />
+        <Role Id="{3DAC4D9E-568C-E611-80D4-00155D42A122}" />
+        <Role Id="{507bdc86-1a76-4529-9332-fd126af1b97a}" />
+    </DisplayConditions>
+</form>

@@ -1,0 +1,159 @@
+<form>
+    <hiddencontrols>
+        <data id="entity" datafieldname="entity" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{7ca15f12-6320-46b6-bd33-70010c1b9c34}" IsUserDefined="1" name="{5b6ae5e5-8f54-4363-b906-48722f438b65}" locklevel="0" expanded="true" showlabel="false">
+            <labels>
+                <label description="Details" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="true" showbar="true" IsUserDefined="0" id="{f7fab389-5931-4898-9ea3-141db7c2158b}" labelwidth="200">
+                            <labels>
+                                <label description="CONFIGURATION INFORMATION" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{142dc429-7baf-4ad0-b3a4-59b07aa1009b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b783cbea-86d3-4899-90c7-51b6fd7df91b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Source Entity" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.sourceentitypicklist_onchange" libraryName="KnowledgeSearch_main_system_library.js" handlerUniqueId="cfc80dcd-6207-4cbd-828f-b1e1470c25e5" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="entity" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="sourceentity" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="sourceentity" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cd306b82-533a-4856-899c-414a186eef21}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Maximum Number of Key Phrases" languagecode="1033" />
+                                        </labels>
+                                        <control id="maxkeywords" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="maxkeywords" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{79259494-FC75-49EB-AED4-03ADA2FD6AE8}" colspan="2" rowspan="5" auto="true" showlabel="true" locklevel="0" labelid="{CADE8441-C048-4C1A-9E60-15F574556400}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab id="{1332c206-6b04-4ef4-b5d1-1a43c59612de}" name="{6a04c119-906c-4d8d-84d6-a470e79cbfcc}" expanded="true" IsUserDefined="0" locklevel="0" showlabel="true">
+            <labels>
+                <label description="Keyword or Key Phrase Determination Fields" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="{87c466a2-37f3-4cde-a484-c6c75eff544d}" showlabel="false" showbar="false" locklevel="0" id="{e4ca41b9-20bb-4670-b41c-383f5244c8ed}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{5741b4fa-1db7-448e-b6f3-9c59ea6950dc}" showlabel="true" colspan="1" auto="false" rowspan="6">
+                                        <labels>
+                                            <label description="Text Analytics Entity Mappings" languagecode="1033" />
+                                        </labels>
+                                        <control id="textanalyticsentitymappings" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{68BB63B8-7B7A-4140-B7C7-2A56A878295A}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>knowledgesearchmodel_textanalyticsentitymapping</RelationshipName>
+                                                <TargetEntityType>textanalyticsentitymapping</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId></VisualizationId>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>4</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row></row>
+                                <row></row>
+                                <row></row>
+                                <row></row>
+                                <row></row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="KnowledgeSearch_main_system_library.js" handlerUniqueId="562d57c7-9184-4840-8a14-a1137310b979" enabled="true"></Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:KnowledgeSearch_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+</form>

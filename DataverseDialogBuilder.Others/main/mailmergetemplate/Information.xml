@@ -1,0 +1,119 @@
+<form>
+    <hiddencontrols>
+        <data id="filename" datafieldname="filename" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="filesize" datafieldname="filesize" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="defaultfilter" datafieldname="defaultfilter" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{DDBE7742-F771-4657-8191-B99DAC81B123}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Details" showlabel="true" showbar="true" id="{227785B7-97AD-4921-AC04-BDF2D81911B6}" IsUserDefined="0">
+                            <labels>
+                                <label description="Details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{9054c53b-9f81-49ed-8a22-1dddbf84d673}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" rowspan="3" auto="true" id="{d51ce399-e40e-479e-baed-aa9c970ff9af}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="Categorization" showlabel="true" showbar="true" id="{3D82C14B-7FAC-4E49-9314-C4FA451F37D8}" IsUserDefined="0">
+                            <labels>
+                                <label description="Categorization" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{85e34d2c-6ec0-4864-84ea-917727ab0f9c}">
+                                        <labels>
+                                            <label description="Associated Entity" languagecode="1033" />
+                                        </labels>
+                                        <control id="templatetypecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="templatetypecode" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Ownership" showlabel="true" showbar="true" id="{3A350CD8-7FC1-47CB-8BBA-2605A52B34D2}" IsUserDefined="0">
+                            <labels>
+                                <label description="Ownership" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d8fd36ef-d018-4d57-927e-be7ca510eae7}">
+                                        <labels>
+                                            <label description="Ownership" languagecode="1033" />
+                                        </labels>
+                                        <control id="ispersonal" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="ispersonal" disabled="true" />
+                                    </cell>
+                                    <cell auto="true" id="{5074912c-c688-47a3-8803-ae85d0b9b648}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Language" showlabel="true" showbar="true" id="{D4560851-4559-4E5F-A04E-268CF3864312}" IsUserDefined="0">
+                            <labels>
+                                <label description="Language" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{311056a7-2b36-4a91-8e97-2fca6aab4bfa}">
+                                        <labels>
+                                            <label description="Template Language" languagecode="1033" />
+                                        </labels>
+                                        <control id="languagecode" classid="{B634828E-C390-444A-AFE6-E07315D9D970}" datafieldname="languagecode" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="MailMergeTemplate_main_system_library.js" handlerUniqueId="6c02bb00-c60e-4047-ab77-e9f48c108c57" enabled="true">
+                    <dependencies>
+                        <dependency id="templatetypecode" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="MailMergeTemplate_main_system_library.js" handlerUniqueId="87e9748a-169d-4a0b-a2b2-8496da21ce47" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:MailMergeTemplate_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

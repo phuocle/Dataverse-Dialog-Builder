@@ -208,7 +208,7 @@ export async function GetObjectTypeCode(entity_logical_name) {
 
 export async function GetLanguageCode() {
     try {
-        const output = await ExecuteCustomAction("GetLanguageCode", input);
+        const output = await ExecuteCustomAction("GetLanguageCode", {});
         return output.languagecode;
     }
     catch {

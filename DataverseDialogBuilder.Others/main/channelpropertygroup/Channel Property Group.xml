@@ -1,0 +1,129 @@
+<form shownavigationbar="true" showImage="false" maxWidth="1900">
+    <hiddencontrols>
+        <data id="channelpropertygroupid" datafieldname="channelpropertygroupid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="property_bag_summary" id="{35562846-8E48-4966-AE5D-842FB08086B8}" IsUserDefined="0" locklevel="0" showlabel="false" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{FA1AC29E-E107-4121-A946-54FBCA862102}" name="property_bag_properties_1" columns="1">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{63F0B129-C4FB-4B7E-BCA8-A1BA8DB12356}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                    <cell id="{8a46e615-7c4b-438c-7a14-70eceb06b33c}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Created On" languagecode="1033" />
+                                        </labels>
+                                        <control id="createdon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{38e90275-b4a7-4466-9972-89e8b3d91788}">
+                                        <labels>
+                                            <label description="Source Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="regardingtypecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="regardingtypecode" disabled="false" />
+                                    </cell>
+                                    <cell id="{F7BC54FB-8E8E-4331-AC49-BD9275CF8A11}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{f181ec0a-88d2-4490-b4ad-cb6566c40625}" name="property_bag_items_1" columns="1">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ca0196d9-af2b-486d-9e97-d1533a189b4b}">
+                                        <labels>
+                                            <label description="Channel Properties" languagecode="1033" />
+                                        </labels>
+                                        <control id="propertiesGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{82d2cec9-66d8-46f7-9de6-068da241adee}</ViewId>
+                                                <RelationshipName>ChannelPropertyGroup_ChannelProperty</RelationshipName>
+                                                <TargetEntityType>channelproperty</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>20</RecordsPerPage>
+                                                <MaxRowsBeforeScroll>8</MaxRowsBeforeScroll>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="Channel_Property_Group_main_system_library.js" handlerUniqueId="4842ce96-833c-4abc-a6ea-94ff497cc081" enabled="true"></Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Channel_Property_Group_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <DisplayConditions Order="1">
+        <Everyone />
+    </DisplayConditions>
+</form>

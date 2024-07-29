@@ -1,0 +1,358 @@
+<form>
+    <header id="{f20624ec-ce7a-4c63-bc33-5a675f3261a0}">
+        <rows>
+            <row>
+                <cell id="{a3b095a2-a389-4877-be48-1bfc1ea909b1}">
+                    <labels>
+                        <label description="Relationship analytics KPIs" languagecode="1033" />
+                    </labels>
+                    <control id="FormHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <formparameters>
+        <querystringparameter name="param_ScoreReasonjsonData" type="Object" />
+        <querystringparameter name="param_attributeName" type="SafeString" />
+        <querystringparameter name="param_regardingId" type="SafeString" />
+        <querystringparameter name="param_regardingEntityName" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab id="{0d1b2f1a-d89e-496e-b461-587b39ccb8ee}" verticallayout="true" name="MainTab">
+            <labels>
+                <label description="This is a tab." languagecode="1033" />
+            </labels>
+            <tabfooter id="{b5a5f8d8-7880-4bdc-a046-fd87f429f3d2}">
+                <rows>
+                    <row>
+                        <cell id="{bcb3f89e-7da6-48d5-a343-47e43a4d9f81}">
+                            <labels>
+                                <label description="Ok" languagecode="1033" />
+                            </labels>
+                            <control id="tab1footerok" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{7082dd2d-6a02-4568-9a7f-6cc4853aaa34}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="tab1footercancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{2a1891cc-0913-4b14-b9f8-0e2ee5457551}" visible="true" showbar="true" showlabel="false" columns="1" name="Section1">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8e098bc1-64a5-4fda-8658-e025bcae639d}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Emails sent" languagecode="1033" />
+                                        </labels>
+                                        <control id="EmailsSent" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{bcdf8067-a348-4f19-aa3e-75bd005c1531}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Opened emails" languagecode="1033" />
+                                        </labels>
+                                        <control id="OpenedEmails" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9b2fde59-ad48-415d-967a-18ab5b3c2cf7}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Links clicked" languagecode="1033" />
+                                        </labels>
+                                        <control id="LinksClicked" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{8bdd34f8-7420-4c71-aa53-618ddada1f31}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Attachments open" languagecode="1033" />
+                                        </labels>
+                                        <control id="AttachmentsOpen" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{76ce82ec-1c90-461c-b64b-da08d03b38ea}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Meetings sent" languagecode="1033" />
+                                        </labels>
+                                        <control id="MeetingsSent" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{6d02d767-d956-49cb-856c-deb6cc8c934a}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Meetings received" languagecode="1033" />
+                                        </labels>
+                                        <control id="MeetingsReceived" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{06e21774-b843-45b0-a956-d0fdecb1e098}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Phone calls made" languagecode="1033" />
+                                        </labels>
+                                        <control id="PhoneCallsMade" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{ed8309ef-c5a3-470f-885e-13a2d20274db}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Phone calls received" languagecode="1033" />
+                                        </labels>
+                                        <control id="PhoneCallsReceived" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{22052362-f5f5-4ced-8566-27c893febd71}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Time spent by team (minutes)" languagecode="1033" />
+                                        </labels>
+                                        <control id="TimeSpentByTeam" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{c1378281-c78f-498c-a9be-6fafe7a5d15f}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Face time with customer (minutes)" languagecode="1033" />
+                                        </labels>
+                                        <control id="FaceTimeWithCustomer" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d924d728-32d3-4d88-8408-99924415e56b}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Response rate by them" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResponseRateByThem" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{b7292eec-ff3c-44d0-904c-6b33c96c8d28}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Response rate by us" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResponseRateByUs" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ae0026fc-afcb-4075-93de-b282b2c2534d}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Average first response time by us (minutes)" languagecode="1033" />
+                                        </labels>
+                                        <control id="AverageFirstResponseTimeByUs" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{fb5b79b9-f0f9-47d4-b1e0-fcf75f06a73d}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Average first response time by them (minutes)" languagecode="1033" />
+                                        </labels>
+                                        <control id="AverageFirstResponseTimeByThem" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9ed371a0-e3d1-4887-b838-4d4cce52d691}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Emails received" languagecode="1033" />
+                                        </labels>
+                                        <control id="EmailsReceived" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{40cfacca-a0ad-470b-b2cb-34a8236a1af5}" rowspan="1" colspan="1" visible="false">
+                                        <labels>
+                                            <label description="LinkedIn emails sent" languagecode="1033" />
+                                        </labels>
+                                        <control id="LinkedInEmailsSent" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5902d344-aeae-4c1c-8a70-5eddb1b76a56}" rowspan="1" colspan="1" visible="false">
+                                        <labels>
+                                            <label description="Time spent by team with li" languagecode="1033" />
+                                        </labels>
+                                        <control id="TimeSpentByTeamWithLi" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{e1577f73-53a4-4b48-82dd-2b7cc2cee1ad}" rowspan="1" colspan="1" visible="false">
+                                        <labels>
+                                            <label description="Face time with customer with li" languagecode="1033" />
+                                        </labels>
+                                        <control id="FaceTimeWithCustomerWithLi" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{c702ba39-ef1d-4daf-81c0-cd6f1dee90b9}" visible="false" showbar="true" showlabel="true" columns="1" name="Section2">
+                            <labels>
+                                <label description="Life time KPIs response" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{63fe2d76-b659-40d6-a08c-681b29cdca0a}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Emails sent" languagecode="1033" />
+                                        </labels>
+                                        <control id="EmailsSent1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{f389e20a-c396-4c70-840a-8420c7f67420}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Opened emails" languagecode="1033" />
+                                        </labels>
+                                        <control id="OpenedEmails1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8cbab274-78ca-4e5b-9700-35313c2ae9dd}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Links clicked" languagecode="1033" />
+                                        </labels>
+                                        <control id="LinksClicked1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{89520f99-ce97-458d-8434-7a660ff4b032}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Attachments open" languagecode="1033" />
+                                        </labels>
+                                        <control id="AttachmentsOpen1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a60c9deb-7b5a-4c94-9922-2ba1abc13751}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Meetings sent" languagecode="1033" />
+                                        </labels>
+                                        <control id="MeetingsSent1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{4aebfc94-24cb-4371-bd12-6ea23449a6bf}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Meetings received" languagecode="1033" />
+                                        </labels>
+                                        <control id="MeetingsReceived1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ece2a370-9066-4752-9896-0925d511f9f2}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Phone calls made" languagecode="1033" />
+                                        </labels>
+                                        <control id="PhoneCallsMade1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{d3f43d67-b874-4862-b9e4-6e540b0ea278}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Phone calls received" languagecode="1033" />
+                                        </labels>
+                                        <control id="PhoneCallsReceived1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{851a819a-94e7-4315-b388-2749cb3b23d0}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Time spent by team (minutes)" languagecode="1033" />
+                                        </labels>
+                                        <control id="TimeSpentByTeam1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{063a38b2-f002-4a62-90c3-02134c915470}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Face time with customer (minutes)" languagecode="1033" />
+                                        </labels>
+                                        <control id="FaceTimeWithCustomer1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{415d4824-a84e-46bc-b36f-ed34670fba7c}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Response rate by them" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResponseRateByThem1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{f1bfebcf-1617-4cd1-9dff-da1b559a1295}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Response rate by us" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResponseRateByUs1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{20da00b9-7553-4a8f-a7c7-73f73b49b0ef}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Average first response time by us (minutes)" languagecode="1033" />
+                                        </labels>
+                                        <control id="AverageFirstResponseTimeByUs1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{f4b43db0-cd07-4ba3-93c8-024ea86176a1}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Average first response time by them (minutes)" languagecode="1033" />
+                                        </labels>
+                                        <control id="AverageFirstResponseTimeByThem1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e4f7add6-d864-46aa-ad08-a78c2bf60106}" rowspan="1" colspan="1">
+                                        <labels>
+                                            <label description="Emails received" languagecode="1033" />
+                                        </labels>
+                                        <control id="EmailsReceived1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{1ff23bdc-9022-46c8-b9af-49fd427fa306}" rowspan="1" colspan="1" visible="false">
+                                        <labels>
+                                            <label description="LinkedIn emails sent" languagecode="1033" />
+                                        </labels>
+                                        <control id="LinkedInEmailsSent1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3a7fb5bb-ebca-4401-80cc-6106ee151e16}" rowspan="1" colspan="1" visible="false">
+                                        <labels>
+                                            <label description="Time spent by team with li" languagecode="1033" />
+                                        </labels>
+                                        <control id="TimeSpentByTeamWithLi1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{224eca71-970e-458e-9e04-d59b68493398}" rowspan="1" colspan="1" visible="false">
+                                        <labels>
+                                            <label description="Face time with customer with li" languagecode="1033" />
+                                        </labels>
+                                        <control id="FaceTimeWithCustomerWithLi1" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{a853e78b-2c76-414c-9c48-74714c544f1e}" showbar="true" showlabel="true" visible="false" columns="1" name="Section3">
+                            <labels>
+                                <label description="Similar opportunities" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{20fbab8b-6f34-4461-9527-f562cce6a10c}" showlabel="false" rowspan="10">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="IFRAME_ScoreReason" classid="{FD2A7985-3187-444e-908D-6624B21F69C0}" isunbound="true">
+                                            <parameters>
+                                                <Scrolling>auto</Scrolling>
+                                                <Security>false</Security>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="tab1footercancel">
+            <Handlers>
+                <Handler functionName="SalesPremiumService.CommandBarActions.OnClick_Close" libraryName="$webresource:SalesPremium_CommandBarActions_library.js" handlerUniqueId="{ADC7E877-6FDC-4404-8744-A85F607A5095}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="tab1footerok">
+            <Handlers>
+                <Handler functionName="SalesPremiumService.CommandBarActions.OnClick_Ok" libraryName="$webresource:SalesPremium_CommandBarActions_library.js" handlerUniqueId="{58867262-90ef-47e3-a90e-0a5d1b7a2f60}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <InternalHandlers>
+                <Handler functionName="SalesPremiumService.CommandBarActions.OnLoad_Kpi" libraryName="$webresource:SalesPremium_CommandBarActions_library.js" handlerUniqueId="{712d0e1a-1638-4b61-a261-c23ff35b0d33}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+</form>

@@ -1,0 +1,146 @@
+<form showImage="true" headerdensity="HighReadOnlyValues" shownavigationbar="false" showinformselector="false">
+    <hiddencontrols>
+        <data id="fullname" datafieldname="fullname" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="address1_addressid" datafieldname="address1_addressid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="address2_addressid" datafieldname="address2_addressid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="SUMMARY_TAB" id="{76344752-3e0e-43a5-afc8-3c6111d89482}" IsUserDefined="0" showlabel="true" expanded="true" labelid="{3a26db5e-8089-4167-a992-4286140d6bdf}">
+            <labels>
+                <label description="Summary" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="Customer_Contact_Cases" id="58482f2a-d9b5-438a-bf75-b88021ad625c" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{731fb387-3095-4d5a-a6ab-db77f3fa8686}">
+                            <labels>
+                                <label description="Customer Contact Cases" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{b326e6fb-60ab-4aa4-947a-b8dac610b776}" rowspan="4" colspan="1" auto="false" showlabel="false" labelid="{8497277e-89b3-4e03-9649-2d71aacc6ed9}">
+                                        <labels>
+                                            <label description="Recent Cases" languagecode="1033" />
+                                        </labels>
+                                        <control indicationOfSubgrid="true" id="Recent_Cases" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{a4d255be-3021-4d75-90d6-373bf8aa66f0}">
+                                            <parameters>
+                                                <RecordsPerPage>4</RecordsPerPage>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <TargetEntityType>incident</TargetEntityType>
+                                                <ViewId>{6390E7F6-4528-ED11-9DB1-000D3A8D107A}</ViewId>
+                                                <ViewIds>{00000000-0000-0000-00AA-000010001028},{6390E7F6-4528-ED11-9DB1-000D3A8D107A}</ViewIds>
+                                                <RelationshipName>incident_customer_contacts</RelationshipName>
+                                                <VisualizationId>{4143B74E-4A07-4D01-9FFE-2CDCAA4208FD}</VisualizationId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{4442f971-e287-4dfb-8157-d1f802b9318d}" celllabelposition="Top" columns="1" labelwidth="115">
+        <rows>
+            <row>
+                <cell id="{3dd25a44-a877-47eb-81b9-d0996de25d96}" showlabel="true" locklevel="1" visible="false" labelid="{2583764f-ebc0-4d3a-a833-78ed30e1de82}">
+                    <labels>
+                        <label description="Owner" languagecode="1033" />
+                    </labels>
+                    <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <controlDescriptions>
+        <controlDescription forControl="{a4d255be-3021-4d75-90d6-373bf8aa66f0}">
+            <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                <parameters>
+                    <RecordsPerPage>4</RecordsPerPage>
+                    <AutoExpand>Fixed</AutoExpand>
+                    <EnableQuickFind>false</EnableQuickFind>
+                    <EnableViewPicker>false</EnableViewPicker>
+                    <EnableChartPicker>true</EnableChartPicker>
+                    <ChartGridMode>All</ChartGridMode>
+                    <TargetEntityType>incident</TargetEntityType>
+                    <ViewId>{00000000-0000-0000-00AA-000010001028}</ViewId>
+                    <ViewIds>{00000000-0000-0000-00AA-000010001028}</ViewIds>
+                    <RelationshipName>incident_customer_contacts</RelationshipName>
+                    <VisualizationId>{4143B74E-4A07-4D01-9FFE-2CDCAA4208FD}</VisualizationId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.RecentRecords">
+                <parameters>
+                    <data-set name="Grid">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{00000000-0000-0000-00aa-000010001028}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>incident_customer_contacts</RelationshipName>
+                        <FilteredViewIds>{00000000-0000-0000-00AA-000010001028}</FilteredViewIds>
+                    </data-set>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.RecentRecords">
+                <parameters>
+                    <data-set name="Grid">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{00000000-0000-0000-00aa-000010001028}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>incident_customer_contacts</RelationshipName>
+                        <FilteredViewIds>{00000000-0000-0000-00AA-000010001028}</FilteredViewIds>
+                    </data-set>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.RecentRecords">
+                <parameters>
+                    <data-set name="Grid">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{00000000-0000-0000-00aa-000010001028}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>incident_customer_contacts</RelationshipName>
+                        <FilteredViewIds>{00000000-0000-0000-00AA-000010001028}</FilteredViewIds>
+                    </data-set>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <DisplayConditions FallbackForm="false" Order="20">
+        <Everyone />
+    </DisplayConditions>
+    <footer id="{629bf7af-bded-4470-a123-412e232d9369}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+            <row>
+                <cell id="{c710514b-a847-4420-a33a-2eff0dca1807}" showlabel="false" labelid="{f465970b-3ccc-4499-a7f4-484b5d658711}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{f6b97aa8-af0e-44be-9aa9-c70cc332bee3}" showlabel="false" labelid="{243e64b2-e106-4833-ae78-6591c7527db1}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{37a966f2-8f59-4ef1-af7a-ddf2bd27ed7f}" showlabel="false" labelid="{4790de31-8513-4fba-951f-6b151f0af493}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+            </row>
+        </rows>
+    </footer>
+</form>

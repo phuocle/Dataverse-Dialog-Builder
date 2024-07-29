@@ -1,0 +1,187 @@
+<form showImage="true" headerdensity="HighWithControls" showinformselector="false">
+    <tabs>
+        <tab name="tab_2" id="982912d5-ee2b-4126-8d55-7d375abf19ab" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{d69b9fdb-d2a9-4a61-8d12-1ae608175889}">
+            <labels>
+                <label description="New Tab" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="tab_2_section_1" id="0240c53c-2e93-4414-8160-6f63e183f20a" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{179febc1-b8fe-428f-90aa-b3bc67a6777e}">
+                            <labels>
+                                <label description="New Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{6dbd67c0-4333-4149-9ce7-09d28f2a81c0}" colspan="1" rowspan="1" showlabel="false">
+                                        <labels>
+                                            <label description="Customer card" languagecode="1033" />
+                                        </labels>
+                                        <control id="cc_1662014496768" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" isrequired="false" uniqueid="{3c66f7b1-d9a8-42b6-a5b6-3e0384e8c987}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="tab_2_section_3" id="66847478-7acc-4b54-af86-775ed588dbe3" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{b4fbd5af-829b-4dd9-ad09-194d529a7039}">
+                            <labels>
+                                <label description="New Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row />
+                                <row>
+                                    <cell locklevel="0" id="{5a472282-bd58-401b-a5f4-2ad46ba556a4}" colspan="1" rowspan="1" showlabel="false">
+                                        <labels>
+                                            <label description="New recent cases" languagecode="1033" />
+                                        </labels>
+                                        <control indicationOfSubgrid="true" id="cc_1661863836105" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{aa043ba1-8531-4ce5-825c-227340b0a231}">
+                                            <parameters>
+                                                <TargetEntityType>incident</TargetEntityType>
+                                                <ViewId>{6390E7F6-4528-ED11-9DB1-000D3A8D107A}</ViewId>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>incident_customer_accounts</RelationshipName>
+                                                <ViewIds>{00000000-0000-0000-00AA-000010001028},{6390E7F6-4528-ED11-9DB1-000D3A8D107A}</ViewIds>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId>{4143B74E-4A07-4D01-9FFE-2CDCAA4208FD}</VisualizationId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{d5a03552-1183-4347-a237-1f894ba449eb}" columns="111" celllabelposition="Top" labelwidth="115" showcommandbar="false" showbody="false" showtabnavigator="false">
+        <rows>
+            <row>
+                <cell id="{b0e82a7e-5683-d90c-308a-0d779377ea8a}" showlabel="true" colspan="1" rowspan="1" labelid="{6704309b-6a8a-4e21-a64b-29f965060781}">
+                    <labels>
+                        <label description="Account Name" languagecode="1033" />
+                    </labels>
+                    <control id="header_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                </cell>
+                <cell id="{54b2d0a2-eb77-b3cd-b60a-03ea6944e98e}" showlabel="true" locklevel="0" labelid="{ecdd5916-aac7-4f46-a240-7bbe5f09bbf6}">
+                    <labels>
+                        <label description="Owner" languagecode="1033" />
+                    </labels>
+                    <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <controlDescriptions>
+        <controlDescription forControl="{aa043ba1-8531-4ce5-825c-227340b0a231}">
+            <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                <parameters />
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.RecentRecords">
+                <parameters>
+                    <data-set name="Grid">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{6390e7f6-4528-ed11-9db1-000d3a8d107a}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>incident_customer_accounts</RelationshipName>
+                        <FilteredViewIds>{00000000-0000-0000-00AA-000010001028},{6390E7F6-4528-ED11-9DB1-000D3A8D107A}</FilteredViewIds>
+                    </data-set>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.RecentRecords">
+                <parameters>
+                    <data-set name="Grid">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{6390e7f6-4528-ed11-9db1-000d3a8d107a}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>incident_customer_accounts</RelationshipName>
+                        <FilteredViewIds>{00000000-0000-0000-00AA-000010001028},{6390E7F6-4528-ED11-9DB1-000D3A8D107A}</FilteredViewIds>
+                    </data-set>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.RecentRecords">
+                <parameters>
+                    <data-set name="Grid">
+                        <TargetEntityType>incident</TargetEntityType>
+                        <ViewId>{6390e7f6-4528-ed11-9db1-000d3a8d107a}</ViewId>
+                        <IsUserView>false</IsUserView>
+                        <EnableViewPicker>false</EnableViewPicker>
+                        <RelationshipName>incident_customer_accounts</RelationshipName>
+                        <FilteredViewIds>{00000000-0000-0000-00AA-000010001028},{6390E7F6-4528-ED11-9DB1-000D3A8D107A}</FilteredViewIds>
+                    </data-set>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{3c66f7b1-d9a8-42b6-a5b6-3e0384e8c987}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.CustomerCard">
+                <parameters>
+                    <property1 type="Lookup.Simple">primarycontactid</property1>
+                    <property2 type="SingleLine.Email">emailaddress1</property2>
+                    <property3 type="SingleLine.Text">telephone1</property3>
+                    <property4 type="OptionSet">preferredcontactmethodcode</property4>
+                    <property8 type="Enum" static="true">address1_composite</property8>
+                    <enableEditing type="Enum" static="true">1</enableEditing>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                    <marginStart static="true" type="Whole.None">-20</marginStart>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.CustomerCard">
+                <parameters>
+                    <property1 type="Lookup.Simple">primarycontactid</property1>
+                    <property2 type="SingleLine.Email">emailaddress1</property2>
+                    <property3 type="SingleLine.Text">telephone1</property3>
+                    <property4 type="OptionSet">preferredcontactmethodcode</property4>
+                    <property8 type="Enum" static="true">address1_composite</property8>
+                    <enableEditing type="Enum" static="true">1</enableEditing>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                    <marginStart static="true" type="Whole.None">-20</marginStart>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.CustomerCard">
+                <parameters>
+                    <property1 type="Lookup.Simple">primarycontactid</property1>
+                    <property2 type="SingleLine.Email">emailaddress1</property2>
+                    <property3 type="SingleLine.Text">telephone1</property3>
+                    <property4 type="OptionSet">preferredcontactmethodcode</property4>
+                    <property8 type="Enum" static="true">address1_composite</property8>
+                    <enableEditing type="Enum" static="true">1</enableEditing>
+                    <showBorder type="Enum" static="true">0</showBorder>
+                    <marginStart static="true" type="Whole.None">-20</marginStart>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <footer id="{613b10f0-3397-40a0-aa7a-59aced04e6a8}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+            <row>
+                <cell id="{64fac543-3b6c-4bd8-8459-622b60c650fb}" showlabel="false" labelid="{16acf72a-ed2c-4c65-a663-d485fdd484c9}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{4edccd6a-f43f-480d-9b85-236dc78b4ee3}" showlabel="false" labelid="{d489dfb9-9218-43f0-91f7-33de9d87be47}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+                <cell id="{f3f0e592-52c4-4af4-9d00-773bd4796a7a}" showlabel="false" labelid="{f03f44ce-1a0b-4192-8003-3171aaf6b966}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <DisplayConditions FallbackForm="false" Order="30">
+        <Role Id="{c737e307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+        <Role Id="{183ce307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+        <Role Id="{b2a2f470-5e24-45d5-adab-7613c5022318}" />
+        <Role Id="{3DAC4D9E-568C-E611-80D4-00155D42A122}" />
+        <Role Id="{507bdc86-1a76-4529-9332-fd126af1b97a}" />
+    </DisplayConditions>
+</form>

@@ -1,0 +1,149 @@
+<form>
+    <tabs>
+        <tab name="general" id="{481eb001-6925-9785-a8a9-cea05177cc9b}" IsUserDefined="0" locklevel="0" showlabel="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="{272eb814-0769-5ebe-3ed1-e95a0b16853e}" showlabel="false" showbar="false" locklevel="0" id="{272eb814-0769-5ebe-3ed1-e95a0b16853e}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115">
+                            <labels>
+                                <label description="Section 1" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{34447c58-3aed-6244-d407-320aeba96263}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                                    </cell>
+                                    <cell id="{41D0C590-6F77-4F0A-A461-79855CB95DEF}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{472e2672-0daa-800d-a305-251685dd8354}" showlabel="true" locklevel="0" colspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="description" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="url option" showlabel="true" showbar="false" id="{185c34c9-099f-48fd-9905-01d38695de2e}" IsUserDefined="0">
+                            <labels>
+                                <label description="URL Options" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{492BCDE1-6700-4C7C-9545-7ADB9B006D0F}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="URL Type" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.urloption_onchange" libraryName="SharePointDocumentLocation_main_system_library.js" handlerUniqueId="b0bc4c4c-51d0-4eb8-ac4b-d8ea2a593806" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="absoluteurl" />
+                                                            <dependency id="parentsiteorlocation" />
+                                                            <dependency id="relativeurl" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="urloption" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{caaee899-c238-619b-06e6-6ab3b674c2a9}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Absolute URL" languagecode="1033" />
+                                        </labels>
+                                        <control id="absoluteurl" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" datafieldname="absoluteurl" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1b0333da-c486-89cb-0660-99b9a287305c}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Parent Site or Location" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentsiteorlocation" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="parentsiteorlocation" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{613c18e3-1c48-a1e2-b053-5c6bb392b44b}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Relative URL" languagecode="1033" />
+                                        </labels>
+                                        <control id="relativeurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="relativeurl" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4fbd00e7-2415-400a-a430-e1841fc2cf09}" showlabel="true" locklevel="0" colspan="2">
+                                        <labels>
+                                            <label description="Regarding" languagecode="1033" />
+                                        </labels>
+                                        <control id="regardingobjectid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="regardingobjectid" disabled="false"></control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b7bfa1cb-8689-45a6-916c-1fb001703f13}" showlabel="true">
+                                        <labels>
+                                            <label description="Location Type " languagecode="1033" />
+                                        </labels>
+                                        <control id="locationtype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="locationtype" disabled="true"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="SharePointDocumentLocation_main_system_library.js" handlerUniqueId="c7c1692e-8d23-417a-9e6b-769edef7798d" enabled="true">
+                    <dependencies />
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <footer id="{f984f4a0-f92e-483b-947b-fd2275cf1ede}">
+        <rows>
+            <row>
+                <cell id="{8a6d51f6-93cc-41a5-9946-08680ad04668}">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="footer_statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:SharePointDocumentLocation_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar>
+            <NavBarByRelationshipItem RelationshipName="sharepointdocumentlocation_parent_sharepointdocumentlocation" Id="navSubDocumentLocations" Icon="/_imgs/ico_18_9508.png" TitleResourceId="DocumentManagement.Settings.Child.SharePointLocations" />
+        </NavBar>
+    </Navigation>
+</form>

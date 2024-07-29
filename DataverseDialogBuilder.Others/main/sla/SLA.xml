@@ -1,0 +1,480 @@
+<form shownavigationbar="true">
+    <hiddencontrols>
+        <data id="isdefault" datafieldname="isdefault" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="applicablefrom" datafieldname="applicablefrom" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab verticallayout="true" id="{79777963-6d12-4dc3-938c-61a2ab71ae50}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="67%">
+                    <sections>
+                        <section name="information" showlabel="false" showbar="false" IsUserDefined="0" id="{5fd329f7-72a8-4122-8509-b026fceebc37}" labelwidth="200">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1dffa6a6-7a24-4e0d-a93f-9866382a437e}" showlabel="true" colspan="2">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{C92FD2A3-7219-40C5-A7D2-824AC9B6194F}" showlabel="true" colspan="2">
+                                        <labels>
+                                            <label description="Entity" languagecode="1033" />
+                                        </labels>
+                                        <control id="objecttypecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="objecttypecode" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9c1fbd86-080f-4af6-af65-5d6bb1ad078c}" colspan="2">
+                                        <labels>
+                                            <label description="Applicable From" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.applicablefrompicklist_onchange" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="42BCD534-DFC3-465A-AF1F-6CAD2160B904" enabled="true">
+                                                        <dependencies>
+                                                            <dependency id="applicablefrom" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="applicablefrompicklist" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="applicablefrompicklist" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7a10d395-6ed7-4059-ab5f-ed0110219a8d}" showlabel="true" colspan="2">
+                                        <labels>
+                                            <label description="Business Hours" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onclick" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.businesshoursid_onclick" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="56750ebd-033d-4a7f-ad40-47f1a5fa4d72" enabled="true">
+                                                        <dependencies />
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="businesshoursid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="businesshoursid">
+                                            <parameters>
+                                                <DefaultViewId>{b1127604-db55-4ad4-aacf-90d870390297}</DefaultViewId>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{5480EA66-70C8-423F-B30F-20713E98488C}">
+                                        <labels>
+                                            <label description="SLA Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="SLAType" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="slatype" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{3B9C4C09-80B1-4481-8950-828578967721}">
+                                        <labels>
+                                            <label description="Allow Pause and Resume" languagecode="1033" />
+                                        </labels>
+                                        <control id="AllowPauseResume" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="allowpauseresume" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5745214e-87e6-11ec-1da1-32c2bba60869}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Record version" languagecode="1033" />
+                                        </labels>
+                                        <control id="slaversion" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="slaversion" disabled="false" />
+                                    </cell>
+                                    <cell id="{6c94d13d-1655-a4a0-a878-e8ebdd4584a7}" showlabel="false" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c17a0c9e-8983-48ca-a251-601624930f44}" showlabel="true" rowspan="3" colspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" datafieldname="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="sladetails" showlabel="false" showbar="true" IsUserDefined="0" id="{579ac353-7006-4c14-af07-a50919d94b76}">
+                            <labels>
+                                <label description="SLA Items" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{780e5817-1f33-4ac7-a86f-8b4b86d88a34}" showlabel="true" colspan="2" auto="false" rowspan="6">
+                                        <labels>
+                                            <label description="SLA Items" languagecode="1033" />
+                                        </labels>
+                                        <control id="SLADetails" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{ecbb6af5-96e5-4544-94e1-0f339007039c}</ViewId>
+                                                <RelationshipName>sla_slaitem_slaId</RelationshipName>
+                                                <TargetEntityType>slaitem</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>200</RecordsPerPage>
+                                                <IsUserView>false</IsUserView>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="notes" showlabel="true" showbar="true" id="{006ecda6-871e-47e9-a965-2e86a474b22f}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="7" auto="false" id="{d36fb234-f1de-4ef9-b427-f52b74c88aa7}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="tabUC" id="{24e4c85d-896b-0975-ec5e-b2876e243a9a}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="34%">
+                    <sections>
+                        <section name="tab_2_section_1" showlabel="false" showbar="false" locklevel="0" id="{d6da108e-dd4a-ea31-d9d1-3ecd4339ab83}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1dffa6a6-7a24-4e0d-a93f-9866382a437e}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{dfd85b05-74e1-4a09-8c10-54bd76e48cb1}" visible="true" showlabel="true" locklevel="0" colspan="1">
+                                        <labels>
+                                            <label description="Primary entity" languagecode="1033" />
+                                        </labels>
+                                        <control id="primaryentityotc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="primaryentityotc" disabled="false" uniqueid="{C3B7EBCB-8178-418E-8FF2-79DAED41EF5F}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c17a0c9e-8983-48ca-a251-601624930f44}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" datafieldname="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="66%">
+                    <sections>
+                        <section name="sladetails" showlabel="false" showbar="true" IsUserDefined="0" id="{579ac353-7006-4c14-af07-a50919d94b76}">
+                            <labels>
+                                <label description="SLA Items" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{cdb51043-13c9-1924-3b25-9a10b2a63a74}" showlabel="true" colspan="2" visible="true" auto="false" rowspan="6">
+                                        <labels>
+                                            <label description="SLA Items" languagecode="1033" />
+                                        </labels>
+                                        <control id="SLAItemsUCI" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                                            <parameters>
+                                                <ViewId>{007B9527-1CD8-4F1E-9F5B-5E5FEA2F828A}</ViewId>
+                                                <RelationshipName>sla_slaitem_slaId</RelationshipName>
+                                                <TargetEntityType>slaitem</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>200</RecordsPerPage>
+                                                <IsUserView>false</IsUserView>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="tabUCMigration" id="{44e4c85d-896b-0975-ec5e-b2876e243a9a}" IsUserDefined="0" visible="false" showlabel="false">
+            <labels>
+                <label description="Migration details" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="34%">
+                    <sections>
+                        <section name="Migration" showlabel="false" showbar="false" locklevel="0" id="{40485d55-2056-7900-082c-4d980849d207}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Migration details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{21e219e3-252a-e89b-6ed6-300480ce0836}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Mark as complete" languagecode="1033" />
+                                        </labels>
+                                        <control id="migrationtoggle" isunbound="false" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="objecttypecode" uniqueid="{B181F387-284A-46BE-A99F-9B42EBB48D2B}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{53aa74ac-99c7-109a-55cb-ab81d423c168}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Migration status" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_migrationstatus" isunbound="false" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="objecttypecode" uniqueid="{A181F387-284A-46BE-A99F-9B42EBB48D2B}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{63aa74ac-99c7-109a-55cb-ab81d423c168}" showlabel="true" colspan="1">
+                                        <labels>
+                                            <label description="Problem details" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_migrationstatus_details" isunbound="false" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="objecttypecode" uniqueid="{C181F387-284A-46BE-A99F-9B42EBB48D2B}"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{f4148947-de3d-4cdf-95fe-c2481aabdfea}" celllabelposition="Top" columns="1111" labelwidth="115">
+        <rows>
+            <row>
+                <cell id="{ff3903c0-6afb-4486-a9ae-e387f3029ab9}">
+                    <labels>
+                        <label description="Status Reason" languagecode="1033" />
+                    </labels>
+                    <control id="header_statuscode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                </cell>
+                <cell id="{30da68e6-4c21-4e27-a330-0e0f9821352c}" showlabel="true">
+                    <labels>
+                        <label description="Owner" languagecode="1033" />
+                    </labels>
+                    <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="844C3F58-8FCB-4F35-84AD-02EDC37F2119" enabled="true">
+                    <dependencies>
+                        <dependency id="slatype" />
+                        <dependency id="allowpauseresume" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="944C3F58-8FCB-4F35-84AD-02EDC37F2119" enabled="true">
+                    <dependencies>
+                        <dependency id="slatype" />
+                        <dependency id="allowpauseresume" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="objecttypecode">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onchange" libraryName="ServiceLevelAgreement/Sla/Sla_main_system_library.js" handlerUniqueId="844C3F58-8FCB-4F35-84AD-02EDC37F2119" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="slatype" />
+                        <dependency id="allowpauseresume" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ServiceLevelAgreement/Sla/Sla_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar></NavBar>
+    </Navigation>
+    <controlDescriptions>
+        <controlDescription forControl="{C3B7EBCB-8178-418E-8FF2-79DAED41EF5F}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>primaryentityotc</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.KPIEntitySelectControl">
+                <parameters>
+                    <value>primaryentityotc</value>
+                    <IsWriteOTC static="true" type="SingleLine.Text">true</IsWriteOTC>
+                    <FilterByKPI static="true" type="SingleLine.Text">true</FilterByKPI>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.KPIEntitySelectControl">
+                <parameters>
+                    <value>primaryentityotc</value>
+                    <IsWriteOTC static="true" type="SingleLine.Text">true</IsWriteOTC>
+                    <FilterByKPI static="true" type="SingleLine.Text">true</FilterByKPI>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.KPIEntitySelectControl">
+                <parameters>
+                    <value>primaryentityotc</value>
+                    <IsWriteOTC static="true" type="SingleLine.Text">true</IsWriteOTC>
+                    <FilterByKPI static="true" type="SingleLine.Text">true</FilterByKPI>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{A181F387-284A-46BE-A99F-9B42EBB48D2B}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>objecttypecode</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>objecttypecode</fetchxml>
+                    <parentid type="SingleLine.Text">slaid</parentid>
+                    <parentType static="true" type="SingleLine.Text">sla</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationstatus</statusType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>objecttypecode</fetchxml>
+                    <parentid type="SingleLine.Text">slaid</parentid>
+                    <parentType static="true" type="SingleLine.Text">sla</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationstatus</statusType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>objecttypecode</fetchxml>
+                    <parentid type="SingleLine.Text">slaid</parentid>
+                    <parentType static="true" type="SingleLine.Text">sla</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationstatus</statusType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{C181F387-284A-46BE-A99F-9B42EBB48D2B}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>objecttypecode</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>objecttypecode</fetchxml>
+                    <parentid type="SingleLine.Text">slaid</parentid>
+                    <parentType static="true" type="SingleLine.Text">sla</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationdetails</statusType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>objecttypecode</fetchxml>
+                    <parentid type="SingleLine.Text">slaid</parentid>
+                    <parentType static="true" type="SingleLine.Text">sla</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationdetails</statusType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.MigrationStatusControl">
+                <parameters>
+                    <fetchxml>objecttypecode</fetchxml>
+                    <parentid type="SingleLine.Text">slaid</parentid>
+                    <parentType static="true" type="SingleLine.Text">sla</parentType>
+                    <statusType static="true" type="SingleLine.Text">migrationdetails</statusType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{B181F387-284A-46BE-A99F-9B42EBB48D2B}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.MigrationStatusToggleControl">
+                <parameters>
+                    <value>objecttypecode</value>
+                    <parentid type="SingleLine.Text">slaid</parentid>
+                    <parentType static="true" type="SingleLine.Text">sla</parentType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.MigrationStatusToggleControl">
+                <parameters>
+                    <value>objecttypecode</value>
+                    <parentid type="SingleLine.Text">slaid</parentid>
+                    <parentType static="true" type="SingleLine.Text">sla</parentType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.MigrationStatusToggleControl">
+                <parameters>
+                    <value>objecttypecode</value>
+                    <parentid type="SingleLine.Text">slaid</parentid>
+                    <parentType static="true" type="SingleLine.Text">sla</parentType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

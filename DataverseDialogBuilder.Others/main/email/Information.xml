@@ -1,0 +1,242 @@
+<form>
+    <hiddencontrols>
+        <data id="directioncode" datafieldname="directioncode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="statecode" datafieldname="statecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="emailremindertype" datafieldname="emailremindertype" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="emailremindertext" datafieldname="emailremindertext" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="emailreminderexpirytime" datafieldname="emailreminderexpirytime" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="delayedemailsendtime" datafieldname="delayedemailsendtime" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="templateid" datafieldname="templateid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="isemailfollowed" datafieldname="isemailfollowed" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="followemailuserpreference" datafieldname="followemailuserpreference" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="emailreminderstatus" datafieldname="emailreminderstatus" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="postponeemailprocessinguntil" datafieldname="postponeemailprocessinguntil" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="statuscode" datafieldname="statuscode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="email" verticallayout="true" id="{c86a8d1b-4793-4f90-a9a2-4fe3a3955374}" IsUserDefined="0" showlabel="false" expanded="true">
+            <labels>
+                <label description="Email" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="recipient information" showlabel="false" showbar="false" locklevel="0" id="{fbd66c96-dca4-42cd-b760-fd8b8f8a3828}" IsUserDefined="0" layout="varwidth" columns="11">
+                            <labels>
+                                <label description="Recipient Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{33de98e6-392a-4a7b-85e2-a9bfbccf45ee}">
+                                        <labels>
+                                            <label description="From" languagecode="1033" />
+                                        </labels>
+                                        <control id="from" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="from" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{7e86a7d2-f0b5-48a3-8f1b-be72b72e673b}">
+                                        <labels>
+                                            <label description="To" languagecode="1033" />
+                                        </labels>
+                                        <control id="to" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="to" disabled="false">
+                                            <parameters>
+                                                <ResolveEmailAddress>true</ResolveEmailAddress>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{0d82da3e-b04b-411e-91ad-ec2595149da6}">
+                                        <labels>
+                                            <label description="Cc" languagecode="1033" />
+                                        </labels>
+                                        <control id="cc" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="cc" disabled="false">
+                                            <parameters>
+                                                <ResolveEmailAddress>true</ResolveEmailAddress>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{63ea2a1b-ea76-4d3f-bf0e-beacf0e922dc}">
+                                        <labels>
+                                            <label description="Bcc" languagecode="1033" />
+                                        </labels>
+                                        <control id="bcc" classid="{CBFB742C-14E7-4a17-96BB-1A13F7F64AA2}" datafieldname="bcc" disabled="false">
+                                            <parameters>
+                                                <ResolveEmailAddress>true</ResolveEmailAddress>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="email description" showlabel="false" showbar="false" locklevel="0" id="{C57EC4C8-F4BE-4bd5-9F80-BC22211058EB}" IsUserDefined="0" layout="varwidth" columns="11" height="auto">
+                            <labels>
+                                <label description="Email Description" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{2b0dd903-dd6d-42ba-bf4a-7368b5ba4da0}">
+                                        <labels>
+                                            <label description="Subject" languagecode="1033" />
+                                        </labels>
+                                        <control id="subject" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="subject" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="2" id="{1bf260db-ff7b-4fd0-ba76-cc957d9cef26}">
+                                        <labels>
+                                            <label description="Regarding" languagecode="1033" />
+                                        </labels>
+                                        <control id="regardingobjectid" classid="{F3015350-44A2-4aa0-97B5-00166532B5E9}" datafieldname="regardingobjectid" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="12" auto="true" id="{689a5a57-c7ce-4686-924f-e0cd2d9d05c9}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{6F3FB987-393B-4d2d-859F-9D0F0349B6AD}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="attachments" verticallayout="true" id="{96C7C7C4-69BE-4104-90B4-00943CDB8760}" IsUserDefined="0" locklevel="0">
+            <labels>
+                <label description="Attachments" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="attachments" showlabel="false" showbar="false" locklevel="0" id="{125986d7-ae21-4864-8494-b88d712b4e39}" height="auto" IsUserDefined="0" layout="varheight" columns="11">
+                            <labels>
+                                <label description="Attachments" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell colspan="2" rowspan="7" showlabel="false" auto="true" id="{dd84f357-2611-4314-b1b0-7c836158ae50}">
+                                        <labels>
+                                            <label description="Attachment" languagecode="1033" />
+                                        </labels>
+                                        <control id="attachmentsGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <TargetEntityType>activitymimeattachment</TargetEntityType>
+                                                <ViewId>{270DE234-E469-4806-9C7E-8D94901CD521}</ViewId>
+                                                <RelationshipName>email_activity_mime_attachment</RelationshipName>
+                                                <RecordsPerPage>5</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="details" id="{77D60D0D-F6F1-4ADB-9E2D-534CA77C17AC}" IsUserDefined="0" locklevel="0">
+            <labels>
+                <label description="Details" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="email details" showlabel="false" showbar="false" locklevel="0" id="{D1A34BBC-7F4F-48a0-A6E6-7E99DCFB607F}" IsUserDefined="0" layout="varwidth" columns="11">
+                            <labels>
+                                <label description="Email Details" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{da0f2180-ba2b-45f2-b6cd-25ee79b07114}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{75b9a7cf-44dc-492f-aadd-5962d65f4a2c}">
+                                        <labels>
+                                            <label description="Priority" languagecode="1033" />
+                                        </labels>
+                                        <control id="prioritycode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="prioritycode" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{6fedbb1d-9ad7-49d6-8f7f-5aea43f2723b}">
+                                        <labels>
+                                            <label description="Duration" languagecode="1033" />
+                                        </labels>
+                                        <control id="actualdurationminutes" classid="{AA987274-CE4E-4271-A803-66164311A958}" datafieldname="actualdurationminutes" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{9c849926-7e18-4c74-9071-b2b69bacd10c}">
+                                        <labels>
+                                            <label description="Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="category" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="category" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{6aff1d06-0ecd-49d6-9e9a-e6f530a56558}">
+                                        <labels>
+                                            <label description="Due" languagecode="1033" />
+                                        </labels>
+                                        <control id="scheduledend" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="scheduledend" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{45220a0d-6f65-4812-8f86-a7c32a17d253}">
+                                        <labels>
+                                            <label description="Sub-Category" languagecode="1033" />
+                                        </labels>
+                                        <control id="subcategory" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="subcategory" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Activities.Email.formOnload" libraryName="Activities/SystemLibraries/Email_main_system_library.js" handlerUniqueId="ecdfe4d8-d6d3-4d21-ab68-8ea75bb30a79" enabled="true" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Activities/SystemLibraries/Email_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <DisplayConditions FallbackForm="true" Order="4">
+        <Everyone />
+    </DisplayConditions>
+</form>

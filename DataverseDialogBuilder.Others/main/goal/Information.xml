@@ -1,0 +1,944 @@
+<form>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{308d2707-5ebf-40d5-824e-88c8b2803ad6}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="information" showlabel="false" showbar="false" id="{157756fa-f420-4e52-a9fd-363f6db7b783}" IsUserDefined="0">
+                            <labels>
+                                <label description="Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7b3b1132-f659-45c8-9912-845dbf6e6959}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="title" datafieldname="title" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{becc78c5-1547-ab89-dba2-128c6242577d}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Parent Goal" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.parentgoalid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="a5d8aadc-5c2b-49d4-a459-7309dfdcf15a" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="parentgoalid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="parentgoalid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="parentgoalid" disabled="false">
+                                            <parameters>
+                                                <DefaultViewId>{F0A20746-0FE7-4EDC-9889-569776B2D76A}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{87cd8277-32b8-0326-2d2b-633d13cc752b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Goal Metric" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.metricid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="4ce44315-5f39-4037-8856-563eac38acd8" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="parentgoalid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="metricid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="metricid" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{178646aa-9493-6247-10b5-944991119a88}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Goal Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="goalownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="goalownerid" disabled="false" />
+                                    </cell>
+                                    <cell id="{69db8722-505b-b564-57d0-073cb2ae0483}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Manager" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="{349a439d-6ed5-bae8-7c7d-3721869367ca}" id="{349a439d-6ed5-bae8-7c7d-3721869367ca}" IsUserDefined="0" locklevel="0" showlabel="true">
+            <labels>
+                <label description="Time Period" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" locklevel="0" id="{3a5c2dc2-2ee7-848c-83eb-a2b1e4d1c703}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" name="{3a5c2dc2-2ee7-848c-83eb-a2b1e4d1c703}">
+                            <labels>
+                                <label description="Time Period" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7c1a8ded-5102-8c77-54d1-700760764488}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Goal Period Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="isfiscalperiodgoal" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="isfiscalperiodgoal" disabled="false" />
+                                    </cell>
+                                    <cell id="{9b23cd38-ed58-7c40-d84a-3d495368a1ec}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d07d95cd-1b17-c242-e63b-365b03bdd921}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Fiscal Period" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.fiscalFields_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="e35c111f-249a-47ff-a6b4-f329ff2b424a" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="fiscalperiod" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="fiscalperiod" disabled="false" />
+                                    </cell>
+                                    <cell id="{963c7cd5-d67a-a475-7496-b14613556482}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Fiscal Year" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.fiscalFields_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="8bb0a2ed-da47-40ee-b5d9-1d848a366fb5" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="fiscalyear" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="fiscalyear" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e69ab868-4693-6333-7396-78640ba55cda}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="From" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.dates_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="612c8735-56c0-4dfb-bf52-468672f8bbb3" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="goalstartdate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="goalstartdate" disabled="false" />
+                                    </cell>
+                                    <cell id="{24007eb1-39db-c8db-101c-588811ad0700}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="To" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="onchange" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.dates_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="7b90d4d7-9090-4d22-bdfd-2c16950565ff" enabled="true" />
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="goalenddate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="goalenddate" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab id="{4801c665-ad98-398d-e908-4d0ac03aeeea}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Targets" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="{48707907-e91e-1590-1cd1-a9ddb71476d7}" showlabel="false" showbar="false" locklevel="0" id="{48707907-e91e-1590-1cd1-a9ddb71476d7}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Money" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{15dba20a-5879-148b-c2a6-ba82d50631ea}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Target (Money)" languagecode="1033" />
+                                        </labels>
+                                        <control id="targetmoney" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="targetmoney" disabled="false" />
+                                    </cell>
+                                    <cell id="{4e0a90e1-54c8-edb9-310a-deaec0054771}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Stretch Target (Money)" languagecode="1033" />
+                                        </labels>
+                                        <control id="stretchtargetmoney" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="stretchtargetmoney" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{adadc153-6be6-448b-7b31-64c39637829b}" showlabel="false" showbar="false" locklevel="0" id="{adadc153-6be6-448b-7b31-64c39637829b}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Numbers" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ad325199-ebba-6b8c-a125-cd29dd86dbea}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Target (Integer)" languagecode="1033" />
+                                        </labels>
+                                        <control id="targetinteger" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="targetinteger" disabled="false" />
+                                    </cell>
+                                    <cell id="{1312e31a-a9d7-9246-deb0-a032019e73e7}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Stretch Target (Integer)" languagecode="1033" />
+                                        </labels>
+                                        <control id="stretchtargetinteger" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="stretchtargetinteger" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{a7c72450-609e-c738-4557-781b2088c473}" showlabel="false" showbar="false" locklevel="0" id="{a7c72450-609e-c738-4557-781b2088c473}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Decimal" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6bea2001-b821-1156-7667-e6271ca00734}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Target (Decimal)" languagecode="1033" />
+                                        </labels>
+                                        <control id="targetdecimal" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="targetdecimal" disabled="false" />
+                                    </cell>
+                                    <cell id="{8b50794e-3314-18d0-77c8-3b8a14e73272}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Stretch Target (Decimal)" languagecode="1033" />
+                                        </labels>
+                                        <control id="stretchtargetdecimal" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="stretchtargetdecimal" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab id="{1cba7647-7798-dde1-0c80-6aee039ac428}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Child Goals" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="{89ae1e95-1ccc-8646-eece-5de9e57b9743}" showlabel="false" showbar="false" locklevel="0" id="{89ae1e95-1ccc-8646-eece-5de9e57b9743}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115">
+                            <labels>
+                                <label description="Child Goals" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{76bdea99-2091-50d9-510a-0c92e96a0059}" showlabel="false" colspan="2" auto="false" rowspan="7">
+                                        <labels>
+                                            <label description="Goals" languagecode="1033" />
+                                        </labels>
+                                        <control id="child_goals" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{E34FE149-B9E8-4A03-B52D-8C589A105A47}</ViewId>
+                                                <RelationshipName>goal_parent_goal</RelationshipName>
+                                                <TargetEntityType>goal</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{E34FE149-B9E8-4A03-B52D-8C589A105A47}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>5</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab id="{90b315ec-d45e-ee5c-abe6-2c705d203c58}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Actuals" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="{1d7eac24-348a-75b1-8a7b-c1dbbc2d7930}" showlabel="false" showbar="false" locklevel="1" id="{1d7eac24-348a-75b1-8a7b-c1dbbc2d7930}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Money" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8ad11009-8537-944c-c4aa-950d1b44889b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Actual (Money)" languagecode="1033" />
+                                        </labels>
+                                        <control id="actualmoney" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="actualmoney" disabled="true" />
+                                    </cell>
+                                    <cell id="{30b760d8-6098-2955-cab9-19c4ce4e2ce3}">
+                                        <labels>
+                                            <label description="Percentage Achieved" languagecode="1033" />
+                                        </labels>
+                                        <control id="percentage" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="percentage" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9e6cd0ba-193b-2917-0891-17072beca533}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="In-progress (Money)" languagecode="1033" />
+                                        </labels>
+                                        <control id="inprogressmoney" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="inprogressmoney" disabled="true" />
+                                    </cell>
+                                    <cell id="{ed0b6139-d4c7-ca9e-bd94-4a9b5e432318}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Custom Rollup Field (Money)" languagecode="1033" />
+                                        </labels>
+                                        <control id="customrollupfieldmoney" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="customrollupfieldmoney" disabled="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{7c93d1dd-bcb6-8994-06ba-b913cab6bdb4}" showlabel="false" showbar="false" locklevel="1" id="{7c93d1dd-bcb6-8994-06ba-b913cab6bdb4}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Numbers" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e1465d92-9476-0783-ec62-4475755cb35e}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Actual (Integer)" languagecode="1033" />
+                                        </labels>
+                                        <control id="actualinteger" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="actualinteger" disabled="true" />
+                                    </cell>
+                                    <cell id="{9fefb19d-e1ab-429f-b12d-bb02137abb70}">
+                                        <labels>
+                                            <label description="Percentage Achieved" languagecode="1033" />
+                                        </labels>
+                                        <control id="percentage" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="percentage" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2bb7ac90-5247-0adc-b097-b51e1d7263a2}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="In-progress (Integer)" languagecode="1033" />
+                                        </labels>
+                                        <control id="inprogressinteger" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="inprogressinteger" disabled="true" />
+                                    </cell>
+                                    <cell id="{3a886a27-aa14-1a43-0736-d806396869e7}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Custom Rollup Field (Integer)" languagecode="1033" />
+                                        </labels>
+                                        <control id="customrollupfieldinteger" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="customrollupfieldinteger" disabled="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{86aa59b3-d012-bd70-488b-6d2767ea858d}" showlabel="false" showbar="false" locklevel="1" id="{86aa59b3-d012-bd70-488b-6d2767ea858d}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Decimal" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e86e4169-dc73-d30c-d3b5-03e4ede78cad}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Actual (Decimal)" languagecode="1033" />
+                                        </labels>
+                                        <control id="actualdecimal" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="actualdecimal" disabled="true" />
+                                    </cell>
+                                    <cell id="{6e7bad1c-7e5c-4ac0-bcfc-a11fe20bb9e4}">
+                                        <labels>
+                                            <label description="Percentage Achieved" languagecode="1033" />
+                                        </labels>
+                                        <control id="percentage" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="percentage" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{044ebe36-cb56-ccc7-7d65-4ca4e75626a9}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="In-progress (Decimal)" languagecode="1033" />
+                                        </labels>
+                                        <control id="inprogressdecimal" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="inprogressdecimal" disabled="true" />
+                                    </cell>
+                                    <cell id="{03ae6bc3-26d7-be32-c1d0-4a75e9935c91}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Custom Rollup Field (Decimal)" languagecode="1033" />
+                                        </labels>
+                                        <control id="customrollupfielddecimal" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="customrollupfielddecimal" disabled="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="false" showbar="false" locklevel="0" id="{0355029a-0241-c5d6-7c85-a93e4425bae4}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Rollup additional information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{96031078-bb1b-3354-b3c0-751e288ec587}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Last Rolled Up Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="lastrolledupdate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="lastrolledupdate" disabled="true" />
+                                    </cell>
+                                    <cell id="{1834243a-88a6-b15a-ea71-67c5868419d7}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab id="{e0001cc7-e263-a671-bdd1-d2a14430568c}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Goal Criteria" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="true" showbar="false" locklevel="0" id="{44a9787d-4ab1-9a27-8c84-978e41c2d832}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Define criteria for this goal. The criteria will be used for rolling up the Actuals data against the goal." languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{53E5062C-334C-40d4-BC73-7DE89CB0CC0B}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Roll Up Only from Child Goals" languagecode="1033" />
+                                        </labels>
+                                        <control id="rolluponlyfromchildgoals" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="rolluponlyfromchildgoals" disabled="false" />
+                                    </cell>
+                                    <cell id="{81DC7250-FB7B-4ca9-B971-8D897BBB4FEF}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9e11251a-8c5b-a3cb-3438-882658c40568}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Record Set for Rollup" languagecode="1033" />
+                                        </labels>
+                                        <control id="consideronlygoalownersrecords" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="consideronlygoalownersrecords" disabled="false" />
+                                    </cell>
+                                    <cell id="{e7c49bd4-8d52-9c9c-9399-d7d8ed7ea499}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="false" showbar="false" locklevel="0" id="{16152234-8617-bee9-5eeb-069b4472173d}" name="{16152234-8617-bee9-5eeb-069b4472173d}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Additional Rollup Criteria - Rollup Queries" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{04be1e39-9b09-76a6-ba84-03ad08bc4a0e}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rollup Query - Actual(Money)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.rollupqueryactualmoneyid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="e4bfcb30-61a4-4ca4-aedd-bc8808a3134d" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="metricid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="rollupqueryactualmoneyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="rollupqueryactualmoneyid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{15074336-b19d-3a90-d93d-5282a8b050c4}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rollup Query - In-progress(Money)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.rollupqueryinprogressmoneyid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="c527a152-d483-4b55-b7fe-1033883b8c75" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="metricid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="rollupqueryinprogressmoneyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="rollupqueryinprogressmoneyid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e60e87be-d8ce-74ea-8c2a-03941bd6aca2}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rollup Query - Custom Rollup Field (Money)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.rollupqueryestimatedmoneyid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="8e713e08-068d-440d-b2ad-5ff68b172b92" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="metricid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="rollupquerycustommoneyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="rollupquerycustommoneyid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{5147b842-cccb-2e54-88e7-3b906a630635}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="false" showbar="false" locklevel="0" id="{649d4e80-5014-8c90-2abe-c39b137dc761}" name="{649d4e80-5014-8c90-2abe-c39b137dc761}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Additional Rollup Criteria - Rollup Queries" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{47ea7eee-3108-0083-2c1d-7ee086b6aca2}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rollup Query - Actual(Integer)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.rollupqueryactualintegerid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="f3625a6d-3e3d-45ed-b6fa-81b28fd86b14" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="metricid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="rollupqueryactualintegerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="rollupqueryactualintegerid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{133d8099-5dd7-0c16-4366-ddce482d42b3}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rollup Query - In-progress(Integer)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.rollupqueryinprogressintegerid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="024fec96-b404-4f3b-b68d-a3670d9a9db2" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="metricid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="rollupqueryinprogressintegerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="rollupqueryinprogressintegerid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3aae1a34-7431-43d8-46b5-0dc288958556}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rollup Query - Custom Rollup Field (Integer)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.rollupqueryestimatedintegerid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="cd488a87-729c-4c12-8e35-bfba9e45a591" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="metricid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="rollupquerycustomintegerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="rollupquerycustomintegerid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{c3b16e5c-0099-72c9-65a6-ae04491209b3}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="false" showbar="false" locklevel="0" id="{009e75c7-d9c6-e460-98b7-4278be07024b}" name="{009e75c7-d9c6-e460-98b7-4278be07024b}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Additional Rollup Criteria - Rollup Queries" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4779b41b-02dc-a56c-9c8a-92e842ade66e}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rollup Query - Actual(Decimal)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.rollupqueryactualdecimalid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="0defe41e-3cfa-44aa-a235-d5dc7e435282" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="metricid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="rollupqueryactualdecimalid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="rollupqueryactualdecimalid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{41d19d06-9ea4-3d9e-1631-1ec5c9b68863}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rollup Query - In-progress(Decimal)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.rollupqueryinprogressdecimalid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="2d6dff08-c140-4283-a669-36574d46d02d" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="metricid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="rollupqueryinprogressdecimalid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="rollupqueryinprogressdecimalid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b3885212-54a8-9b7b-3226-2e437a501a5c}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Rollup Query - Custom Rollup Field (Decimal)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.rollupqueryestimateddecimalid_setadditionalparams" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="d45df454-0316-4129-860c-016fccdcf9e4" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="metricid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="rollupquerycustomdecimalid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="rollupquerycustomdecimalid" disabled="false">
+                                            <parameters>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{3e41c282-378c-5770-939c-5e11880b8588}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="notes" id="{1D18F35E-E4E3-4e8d-B16F-1BCA82A90CE7}" IsUserDefined="0" expanded="false">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="notes" showlabel="false" showbar="false" id="{7334EB52-9C6D-4fa7-A63D-AA10F508AE56}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{AFDFC681-9AE6-4cd3-8E10-D91C17367ED3}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="{242FCD83-2A50-478E-922A-F4641920DDE0}" id="{242FCD83-2A50-478E-922A-F4641920DDE0}" IsUserDefined="0" expanded="false" visible="false">
+            <labels>
+                <label description="Participating Records" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="{8ECDE6CB-085B-46D1-97A9-E357C5799076}" showlabel="false" visible="true" showbar="false" id="{8ECDE6CB-085B-46D1-97A9-E357C5799076}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Participating Records" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{3700F277-F51C-4379-B0DE-3BA08C6B4D2D}">
+                                        <labels>
+                                            <label description="Rollup Field" languagecode="1033" />
+                                        </labels>
+                                        <control id="participatingrecordcontrol" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{D645626D-FB33-4414-8D52-F18300390A87}" datafieldname="metricid" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{f76d330d-10b6-4ede-8ce0-9c88ceb64945}">
+        <rows>
+            <row>
+                <cell id="{82fe153c-bf11-431a-b99a-244136bd2003}">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="footer_statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="1744599B-8F99-4F22-A8D6-866E81DC36BC" enabled="true">
+                    <dependencies>
+                        <dependency id="parentgoalid" />
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="parentgoalid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.parentgoalid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="8568027d-fb54-4db6-b43a-fe1604b42a8f" enabled="true">
+                    <dependencies>
+                        <dependency id="parentgoalid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="metricid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.metricid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="14e3b41c-b29a-45ec-bd30-87b6a32578f1" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="parentgoalid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="isfiscalperiodgoal">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.goalperiodtype_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="c7c33f46-eb67-4a54-bce3-ccb00867b00c" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rolluponlyfromchildgoals">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rolluponlyfromchildgoals_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="c655d60e-8dca-4f6c-80ad-bd26a8c7909c" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rollupqueryactualmoneyid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rollupqueryactualmoneyid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="0eb66bed-618e-4d49-82fc-4bd0737a6864" enabled="true">
+                    <dependencies>
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rollupqueryinprogressmoneyid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rollupqueryinprogressmoneyid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="02831f44-cd74-4257-acbb-31467258a6f2" enabled="true">
+                    <dependencies>
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rollupquerycustommoneyid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rollupqueryestimatedmoneyid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="18020f5f-5343-4348-99cc-5f19c510bd92" enabled="true">
+                    <dependencies>
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rollupqueryactualintegerid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rollupqueryactualintegerid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="696c1524-388e-4a84-a455-516c6f3b73bc" enabled="true">
+                    <dependencies>
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rollupqueryinprogressintegerid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rollupqueryinprogressintegerid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="7f5b6f0b-8bdf-4fc7-ad9d-2f1549aa206b" enabled="true">
+                    <dependencies>
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rollupquerycustomintegerid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rollupqueryestimatedintegerid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="68aa5fc5-557f-4c6a-b38b-26fc677d43e7" enabled="true">
+                    <dependencies>
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rollupqueryactualdecimalid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rollupqueryactualdecimalid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="101fdcb4-5eec-4079-a537-4884ab2fa2e1" enabled="true">
+                    <dependencies>
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rollupqueryinprogressdecimalid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rollupqueryinprogressdecimalid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="c2f44333-9a68-4088-a544-6ca68be0d248" enabled="true">
+                    <dependencies>
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="rollupquerycustomdecimalid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.rollupqueryestimateddecimalid_onchange" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="254fc89c-4cc4-4066-845c-e91fb52217bf" enabled="true">
+                    <dependencies>
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="AppCommon/Goal/Goal_main_system_library.js" handlerUniqueId="e1b32118-4aae-4479-8a46-6143f3c6b20a" enabled="true">
+                    <dependencies>
+                        <dependency id="parentgoalid" />
+                        <dependency id="metricid" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/Goal/Goal_main_system_library.js" />
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:AppCommon/Localization/ResourceStringProvider.js" />
+                <internaljscriptfile src="$webresource:AppCommon/Moment/moment.js" />
+                <internaljscriptfile src="$webresource:AppCommon/Telemetry/TelemetryLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{D645626D-FB33-4414-8D52-F18300390A87}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.GoalParticipatingRecordControl">
+                <parameters>
+                    <metricId type="Lookup.Simple">metricid</metricId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.GoalParticipatingRecordControl">
+                <parameters>
+                    <metricId type="Lookup.Simple">metricid</metricId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.GoalParticipatingRecordControl">
+                <parameters>
+                    <metricId type="Lookup.Simple">metricid</metricId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <hiddencontrols>
+        <data id="transactioncurrencyid" datafieldname="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" />
+    </hiddencontrols>
+</form>

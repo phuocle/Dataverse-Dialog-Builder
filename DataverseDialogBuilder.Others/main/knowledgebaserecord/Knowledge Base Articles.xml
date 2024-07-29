@@ -1,0 +1,128 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{60a5d983-f5cf-440b-b2f6-a1f26b2b1199}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{9e27236b-69ba-413c-8573-13963f3843a6}" height="auto">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4ababa19-9b50-4328-a68c-462ba6138d7b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="ID" languagecode="1033" />
+                                        </labels>
+                                        <control id="uniqueid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="uniqueid" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8237770b-8712-24db-ae7c-cbd076320b43}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Article Title" languagecode="1033" />
+                                        </labels>
+                                        <control id="title" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="title" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{6b9556dd-d95d-5d4c-8c30-2943315e54c7}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Private URL" languagecode="1033" />
+                                        </labels>
+                                        <control id="privateurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="privateurl" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{62cc6c42-4b32-dc44-c696-7ca989b3b233}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Public URL" languagecode="1033" />
+                                        </labels>
+                                        <control id="publicurl" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="publicurl" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row></row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="50%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{59142a97-bbf0-4bfb-af4a-bad068a64c62}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="false" rowspan="15" auto="false" id="{1304b4b1-f7d2-4e55-b13a-29bf7d3e4247}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-c143-495e-a496-c962e5b4488e}">
+                                            <parameters>
+                                                <DefaultTabId>NotesTab</DefaultTabId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{583dddfb-bd3b-49c9-abcc-8e8cc6e68e67}" celllabelposition="Top" labelwidth="115">
+        <rows>
+            <row>
+                <cell id="{4cec67dc-a9c7-412d-8034-1c267f2a3080}" showlabel="true" locklevel="0">
+                    <labels>
+                        <label description="ID" languagecode="1033" />
+                    </labels>
+                    <control id="header_id" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="uniqueid" disabled="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.KnowledgeBaseRecordMainSystemLibraryWebResource.formOnLoad" libraryName="KnowledgeBaseRecord_main_system_library.js" handlerUniqueId="b6a24ac6-96f9-406f-8726-bd65c020c179" enabled="true"></Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <Navigation>
+        <NavBar></NavBar>
+    </Navigation>
+    <clientresources>
+        <internalresources>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_NOTIFICATION_ONLINE" resourceid="SearchWidget.Parature.OnPremiseError" />
+            </clientvariables>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:KnowledgeBaseRecord_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,187 @@
+<form>
+    <tabs>
+        <tab name="rule" verticallayout="true" id="{8e6ceb89-6b0b-49ff-a84d-7f4b4297c136}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="section 1" labelwidth="125" showlabel="false" showbar="false" id="{9bfb9d10-c985-4d11-9222-29e4cff31f85}" IsUserDefined="0">
+                            <labels>
+                                <label description="Section 1" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{bd86cbf8-f8f8-4651-88b2-525a9fb967c8}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="name" />
+                                    </cell>
+                                    <cell showlabel="true" id="{dd7f185c-bcea-9358-8c49-031be88863b0}">
+                                        <labels>
+                                            <label description="Entity Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="queryentitytype" datafieldname="queryentitytype" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{eaf5b353-58ef-45a4-a151-2bbe734fc164}" visible="false">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name_uc" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="name" disabled="true" />
+                                    </cell>
+                                    <cell showlabel="true" id="{624064C5-D250-4D1E-98C8-AB498FB28938}" visible="false">
+                                        <labels>
+                                            <label description="Entity Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="queryentitytype_uc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{BF987C57-EDAB-47DD-9399-197411289450}" datafieldname="queryentitytype" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" id="{7EF44CB8-29E4-4ad1-BBC2-08D7C1F485DB}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                    <cell id="{e9d54a36-f7e4-4dac-80f7-0645759d8833}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="criteria" labelwidth="125" showlabel="true" showbar="false" id="{4300818d-944f-497a-abd5-a403094f63fe}" IsUserDefined="0">
+                            <labels>
+                                <label description="Query" languagecode="1033" />
+                            </labels>
+                            <rows />
+                        </section>
+                        <section name="Rule Conditions" labelwidth="125" showlabel="false" showbar="false" locklevel="1" IsUserDefined="0" id="{e650398f-d5af-97a4-a2bc-3524f49fb0b1}" height="auto">
+                            <labels>
+                                <label description="You cannot customize the rollup query section." languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="false" auto="true" colspan="2" rowspan="10" id="{6bd5bb25-8288-48c8-85d8-6e244f4a089f}" visible="false">
+                                        <labels>
+                                            <label description="Condition Control" languagecode="1033" />
+                                        </labels>
+                                        <control id="ruleconditioncontrol" classid="{fd2a7985-3187-444e-908d-6624b21f69c0}">
+                                            <parameters>
+                                                <Url>/SFA/goal/ParticipatingQueryCondition.aspx</Url>
+                                                <Security>false</Security>
+                                                <Preload>true</Preload>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                                <row>
+                                    <cell showlabel="false" auto="true" colspan="2" rowspan="10" id="{71726ee7-4caa-473c-862a-1f722a93840a}" visible="false">
+                                        <labels>
+                                            <label description="Rollup Query Editor" languagecode="1033" />
+                                        </labels>
+                                        <control id="queryeditor_uc" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{F6AC52A1-3FFF-4358-89CC-F9F7F784F5E1}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.queryFormOnLoad" libraryName="AppCommon/GoalRollupQuery/GoalRollupQuery_main_system_library.js" handlerUniqueId="CA0CBBE3-7C40-4F7F-97FF-5D746B5FE800" enabled="true">
+                    <dependencies>
+                        <dependency id="queryentitytype" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="queryentitytype">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.queryEntityTypeOnChange" libraryName="AppCommon/GoalRollupQuery/GoalRollupQuery_main_system_library.js" handlerUniqueId="22c31416-cde0-4c62-8b02-9dfcf7ba6661" enabled="true" passExecutionContext="true">
+                    <dependencies>
+                        <dependency id="queryentitytype" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:AppCommon/GoalRollupQuery/GoalRollupQuery_main_system_library.js" />
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:AppCommon/Localization/ResourceStringProvider.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <hiddencontrols>
+        <data id="fetchxml" datafieldname="fetchxml" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <controlDescriptions>
+        <controlDescription forControl="{BF987C57-EDAB-47DD-9399-197411289450}">
+            <customControl formFactor="0" name="MscrmControls.FieldControls.EntityOptionSetControl">
+                <parameters>
+                    <value type="SingleLine.Text">queryentitytype</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FieldControls.EntityOptionSetControl">
+                <parameters>
+                    <value type="SingleLine.Text">queryentitytype</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.FieldControls.EntityOptionSetControl">
+                <parameters>
+                    <value type="SingleLine.Text">queryentitytype</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{F6AC52A1-3FFF-4358-89CC-F9F7F784F5E1}">
+            <customControl formFactor="2" name="MscrmControls.RollupQuery.RollupQueryEditorControl">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">queryentitytype</entitylogicalname>
+                    <fetchxml type="SingleLine.Text">fetchxml</fetchxml>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.RollupQuery.RollupQueryEditorControl">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">queryentitytype</entitylogicalname>
+                    <fetchxml type="SingleLine.Text">fetchxml</fetchxml>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.RollupQuery.RollupQueryEditorControl">
+                <parameters>
+                    <entitylogicalname type="SingleLine.Text">queryentitytype</entitylogicalname>
+                    <fetchxml type="SingleLine.Text">fetchxml</fetchxml>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

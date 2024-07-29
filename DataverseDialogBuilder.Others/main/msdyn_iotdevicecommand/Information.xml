@@ -1,0 +1,699 @@
+<form shownavigationbar="true" showImage="false" maxWidth="1900">
+    <formparameters>
+        <querystringparameter name="param_msdyn_isMfd" type="Boolean" />
+        <querystringparameter name="param_msdyn_asset_hide" type="Boolean" />
+        <querystringparameter name="param_msdyn_assetView_name" type="SafeString" />
+        <querystringparameter name="param_msdyn_assetView_fetch" type="SafeString" />
+        <querystringparameter name="param_msdyn_assetView_view" type="SafeString" />
+        <querystringparameter name="param_msdyn_assetViewSecondary_name" type="SafeString" />
+        <querystringparameter name="param_msdyn_assetViewSecondary_fetch" type="SafeString" />
+        <querystringparameter name="param_msdyn_assetViewSecondary_view" type="SafeString" />
+        <querystringparameter name="param_msdyn_caseId" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{c820dae9-b78d-4bbd-8fbe-dd255869040b}" IsUserDefined="1" name="{c820dae9-b78d-4bbd-8fbe-dd255869040b}" locklevel="0" expanded="true" showlabel="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{5e35860a-0cc6-4e8a-9288-9e77ddb50b1e}" name="{5e35860a-0cc6-4e8a-9288-9e77ddb50b1e}" columns="1" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0bad8aca-5a60-4f92-a898-60f47cfdfc9c}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{c820dae9-b78d-4bbd-8fbe-dd255869040b}_section_2" showlabel="true" showbar="false" locklevel="0" id="{a23c324c-4865-489c-8c7d-9422ba7152dd}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="165" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="DEVICE" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e198cc8a-5127-5e12-59ad-6e5c188ce105}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Customer Asset" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_customerasset" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_customerasset" disabled="false" uniqueid="{6de7a1ee-b6eb-130a-c0d6-ae56c5406371}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{4F2F6A85-816A-E611-8106-00155DB8820B}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e8d6c37d-44eb-d528-9992-e69daa654465}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Send To All Connected Devices" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_sendtoallconnecteddevices" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="msdyn_sendtoallconnecteddevices" disabled="false" uniqueid="{58c176a7-0134-a44c-e4c1-8b2397076550}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c721374c-01e4-2078-7e18-cd312cd67815}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Device" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_device" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_device" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{056d7e71-72bc-041e-4380-3bb0d1a13b9b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Device ID" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_deviceid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_deviceid" disabled="false" uniqueid="{5c444804-3bb5-8a13-9855-4cabc22dc604}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="IoTAlert" showlabel="true" showbar="false" locklevel="0" id="{879e976d-37a0-7b1c-2a54-e1db6120db95}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="IN RESPONSE TO" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{061b7561-0414-393e-ae05-175b805d909e}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Primary Alert" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_parentalert" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_parentalert" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="MessageSection" showlabel="true" showbar="false" locklevel="0" id="{01a2e2ba-9ba4-21c9-a8d7-adcb19940600}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                            <labels>
+                                <label description="MESSAGE TO SEND" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ba1e4334-07c9-dc59-08ae-495c7c282e77}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Command" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_command" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_command" disabled="false" uniqueid="{878735eb-b23e-d70c-25ac-0d4955d4aa37}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>true</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{BB72E8D0-B1F7-4388-9C92-BD1E76D09E05}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9402328b-06b8-530b-198a-7d1199ec7517}" showlabel="false" locklevel="0" visible="false" rowspan="4" auto="true">
+                                        <labels>
+                                            <label description="Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_message" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_message" disabled="false" uniqueid="{69092e9c-5b58-0cc7-0d01-a02ad7688347}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row height="auto" />
+                                <row>
+                                    <cell id="{e66ad115-3a24-c3d0-aa47-3e4aaeab58d9}" showlabel="true" locklevel="0" rowspan="4" auto="false">
+                                        <labels>
+                                            <label description="Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_message" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_message" disabled="false" uniqueid="{DEA792EC-1C72-8D29-7050-34186BE89207}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="50%">
+                    <sections>
+                        <section name="{c820dae9-b78d-4bbd-8fbe-dd255869040b}_section_5" showlabel="false" showbar="false" locklevel="0" id="{c8ea2933-4053-91d7-20aa-611ec25794b9}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2bd39b64-7ded-2717-7892-98c16675d188}" locklevel="0" showlabel="true">
+                                        <labels>
+                                            <label description="Sent Time" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="true" id="createdon" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="createdon" uniqueid="{b41eaa62-146b-8b3d-5128-5ee6e64c286c}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9716e9ea-3cc9-4c29-a7c7-a73b0a2bcd95}" locklevel="0" showlabel="true">
+                                        <labels>
+                                            <label description="Status" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_commandstatus" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="msdyn_commandstatus" disabled="true" uniqueid="{7c527344-6bd0-40c7-d4d2-c50317ac930e}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2d32e735-43ca-62b4-d8b3-2231edaed08c}" locklevel="0" showlabel="true" rowspan="5">
+                                        <labels>
+                                            <label description="Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_commandstatusreason" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_commandstatusreason" disabled="true" uniqueid="{6ddd2ba2-c73a-0568-d033-122dc4290961}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="mfdTab" id="{8108b126-635d-58e4-9e09-a0dc8b37e3c7}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" labelid="{9f7300d4-03bb-4ea2-9a1a-701e5ca1d0ee}" visible="false">
+            <labels>
+                <label description="Command Details" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{f5fad1bc-5ef6-4daf-a08b-248e5082d065}" labelid="{13bee635-b22c-44bd-9e6d-c286c97868a4}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{16b869db-962e-b556-c12d-2db6e4a8757b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Customer Asset" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_customerasset" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_customerasset" disabled="false" uniqueid="{7d9057bc-a24e-7c0a-284d-b8d847ad224e}">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>true</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{FD2FDA4C-4B7F-4A68-A2CB-C1E1C6A31C8F}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b0a93438-e990-40a7-d91a-08240b071029}" showlabel="true" locklevel="0" labelid="{b6bd5023-6446-42b3-b396-0c779aff6800}" visible="false">
+                                        <labels>
+                                            <label description="IoT Device" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_device" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_device" disabled="false" uniqueid="{3d834e44-8d4b-d207-5a7b-29742e9c8088}">
+                                            <parameters>
+                                                <DisableMru>true</DisableMru>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{13C8A47C-EC96-45E7-8D0E-BC388A2CEF36}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{69c385ed-b826-654b-612c-aab29aeba379}" showlabel="true" locklevel="0" labelid="{1a052e46-f5a4-422a-a978-ed7bd07600da}">
+                                        <labels>
+                                            <label description="Command" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_command" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msdyn_command" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{775902d4-d470-069d-13d8-0286585839a5}" showlabel="true" locklevel="0" labelid="{f1390cc7-ba07-4567-9a36-08b8f2056895}" rowspan="4">
+                                        <labels>
+                                            <label description="Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_message" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_message" disabled="false" uniqueid="{7B09798B-30A2-7C41-99B9-96BD6DCCCE9E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row>
+                                    <cell id="{d6105d74-9bd5-462c-90bf-961a924f67eb}" labelid="{59a686d4-f49d-4b16-b971-6db4e78760a7}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" uniqueid="{0a1b6395-4e9b-35ba-b7b3-065e523dbb88}" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{931cc19d-977c-4745-92ee-37b5d1b82766}" labelid="{554acd22-798e-434e-96e8-fc9cca40b4d9}" showlabel="true" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" uniqueid="{3179e2c3-b968-409a-76a0-487693dd5600}" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{3d4ba370-8f10-47db-82a7-7a16e63daeec}" columns="111">
+        <rows></rows>
+    </header>
+    <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1025" Text="عام" />
+                    <Title LCID="1026" Text="Общо" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Fælles" />
+                    <Title LCID="1031" Text="Allgemein" />
+                    <Title LCID="1032" Text="Κοινός" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Levinud" />
+                    <Title LCID="1069" Text="Ohikoa" />
+                    <Title LCID="1035" Text="Yhteiset" />
+                    <Title LCID="1036" Text="Commun" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1037" Text="פריטים נפוצים" />
+                    <Title LCID="1081" Text="सामान्य" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Közös" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1087" Text="Жалпы" />
+                    <Title LCID="1042" Text="일반" />
+                    <Title LCID="1063" Text="Bendra" />
+                    <Title LCID="1062" Text="Kopējs" />
+                    <Title LCID="1086" Text="Biasa" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Algemeen" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Comun" />
+                    <Title LCID="1049" Text="Общие" />
+                    <Title LCID="1051" Text="Spoločné" />
+                    <Title LCID="1060" Text="Skupno" />
+                    <Title LCID="3098" Text="Уобичајено" />
+                    <Title LCID="2074" Text="Uobičajeno" />
+                    <Title LCID="1053" Text="Gemensam" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Спільні" />
+                    <Title LCID="1066" Text="Thông thường" />
+                    <Title LCID="2052" Text="通用" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1025" Text="المبيعات" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Ventes" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1087" Text="Сатылым" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="1063" Text="Pardavimas" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="3098" Text="Продаја" />
+                    <Title LCID="2074" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1025" Text="الخدمة" />
+                    <Title LCID="1026" Text="Услуга" />
+                    <Title LCID="1027" Text="Servei" />
+                    <Title LCID="1029" Text="Služby" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Υπηρεσία" />
+                    <Title LCID="3082" Text="Servicio" />
+                    <Title LCID="1061" Text="Teenindus" />
+                    <Title LCID="1069" Text="Zerbitzua" />
+                    <Title LCID="1035" Text="Palvelu" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Servizo" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1081" Text="सेवा" />
+                    <Title LCID="1050" Text="Usluga" />
+                    <Title LCID="1038" Text="Szolgáltatás" />
+                    <Title LCID="1057" Text="Layanan" />
+                    <Title LCID="1040" Text="Servizio" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1087" Text="Қызмет" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="1063" Text="Aptarnavimas" />
+                    <Title LCID="1062" Text="Serviss" />
+                    <Title LCID="1086" Text="Perkhidmatan" />
+                    <Title LCID="1044" Text="Tjeneste" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Usługa" />
+                    <Title LCID="1046" Text="Serviço" />
+                    <Title LCID="2070" Text="Serviço" />
+                    <Title LCID="1048" Text="Servicii" />
+                    <Title LCID="1049" Text="Сервис" />
+                    <Title LCID="1051" Text="Služba" />
+                    <Title LCID="1060" Text="Storitev" />
+                    <Title LCID="3098" Text="Услуге" />
+                    <Title LCID="2074" Text="Usluge" />
+                    <Title LCID="1053" Text="Tjänst" />
+                    <Title LCID="1054" Text="การบริการ" />
+                    <Title LCID="1055" Text="Servis" />
+                    <Title LCID="1058" Text="Обслуговування" />
+                    <Title LCID="1066" Text="Dịch vụ" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1025" Text="التسويق" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="3098" Text="Маркетинг" />
+                    <Title LCID="2074" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Processessioner" />
+                    <Title LCID="1031" Text="Sitzungen verarbeiten" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διεργασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesu-saioak" />
+                    <Title LCID="1035" Text="Prosessin istunnot" />
+                    <Title LCID="1036" Text="Sessions de traitement" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1037" Text="הפעלות תהליך" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Sesije procesa" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Memproses Sesi" />
+                    <Title LCID="1040" Text="Sessioni processo" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1087" Text="Процесс сеанстары" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="1063" Text="Apdorojimo seansai" />
+                    <Title LCID="1062" Text="Apstrādes sesijas" />
+                    <Title LCID="1086" Text="Sesi Proses" />
+                    <Title LCID="1044" Text="Prosessøkter" />
+                    <Title LCID="1043" Text="Sessies verwerken" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Sessões de Processo" />
+                    <Title LCID="2070" Text="Sessões de Processamento" />
+                    <Title LCID="1048" Text="Sesiuni de proces" />
+                    <Title LCID="1049" Text="Сеансы процесса" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje obdelave" />
+                    <Title LCID="3098" Text="Сесије процеса" />
+                    <Title LCID="2074" Text="Sesije procesa" />
+                    <Title LCID="1053" Text="Processessioner" />
+                    <Title LCID="1054" Text="เซสชันของกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси процесів" />
+                    <Title LCID="1066" Text="Giao dịch quy trình" />
+                    <Title LCID="2052" Text="进程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <controlDescriptions>
+        <controlDescription forControl="{7B09798B-30A2-7C41-99B9-96BD6DCCCE9E}">
+            <customControl id="{E0DECE4B-6FC8-4a8f-A065-082708572369}">
+                <parameters>
+                    <datafieldname>msdyn_message</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.Metadata.MetadataControl">
+                <parameters>
+                    <value>msdyn_message</value>
+                    <ActionName static="true" type="SingleLine.Text">msdyn_GetIoTCommandMetadata</ActionName>
+                    <ActionParamName static="true" type="SingleLine.Text">IoTCommandDefinition</ActionParamName>
+                    <ActionParam type="Lookup.Simple">
+                        <BindAttribute>msdyn_command</BindAttribute>
+                        <DefaultViewId>{BB72E8D0-B1F7-4388-9C92-BD1E76D09E05}</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType>systemuser</DependentAttributeType>
+                        <AvailableViewIds />
+                        <AllowFilterOff>true</AllowFilterOff>
+                        <DisableQuickFind>true</DisableQuickFind>
+                        <DisableViewPicker>true</DisableViewPicker>
+                    </ActionParam>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Metadata.MetadataControl">
+                <parameters>
+                    <value>msdyn_message</value>
+                    <ActionName static="true" type="SingleLine.Text">msdyn_GetIoTCommandMetadata</ActionName>
+                    <ActionParamName static="true" type="SingleLine.Text">IoTCommandDefinition</ActionParamName>
+                    <ActionParam type="Lookup.Simple">
+                        <BindAttribute>msdyn_command</BindAttribute>
+                        <DefaultViewId>{BB72E8D0-B1F7-4388-9C92-BD1E76D09E05}</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType>systemuser</DependentAttributeType>
+                        <AvailableViewIds />
+                        <AllowFilterOff>true</AllowFilterOff>
+                        <DisableQuickFind>true</DisableQuickFind>
+                        <DisableViewPicker>true</DisableViewPicker>
+                    </ActionParam>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Metadata.MetadataControl">
+                <parameters>
+                    <value>msdyn_message</value>
+                    <ActionName static="true" type="SingleLine.Text">msdyn_GetIoTCommandMetadata</ActionName>
+                    <ActionParamName static="true" type="SingleLine.Text">IoTCommandDefinition</ActionParamName>
+                    <ActionParam type="Lookup.Simple">
+                        <BindAttribute>msdyn_command</BindAttribute>
+                        <DefaultViewId>{BB72E8D0-B1F7-4388-9C92-BD1E76D09E05}</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType>systemuser</DependentAttributeType>
+                        <AvailableViewIds />
+                        <AllowFilterOff>true</AllowFilterOff>
+                        <DisableQuickFind>true</DisableQuickFind>
+                        <DisableViewPicker>true</DisableViewPicker>
+                    </ActionParam>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{DEA792EC-1C72-8D29-7050-34186BE89207}">
+            <customControl id="{E0DECE4B-6FC8-4a8f-A065-082708572369}">
+                <parameters>
+                    <datafieldname>msdyn_message</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.Metadata.MetadataControl">
+                <parameters>
+                    <value>msdyn_message</value>
+                    <ActionName static="true" type="SingleLine.Text">msdyn_GetIoTCommandMetadata</ActionName>
+                    <ActionParamName static="true" type="SingleLine.Text">IoTCommandDefinition</ActionParamName>
+                    <ActionParam type="Lookup.Simple">
+                        <BindAttribute>msdyn_command</BindAttribute>
+                        <DefaultViewId>{BB72E8D0-B1F7-4388-9C92-BD1E76D09E05}</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType>systemuser</DependentAttributeType>
+                        <AvailableViewIds />
+                        <AllowFilterOff>true</AllowFilterOff>
+                        <DisableQuickFind>true</DisableQuickFind>
+                        <DisableViewPicker>true</DisableViewPicker>
+                    </ActionParam>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.Metadata.MetadataControl">
+                <parameters>
+                    <value>msdyn_message</value>
+                    <ActionName static="true" type="SingleLine.Text">msdyn_GetIoTCommandMetadata</ActionName>
+                    <ActionParamName static="true" type="SingleLine.Text">IoTCommandDefinition</ActionParamName>
+                    <ActionParam type="Lookup.Simple">
+                        <BindAttribute>msdyn_command</BindAttribute>
+                        <DefaultViewId>{BB72E8D0-B1F7-4388-9C92-BD1E76D09E05}</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType>systemuser</DependentAttributeType>
+                        <AvailableViewIds />
+                        <AllowFilterOff>true</AllowFilterOff>
+                        <DisableQuickFind>true</DisableQuickFind>
+                        <DisableViewPicker>true</DisableViewPicker>
+                    </ActionParam>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.Metadata.MetadataControl">
+                <parameters>
+                    <value>msdyn_message</value>
+                    <ActionName static="true" type="SingleLine.Text">msdyn_GetIoTCommandMetadata</ActionName>
+                    <ActionParamName static="true" type="SingleLine.Text">IoTCommandDefinition</ActionParamName>
+                    <ActionParam type="Lookup.Simple">
+                        <BindAttribute>msdyn_command</BindAttribute>
+                        <DefaultViewId>{BB72E8D0-B1F7-4388-9C92-BD1E76D09E05}</DefaultViewId>
+                        <FilterRelationshipName />
+                        <DependentAttributeName />
+                        <DependentAttributeType>systemuser</DependentAttributeType>
+                        <AvailableViewIds />
+                        <AllowFilterOff>true</AllowFilterOff>
+                        <DisableQuickFind>true</DisableQuickFind>
+                        <DisableViewPicker>true</DisableViewPicker>
+                    </ActionParam>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <DisplayConditions Order="3">
+        <Role Id="{c737e307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+        <Role Id="{183ce307-6d0f-ef11-9f8a-6045bd1d8b49}" />
+    </DisplayConditions>
+    <formLibraries>
+        <Library name="msdyn_/IoT/Command/CommandForm.js" libraryUniqueId="{e4886519-0585-3dd3-31d8-88a69e68a105}" />
+        <Library name="msdyn_/CFS/Command/CommandForm.js" libraryUniqueId="{d6260246-8374-7e05-772e-707cde391a22}" />
+        <Library name="msdyn_/ConnectedCustomerService/IoTDeviceCommand/CCSIoTDeviceCommandForm.js" libraryUniqueId="{8eba6427-ad16-d748-aa20-ac243d9ea4cb}" />
+    </formLibraries>
+    <events>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler enabled="true" handlerUniqueId="5410e397-23fb-46ae-9ffb-d31f1fa6e696" libraryName="$webresource:msdyn_/IoT/Command/CommandDialog.js" functionName="msdyn.IoTCommandDialog.onSaveMFD" passExecutionContext="true" />
+            </InternalHandlers>
+            <Handlers>
+                <Handler functionName="msdyn.CCS.IoTDeviceCommandForm.onSave" libraryName="msdyn_/ConnectedCustomerService/IoTDeviceCommand/CCSIoTDeviceCommandForm.js" handlerUniqueId="{faeb023d-c15e-49e0-9119-e51ad8888b03}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <Handlers>
+                <Handler functionName="msdyn.CCS.IoTDeviceCommandForm.onLoad" libraryName="msdyn_/ConnectedCustomerService/IoTDeviceCommand/CCSIoTDeviceCommandForm.js" handlerUniqueId="{3bda1b19-b4cb-a42d-1529-64d10638749e}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="msdyn.commandForm.onLoad" libraryName="msdyn_/CFS/Command/CommandForm.js" handlerUniqueId="{332ab612-771a-9a2e-0bce-3070e4ae3d83}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="msdyn.IoTCommandForm.onLoad" libraryName="msdyn_/IoT/Command/CommandForm.js" handlerUniqueId="{e3ee9345-08e9-db76-d400-c52d19a231e3}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler enabled="true" handlerUniqueId="9f4512d0-2fb2-4e74-9c65-ac6dc912ee30" libraryName="$webresource:msdyn_/IoT/Command/CommandDialog.js" functionName="msdyn.IoTCommandDialog.onLoadMFD" passExecutionContext="true" />
+            </Handlers>
+            <InternalHandlers>
+                <Handler enabled="true" handlerUniqueId="c239efb7-ffee-49ba-a633-fc13e1145235" libraryName="msdyn_/IotAssetCommon/IoTDeviceCommand/IoTDeviceCommand.js" functionName="msdyn.IoTDeviceCommand.onLoadMFD" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_device">
+            <Handlers>
+                <Handler functionName="msdyn.IoTCommandForm.setCommandLookup" libraryName="msdyn_/IoT/Command/CommandForm.js" handlerUniqueId="{6b944a73-3c70-c496-9266-bccbc5e0e483}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_customerasset">
+            <Handlers>
+                <Handler functionName="msdyn.commandForm.setDeviceLookup" libraryName="msdyn_/CFS/Command/CommandForm.js" handlerUniqueId="{66d4c042-963b-7924-a09c-9421d52ba756}" enabled="true" parameters="true" passExecutionContext="false" />
+                <Handler functionName="msdyn.IoTDeviceCommand.onChangeCommandDialog" libraryName="msdyn_/IotAssetCommon/IoTDeviceCommand/IoTDeviceCommand.js" handlerUniqueId="{c4c772c8-a85c-ee0c-b603-088ee78eac51}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

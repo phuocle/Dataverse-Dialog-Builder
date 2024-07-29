@@ -1,0 +1,89 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{1fbde828-482f-4366-90dc-22c3af4a5c3f}" IsUserDefined="1" name="{1fbde828-482f-4366-90dc-22c3af4a5c3f}" locklevel="0" expanded="true" showlabel="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="34%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{c124e9bc-3cfc-47c4-b878-0682a21dd7d1}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2198e2aa-3b8a-4ade-8eca-8c3e95a9a556}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" uniqueid="{a03da6d6-7be7-0641-de23-209928801c64}" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{35fc9874-d252-46b5-b9e3-7b2a586104c6}" showlabel="true" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" uniqueid="{a20299cd-173c-87a6-7459-a6ca01133d91}" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="33%">
+                    <sections>
+                        <section name="{1fbde828-482f-4366-90dc-22c3af4a5c3f}_section_2" showlabel="false" showbar="false" locklevel="0" id="{1a921b1d-8795-ad4b-ccda-e29cc9149b16}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{09108406-6a19-b3b3-045a-539e5b5072d4}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="33%">
+                    <sections>
+                        <section name="{1fbde828-482f-4366-90dc-22c3af4a5c3f}_section_3" showlabel="false" showbar="false" locklevel="0" id="{792a3759-dd15-c3e6-c28b-c175738d79cc}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{718eb0b1-4a13-e14c-7633-d2aea79dc073}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <formLibraries>
+        <Library name="msdyn_/Trade/Trade.Library.js" libraryUniqueId="{c4f388f1-6013-4a18-af66-bee58e60db7d}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="FieldService.Trade.Library.Load" libraryName="msdyn_/Trade/Trade.Library.js" handlerUniqueId="{36e4501e-0920-4557-a362-bf4df56dc70a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

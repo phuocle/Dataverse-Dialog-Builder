@@ -44,6 +44,12 @@ var DataverseDialogBuilder_Preview = (function () {
         const json = session === null ? { width: 400, height: 300 } : JSON.parse(session);
         formContext.getAttribute("pl_width").setValue(json.width);
         formContext.getAttribute("pl_height").setValue(json.height);
+
+        formContext.getControl("pl_label_header").setLabel('Preview Dataverse Dialog Builder');
+        formContext.getControl("pl_width").setLabel('Width');
+        formContext.getControl("pl_height").setLabel('Height');
+        formContext.getControl("pl_button_ok").setLabel('Ok');
+        formContext.getControl("pl_button_cancel").setLabel('Cancel');
     }
     function buttonClick(executionContext, value) {
         var formContext = executionContext.getFormContext();
@@ -71,6 +77,7 @@ var DataverseDialogBuilder_Open = (function () {
     async function OnLoad(executionContext) {
         const formContext = executionContext.getFormContext();
         dynamicAddOptionSets();
+        loadEngishLanguages();
 
         function dynamicAddOptionSets() {
             const control_pl_form_type = formContext.getControl("pl_form_type");
@@ -112,6 +119,14 @@ var DataverseDialogBuilder_Open = (function () {
                 ].join("");
                 formContext.getControl("pl_system_form").addCustomView("00000000-0000-0000-0000-000000000001", 'systemform', 'Dataverse Dialog Builder', fetchXml, layoutXml, true)
             }
+        }
+        function loadEngishLanguages() {
+            formContext.getControl("pl_label_header").setLabel('Open Dataverse Dialog Builder Form');
+            formContext.getControl("pl_form_type").setLabel('Form Type');
+            formContext.getControl("pl_system_form").setLabel('Dialog');
+            formContext.getControl("pl_note").setLabel('You cannot save a managed form as unmanaged. However, you can update the metadata logical name to a different name and save it.');
+            formContext.getControl("pl_button_ok").setLabel('Ok');
+            formContext.getControl("pl_button_cancel").setLabel('Cancel');
         }
     }
     async function OnClickOk(executionContext) {

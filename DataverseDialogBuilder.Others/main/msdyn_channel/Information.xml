@@ -1,0 +1,149 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{debc7136-3c34-4af3-883c-f07c5a02a571}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{56144221-cac8-49a9-98e8-df7596306973}">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e2e87fa6-a6a9-4b42-86a7-3c2e074a94e8}">
+                                        <labels>
+                                            <label description="Display Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_displayname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_displayname" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f2e73fa6-a6a9-4b42-86a7-3c2e074a94e8}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1acbe822-da47-40e4-bb56-b2347e5bc033}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="tab_2" id="{63514de6-a19b-990e-b6ad-8234014c287e}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+            <labels>
+                <label description="Tab" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section name="tab_2_section_1" showlabel="true" showbar="false" locklevel="0" id="{b1645c6e-66b7-c1e0-ea42-11e68d59a389}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Sessions" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1e538390-cc76-d4e5-3b64-463d5b187b2b}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="Session Scenarios Placeholder" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_sessionscenarioplaceholder" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_sessionscenarioplaceholder" disabled="false" uniqueid="{7aa62bca-970b-54d6-e8c0-0743a80b98b8}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="50%">
+                    <sections>
+                        <section name="tab_2_section_2" showlabel="true" showbar="false" locklevel="0" id="{9a22ed8d-2d46-76dc-0cd7-25161a23cea9}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Notifications" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e4aea527-c954-0e08-3e84-c44ab001e06e}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="Notification Scenario Placeholder" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_notificationscenarioplaceholder" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyn_notificationscenarioplaceholder" disabled="false" uniqueid="{e1805a39-3bbb-a521-3440-7dd6bb6867a3}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{7aa62bca-970b-54d6-e8c0-0743a80b98b8}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>msdyn_sessionscenarioplaceholder</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Service.CIProvider.ScenarioMappingControl" formFactor="0">
+                <parameters>
+                    <value>msdyn_sessionscenarioplaceholder</value>
+                    <TemplateType static="true" type="Enum">session</TemplateType>
+                    <BoundEntityName static="true" type="SingleLine.Text">channel</BoundEntityName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Service.CIProvider.ScenarioMappingControl" formFactor="1">
+                <parameters>
+                    <value>msdyn_sessionscenarioplaceholder</value>
+                    <TemplateType static="true" type="Enum">session</TemplateType>
+                    <BoundEntityName static="true" type="SingleLine.Text">channel</BoundEntityName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Service.CIProvider.ScenarioMappingControl" formFactor="2">
+                <parameters>
+                    <value>msdyn_sessionscenarioplaceholder</value>
+                    <TemplateType static="true" type="Enum">session</TemplateType>
+                    <BoundEntityName static="true" type="SingleLine.Text">channel</BoundEntityName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{e1805a39-3bbb-a521-3440-7dd6bb6867a3}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>msdyn_notificationscenarioplaceholder</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Service.CIProvider.ScenarioMappingControl" formFactor="0">
+                <parameters>
+                    <value>msdyn_notificationscenarioplaceholder</value>
+                    <TemplateType static="true" type="Enum">notification</TemplateType>
+                    <BoundEntityName static="true" type="SingleLine.Text">channel</BoundEntityName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Service.CIProvider.ScenarioMappingControl" formFactor="1">
+                <parameters>
+                    <value>msdyn_notificationscenarioplaceholder</value>
+                    <TemplateType static="true" type="Enum">notification</TemplateType>
+                    <BoundEntityName static="true" type="SingleLine.Text">channel</BoundEntityName>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.Service.CIProvider.ScenarioMappingControl" formFactor="2">
+                <parameters>
+                    <value>msdyn_notificationscenarioplaceholder</value>
+                    <TemplateType static="true" type="Enum">notification</TemplateType>
+                    <BoundEntityName static="true" type="SingleLine.Text">channel</BoundEntityName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

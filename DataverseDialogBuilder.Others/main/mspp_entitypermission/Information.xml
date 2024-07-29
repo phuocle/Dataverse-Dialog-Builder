@@ -1,0 +1,641 @@
+<form shownavigationbar="true" showImage="false" maxWidth="1900">
+    <tabs>
+        <tab verticallayout="true" id="{2e157e9b-e064-463e-b2a8-ef03aa906f91}" IsUserDefined="1" expanded="true" name="mspp_entitypermission_general" locklevel="0" showlabel="true">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{a5eb2bf4-5153-4374-816f-c465839a14b8}" name="mspp_entitypermission_general" columns="11" locklevel="0" labelwidth="150" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dd45ed18-413c-4a9d-bee2-37c02ebf73f9}" showlabel="true" locklevel="0" colspan="2">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_entityname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_entityname" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4b98aa9d-3349-4b06-b20f-a80795e1cac2}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Table Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_entitylogicalname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_entitylogicalname" disabled="true" />
+                                    </cell>
+                                    <cell id="{1012beb8-1b78-4f30-84d1-9d79c88b4ab3}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Table Name (Selector)" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_mspp_entitylogicalname_selector" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/entity_selector.html</Url>
+                                                <Data>field=mspp_entitylogicalname</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies>
+                                                    <dependency id="mspp_entitylogicalname" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e56007cd-15f9-4301-be8a-d2276d2c0d2f}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Website" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_websiteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="mspp_websiteid" disabled="false" />
+                                    </cell>
+                                    <cell id="{4ae112f6-ac52-408d-b985-2588faaa7471}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1a01b271-9e34-4844-b04c-d40f9ac5f6e9}" showlabel="true" locklevel="0" colspan="2">
+                                        <labels>
+                                            <label description="Access Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_scope" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="mspp_scope" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="mspp_entitypermission_contact" showlabel="true" showbar="false" locklevel="0" id="{554d6ad7-7cf7-4bd6-8073-0d13e68a1f3d}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="150" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Contact Access Type" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ce6834b3-2225-48b4-8546-6a916a869a1b}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Contact Relationship" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_contactrelationship" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_contactrelationship" disabled="true" />
+                                    </cell>
+                                    <cell id="{8b1888df-5f92-49fe-a669-18172dd1a082}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Contact Relationship (Selector)" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_mspp_contactrelationship_selector" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/relationship_selector.html</Url>
+                                                <Data>field=mspp_contactrelationship&amp;source=mspp_entitylogicalname&amp;targets=contact</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies>
+                                                    <dependency id="mspp_contactrelationship" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="mspp_entitypermission_account" showlabel="true" showbar="false" locklevel="0" id="{582e1f6e-0058-4c2f-8b4a-2139d9f5c72e}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="150" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Account Access Type" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9ba8a31e-9bfb-4b6f-a0cd-81ff9a2d0c49}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Account Relationship" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_accountrelationship" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_accountrelationship" disabled="true" />
+                                    </cell>
+                                    <cell id="{4abb1b8f-739a-46fc-a955-76af20f02491}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Account Relationship (Selector)" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_mspp_accountrelationshipname_selector" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/relationship_selector.html</Url>
+                                                <Data>field=mspp_accountrelationship&amp;source=mspp_entitylogicalname&amp;targets=account</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies>
+                                                    <dependency id="mspp_accountrelationship" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="mspp_entitypermission_parent" showlabel="true" showbar="false" locklevel="0" id="{0a4063bb-6300-444d-bc08-60acb5d914a8}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="150" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Parent Access Type" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a5695b43-6c1e-4501-a599-ca6672ecd2da}" showlabel="true" locklevel="1" colspan="2">
+                                        <labels>
+                                            <label description="Parent Table Permission" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_parententitypermission" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="mspp_parententitypermission" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{B09C577A-5FC2-489D-97E8-C645F7DB5E5D}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{bc42e7b1-38bc-4dc7-ace2-c4f33390ce46}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Parent Relationship" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_parentrelationship" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_parentrelationship" disabled="true" />
+                                    </cell>
+                                    <cell id="{05fc940f-f510-4483-a456-52eb6a53a075}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Parent Relationship (Selector)" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_mspp_parentrelationship_selector" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/relationship_selector.html</Url>
+                                                <Data>field=mspp_parentrelationship&amp;source=mspp_entitylogicalname&amp;targets=$mspp_parententitypermission.mspp_entitylogicalname</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies>
+                                                    <dependency id="mspp_parentrelationship" />
+                                                    <dependency id="mspp_parententitypermission" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="mspp_entitypermission_privileges" showlabel="true" showbar="false" locklevel="0" id="{81314ff4-cce6-4bb0-b16f-7d5a5193dd4e}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="75" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Privileges" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{768769c4-07cc-40d5-9703-acb7d52f26cd}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Read" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_read" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_read" disabled="false" />
+                                    </cell>
+                                    <cell id="{604bcb7e-b561-4b2c-a2db-dc7b9bbb5307}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Write" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_write" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_write" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a3016382-22f5-403a-b9c7-47fa3aa0237f}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Create" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_create" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_create" disabled="false" />
+                                    </cell>
+                                    <cell id="{44291489-e7a2-41aa-bb8a-5fc3bc824f81}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Delete" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_delete" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_delete" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{49bb6df7-7e40-45e7-af87-b85b9d064978}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Append" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_append" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_append" disabled="false" />
+                                    </cell>
+                                    <cell id="{df274ed4-4d3f-4f3c-9183-59b05222a92f}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Append To" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_appendto" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_appendto" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="mspp_entitypermission_children" showlabel="true" showbar="false" locklevel="0" id="{942bf516-0e4e-4ea1-ae5f-1d0fa9d38781}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Child Table Permissions" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{83eb66ae-49a5-41e9-97e6-7308859966c9}" showlabel="false" colspan="1" auto="false" rowspan="12">
+                                        <labels>
+                                            <label description="Table Permissions (Parent Table Permission)" languagecode="1033" />
+                                        </labels>
+                                        <control id="subgrid_childentitypermissions" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{35E966A0-478F-4A53-98CF-C77AC811CDD4}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <RelationshipName>mspp_entitypermission_parententitypermission</RelationshipName>
+                                                <TargetEntityType>mspp_entitypermission</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{E315D803-D061-4AFA-8B38-E314358ECD48},{35E966A0-478F-4A53-98CF-C77AC811CDD4}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>10</RecordsPerPage>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="mspp_entitypermission_webroles" id="ab52cf2e-bce4-4ffe-ba40-ba7619755b02" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Web Roles" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell locklevel="0" id="{1c579b1e-417c-4ca9-a936-43128e06ffa0}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                                        <labels>
+                                            <label description="Web Roles" languagecode="1033" />
+                                        </labels>
+                                        <control indicationOfSubgrid="true" id="subgrid_webroles" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{735DE4F0-C287-42EB-B5E6-2F01A75A40FB}</ViewId>
+                                                <RelationshipName />
+                                                <TargetEntityType>mspp_webrole</TargetEntityType>
+                                                <AutoExpand>Fixed</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <ViewIds>{735DE4F0-C287-42EB-B5E6-2F01A75A40FB}</ViewIds>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>All</ChartGridMode>
+                                                <VisualizationId />
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>true</EnableChartPicker>
+                                                <RecordsPerPage>10</RecordsPerPage>
+                                                <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{620c3cdc-7c33-4cf2-9be5-9ec0a8eaaa14}">
+        <rows>
+            <row>
+                <cell id="{8f738b70-1b45-494f-bc93-0418acfc67b2}">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="footer_statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <Navigation>
+        <NavBar />
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title LCID="1026" Text="Общо" />
+                    <Title LCID="1027" Text="Comú" />
+                    <Title LCID="1029" Text="Společné" />
+                    <Title LCID="1030" Text="Fælles" />
+                    <Title LCID="1031" Text="Gemeinsam verwendet" />
+                    <Title LCID="1032" Text="Κοινή" />
+                    <Title LCID="3082" Text="Común" />
+                    <Title LCID="1061" Text="Ühine" />
+                    <Title LCID="1069" Text="Ohikoa" />
+                    <Title LCID="1035" Text="Yleinen" />
+                    <Title LCID="1036" Text="Commun" />
+                    <Title LCID="1110" Text="Común" />
+                    <Title LCID="1081" Text="एक समान" />
+                    <Title LCID="1050" Text="Uobičajeno" />
+                    <Title LCID="1038" Text="Közös" />
+                    <Title LCID="1057" Text="Umum" />
+                    <Title LCID="1040" Text="Elementi comuni" />
+                    <Title LCID="1087" Text="Жалпы мәлімет" />
+                    <Title LCID="1063" Text="Bendrasis" />
+                    <Title LCID="1062" Text="Kopējā informācija" />
+                    <Title LCID="1086" Text="Biasa" />
+                    <Title LCID="1044" Text="Felles" />
+                    <Title LCID="1043" Text="Gemeenschappelijk" />
+                    <Title LCID="1045" Text="Wspólne" />
+                    <Title LCID="1046" Text="Comum" />
+                    <Title LCID="2070" Text="Comum" />
+                    <Title LCID="1048" Text="Elemente comune" />
+                    <Title LCID="1049" Text="Общие" />
+                    <Title LCID="1051" Text="Bežné" />
+                    <Title LCID="1060" Text="Skupno" />
+                    <Title LCID="3098" Text="Заједничко" />
+                    <Title LCID="2074" Text="Zajedničko" />
+                    <Title LCID="9242" Text="Zajedničko" />
+                    <Title LCID="1053" Text="Gemensamt" />
+                    <Title LCID="1054" Text="ทั่วไป" />
+                    <Title LCID="1055" Text="Ortak" />
+                    <Title LCID="1058" Text="Спільні" />
+                    <Title LCID="1066" Text="Phổ biến" />
+                    <Title LCID="1025" Text="العامة" />
+                    <Title LCID="1037" Text="פריטים נפוצים" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1042" Text="공통" />
+                    <Title LCID="10266" Text="Заједничко" />
+                    <Title LCID="2052" Text="公用" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title LCID="1026" Text="Продажби" />
+                    <Title LCID="1027" Text="Vendes" />
+                    <Title LCID="1029" Text="Prodej" />
+                    <Title LCID="1030" Text="Salg" />
+                    <Title LCID="1031" Text="Vertrieb" />
+                    <Title LCID="1032" Text="Πωλήσεις" />
+                    <Title LCID="3082" Text="Ventas" />
+                    <Title LCID="1061" Text="Müük" />
+                    <Title LCID="1069" Text="Salmentak" />
+                    <Title LCID="1035" Text="Myynti" />
+                    <Title LCID="1036" Text="Vente" />
+                    <Title LCID="1110" Text="Vendas" />
+                    <Title LCID="1081" Text="विक्रय" />
+                    <Title LCID="1050" Text="Prodaja" />
+                    <Title LCID="1038" Text="Értékesítés" />
+                    <Title LCID="1057" Text="Penjualan" />
+                    <Title LCID="1040" Text="Vendite" />
+                    <Title LCID="1087" Text="Сатылым" />
+                    <Title LCID="1063" Text="Pardavimas" />
+                    <Title LCID="1062" Text="Pārdošana" />
+                    <Title LCID="1086" Text="Jualan" />
+                    <Title LCID="1044" Text="Salg" />
+                    <Title LCID="1043" Text="Verkoop" />
+                    <Title LCID="1045" Text="Sprzedaż" />
+                    <Title LCID="1046" Text="Vendas" />
+                    <Title LCID="2070" Text="Vendas" />
+                    <Title LCID="1048" Text="Vânzări" />
+                    <Title LCID="1049" Text="Продажи" />
+                    <Title LCID="1051" Text="Predaj" />
+                    <Title LCID="1060" Text="Prodaja" />
+                    <Title LCID="3098" Text="Продаја" />
+                    <Title LCID="2074" Text="Prodaja" />
+                    <Title LCID="9242" Text="Prodaja" />
+                    <Title LCID="1053" Text="Försäljning" />
+                    <Title LCID="1054" Text="การขาย" />
+                    <Title LCID="1055" Text="Satış" />
+                    <Title LCID="1058" Text="Збут" />
+                    <Title LCID="1066" Text="Bán hàng" />
+                    <Title LCID="1025" Text="‏المبيعات‬" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="10266" Text="Продаја" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title LCID="1026" Text="Услуга" />
+                    <Title LCID="1027" Text="Servei" />
+                    <Title LCID="1029" Text="Služby" />
+                    <Title LCID="1030" Text="Service" />
+                    <Title LCID="1031" Text="Service" />
+                    <Title LCID="1032" Text="Υπηρεσία" />
+                    <Title LCID="3082" Text="Servicio" />
+                    <Title LCID="1061" Text="Teenindus" />
+                    <Title LCID="1069" Text="Zerbitzua" />
+                    <Title LCID="1035" Text="Palvelu" />
+                    <Title LCID="1036" Text="Service" />
+                    <Title LCID="1110" Text="Servizo" />
+                    <Title LCID="1081" Text="सेवा" />
+                    <Title LCID="1050" Text="Usluga" />
+                    <Title LCID="1038" Text="Szolgáltatás" />
+                    <Title LCID="1057" Text="Layanan" />
+                    <Title LCID="1040" Text="Servizio" />
+                    <Title LCID="1087" Text="Қызмет" />
+                    <Title LCID="1063" Text="Tarnyba" />
+                    <Title LCID="1062" Text="Serviss" />
+                    <Title LCID="1086" Text="Perkhidmatan" />
+                    <Title LCID="1044" Text="Service" />
+                    <Title LCID="1043" Text="Service" />
+                    <Title LCID="1045" Text="Obsługa klienta" />
+                    <Title LCID="1046" Text="Serviço" />
+                    <Title LCID="2070" Text="Serviço" />
+                    <Title LCID="1048" Text="Servicii" />
+                    <Title LCID="1049" Text="Сервис" />
+                    <Title LCID="1051" Text="Služba" />
+                    <Title LCID="1060" Text="Storitev" />
+                    <Title LCID="3098" Text="Услуге" />
+                    <Title LCID="2074" Text="Usluge" />
+                    <Title LCID="9242" Text="Usluge" />
+                    <Title LCID="1053" Text="Service" />
+                    <Title LCID="1054" Text="การบริการ" />
+                    <Title LCID="1055" Text="Servis" />
+                    <Title LCID="1058" Text="Обслуговування" />
+                    <Title LCID="1066" Text="Dịch vụ" />
+                    <Title LCID="1025" Text="الخدمة" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="10266" Text="Услуге" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title LCID="1026" Text="Маркетинг" />
+                    <Title LCID="1027" Text="Màrqueting" />
+                    <Title LCID="1029" Text="Marketing" />
+                    <Title LCID="1030" Text="Marketing" />
+                    <Title LCID="1031" Text="Marketing" />
+                    <Title LCID="1032" Text="Μάρκετινγκ" />
+                    <Title LCID="3082" Text="Marketing" />
+                    <Title LCID="1061" Text="Turundus" />
+                    <Title LCID="1069" Text="Marketina" />
+                    <Title LCID="1035" Text="Markkinointi" />
+                    <Title LCID="1036" Text="Marketing" />
+                    <Title LCID="1110" Text="Márketing" />
+                    <Title LCID="1081" Text="मार्केटिंग" />
+                    <Title LCID="1050" Text="Marketing" />
+                    <Title LCID="1038" Text="Marketing" />
+                    <Title LCID="1057" Text="Pemasaran" />
+                    <Title LCID="1040" Text="Marketing" />
+                    <Title LCID="1087" Text="Маркетинг" />
+                    <Title LCID="1063" Text="Rinkodara" />
+                    <Title LCID="1062" Text="Mārketings" />
+                    <Title LCID="1086" Text="Pemasaran" />
+                    <Title LCID="1044" Text="Markedsføring" />
+                    <Title LCID="1043" Text="Marketing" />
+                    <Title LCID="1045" Text="Marketing" />
+                    <Title LCID="1046" Text="Marketing" />
+                    <Title LCID="2070" Text="Marketing" />
+                    <Title LCID="1048" Text="Marketing" />
+                    <Title LCID="1049" Text="Маркетинг" />
+                    <Title LCID="1051" Text="Marketing" />
+                    <Title LCID="1060" Text="Trženje" />
+                    <Title LCID="3098" Text="Маркетинг" />
+                    <Title LCID="2074" Text="Marketing" />
+                    <Title LCID="9242" Text="Marketing" />
+                    <Title LCID="1053" Text="Marknadsföring" />
+                    <Title LCID="1054" Text="การตลาด" />
+                    <Title LCID="1055" Text="Pazarlama" />
+                    <Title LCID="1058" Text="Маркетинг" />
+                    <Title LCID="1066" Text="Tiếp thị" />
+                    <Title LCID="1025" Text="التسويق‬" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="10266" Text="Маркетинг" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Process Sessions" />
+                    <Title LCID="1026" Text="Сесии на процес" />
+                    <Title LCID="1027" Text="Sessions del procés" />
+                    <Title LCID="1029" Text="Relace procesů" />
+                    <Title LCID="1030" Text="Behandl sessioner" />
+                    <Title LCID="1031" Text="Prozesssitzungen" />
+                    <Title LCID="1032" Text="Περίοδοι λειτουργίας διεργασίας" />
+                    <Title LCID="3082" Text="Sesiones de proceso" />
+                    <Title LCID="1061" Text="Protsessiseansid" />
+                    <Title LCID="1069" Text="Prozesu-saioak" />
+                    <Title LCID="1035" Text="Käsittelyistunnot" />
+                    <Title LCID="1036" Text="Sessions de processus" />
+                    <Title LCID="1110" Text="Sesións de proceso" />
+                    <Title LCID="1081" Text="प्रक्रिया सत्र" />
+                    <Title LCID="1050" Text="Procesne sesije" />
+                    <Title LCID="1038" Text="Feldolgozási munkamenetek" />
+                    <Title LCID="1057" Text="Sesi Proses" />
+                    <Title LCID="1040" Text="Sessioni processo" />
+                    <Title LCID="1087" Text="Өңдеу сеанстары" />
+                    <Title LCID="1063" Text="Apdorojimo seansai" />
+                    <Title LCID="1062" Text="Apstrādes sesijas" />
+                    <Title LCID="1086" Text="Sesi Proses" />
+                    <Title LCID="1044" Text="Prosessøkter" />
+                    <Title LCID="1043" Text="Processessies" />
+                    <Title LCID="1045" Text="Sesje procesów" />
+                    <Title LCID="1046" Text="Sessões de Processo" />
+                    <Title LCID="2070" Text="Sessões de Processamento" />
+                    <Title LCID="1048" Text="Sesiuni proces" />
+                    <Title LCID="1049" Text="Сеансы процессов" />
+                    <Title LCID="1051" Text="Relácie procesov" />
+                    <Title LCID="1060" Text="Seje obdelave" />
+                    <Title LCID="3098" Text="Сесије процеса" />
+                    <Title LCID="2074" Text="Sesije procesa" />
+                    <Title LCID="9242" Text="Sesije procesa" />
+                    <Title LCID="1053" Text="Bearbetningssessioner" />
+                    <Title LCID="1054" Text="เซสชันของกระบวนการ" />
+                    <Title LCID="1055" Text="İşlem Oturumları" />
+                    <Title LCID="1058" Text="Сеанси процесів" />
+                    <Title LCID="1066" Text="Phiên xử lý" />
+                    <Title LCID="1025" Text="جلسات عمل العمليات" />
+                    <Title LCID="1037" Text="‏‫הפעלות תהליך‬" />
+                    <Title LCID="1041" Text="プロセス セッション" />
+                    <Title LCID="1042" Text="프로세스 세션" />
+                    <Title LCID="10266" Text="Сесије процеса" />
+                    <Title LCID="2052" Text="流程会话" />
+                    <Title LCID="3076" Text="程序工作階段" />
+                    <Title LCID="1028" Text="程序工作階段" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <formLibraries>
+        <Library name="mspp_scripts/jquery1.10.2.min.js" libraryUniqueId="{9756d5d8-b127-32e7-3e89-ee73cb2ee107}" />
+        <Library name="mspp_resources/ResourcesManager.js" libraryUniqueId="{01b3b355-29d7-cca7-dc5a-297367471dce}" />
+        <Library name="mspp_entitypermission.js" libraryUniqueId="{a2e431e1-b699-cba2-9161-89d564e3b8b0}" />
+        <Library name="mspp_entities/m2msubgrid_filtering.js" libraryUniqueId="{C2471753-A1BC-4C5A-A079-62EC812495E0}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="mspp_entitypermission_OnLoad" libraryName="mspp_entitypermission.js" handlerUniqueId="{c46c531d-7eb7-2b20-5769-a43ac5c69d4c}" enabled="true" parameters="" passExecutionContext="false" />
+                <Handler functionName="mspp.subgrid_filtering.filterAssociatedRecords" libraryName="mspp_entities/m2msubgrid_filtering.js" handlerUniqueId="{95002E28-B44D-4D5D-86FC-F8378E8FCD9E}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_scope">
+            <Handlers>
+                <Handler functionName="mspp_scope_OnChange" libraryName="mspp_entitypermission.js" handlerUniqueId="{d923cbb0-c6ee-94d3-3822-711cd8d92560}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onsave" application="false" active="false">
+            <Handlers>
+                <Handler functionName="mspp_entitypermission_OnSave" libraryName="mspp_entitypermission.js" handlerUniqueId="{ea627ea0-90a0-518e-4c22-dcb4d6c2286e}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

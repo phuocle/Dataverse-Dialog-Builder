@@ -1,0 +1,572 @@
+<form>
+    <hiddencontrols>
+        <data id="pricelevelid" datafieldname="pricelevelid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="statecode" datafieldname="statecode" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{9c9703f9-daa8-443f-a50c-e9ccb34e5868}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="invoice information" showlabel="false" showbar="false" id="{704d371d-1bc7-4497-ac8b-26b03b2057da}" IsUserDefined="0">
+                            <labels>
+                                <label description="Invoice Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{e721f7d0-c408-4056-86ee-ea56fd24d0f2}">
+                                        <labels>
+                                            <label description="Invoice ID" languagecode="1033" />
+                                        </labels>
+                                        <control id="invoicenumber" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="invoicenumber" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell colspan="2" id="{ed330ef9-e336-440f-a5b4-f323e1475a6e}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{90980a7c-4551-48d7-b8f6-caff52b73e73}">
+                                        <labels>
+                                            <label description="Customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="customerid" />
+                                    </cell>
+                                    <cell id="{0f743ac8-38df-4042-91c4-91f0777624dc}">
+                                        <labels>
+                                            <label description="Currency" languagecode="1033" />
+                                        </labels>
+                                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{493f7d12-5777-42e7-bfd7-ee4cd9b499b3}">
+                                        <labels>
+                                            <label description="Price List" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.pricelevelid_setadditionalparams" libraryName="Sales/Invoice/Invoice_main_system_library.js" handlerUniqueId="04967e88-cea1-499d-92b5-09aa9fe2b267" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="transactioncurrencyid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="pricelevelid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pricelevelid" />
+                                    </cell>
+                                    <cell id="{48a11fca-c784-4225-b480-efd5255b8c7a}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="totals" showlabel="true" showbar="true" id="{7ada300d-f881-4809-9e11-28f75e9660f5}" IsUserDefined="0">
+                            <labels>
+                                <label description="Totals" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{bce3e693-fedb-4722-86cc-b4a8483540f0}">
+                                        <labels>
+                                            <label description="Detail Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="totallineitemamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="totallineitemamount" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{cb1763b9-37e4-4acd-b6ce-8e6f76d0c4a1}">
+                                        <labels>
+                                            <label description="Prices Locked" languagecode="1033" />
+                                        </labels>
+                                        <control id="ispricelocked" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="ispricelocked" disabled="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{3beadc70-d997-47c3-b881-e10b2e804e6f}">
+                                        <labels>
+                                            <label description="Invoice Discount (%)" languagecode="1033" />
+                                        </labels>
+                                        <control id="discountpercentage" classid="{C3EFE0C3-0EC6-42be-8349-CBD9079DFD8E}" datafieldname="discountpercentage" />
+                                    </cell>
+                                    <cell id="{5f3c7163-74bb-48b2-8d21-d685571d45b2}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0e788a21-603e-4ff8-9df8-32b8d5473322}">
+                                        <labels>
+                                            <label description="(-) Discount" languagecode="1033" />
+                                        </labels>
+                                        <control id="discountamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="discountamount" />
+                                    </cell>
+                                    <cell id="{ad8ae774-2745-483a-a9ba-6000a8ee19cd}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c2321df0-5966-40fa-982e-c9d1935ca2c4}">
+                                        <labels>
+                                            <label description="Pre-Freight Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="totalamountlessfreight" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="totalamountlessfreight" />
+                                    </cell>
+                                    <cell id="{2560981d-0154-47f8-b846-fd7bfaa6a163}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{565844f3-abc3-408c-a86a-c8724bb19347}">
+                                        <labels>
+                                            <label description="Freight Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="freightamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="freightamount" />
+                                    </cell>
+                                    <cell id="{04d288ed-061f-4737-9974-fb4bf25adcd0}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{983079ec-0c65-4296-b998-2566c75f9d56}">
+                                        <labels>
+                                            <label description="Total Tax" languagecode="1033" />
+                                        </labels>
+                                        <control id="totaltax" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="totaltax" />
+                                    </cell>
+                                    <cell id="{b855972e-5520-4013-86fb-254d1281f610}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ae74adb8-e469-416a-91b5-d9fe82e7fcb0}">
+                                        <labels>
+                                            <label description="Total Amount" languagecode="1033" />
+                                        </labels>
+                                        <control id="totalamount" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="totalamount" />
+                                    </cell>
+                                    <cell id="{637dc87d-c879-41b2-9304-a5bde3e5b149}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="shipping" id="{c86ea5af-514a-4d20-9986-dad60cb235b2}" IsUserDefined="0">
+            <labels>
+                <label description="Shipping" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="dates" showlabel="true" showbar="true" locklevel="0" id="{72158bbe-7fee-4bca-9813-2a9c86e8bda1}" IsUserDefined="0" layout="varheight" columns="11">
+                            <labels>
+                                <label description="Dates" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{98143baa-9eb8-4a83-a042-90f74bcf1e52}">
+                                        <labels>
+                                            <label description="Date Delivered" languagecode="1033" />
+                                        </labels>
+                                        <control id="datedelivered" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="datedelivered" disabled="false" />
+                                    </cell>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{b47731f2-6297-4b24-873e-d499fd7d6405}">
+                                        <labels>
+                                            <label description="Due Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="duedate" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="duedate" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="shipping information" showlabel="true" showbar="true" id="{89f5209f-c925-42e6-9c2e-d9143d3e09c3}" IsUserDefined="0">
+                            <labels>
+                                <label description="Shipping Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ab4dd062-63f9-40c1-824b-c1fc2acb33a3}">
+                                        <labels>
+                                            <label description="Shipping Method" languagecode="1033" />
+                                        </labels>
+                                        <control id="shippingmethodcode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="shippingmethodcode" />
+                                    </cell>
+                                    <cell id="{efa5bc93-1d51-44bd-9d9b-953413e6c690}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2b5470c8-75df-4718-9d04-ba79c628eeca}">
+                                        <labels>
+                                            <label description="Payment Terms" languagecode="1033" />
+                                        </labels>
+                                        <control id="paymenttermscode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="paymenttermscode" />
+                                    </cell>
+                                    <cell id="{9c2e6beb-87e5-4eaf-a0fb-ef9056cd985c}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="description" showlabel="true" showbar="true" id="{5c842a5f-bc47-4d4c-895b-ce1bcecab191}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Description" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{6c463fa3-7e42-4811-b8ab-315860f0dad1}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="description" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="addresses" id="{ba5d8e9e-c011-4bc7-8711-9470c2587967}" IsUserDefined="0">
+            <labels>
+                <label description="Addresses" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="bill to address" showlabel="true" showbar="true" id="{ffadfea8-7fd6-4cc8-82f8-aa04600a4667}" IsUserDefined="0">
+                            <labels>
+                                <label description="Bill To Address" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{40b5092d-70a7-4b67-b328-46463e55bb01}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_name" />
+                                    </cell>
+                                    <cell id="{3f257e18-476d-47f0-879f-49ca339a46b3}">
+                                        <labels>
+                                            <label description="State/Province" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_stateorprovince" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_stateorprovince" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ce1548ae-3204-44a7-9141-b25b322e5f49}">
+                                        <labels>
+                                            <label description="Street 1" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_line1" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_line1" />
+                                    </cell>
+                                    <cell id="{a28f426f-3e0b-4d89-9410-62f7b592b34d}">
+                                        <labels>
+                                            <label description="ZIP/Postal Code" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_postalcode" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_postalcode" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c13103b5-ea5b-4951-82db-9fa8d85b36c4}">
+                                        <labels>
+                                            <label description="Street 2" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_line2" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_line2" />
+                                    </cell>
+                                    <cell id="{09c34e20-14e7-4deb-a5d0-c36a353dbf4e}">
+                                        <labels>
+                                            <label description="Country/Region" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_country" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_country" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d22cc8ec-f6f1-43fa-9a76-85f11a8702d7}">
+                                        <labels>
+                                            <label description="Street 3" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_line3" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_line3" />
+                                    </cell>
+                                    <cell id="{ad803b5a-8ef9-46c1-8c61-fee644ef1031}">
+                                        <labels>
+                                            <label description="Phone" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_telephone" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_telephone" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{de64a4f6-75b5-4bbf-9669-a1782503a62f}">
+                                        <labels>
+                                            <label description="City" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_city" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_city" />
+                                    </cell>
+                                    <cell id="{69b0de4a-0cba-4624-88a4-66cb97bbbe6a}">
+                                        <labels>
+                                            <label description="Fax" languagecode="1033" />
+                                        </labels>
+                                        <control id="billto_fax" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="billto_fax" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="ship to address" showlabel="true" showbar="true" id="{641cdd5b-1dad-4dfd-bf4f-bfaa4fd1ed17}" IsUserDefined="0">
+                            <labels>
+                                <label description="Ship To Address" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" id="{f8d607cb-034a-4556-8a70-3c0c2fd15f54}">
+                                        <labels>
+                                            <label description="Ship To" languagecode="1033" />
+                                        </labels>
+                                        <control id="willcall" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="willcall" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1163d742-4aaf-46be-a365-cf818189ba67}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_name" />
+                                    </cell>
+                                    <cell id="{be7403ab-c646-425e-9bc8-88f194960762}">
+                                        <labels>
+                                            <label description="State/Province" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_stateorprovince" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_stateorprovince" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0c19960c-0685-4103-ace2-9f76e7bff16f}">
+                                        <labels>
+                                            <label description="Street 1" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_line1" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_line1" />
+                                    </cell>
+                                    <cell id="{ddf082ab-6631-475e-ab72-2927c0ec321e}">
+                                        <labels>
+                                            <label description="ZIP/Postal Code" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_postalcode" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_postalcode" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fd9bf58d-664b-4e12-86dc-c7ff7c600c38}">
+                                        <labels>
+                                            <label description="Street 2" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_line2" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_line2" />
+                                    </cell>
+                                    <cell id="{f35ce669-1dd5-48cc-b6d6-e4bca57d4740}">
+                                        <labels>
+                                            <label description="Country/Region" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_country" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_country" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0d286606-91f1-40c3-a4d8-889b7a925323}">
+                                        <labels>
+                                            <label description="Street 3" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_line3" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_line3" />
+                                    </cell>
+                                    <cell id="{eeb6ec45-26b6-459c-aee1-c690572605f6}">
+                                        <labels>
+                                            <label description="Phone" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_telephone" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_telephone" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2656a924-3729-4d23-adc7-f59ccf13214b}">
+                                        <labels>
+                                            <label description="City" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_city" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_city" />
+                                    </cell>
+                                    <cell id="{ccabaa96-97ae-4a97-afbb-61c6ae9b4dd4}">
+                                        <labels>
+                                            <label description="Fax" languagecode="1033" />
+                                        </labels>
+                                        <control id="shipto_fax" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="shipto_fax" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="administration" id="{f4b5abae-e713-409c-a7a8-63a240261fe0}" IsUserDefined="0">
+            <labels>
+                <label description="Administration" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="internal information" showlabel="false" showbar="false" id="{62ff7a29-d07c-4fe6-ac79-d5a7d0f5acee}" IsUserDefined="0">
+                            <labels>
+                                <label description="Internal Information" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6922b434-f49b-4bdd-ab9b-bd6a704103c4}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                                    </cell>
+                                    <cell id="{e27f7af6-4f59-4722-82b2-f8c17b914177}">
+                                        <labels>
+                                            <label description="Opportunity" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.opportunityid_setadditionalparams" libraryName="Sales/Invoice/Invoice_main_system_library.js" handlerUniqueId="532ef878-e7f2-4954-9d9c-144a1178d732" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="transactioncurrencyid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="opportunityid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="opportunityid">
+                                            <parameters>
+                                                <FilterRelationshipName>transactioncurrency_opportunity</FilterRelationshipName>
+                                                <DependentAttributeName>invoice.transactioncurrencyid</DependentAttributeName>
+                                                <DependentAttributeType>transactioncurrency</DependentAttributeType>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a45dbcbb-fa60-471f-a1e4-0c82bf0b1b70}">
+                                        <labels>
+                                            <label description="Status Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" />
+                                    </cell>
+                                    <cell id="{38e865df-9e7c-408b-bede-8ca00cca5251}">
+                                        <labels>
+                                            <label description="Contract" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.salesorderid_setadditionalparams" libraryName="Sales/Invoice/Invoice_main_system_library.js" handlerUniqueId="1ccd5fa4-501a-43c9-b107-2d78bf06d307" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="transactioncurrencyid" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="salesorderid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="salesorderid" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="notes" id="{B50D2477-64F6-4545-90C8-8808A953608A}" IsUserDefined="0" expanded="false">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="notes" showlabel="false" showbar="false" id="{4D4ED63E-D09D-433a-B000-CC16F13E5551}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{476ca3f8-7089-4ec9-b87b-62971d7ed648}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="Sales/Invoice/Invoice_main_system_library.js" handlerUniqueId="4f3048fb-ebdd-48de-a314-c6ab451139fd" enabled="true">
+                    <dependencies>
+                        <dependency id="willcall" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="willcall">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.willcall_onchange" libraryName="Sales/Invoice/Invoice_main_system_library.js" handlerUniqueId="38666449-f3d9-43cd-868b-bb1e4a26ec50" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="transactioncurrencyid">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.transactioncurrencyid_onchange" libraryName="Sales/Invoice/Invoice_main_system_library.js" handlerUniqueId="03a343de-5c32-4e23-b0b7-3c509d4f9a25" enabled="true" />
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Sales/_static/sfa/invoice/InvoiceRibbonActions.js" />
+                <internaljscriptfile src="$webresource:Sales/Invoice/Invoice_main_system_library.js" />
+            </clientincludes>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_PRICE_LIST_NOT_SELECTED" resourceid="Web.SFA.quotes.edit.aspx_155" />
+            </clientvariables>
+        </internalresources>
+    </clientresources>
+</form>

@@ -1,0 +1,114 @@
+<form shownavigationbar="true" showImage="false" maxWidth="1920">
+    <tabs>
+        <tab verticallayout="true" id="{5cfab5bd-2866-4d51-b8b9-8d41b939c961}" IsUserDefined="1" showlabel="true">
+            <labels>
+                <label description="Summary" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{864197b5-fda1-4d58-aebe-3bd29c8add73}" name="{864197b5-fda1-4d58-aebe-3bd29c8add73}" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{444206e5-7aaf-4b4f-81f3-f12df04017b1}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b91631d8-da99-180c-1160-2ce804379020}" showlabel="true" locklevel="0" rowspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_description" disabled="false" uniqueid="{1a67a2dd-3128-6683-1aa6-983e0a964505}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{3156e8ae-53be-b0c5-e9c7-dcb726bb1346}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Regular Expression" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_regular_expression" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_regular_expression" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{cc530d7b-8870-0dad-cd16-8a23bebcb5c9}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Masked Character" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_masked_character" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_masked_character" disabled="true" uniqueid="{b550567d-9847-cb1a-929e-5c8a69b18254}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="50%">
+                    <sections>
+                        <section name="{5cfab5bd-2866-4d51-b8b9-8d41b939c961}_section_3" showlabel="false" showbar="false" locklevel="0" id="{e8097338-d0ed-3256-a766-6121940d029e}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115">
+                            <labels>
+                                <label description="Section" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d1a508a3-94e0-ba5c-0cd6-dc06aeb54e4a}" showlabel="true" locklevel="0" rowspan="4">
+                                        <labels>
+                                            <label description="Enter Test Data" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_enter_test_data" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_enter_test_data" disabled="false" uniqueid="{5d06b89e-4790-2b31-81cc-b88ce05079d0}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row></row>
+                                <row />
+                                <row>
+                                    <cell id="{3b92cb4e-56d5-0a06-9c76-57e89a71604c}" showlabel="true" locklevel="0" rowspan="4">
+                                        <labels>
+                                            <label description="Masked Test Data" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_masked_test_data" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msdyn_masked_test_data" disabled="true" uniqueid="{29aa09c6-57d3-248b-0d22-ea2c1422d819}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions />
+    <formLibraries>
+        <Library name="msdyn_MaskingRulesLibrary.js" libraryUniqueId="{03a29523-98be-87e7-cabe-6b42791e4dc1}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.MaskingRulesLibrary.wipeTestData" libraryName="msdyn_MaskingRulesLibrary.js" handlerUniqueId="{26320937-bd02-e25a-9ba5-dd64998b0ab4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_enter_test_data">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.MaskingRulesLibrary.verifyRegexAndMaskInputData" libraryName="msdyn_MaskingRulesLibrary.js" handlerUniqueId="{242a4347-bab9-9e14-2a22-873de60aad1c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onsave" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.MaskingRulesLibrary.verifyRegex" libraryName="msdyn_MaskingRulesLibrary.js" handlerUniqueId="{a1c7e37a-3257-84c5-0542-c9875a104611}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyn_regular_expression">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.MaskingRulesLibrary.verifyRegexAndMaskInputData" libraryName="msdyn_MaskingRulesLibrary.js" handlerUniqueId="{c7a679b7-6542-770e-edaa-02e81c446da8}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

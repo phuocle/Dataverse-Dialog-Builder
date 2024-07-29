@@ -1,0 +1,1316 @@
+<form shownavigationbar="true" showImage="false" maxWidth="1900">
+    <tabs>
+        <tab verticallayout="true" id="{fffeda32-c425-45a7-b241-0daa111d4a81}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{886e095e-213e-4f2f-8ab5-d4ca29c7b3b5}" name="{4c13f681-994c-46f8-a193-219e88408ddc}" columns="11" locklevel="0" labelwidth="220" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{9f748dee-2ac0-4896-95fb-56dc2842609b}" showlabel="false" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Provisioned Languages" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_provisionedlanguages" classid="{671A9387-CA5A-4d1e-8AB7-06E39DDCF6B5}" datafieldname="mspp_provisionedlanguages" disabled="false" />
+                                    </cell>
+                                    <cell id="{b197c97a-8d96-4bbc-b1ce-06d0ba42df2b}" colspan="1" showlabel="false" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_name" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f0c9f4e0-23a1-4b3e-9c80-629928b0cd21}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Basic Form" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_entityform" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="mspp_entityform" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <DisableQuickFind>false</DisableQuickFind>
+                                                <DisableViewPicker>false</DisableViewPicker>
+                                                <DefaultViewId>{976489FD-C426-4547-98E4-89B9FB84338D}</DefaultViewId>
+                                                <AllowFilterOff>false</AllowFilterOff>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                    <cell id="{1a2895c9-9872-4286-b3b1-28abdb2a2ee4}" showlabel="true">
+                                        <labels>
+                                            <label description="Control Style" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_controlstyle" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="mspp_controlstyle" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fbcb562f-dbd2-48f4-8edf-986781f8c9e1}" showlabel="true" locklevel="1">
+                                        <labels>
+                                            <label description="Type" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_type" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="mspp_type" uniqueid="{9ebdd0ad-bde9-52a3-96e5-4ad6c1edb6b8}" />
+                                    </cell>
+                                    <cell id="{9036a80f-54ac-4e12-9336-888fb1140bf8}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="section_attributelogicalname" showlabel="false" showbar="false" locklevel="0" id="{9ad8a79d-e176-493b-88a2-51d2ae7bd554}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="220" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Attribute Logical Name" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{52e50c77-d574-41ae-9ab3-fdadc116ca3a}" showlabel="true" colspan="1" locklevel="1">
+                                        <labels>
+                                            <label description="Attribute Logical Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_attributelogicalname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_attributelogicalname" />
+                                    </cell>
+                                    <cell id="{365db7a1-f9a9-4490-80b0-fd624413eb51}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Attribute Logical Name (Selector)" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_attributelogicalname" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/attribute_selector.html</Url>
+                                                <Data>field=mspp_attributelogicalname&amp;source=$mspp_entityform.mspp_entityname&amp;parentType=mspp_entityform&amp;type=100000000&amp;nameAttribute=mspp_entityname&amp;topic=mspp_entityformChange</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="0">
+                                                <dependencies>
+                                                    <dependency id="mspp_attributelogicalname" />
+                                                    <dependency id="mspp_type" />
+                                                    <dependency id="mspp_entityform" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="section_tabname" showlabel="false" showbar="false" locklevel="0" id="{c0334161-544b-449c-91e1-85d799a433ce}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="220" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Tab Name" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4c2f44d8-03be-4b87-9733-b26000ed37c0}" showlabel="true" colspan="1" locklevel="1">
+                                        <labels>
+                                            <label description="Tab Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_tabname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_tabname" disabled="true" />
+                                    </cell>
+                                    <cell id="{680d2dd9-5d9d-4308-a3aa-a5e3daf5a930}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Tab Name (Selector)" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_tabname" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/form_tab_selector.html</Url>
+                                                <Data>field=mspp_tabname&amp;source=$mspp_entityform.mspp_formname&amp;entitynamesource=$mspp_entityform.mspp_entityname</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="0">
+                                                <dependencies>
+                                                    <dependency id="mspp_entityform" />
+                                                    <dependency id="mspp_tabname" />
+                                                    <dependency id="mspp_type" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="section_sectionname" showlabel="false" showbar="false" locklevel="0" id="{069d8e95-6b8e-486f-a840-4b61b083915a}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="220" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Section Name" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{95b5e930-113f-4992-a739-f2abe9bed986}" showlabel="true" colspan="1" locklevel="1">
+                                        <labels>
+                                            <label description="Section Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_sectionname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_sectionname" disabled="true" />
+                                    </cell>
+                                    <cell id="{2f1f050a-1cb2-40a1-84c3-6c3ec026f394}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Section Name (Selector)" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_sectionname" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/form_section_selector.html</Url>
+                                                <Data>field=mspp_sectionname&amp;source=$mspp_entityform.mspp_formname&amp;entitynamesource=$mspp_entityform.mspp_entityname</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="0">
+                                                <dependencies>
+                                                    <dependency id="mspp_entityform" />
+                                                    <dependency id="mspp_sectionname" />
+                                                    <dependency id="mspp_type" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="section_subgrid_name" showlabel="false" showbar="false" locklevel="0" id="{30ac1836-c29a-40ff-b4fe-6e9bdb457ef0}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="220" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Subgrid Name" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{25b64293-3fad-4455-bf35-544d1cb2fb1f}" showlabel="true" colspan="1" locklevel="1">
+                                        <labels>
+                                            <label description="Subgrid Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_subgrid_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_subgrid_name" disabled="true" />
+                                    </cell>
+                                    <cell id="{dc3867a1-be55-4770-87e7-42b6cd0ad473}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Subgrid Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_subgrid_name" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/form_subgrid_selector.html</Url>
+                                                <Data>field=mspp_subgrid_name&amp;source=$mspp_entityform.mspp_formname&amp;entitynamesource=$mspp_entityform.mspp_entityname</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="0">
+                                                <dependencies>
+                                                    <dependency id="mspp_entityform" />
+                                                    <dependency id="mspp_subgrid_name" />
+                                                    <dependency id="mspp_type" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="section_label" showlabel="true" showbar="true" locklevel="0" id="{83595211-e475-481b-9c40-222a12abda01}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Label" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{181d44df-48e5-45a2-b5a0-488ecad2b778}" showlabel="false" colspan="1" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Label" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizelabel" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_label</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{aed543f0-1319-4b00-8509-d391de849421}" showlabel="false" visible="false">
+                                        <labels>
+                                            <label description="Label" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_label" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="mspp_label" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="section_controlstyle" showlabel="true" showbar="true" locklevel="0" id="{ab6762d1-350b-45a4-9a62-ceb7791beecd}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="200" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Control Style" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{dc38389c-6521-4477-86b0-e4933f066585}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Multiple Choice Minimum Required Selected Count" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_minmultiplechoiceselectedcount" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="mspp_minmultiplechoiceselectedcount" uniqueid="{c1199e8c-0b44-ac85-975d-181a980ca605}" />
+                                    </cell>
+                                    <cell id="{4db3d22e-dad4-4c40-8642-0445d19e0abc}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Group Name" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_groupname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_groupname" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{86514e0c-0e69-4bdd-b577-a47db0281657}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Constant Sum Minimum Total" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_constantsumminimumtotal" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="mspp_constantsumminimumtotal" disabled="false" />
+                                    </cell>
+                                    <cell id="{7d8de4c2-3bf4-4efc-af77-dc4515a70e3f}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Multiple Choice Max Selected Count" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_maxmultiplechoiceselectedcount" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="mspp_maxmultiplechoiceselectedcount" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f80b7133-0172-4e11-964d-63b1fad6db51}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Randomize Option Set Values" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_randomizeoptionsetvalues" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_randomizeoptionsetvalues" disabled="false" />
+                                    </cell>
+                                    <cell id="{a915f19b-0bad-47b0-90a5-7b47cb740c58}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Constant Sum Maximum Total" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_constantsummaximumtotal" classid="{C6D124CA-7EDA-4a60-AEA9-7FB8D318B68F}" datafieldname="mspp_constantsummaximumtotal" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b900b7b4-03c9-4b4c-a8b4-4500ad744aed}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                    <cell id="{f1c85ec8-83c2-4565-981b-22f2d89c9d39}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="CSS Class" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_cssclass" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_cssclass" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="section_prepopulate" showlabel="true" showbar="true" locklevel="0" id="{3384f5a7-60e2-4936-a55a-da71bcccfaa2}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Prepopulate Field" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b17a04bb-097b-4654-84f6-715a40c9fbcc}" showlabel="true" locklevel="0" colspan="2">
+                                        <labels>
+                                            <label description="Ignore Default Value" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_ignoredefaultvalue" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_ignoredefaultvalue" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{21bb0b54-9942-43f5-be79-8d109ecaa55f}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_prepopulatetype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="mspp_prepopulatetype" disabled="false" />
+                                    </cell>
+                                    <cell id="{25041534-7af2-4bb8-98d4-7b4c89f3d359}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9b01ffac-2d0a-4ac7-b1ff-96adf305bd34}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Value" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_prepopulatevalue" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_prepopulatevalue" disabled="false" />
+                                    </cell>
+                                    <cell id="{1dc1fc25-b180-4920-9a43-a6ef7197c7c7}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c1559ca3-8c84-4213-85f0-24d9c1ed989b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="From Attribute" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_prepopulatefromattribute" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_prepopulatefromattribute" disabled="true" />
+                                    </cell>
+                                    <cell id="{03dadf1e-d6a0-4983-aeeb-281407a3016c}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="Prepopulate From Attribute" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_mspp_prepopulatefromattribute" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/attribute_selector.html</Url>
+                                                <Data>field=mspp_prepopulatefromattribute&amp;entityName=contact</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>no</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{42bb88fe-98f3-4995-9efd-e4ee2d0d5d71}" name="section_setvalueonsave" IsUserDefined="0" showlabel="true" showbar="true" columns="11" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false" layout="varwidth">
+                            <labels>
+                                <label description="Set Value On Save" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{841b5e72-9948-4521-b5c5-839d96a7b5c5}" showlabel="true" locklevel="0" colspan="2">
+                                        <labels>
+                                            <label description="Set Value On Save" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_setvalueonsave" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_setvalueonsave" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{f0c20da8-6d63-458b-86f8-9d9c5e3f0e3a}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_onsavetype" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="mspp_onsavetype" disabled="false" />
+                                    </cell>
+                                    <cell id="{386af00c-dd5e-4289-8037-6efe124d581f}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c6946188-d945-45bc-b0be-86855bf82460}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Value" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_onsavevalue" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_onsavevalue" disabled="false" />
+                                    </cell>
+                                    <cell id="{bb82ebcf-a25b-4e30-ab8d-fced332d5c39}" showlabel="false" userspacer="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{23cf43a8-f642-4548-894d-8104ff97262c}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="From Attribute" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_onsavefromattribute" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_onsavefromattribute" disabled="true" />
+                                    </cell>
+                                    <cell id="{7b56186c-aba4-4977-ab5f-fafb6f55754b}" showlabel="false" colspan="1" auto="false" rowspan="1">
+                                        <labels>
+                                            <label description="On Save From Attribute" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_mspp_onsavefromattribute" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_metadata/attribute_selector.html</Url>
+                                                <Data>field=mspp_onsavefromattribute&amp;entityName=contact</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>no</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies />
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="section_lookupsettings" showlabel="true" showbar="true" locklevel="0" id="{1f8765b9-7a0b-40f4-aebd-0fbd86242ba3}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false">
+                            <labels>
+                                <label description="Lookup Settings" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{92885151-8821-4c90-b372-798903cd61a9}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Basic Form for Create" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_entityformforcreate" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="mspp_entityformforcreate" disabled="false" uniqueid="{b4d3231b-e4c5-a691-458b-870ed1e71d57}" />
+                                    </cell>
+                                    <cell id="{1d9fcd7a-b780-4383-9195-5f05d5e0797f}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{f8511d56-4566-42c4-9478-d3965e39c091}" name="section_adddescription" IsUserDefined="0" showlabel="true" showbar="true" columns="11" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false" layout="varwidth">
+                            <labels>
+                                <label description="Description/Instructions" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d48abf81-9382-4d5c-bcbb-a1355658ce8b}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Add Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_adddescription" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="mspp_adddescription" disabled="false" />
+                                    </cell>
+                                    <cell id="{206677a6-e9e4-4543-b27c-29ccd4845503}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{c07b72c5-b0d9-4719-a10c-2dba3bce00aa}" name="section_description" IsUserDefined="0" showlabel="false" showbar="false" columns="11" locklevel="0" labelwidth="200" celllabelalignment="Left" celllabelposition="Left" visible="false" layout="varwidth">
+                            <labels>
+                                <label description="Description Properties" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ba36191c-8f9b-42be-9c66-90a68481afe6}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Position" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_descriptionposition" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="mspp_descriptionposition" disabled="false" />
+                                    </cell>
+                                    <cell id="{63ae0a88-6161-4cf4-84c7-5075d6ff9a91}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{95cca384-1466-4b7d-aa81-c57a6d1bfed7}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Use Attribute's Description Property" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_useattributedescriptionproperty" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="mspp_useattributedescriptionproperty" disabled="false" />
+                                    </cell>
+                                    <cell id="{366f662a-4411-4d4d-8924-0f0c28664d8a}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{e8e613bd-0619-4ba0-83c0-1ce3ff9d0670}" showlabel="true" colspan="2" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizedescription" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_description</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{5b576d6c-2b1d-4321-b027-0ea36727d41b}" showlabel="false" colspan="2" visible="false">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="mspp_description" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{4536d6d4-37d1-4d78-988b-5be18770c0a7}" name="section_validation" IsUserDefined="0" showlabel="true" showbar="true" columns="11" locklevel="0" labelwidth="200" celllabelalignment="Left" celllabelposition="Left" visible="false" layout="varwidth">
+                            <labels>
+                                <label description="Validation" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b9a5012d-743c-4a35-960e-1e573cc4e8fd}" showlabel="true" colspan="2" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizevalidationerrormessage" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_validationerrormessage</Data>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{7c9d147c-bf56-4858-843a-4b2c08cb4c40}" showlabel="false" locklevel="0" colspan="2" visible="false">
+                                        <labels>
+                                            <label description="Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_validationerrormessage" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_validationerrormessage" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fcae275d-8e0a-4d12-94d5-e61357c8a7c2}" showlabel="true" locklevel="0" colspan="2">
+                                        <labels>
+                                            <label description="Regular Expression" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_validationregularexpression" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_validationregularexpression" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{efa301f9-328e-4a88-a401-b820c12ab1b1}" showlabel="true" colspan="2" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Regular Expression Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizeregularexpressionerrormessage" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_validationregularexpressionerrormessage</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{c88f5823-66e8-4766-a894-0025486e1f07}" showlabel="false" locklevel="0" colspan="2" visible="false">
+                                        <labels>
+                                            <label description="Regular Expression Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_validationregularexpressionerrormessage" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_validationregularexpressionerrormessage" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{b798059f-2dd8-4831-9626-30a8606d40e0}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Field is Required" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_fieldisrequired" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="mspp_fieldisrequired" disabled="false" />
+                                    </cell>
+                                    <cell id="{f674c886-f576-4ca4-b202-4c2d517747a0}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fd3c7f12-2575-4e8f-9000-d78c6a72f57c}" showlabel="true" colspan="2" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Required Field Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizerequiredfieldvalidationerrormessage" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_requiredfieldvalidationerrormessage</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{f6607e77-291d-40ba-9131-25d57bade183}" showlabel="false" locklevel="0" colspan="2" visible="false">
+                                        <labels>
+                                            <label description="Required Field Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_requiredfieldvalidationerrormessage" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_requiredfieldvalidationerrormessage" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0f212fbc-7691-4086-967d-a6cdc80685d5}" showlabel="true" colspan="2" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Range Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizerangevalidationerrormessage" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_rangevalidationerrormessage</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{a0706c46-7d3d-446f-aaa7-0131ff6521b1}" showlabel="false" locklevel="0" colspan="2" visible="false">
+                                        <labels>
+                                            <label description="Range Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_rangevalidationerrormessage" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_rangevalidationerrormessage" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{d4238326-8939-4954-bbb6-337194355372}" showlabel="true" colspan="2" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Geolocation Validator Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizegeolocationerrormessage" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_geolocationvalidatorerrormessage</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{64cc16bc-a85d-4d20-b213-30d039c92562}" showlabel="false" locklevel="0" colspan="2" visible="false">
+                                        <labels>
+                                            <label description="Geolocation Validator Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_geolocationvalidatorerrormessage" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_geolocationvalidatorerrormessage" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{fc0e8cc9-686a-4dd2-8224-a26c4dbd358e}" showlabel="true" colspan="2" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Constant Sum Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizeconstantsumerrormessage" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_constantsumvalidationerrormessage</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{3856c373-3335-4047-a055-e8f0f3508d23}" showlabel="false" locklevel="0" colspan="2" visible="false">
+                                        <labels>
+                                            <label description="Constant Sum Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_constantsumvalidationerrormessage" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_constantsumvalidationerrormessage" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{9610bd49-5953-4e30-9fc8-5790a9a860e2}" showlabel="true" colspan="2" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Multiple Choice Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizemultiplechoiceerrormessage" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_multiplechoicevalidationerrormessage</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{8c3ee93d-8283-4683-8402-028633670195}" showlabel="false" locklevel="0" colspan="2" visible="false">
+                                        <labels>
+                                            <label description="Multiple Choice Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_multiplechoicevalidationerrormessage" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_multiplechoicevalidationerrormessage" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{92ab2a88-6153-45fd-a37b-8336d4c7486c}" showlabel="true" colspan="2" auto="false" rowspan="2">
+                                        <labels>
+                                            <label description="Rank Order No Ties Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_localizerankordernotieserrormessage" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_localizeStrings.html</Url>
+                                                <ShowInROF>false</ShowInROF>
+                                                <Data>mspp_rankordernotiesvalidationerrormessage</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row>
+                                    <cell id="{de1b7912-be63-4cf4-939a-9ca4c4dc61de}" showlabel="false" locklevel="0" colspan="2" visible="false">
+                                        <labels>
+                                            <label description="Rank Order No Ties Validation Error Message" languagecode="1033" />
+                                        </labels>
+                                        <control id="mspp_rankordernotiesvalidationerrormessage" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="mspp_rankordernotiesvalidationerrormessage" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{9b84f010-5c40-496a-91bb-95d354a49630}" height="auto" name="section_subgrid" IsUserDefined="0" showlabel="false" showbar="false" columns="11" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false" layout="varwidth">
+                            <labels>
+                                <label description="Subgrid Configuration" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{84066835-5515-436c-9586-2a2600f4cefc}" showlabel="false" colspan="2" auto="false" rowspan="18">
+                                        <labels>
+                                            <label description="Subgrid Settings" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_subgrid_settings" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_jsoneditor/mspp.jsoneditor.subgrid.entityformmetadata.html</Url>
+                                                <Data>schema=mspp.jsoneditor.subgrid.entityformmetadata&amp;field=mspp_subgrid_settings</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="0">
+                                                <dependencies>
+                                                    <dependency id="mspp_subgrid_settings" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row>
+                                    <cell id="{6004a967-40fa-4b6f-9261-e91c5780926d}" showlabel="false" auto="false" rowspan="1" colspan="2" visible="false" locklevel="1">
+                                        <labels>
+                                            <label description="Subgrid Settings" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_subgrid_settings" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="mspp_subgrid_settings" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{e7192298-3cf2-4121-b809-ea52bfd6f91f}" name="section_notes" IsUserDefined="0" showlabel="false" showbar="false" columns="1" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false" layout="varwidth">
+                            <labels>
+                                <label description="Notes Configuration" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0974f634-0494-416d-a406-0bfc882bbd55}" showlabel="false" colspan="1" auto="false" rowspan="18">
+                                        <labels>
+                                            <label description="Notes Settings" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_notes_settings" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_jsoneditor/mspp.jsoneditor.notes.entityformmetadata.html</Url>
+                                                <Data>schema=mspp.jsoneditor.notes.entityformmetadata&amp;field=mspp_notes_settings</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>false</Border>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="0">
+                                                <dependencies>
+                                                    <dependency id="mspp_notes_settings" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row>
+                                    <cell id="{bdcfa172-6924-458c-9e5c-f70c77dfb9a9}" showlabel="false" rowspan="1" visible="false" locklevel="1">
+                                        <labels>
+                                            <label description="Notes Settings" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_notes_settings" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="mspp_notes_settings" uniqueid="{16b9208e-54d9-ed67-5218-9db0a5e1d65d}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section id="{489c0b0d-3c12-4c7d-876c-4b86343f4e0f}" name="section_timeline" IsUserDefined="0" showlabel="false" showbar="false" columns="1" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" layout="varwidth">
+                            <labels>
+                                <label description="Timeline Configuration" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{12982904-d5a7-4691-935e-46787724c5e3}" showlabel="false" colspan="1" auto="false" rowspan="18">
+                                        <labels>
+                                            <label description="Timeline Settings" languagecode="1033" />
+                                        </labels>
+                                        <control id="WebResource_timeline_settings" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                                            <parameters>
+                                                <Url>mspp_jsoneditor/mspp.jsoneditor.timeline.entityformmetadata.html</Url>
+                                                <Data>schema=mspp.jsoneditor.timeline.entityformmetadata&amp;field=mspp_timeline_settings</Data>
+                                                <PassParameters>false</PassParameters>
+                                                <ShowOnMobileClient>false</ShowOnMobileClient>
+                                                <Security>false</Security>
+                                                <Scrolling>auto</Scrolling>
+                                                <Border>true</Border>
+                                                <WebResourceId>{DA1848EA-F5D4-E511-80D2-00155D20BB06}</WebResourceId>
+                                            </parameters>
+                                        </control>
+                                        <events>
+                                            <event name="onload" application="false">
+                                                <dependencies>
+                                                    <dependency id="mspp_timeline_settings" />
+                                                </dependencies>
+                                            </event>
+                                        </events>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row>
+                                    <cell id="{afa56e2f-ade4-4b98-afe7-9609b3fa22ee}" showlabel="false" locklevel="1" visible="false">
+                                        <labels>
+                                            <label description="Timeline Settings" languagecode="1033" />
+                                        </labels>
+                                        <control disabled="false" id="mspp_timeline_settings" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="mspp_timeline_settings" uniqueid="{96579602-0e33-cc2a-9960-6d6e771569a1}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{4a999646-6165-438f-a31b-1372f9347e0f}">
+        <rows>
+            <row>
+                <cell id="{445c3f41-32d6-4a95-88c4-2e034e809957}">
+                    <labels>
+                        <label description="Status" languagecode="1033" />
+                    </labels>
+                    <control id="footer_statecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="statecode" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <Navigation>
+        <NavBar />
+        <NavBarAreas>
+            <NavBarArea Id="Info">
+                <Titles>
+                    <Title LCID="1033" Text="Common" />
+                    <Title Text="" LCID="1026" />
+                    <Title Text="" LCID="1027" />
+                    <Title Text="" LCID="1029" />
+                    <Title Text="" LCID="1030" />
+                    <Title Text="" LCID="1031" />
+                    <Title Text="" LCID="1032" />
+                    <Title Text="" LCID="3082" />
+                    <Title Text="" LCID="1061" />
+                    <Title Text="" LCID="1069" />
+                    <Title Text="" LCID="1035" />
+                    <Title Text="" LCID="1036" />
+                    <Title Text="" LCID="1110" />
+                    <Title Text="" LCID="1081" />
+                    <Title Text="" LCID="1050" />
+                    <Title Text="" LCID="1038" />
+                    <Title Text="" LCID="1057" />
+                    <Title Text="" LCID="1040" />
+                    <Title Text="" LCID="1087" />
+                    <Title Text="" LCID="1063" />
+                    <Title Text="" LCID="1062" />
+                    <Title Text="" LCID="1086" />
+                    <Title Text="" LCID="1044" />
+                    <Title Text="" LCID="1043" />
+                    <Title Text="" LCID="1045" />
+                    <Title Text="" LCID="1046" />
+                    <Title Text="" LCID="2070" />
+                    <Title Text="" LCID="1048" />
+                    <Title Text="" LCID="1049" />
+                    <Title Text="" LCID="1051" />
+                    <Title Text="" LCID="1060" />
+                    <Title Text="" LCID="3098" />
+                    <Title Text="" LCID="2074" />
+                    <Title Text="" LCID="9242" />
+                    <Title Text="" LCID="1053" />
+                    <Title Text="" LCID="1054" />
+                    <Title Text="" LCID="1055" />
+                    <Title Text="" LCID="1058" />
+                    <Title Text="" LCID="1066" />
+                    <Title LCID="1025" Text="العامة" />
+                    <Title LCID="1037" Text="פריטים נפוצים" />
+                    <Title LCID="1041" Text="共通" />
+                    <Title LCID="1042" Text="공통" />
+                    <Title LCID="10266" Text="Заједничко" />
+                    <Title LCID="2052" Text="公用" />
+                    <Title LCID="3076" Text="一般" />
+                    <Title LCID="1028" Text="一般" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Sales">
+                <Titles>
+                    <Title LCID="1033" Text="Sales" />
+                    <Title Text="" LCID="1026" />
+                    <Title Text="" LCID="1027" />
+                    <Title Text="" LCID="1029" />
+                    <Title Text="" LCID="1030" />
+                    <Title Text="" LCID="1031" />
+                    <Title Text="" LCID="1032" />
+                    <Title Text="" LCID="3082" />
+                    <Title Text="" LCID="1061" />
+                    <Title Text="" LCID="1069" />
+                    <Title Text="" LCID="1035" />
+                    <Title Text="" LCID="1036" />
+                    <Title Text="" LCID="1110" />
+                    <Title Text="" LCID="1081" />
+                    <Title Text="" LCID="1050" />
+                    <Title Text="" LCID="1038" />
+                    <Title Text="" LCID="1057" />
+                    <Title Text="" LCID="1040" />
+                    <Title Text="" LCID="1087" />
+                    <Title Text="" LCID="1063" />
+                    <Title Text="" LCID="1062" />
+                    <Title Text="" LCID="1086" />
+                    <Title Text="" LCID="1044" />
+                    <Title Text="" LCID="1043" />
+                    <Title Text="" LCID="1045" />
+                    <Title Text="" LCID="1046" />
+                    <Title Text="" LCID="2070" />
+                    <Title Text="" LCID="1048" />
+                    <Title Text="" LCID="1049" />
+                    <Title Text="" LCID="1051" />
+                    <Title Text="" LCID="1060" />
+                    <Title Text="" LCID="3098" />
+                    <Title Text="" LCID="2074" />
+                    <Title Text="" LCID="9242" />
+                    <Title Text="" LCID="1053" />
+                    <Title Text="" LCID="1054" />
+                    <Title Text="" LCID="1055" />
+                    <Title Text="" LCID="1058" />
+                    <Title Text="" LCID="1066" />
+                    <Title LCID="1025" Text="‏المبيعات‬" />
+                    <Title LCID="1037" Text="מכירות" />
+                    <Title LCID="1041" Text="営業" />
+                    <Title LCID="1042" Text="영업" />
+                    <Title LCID="10266" Text="Продаја" />
+                    <Title LCID="2052" Text="销售" />
+                    <Title LCID="3076" Text="銷售" />
+                    <Title LCID="1028" Text="銷售" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Service">
+                <Titles>
+                    <Title LCID="1033" Text="Service" />
+                    <Title Text="" LCID="1026" />
+                    <Title Text="" LCID="1027" />
+                    <Title Text="" LCID="1029" />
+                    <Title Text="" LCID="1030" />
+                    <Title Text="" LCID="1031" />
+                    <Title Text="" LCID="1032" />
+                    <Title Text="" LCID="3082" />
+                    <Title Text="" LCID="1061" />
+                    <Title Text="" LCID="1069" />
+                    <Title Text="" LCID="1035" />
+                    <Title Text="" LCID="1036" />
+                    <Title Text="" LCID="1110" />
+                    <Title Text="" LCID="1081" />
+                    <Title Text="" LCID="1050" />
+                    <Title Text="" LCID="1038" />
+                    <Title Text="" LCID="1057" />
+                    <Title Text="" LCID="1040" />
+                    <Title Text="" LCID="1087" />
+                    <Title Text="" LCID="1063" />
+                    <Title Text="" LCID="1062" />
+                    <Title Text="" LCID="1086" />
+                    <Title Text="" LCID="1044" />
+                    <Title Text="" LCID="1043" />
+                    <Title Text="" LCID="1045" />
+                    <Title Text="" LCID="1046" />
+                    <Title Text="" LCID="2070" />
+                    <Title Text="" LCID="1048" />
+                    <Title Text="" LCID="1049" />
+                    <Title Text="" LCID="1051" />
+                    <Title Text="" LCID="1060" />
+                    <Title Text="" LCID="3098" />
+                    <Title Text="" LCID="2074" />
+                    <Title Text="" LCID="9242" />
+                    <Title Text="" LCID="1053" />
+                    <Title Text="" LCID="1054" />
+                    <Title Text="" LCID="1055" />
+                    <Title Text="" LCID="1058" />
+                    <Title Text="" LCID="1066" />
+                    <Title LCID="1025" Text="الخدمة" />
+                    <Title LCID="1037" Text="שירות" />
+                    <Title LCID="1041" Text="サービス" />
+                    <Title LCID="1042" Text="서비스" />
+                    <Title LCID="10266" Text="Услуге" />
+                    <Title LCID="2052" Text="服务" />
+                    <Title LCID="3076" Text="服務" />
+                    <Title LCID="1028" Text="服務" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="Marketing">
+                <Titles>
+                    <Title LCID="1033" Text="Marketing" />
+                    <Title Text="" LCID="1026" />
+                    <Title Text="" LCID="1027" />
+                    <Title Text="" LCID="1029" />
+                    <Title Text="" LCID="1030" />
+                    <Title Text="" LCID="1031" />
+                    <Title Text="" LCID="1032" />
+                    <Title Text="" LCID="3082" />
+                    <Title Text="" LCID="1061" />
+                    <Title Text="" LCID="1069" />
+                    <Title Text="" LCID="1035" />
+                    <Title Text="" LCID="1036" />
+                    <Title Text="" LCID="1110" />
+                    <Title Text="" LCID="1081" />
+                    <Title Text="" LCID="1050" />
+                    <Title Text="" LCID="1038" />
+                    <Title Text="" LCID="1057" />
+                    <Title Text="" LCID="1040" />
+                    <Title Text="" LCID="1087" />
+                    <Title Text="" LCID="1063" />
+                    <Title Text="" LCID="1062" />
+                    <Title Text="" LCID="1086" />
+                    <Title Text="" LCID="1044" />
+                    <Title Text="" LCID="1043" />
+                    <Title Text="" LCID="1045" />
+                    <Title Text="" LCID="1046" />
+                    <Title Text="" LCID="2070" />
+                    <Title Text="" LCID="1048" />
+                    <Title Text="" LCID="1049" />
+                    <Title Text="" LCID="1051" />
+                    <Title Text="" LCID="1060" />
+                    <Title Text="" LCID="3098" />
+                    <Title Text="" LCID="2074" />
+                    <Title Text="" LCID="9242" />
+                    <Title Text="" LCID="1053" />
+                    <Title Text="" LCID="1054" />
+                    <Title Text="" LCID="1055" />
+                    <Title Text="" LCID="1058" />
+                    <Title Text="" LCID="1066" />
+                    <Title LCID="1025" Text="التسويق‬" />
+                    <Title LCID="1037" Text="שיווק" />
+                    <Title LCID="1041" Text="マーケティング" />
+                    <Title LCID="1042" Text="마케팅" />
+                    <Title LCID="10266" Text="Маркетинг" />
+                    <Title LCID="2052" Text="市场营销" />
+                    <Title LCID="3076" Text="行銷" />
+                    <Title LCID="1028" Text="行銷" />
+                </Titles>
+            </NavBarArea>
+            <NavBarArea Id="ProcessCenter">
+                <Titles>
+                    <Title LCID="1033" Text="Processes" />
+                    <Title Text="" LCID="1026" />
+                    <Title Text="" LCID="1027" />
+                    <Title Text="" LCID="1029" />
+                    <Title Text="" LCID="1030" />
+                    <Title Text="" LCID="1031" />
+                    <Title Text="" LCID="1032" />
+                    <Title Text="" LCID="3082" />
+                    <Title Text="" LCID="1061" />
+                    <Title Text="" LCID="1069" />
+                    <Title Text="" LCID="1035" />
+                    <Title Text="" LCID="1036" />
+                    <Title Text="" LCID="1110" />
+                    <Title Text="" LCID="1081" />
+                    <Title Text="" LCID="1050" />
+                    <Title Text="" LCID="1038" />
+                    <Title Text="" LCID="1057" />
+                    <Title Text="" LCID="1040" />
+                    <Title Text="" LCID="1087" />
+                    <Title Text="" LCID="1063" />
+                    <Title Text="" LCID="1062" />
+                    <Title Text="" LCID="1086" />
+                    <Title Text="" LCID="1044" />
+                    <Title Text="" LCID="1043" />
+                    <Title Text="" LCID="1045" />
+                    <Title Text="" LCID="1046" />
+                    <Title Text="" LCID="2070" />
+                    <Title Text="" LCID="1048" />
+                    <Title Text="" LCID="1049" />
+                    <Title Text="" LCID="1051" />
+                    <Title Text="" LCID="1060" />
+                    <Title Text="" LCID="3098" />
+                    <Title Text="" LCID="2074" />
+                    <Title Text="" LCID="9242" />
+                    <Title Text="" LCID="1053" />
+                    <Title Text="" LCID="1054" />
+                    <Title Text="" LCID="1055" />
+                    <Title Text="" LCID="1058" />
+                    <Title Text="" LCID="1066" />
+                    <Title LCID="1025" Text="العمليات" />
+                    <Title LCID="1037" Text="תהליכים" />
+                    <Title LCID="1041" Text="プロセス" />
+                    <Title LCID="1042" Text="프로세스" />
+                    <Title LCID="10266" Text="Процеси" />
+                    <Title LCID="2052" Text="流程" />
+                    <Title LCID="3076" Text="程序" />
+                    <Title LCID="1028" Text="程序" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <formLibraries>
+        <Library name="mspp_webforms/mspp.xrm.webforms.handlers.js" libraryUniqueId="{67bc0bd2-ae63-d550-8086-7e4a2608ea31}" />
+        <Library name="mspp_resources/ResourcesManager.js" libraryUniqueId="{7e8a47b9-2c94-65ea-2eb8-223be1356c4e}" />
+        <Library name="mspp_scripts/jquery1.10.2.min.js" libraryUniqueId="{e217254c-5950-1997-80cb-c718c0308a27}" />
+    </formLibraries>
+    <events>
+        <event name="onchange" application="false" active="false" attribute="mspp_prepopulatetype">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.prepopulateType.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{0be2d1a6-0238-5c9d-71ce-165d75be4aaa}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_adddescription">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.addDescription.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{7bb608de-c745-482a-794c-81e19132a6da}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_useattributedescriptionproperty">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.useAttributeDescriptionProperty.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{684cc3ba-5738-a740-b382-4154a953a99b}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.onLoad" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{01a9eb0c-b08d-a8c2-7ed9-0130730694ea}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onsave" application="false" active="false">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.onSave" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{01a9eb0c-b08d-a8c2-7ed9-0130730694ea}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_type">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.type.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{28c40a19-2426-25ae-3e1c-9a882eb71166}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_onsavetype">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.onSaveType.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{9758c26b-92b5-0028-b21a-ead8da913e42}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_entityform">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.entityForm.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{77c73a08-c74a-e54e-61ea-0838a8e9cb8b}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_subgrid_name">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.subgridName.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{b0636037-9691-e227-7706-4a76c5d291ea}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_tabname">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.tabName.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{99ae9651-b158-428c-974d-e4f636912eb5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_attributelogicalname">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.attributeLogicalName.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{a7257d0c-cde5-47c2-bc75-2504f6d2cc51}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="mspp_sectionname">
+            <Handlers>
+                <Handler functionName="mspp.xrm.webForms.entityFormMetadata.sectionName.onChange" libraryName="mspp_webforms/mspp.xrm.webforms.handlers.js" handlerUniqueId="{05bc69ee-e40b-4cb4-82e1-ddc62b4a07de}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions />
+</form>

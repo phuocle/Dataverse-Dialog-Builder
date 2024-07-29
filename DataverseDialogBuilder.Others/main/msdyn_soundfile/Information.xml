@@ -1,0 +1,125 @@
+<form headerdensity="HighWithControls" shownavigationbar="false" showImage="false" maxWidth="1920">
+    <tabs>
+        <tab verticallayout="true" id="{c244f1ca-172a-4401-aa0a-a24670046db8}" IsUserDefined="1">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" IsUserDefined="0" id="{727e2543-af6c-4cb0-8b99-421e7644b63b}" name="SoundUploadSection">
+                            <labels>
+                                <label description="General" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{91f94175-a8a7-4567-8029-a8edc25d3d3c}" showlabel="false" locklevel="0" visible="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_soundfileuploadusageterms" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{98EDA5C3-9341-4A12-992B-FF14D786ED3B}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{ac29b789-2d95-4e8e-844a-61189ad23863}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msdyn_name" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{eb4fb217-09d5-409c-8dc5-f3bf904dbe88}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Upload sound file" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_uploadsoundfile" classid="{0A7FF475-B016-4687-9CE5-042BFDBD6519}" datafieldname="msdyn_uploadsoundfile" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{533aa05c-c791-4139-b9c7-db2b91461c9e}" showlabel="false" locklevel="0" visible="true">
+                                        <labels>
+                                            <label description="Preview sound file" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyn_audiopreviewcontrol" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{DEE7CF5C-2FF1-40FD-B1B4-C2A02C338F33}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{98EDA5C3-9341-4A12-992B-FF14D786ED3B}">
+            <customControl formFactor="0" name="MscrmControls.OCHtml.OCHtmlControl">
+                <parameters>
+                    <key type="Enum" static="true">OCSoundFileUsage</key>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.OCHtml.OCHtmlControl">
+                <parameters>
+                    <key type="Enum" static="true">OCSoundFileUsage</key>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.OCHtml.OCHtmlControl">
+                <parameters>
+                    <key type="Enum" static="true">OCSoundFileUsage</key>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{DEE7CF5C-2FF1-40FD-B1B4-C2A02C338F33}">
+            <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                <parameters>
+                    <datafieldname>msdyn_uploadsoundfile</datafieldname>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmFieldControls.Audio.OCHTMLAudioControl">
+                <parameters>
+                    <key type="SingleLine.Text">msdyn_uploadsoundfile</key>
+                    <uploadFileAttributeName static="true" type="SingleLine.Text">msdyn_uploadsoundfile</uploadFileAttributeName>
+                    <BoundEntityName static="true" type="SingleLine.Text">msdyn_soundfiles</BoundEntityName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmFieldControls.Audio.OCHTMLAudioControl">
+                <parameters>
+                    <key type="SingleLine.Text">msdyn_uploadsoundfile</key>
+                    <uploadFileAttributeName static="true" type="SingleLine.Text">msdyn_uploadsoundfile</uploadFileAttributeName>
+                    <BoundEntityName static="true" type="SingleLine.Text">msdyn_soundfiles</BoundEntityName>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmFieldControls.Audio.OCHTMLAudioControl">
+                <parameters>
+                    <key type="SingleLine.Text">msdyn_uploadsoundfile</key>
+                    <uploadFileAttributeName static="true" type="SingleLine.Text">msdyn_uploadsoundfile</uploadFileAttributeName>
+                    <BoundEntityName static="true" type="SingleLine.Text">msdyn_soundfiles</BoundEntityName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdyn_OmnichannelSoundPreview.js" libraryUniqueId="{de613b3c-7379-4a14-8225-a4d5840fd0d7}" />
+    </formLibraries>
+    <events>
+        <event name="onchange" application="true" active="true" attribute="msdyn_uploadsoundfile">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmnichannelSoundPreview.prototype.onSoundFileChange" libraryName="msdyn_OmnichannelSoundPreview.js" handlerUniqueId="{af87623c-1d0d-4189-b730-a8413b5040c5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="true" active="true">
+            <Handlers>
+                <Handler functionName="OmniChannelPackage.OmnichannelSoundPreview.prototype.onSoundFileFormLoad" libraryName="msdyn_OmnichannelSoundPreview.js" handlerUniqueId="{3b8053bc-d3c1-4fd2-bf29-d281cb2f24b4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <header id="{526b5ba4-e574-4f59-a697-068e32c3dbdd}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows></rows>
+    </header>
+    <footer id="{39e9c06c-4e3e-4cd1-a134-662195a28f82}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows></rows>
+    </footer>
+    <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+    </DisplayConditions>
+</form>

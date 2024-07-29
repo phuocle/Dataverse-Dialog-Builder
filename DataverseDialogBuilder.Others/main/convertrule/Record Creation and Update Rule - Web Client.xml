@@ -1,0 +1,349 @@
+<form enablerelatedinformation="true">
+    <hiddencontrols>
+        <data id="queueid" datafieldname="queueid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="convertruleid" datafieldname="convertruleid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="convertruletype" datafieldname="convertruletype" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+    </hiddencontrols>
+    <tabs>
+        <tab name="general" verticallayout="true" id="{A205C245-988A-47F9-B299-3A31CBEBF15F}" IsUserDefined="0" showlabel="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="50%">
+                    <sections>
+                        <section name="ConvertToCaseSettings" showlabel="false" showbar="false" id="{5C681EF7-EB93-4057-9704-4686085D66B8}" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{1cf16cf2-827a-4fd9-90df-d4f93970138b}">
+                                        <labels>
+                                            <label description="Rule name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" visible="false" locklevel="0" rowspan="1" colspan="1" id="{11B1FF2F-EAC8-4470-B3D2-936B3EAA38A3}">
+                                        <labels>
+                                            <label description="Source Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="sourcetypecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="sourcetypecode" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" visible="false" locklevel="0" rowspan="1" colspan="1" id="{B7CCC424-07D9-48BB-B55A-C18E1A4932AE}">
+                                        <labels>
+                                            <label description="Monitored activity type" languagecode="1033" />
+                                        </labels>
+                                        <control id="sourcechanneltypecode" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="sourcechanneltypecode" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{BDA35835-26ED-4F56-9E60-95070ED5EC8A}">
+                                        <labels>
+                                            <label description="Queue" languagecode="1033" />
+                                        </labels>
+                                        <control id="queueid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="queueid" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{7C7CED98-FB17-42ED-AF9B-1B198739831E}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="ChannelProperties" visible="true" showlabel="true" showbar="true" id="{60006a50-d917-4141-baed-fd2e67114dc2}" IsUserDefined="0">
+                            <labels>
+                                <label description="CHANNEL PROPERTIES" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{7DE8AED2-DAB4-4802-BC0D-3D8969330B61}">
+                                        <labels>
+                                            <label description="Additional Properties" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="Mscrm.channelpropertygroupid_setadditionalparams" libraryName="ConvertRule_main_system_library.js" handlerUniqueId="ae61bb1c-2bfd-49fd-aed9-3a6aed11a153" enabled="true" passExecutionContext="true">
+                                                        <dependencies>
+                                                            <dependency id="sourcechanneltypecode" />
+                                                        </dependencies>
+                                                    </Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="channelpropertygroupid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="channelpropertygroupid" disabled="false">
+                                            <parameters>
+                                                <AutoResolve>true</AutoResolve>
+                                                <DisableMru>false</DisableMru>
+                                                <IsInlineNewEnabled>true</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="SocialMonitoringCaseConditions" visible="false" showlabel="true" showbar="true" id="{ED7E9745-27FD-4F36-8264-908035664852}" labelwidth="340" IsUserDefined="0">
+                            <labels>
+                                <label description="SPECIFY CONDITIONS FOR RECORD CREATION" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" id="{F2239FDA-3049-4C3A-88A8-2FF8B95EEFD2}">
+                                        <labels>
+                                            <label description="Create records for blocked social profiles" languagecode="1033" />
+                                        </labels>
+                                        <control id="checkblockedsocialprofile" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="checkblockedsocialprofile" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{F113F383-CBDC-479A-A640-4BE8F5480D95}">
+                                        <labels>
+                                            <label description="Create records for private messages only" languagecode="1033" />
+                                        </labels>
+                                        <control id="checkdirectmessages" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="checkdirectmessages" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="EmailCaseConditions" visible="false" showlabel="true" showbar="true" id="{E3F1D2BE-4A04-4829-99A4-EAD598E95A80}" labelwidth="340" IsUserDefined="0">
+                            <labels>
+                                <label description="SPECIFY CONDITIONS FOR RECORD CREATION" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" id="{C848A1AA-ACC8-49EC-972D-BBDC9AA53614}">
+                                        <labels>
+                                            <label description="Create records for email from unknown senders" languagecode="1033" />
+                                        </labels>
+                                        <control id="AllowUnknownSender" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="allowunknownsender" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{82C95DC1-1B33-4DA8-8E58-13D46D0DDFC4}">
+                                        <labels>
+                                            <label description="Create case if a valid entitlement exists for the customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="CheckActiveEntitlement" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="checkactiveentitlement" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{BD0708B6-511E-4EFB-9017-B0C422BE2787}">
+                                        <labels>
+                                            <label description="Create cases for activities associated with a resolved case" languagecode="1033" />
+                                        </labels>
+                                        <control id="CheckIfResolved" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="checkifresolved" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{FFA4A945-209E-4C5B-90C7-BA73CF84F6A9}">
+                                        <labels>
+                                            <label description="Create case when the case associated with the activity is resolved since" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResolvedSince" classid="{AA987274-CE4E-4271-A803-66164311A958}" datafieldname="resolvedsince" disabled="false" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="AutoResponseSettings" visible="false" showlabel="true" showbar="true" id="{CBB71628-278E-4CD0-9EBF-F5793DD7B69C}" labelwidth="340" IsUserDefined="0">
+                            <labels>
+                                <label description="SPECIFY AUTORESPONSE SETTINGS" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{1C115238-4A7C-4AAD-AEB3-C89A0B808950}">
+                                        <labels>
+                                            <label description="Send automatic email response to customer on record creation" languagecode="1033" />
+                                        </labels>
+                                        <control id="SendAutomaticResponse" classid="{B0C6723A-8503-4fd7-BB28-C8A06AC933C2}" datafieldname="sendautomaticresponse" disabled="false" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="2" colspan="1" id="{3E5A6CAE-EF97-48ED-B499-BCE6C02B5A04}">
+                                        <labels>
+                                            <label description="Select email template to respond to customer" languagecode="1033" />
+                                        </labels>
+                                        <control id="ResponseTemplateId" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="responsetemplateid" disabled="false">
+                                            <parameters>
+                                                <DefaultViewId>{5096D5CE-1A3C-4856-B996-007E41199427}</DefaultViewId>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+                <column width="50%">
+                    <sections>
+                        <section name="CaseDetails" showlabel="false" showbar="false" id="{9A1F8CE5-B224-45A0-BB01-8C7ECFB3CC0D}" labelwidth="250" IsUserDefined="0">
+                            <labels>
+                                <label description="Step two: conditions to evaluate and actions to take" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{D17947E7-FD8A-475A-A27D-5CE9DEDEDD20}" showlabel="true" colspan="1" auto="false" rowspan="5">
+                                        <labels>
+                                            <label description="SPECIFY RECORD CREATION AND UPDATE DETAILS" languagecode="1033" />
+                                        </labels>
+                                        <control id="ConvertRuleItemsGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                                            <parameters>
+                                                <ViewId>{02b21ce4-7f77-4451-bfb2-db300236c56c}</ViewId>
+                                                <RelationshipName>convertrule_convertruleitem</RelationshipName>
+                                                <TargetEntityType>convertruleitem</TargetEntityType>
+                                                <AutoExpand>Auto</AutoExpand>
+                                                <EnableQuickFind>false</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <RecordsPerPage>200</RecordsPerPage>
+                                                <EnableContextualActions>true</EnableContextualActions>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onload" libraryName="ConvertRule_main_system_library.js" handlerUniqueId="ConvertRule_main_system_library" enabled="true">
+                    <dependencies>
+                        <dependency id="checkifresolved" />
+                        <dependency id="sendautomaticresponse" />
+                    </dependencies>
+                </Handler>
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.showWebClientDeprecationNotification" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="ARC_Main_System_Library" enabled="true" />
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.showWebClientDeprecationDialog" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="ARC_Main_System_Library" enabled="true" />
+                <Handler functionName="ARC.ARCMainSystemLibraryWebResource.showWebClientDeprecationAckDialog" libraryName="AutomaticRecordCreation/ARC/ARC_Main_System_Library.js" handlerUniqueId="ARC_Main_System_Library" enabled="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="sourcetypecode">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.sourcetypecode_onchange" libraryName="ConvertRule_main_system_library.js" handlerUniqueId="DEECBA66-B281-4419-9A25-0DE7019BBCE0" enabled="true"></Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="sourcechanneltypecode">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.sourcetypecode_onchange" libraryName="ConvertRule_main_system_library.js" handlerUniqueId="04F30219-4C5C-45CB-AC48-028FA4814D0C" enabled="true"></Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="checkifresolved">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.CheckIfResolved_onchange" libraryName="ConvertRule_main_system_library.js" handlerUniqueId="3E5A6CAE-EF97-48ED-B499-BCE6C02B5A04" enabled="true">
+                    <dependencies>
+                        <dependency id="checkifresolved" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="sendautomaticresponse">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.SendAutomaticResponse_onchange" libraryName="ConvertRule_main_system_library.js" handlerUniqueId="29CF2D0B-CDD5-45E2-89E0-40C449CEF125" enabled="true">
+                    <dependencies>
+                        <dependency id="sendautomaticresponse" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+        <event name="onsave" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="Mscrm.Form_onsave" libraryName="ConvertRule_main_system_library.js" handlerUniqueId="008CEBE9-46BD-4B62-BFEB-3EE1F8DE5F2A" enabled="true">
+                    <dependencies>
+                        <dependency id="checkifresolved" />
+                        <dependency id="sendautomaticresponse" />
+                    </dependencies>
+                </Handler>
+            </InternalHandlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientvariables>
+                <internaljscriptvariable name="LOCID_ERROR_MISSING_ALL" resourceid="Web.ConvertRule.activate.edit.aspx" />
+                <internaljscriptvariable name="LOCID_ERROR_MISSING_RRI" resourceid="Web.ConvertRule.draft.edit.aspx" />
+                <internaljscriptvariable name="LOCID_DRAFT_WARNING_MSG" resourceid="Web.convertRule.draft.edit.aspx_2" />
+            </clientvariables>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:ConvertRule_main_system_library.js" />
+                <internaljscriptfile src="$webresource:AutomaticRecordCreation/ARC/ARC_main_system_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <Navigation>
+        <NavBar />
+        <NavBarAreas>
+            <NavBarArea Id="Settings">
+                <Titles>
+                    <Title LCID="1033" Text="Settings" />
+                    <Title LCID="1025" Text="إعدادات‬" />
+                    <Title LCID="1026" Text="Настройки" />
+                    <Title LCID="1027" Text="Configuració" />
+                    <Title LCID="1029" Text="Nastavení" />
+                    <Title LCID="1030" Text="Indstillinger" />
+                    <Title LCID="1031" Text="Einstellungen" />
+                    <Title LCID="1032" Text="Ρυθμίσεις" />
+                    <Title LCID="3082" Text="Configuración" />
+                    <Title LCID="1061" Text="Sätted" />
+                    <Title LCID="1069" Text="Ezarpenak" />
+                    <Title LCID="1035" Text="Asetukset" />
+                    <Title LCID="1036" Text="Paramètres" />
+                    <Title LCID="1110" Text="Configuración" />
+                    <Title LCID="1037" Text="הגדרות" />
+                    <Title LCID="1081" Text="सेटिंग्स" />
+                    <Title LCID="1050" Text="Postavke" />
+                    <Title LCID="1038" Text="Beállítások" />
+                    <Title LCID="1057" Text="Pengaturan" />
+                    <Title LCID="1040" Text="Impostazioni" />
+                    <Title LCID="1041" Text="設定" />
+                    <Title LCID="1087" Text="Параметрлер" />
+                    <Title LCID="1042" Text="설정" />
+                    <Title LCID="1063" Text="Parametrai" />
+                    <Title LCID="1062" Text="Iestatījumi" />
+                    <Title LCID="1086" Text="Tetapan" />
+                    <Title LCID="1044" Text="Innstillinger" />
+                    <Title LCID="1043" Text="Instellingen" />
+                    <Title LCID="1045" Text="Ustawienia" />
+                    <Title LCID="1046" Text="Configurações" />
+                    <Title LCID="2070" Text="Definições" />
+                    <Title LCID="1048" Text="Setări" />
+                    <Title LCID="1049" Text="Настройки" />
+                    <Title LCID="1051" Text="Nastavenia" />
+                    <Title LCID="1060" Text="Nastavitve" />
+                    <Title LCID="3098" Text="Подешавања" />
+                    <Title LCID="2074" Text="Podešavanja" />
+                    <Title LCID="1053" Text="Inställningar" />
+                    <Title LCID="1054" Text="การตั้งค่า" />
+                    <Title LCID="1055" Text="Ayarlar" />
+                    <Title LCID="1058" Text="Параметри" />
+                    <Title LCID="1066" Text="Thiết đặt" />
+                    <Title LCID="2052" Text="设置" />
+                    <Title LCID="3076" Text="設定" />
+                    <Title LCID="1028" Text="設定" />
+                </Titles>
+            </NavBarArea>
+        </NavBarAreas>
+    </Navigation>
+    <DisplayConditions FallbackForm="true" Order="1">
+        <Everyone />
+    </DisplayConditions>
+</form>

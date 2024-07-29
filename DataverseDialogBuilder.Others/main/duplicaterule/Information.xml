@@ -1,0 +1,209 @@
+<form>
+    <tabs>
+        <tab name="rule" verticallayout="true" id="{8e6ceb86-6b0b-49ff-a84d-7f4b4297c136}" IsUserDefined="0">
+            <labels>
+                <label description="General" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="section 1" labelwidth="125" showlabel="false" showbar="false" id="{9bfb9d10-c785-4d11-9222-29e4cff31f85}" IsUserDefined="0">
+                            <labels>
+                                <label description="Section 1" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{bd86cbf8-f8f8-4151-88b2-525a9fb967c8}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="name" />
+                                    </cell>
+                                    <cell id="{9e05c020-a1ee-4bd3-abff-d9747749fa6e}">
+                                        <labels>
+                                            <label description="Status Reason" languagecode="1033" />
+                                        </labels>
+                                        <control id="statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="description" showlabel="true" showbar="false" id="{cba909f8-b6d3-443f-a409-9d06f85bc5a8}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Description" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="false" colspan="2" rowspan="5" id="{6576ef2c-7205-49e8-92aa-82d8a98dd32f}">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="description" datafieldname="description" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                        <section name="criteria" labelwidth="125" showlabel="true" showbar="false" id="{4300818d-144f-427a-abd5-a403094f63fe}" IsUserDefined="0">
+                            <labels>
+                                <label description="Duplicate Detection Rule Criteria" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell showlabel="true" id="{dd7f185c-bcea-4358-8c49-031be88863b0}">
+                                        <labels>
+                                            <label description="Base Record Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="baseentitytypecode" datafieldname="baseentitytypecode" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" />
+                                    </cell>
+                                    <cell showlabel="true" id="{8f3b13a7-3dc2-480e-a1dd-6aace3a2c6d1}">
+                                        <labels>
+                                            <label description="Matching Record Type" languagecode="1033" />
+                                        </labels>
+                                        <control id="matchingentitytypecode" datafieldname="matchingentitytypecode" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell showlabel="true" id="{c1f454ff-aa05-4bbc-a19c-e40d88349203}">
+                                        <labels>
+                                            <label description="Case-sensitive" languagecode="1033" />
+                                        </labels>
+                                        <control id="iscasesensitive" datafieldname="iscasesensitive" classid="{b0c6723a-8503-4fd7-bb28-c8a06ac933c2}" />
+                                    </cell>
+                                    <cell showlabel="true" id="{40943498-d7c1-4771-923a-8b9269b46b05}">
+                                        <labels>
+                                            <label description="Exclude inactive matching records" languagecode="1033" />
+                                        </labels>
+                                        <control id="excludeinactiverecords" datafieldname="excludeinactiverecords" classid="{b0c6723a-8503-4fd7-bb28-c8a06ac933c2}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="Rule Conditions" labelwidth="125" showlabel="false" showbar="false" locklevel="1" IsUserDefined="0" id="{e650398f-d5af-40a4-a2bc-3524f49fb0b1}">
+                            <labels>
+                                <label description="You cannot customize the duplicate-detection rule criteria section." languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell showlabel="false" auto="true" colspan="2" rowspan="10" id="{6bd5bb25-8288-42c0-85d8-6e244f4a089f}">
+                                        <labels>
+                                            <label description="Condition Control" languagecode="1033" />
+                                        </labels>
+                                        <control id="ruleconditioncontrol" classid="{fd2a7985-3187-444e-908d-6624b21f69c0}">
+                                            <parameters>
+                                                <Url>/tools/duplicatedetection/duplicatedetectionrules/duplicaterulecondition.aspx</Url>
+                                                <Security>false</Security>
+                                                <Preload>true</Preload>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="administration" verticallayout="true" id="{9ee52e37-eedc-4f4d-a405-1df85c68b56d}" IsUserDefined="0">
+            <labels>
+                <label description="Administration" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="section 1_2" showlabel="false" showbar="false" id="{b01acf92-e9fe-43e2-858f-69c7d983301e}" IsUserDefined="0">
+                            <labels>
+                                <label description="Section 1" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{62a42d3c-8290-4f3f-af06-c51e55d11d8a}">
+                                        <labels>
+                                            <label description="Created By" languagecode="1033" />
+                                        </labels>
+                                        <control id="createdby" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="createdby" />
+                                    </cell>
+                                    <cell id="{0f5dd216-70cc-4ea6-81f1-1012249e7807}">
+                                        <labels>
+                                            <label description="Created On" languagecode="1033" />
+                                        </labels>
+                                        <control id="createdon" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="createdon" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{badec9e6-ad7e-4c94-b50f-a54c05304f7d}">
+                                        <labels>
+                                            <label description="Modified By" languagecode="1033" />
+                                        </labels>
+                                        <control id="modifiedby" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="modifiedby" />
+                                    </cell>
+                                    <cell id="{ee43ec09-62d7-42dd-82f0-86576c9c3abd}">
+                                        <labels>
+                                            <label description="Modified On" languagecode="1033" />
+                                        </labels>
+                                        <control id="modifiedon" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="modifiedon" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell auto="false" showlabel="true" locklevel="0" rowspan="1" id="{aedff984-f09a-4af9-a916-ca272c02fc84}">
+                                        <labels>
+                                            <label description="Owner" languagecode="1033" />
+                                        </labels>
+                                        <control id="ownerid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="ownerid" disabled="false" />
+                                    </cell>
+                                    <cell showlabel="false" id="{64377123-6ebb-45c8-84cf-a4a8f67fe6d4}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+        <tab name="notes" id="{db0c2c06-4789-4960-b3b2-ca2baacd46b7}" IsUserDefined="0" expanded="false">
+            <labels>
+                <label description="Notes" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="notes" showlabel="false" showbar="false" id="{9345db37-3cc7-464d-8e59-3224490ec286}" IsUserDefined="0" height="auto">
+                            <labels>
+                                <label description="Notes" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell colspan="2" showlabel="false" rowspan="5" auto="true" id="{3312a224-1074-41b2-93b2-3cc3e7eb1ebd}">
+                                        <labels>
+                                            <label description="Note Text" languagecode="1033" />
+                                        </labels>
+                                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                                <row />
+                                <row height="auto" />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+</form>
