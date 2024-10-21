@@ -1,0 +1,83 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_value" type="SafeString" />
+    </formparameters>
+    <header id="{0358dafc-1c0d-45c5-bd4f-143ba415ea2c}">
+        <rows>
+            <row>
+                <cell id="{f3872865-0c2f-40e6-971c-e08d43975911}">
+                    <labels>
+                        <label description="Capture a form" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{86e8379f-de4f-43a2-99a1-fdde5eb76efe}" name="{86e8379f-de4f-43a2-99a1-fdde5eb76efe}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{1a7e76bd-ccfb-4e04-8645-a4a471b0a653}" name="{1a7e76bd-ccfb-4e04-8645-a4a471b0a653}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8F9D26A7-A935-450B-A8D2-ABC721E277B2}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_capturing_wizard" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{df549448-0da6-4e61-a198-cefab7045db2}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>150000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{df549448-0da6-4e61-a198-cefab7045db2}">
+            <customControl formFactor="2" name="MscrmControls.FormCapturingWizardV2.FormCapturingWizardV2">
+                <parameters>
+                    <value type="Multiple">msdyncrm_capturing_wizard</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.FormCapturingWizardV2.FormCapturingWizardV2">
+                <parameters>
+                    <value type="Multiple">msdyncrm_capturing_wizard</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.FormCapturingWizardV2.FormCapturingWizardV2">
+                <parameters>
+                    <value type="Multiple">msdyncrm_capturing_wizard</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdyncrm_DynamicsMarketing.CrmWebResource" libraryUniqueId="{1c8d75c7-2d87-4c7a-a0f5-e620c696403a}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="MscrmControls.FormCapturingWizardV2.DialogAdapter.onWizardLoad" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{4D606C59-2215-4D86-B651-C146E8C97F9D}" enabled="true" parameters="'msdyncrm_capturing_wizard', 'button_back', 'button_next', 'button_ok', 'button_cancel', 'dlg_value'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

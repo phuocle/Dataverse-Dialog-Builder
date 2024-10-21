@@ -1,0 +1,105 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_parent" type="SafeString" />
+        <querystringparameter name="dlg_child" type="SafeString" />
+        <querystringparameter name="dlg_hierarchy" type="SafeString" />
+    </formparameters>
+    <header id="{837e0ba6-ee3b-45a1-9d58-5d55c743b8b5}">
+        <rows>
+            <row>
+                <cell id="{0881c4f3-efac-49a2-8483-4e255f81c9a3}">
+                    <labels>
+                        <label description="Field relationships" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{9898e7bb-8d73-4bb3-b1c9-bc73c814dea9}" name="{9898e7bb-8d73-4bb3-b1c9-bc73c814dea9}" locklevel="0">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{3314f790-8a88-4e11-b246-b7065d28ea98}" name="{3314f790-8a88-4e11-b246-b7065d28ea98}" showlabel="false" showbar="false" columns="1">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b44d1c10-8eed-47f6-ab7a-122a5eb2745a}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_setupparentfield_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{43ac3855-467f-424a-8950-4b18261f78a8}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <MaxLength>1048576</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{2d6a6ded-0e80-4749-91fd-da9d33a99d4c}">
+        <rows>
+            <row>
+                <cell id="{e50b89f5-2fd8-45b7-9b7c-f3752bfb226b}">
+                    <labels>
+                        <label description="Done" languagecode="1033" />
+                    </labels>
+                    <control id="button_ok" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{08b70488-6fdb-4d28-a936-aba06c634867}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="button_cancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{43ac3855-467f-424a-8950-4b18261f78a8}">
+            <customControl formFactor="2" name="MscrmControls.ParentFieldSetup.ParentFieldSetup">
+                <parameters>
+                    <value type="Multiple">msdyncrm_setupparentfield_control</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.ParentFieldSetup.ParentFieldSetup">
+                <parameters>
+                    <value type="Multiple">msdyncrm_setupparentfield_control</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ParentFieldSetup.ParentFieldSetup">
+                <parameters>
+                    <value type="Multiple">msdyncrm_setupparentfield_control</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="cc_MscrmControls.ParentFieldSetup.ParentFieldSetup/ParentFieldSetup.js" libraryUniqueId="{7b698670-2cf9-45fe-a5b8-dcdc4766d9e5}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="MscrmControls.ParentFieldSetup.DialogAdapter.onDialogLoad" libraryName="cc_MscrmControls.ParentFieldSetup.ParentFieldSetup/ParentFieldSetup.js" handlerUniqueId="{00e069bd-ae92-49d6-af1e-7ecbc477ab95}" enabled="true" parameters="'msdyncrm_setupparentfield_control', 'button_ok', 'button_cancel', 'dlg_parent', 'dlg_child', 'dlg_hierarchy'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

@@ -1,0 +1,93 @@
+<form>
+    <formparameters>
+        <querystringparameter name="message_template_id_dialog" type="SafeString" />
+        <querystringparameter name="message_title_dialog" type="SafeString" />
+        <querystringparameter name="layout_id_dialog" type="SafeString" />
+        <querystringparameter name="created_on_dialog" type="DateTime" />
+        <querystringparameter name="journey_id_dialog" type="SafeString" />
+        <querystringparameter name="action_id_dialog" type="SafeString" />
+    </formparameters>
+    <header id="{e6c91657-2a81-4f6d-bb1a-af8d5c3f4cf6}">
+        <rows>
+            <row>
+                <cell id="{aed3948c-565b-492e-8a1a-17dca2994128}">
+                    <labels>
+                        <label description="Delivery and interaction details" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{4dc51154-8c63-417d-b616-f983cb30efa0}" name="{7e325cbe-a6c1-483d-9c7d-ac0aab4098a1}" locklevel="0" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{ffff7f78-89b2-4a44-857e-fbd7648ab954}" name="{3d3ee5e5-5717-4410-984f-aaed143ee0a5}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e1deefd2-ce81-4fad-a85d-b173d9615fdd}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="detailed_analytics_control_dialog" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{da07b499-7b01-4801-aae0-82b0fe80a047}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>1000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{da07b499-7b01-4801-aae0-82b0fe80a047}">
+            <customControl formFactor="0" name="CxpOrchestrationAnalytics.DetailedAnalyticsControl.DetailedAnalyticsControl">
+                <parameters>
+                    <messageId type="SingleLine.Text">message_template_id_dialog</messageId>
+                    <messageTitle type="SingleLine.Text">message_title_dialog</messageTitle>
+                    <layoutId type="SingleLine.Text">layout_id_dialog</layoutId>
+                    <messageCreationDate type="DateAndTime">created_on_dialog</messageCreationDate>
+                    <journeyId type="SingleLine.Text">journey_id_dialog</journeyId>
+                    <actionId type="SingleLine.Text">action_id_dialog</actionId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="CxpOrchestrationAnalytics.DetailedAnalyticsControl.DetailedAnalyticsControl">
+                <parameters>
+                    <messageId type="SingleLine.Text">message_template_id_dialog</messageId>
+                    <messageTitle type="SingleLine.Text">message_title_dialog</messageTitle>
+                    <layoutId type="SingleLine.Text">layout_id_dialog</layoutId>
+                    <messageCreationDate type="DateAndTime">created_on_dialog</messageCreationDate>
+                    <journeyId type="SingleLine.Text">journey_id_dialog</journeyId>
+                    <actionId type="SingleLine.Text">action_id_dialog</actionId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="CxpOrchestrationAnalytics.DetailedAnalyticsControl.DetailedAnalyticsControl">
+                <parameters>
+                    <messageId type="SingleLine.Text">message_template_id_dialog</messageId>
+                    <messageTitle type="SingleLine.Text">message_title_dialog</messageTitle>
+                    <layoutId type="SingleLine.Text">layout_id_dialog</layoutId>
+                    <messageCreationDate type="DateAndTime">created_on_dialog</messageCreationDate>
+                    <journeyId type="SingleLine.Text">journey_id_dialog</journeyId>
+                    <actionId type="SingleLine.Text">action_id_dialog</actionId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

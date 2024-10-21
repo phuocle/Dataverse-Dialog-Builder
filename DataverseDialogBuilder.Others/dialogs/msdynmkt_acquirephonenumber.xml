@@ -1,0 +1,138 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_result" type="SafeString" />
+        <querystringparameter name="msdynmkt_region_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_terms_required_dialog" type="Boolean" />
+        <querystringparameter name="msdynmkt_terms_accepted_dialog" type="Boolean" />
+    </formparameters>
+    <header id="{10090157-3d8e-40a2-b0a6-cfaeea56caba}">
+        <rows>
+            <row>
+                <cell id="{fb1c3959-ea7d-4d66-9f07-4de9e9f8a471}">
+                    <labels>
+                        <label description="Activate your free SMS number" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{96372401-e5f1-4bd7-8b34-4d83c38ce690}" name="{77a77884-c8ed-4e36-b168-e4f59defe8c5}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{2575af12-0a64-41f5-a9ad-8959698a9fd2}" name="{5c14be1b-443e-4258-9e3c-c44617f2dc41}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{bef0d7d9-38d3-4316-b359-d6a540ff41ca}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="acquire_number_dialog_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{9ed0c899-6e4d-4fe7-8b09-394f58cef161}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>1000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{c945fabf-181c-4132-8278-cb5382d8b1ee}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="acquire_number_terms_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{838145a6-9857-4656-bf3f-46ab02c0f9b9}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>1000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{6a943b45-d927-4ecf-afe5-1e535e72cf28}">
+        <rows>
+            <row>
+                <cell id="{bf0f190d-b3d1-4a3b-91fa-981531274d04}">
+                    <labels>
+                        <label description="Activate" languagecode="1033" />
+                    </labels>
+                    <control id="createbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_SmsChannel.AcquirePhoneNumberDialog.CrmWebResources" libraryUniqueId="{7c6e8799-9e70-4e47-b339-c85fde1ab6d0}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="createbutton">
+            <Handlers>
+                <Handler functionName="AcquirePhoneNumberDialogWebResources.AcquirePhoneNumberDialogAdapter.onAcquireButtonClick" libraryName="msdynmkt_SmsChannel.AcquirePhoneNumberDialog.CrmWebResources" handlerUniqueId="{1b518602-c09d-424c-9cf2-4f62aecdbcc1}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="AcquirePhoneNumberDialogWebResources.AcquirePhoneNumberDialogAdapter.onDialogLoad" libraryName="msdynmkt_SmsChannel.AcquirePhoneNumberDialog.CrmWebResources" handlerUniqueId="{7b9e58a6-0743-4344-9d9e-2bd225258a63}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false">
+            <Handlers>
+                <Handler functionName="AcquirePhoneNumberDialogWebResources.AcquirePhoneNumberDialogAdapter.onChange" libraryName="msdynmkt_SmsChannel.AcquirePhoneNumberDialog.CrmWebResources" handlerUniqueId="{f02d64bc-0d82-42d8-83df-26d43fbaa307}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{838145a6-9857-4656-bf3f-46ab02c0f9b9}">
+            <customControl formFactor="0" name="CxpSmsChannel.AcquireNumberTermsControl.AcquireNumberTermsControl">
+                <parameters>
+                    <termsAccepted type="TwoOptions">msdynmkt_terms_accepted_dialog</termsAccepted>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="CxpSmsChannel.AcquireNumberTermsControl.AcquireNumberTermsControl">
+                <parameters>
+                    <termsAccepted type="TwoOptions">msdynmkt_terms_accepted_dialog</termsAccepted>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="CxpSmsChannel.AcquireNumberTermsControl.AcquireNumberTermsControl">
+                <parameters>
+                    <termsAccepted type="TwoOptions">msdynmkt_terms_accepted_dialog</termsAccepted>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{9ed0c899-6e4d-4fe7-8b09-394f58cef161}">
+            <customControl formFactor="0" name="CxpSmsChannel.AcquireNumberDialogControl.AcquireNumberDialogControl">
+                <parameters>
+                    <region type="SingleLine.Text">msdynmkt_region_dialog</region>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="CxpSmsChannel.AcquireNumberDialogControl.AcquireNumberDialogControl">
+                <parameters>
+                    <region type="SingleLine.Text">msdynmkt_region_dialog</region>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="CxpSmsChannel.AcquireNumberDialogControl.AcquireNumberDialogControl">
+                <parameters>
+                    <region type="SingleLine.Text">msdynmkt_region_dialog</region>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

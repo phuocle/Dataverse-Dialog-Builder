@@ -1,0 +1,149 @@
+<form>
+    <formparameters>
+        <querystringparameter name="testsend_emailid" type="SafeString" />
+        <querystringparameter name="testsend_entityname" type="SafeString" />
+        <querystringparameter name="testsend_abtestid" type="SafeString" />
+        <querystringparameter name="testsend_abtestvariantid" type="SafeString" />
+        <querystringparameter name="testsend_contactid" type="SafeString" />
+        <querystringparameter name="testsend_contactname" type="SafeString" />
+        <querystringparameter name="testsend_contentsettingsid" type="SafeString" />
+        <querystringparameter name="testsend_contentsettingsname" type="SafeString" />
+        <querystringparameter name="testsend_emailaddress" type="SafeString" />
+        <querystringparameter name="testsend_flagshowformsprowarning" type="Boolean" />
+        <querystringparameter name="testsend_isemailvalid" type="Boolean" />
+    </formparameters>
+    <header id="{c0a19c29-0ccd-494d-bf17-46d66547e74b}">
+        <rows>
+            <row>
+                <cell id="{3408d38c-11f9-4274-b7ca-04a48f32ae83}">
+                    <labels>
+                        <label description="Test send" languagecode="1033" />
+                    </labels>
+                    <control id="header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{3833df62-17e4-4bcb-a3a1-1b8476399dae}" name="{fe91c277-f7b6-4189-8eb7-30f449440f25}" locklevel="0" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{af66be93-5a48-468d-877d-31fbd333f11b}" name="{f4c76433-8482-4a0d-b8db-26a3a0464cd5}" celllabelposition="Top" layout="varwidth" showlabel="false" showbar="false" columns="1" IsUserDefined="0" locklevel="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{97844a88-0af7-420c-840f-094704f89fac}" showlabel="false" locklevel="0" visible="true">
+                                        <labels>
+                                            <label description="Testsend control" languagecode="1033" />
+                                        </labels>
+                                        <control id="testsend_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{0a088c19-cedd-4c6c-b610-5d51b21b925e}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{69053d47-b207-4fc7-a3a9-0afa23caf943}">
+                <rows>
+                    <row>
+                        <cell id="{3e6bb648-22fe-4293-a341-d2f781de66ac}">
+                            <labels>
+                                <label description="Test send" languagecode="1033" />
+                            </labels>
+                            <control id="sendbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{bfdc0ec2-158f-42b3-8c27-497963175718}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <formLibraries>
+        <Library name="msdyncrm_DynamicsMarketing.CrmWebResource" libraryUniqueId="{0b9888ac-c028-562e-597e-d95248cd0940}" />
+    </formLibraries>
+    <events>
+        <event name="onLoad" application="false" active="true">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.MktSvcTestSend.validateEmail" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{ef551086-c943-4c31-b57b-efe81abec67f}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="true" attribute="testsend_emailaddress">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.MktSvcTestSend.validateEmail" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{430433be-59d6-4b3b-99ac-092ff05c3552}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="true" attribute="testsend_contentsettingsid">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.MktSvcTestSend.validateEmail" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{430433be-59d6-4b3b-99ac-092ff05c3552}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="true" attribute="testsend_contactid">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.MktSvcTestSend.validateEmail" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{430433be-59d6-4b3b-99ac-092ff05c3552}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="sendbutton">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.MktSvcTestSend.okClicked" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{cd60c821-9a6d-40ab-8fb6-58e65d44f9de}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.MktSvcTestSend.cancelClicked" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{addd8a94-f06a-4102-84ad-6e0ed7226a12}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{0a088c19-cedd-4c6c-b610-5d51b21b925e}">
+            <customControl formFactor="0" name="MscrmControls.EmailEditor.TestSend.TestSendControl">
+                <parameters>
+                    <emailAddress type="SingleLine.Text">testsend_emailaddress</emailAddress>
+                    <contactId type="SingleLine.Text">testsend_contactid</contactId>
+                    <contactName type="SingleLine.Text">testsend_contactname</contactName>
+                    <contentSettingsId type="SingleLine.Text">testsend_contentsettingsid</contentSettingsId>
+                    <contentSettingsName type="SingleLine.Text">testsend_contentsettingsname</contentSettingsName>
+                    <isEmailValid type="TwoOptions">testsend_isemailvalid</isEmailValid>
+                    <abTestVariant type="SingleLine.Text">testsend_abtestvariantid</abTestVariant>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.EmailEditor.TestSend.TestSendControl">
+                <parameters>
+                    <emailAddress type="SingleLine.Text">testsend_emailaddress</emailAddress>
+                    <contactId type="SingleLine.Text">testsend_contactid</contactId>
+                    <contactName type="SingleLine.Text">testsend_contactname</contactName>
+                    <contentSettingsId type="SingleLine.Text">testsend_contentsettingsid</contentSettingsId>
+                    <contentSettingsName type="SingleLine.Text">testsend_contentsettingsname</contentSettingsName>
+                    <isEmailValid type="TwoOptions">testsend_isemailvalid</isEmailValid>
+                    <abTestVariant type="SingleLine.Text">testsend_abtestvariantid</abTestVariant>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.EmailEditor.TestSend.TestSendControl">
+                <parameters>
+                    <emailAddress type="SingleLine.Text">testsend_emailaddress</emailAddress>
+                    <contactId type="SingleLine.Text">testsend_contactid</contactId>
+                    <contactName type="SingleLine.Text">testsend_contactname</contactName>
+                    <contentSettingsId type="SingleLine.Text">testsend_contentsettingsid</contentSettingsId>
+                    <contentSettingsName type="SingleLine.Text">testsend_contentsettingsname</contentSettingsName>
+                    <isEmailValid type="TwoOptions">testsend_isemailvalid</isEmailValid>
+                    <abTestVariant type="SingleLine.Text">testsend_abtestvariantid</abTestVariant>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

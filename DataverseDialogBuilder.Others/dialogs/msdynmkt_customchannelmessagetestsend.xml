@@ -1,0 +1,145 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_result" type="SafeString" />
+        <querystringparameter name="msdynmkt_customchannelmessageid_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_channelinstanceid_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_to_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_messageparts_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_placeholderpreviews_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_placeholders_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_audiencerecord_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_triggerdata_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_owningbusinessunit_dialog" type="SafeString" />
+    </formparameters>
+    <header id="{4aae0c74-d8d0-403f-923d-7416eec152bd}">
+        <rows>
+            <row>
+                <cell id="{b121dcbb-f3e1-41f1-bcc9-920af6eca198}">
+                    <labels>
+                        <label description="Test message" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{b2c92cae-9e9b-409c-b93a-4d93aa16d310}" name="{dc81c8ed-73dd-436f-981a-8e5616f1e4d2}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{53d99bce-52d7-4495-a118-493a06d1e9a2}" name="{92e041e4-f1e5-4c84-904f-21fa30d4e62f}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6b6f9121-88ef-4d35-875d-689ae1d5fd36}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="custom_channel_message_test_send_dialog_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{fa39e20a-b76b-43f1-8fc3-bc5fae8c16d5}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>1000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{54b0cf39-4d0e-426f-b020-f73f696a5bf5}">
+        <rows>
+            <row>
+                <cell id="{0f84134a-6c98-47b4-96c2-173144afed84}">
+                    <labels>
+                        <label description="Test send" languagecode="1033" />
+                    </labels>
+                    <control id="createbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{aa3b8ff8-6dfd-4a29-8a4b-45da5a8d90cc}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_ChannelDefinitions.CustomChannelMessageTestSendDialog.CrmWebResources" libraryUniqueId="{bc7cd007-c3c4-4c80-a5a8-a50dca8c160f}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="createbutton">
+            <Handlers>
+                <Handler functionName="CustomChannelMessageTestSendDialogWebResources.CustomChannelMessageTestSendDialogAdapter.onTestSendButtonClick" libraryName="msdynmkt_ChannelDefinitions.CustomChannelMessageTestSendDialog.CrmWebResources" handlerUniqueId="{a7019c5c-1917-4689-b1ec-35bb370eaba0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="CustomChannelMessageTestSendDialogWebResources.CustomChannelMessageTestSendDialogAdapter.onCancelButtonClick" libraryName="msdynmkt_ChannelDefinitions.CustomChannelMessageTestSendDialog.CrmWebResources" handlerUniqueId="{224428a9-8d8a-41d3-80d3-21f4d8b62d98}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CustomChannelMessageTestSendDialogWebResources.CustomChannelMessageTestSendDialogAdapter.onDialogLoad" libraryName="msdynmkt_ChannelDefinitions.CustomChannelMessageTestSendDialog.CrmWebResources" handlerUniqueId="{e9a77635-5158-4f48-abfa-118993d0f7a5}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CustomChannelMessageTestSendDialogWebResources.CustomChannelMessageTestSendDialogAdapter.onChange" libraryName="msdynmkt_ChannelDefinitions.CustomChannelMessageTestSendDialog.CrmWebResources" handlerUniqueId="{c71713c3-fe71-41c1-89a2-8f85b5d1ea52}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{fa39e20a-b76b-43f1-8fc3-bc5fae8c16d5}">
+            <customControl formFactor="0" name="CxpChannelDefinitions.CustomChannelTestSendDialog.CustomChannelTestSendDialog">
+                <parameters>
+                    <customChannelMessageId type="SingleLine.Text">msdynmkt_customchannelmessageid_dialog</customChannelMessageId>
+                    <to type="SingleLine.Text">msdynmkt_to_dialog</to>
+                    <messageParts type="SingleLine.Text">msdynmkt_messageparts_dialog</messageParts>
+                    <placeholders type="Multiple">msdynmkt_placeholders_dialog</placeholders>
+                    <placeholderPreviews type="Multiple">msdynmkt_placeholderpreviews_dialog</placeholderPreviews>
+                    <audienceRecord type="Multiple">msdynmkt_audiencerecord_dialog</audienceRecord>
+                    <triggerData type="Multiple">msdynmkt_triggerdata_dialog</triggerData>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="CxpChannelDefinitions.CustomChannelTestSendDialog.CustomChannelTestSendDialog">
+                <parameters>
+                    <customChannelMessageId type="SingleLine.Text">msdynmkt_customchannelmessageid_dialog</customChannelMessageId>
+                    <to type="SingleLine.Text">msdynmkt_to_dialog</to>
+                    <messageParts type="SingleLine.Text">msdynmkt_messageparts_dialog</messageParts>
+                    <placeholders type="Multiple">msdynmkt_placeholders_dialog</placeholders>
+                    <placeholderPreviews type="Multiple">msdynmkt_placeholderpreviews_dialog</placeholderPreviews>
+                    <audienceRecord type="Multiple">msdynmkt_audiencerecord_dialog</audienceRecord>
+                    <triggerData type="Multiple">msdynmkt_triggerdata_dialog</triggerData>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="CxpChannelDefinitions.CustomChannelTestSendDialog.CustomChannelTestSendDialog">
+                <parameters>
+                    <customChannelMessageId type="SingleLine.Text">msdynmkt_customchannelmessageid_dialog</customChannelMessageId>
+                    <to type="SingleLine.Text">msdynmkt_to_dialog</to>
+                    <messageParts type="SingleLine.Text">msdynmkt_messageparts_dialog</messageParts>
+                    <placeholders type="Multiple">msdynmkt_placeholders_dialog</placeholders>
+                    <placeholderPreviews type="Multiple">msdynmkt_placeholderpreviews_dialog</placeholderPreviews>
+                    <audienceRecord type="Multiple">msdynmkt_audiencerecord_dialog</audienceRecord>
+                    <triggerData type="Multiple">msdynmkt_triggerdata_dialog</triggerData>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

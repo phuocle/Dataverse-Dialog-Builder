@@ -1,0 +1,102 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dialog_result" type="SafeString" />
+    </formparameters>
+    <header id="{161afd27-0391-4547-8edb-becc52d2a738}">
+        <rows>
+            <row>
+                <cell id="{1847b9b1-7351-4872-b77f-d4da15c845a3}">
+                    <labels>
+                        <label description="This content block already exists" languagecode="1033" />
+                    </labels>
+                    <control id="cbinfofrg_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{d65650f1-282f-4c2f-a580-5bf926fec43d}" name="{1f0bcaf9-511c-456e-a1cf-6066392ebd59}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{d3082818-6fa7-4f66-bab7-3089770b970f}" name="{8a45312b-433c-47c7-b703-88962b965220}" showlabel="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{16a26518-3294-45e1-adf3-0eb9288094b2}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Are you sure you want to replace this content block?" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbinfofrg_text" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>1000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{d9b91d75-336e-4fd2-8a2f-dd3ff2d8bad8}">
+        <rows>
+            <row>
+                <cell id="{9bf3f5a3-715f-4e9d-8848-897252ae420d}">
+                    <labels>
+                        <label description="Replace" languagecode="1033" />
+                    </labels>
+                    <control id="button_replace" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{b3d88242-314c-4411-887a-eb3f20b7a5cc}">
+                    <labels>
+                        <label description="Keep both" languagecode="1033" />
+                    </labels>
+                    <control id="button_keep_both" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{c0bf46ee-fd85-4a1f-b46f-e054bd4d53a4}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="button_cancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdyncrm_ContentBlocks.WebResource" libraryUniqueId="{f82075b5-746e-4c0d-bf4c-7e93d9c74573}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="button_replace">
+            <Handlers>
+                <Handler functionName="MSDynCrmContentBlock.SaveAsDialog.confrmDialogClicked" libraryName="msdyncrm_ContentBlocks.WebResource" handlerUniqueId="{951ba56f-3bbb-4b6a-9d37-55dc5faf1fbe}" enabled="true" parameters="'replace'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="button_keep_both">
+            <Handlers>
+                <Handler functionName="MSDynCrmContentBlock.SaveAsDialog.confrmDialogClicked" libraryName="msdyncrm_ContentBlocks.WebResource" handlerUniqueId="{bd7f347e-9936-4f8b-822d-bdf174ab866e}" enabled="true" parameters="'keep_both'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="button_cancel">
+            <Handlers>
+                <Handler functionName="MSDynCrmContentBlock.SaveAsDialog.confrmDialogClicked" libraryName="msdyncrm_ContentBlocks.WebResource" handlerUniqueId="{0a3a00be-af73-422a-bf26-f00671c5c90f}" enabled="true" parameters="'cancel'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

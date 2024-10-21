@@ -1,0 +1,168 @@
+<form>
+    <formparameters>
+        <querystringparameter name="paramduplicate_id" type="SafeString" />
+        <querystringparameter name="paramduplicate_name" type="SafeString" />
+        <querystringparameter name="paramduplicate_description" type="SafeString" />
+        <querystringparameter name="paramduplicate_presentationdescription" type="SafeString" />
+        <querystringparameter name="paramduplicate_primaryentitytypecode" type="SafeString" />
+        <querystringparameter name="paramduplicate_datadescription" type="SafeString" />
+        <querystringparameter name="paramduplicate_entityname" type="SafeString" />
+        <querystringparameter name="paramduplicate_chartid" type="SafeString" />
+        <querystringparameter name="paramduplicate_visualizationtype" type="SafeString" />
+        <querystringparameter name="paramduplicate_recordslength" type="Integer" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" name="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{fd26828a-9489-470c-b1a7-304940c1a3ea}" name="{fd26828a-9489-470c-b1a7-304940c1a3ea}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row />
+                                <row>
+                                    <cell id="{d4fd085c-def1-4dbe-bd5d-a03c4552ba2a}">
+                                        <labels>
+                                            <label description="Duplicate record:" languagecode="1033" />
+                                        </labels>
+                                        <control id="param_name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" disabled="true">
+                                            <parameters>
+                                                <MaxLength>5000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" id="{01632F6D-E8FB-4B4E-8E63-05E6295C678C}" name="{01632F6D-E8FB-4B4E-8E63-05E6295C678C}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{48C29966-F3E2-4B55-B257-20032298A3E0}">
+                                        <labels>
+                                            <label description="Click 'Replace' to overwrite the existing chart with the new chart." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_replace_description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>5000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{DC33DB97-9EAF-416E-A1B7-CAC52EBE77F8}">
+                                        <labels>
+                                            <label description="Click 'Ignore and Save' to import the chart with a new name, without overwriting the existing chart." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_ignoreandsave_description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>5000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{0AD080D0-00DD-4077-9C83-5FFB97082AFE}">
+                                        <labels>
+                                            <label description="Click 'Cancel' to exit the import dialog without saving the chart." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_cancel_description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>5000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{399ca37a-8ec4-4c18-87cd-272ed3d14000}">
+        <rows>
+            <row>
+                <cell id="{d23f727d-4dbf-40fb-915a-2c9098d2c377}">
+                    <labels>
+                        <label description="Duplicate found" languagecode="1033" />
+                    </labels>
+                    <control id="save_as_new_view_header_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+            <row>
+                <cell id="{d1791cf2-0499-48d8-b7F0-f381c8e56f52}">
+                    <labels>
+                        <label description="This record might be a duplicate of the following. Would you like to save it anyway?" languagecode="1033" />
+                    </labels>
+                    <control id="label_manageDuplicates_Description" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{58837ad8-8749-4823-9a6e-1c962f4cefc0}">
+        <rows>
+            <row>
+                <cell id="{de6c150a-aa39-4f55-8a8b-511ce775d59f}">
+                    <labels>
+                        <label description="Ignore and Save" languagecode="1033" />
+                    </labels>
+                    <control id="ignore_save" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{f3ec6bdc-8e54-433f-b4c5-b24c18b1C05b}">
+                    <labels>
+                        <label description="Replace" languagecode="1033" />
+                    </labels>
+                    <control id="merge_button" disabled="true" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{69c35a3c-285d-48ba-99b1-f17f67f65690}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.DuplicateChartDialogOnLoad" libraryName="CRM/ClientUtility.js" handlerUniqueId="{3E66B77E-60A0-4A71-8AE6-8A31787C9EF4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ignore_save">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.ImportDuplicateChart" libraryName="CRM/ClientUtility.js" handlerUniqueId="{f22b6fb8-d09b-4197-b33a-db5046c31837}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="merge_button">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.ReplaceImportedRecord" libraryName="CRM/ClientUtility.js" handlerUniqueId="{f22b6fb8-d09b-4197-b33a-db5046c31837}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.OnDialogClose" libraryName="CRM/ClientUtility.js" handlerUniqueId="{9b57290b-e2ac-4ca5-bc1A-9ed2ead1bb69}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

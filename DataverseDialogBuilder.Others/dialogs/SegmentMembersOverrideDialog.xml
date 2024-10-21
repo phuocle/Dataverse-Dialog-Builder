@@ -1,0 +1,106 @@
+<form>
+    <formparameters>
+        <querystringparameter name="Entity_Type" type="SafeString" />
+        <querystringparameter name="Selected_Ids" type="SafeString" />
+        <querystringparameter name="Is_Exclusion" type="Boolean" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{d8ccb9c6-d909-4511-aab1-0c22fab9dc1f}" name="{3433ef37-4343-4852-9591-9a2c80a84e68}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" columns="1" id="{45fe0ac8-635c-4753-b2b0-930bbf02efce}" name="{02b3cb1c-445d-4bea-9d2f-c84471d4b497}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{538391e5-d364-46f7-9a66-84ed8be44bf3}" showlabel="false">
+                                        <labels>
+                                            <label description="Segments" languagecode="1033" />
+                                        </labels>
+                                        <control id="SegmentGridControl" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <ViewId>{a332c2db-8735-4e9a-96c5-e252a5430e6b}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <TargetEntityType>msdyncrm_segment</TargetEntityType>
+                                                <EnableQuickFind>true</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId>{E365462F-1DB9-46A8-928D-BEAB1A7A2375}</VisualizationId>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                                <RecordsPerPage>7</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{0e277b49-c823-483c-9e12-0456c6d1bdbe}">
+        <rows>
+            <row>
+                <cell id="{1cc560ba-91d9-4418-a0b1-6783a7281dd4}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="add_to_segment_dialog_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{c133efb5-90c6-4a3e-94fb-d28bc017509e}">
+        <rows>
+            <row>
+                <cell id="{903f4a67-614c-4efa-b27d-36f7994f3b28}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="select_segment" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+                <cell id="{b50670a7-3caa-47ab-9668-21c40bdfa8d6}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_operation" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdyncrm_DynamicsMarketing.CrmWebResource" libraryUniqueId="{5e8a3ec6-3bab-406c-9ed8-fc5414fd0851}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.SegmentationDialog.setDialogHeader" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{f1b61af5-b50e-41e7-b029-272e4c061e7c}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="MSDynCrmMkt.Handlers.SegmentationDialog.addGridSelectionHandler" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{2c679a5e-0e25-48e6-9ec7-d2913068cdf8}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="select_segment">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.SegmentationDialog.onSegmentMembersOverrideDialogConfirm" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{f5fb8011-9d6c-4d1f-8f12-fd10ee8c02f8}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_operation">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.SegmentationDialog.onSegmentMembersOverrideDialogCancel" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{0fd6c966-cc4c-4fd1-b2d9-5e385a97491e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

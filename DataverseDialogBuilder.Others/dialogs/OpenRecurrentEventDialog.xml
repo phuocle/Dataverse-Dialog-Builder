@@ -1,0 +1,89 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_baserecurrenteventid" type="SafeString" />
+        <querystringparameter name="param_radiobuttonresponse" type="SafeString" />
+        <querystringparameter name="param_isok" type="Boolean" />
+    </formparameters>
+    <header id="{38e3c2fa-936b-4df9-a233-231e73eb8280}">
+        <rows>
+            <row>
+                <cell id="{0ba6d67e-06ed-4efb-af68-20fb5b81d6c6}">
+                    <labels>
+                        <label description="Open recurring item" languagecode="1033" />
+                    </labels>
+                    <control id="FormHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{597a5c7f-aa71-4a0d-85a6-69db27e515fe}" verticallayout="true" name="Tab">
+            <labels>
+                <label description="Dialog that is displayed when opening a recurrent event to specify the scope of the modification." languagecode="1033" />
+            </labels>
+            <tabfooter id="{8be0b275-fd11-4fc6-b5a1-fc5a2d9705f0}">
+                <rows>
+                    <row>
+                        <cell id="{e34731c8-1442-440e-ac7f-1ded472485b1}">
+                            <labels>
+                                <label description="Ok" languagecode="1033" />
+                            </labels>
+                            <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{2c7db307-9aac-4f61-b8cb-5ed5865f0b8f}" showbar="false" columns="1" name="Section">
+                            <labels>
+                                <label description="This event is part of a series. Which do you want to open?" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{020930f2-97a9-4b42-8150-1030d7999a36}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="radiobuttons" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{7121D9E8-8462-4D42-8B0F-E89BFB75DC8D}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="EventMgmt.CrmWebResource.RecurrentEventDialog.confirmToEditRecurringEvent" libraryName="msevtmgt_EventMgmt.CrmWebResource" handlerUniqueId="{72e6dbd2-a4fe-496a-9828-64e8cf21b872}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{7121D9E8-8462-4D42-8B0F-E89BFB75DC8D}">
+            <customControl name="MscrmControls.RadioButtonControl.RadioButtonControl" formFactor="2">
+                <parameters>
+                    <SafeString type="SingleLine.Text">param_radiobuttonresponse</SafeString>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.RadioButtonControl.RadioButtonControl" formFactor="1">
+                <parameters>
+                    <SafeString type="SingleLine.Text">param_radiobuttonresponse</SafeString>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.RadioButtonControl.RadioButtonControl" formFactor="0">
+                <parameters>
+                    <SafeString type="SingleLine.Text">param_radiobuttonresponse</SafeString>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

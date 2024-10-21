@@ -1,0 +1,84 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_result" type="SafeString" />
+    </formparameters>
+    <header id="{174fb7a8-f0b4-40ee-8397-6ef695a709b7}">
+        <rows>
+            <row>
+                <cell id="{40c0ea82-de1d-40eb-b813-0620947fa138}">
+                    <labels>
+                        <label description="Set reCAPTCHA key" languagecode="1033" />
+                    </labels>
+                    <control id="header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{626180ee-a0af-4ddd-98eb-325c35eec94b}" name="{0d79c9b2-5298-43bb-a421-eeb574211142}" verticallayout="true" contenttype="singleComponent" locklevel="0">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{81fe65bc-573b-4f2c-aaf6-91fbc48e768a}" name="{76a1aa03-b285-4ab0-b36b-4c21d3f4b6b3}" celllabelposition="Top" showlabel="false" showbar="false" layout="varwidth" columns="1" locklevel="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{a4ba8ea1-bb14-4b72-bcdd-667962e6df40}">
+                                        <labels>
+                                            <label description="Set reCAPTCHA key" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdynmkt_secretkey" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{6886877e-ae15-49ea-81df-9c5b3c7edb12}">
+        <rows>
+            <row>
+                <cell id="{878eb329-9b27-492d-a09d-8a4699296d74}">
+                    <labels>
+                        <label description="Set reCAPTCHA" languagecode="1033" />
+                    </labels>
+                    <control id="updatebutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{233ceedc-7d3d-4ab8-ac0a-a87eb3fc4204}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_CxpFormEditorModule.WebResource" libraryUniqueId="{751adba5-6705-4712-afdf-039deca111a1}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="ContentEditor.CxpForm.Handlers.ReCaptchaHandler.onCancelButtonClick" libraryName="msdynmkt_CxpFormEditorModule.WebResource" handlerUniqueId="{d47be7b1-021e-451a-9e2f-fb0e38243200}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="updatebutton">
+            <Handlers>
+                <Handler functionName="ContentEditor.CxpForm.Handlers.ReCaptchaHandler.onUpdateButtonClick" libraryName="msdynmkt_CxpFormEditorModule.WebResource" handlerUniqueId="{e33bda42-51f1-46ce-994b-77f9a5528e0d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

@@ -1,0 +1,176 @@
+<form>
+    <formparameters>
+        <querystringparameter name="testsend_html" type="SafeString" />
+        <querystringparameter name="testsend_email" type="SafeString" />
+        <querystringparameter name="testsend_fromemail" type="SafeString" />
+        <querystringparameter name="testsend_fromname" type="SafeString" />
+        <querystringparameter name="testsend_subject" type="SafeString" />
+        <querystringparameter name="testsend_replytoemail" type="SafeString" />
+        <querystringparameter name="testsend_textcontent" type="SafeString" />
+        <querystringparameter name="testsend_placeholders" type="SafeString" />
+        <querystringparameter name="testsend_isemailvalid" type="Boolean" />
+        <querystringparameter name="testsend_placeholderpreviews" type="SafeString" />
+        <querystringparameter name="testsend_entityid" type="SafeString" />
+        <querystringparameter name="testsend_messagedesignation" type="Integer" />
+        <querystringparameter name="testsend_messageid" type="SafeString" />
+        <querystringparameter name="testsend_messageentityname" type="SafeString" />
+        <querystringparameter name="testsend_fieldnames" type="SafeString" />
+        <querystringparameter name="testsend_conditionalcontent" type="SafeString" />
+        <querystringparameter name="testsend_branddata" type="SafeString" />
+        <querystringparameter name="testsend_complianceSettingsId" type="SafeString" />
+        <querystringparameter name="testsend_purposeId" type="SafeString" />
+        <querystringparameter name="testsend_topicId" type="SafeString" />
+        <querystringparameter name="testsend_audiencerecord" type="SafeString" />
+        <querystringparameter name="testsend_triggerdata" type="SafeString" />
+    </formparameters>
+    <header id="{e409f700-eb2d-4dea-bed5-1569655394d1}">
+        <rows>
+            <row>
+                <cell id="{b545c34d-5298-4b8f-9d3a-ac29ce61b3fa}">
+                    <labels>
+                        <label description="Test send" languagecode="1033" />
+                    </labels>
+                    <control id="personalizationdialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{dfa70261-4f17-4324-bf84-a817be166608}" name="{e86b9266-f60a-4583-9b20-fa1f80a2ed18}" locklevel="0" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{2b70a03a-9a3b-46f4-b337-7f194aeb4985}" name="{4a51655a-ed15-481d-b9bf-791cf8d51244}" celllabelposition="Top" layout="varwidth" showlabel="false" showbar="false" columns="1" IsUserDefined="0" locklevel="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell showlabel="false" id="{ed575eb8-e8ef-4ed3-b853-f4f8f35e0635}" colspan="1">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="TestSendControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{9872b3a1-c7f0-4187-ac4d-5cbe0b136a65}" />
+                                    </cell>
+                                </row>
+                                <row />
+                                <row />
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{5054ee81-a337-4c77-b9b1-6c560fbacb36}">
+                <rows>
+                    <row>
+                        <cell id="{6f8cbc64-f825-452c-910a-7c1655cbd1fb}">
+                            <labels>
+                                <label description="Test send" languagecode="1033" />
+                            </labels>
+                            <control id="sendbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{210ad0e3-8ceb-40a2-aa19-f55c2b2fdf60}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <formLibraries>
+        <Library name="msdynmkt_EmailChannel.EmailEditor.CrmWebResource" libraryUniqueId="{fc54573e-b182-4d0f-8719-471ccaec71d0}" />
+    </formLibraries>
+    <events>
+        <event name="onLoad" application="false" active="true">
+            <Handlers>
+                <Handler functionName="EmailEditorWebResources.TestSend.validateEmail" libraryName="msdynmkt_EmailChannel.EmailEditor.CrmWebResource" handlerUniqueId="{ef551086-c943-4c31-b57b-efe81abec67f}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="true" attribute="testsend_isemailvalid">
+            <Handlers>
+                <Handler functionName="EmailEditorWebResources.TestSend.validateEmail" libraryName="msdynmkt_EmailChannel.EmailEditor.CrmWebResource" handlerUniqueId="{430433be-59d6-4b3b-99ac-092ff05c3552}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="sendbutton">
+            <Handlers>
+                <Handler functionName="EmailEditorWebResources.TestSend.okClicked" libraryName="msdynmkt_EmailChannel.EmailEditor.CrmWebResource" handlerUniqueId="{cd60c821-9a6d-40ab-8fb6-58e65d44f9de}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="EmailEditorWebResources.TestSend.cancelClicked" libraryName="msdynmkt_EmailChannel.EmailEditor.CrmWebResource" handlerUniqueId="{addd8a94-f06a-4102-84ad-6e0ed7226a12}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{9872b3a1-c7f0-4187-ac4d-5cbe0b136a65}">
+            <customControl formFactor="0" name="EmailTestSendControl.TestSendControl">
+                <parameters>
+                    <emailAddress type="Multiple">testsend_email</emailAddress>
+                    <definedPlaceholders type="Multiple">testsend_placeholders</definedPlaceholders>
+                    <conditionalContent type="Multiple">testsend_conditionalcontent</conditionalContent>
+                    <brandData type="Multiple">testsend_branddata</brandData>
+                    <isEmailValid type="TwoOptions">testsend_isemailvalid</isEmailValid>
+                    <entityId type="Multiple">testsend_entityid</entityId>
+                    <part01 type="Multiple">testsend_html</part01>
+                    <part02 type="Multiple">testsend_subject</part02>
+                    <part03 type="Multiple">testsend_fromemail</part03>
+                    <part04 type="Multiple">testsend_fromname</part04>
+                    <part05 type="Multiple">testsend_replytoemail</part05>
+                    <part06 type="Multiple">testsend_textcontent</part06>
+                    <placeholderPreviews type="Multiple">testsend_placeholderpreviews</placeholderPreviews>
+                    <audienceRecord type="Multiple">testsend_audiencerecord</audienceRecord>
+                    <triggerData type="Multiple">testsend_triggerdata</triggerData>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="EmailTestSendControl.TestSendControl">
+                <parameters>
+                    <emailAddress type="Multiple">testsend_email</emailAddress>
+                    <definedPlaceholders type="Multiple">testsend_placeholders</definedPlaceholders>
+                    <conditionalContent type="Multiple">testsend_conditionalcontent</conditionalContent>
+                    <brandData type="Multiple">testsend_branddata</brandData>
+                    <isEmailValid type="TwoOptions">testsend_isemailvalid</isEmailValid>
+                    <entityId type="Multiple">testsend_entityid</entityId>
+                    <part01 type="Multiple">testsend_html</part01>
+                    <part02 type="Multiple">testsend_subject</part02>
+                    <part03 type="Multiple">testsend_fromemail</part03>
+                    <part04 type="Multiple">testsend_fromname</part04>
+                    <part05 type="Multiple">testsend_replytoemail</part05>
+                    <part06 type="Multiple">testsend_textcontent</part06>
+                    <placeholderPreviews type="Multiple">testsend_placeholderpreviews</placeholderPreviews>
+                    <audienceRecord type="Multiple">testsend_audiencerecord</audienceRecord>
+                    <triggerData type="Multiple">testsend_triggerdata</triggerData>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="EmailTestSendControl.TestSendControl">
+                <parameters>
+                    <emailAddress type="Multiple">testsend_email</emailAddress>
+                    <definedPlaceholders type="Multiple">testsend_placeholders</definedPlaceholders>
+                    <conditionalContent type="Multiple">testsend_conditionalcontent</conditionalContent>
+                    <brandData type="Multiple">testsend_branddata</brandData>
+                    <isEmailValid type="TwoOptions">testsend_isemailvalid</isEmailValid>
+                    <entityId type="Multiple">testsend_entityid</entityId>
+                    <part01 type="Multiple">testsend_html</part01>
+                    <part02 type="Multiple">testsend_subject</part02>
+                    <part03 type="Multiple">testsend_fromemail</part03>
+                    <part04 type="Multiple">testsend_fromname</part04>
+                    <part05 type="Multiple">testsend_replytoemail</part05>
+                    <part06 type="Multiple">testsend_textcontent</part06>
+                    <placeholderPreviews type="Multiple">testsend_placeholderpreviews</placeholderPreviews>
+                    <audienceRecord type="Multiple">testsend_audiencerecord</audienceRecord>
+                    <triggerData type="Multiple">testsend_triggerdata</triggerData>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

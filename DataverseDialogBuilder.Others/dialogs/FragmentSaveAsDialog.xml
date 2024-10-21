@@ -1,0 +1,144 @@
+<form>
+    <header id="{8179187e-9908-4c2b-acbb-fc9d2552df86}">
+        <rows>
+            <row>
+                <cell id="{f6d48d89-23b1-4e7c-96c9-f662f0ad8cdf}">
+                    <labels>
+                        <label description="Save as content block" languagecode="1033" />
+                    </labels>
+                    <control id="frgmsa_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{14bbc6c1-3eab-4c4f-b25a-13dea23a373b}" name="select_section" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{63062cf8-e127-4b63-9f03-9d1f8b6b4bcc}" name="{fc4df553-e9b3-4ef2-8a34-b2eb59c14635}" celllabelposition="Top">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{2b55c0c3-fd1d-47f4-9842-71bfebc2f74f}" showlabel="false" locklevel="0" visible="true">
+                                        <labels>
+                                            <label description="Id" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_dialogcontrol" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" uniqueid="{f8125453-5471-456b-bc09-05324198c168}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{efdb81b6-57f5-4b80-9d69-93f2b3e45f25}">
+        <rows>
+            <row>
+                <cell id="{6b3e4ace-3b19-4de4-b523-905d4712f690}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="save_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" disabled="false" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{060bc4be-3e02-415a-8479-22c7498ae067}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_Fragments.Fragments.CrmWebResource" libraryUniqueId="{55be79bd-bd1a-4c35-abd7-cd621c978cab}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="true">
+            <Handlers>
+                <Handler functionName="FragmentsWebResources.SaveAsDialog.onLoad" libraryName="msdynmkt_Fragments.Fragments.CrmWebResource" handlerUniqueId="{de4afa12-0667-4248-8e48-6fe9579e899d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="save_id">
+            <Handlers>
+                <Handler functionName="FragmentsWebResources.SaveAsDialog.onSelectClick" libraryName="msdynmkt_Fragments.Fragments.CrmWebResource" handlerUniqueId="{fb8ae805-81e6-497b-bdff-62aed95e565d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="FragmentsWebResources.SaveAsDialog.onCancelClick" libraryName="msdynmkt_Fragments.Fragments.CrmWebResource" handlerUniqueId="{c2d2bf7c-8cc2-4c95-88e4-9228561aa8e2}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{f8125453-5471-456b-bc09-05324198c168}">
+            <customControl formFactor="0" name="MktFragments.FragmentSaveAsHostControl.FragmentSaveAsHostControl">
+                <parameters>
+                    <local_config type="SingleLine.Text">local_config</local_config>
+                    <tags type="SingleLine.Text">tags_param</tags>
+                    <title type="SingleLine.Text">title_param</title>
+                    <contentblockid type="SingleLine.Text">contentblockid_param</contentblockid>
+                    <designerHtml type="SingleLine.Text">previewhtml_snippet</designerHtml>
+                    <thumbnailImage type="SingleLine.Text">dialog_thumbnail</thumbnailImage>
+                    <statuscode type="OptionSet">statuscode_param</statuscode>
+                    <isProtected type="TwoOptions">isprotected_param</isProtected>
+                    <customFormAttributes type="SingleLine.Text">customFormAttributes_param</customFormAttributes>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MktFragments.FragmentSaveAsHostControl.FragmentSaveAsHostControl">
+                <parameters>
+                    <local_config type="SingleLine.Text">local_config</local_config>
+                    <tags type="SingleLine.Text">tags_param</tags>
+                    <title type="SingleLine.Text">title_param</title>
+                    <contentblockid type="SingleLine.Text">contentblockid_param</contentblockid>
+                    <designerHtml type="SingleLine.Text">previewhtml_snippet</designerHtml>
+                    <thumbnailImage type="SingleLine.Text">dialog_thumbnail</thumbnailImage>
+                    <statuscode type="OptionSet">statuscode_param</statuscode>
+                    <isProtected type="TwoOptions">isprotected_param</isProtected>
+                    <customFormAttributes type="SingleLine.Text">customFormAttributes_param</customFormAttributes>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MktFragments.FragmentSaveAsHostControl.FragmentSaveAsHostControl">
+                <parameters>
+                    <local_config type="SingleLine.Text">local_config</local_config>
+                    <tags type="SingleLine.Text">tags_param</tags>
+                    <title type="SingleLine.Text">title_param</title>
+                    <contentblockid type="SingleLine.Text">contentblockid_param</contentblockid>
+                    <designerHtml type="SingleLine.Text">previewhtml_snippet</designerHtml>
+                    <thumbnailImage type="SingleLine.Text">dialog_thumbnail</thumbnailImage>
+                    <statuscode type="OptionSet">statuscode_param</statuscode>
+                    <isProtected type="TwoOptions">isprotected_param</isProtected>
+                    <customFormAttributes type="SingleLine.Text">customFormAttributes_param</customFormAttributes>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="designerhtml_snippet" type="SafeString" />
+        <querystringparameter name="finalizedhtml_snippet" type="SafeString" />
+        <querystringparameter name="previewhtml_snippet" type="SafeString" />
+        <querystringparameter name="preview_dialog_result" type="SafeString" />
+        <querystringparameter name="preview_selected_item" type="SafeString" />
+        <querystringparameter name="tags_param" type="SafeString" />
+        <querystringparameter name="title_param" type="SafeString" />
+        <querystringparameter name="statuscode_param" type="Integer" />
+        <querystringparameter name="isprotected_param" type="Boolean" />
+        <querystringparameter name="contentblockid_param" type="SafeString" />
+        <querystringparameter name="local_config" type="SafeString" />
+        <querystringparameter name="dialog_thumbnail" type="SafeString" />
+        <querystringparameter name="customFormAttributes_param" type="SafeString" />
+    </formparameters>
+</form>

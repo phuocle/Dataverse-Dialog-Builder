@@ -1,0 +1,102 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dialog_result" type="SafeString" />
+    </formparameters>
+    <header id="{4e3c58bd-0bd9-465e-a029-98ca8704fcfb}">
+        <rows>
+            <row>
+                <cell id="{50afa088-0424-4866-97c1-3dc5828ec476}">
+                    <labels>
+                        <label description="This content block already exists" languagecode="1033" />
+                    </labels>
+                    <control id="cbinfofrgagment_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{ffc4d290-285c-4c1c-9dda-b2005c41c9c7}" name="{f367fe1b-9d1f-4340-b063-d3560ed80265}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{89a56a1e-38eb-4123-a374-1d4858b992f4}" name="{d2c8e59d-c1e7-4c16-af96-adb3827b933b}" showlabel="false">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{24ea15b3-6a17-4624-bd43-aec5f41cfff3}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Are you sure you want to replace this content block?" languagecode="1033" />
+                                        </labels>
+                                        <control id="cbinfofrg_text" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>1000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{30a00e3d-f5a6-41fc-9d2d-70e461c91c69}">
+        <rows>
+            <row>
+                <cell id="{12986b1c-7024-42e7-9c4b-b0b6c9212178}">
+                    <labels>
+                        <label description="Replace" languagecode="1033" />
+                    </labels>
+                    <control id="button_replace" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{9084191a-5b9b-4cb0-a89a-f6a56d1c6269}">
+                    <labels>
+                        <label description="Keep both" languagecode="1033" />
+                    </labels>
+                    <control id="button_keep_both" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{7c5436cc-44a0-48c5-af51-8260c3026adb}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="button_cancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_Fragments.Fragments.CrmWebResource" libraryUniqueId="{d0b42e34-6a8e-419d-9d06-f6e9622816d3}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="button_replace">
+            <Handlers>
+                <Handler functionName="FragmentsWebResources.SaveAsDialog.confrmDialogClicked" libraryName="msdynmkt_Fragments.Fragments.CrmWebResource" handlerUniqueId="{f7fa262d-fac4-4ce9-b440-59957e62587d}" enabled="true" parameters="'replace'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="button_keep_both">
+            <Handlers>
+                <Handler functionName="FragmentsWebResources.SaveAsDialog.confrmDialogClicked" libraryName="msdynmkt_Fragments.Fragments.CrmWebResource" handlerUniqueId="{589be58f-874a-492e-a5d2-7bd7886cf7a3}" enabled="true" parameters="'keep_both'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="button_cancel">
+            <Handlers>
+                <Handler functionName="FragmentsWebResources.SaveAsDialog.confrmDialogClicked" libraryName="msdynmkt_Fragments.Fragments.CrmWebResource" handlerUniqueId="{272575ab-4e50-45e6-bd8a-786e3eca3875}" enabled="true" parameters="'cancel'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

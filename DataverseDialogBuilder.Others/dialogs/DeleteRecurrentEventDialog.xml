@@ -1,0 +1,100 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_baserecurrenteventid" type="SafeString" />
+        <querystringparameter name="param_radiobuttonresponse" type="SafeString" />
+        <querystringparameter name="param_isok" type="Boolean" />
+    </formparameters>
+    <header id="{ea22fb72-e925-421f-9248-0a75877306f7}">
+        <rows>
+            <row>
+                <cell id="{b37d433c-1e17-4182-942a-426dcbf3bcd7}">
+                    <labels>
+                        <label description="Delete recurring item" languagecode="1033" />
+                    </labels>
+                    <control id="FormHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{06d66a37-134d-418b-94d1-6e465c78e1e3}" verticallayout="true" name="Tab">
+            <labels>
+                <label description="Dialog that is displayed on delete of recurrent events to specify the scope of the deletion." languagecode="1033" />
+            </labels>
+            <tabfooter id="{8a70487a-9b0b-4e1d-bdba-75bb310e9232}">
+                <rows>
+                    <row>
+                        <cell id="{562528a4-d6cc-40b7-a3df-9f32448d1d82}">
+                            <labels>
+                                <label description="Ok" languagecode="1033" />
+                            </labels>
+                            <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{f8a2a63e-3788-4f2c-b406-8a4b03543bc4}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{c7f33970-af0e-43d9-9b0b-50091b18a6b0}" showbar="false" columns="1" name="Section">
+                            <labels>
+                                <label description="These events include a series. Which do you want to delete?" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{7e77c597-b516-4060-aca1-d7af66cdfabd}" showlabel="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="radiobuttons" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{c5b6e43c-b84d-415a-8c0c-4fcb97236d0a}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="EventMgmt.CrmWebResource.RecurrentEventDialog.closeDialog" libraryName="msevtmgt_EventMgmt.CrmWebResource" handlerUniqueId="{72e6dbd2-a4fe-496a-9828-64e8cf21b761}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="EventMgmt.CrmWebResource.RecurrentEventDialog.confirmToEditRecurringEvent" libraryName="msevtmgt_EventMgmt.CrmWebResource" handlerUniqueId="{72e6dbd2-a4fe-496a-9828-64e8cf21b872}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{c5b6e43c-b84d-415a-8c0c-4fcb97236d0a}">
+            <customControl name="MscrmControls.RadioButtonControl.RadioButtonControl" formFactor="2">
+                <parameters>
+                    <SafeString type="SingleLine.Text">param_radiobuttonresponse</SafeString>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.RadioButtonControl.RadioButtonControl" formFactor="1">
+                <parameters>
+                    <SafeString type="SingleLine.Text">param_radiobuttonresponse</SafeString>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.RadioButtonControl.RadioButtonControl" formFactor="0">
+                <parameters>
+                    <SafeString type="SingleLine.Text">param_radiobuttonresponse</SafeString>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

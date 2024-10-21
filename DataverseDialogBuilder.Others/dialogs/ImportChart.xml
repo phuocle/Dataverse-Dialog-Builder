@@ -1,0 +1,154 @@
+<form>
+    <formparameters>
+        <querystringparameter name="ChartImportFile_Type" type="Integer" />
+        <querystringparameter name="ChartImport_FileName" type="SafeString" />
+        <querystringparameter name="ChartImport_Description" type="SafeString" />
+        <querystringparameter name="ChartImport_Size" type="Integer" />
+        <querystringparameter name="Entity_Name" type="SafeString" />
+        <querystringparameter name="ChartImport_ChartId" type="SafeString" />
+        <querystringparameter name="ChartImport_ChartName" type="SafeString" />
+        <querystringparameter name="ChartImport_DataDescription" type="SafeString" />
+        <querystringparameter name="ChartImport_PresentationDescription" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{6dcdfdf0-53f2-46c4-8a36-9dbf78a33335}" name="{6dcdfdf0-53f2-46c4-8a36-9dbf78a33335}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{583ba87b-f60e-4212-bc81-4eb50dea7606}" name="{583ba87b-f60e-4212-bc81-4eb50dea7606}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{32bc0508-3dcb-406a-b693-58e7bed68842}">
+                                        <labels>
+                                            <label description="File Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="chartimport_id" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{99094f01-f25c-402b-8327-95b5438ca94c}">
+                                            <parameters>
+                                                <MaxLength>4000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showbar="false" columns="1" id="{a649cdd2-de5b-4f91-854e-49eb49e30ba9}" name="{a649cdd2-de5b-4f91-854e-49eb49e30ba9}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d63f65e5-d8d6-48ef-b6ab-7d41fc08e2fb}">
+                                        <labels>
+                                            <label description="File types description" languagecode="1033" />
+                                        </labels>
+                                        <control id="chartimportdescription_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>5000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{066983d8-6505-4eb5-93a1-569bed4c9183}">
+        <rows>
+            <row>
+                <cell id="{ac548345-8e73-4f0c-9efe-8e7ba4ab10d8}">
+                    <labels>
+                        <label description="Import Chart" languagecode="1033" />
+                    </labels>
+                    <control id="chartimportheader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{035A1876-0866-4D55-83EA-C5A5444DF109}">
+        <rows>
+            <row>
+                <cell id="{8ac59ef9-a677-4cb2-bde9-e33f11b6a667}">
+                    <labels>
+                        <label description="Import" languagecode="1033" />
+                    </labels>
+                    <control id="chart_import" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{8c8e3ed9-5de4-455f-ad0e-ca55e66037fc}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="chart_cancel" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="chart_import">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.ImportChartFile" libraryName="CRM/ClientUtility.js" handlerUniqueId="{e4938688-bd46-471b-b64e-8f389c0b3dc6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="chart_cancel">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.OnDialogClose" libraryName="CRM/ClientUtility.js" handlerUniqueId="{3455d4fa-4122-437b-929d-8835d1dec3a7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="ChartImport_FileName">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.OnFileUpload" libraryName="CRM/ClientUtility.js" handlerUniqueId="{98343295-2DF3-4294-A64C-779C506EF8FF}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.ImportChartDialogOnLoad" libraryName="CRM/ClientUtility.js" handlerUniqueId="{3E66B77E-60A0-4A71-8AE6-8A31787C9EF4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{99094f01-f25c-402b-8327-95b5438ca94c}">
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="0">
+                <parameters>
+                    <value type="SingleLine.Text">chartimport_id</value>
+                    <filename type="SingleLine.Text">ChartImport_FileName</filename>
+                    <size type="Whole.None">ChartImport_Size</size>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="1">
+                <parameters>
+                    <value type="SingleLine.Text">chartimport_id</value>
+                    <filename type="SingleLine.Text">ChartImport_FileName</filename>
+                    <size type="Whole.None">ChartImport_Size</size>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.FileUploaderControl" formFactor="2">
+                <parameters>
+                    <value type="SingleLine.Text">chartimport_id</value>
+                    <filename type="SingleLine.Text">ChartImport_FileName</filename>
+                    <size type="Whole.None">ChartImport_Size</size>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

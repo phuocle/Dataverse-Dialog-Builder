@@ -1,0 +1,122 @@
+<form>
+    <header id="{3c93aacf-e84f-48a2-9cab-c4b62c5c23fa}">
+        <rows>
+            <row>
+                <cell id="{3c93aacf-e84f-48a2-9cab-c4b62c5c23fa}">
+                    <labels>
+                        <label description="Live Entity Dependencies" languagecode="1033" />
+                    </labels>
+                    <control id="entitydependencydialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{317a8a1f-f0fe-49ac-bb60-e09669415fd5}" name="msdyncrm_entitydependencygrid_dialog_tab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{317a8a1f-f0fe-49ac-bb60-e09669415fd5}" name="msdyncrm_entitydependencygrid_dialog_section">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{810ff0da-db2c-4ffb-b146-198bf51c3694}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_entitydependencygrid_dialog" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{72c3fc0d-7704-4227-9fe5-8bf524f05a67}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{fa6f455c-7878-435d-ae6e-bd65c438e5f8}">
+        <rows>
+            <row>
+                <cell id="{961f6533-9e3d-4386-b786-4077cdb6c4a3}">
+                    <labels>
+                        <label description="OK" languagecode="1033" />
+                    </labels>
+                    <control id="okbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{ac1c4125-e95b-4360-b544-4eb98e66c035}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdyncrm_DynamicsMarketing.CrmWebResource" libraryUniqueId="{5c25a9e1-262b-471f-8042-fd9e36fbc16d}" />
+    </formLibraries>
+    <controlDescriptions>
+        <controlDescription forControl="{72c3fc0d-7704-4227-9fe5-8bf524f05a67}">
+            <customControl formFactor="0" name="MscrmControls.EntityDependencyGrid.EntityDependencyGrid">
+                <parameters>
+                    <ToEntityId type="SingleLine.Text">entity_id</ToEntityId>
+                    <ToEntityType type="SingleLine.Text">entity_type</ToEntityType>
+                    <DependencyType type="SingleLine.Text">dependency_type</DependencyType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.EntityDependencyGrid.EntityDependencyGrid">
+                <parameters>
+                    <ToEntityId type="SingleLine.Text">entity_id</ToEntityId>
+                    <ToEntityType type="SingleLine.Text">entity_type</ToEntityType>
+                    <DependencyType type="SingleLine.Text">dependency_type</DependencyType>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.EntityDependencyGrid.EntityDependencyGrid">
+                <parameters>
+                    <ToEntityId type="SingleLine.Text">entity_id</ToEntityId>
+                    <ToEntityType type="SingleLine.Text">entity_type</ToEntityType>
+                    <DependencyType type="SingleLine.Text">dependency_type</DependencyType>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="entity_id" type="SafeString" />
+        <querystringparameter name="entity_type" type="SafeString" />
+        <querystringparameter name="dependency_type" type="SafeString" />
+        <querystringparameter name="stop_confirmed" type="Boolean" />
+    </formparameters>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="okbutton">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.EntityDependencyDialog.onConfirm" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{a13a5eb4-2681-4cc6-80fc-e7ae4ccfe2b1}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.EntityDependencyDialog.onCancel" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{814cf0cc-1fc9-478d-9ad9-045e286740ae}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.EntityDependencyDialog.onLoad" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{b8953ac3-359f-4767-899f-4b1394514e5a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

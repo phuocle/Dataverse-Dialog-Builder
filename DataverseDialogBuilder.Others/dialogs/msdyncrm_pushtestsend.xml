@@ -1,0 +1,154 @@
+<form>
+    <formparameters>
+        <querystringparameter name="msdynmkt_link_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_body_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_app_device_registration_dialog" type="SafeString" />
+        <querystringparameter name="testsend_placeholderpreviews_dialog" type="SafeString" />
+        <querystringparameter name="testsend_audiencerecord_dialog" type="SafeString" />
+        <querystringparameter name="testsend_triggerdata_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_placeholders_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_title_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_subtitle_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_imageid_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_entityid_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_owningbusinessunit_dialog" type="SafeString" />
+    </formparameters>
+    <header id="{cdcab668-e95f-49d2-9cc8-76d6c0e5ecd1}">
+        <rows>
+            <row>
+                <cell id="{3b8fe0b7-1e8e-41f9-bf5a-f9ecfe87edcc}">
+                    <labels>
+                        <label description="Test send" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{68cd8105-a815-4156-b55f-782abf85e615}" name="{68cd8105-a815-4156-b55f-782abf85e615}" locklevel="0" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{d6a6da80-b1fe-415a-a940-05e0fe6b9149}" name="{d6a6da80-b1fe-415a-a940-05e0fe6b9149}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d84127d2-f485-43c3-8680-8e8ce40ac4da}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdynmkt_applicationregistration_dialog" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{73aec590-339f-42e5-8444-2be802747a90}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{92892bfc-127c-4788-9453-95a3136d1977}">
+        <rows>
+            <row>
+                <cell id="{49861561-73ee-4afa-ad71-cd3f805b7831}">
+                    <labels>
+                        <label description="Test send" languagecode="1033" />
+                    </labels>
+                    <control id="testsendbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{4449e265-46b8-45c5-a075-f56444c9e3d7}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_PushNotification.PushTestSendDialog.CrmWebResources" libraryUniqueId="{0931d6d0-4696-6c17-5ade-5deaa208972c}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="testsendbutton">
+            <Handlers>
+                <Handler functionName="PushTestSendDialogWebResources.PushTestSendDialogAdapter.onTestSent" libraryName="msdynmkt_PushNotification.PushTestSendDialog.CrmWebResources" handlerUniqueId="{410a78ba-0657-4751-9bfc-b4c14c398771}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="PushTestSendDialogWebResources.PushTestSendDialogAdapter.onCancelButtonClick" libraryName="msdynmkt_PushNotification.PushTestSendDialog.CrmWebResources" handlerUniqueId="{c43b7093-bfb1-47db-8230-e65178991749}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="PushTestSendDialogWebResources.PushTestSendDialogAdapter.onDialogLoad" libraryName="msdynmkt_PushNotification.PushTestSendDialog.CrmWebResources" handlerUniqueId="{7b8e53a6-0743-4344-9d9e-2bd225258a63}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false">
+            <Handlers>
+                <Handler functionName="PushTestSendDialogWebResources.PushTestSendDialogAdapter.onChange" libraryName="msdynmkt_PushNotification.PushTestSendDialog.CrmWebResources" handlerUniqueId="{7b1e53a6-0743-4344-9d9e-2bd214258a63}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{73aec590-339f-42e5-8444-2be802747a90}">
+            <customControl formFactor="0" name="CxpPushNotification.PushNotificationTestSendControl.PushNotificationTestSendControl">
+                <parameters>
+                    <testSendParameters type="SingleLine.Text">msdynmkt_app_device_registration_dialog</testSendParameters>
+                    <definedPlaceholders type="Multiple">msdynmkt_placeholders_dialog</definedPlaceholders>
+                    <entityId type="Multiple">msdynmkt_entityid_dialog</entityId>
+                    <part01 type="Multiple">msdynmkt_title_dialog</part01>
+                    <part02 type="Multiple">msdynmkt_subtitle_dialog</part02>
+                    <part03 type="Multiple">msdynmkt_body_dialog</part03>
+                    <part04 type="Multiple">msdynmkt_link_dialog</part04>
+                    <part05 type="Multiple">msdynmkt_imageid_dialog</part05>
+                    <placeholderPreviews type="Multiple">testsend_placeholderpreviews_dialog</placeholderPreviews>
+                    <audienceRecord type="Multiple">testsend_audiencerecord_dialog</audienceRecord>
+                    <triggerData type="Multiple">testsend_triggerdata_dialog</triggerData>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="CxpPushNotification.PushNotificationTestSendControl.PushNotificationTestSendControl">
+                <parameters>
+                    <testSendParameters type="SingleLine.Text">msdynmkt_app_device_registration_dialog</testSendParameters>
+                    <definedPlaceholders type="Multiple">msdynmkt_placeholders_dialog</definedPlaceholders>
+                    <entityId type="Multiple">msdynmkt_entityid_dialog</entityId>
+                    <part01 type="Multiple">msdynmkt_title_dialog</part01>
+                    <part02 type="Multiple">msdynmkt_subtitle_dialog</part02>
+                    <part03 type="Multiple">msdynmkt_body_dialog</part03>
+                    <part04 type="Multiple">msdynmkt_link_dialog</part04>
+                    <part05 type="Multiple">msdynmkt_imageid_dialog</part05>
+                    <placeholderPreviews type="Multiple">testsend_placeholderpreviews_dialog</placeholderPreviews>
+                    <audienceRecord type="Multiple">testsend_audiencerecord_dialog</audienceRecord>
+                    <triggerData type="Multiple">testsend_triggerdata_dialog</triggerData>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="CxpPushNotification.PushNotificationTestSendControl.PushNotificationTestSendControl">
+                <parameters>
+                    <testSendParameters type="SingleLine.Text">msdynmkt_app_device_registration_dialog</testSendParameters>
+                    <definedPlaceholders type="Multiple">msdynmkt_placeholders_dialog</definedPlaceholders>
+                    <entityId type="Multiple">msdynmkt_entityid_dialog</entityId>
+                    <part01 type="Multiple">msdynmkt_title_dialog</part01>
+                    <part02 type="Multiple">msdynmkt_subtitle_dialog</part02>
+                    <part03 type="Multiple">msdynmkt_body_dialog</part03>
+                    <part04 type="Multiple">msdynmkt_link_dialog</part04>
+                    <part05 type="Multiple">msdynmkt_imageid_dialog</part05>
+                    <placeholderPreviews type="Multiple">testsend_placeholderpreviews_dialog</placeholderPreviews>
+                    <audienceRecord type="Multiple">testsend_audiencerecord_dialog</audienceRecord>
+                    <triggerData type="Multiple">testsend_triggerdata_dialog</triggerData>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

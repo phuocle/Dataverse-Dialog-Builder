@@ -1,0 +1,152 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_result" type="SafeString" />
+        <querystringparameter name="msdynmkt_sms_id_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_recipient_dialog" type="SafeString" />
+        <querystringparameter name="testsend_placeholderpreviews_dialog" type="SafeString" />
+        <querystringparameter name="testsend_audiencerecord_dialog" type="SafeString" />
+        <querystringparameter name="testsend_triggerdata_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_placeholders_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_text_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_senderphonenumber_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_channeldefinition_id_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_owningbusinessunit_dialog" type="SafeString" />
+    </formparameters>
+    <header id="{631d2c2f-87af-4fa5-8a95-7c9a43bc3d0c}">
+        <rows>
+            <row>
+                <cell id="{9fb378c4-584d-4077-b096-a80fc15a51c5}">
+                    <labels>
+                        <label description="Test send" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{7e5bfc2c-c05f-4639-b530-e5331c873468}" name="{0a2fd6ce-e43f-4a41-a5e6-8af29221e4f2}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{56527524-be4f-4889-a62b-269d6e4747fb}" name="{0a7c69b7-41cb-4422-b83c-75a5dc574367}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{0e9400a2-33a2-483c-8709-af84477e6442}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="sms_test_send_dialog_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{83136b28-9d07-4acc-8394-5d31b564d93e}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>1000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{8d2ff2a3-d71c-449a-b950-62afdfec3814}">
+        <rows>
+            <row>
+                <cell id="{c92f859a-3fe1-4c44-8fd1-a2cf358dd071}">
+                    <labels>
+                        <label description="Test send" languagecode="1033" />
+                    </labels>
+                    <control id="createbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{dcc9027c-6397-4650-b418-f59a0b82e50e}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_SmsChannel.SmsTestSendDialog.CrmWebResources" libraryUniqueId="{eb1cfec3-1653-4ddf-945c-9d2e23d30e5c}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="createbutton">
+            <Handlers>
+                <Handler functionName="SmsTestSendDialogWebResources.SmsTestSendDialogAdapter.onTestSendButtonClick" libraryName="msdynmkt_SmsChannel.SmsTestSendDialog.CrmWebResources" handlerUniqueId="{f1cbb3e8-155d-4eb2-8c3e-af4873865d4a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="SmsTestSendDialogWebResources.SmsTestSendDialogAdapter.onCancelButtonClick" libraryName="msdynmkt_SmsChannel.SmsTestSendDialog.CrmWebResources" handlerUniqueId="{70014308-fca6-497c-87f3-063a40bcac9a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="SmsTestSendDialogWebResources.SmsTestSendDialogAdapter.onDialogLoad" libraryName="msdynmkt_SmsChannel.SmsTestSendDialog.CrmWebResources" handlerUniqueId="{2b08ae11-a87d-4e9f-81e7-869913820ede}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false">
+            <Handlers>
+                <Handler functionName="SmsTestSendDialogWebResources.SmsTestSendDialogAdapter.onChange" libraryName="msdynmkt_SmsChannel.SmsTestSendDialog.CrmWebResources" handlerUniqueId="{c77372af-604e-4072-9313-077ccdfb3784}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{83136b28-9d07-4acc-8394-5d31b564d93e}">
+            <customControl formFactor="0" name="CxpSmsChannel.SmsTestSendDialogControl.SmsTestSendDialogControl">
+                <parameters>
+                    <recipient type="SingleLine.Text">msdynmkt_recipient_dialog</recipient>
+                    <sender type="SingleLine.Text">msdynmkt_senderphonenumber_dialog</sender>
+                    <channelDefinitionId type="SingleLine.Text">msdynmkt_channeldefinition_id_dialog</channelDefinitionId>
+                    <definedPlaceholders type="Multiple">msdynmkt_placeholders_dialog</definedPlaceholders>
+                    <entityId type="Multiple">msdynmkt_sms_id_dialog</entityId>
+                    <part01 type="Multiple">msdynmkt_text_dialog</part01>
+                    <placeholderPreviews type="Multiple">testsend_placeholderpreviews_dialog</placeholderPreviews>
+                    <audienceRecord type="Multiple">testsend_audiencerecord_dialog</audienceRecord>
+                    <triggerData type="Multiple">testsend_triggerdata_dialog</triggerData>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="CxpSmsChannel.SmsTestSendDialogControl.SmsTestSendDialogControl">
+                <parameters>
+                    <recipient type="SingleLine.Text">msdynmkt_recipient_dialog</recipient>
+                    <sender type="SingleLine.Text">msdynmkt_senderphonenumber_dialog</sender>
+                    <channelDefinitionId type="SingleLine.Text">msdynmkt_channeldefinition_id_dialog</channelDefinitionId>
+                    <definedPlaceholders type="Multiple">msdynmkt_placeholders_dialog</definedPlaceholders>
+                    <entityId type="Multiple">msdynmkt_sms_id_dialog</entityId>
+                    <part01 type="Multiple">msdynmkt_text_dialog</part01>
+                    <placeholderPreviews type="Multiple">testsend_placeholderpreviews_dialog</placeholderPreviews>
+                    <audienceRecord type="Multiple">testsend_audiencerecord_dialog</audienceRecord>
+                    <triggerData type="Multiple">testsend_triggerdata_dialog</triggerData>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="CxpSmsChannel.SmsTestSendDialogControl.SmsTestSendDialogControl">
+                <parameters>
+                    <recipient type="SingleLine.Text">msdynmkt_recipient_dialog</recipient>
+                    <sender type="SingleLine.Text">msdynmkt_senderphonenumber_dialog</sender>
+                    <channelDefinitionId type="SingleLine.Text">msdynmkt_channeldefinition_id_dialog</channelDefinitionId>
+                    <definedPlaceholders type="Multiple">msdynmkt_placeholders_dialog</definedPlaceholders>
+                    <entityId type="Multiple">msdynmkt_sms_id_dialog</entityId>
+                    <part01 type="Multiple">msdynmkt_text_dialog</part01>
+                    <placeholderPreviews type="Multiple">testsend_placeholderpreviews_dialog</placeholderPreviews>
+                    <audienceRecord type="Multiple">testsend_audiencerecord_dialog</audienceRecord>
+                    <triggerData type="Multiple">testsend_triggerdata_dialog</triggerData>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

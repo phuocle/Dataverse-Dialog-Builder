@@ -1,0 +1,127 @@
+<form>
+    <formparameters>
+        <querystringparameter name="auditrecord_id" type="SafeString" />
+        <querystringparameter name="entitytype_name" type="SafeString" />
+        <querystringparameter name="objecttype_code" type="SafeString" />
+        <querystringparameter name="objectid_value" type="SafeString" />
+        <querystringparameter name="created_on" type="SafeString" />
+    </formparameters>
+    <header id="{20A88883-CFD3-49AC-A0AC-7A5A5916B494}">
+        <rows>
+            <row>
+                <cell id="{B65D2006-F3EF-4A95-BAAC-AAA10F4CB370}" showlabel="true" labelid="{45A2F94E-0415-4690-8548-C4451A7FDC5D}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="FormHeader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{4096ED0D-B54B-4A90-8E14-6DE2F97EE1DF}" verticallayout="true" name="Tab">
+            <labels>
+                <label description="This is a tab." languagecode="1033" />
+            </labels>
+            <tabfooter id="{303f1bb7-3f05-423b-8b27-135b552b8375}">
+                <rows>
+                    <row>
+                        <cell id="{7B9024DA-67E3-48F6-A29D-90675D51A66D}" showlabel="true" labelid="{DCE87DE0-7D21-4832-AD32-FE506E3C6637}">
+                            <labels>
+                                <label description="Close" languagecode="1033" />
+                            </labels>
+                            <control id="close_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{EB813F55-D4A8-4A95-AF10-162655D9FB91}" showbar="false" columns="1" name="Section" showlabel="false">
+                            <labels>
+                                <label description="This is a section." languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{28AB7101-C235-4DEF-A3A9-5B3915AE153B}" showlabel="true" labelid="{23976F8F-4A1F-4975-B455-E2F0E0166334}">
+                                        <labels>
+                                            <label description="Changed Date" languagecode="1033" />
+                                        </labels>
+                                        <control id="createdon" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" disabled="true" uniqueid="{902702AE-B334-4603-9D7B-EFB2F49D4408}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{7E9FCF2F-9ECA-48E1-9E77-4AD30C0F084C}" showlabel="true" labelid="{ED1B12D2-8C46-4459-8DF0-B928C22FFBE3}">
+                                        <labels>
+                                            <label description="Changed By" languagecode="1033" />
+                                        </labels>
+                                        <control id="userid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" disabled="true" uniqueid="{b1486ab7-8f35-4c0f-85dc-478d855b98ac}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{F86A92E6-8567-44B8-940C-D73DC2238F15}" showlabel="true" labelid="{16ED0E0C-B717-4A54-ADB5-2D8560FB1B8F}">
+                                        <labels>
+                                            <label description="Entity" languagecode="1033" />
+                                        </labels>
+                                        <control id="objecttypecode" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" isunbound="true" disabled="true" uniqueid="{17EF8FF4-CE3E-4557-B839-CAAC6B71DAA0}" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{8ADD96F8-4343-4044-9E64-E7B430F9FF2E}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="{45A8F253-9034-486A-A0B6-B34CF775284F}" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{a1bdd0d0-7148-4083-acea-8f25bf457c79}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="close_id">
+            <Handlers>
+                <Handler functionName="OnDialogClose" libraryName="AuditDetailsInfo.js" handlerUniqueId="{E285211B-AA04-4E93-865A-7067F5CBBD51}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{a1bdd0d0-7148-4083-acea-8f25bf457c79}">
+            <customControl name="PowerAppsModernization.Auditing.AuditDetails" formFactor="0">
+                <parameters>
+                    <auditRecordId type="SingleLine.Text">auditrecord_id</auditRecordId>
+                    <entityTypeName type="SingleLine.Text">entitytype_name</entityTypeName>
+                    <primaryEntityName type="SingleLine.Text">objecttype_code</primaryEntityName>
+                    <primaryEntityId type="SingleLine.Text">objectid_value</primaryEntityId>
+                    <deleteLogTimeStamp type="SingleLine.Text">created_on</deleteLogTimeStamp>
+                </parameters>
+            </customControl>
+            <customControl name="PowerAppsModernization.Auditing.AuditDetails" formFactor="1">
+                <parameters>
+                    <auditRecordId type="SingleLine.Text">auditrecord_id</auditRecordId>
+                    <entityTypeName type="SingleLine.Text">entitytype_name</entityTypeName>
+                    <primaryEntityName type="SingleLine.Text">objecttype_code</primaryEntityName>
+                    <primaryEntityId type="SingleLine.Text">objectid_value</primaryEntityId>
+                    <deleteLogTimeStamp type="SingleLine.Text">created_on</deleteLogTimeStamp>
+                </parameters>
+            </customControl>
+            <customControl name="PowerAppsModernization.Auditing.AuditDetails" formFactor="2">
+                <parameters>
+                    <auditRecordId type="SingleLine.Text">auditrecord_id</auditRecordId>
+                    <entityTypeName type="SingleLine.Text">entitytype_name</entityTypeName>
+                    <primaryEntityName type="SingleLine.Text">objecttype_code</primaryEntityName>
+                    <primaryEntityId type="SingleLine.Text">objectid_value</primaryEntityId>
+                    <deleteLogTimeStamp type="SingleLine.Text">created_on</deleteLogTimeStamp>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

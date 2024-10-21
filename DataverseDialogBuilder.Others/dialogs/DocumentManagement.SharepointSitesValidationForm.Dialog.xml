@@ -1,0 +1,87 @@
+<form>
+    <formparameters>
+        <querystringparameter name="sharepoint_site_id" type="SafeString" />
+    </formparameters>
+    <header id="{2376325d-55ea-4cc5-bfc9-dd63c2032385}">
+        <rows>
+            <row>
+                <cell id="{74ecd99a-8b45-4b91-bd61-a5bca4313a75}">
+                    <labels>
+                        <label description="Validating sites" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_validating_sites_title" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{19C0289D-E723-4A61-A5EA-FC802A6CA540}" showlabel="false" name="{19C0289D-E723-4A61-A5EA-FC802A6CA540}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" showlabel="false" id="{0914191A-97BE-425A-A752-CFD414775191}" name="SharepointSitesValidationSection">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{27E9149C-E9A5-466F-8824-078AE27DEEEE}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="idSharepointSitesValidation" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{540DE48A-F35F-4AFB-93E9-F7DB06E73010}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{9233dd16-1820-426e-b6c5-9fe779e7172d}">
+        <rows>
+            <row>
+                <cell id="{12f9a29b-915e-4dde-a7e2-d46435916109}" labelid="{f93f4f41-438c-4cd7-89e7-ce29d13b40f8}">
+                    <labels>
+                        <label description="Close" languagecode="1033" />
+                    </labels>
+                    <control id="close_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="close_id">
+            <Handlers>
+                <Handler functionName="onCloseButtonClick" libraryName="$webresource:msdyn_sharepointSiteHelpers.js" handlerUniqueId="{ffb73c0c-7987-4120-9a99-21f26f103f59}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{540DE48A-F35F-4AFB-93E9-F7DB06E73010}">
+            <customControl name="msdyn_PowerAdmin.EnvironmentSettings.DocumentManagement.SharepointValidation" formFactor="0">
+                <parameters>
+                    <SharepointSiteId type="SingleLine.Text">sharepoint_site_id</SharepointSiteId>
+                </parameters>
+            </customControl>
+            <customControl name="msdyn_PowerAdmin.EnvironmentSettings.DocumentManagement.SharepointValidation" formFactor="1">
+                <parameters>
+                    <SharepointSiteId type="SingleLine.Text">sharepoint_site_id</SharepointSiteId>
+                </parameters>
+            </customControl>
+            <customControl name="msdyn_PowerAdmin.EnvironmentSettings.DocumentManagement.SharepointValidation" formFactor="2">
+                <parameters>
+                    <SharepointSiteId type="SingleLine.Text">sharepoint_site_id</SharepointSiteId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

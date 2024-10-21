@@ -1,0 +1,101 @@
+<form>
+    <tabs>
+        <tab name="{51a1e9c6-9019-4dc1-ae2c-1f18b80b5974}" verticallayout="true" id="{51a1e9c6-9019-4dc1-ae2c-1f18b80b5974}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="{7e526cbd-a338-46c3-afb9-9726a76df1cf}" showbar="false" id="{7e526cbd-a338-46c3-afb9-9726a76df1cf}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{131125aa-6086-4550-bd1b-db6a0e45fef0}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="changeParentPosition_Label" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{2a9e273f-fdd5-4723-8856-bd975f38bd17}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="parentpositionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <EntityLogicalName>position</EntityLogicalName>
+                                                        <DefaultViewId>0827bfc3-10f6-41c1-a6b8-af05bdc60157</DefaultViewId>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{7e74d949-fefc-45a2-a622-9b9bc2e0c2f5}">
+        <rows>
+            <row>
+                <cell id="{5464a56c-63b4-4861-93f9-d258a12035b8}" showlabel="true" labelid="{6dd206f9-f30b-4dca-8b0b-74cb39a14362}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="sidePanelHeaderTitle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{ada1c1dc-95d8-4b32-901c-db54f9c7ea28}">
+        <rows>
+            <row>
+                <cell id="{576d20bd-acfa-4600-80be-71e48c9a4d0f}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+                <cell id="{24b355fa-b987-4bc2-bb71-5e5c76a2c338}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="$webresource:position_RibbonHelpers.js" libraryUniqueId="{78810483-0ad4-4436-9c0b-566442e1686a}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="onformload" libraryName="$webresource:position_RibbonHelpers.js" handlerUniqueId="{7611dc32-e009-4c1d-99f5-1805491f1e84}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="activatePosition" libraryName="$webresource:position_RibbonHelpers.js" handlerUniqueId="{3D4A8E76-8C68-4819-AAFC-4FF3C7D0F09A}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="closeDialog" libraryName="$webresource:position_RibbonHelpers.js" handlerUniqueId="{667F3782-7D1D-4B86-BD13-F35A3989B188}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

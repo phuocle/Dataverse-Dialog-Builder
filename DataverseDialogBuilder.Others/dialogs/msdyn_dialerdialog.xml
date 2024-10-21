@@ -1,0 +1,83 @@
+<form>
+    <formparameters>
+        <querystringparameter name="phone_number" type="SafeString" />
+        <querystringparameter name="entity_name" type="SafeString" />
+        <querystringparameter name="entity_id" type="SafeString" />
+    </formparameters>
+    <header id="{11f22a31-1a94-4981-b15a-c78b7066f5ba}">
+        <rows>
+            <row>
+                <cell id="{7176bde6-d809-4fb2-850c-1d6d804f3048}">
+                    <labels>
+                        <label description="Calls" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_dial_title" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{8bb14d38-d7b8-4839-940e-c2f5c9c6709d}" name="{8bb14d38-d7b8-4839-940e-c2f5c9c6709d}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section name="PhoneCall_Description" id="{ea5d8434-c943-43ba-8af2-11912b363395}" columns="1" showlabel="true" showbar="false" IsUserDefined="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{40e7209f-6573-4520-b779-c5a025175df8}">
+                                        <labels>
+                                            <label description="Call Control" languagecode="1033" />
+                                        </labels>
+                                        <control id="dialer" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" uniqueid="{5cc917f8-5118-4b1f-8e61-aca4c903a022}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{5cc917f8-5118-4b1f-8e61-aca4c903a022}">
+            <customControl formFactor="0" name="MscrmControls.PhoneCallControl.PhoneCallControl">
+                <parameters>
+                    <phoneNumber type="SingleLine.Text">phone_number</phoneNumber>
+                    <entityName type="SingleLine.Text">entity_name</entityName>
+                    <entityId type="SingleLine.Text">entity_id</entityId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.PhoneCallControl.PhoneCallControl">
+                <parameters>
+                    <phoneNumber type="SingleLine.Text">phone_number</phoneNumber>
+                    <entityName type="SingleLine.Text">entity_name</entityName>
+                    <entityId type="SingleLine.Text">entity_id</entityId>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.PhoneCallControl.PhoneCallControl">
+                <parameters>
+                    <phoneNumber type="SingleLine.Text">phone_number</phoneNumber>
+                    <entityName type="SingleLine.Text">entity_name</entityName>
+                    <entityId type="SingleLine.Text">entity_id</entityId>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="storeDialerExecutionContext" libraryName="$webresource:msdyn_dialerIconInit.js" handlerUniqueId="{c6db876e-6547-4160-a412-b6e2e8163254}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

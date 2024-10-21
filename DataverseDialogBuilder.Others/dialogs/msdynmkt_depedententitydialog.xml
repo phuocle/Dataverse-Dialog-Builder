@@ -1,0 +1,134 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dependent_entitylist" type="SafeString" />
+        <querystringparameter name="dialog_result" type="SafeString" />
+        <querystringparameter name="dialog_mode" type="SafeString" />
+        <querystringparameter name="entity_count" type="SafeString" />
+        <querystringparameter name="entity_fetchxml" type="SafeString" />
+    </formparameters>
+    <header id="{50efff65-6c5c-4c1d-8926-2577e14b774e}">
+        <rows>
+            <row>
+                <cell id="{f7ec2162-ab65-49ab-abad-30f546f94828}">
+                    <labels>
+                        <label description="Used in journeys" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{768d3b23-deef-4a44-bbe5-5966a37e895b}" name="{f1a5b5a9-f596-4f2f-a499-49f5e963b5bb}">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{d1ddc675-0d94-4b1d-afa2-767b46edce18}" name="{c7397c52-6347-4df1-92a2-ecad3e008160}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{293eecc7-55a8-4503-ae4a-3da8da400a2e}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="dependent_entity_list" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{f4610439-5d9f-4722-b80b-404b1b266950}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{825527ea-9c50-4040-b467-b9cfbccde5f1}">
+        <rows>
+            <row>
+                <cell id="{b007f1c5-5b5d-4db7-aa94-f43882f03b6d}">
+                    <labels>
+                        <label description="Continue" languagecode="1033" />
+                    </labels>
+                    <control id="continuebutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{b372cbe3-9040-42ae-ace9-cccc016cc59e}">
+                    <labels>
+                        <label description="Create a copy" languagecode="1033" />
+                    </labels>
+                    <control id="copybutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{368b029b-0d14-40bb-9481-fb6ef5f9dcea}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_SharedUiComponents.WebResources" libraryUniqueId="{8fab78e1-02a9-4437-b540-809691871f19}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="continuebutton">
+            <Handlers>
+                <Handler functionName="SharedUiComponentsWebResources.Handlers.onContinueClicked" libraryName="msdynmkt_SharedUiComponents.WebResources" handlerUniqueId="{3e3aba86-b765-49f4-aca9-426dfa39aaf9}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="SharedUiComponentsWebResources.Handlers.onCancelClicked" libraryName="msdynmkt_SharedUiComponents.WebResources" handlerUniqueId="{286acadc-b8e9-45e9-aae9-23167a124db0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="copybutton">
+            <Handlers>
+                <Handler functionName="SharedUiComponentsWebResources.Handlers.onCopyEntityClicked" libraryName="msdynmkt_SharedUiComponents.WebResources" handlerUniqueId="{6e405e6f-039d-448d-a250-67d880f311ef}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="SharedUiComponentsWebResources.Handlers.onDialogLoad" libraryName="msdynmkt_SharedUiComponents.WebResources" handlerUniqueId="{71ec8178-a89c-4834-b01f-73a907680c84}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{f4610439-5d9f-4722-b80b-404b1b266950}">
+            <customControl formFactor="0" name="MsdynmktControls.EntityDependencyControl.EntityDependencyControl">
+                <parameters>
+                    <entityList type="Multiple">dependent_entitylist</entityList>
+                    <mode type="SingleLine.Text">dialog_mode</mode>
+                    <entityCount type="SingleLine.Text">entity_count</entityCount>
+                    <entityFetchXml type="SingleLine.Text">entity_fetchxml</entityFetchXml>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MsdynmktControls.EntityDependencyControl.EntityDependencyControl">
+                <parameters>
+                    <entityList type="Multiple">dependent_entitylist</entityList>
+                    <mode type="SingleLine.Text">dialog_mode</mode>
+                    <entityCount type="SingleLine.Text">entity_count</entityCount>
+                    <entityFetchXml type="SingleLine.Text">entity_fetchxml</entityFetchXml>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MsdynmktControls.EntityDependencyControl.EntityDependencyControl">
+                <parameters>
+                    <entityList type="Multiple">dependent_entitylist</entityList>
+                    <mode type="SingleLine.Text">dialog_mode</mode>
+                    <entityCount type="SingleLine.Text">entity_count</entityCount>
+                    <entityFetchXml type="SingleLine.Text">entity_fetchxml</entityFetchXml>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

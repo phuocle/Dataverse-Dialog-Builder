@@ -1,0 +1,83 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_value" type="SafeString" />
+    </formparameters>
+    <header id="{af529d38-91cc-4942-bd0e-8793c9525980}">
+        <rows>
+            <row>
+                <cell id="{580428a5-efc1-4055-9f85-da4e32a92caf}">
+                    <labels>
+                        <label description="Create email consent record" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{7adedf1e-ce1b-4c4f-83c2-dfb72d6a8815}" name="{cbe6d990-bb0d-436a-a21c-4e036d7b7264}" locklevel="0" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{bc1b114c-8bd3-4ca5-92ea-2aebcc8c9417}" name="{0727a7c2-0f53-4221-8399-66c99f01b2b9}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{e457add4-6f94-46e7-b070-925a5248accd}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdynmkt_consent_record" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{c4f35d7f-e24f-453b-b384-0f1bea4ae93f}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>150000</MaxLength>
+                                                <Format>TextArea</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{c4f35d7f-e24f-453b-b384-0f1bea4ae93f}">
+            <customControl formFactor="2" name="Consent.ContactPointDialog.ContactPointDialog">
+                <parameters>
+                    <value type="Multiple">msdynmkt_consent_record</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="Consent.ContactPointDialog.ContactPointDialog">
+                <parameters>
+                    <value type="Multiple">msdynmkt_consent_record</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="Consent.ContactPointDialog.ContactPointDialog">
+                <parameters>
+                    <value type="Multiple">msdynmkt_consent_record</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdynmkt_Consent.CrmWebResources" libraryUniqueId="{83bc6ffc-2456-438d-9da6-c31fe8b410ff}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Consent.ContactPointDialog_Load" libraryName="msdynmkt_Consent.CrmWebResources" handlerUniqueId="{B3685876-4112-4A8F-9C6F-FE9E639AD1D4}" enabled="true" parameters="'msdynmkt_consent_record', 'button_back', 'button_next', 'button_ok', 'button_cancel', 'dlg_value'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>
