@@ -1,0 +1,147 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_reportid" type="SafeString" />
+        <querystringparameter name="param_reporttype" type="SafeString" />
+        <querystringparameter name="param_recordsselected" type="Integer" />
+        <querystringparameter name="param_filename" type="SafeString" />
+        <querystringparameter name="param_returnType" type="Boolean" />
+        <querystringparameter name="param_name" type="SafeString" />
+        <querystringparameter name="param_entitytypecode" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" name="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{fd26828a-9489-470c-b1a7-304940c1a3ea}" name="{fd26828a-9489-470c-b1a7-304940c1a3ea}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{24FA77E1-07F2-4C41-92D1-577C0D493CE5}" showlabel="true" labelid="{D26EB81B-6458-4084-A648-ADD6715C4531}">
+                                        <labels>
+                                            <label description="Select which records you want to use in this report." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="true" showbar="false" id="{039743C9-B733-4CBE-BA75-286207638F14}" name="{039743C9-B733-4CBE-BA75-286207638F14}">
+                            <labels>
+                                <label description="Report:" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{90C6EB28-CFED-491D-B6C6-72B86BB80F97}" showlabel="true" labelid="{6332FF96-C9C6-4D08-980E-DDB2B6FBCF21}" rowspan="3">
+                                        <labels>
+                                            <label description="Description:" languagecode="1033" />
+                                        </labels>
+                                        <control id="param_description" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" disabled="true"></control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="false" showbar="false" id="{28A18301-F380-4BD4-A041-A29E5EB0BC21}" name="{28A18301-F380-4BD4-A041-A29E5EB0BC21}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6E80A9F3-87B9-432B-A599-500E77564371}" showlabel="true" labelid="{AC71A990-E617-4FFE-BC06-B9B520FAB424}">
+                                        <labels>
+                                            <label description="___________________________________________________________________________________________________________________" languagecode="1033" />
+                                        </labels>
+                                        <control id="label_seperator" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" disabled="true" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="true" showbar="false" id="{11779BAB-B4E0-4EF6-927E-97319CB996A6}" name="{11779BAB-B4E0-4EF6-927E-97319CB996A6}">
+                            <labels>
+                                <label description="Use these records:" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{A28323FB-00C0-4BD5-9EDA-B83698185342}" rowspan="3">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="optionset_reporttypes" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" isunbound="true">
+                                            <parameters>
+                                                <OptionSetName>optionset_runreport</OptionSetName>
+                                                <DefaultValue>2</DefaultValue>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{399ca37a-8ec4-4c18-87cd-272ed3d14000}">
+        <rows>
+            <row>
+                <cell id="{07D2796E-AB01-41A2-BF76-FF51C3D21760}" showlabel="true" labelid="{3B2D41B0-3E20-4634-B6C4-D37E029C44EA}">
+                    <labels>
+                        <label description="Select Records" languagecode="1033" />
+                    </labels>
+                    <control id="save_as_new_view_header_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{58837ad8-8749-4823-9a6e-1c962f4cefc0}">
+        <rows>
+            <row>
+                <cell id="{B8755B13-3967-4FCF-BAF6-49FD0FE3FA4E}" showlabel="true" labelid="{A06D326F-A597-444B-B3B7-C0249E37349C}">
+                    <labels>
+                        <label description="Run Report" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{A90F3F9C-E3BB-4DE4-A54C-25ACA7BE08FC}" showlabel="true" labelid="{438F422E-A7F4-4E22-A57D-3113FBB07AD0}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OnLoadRunReportDialog" libraryName="msdyn_RunReport.js" handlerUniqueId="{5C54882A-C1CD-4D98-9C45-48C991855FE7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="optionset_reporttypes">
+            <Handlers>
+                <Handler functionName="OnChangeOfSelectionOptionList" libraryName="msdyn_RunReport.js" handlerUniqueId="{B771BE2B-D4A6-4F70-8F68-74C1C2C1BEF4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="OnRunReport" libraryName="msdyn_RunReport.js" handlerUniqueId="{f22b6fb8-d09b-4197-b33a-db5046c31837}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="OnDialogClose" libraryName="msdyn_RunReport.js" handlerUniqueId="{9b57290b-e2ac-4ca5-bc1A-9ed2ead1bb69}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

@@ -13,11 +13,26 @@
                             </labels>
                             <rows>
                                 <row>
-                                    <cell id="{141f4b14-9b66-4f5d-8c2b-738842632602}" rowspan="12">
+                                    <cell id="{141f4b14-9b66-4f5d-8c2b-738842632602}" rowspan="12" visible="false">
                                         <labels>
                                             <label description="" languagecode="1033" />
                                         </labels>
                                         <control id="preview_host_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{8d641e8b-fb0f-4856-bd8b-2f9ef8d59153}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section showlabel="false" showbar="false" id="{06950d9e-eb12-46bb-ba53-ff6906de4ecd}" name="{c19302f8-0a28-40c9-9729-9e91d04ddf21}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{8fae24b1-c920-4e2c-b8d1-04d4f29ee343}" rowspan="12" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="enhance_preview_host_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{26684820-9825-41f3-b458-c9446fb68b21}" disabled="false" isunbound="true" />
                                     </cell>
                                 </row>
                             </rows>
@@ -51,6 +66,11 @@
         <event name="onload" application="false" active="false">
             <Handlers>
                 <Handler functionName="Activities.ApplyEmailTemplateDialog.onTemplateGalleryLoadFromEmailForm" libraryName="Activities/SystemLibraries/InsertEmailTemplate.js" handlerUniqueId="{d05ad588-d166-4203-9a82-10495b53a2b8}" enabled="true" parameters="'input_config','lbl_header'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Activities.EmailAndEmailTemplate.onEnhancedEmailTemplateDialogLoadFromEmailForm" libraryName="Activities/SystemLibraries/msdyn_EmailAndEmailTemplate.js" handlerUniqueId="{72fa0aa8-f980-4196-86c7-bf9711ae6055}" enabled="true" parameters="'input_config','lbl_header'" passExecutionContext="true" />
             </Handlers>
         </event>
         <event name="onclick" application="false" active="false" attribute="select_id">
@@ -97,6 +117,38 @@
                 </parameters>
             </customControl>
             <customControl formFactor="2" name="MscrmControls.TemplateFilterControl.TemplateFilterControl">
+                <parameters>
+                    <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
+                    <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>
+                    <titleLabelId type="SingleLine.Text" static="true">lbl_header</titleLabelId>
+                    <inputConfig type="SingleLine.Text">input_config</inputConfig>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_item</outputItems>
+                </parameters>
+            </customControl>
+        </controlDescription>
+        <controlDescription forControl="{26684820-9825-41f3-b458-c9446fb68b21}">
+            <customControl formFactor="0" name="MscrmControls.TemplateEnhanceGalleryHostControl.TemplateEnhanceGalleryHostControl">
+                <parameters>
+                    <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
+                    <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>
+                    <titleLabelId type="SingleLine.Text" static="true">lbl_header</titleLabelId>
+                    <inputConfig type="SingleLine.Text">input_config</inputConfig>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_item</outputItems>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.TemplateEnhanceGalleryHostControl.TemplateEnhanceGalleryHostControl">
+                <parameters>
+                    <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
+                    <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>
+                    <titleLabelId type="SingleLine.Text" static="true">lbl_header</titleLabelId>
+                    <inputConfig type="SingleLine.Text">input_config</inputConfig>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_item</outputItems>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.TemplateEnhanceGalleryHostControl.TemplateEnhanceGalleryHostControl">
                 <parameters>
                     <selectButtonId type="SingleLine.Text" static="true">select_id</selectButtonId>
                     <cancelButtonId type="SingleLine.Text" static="true">cancel_id</cancelButtonId>

@@ -1,0 +1,95 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_reportname" type="SafeString" />
+        <querystringparameter name="param_reporturl" type="SafeString" />
+        <querystringparameter name="param_entitytypecode" type="Integer" />
+        <querystringparameter name="param_reportid" type="SafeString" />
+        <querystringparameter name="param_entityname" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{a2a0aada-99f3-4ca2-97a6-339a2371a603}" showlabel="false" name="Tab1" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" showlabel="false" id="{c2fed5a9-445c-490c-a11a-72d40133f6e4}" height="100%">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{F4FEE538-3156-4E35-93AF-1F7229BDF11B}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="customcontrol" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{dbe07f85-7ace-4290-a2c9-d528d42fbbe2}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{7d5ea26d-43c6-4cea-953c-af6ae61cf8b8}">
+        <rows>
+            <row>
+                <cell id="{29E8D4C9-A82B-4B1C-B431-33B83A5FF639}" showlabel="true" labelid="{075C62CA-3DCF-4B0B-889D-E470F40F68C6}">
+                    <labels>
+                        <label description="Report Viewer" languagecode="1033" />
+                    </labels>
+                    <control id="HeaderTitle" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" uniqueid="{070361EE-F00B-4001-B931-5D4F89B30609}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="OnLoadReportViewDialog" libraryName="msdyn_RunReport.js" handlerUniqueId="{5C54882A-C1CD-4D98-9C45-48C991855FE7}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:msdyn_RunReport.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+    <controlDescriptions>
+        <controlDescription forControl="{dbe07f85-7ace-4290-a2c9-d528d42fbbe2}">
+            <customControl name="PowerAppsModernization.ModernReports.ModernReportViewer" formFactor="0">
+                <parameters>
+                    <dialogHeader type="SingleLine.Text">param_reportname</dialogHeader>
+                    <reportUrl type="SingleLine.Text">param_reporturl</reportUrl>
+                    <reportId type="SingleLine.Text">param_reportid</reportId>
+                    <entityName type="SingleLine.Text">param_entityname</entityName>
+                </parameters>
+            </customControl>
+            <customControl name="PowerAppsModernization.ModernReports.ModernReportViewer" formFactor="1">
+                <parameters>
+                    <dialogHeader type="SingleLine.Text">param_reportname</dialogHeader>
+                    <reportUrl type="SingleLine.Text">param_reporturl</reportUrl>
+                    <reportId type="SingleLine.Text">param_reportid</reportId>
+                    <entityName type="SingleLine.Text">param_entityname</entityName>
+                </parameters>
+            </customControl>
+            <customControl name="PowerAppsModernization.ModernReports.ModernReportViewer" formFactor="2">
+                <parameters>
+                    <dialogHeader type="SingleLine.Text">param_reportname</dialogHeader>
+                    <reportUrl type="SingleLine.Text">param_reporturl</reportUrl>
+                    <reportId type="SingleLine.Text">param_reportid</reportId>
+                    <entityName type="SingleLine.Text">param_entityname</entityName>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

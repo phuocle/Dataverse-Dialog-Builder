@@ -1,38 +1,37 @@
 <form>
     <formparameters>
-        <querystringparameter name="param_resourceid" type="UniqueId" />
+        <querystringparameter name="param_resourceid" type="SafeString" />
         <querystringparameter name="param_startdate" type="SafeString" />
         <querystringparameter name="param_enddate" type="SafeString" />
         <querystringparameter name="param_boardtimezoneoffsetinminutes" type="SafeString" />
-        <querystringparameter name="param_bingmapskey" type="SafeString" />
         <querystringparameter name="param_requirementviewid" type="SafeString" />
         <querystringparameter name="param_currenttabid" type="SafeString" />
+        <querystringparameter name="param_shouldstartoptimization" type="Boolean" />
         <querystringparameter name="param_optimizationrequestparameters" type="SafeString" />
-        <querystringparameter name="param_hasappliedsuggestedschedule" type="Boolean" />
         <querystringparameter name="param_timezonedefinitionid" type="SafeString" />
-        <querystringparameter name="param_optimizationrequeststatus" type="SafeString" />
-        <querystringparameter name="param_applyoptimizationrequeststatus" type="SafeString" />
+        <querystringparameter name="param_shouldlaunchsro" type="Boolean" />
+        <querystringparameter name="param_wasentityselected" type="Boolean" />
         <querystringparameter name="param_iswithincopilot" type="Boolean" />
     </formparameters>
     <tabs>
-        <tab verticallayout="true" id="{47e3e915-f213-4a2a-b492-f10a51064c3e}" name="{45dd2293-af66-4afe-bd56-bc1b44d289e3}" locklevel="0" expanded="true">
+        <tab verticallayout="true" id="{DDF8F08C-3012-49D9-BC85-9F7367EEC2B1}" name="{0E2886F6-5E07-4FBD-AC86-7B1CCACB179D}" locklevel="0" expanded="true">
             <labels>
                 <label description="" languagecode="1033" />
             </labels>
             <columns>
                 <column width="100%">
                     <sections>
-                        <section showbar="false" columns="1" id="{f218f959-b681-4faa-a9a2-814c4504a045}" name="SRO_PCF_Container">
+                        <section showbar="false" columns="1" id="{8CB86881-A191-4CEA-A56D-9033F65D3315}" name="SROSettings_PCF_Container">
                             <labels>
                                 <label description="" languagecode="1033" />
                             </labels>
                             <rows>
                                 <row>
-                                    <cell id="{98ac813d-3271-4965-8e51-53a536c15163}" showlabel="false">
+                                    <cell id="{84D13B5F-4FE5-49E6-AB2C-60776B7147E0}" showlabel="false">
                                         <labels>
                                             <label description="" languagecode="1033" />
                                         </labels>
-                                        <control id="MicrosoftDynamicsScheduling.SingleResourceOptimizationControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{299d1ece-fa92-4d98-b589-4e64798b94f8}" />
+                                        <control id="MicrosoftDynamicsScheduling.SingleResourceOptimizationSettingsControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{4D9ACB36-D5B0-4DB5-B429-699F695C6FBE}" />
                                     </cell>
                                 </row>
                             </rows>
@@ -43,55 +42,52 @@
         </tab>
     </tabs>
     <controlDescriptions>
-        <controlDescription forControl="{299d1ece-fa92-4d98-b589-4e64798b94f8}">
-            <customControl formFactor="0" name="MicrosoftDynamicsScheduling.SingleResourceOptimizationControl">
+        <controlDescription forControl="{4D9ACB36-D5B0-4DB5-B429-699F695C6FBE}">
+            <customControl formFactor="0" name="MicrosoftDynamicsScheduling.SingleResourceOptimizationSettingsControl">
                 <parameters>
                     <ResourceId type="SingleLine.Text">param_resourceid</ResourceId>
                     <StartDate type="SingleLine.Text">param_startdate</StartDate>
                     <EndDate type="SingleLine.Text">param_enddate</EndDate>
                     <BoardTimeZoneOffsetInMinutes type="SingleLine.Text">param_boardtimezoneoffsetinminutes</BoardTimeZoneOffsetInMinutes>
-                    <BingMapsKey type="SingleLine.Text">param_bingmapskey</BingMapsKey>
                     <RequirementViewId type="SingleLine.Text">param_requirementviewid</RequirementViewId>
                     <CurrentTabId type="SingleLine.Text">param_currenttabid</CurrentTabId>
                     <OptimizationRequestParameters type="SingleLine.Text">param_optimizationrequestparameters</OptimizationRequestParameters>
-                    <HasAppliedSuggestedSchedule type="TwoOptions">param_hasappliedsuggestedschedule</HasAppliedSuggestedSchedule>
+                    <ShouldStartOptimization type="TwoOptions">param_shouldstartoptimization</ShouldStartOptimization>
                     <TimeZoneDefinitionId type="SingleLine.Text">param_timezonedefinitionid</TimeZoneDefinitionId>
-                    <OptimizationRequestStatus type="SingleLine.Text">param_optimizationrequeststatus</OptimizationRequestStatus>
-                    <ApplyOptimizationRequestStatus type="SingleLine.Text">param_applyoptimizationrequeststatus</ApplyOptimizationRequestStatus>
+                    <ShouldLaunchSRO type="TwoOptions">param_shouldlaunchsro</ShouldLaunchSRO>
+                    <WasEntitySelected type="TwoOptions">param_wasentityselected</WasEntitySelected>
                     <IsWithinCopilot type="TwoOptions">param_iswithincopilot</IsWithinCopilot>
                 </parameters>
             </customControl>
-            <customControl formFactor="1" name="MicrosoftDynamicsScheduling.SingleResourceOptimizationControl">
+            <customControl formFactor="1" name="MicrosoftDynamicsScheduling.SingleResourceOptimizationSettingsControl">
                 <parameters>
                     <ResourceId type="SingleLine.Text">param_resourceid</ResourceId>
                     <StartDate type="SingleLine.Text">param_startdate</StartDate>
                     <EndDate type="SingleLine.Text">param_enddate</EndDate>
                     <BoardTimeZoneOffsetInMinutes type="SingleLine.Text">param_boardtimezoneoffsetinminutes</BoardTimeZoneOffsetInMinutes>
-                    <BingMapsKey type="SingleLine.Text">param_bingmapskey</BingMapsKey>
                     <RequirementViewId type="SingleLine.Text">param_requirementviewid</RequirementViewId>
                     <CurrentTabId type="SingleLine.Text">param_currenttabid</CurrentTabId>
                     <OptimizationRequestParameters type="SingleLine.Text">param_optimizationrequestparameters</OptimizationRequestParameters>
-                    <HasAppliedSuggestedSchedule type="TwoOptions">param_hasappliedsuggestedschedule</HasAppliedSuggestedSchedule>
+                    <ShouldStartOptimization type="TwoOptions">param_shouldstartoptimization</ShouldStartOptimization>
                     <TimeZoneDefinitionId type="SingleLine.Text">param_timezonedefinitionid</TimeZoneDefinitionId>
-                    <OptimizationRequestStatus type="SingleLine.Text">param_optimizationrequeststatus</OptimizationRequestStatus>
-                    <ApplyOptimizationRequestStatus type="SingleLine.Text">param_applyoptimizationrequeststatus</ApplyOptimizationRequestStatus>
+                    <ShouldLaunchSRO type="TwoOptions">param_shouldlaunchsro</ShouldLaunchSRO>
+                    <WasEntitySelected type="TwoOptions">param_wasentityselected</WasEntitySelected>
                     <IsWithinCopilot type="TwoOptions">param_iswithincopilot</IsWithinCopilot>
                 </parameters>
             </customControl>
-            <customControl formFactor="2" name="MicrosoftDynamicsScheduling.SingleResourceOptimizationControl">
+            <customControl formFactor="2" name="MicrosoftDynamicsScheduling.SingleResourceOptimizationSettingsControl">
                 <parameters>
                     <ResourceId type="SingleLine.Text">param_resourceid</ResourceId>
                     <StartDate type="SingleLine.Text">param_startdate</StartDate>
                     <EndDate type="SingleLine.Text">param_enddate</EndDate>
                     <BoardTimeZoneOffsetInMinutes type="SingleLine.Text">param_boardtimezoneoffsetinminutes</BoardTimeZoneOffsetInMinutes>
-                    <BingMapsKey type="SingleLine.Text">param_bingmapskey</BingMapsKey>
                     <RequirementViewId type="SingleLine.Text">param_requirementviewid</RequirementViewId>
                     <CurrentTabId type="SingleLine.Text">param_currenttabid</CurrentTabId>
                     <OptimizationRequestParameters type="SingleLine.Text">param_optimizationrequestparameters</OptimizationRequestParameters>
-                    <HasAppliedSuggestedSchedule type="TwoOptions">param_hasappliedsuggestedschedule</HasAppliedSuggestedSchedule>
+                    <ShouldStartOptimization type="TwoOptions">param_shouldstartoptimization</ShouldStartOptimization>
                     <TimeZoneDefinitionId type="SingleLine.Text">param_timezonedefinitionid</TimeZoneDefinitionId>
-                    <OptimizationRequestStatus type="SingleLine.Text">param_optimizationrequeststatus</OptimizationRequestStatus>
-                    <ApplyOptimizationRequestStatus type="SingleLine.Text">param_applyoptimizationrequeststatus</ApplyOptimizationRequestStatus>
+                    <ShouldLaunchSRO type="TwoOptions">param_shouldlaunchsro</ShouldLaunchSRO>
+                    <WasEntitySelected type="TwoOptions">param_wasentityselected</WasEntitySelected>
                     <IsWithinCopilot type="TwoOptions">param_iswithincopilot</IsWithinCopilot>
                 </parameters>
             </customControl>
