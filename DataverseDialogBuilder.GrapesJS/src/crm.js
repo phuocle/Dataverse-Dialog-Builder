@@ -2,7 +2,7 @@ import * as GUID from './guid'
 export function getXrm() {
     if (window.Xrm === undefined) {
         if (parent.Xrm === undefined) {
-            throw new Error(`Not found Xrm in the currnet context`);
+            throw new Error(`Not found Xrm in the current context`);
         }
         else {
             return parent.Xrm;

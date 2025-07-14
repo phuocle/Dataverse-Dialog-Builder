@@ -475,7 +475,7 @@ namespace DataverseDialogBuilder.CustomAction
             var output = new
             {
                 ok = true,
-                mesage = string.Empty,
+                message = string.Empty,
                 formxml = SystemFormApi.FormXml,
                 languagecode= GetLanguageCode(serviceAdmin) ?? 1033,
                 logicalname = SystemFormApi.UniqueName,
