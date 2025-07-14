@@ -20,7 +20,7 @@ declare namespace DevKit {
              */
             Focus(): void;
             /**
-             * Removes a function from the OnChange event hander for an attribute
+             * Removes a function from the OnChange event handler for an attribute
              * @param callback Specifies the function to be removed from the OnChange event
              * @link https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference/attributes/removeonchange
              */
@@ -183,7 +183,7 @@ declare namespace DevKit {
             RemoveOnProcessStatusChange(callback: () => void): void;
             /**
              * Adds a function as an event handler for the OnStageChange event so that it will be called when the business process flow stage changes
-             * @param callback TThe function to be executed when the business process flow stage changes. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See Execution context for more information
+             * @param callback The function to be executed when the business process flow stage changes. The function will be added to the bottom of the event handler pipeline. The execution context is automatically passed as the first parameter to the function. See Execution context for more information
              * @link https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-data-process/eventhandlers/addonstagechange
              */
             AddOnStageChange(callback: (executionContext: any) => void): void;
@@ -1448,7 +1448,7 @@ declare namespace DevKit {
         readonly IsCustomizable: boolean;
         /** Indicates whether document management is enabled */
         readonly IsDocumentManagementEnabled: boolean;
-        /** Indicates whether the documemt recommendations is enabled */
+        /** Indicates whether the document recommendations is enabled */
         readonly IsDocumentRecommendationsEnabled: boolean;
         /** Indicates whether duplicate detection is enabled */
         readonly IsDuplicateDetectionEnabled: boolean;
@@ -1712,7 +1712,7 @@ declare namespace DevKit {
          */
         SetSharedVariable(key: string, value: any): void;
         /**
-         * Returns a value indicating whether the save event has been canceled because the preventDefault method was used in this event hander or a previous event handler.
+         * Returns a value indicating whether the save event has been canceled because the preventDefault method was used in this event handler or a previous event handler.
          * @link https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference/save-event-arguments/isdefaultprevented
          */
         IsDefaultPrevented(): boolean;
@@ -1785,7 +1785,7 @@ declare namespace DevKit {
          * */
         preventDefault(): void;
         /**
-         * When the form OnLookupTagClick/OnSave event occurs. Returns a value indicating whether the save event has been canceled because the preventDefault method was used in this event hander or a previous event handler.
+         * When the form OnLookupTagClick/OnSave event occurs. Returns a value indicating whether the save event has been canceled because the preventDefault method was used in this event handler or a previous event handler.
          * @link https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference/save-event-arguments/isdefaultprevented
          * */
         isDefaultPrevented(): boolean;
@@ -2536,7 +2536,7 @@ declare namespace DevKit {
     interface DialogAlertOption {
         /** The confirm button label.If you do not specify the button label, OK is used as the button label */
         confirmButtonLabel?: string;
-        /** The message to be displyed in the alert dialog */
+        /** The message to be displayed in the alert dialog */
         text: string;
     }
     interface FileOption {
@@ -2929,7 +2929,7 @@ declare namespace OptionSet {
         /** collapsed */
         Collapsed
     }
-    /** The contry type of tab */
+    /** The control type of tab */
     enum TabContentType {
         /** cardSections: The default tab behavior */
         CardSections,

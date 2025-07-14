@@ -14,7 +14,7 @@ var AnotherAssign = (function () {
         debugger;
         if (result?.parameters?.pl_output_button_click) {
             if (result.parameters.pl_output_button_click === 'OnClickAssignToMe') {
-                //assgin record to me
+                //assign record to me
             }
             else if (result.parameters.pl_output_button_click === 'OnClickAssign') {
                 //assign record to user or team
