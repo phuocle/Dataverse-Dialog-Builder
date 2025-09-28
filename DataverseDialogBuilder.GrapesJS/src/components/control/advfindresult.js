@@ -141,7 +141,7 @@ ${rowsAdded}
             view: {
                 onRender({ el, model }) {
                     const attr = model.getAttributes();
-                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_fetchxml) || Helper.isEmpty(attr.para_entitylogicalname) || Helper.isEmpty(attr.para_layout_xml) || Helper.isEmpty(attr.para_selected_records) ||Helper.isEmpty(attr.rows) ? 'BackgroundRed' : '';
+                    const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.para_fetchxml) || Helper.isEmpty(attr.para_entitylogicalname) || Helper.isEmpty(attr.para_layout_xml) || Helper.isEmpty(attr.para_selected_records) || Helper.isEmpty(attr.rows) ? 'BackgroundRed' : '';
                     const visibleClass = attr.visible !== '1' ? 'Visibled' : '';
                     const rowsClass = Helper.isEmpty(attr.rows) || Number(attr.rows) <= 10 ? `Row${attr.rows}` : 'Row10';
                     model.onAll((comp) => {
