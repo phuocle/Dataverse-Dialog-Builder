@@ -257,7 +257,7 @@ export default (editor, options) => {
                         }
                         if (comp.view.el.classList.contains(`DDBControlControl`)) {
                             const dynamicText = attr.dynamic === `1` ? `DYNAMIC` : '';
-                            comp.view.el.innerHTML = `${attr.optionsettype?.toUpperCase() ?? '???'} ${dynamicText}</span>`;
+                            comp.view.el.innerHTML = `${attr.optionsettype?.toUpperCase() ?? '???'} ${dynamicText}`;
                         }
                     });
                     return this;

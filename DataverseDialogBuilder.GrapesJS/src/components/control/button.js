@@ -124,7 +124,7 @@ export default (editor, options) => {
                     const visibleClass = attr.visible !== '1' ? ' Visibled' : '';
                     const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.eventid) || Helper.isEmpty(attr.label) ? ' BackgroundRed' : '';
                     model.setClass(`DDBButton${errorClass}${visibleClass}`);
-                    el.innerHTML = `${disabledIcon} ${attr.label ?? ''} ${eventidIcon} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}</span>`;
+                    el.innerHTML = `${disabledIcon} ${attr.label ?? ''} ${eventidIcon} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                 },
             },
         },

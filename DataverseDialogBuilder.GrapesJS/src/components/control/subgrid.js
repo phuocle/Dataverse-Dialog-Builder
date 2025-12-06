@@ -169,9 +169,9 @@ export default (editor, options) => {
                             else {
                                 let viewnames = '';
                                 for (let i = 0; i < viewids.length; i++) {
-                                    viewnames += `${await Crm.GetViewName(attr.entitylogicalname, viewids[i])}`;
+                                    viewnames += `${await Crm.GetViewName(attr.entitylogicalname, viewids[i])}, `;
                                 }
-                                viewnames = viewnames.substring(0, viewnames.length - 1);
+                                viewnames = viewnames.substring(0, viewnames.length - 2);
                                 model.getTrait('button_viewids').attributes.text = viewnames;
                             }
                         }

@@ -17,8 +17,8 @@ export default (editor, opts = {}) => {
                 input.type = 'text';
                 input.placeholder = `${plh}`;
                 input.readOnly = true;
-                input.style.backgroundColor = 'gray;';
-                input.style.color = 'black;';
+                input.style.backgroundColor = 'gray';
+                input.style.color = 'black';
                 if (value !== undefined) {
                     model.set({ value }, { silent: true });
                     input.value = value;
