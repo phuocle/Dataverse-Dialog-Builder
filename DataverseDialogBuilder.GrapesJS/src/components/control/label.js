@@ -140,7 +140,7 @@ ${rowsAdded}
                     const errorClass = Helper.isEmpty(attr.logicalname?.toLowerCase()) || Helper.isEmpty(attr.rows) ? `BackgroundRed` : '';
                     const rowsText = Number(attr.rows ?? 0) > 1 ? `(${attr.rows} rows)` : '';
                     model.setClass(`DDBLabel ${titleClass} ${errorClass} ${visibleClass}`);
-                    el.innerHTML = `${Helper.UndefinedToEmpty(attr.label) || 'Label'} ${rowsText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}</span>`;
+                    el.innerHTML = `${Helper.UndefinedToEmpty(attr.label) || 'Label'} ${rowsText} ${Helper.ShowHideLogicalName(editor, attr.logicalname)}`;
                 },
             },
         },

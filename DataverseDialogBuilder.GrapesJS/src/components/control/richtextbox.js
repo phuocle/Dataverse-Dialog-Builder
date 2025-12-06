@@ -16,7 +16,7 @@ export default (editor, options) => {
             model: {
                 defaults: {
                     name: 'RichTextBox',
-                    classes: ['DDBRichTextBox'],
+                    classes: ['DDBControlRichTextBox'],
                     copyable: true,
                     badgable: false,
                     hoverable: false,
