@@ -1,7 +1,2 @@
 @echo off
-for /f "delims=" %%d in ('dir /a:d /o:-n /s ..\packages\DynamicsCrm.DevKit.Cli.* /b') do (
-    set DynamicsCrmDevKitCli=%%d
-    goto break
-)
-:break
-"%DynamicsCrmDevKitCli%\tools\DynamicsCrm.DevKit.Cli.exe" /sdklogin:"yes" /json:"..\DynamicsCrm.DevKit.Cli.json" /type:"webresources" /profile:"DEBUG"
+devkit webresource --sdk-login --json "..\DynamicsCrm.DevKit.Cli.json" --profile "DEBUG"

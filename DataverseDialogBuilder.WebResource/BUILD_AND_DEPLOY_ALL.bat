@@ -1,9 +1,4 @@
 @echo off
-for /f "delims=" %%d in ('dir /a:d /o:-n /s ..\packages\DynamicsCrm.DevKit.Cli.* /b') do (
-    set DynamicsCrmDevKitCli=%%d
-    goto break
-)
-:break
 cd ..
 cd DataverseDialogBuilder.GrapesJS
 call grapesjs-cli build
@@ -17,5 +12,5 @@ powershell -Command "(gc html\DataverseDialogBuilder.html) -replace '<!--- END C
 powershell -Command "(gc html\DataverseDialogBuilder.html) -replace '<!--- BEGIN UNCOMMENT', '<!-- -->' | Out-File -encoding UTF8 html\DataverseDialogBuilder.html"
 powershell -Command "(gc html\DataverseDialogBuilder.html) -replace 'END UNCOMMENT -->', '<!-- -->' | Out-File -encoding UTF8 html\DataverseDialogBuilder.html"
 powershell -Command "(gc html\DataverseDialogBuilder.html) -replace 'lib/DataverseDialogBuilder.css', '../../pl_/css/DataverseDialogBuilder.css' | Out-File -encoding UTF8 html\DataverseDialogBuilder.html"
-"%DynamicsCrmDevKitCli%\tools\DynamicsCrm.DevKit.Cli.exe" /sdklogin:"yes" /json:"..\DynamicsCrm.DevKit.Cli.json" /type:"webresources" /profile:"BUILD_AND_DEPLOY_ALL"
+devkit webresource --sdk-login --json "..\DynamicsCrm.DevKit.Cli.json" --profile "BUILD_AND_DEPLOY_ALL"
 exit
