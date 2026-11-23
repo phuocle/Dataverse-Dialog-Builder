@@ -22,7 +22,7 @@ namespace DataverseDialogBuilder.Console
             //DebugPostDataverseDialogBuilderSynchronous.IsGlobalOptionSet();
             //DebugPostDataverseDialogBuilderSynchronous.ParseLocalOptionSet();
             //DebugPostDataverseDialogBuilderSynchronous.GetLanguageCode();
-            //Others.DownloadAllDialogs();
+            Others.DownloadAllDialogs();
             //Others.DownloadAllMainForms();
         }
     }

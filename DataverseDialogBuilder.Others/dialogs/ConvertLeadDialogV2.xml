@@ -1,6 +1,6 @@
 <form>
     <formparameters>
-        <querystringparameter name="param_leadId" type="SafeString" />
+        <querystringparameter name="param_qualifyLeadParam" type="Object" />
         <querystringparameter name="param_qualifyStatus" type="Integer" />
         <querystringparameter name="param_parentAccountId" type="Object" />
         <querystringparameter name="param_parentContactId" type="Object" />
@@ -9,6 +9,8 @@
         <querystringparameter name="param_isLeadQualificationInProgress" type="Boolean" />
         <querystringparameter name="param_entityReferenceSetV2Request" type="Object" />
         <querystringparameter name="param_entityReferenceSetV2Response" type="Object" />
+        <querystringparameter name="param_showCopilotSummary" type="Boolean" />
+        <querystringparameter name="param_isCopilotSummaryEnabled" type="Boolean" />
     </formparameters>
     <tabs>
         <tab verticallayout="true" id="{305509B1-F16A-4B0E-B441-A42386D4442B}" name="{305509B1-F16A-4B0E-B441-A42386D4442B}" locklevel="0" expanded="true" showlabel="false">
@@ -61,7 +63,7 @@
         <controlDescription forControl="{91fc948e-1571-49f5-8b81-4a03ca20d95a}">
             <customControl name="MscrmControls.QualifyLeadV2.QualifyLeadV2Control" formFactor="0">
                 <parameters>
-                    <LeadId type="SingleLine.Text">param_leadId</LeadId>
+                    <QualifyLeadParam type="Object">param_qualifyLeadParam</QualifyLeadParam>
                     <QualifyStatus type="Whole.None">param_qualifyStatus</QualifyStatus>
                     <AccountId type="Object">param_parentAccountId</AccountId>
                     <ContactId type="Object">param_parentContactId</ContactId>
@@ -70,11 +72,13 @@
                     <IsQualificationInProgress type="TwoOptions">param_isLeadQualificationInProgress</IsQualificationInProgress>
                     <EntityCollectionRequestParam type="Object">param_entityReferenceSetV2Request</EntityCollectionRequestParam>
                     <EntityReferenceResponseParam type="Object">param_entityReferenceSetV2Response</EntityReferenceResponseParam>
+                    <ShowCopilotSummary type="TwoOptions">param_showCopilotSummary</ShowCopilotSummary>
+                    <IsCopilotSummaryEnabled type="TwoOptions">param_isCopilotSummaryEnabled</IsCopilotSummaryEnabled>
                 </parameters>
             </customControl>
             <customControl name="MscrmControls.QualifyLeadV2.QualifyLeadV2Control" formFactor="1">
                 <parameters>
-                    <LeadId type="SingleLine.Text">param_leadId</LeadId>
+                    <QualifyLeadParam type="Object">param_qualifyLeadParam</QualifyLeadParam>
                     <QualifyStatus type="Whole.None">param_qualifyStatus</QualifyStatus>
                     <AccountId type="Object">param_parentAccountId</AccountId>
                     <ContactId type="Object">param_parentContactId</ContactId>
@@ -83,11 +87,13 @@
                     <IsQualificationInProgress type="TwoOptions">param_isLeadQualificationInProgress</IsQualificationInProgress>
                     <EntityCollectionRequestParam type="Object">param_entityReferenceSetV2Request</EntityCollectionRequestParam>
                     <EntityReferenceResponseParam type="Object">param_entityReferenceSetV2Response</EntityReferenceResponseParam>
+                    <ShowCopilotSummary type="TwoOptions">param_showCopilotSummary</ShowCopilotSummary>
+                    <IsCopilotSummaryEnabled type="TwoOptions">param_isCopilotSummaryEnabled</IsCopilotSummaryEnabled>
                 </parameters>
             </customControl>
             <customControl name="MscrmControls.QualifyLeadV2.QualifyLeadV2Control" formFactor="2">
                 <parameters>
-                    <LeadId type="SingleLine.Text">param_leadId</LeadId>
+                    <QualifyLeadParam type="Object">param_qualifyLeadParam</QualifyLeadParam>
                     <QualifyStatus type="Whole.None">param_qualifyStatus</QualifyStatus>
                     <AccountId type="Object">param_parentAccountId</AccountId>
                     <ContactId type="Object">param_parentContactId</ContactId>
@@ -96,6 +102,8 @@
                     <IsQualificationInProgress type="TwoOptions">param_isLeadQualificationInProgress</IsQualificationInProgress>
                     <EntityCollectionRequestParam type="Object">param_entityReferenceSetV2Request</EntityCollectionRequestParam>
                     <EntityReferenceResponseParam type="Object">param_entityReferenceSetV2Response</EntityReferenceResponseParam>
+                    <ShowCopilotSummary type="TwoOptions">param_showCopilotSummary</ShowCopilotSummary>
+                    <IsCopilotSummaryEnabled type="TwoOptions">param_isCopilotSummaryEnabled</IsCopilotSummaryEnabled>
                 </parameters>
             </customControl>
         </controlDescription>

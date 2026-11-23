@@ -1,0 +1,118 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_result" type="SafeString" />
+        <querystringparameter name="dlg_channelinstanceid" type="SafeString" />
+        <querystringparameter name="dlg_channelinstancejson" type="SafeString" />
+    </formparameters>
+    <header id="{f5775f49-738d-4a4a-b60e-43b534b94f87}">
+        <rows>
+            <row>
+                <cell id="{7074fd4b-0c4c-4989-8ba2-18b746f9e9cf}">
+                    <labels>
+                        <label description="Select a channel" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{6638e249-cdba-4a19-bd8a-f193311ee252}" name="{adebe291-74c3-4dea-8114-b524ff98a58a}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{3d2af658-7238-43eb-b599-06c983b395f7}" name="{de6b31ba-9be9-484d-88c3-bdb5a12015e9}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{30d241b7-a1de-4da5-a1e5-59a1a451dd39}" showlabel="false" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="new_message_dialog_channel_instance_selector" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{b7637505-7954-4099-8c3d-0fa4dc5073a7}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{83c8455a-ed38-48cb-a479-43e2ad58608f}">
+        <rows>
+            <row>
+                <cell id="{74017be8-5cc7-400a-863b-aa50e7ccc2d3}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="createbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{941f1781-9b21-43e5-9333-9dea1b889c9c}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{b7637505-7954-4099-8c3d-0fa4dc5073a7}">
+            <customControl formFactor="0" name="CxpChannelDefinitions.MessageChannelSelectDialog.MessageChannelSelectDialog">
+                <parameters>
+                    <channelInstanceId type="SingleLine.Text">dlg_channelinstanceid</channelInstanceId>
+                    <channelInstanceJson type="SingleLine.Text">dlg_channelinstancejson</channelInstanceJson>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="CxpChannelDefinitions.MessageChannelSelectDialog.MessageChannelSelectDialog">
+                <parameters>
+                    <channelInstanceId type="SingleLine.Text">dlg_channelinstanceid</channelInstanceId>
+                    <channelInstanceJson type="SingleLine.Text">dlg_channelinstancejson</channelInstanceJson>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="CxpChannelDefinitions.MessageChannelSelectDialog.MessageChannelSelectDialog">
+                <parameters>
+                    <channelInstanceId type="SingleLine.Text">dlg_channelinstanceid</channelInstanceId>
+                    <channelInstanceJson type="SingleLine.Text">dlg_channelinstancejson</channelInstanceJson>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdynmkt_ChannelDefinitions.NewChannelMessageDialog.CrmWebResources" libraryUniqueId="{286eacf9-d547-4b09-a958-53fd840b699f}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="createbutton">
+            <Handlers>
+                <Handler functionName="NewChannelMessageDialogWebResources.NewChannelMessageDialogAdapter.onSelectClick" libraryName="msdynmkt_ChannelDefinitions.NewChannelMessageDialog.CrmWebResources" handlerUniqueId="{87dd9d77-51af-4725-a239-3c36f398a263}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="NewChannelMessageDialogWebResources.NewChannelMessageDialogAdapter.onCancelClick" libraryName="msdynmkt_ChannelDefinitions.NewChannelMessageDialog.CrmWebResources" handlerUniqueId="{7cc15616-38d6-4dbb-9dcc-5dc518e67440}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="NewChannelMessageDialogWebResources.NewChannelMessageDialogAdapter.onDialogLoad" libraryName="msdynmkt_ChannelDefinitions.NewChannelMessageDialog.CrmWebResources" handlerUniqueId="{bf82ca23-ced3-4dc1-8c21-435ab426f72e}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false">
+            <Handlers>
+                <Handler functionName="NewChannelMessageDialogWebResources.NewChannelMessageDialogAdapter.onChange" libraryName="msdynmkt_ChannelDefinitions.NewChannelMessageDialog.CrmWebResources" handlerUniqueId="{7c9bbc01-e165-45ca-9943-8d561401c9dd}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

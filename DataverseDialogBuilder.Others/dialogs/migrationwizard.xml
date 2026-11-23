@@ -1,0 +1,69 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_wizardtype" type="SafeString" />
+        <querystringparameter name="param_recordIds" type="SafeString" />
+    </formparameters>
+    <header id="{a735200a-d6a2-4154-9bb7-2fd3a08bb357}">
+        <rows>
+            <row>
+                <cell id="{0865bd00-2564-4045-a8c7-e49d0bdf6d29}">
+                    <labels>
+                        <label description="Import emails" languagecode="1033" />
+                    </labels>
+                    <control id="migrationwizarddialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab id="{dcc09cda-4c04-40d5-b66d-52f4cd2756c7}" name="{dcc09cda-4c04-40d5-b66d-52f4cd2756c7}" verticallayout="true" contenttype="singleComponent" locklevel="0">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{1585f0b9-4d2c-4258-b896-febd066d9666}" name="{1585f0b9-4d2c-4258-b896-febd066d9666}" celllabelposition="Top" showlabel="false" showbar="false" layout="varwidth" columns="1" locklevel="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell id="{7f1f43ff-dd04-4289-866d-e400cefe0105}" showlabel="false" colspan="1" visible="true">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_migrationwizardcontrol" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{c680adea-0d54-46f4-a038-b32e5eb4d4f5}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{c680adea-0d54-46f4-a038-b32e5eb4d4f5}">
+            <customControl name="EmailChannel.MigrationWizardControl" formFactor="2">
+                <parameters>
+                    <value type="SingleLine.Text">param_wizardtype</value>
+                </parameters>
+            </customControl>
+            <customControl name="EmailChannel.MigrationWizardControl" formFactor="1">
+                <parameters>
+                    <value type="SingleLine.Text">param_wizardtype</value>
+                </parameters>
+            </customControl>
+            <customControl name="EmailChannel.MigrationWizardControl" formFactor="0">
+                <parameters>
+                    <value type="SingleLine.Text">param_wizardtype</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

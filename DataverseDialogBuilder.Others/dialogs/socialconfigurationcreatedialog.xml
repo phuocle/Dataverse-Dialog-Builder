@@ -1,0 +1,156 @@
+<form>
+    <formparameters>
+        <querystringparameter name="msdyncrm_social" type="SafeString" />
+        <querystringparameter name="msdyncrm_createdFromPostForm" type="Boolean" />
+    </formparameters>
+    <header id="{7b26ea61-6a86-4908-b94d-5e8fd9d69e67}">
+        <rows>
+            <row>
+                <cell id="{7b26ea61-6a86-4908-b94d-5e8fd9d69e67}">
+                    <labels>
+                        <label description="Create new social media account" languagecode="1033" />
+                    </labels>
+                    <control id="header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{e2fea04e-7f12-44f4-b521-9c3492fc71ae}" name="{e2fea04e-7f12-44f4-b521-9c3492fc71ae}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="true" showbar="true" columns="1" id="{19e43e69-1281-4f7d-81c8-4f03646b1788}" name="{19e43e69-1281-4f7d-81c8-4f03646b1788}" labelwidth="130" celllabelalignment="Left" celllabelposition="Left">
+                            <labels>
+                                <label description="Step 1" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{6bd43266-40d5-4639-b7ee-ed45685a1a35}">
+                                        <labels>
+                                            <label description="Configuration name:" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_name_dialog" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a38017e1-56c1-4a50-9b9d-7f6678db61ec}">
+                                        <labels>
+                                            <label description="Select a channel:" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_channel_dialog" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetName>msdyncrm_socialchannellist</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{bd4126e4-5645-8385-a17a-20625e18753d}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Privacy policy" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_privacypolicy_dialog" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" disabled="true" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4157500b-0cb3-7bc6-20b7-e3bb452b1629}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Terms of service" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_termsofservice_dialog" classid="{71716B6C-711E-476c-8AB8-5D11542BFB47}" disabled="true" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                        <section name="{e2fea04e-7f12-44f4-b521-9c3492fc71ae}_section_2" showlabel="true" showbar="true" id="{04b09702-566c-4599-a121-78426c03bc11}" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Top">
+                            <labels>
+                                <label description="Step 2" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1e05ca33-8c56-8430-5ee9-54b729007c00}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="Read and accept the terms and conditions" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_consenttext_dialog" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="df0bcbc7-adf1-4ffc-bfa4-83b78ee5c6d2" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{a76f8ffa-a208-414f-8000-3a9e6d5171ec}">
+                                        <labels>
+                                            <label description="I have understood and agree to the terms and conditions" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_socialconsent_dialog" classid="{B0C6723A-8503-4FD7-BB28-C8A06AC933C2}" isunbound="true">
+                                            <parameters>
+                                                <DefaultValue>0</DefaultValue>
+                                                <OptionSetName>msdyncrm_socialconsentlist</OptionSetName>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{e64f8530-f041-43b1-b2a7-ada4b056edb9}">
+        <rows>
+            <row>
+                <cell id="{82af8513-7208-4dc3-8b4d-442842c42e2b}">
+                    <labels>
+                        <label description="Create" languagecode="1033" />
+                    </labels>
+                    <control id="createbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{2581af28-2ce9-44e0-a373-4d1714054786}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="createbutton">
+            <Handlers>
+                <Handler functionName="SocialPosting.WebResource.ConfigurationHandler.onSignInButtonClick" libraryName="msdyncrm_socialpostingwebresources" handlerUniqueId="{d34f45a4-b794-4c46-b4ac-6aed6bfde582}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="SocialPosting.WebResource.ConfigurationHandler.onDialogCancelButtonClick" libraryName="msdyncrm_socialpostingwebresources" handlerUniqueId="{e23700e9-a244-4299-b8a0-e2338e6be3bd}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="SocialPosting.WebResource.ConfigurationHandler.onConfigurationDialogLoad" libraryName="msdyncrm_socialpostingwebresources" handlerUniqueId="{1a3d9c09-5b67-4001-bbbc-7be48ac3df27}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="msdyncrm_channel_dialog">
+            <Handlers>
+                <Handler functionName="SocialPosting.WebResource.ConfigurationHandler.onChannelDialogChange" libraryName="msdyncrm_socialpostingwebresources" handlerUniqueId="{5ac05cf4-9fe3-4e48-b402-e202dbbae2b3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{df0bcbc7-adf1-4ffc-bfa4-83b78ee5c6d2}">
+            <customControl formFactor="0" name="MscrmControls.DialogTextBox.DialogTextBox" />
+            <customControl formFactor="1" name="MscrmControls.DialogTextBox.DialogTextBox" />
+            <customControl formFactor="2" name="MscrmControls.DialogTextBox.DialogTextBox" />
+        </controlDescription>
+    </controlDescriptions>
+</form>

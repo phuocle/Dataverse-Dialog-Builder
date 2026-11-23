@@ -1,0 +1,81 @@
+<form>
+    <header id="{c2bb10a6-1d48-4bc6-8900-8db1fe5a0cb5}">
+        <rows>
+            <row>
+                <cell id="{13d4b502-29e6-4770-baf7-2fe3b2031960}">
+                    <labels>
+                        <label description="Load consent" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{b4091a46-10b0-42b7-88b3-fcac049f8552}" name="{8b3a4140-6673-411b-83ef-b0e56ee217f9}" locklevel="0" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{5d2c876f-50db-430c-a5b3-702b0314259e}" name="{83bde662-7b4e-4e63-ad43-4666668568b2}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ee26de91-3367-47ab-93b5-c8e59dbf0f28}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="load_consent_v4_custom_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{37501402-31de-4876-b43e-17afcc2026c2}" isunbound="true" />
+                                    </cell>
+                                    <cell id="{8b843dd7-9eb3-4e98-953c-b7b7348bd731}" showlabel="true" locklevel="0" visible="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="button_action" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" disabled="false" uniqueid="{bfd3303e-6044-4112-b410-e14622bfd74c}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{37501402-31de-4876-b43e-17afcc2026c2}">
+            <customControl formFactor="2" name="Consent.LoadConsentV4.LoadConsentV4">
+                <parameters>
+                    <buttonAction type="SingleLine.Text">button_action</buttonAction>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="Consent.LoadConsentV4.LoadConsentV4">
+                <parameters>
+                    <buttonAction type="SingleLine.Text">button_action</buttonAction>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="Consent.LoadConsentV4.LoadConsentV4">
+                <parameters>
+                    <buttonAction type="SingleLine.Text">button_action</buttonAction>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="msdynmkt_Consent.CrmWebResources" libraryUniqueId="{b422c317-2cc9-49e4-982f-033eecb87f6b}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="Consent.LoadConsentV4OnDialogLoad" libraryName="msdynmkt_Consent.CrmWebResources" handlerUniqueId="{5ea46726-191a-4aac-b8b2-1b60e44a6ed4}" enabled="true" parameters="'button_action'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

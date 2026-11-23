@@ -1,0 +1,89 @@
+<form>
+    <header id="{097a9600-7a40-45c6-ac29-9dfa25191fd4}">
+        <rows>
+            <row>
+                <cell id="{2cd95516-6500-4022-99b0-653a1903f090}">
+                    <labels>
+                        <label description="Insights" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{2c22bed7-adf8-4981-9959-c075768dab9f}" name="{e9a5c234-ce71-4aba-b551-bcf4a19b697d}">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{b19d57b5-5cfb-480a-b39e-41f57b86dc6b}" name="{543119ea-7ef9-4617-97c6-fd2673486b1b}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{b7304bc6-d4ee-48c4-8703-e645d61160ba}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="insights_ctrl_on_dialog" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{55f55896-eaee-4c45-92a8-a8f7753f11ba}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <controlDescriptions>
+        <controlDescription forControl="{55f55896-eaee-4c45-92a8-a8f7753f11ba}">
+            <customControl formFactor="0" name="MscrmControls.InsightsControl.InsightsControl">
+                <parameters>
+                    <configuration type="SingleLine.Text">insights_config</configuration>
+                    <filter type="SingleLine.Text">insights_filter</filter>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.InsightsControl.InsightsControl">
+                <parameters>
+                    <configuration type="SingleLine.Text">insights_config</configuration>
+                    <filter type="SingleLine.Text">insights_filter</filter>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.InsightsControl.InsightsControl">
+                <parameters>
+                    <configuration type="SingleLine.Text">insights_config</configuration>
+                    <filter type="SingleLine.Text">insights_filter</filter>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="insights_config" type="SafeString" />
+        <querystringparameter name="insights_filter" type="SafeString" />
+        <querystringparameter name="filter_target_name" type="SafeString" />
+        <querystringparameter name="insights_entity_name" type="SafeString" />
+    </formparameters>
+    <formLibraries>
+        <Library name="msdyncrm_DynamicsMarketing.CrmWebResource" libraryUniqueId="{5b8c918d-8454-4402-b43d-628768bc899a}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.setInsightsDialogTitle" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{186f9d31-4d36-4c28-8d3e-191670a6b61d}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+</form>

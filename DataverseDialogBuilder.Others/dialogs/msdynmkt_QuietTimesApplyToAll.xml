@@ -1,0 +1,97 @@
+<form>
+    <formparameters>
+        <querystringparameter name="quiettimes_id" type="SafeString" />
+    </formparameters>
+    <header id="{38a7c05f-542b-4d38-a6ca-4754d3b93b85}">
+        <rows>
+            <row>
+                <cell id="{8efd2a16-446e-40b1-a352-d7965f487608}">
+                    <labels>
+                        <label description="Apply these quiet time settings to all journeys and messages?" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{4072cdbe-dbd4-40db-a782-4136844b742f}" name="{e89d4fed-7d65-457c-9309-42389430d10e}" locklevel="0" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{3260e62f-ffbd-4bde-bf7a-86ae7c4d4dce}" name="{89a66a24-f662-4d91-925b-6d7c0561a26f}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{078e3310-ba45-4f2c-abd0-a97ce6eb9aa3}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="quiet_times_dialog" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{2bfcbfca-d3b9-4d80-8753-89a972d44510}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{6b4da8ce-495e-4970-879c-d7bdf947dd31}">
+        <rows>
+            <row>
+                <cell id="{e23b3d7d-2865-46d8-895b-5d61e8bef4cd}">
+                    <labels>
+                        <label description="Apply to all" languagecode="1033" />
+                    </labels>
+                    <control id="applybutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{426ea88d-4415-44e2-a786-2a1c73b58b47}">
+                    <labels>
+                        <label description="Decide later" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_SendOptimization.QuietTimeSettingEntity.CrmWebResources" libraryUniqueId="{417efebe-cb48-4960-91c7-72561e9b33b9}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="applybutton">
+            <Handlers>
+                <Handler functionName="QuietTimeSettingEntityWebResources.DialogHandlers.onApply" libraryName="msdynmkt_SendOptimization.QuietTimeSettingEntity.CrmWebResources" handlerUniqueId="{6d90b9f7-0ad0-4883-ad75-fba29a66586c}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="QuietTimeSettingEntityWebResources.DialogHandlers.onCancel" libraryName="msdynmkt_SendOptimization.QuietTimeSettingEntity.CrmWebResources" handlerUniqueId="{ab3b1a1b-2d98-4861-8f0d-26dd3c239922}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{2bfcbfca-d3b9-4d80-8753-89a972d44510}">
+            <customControl formFactor="0" name="CxpSendOptimization.ApplyDialogControl.ApplyDialogControl">
+                <parameters />
+            </customControl>
+            <customControl formFactor="1" name="CxpSendOptimization.ApplyDialogControl.ApplyDialogControl">
+                <parameters />
+            </customControl>
+            <customControl formFactor="2" name="CxpSendOptimization.ApplyDialogControl.ApplyDialogControl">
+                <parameters />
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

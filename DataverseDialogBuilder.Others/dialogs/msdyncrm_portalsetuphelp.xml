@@ -1,0 +1,96 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_admin_mode" type="Boolean" />
+        <querystringparameter name="dlg_result" type="Boolean" />
+    </formparameters>
+    <header id="{bd9ea47b-c340-4278-842d-ec0cc6518fb7}">
+        <rows>
+            <row>
+                <cell id="{74403ca4-5d4f-4378-b9ef-36e24ff6b0d0}">
+                    <labels>
+                        <label description="Portal provisioning is missing" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{259ef446-056e-4838-a8c6-34cb8d6b3369}" name="{7d178818-9fdc-457d-89a6-aba0a6b5babd}" locklevel="0">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{ff28da5a-24c6-415c-a360-f0d3d8d4240f}" name="{4f4978ab-75c3-40fb-b37a-5168938c6f23}" showlabel="false" showbar="false" columns="1">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{68c2d3a8-39cc-4ca2-8ac2-36e15eb13127}" showlabel="false">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_portalsetuphelp_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{3c19f161-8292-4636-bdcb-36b729fe516d}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <MaxLength>1000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{d34374b4-c48d-4e1b-bceb-54e871276b46}">
+        <rows>
+            <row>
+                <cell id="{09fab3f2-dcc2-4213-885b-553642a6930d}">
+                    <labels>
+                        <label description="Set up portal" languagecode="1033" />
+                    </labels>
+                    <control id="button_action" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{3c19f161-8292-4636-bdcb-36b729fe516d}">
+            <customControl formFactor="2" name="MscrmControls.PortalSetupHelpControl.PortalSetupHelpControl">
+                <parameters>
+                    <value type="Multiple">msdyncrm_portalsetuphelp_control</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.PortalSetupHelpControl.PortalSetupHelpControl">
+                <parameters>
+                    <value type="Multiple">msdyncrm_portalsetuphelp_control</value>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.PortalSetupHelpControl.PortalSetupHelpControl">
+                <parameters>
+                    <value type="Multiple">msdyncrm_portalsetuphelp_control</value>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formLibraries>
+        <Library name="cc_MscrmControls.ParentFieldSetup.ParentFieldSetup/ParentFieldSetup.js" libraryUniqueId="{dacc0173-d019-4303-9242-0c90e126d592}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="MscrmControls.PortalSetupHelpControl.DialogAdapter.onDialogLoad" libraryName="cc_MscrmControls.PortalSetupHelpControl.PortalSetupHelpControl/PortalSetupHelpControl.js" handlerUniqueId="{e887da1c-7699-4a19-b265-4f70e1f25389}" enabled="true" parameters="'msdyncrm_portalsetuphelp_control', 'button_action', 'dlg_admin_mode', 'dlg_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

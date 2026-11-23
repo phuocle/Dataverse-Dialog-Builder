@@ -1,0 +1,115 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_lastButton_clicked" type="SafeString" />
+        <querystringparameter name="param_selectedOption" type="SafeString" />
+    </formparameters>
+    <header id="{ac1ea572-fe3c-4cd8-b1ae-4bb3262e8e91}">
+        <rows>
+            <row>
+                <cell id="{0bfc12f6-46bf-4aa8-ba38-e43d6027226b}">
+                    <labels>
+                        <label description="Update Copilot Recommendation" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_bulkupdatecopilotrecommendedtemplatesheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{07c476df-5c80-4d40-8b8b-d1168fde83f4}" name="{07c476df-5c80-4d40-8b8b-d1168fde83f4}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{ca7c242c-43a4-488b-9dec-638dcf39d6e8}" name="{ca7c242c-43a4-488b-9dec-638dcf39d6e8}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d146340c-e50f-46a7-9819-fdc70797f54e}" showlabel="false" labelid="{3009430a-ea86-4537-b049-b90094818def}" locklevel="0">
+                                        <labels>
+                                            <label description="Attribute" languagecode="1033" />
+                                        </labels>
+                                        <control id="bulkupdatetemplatesforcopilotrecommendation" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{abe79859-8d42-4773-8bb3-2e4af80cfa90}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{2a2d1130-4c36-478a-a5e0-9d6a7685ccaf}">
+        <rows>
+            <row>
+                <cell id="{59002b62-4faa-4c66-a947-7e3d0d367caf}">
+                    <labels>
+                        <label description="Submit" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+                <cell id="{89be74cb-9ded-4063-94c0-81d039128c00}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00AD73DA-BD4D-49C6-88A8-2F4F4CAD4A20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <controlDescriptions>
+        <controlDescription forControl="{abe79859-8d42-4773-8bb3-2e4af80cfa90}">
+            <customControl name="MscrmControls.FieldControls.BulkUpdateCopilotTemplateRecommendation" formFactor="0">
+                <parameters>
+                    <IncludeTemplatesForCopilotButtonClicked type="SingleLine.Text">param_lastButton_clicked</IncludeTemplatesForCopilotButtonClicked>
+                    <IncludeTemplatesForCopilotOptionSelection type="SingleLine.Text">param_selectedOption</IncludeTemplatesForCopilotOptionSelection>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.BulkUpdateCopilotTemplateRecommendation" formFactor="1">
+                <parameters>
+                    <IncludeTemplatesForCopilotButtonClicked type="SingleLine.Text">param_lastButton_clicked</IncludeTemplatesForCopilotButtonClicked>
+                    <IncludeTemplatesForCopilotOptionSelection type="SingleLine.Text">param_selectedOption</IncludeTemplatesForCopilotOptionSelection>
+                </parameters>
+            </customControl>
+            <customControl name="MscrmControls.FieldControls.BulkUpdateCopilotTemplateRecommendation" formFactor="2">
+                <parameters>
+                    <IncludeTemplatesForCopilotButtonClicked type="SingleLine.Text">param_lastButton_clicked</IncludeTemplatesForCopilotButtonClicked>
+                    <IncludeTemplatesForCopilotOptionSelection type="SingleLine.Text">param_selectedOption</IncludeTemplatesForCopilotOptionSelection>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.EmailTemplateLibrary.bulkUpdateCopilotRecommendedTemplateDialogSubmitClick" libraryName="EmailTemplateConfig/Template/msdynce_EmailTemplateLibrary.js" handlerUniqueId="{cc090656-5259-41fd-9d33-a674792d6834}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.EmailTemplateLibrary.bulkUpdateCopilotRecommendedTemplateDialogCancelClick" libraryName="EmailTemplateConfig/Template/msdynce_EmailTemplateLibrary.js" handlerUniqueId="{6e5480bf-4b91-42d9-be9a-747de43f43b4}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:CRM/ClientUtility.js" />
+                <internaljscriptfile src="$webresource:EmailTemplateConfig/Template/msdynce_EmailTemplateLibrary.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

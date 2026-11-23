@@ -1,0 +1,102 @@
+<form>
+    <formparameters>
+        <querystringparameter name="paramimport_name" type="SafeString" />
+        <querystringparameter name="paramimport_presentationdescription" type="SafeString" />
+        <querystringparameter name="paramimport_primaryentitytypecode" type="SafeString" />
+        <querystringparameter name="paramimport_datadescription" type="SafeString" />
+        <querystringparameter name="paramimport_entityname" type="SafeString" />
+        <querystringparameter name="paramimport_chartid" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" name="{5ae78c92-b4a5-4cf0-bdcc-681634546b3e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" id="{fd26828a-9489-470c-b1a7-304940c1a3ea}" name="{fd26828a-9489-470c-b1a7-304940c1a3ea}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{d091b8f6-88ac-4446-8bb3-efcad15cc04b}">
+                                        <labels>
+                                            <label description="The chart is stored in the list of imported charts" languagecode="1033" />
+                                        </labels>
+                                        <control id="label_headerdescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{4fe7c647-c2d8-4edd-a284-0e8e36aeaa9a}">
+                                        <labels>
+                                            <label description="Name" languagecode="1033" />
+                                        </labels>
+                                        <control id="name" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" isunbound="true" isrequired="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{5fb046f0-cab3-4f88-86c7-fe04ece4e6aa}" rowspan="3">
+                                        <labels>
+                                            <label description="Description" languagecode="1033" />
+                                        </labels>
+                                        <control id="paramimport_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{399ca37a-8ec4-4c18-87cd-272ed3d14000}">
+        <rows>
+            <row>
+                <cell id="{3047df86-85e0-44bd-a379-681131d2dc34}">
+                    <labels>
+                        <label description="Import chart" languagecode="1033" />
+                    </labels>
+                    <control id="save_as_new_view_header_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{58837ad8-8749-4823-9a6e-1c962f4cefc0}">
+        <rows>
+            <row>
+                <cell id="{a81727dc-8ecf-4154-99db-6adebb8563a2}">
+                    <labels>
+                        <label description="Import" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{4987cf40-6979-4d40-8b70-785bf7c3c4de}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.CreateImportRecord" libraryName="CRM/ClientUtility.js" handlerUniqueId="{f22b6fb8-d09b-4197-b33a-db5046c31837}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="ClientUtility.DialogUtil.OnDialogClose" libraryName="CRM/ClientUtility.js" handlerUniqueId="{9b57290b-e2ac-4ca5-bc1A-9ed2ead1bb69}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

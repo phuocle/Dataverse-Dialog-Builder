@@ -1,0 +1,118 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dialog_editValue" type="SafeString" />
+        <querystringparameter name="dialog_caretPosition" type="Integer" />
+        <querystringparameter name="dialog_confirmed" type="Boolean" />
+        <querystringparameter name="dialog_entityRecordFilterView" type="SafeString" />
+        <querystringparameter name="dialog_entityTypeFilter" type="SafeString" />
+        <querystringparameter name="dialog_exclusionEntityTypeFilter" type="SafeString" />
+    </formparameters>
+    <header id="{df7f54ad-5261-49f5-a010-bb3761cbd6c0}">
+        <rows>
+            <row>
+                <cell id="{4f8f6e8d-c28b-4544-89b4-8202e340fa91}">
+                    <labels>
+                        <label description="Content assist" languagecode="1033" />
+                    </labels>
+                    <control id="contentassistdialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{317a8a1f-f0fe-49ac-bb60-e09669415fd5}" name="{317a8a1f-f0fe-49ac-bb60-e09669415fd5}" locklevel="0">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section id="{317a8a1f-f0fe-49ac-bb60-e09669415fd5}" name="{317a8a1f-f0fe-49ac-bb60-e09669415fd5}" layout="varwidth" showlabel="false" showbar="false" columns="1" IsUserDefined="0" locklevel="0">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="auto">
+                                    <cell showlabel="false" id="{330c3cec-4c53-004a-e6d0-e7112dbe7a59}" colspan="1">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="dialog_editValue_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" isunbound="true" disabled="false" uniqueid="{b16190a0-d2e0-3dad-81ba-13c466bb0221}" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+            <tabfooter id="{07a2e21e-a36d-4919-a564-e1d556586a8c}">
+                <rows>
+                    <row>
+                        <cell id="{86ec9732-0b02-4611-bc94-8af8cb6e96d6}">
+                            <labels>
+                                <label description="Insert" languagecode="1033" />
+                            </labels>
+                            <control id="insertbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                        <cell id="{8a7e5fab-f413-453c-95c6-d6a9d7cabf1d}">
+                            <labels>
+                                <label description="Cancel" languagecode="1033" />
+                            </labels>
+                            <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                        </cell>
+                    </row>
+                </rows>
+            </tabfooter>
+        </tab>
+    </tabs>
+    <formLibraries>
+        <Library name="msdyncrm_DynamicsMarketing.CrmWebResource" libraryUniqueId="{5b8c918d-8454-4402-b43d-628768bc899a}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="insertbutton">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.AssistEditDialog.insertClicked" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{1c715245-3b2e-4d21-8791-e39a250cbe80}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.AssistEditDialog.cancelClicked" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{985ebe87-54a1-4079-b62d-96c33b564227}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{b16190a0-d2e0-3dad-81ba-13c466bb0221}">
+            <customControl formFactor="2" name="MscrmControls.AssistEditSelectControlV2.AssistEditSelectControlV2">
+                <parameters>
+                    <editValueAttributeName static="true" type="SingleLine.Text">dialog_editValue</editValueAttributeName>
+                    <caretPosition type="Whole.None">dialog_caretPosition</caretPosition>
+                    <entityRecordFilterView type="SingleLine.Text">dialog_entityRecordFilterView</entityRecordFilterView>
+                    <entityTypeFilter type="Multiple">dialog_entityTypeFilter</entityTypeFilter>
+                    <exclusionEntityTypeFilter type="Multiple">dialog_exclusionEntityTypeFilter</exclusionEntityTypeFilter>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.AssistEditSelectControlV2.AssistEditSelectControlV2">
+                <parameters>
+                    <editValueAttributeName static="true" type="SingleLine.Text">dialog_editValue</editValueAttributeName>
+                    <caretPosition type="Whole.None">dialog_caretPosition</caretPosition>
+                    <entityRecordFilterView type="SingleLine.Text">dialog_entityRecordFilterView</entityRecordFilterView>
+                    <entityTypeFilter type="Multiple">dialog_entityTypeFilter</entityTypeFilter>
+                    <exclusionEntityTypeFilter type="Multiple">dialog_exclusionEntityTypeFilter</exclusionEntityTypeFilter>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.AssistEditSelectControlV2.AssistEditSelectControlV2">
+                <parameters>
+                    <editValueAttributeName static="true" type="SingleLine.Text">dialog_editValue</editValueAttributeName>
+                    <caretPosition type="Whole.None">dialog_caretPosition</caretPosition>
+                    <entityRecordFilterView type="SingleLine.Text">dialog_entityRecordFilterView</entityRecordFilterView>
+                    <entityTypeFilter type="Multiple">dialog_entityTypeFilter</entityTypeFilter>
+                    <exclusionEntityTypeFilter type="Multiple">dialog_exclusionEntityTypeFilter</exclusionEntityTypeFilter>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

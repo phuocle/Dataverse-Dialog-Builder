@@ -1,0 +1,75 @@
+<form>
+    <formparameters>
+        <querystringparameter name="param_fragmentid" type="SafeString" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{b60e4f6d-f818-4ee1-9496-d6f039e01a00}" name="{088fd708-a519-4dca-afbf-98e5fefb4565}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" columns="1" id="{e412c3df-b7f1-440e-b360-6b2720d714d4}" name="{ec019df5-1dcf-4edd-94f1-edfae2c2baa8}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{f3e224c4-7599-4255-aafd-e508d9cb2f24}" showlabel="false">
+                                        <labels>
+                                            <label description="Email templates" languagecode="1033" />
+                                        </labels>
+                                        <control id="RelatedEmailTemplatesGridControl" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <ViewId>{af3f0dfb-a83b-4651-b238-53eed6565b40}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <TargetEntityType>msdynmkt_emailtemplate</TargetEntityType>
+                                                <EnableQuickFind>true</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId>{E365462F-1DB9-46A8-928D-BEAB1A7A2375}</VisualizationId>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                                <RecordsPerPage>5</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{0a292f17-43f1-40a8-9555-2d5a7581975b}">
+        <rows>
+            <row>
+                <cell id="{de83f275-3b38-450b-a4b1-f5b8489886ef}">
+                    <labels>
+                        <label description="Templates using this content block" languagecode="1033" />
+                    </labels>
+                    <control id="email_tempalte_related_content_blocks_dialog_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <formLibraries>
+        <Library name="msdynmkt_Fragments.Fragments.CrmWebResource" libraryUniqueId="{d579f59b-1172-401f-9499-ae8e2239c1c9}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="FragmentsWebResources.FragmentLinkDialog.initRelatedEmailTemplateGridFilter" libraryName="msdynmkt_Fragments.Fragments.CrmWebResource" handlerUniqueId="{58066b39-7099-4896-ade8-afbdd72cc488}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

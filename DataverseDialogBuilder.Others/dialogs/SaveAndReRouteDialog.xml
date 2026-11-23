@@ -1,0 +1,123 @@
+<form>
+    <tabs>
+        <tab verticallayout="true" id="{66b50c0b-904d-4451-abef-de8450dc66e0}" name="SaveAndReRouteTab" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{327681e1-11d3-4e5c-806d-7f9fb795330d}" name="{327681e1-11d3-4e5c-806d-7f9fb795330d}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{4a15fd88-d157-449a-86be-6b70146b3462}">
+                                        <labels>
+                                            <label description="If the new intent of the case is known, select it from the dropdown below. Otherwise click on Save &amp; Route and the intent will be determined again." languagecode="1033" />
+                                        </labels>
+                                        <control id="label_DialogDescription" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{1e4c7adc-50b1-440e-bbd3-ae9f8e909be6}">
+                                        <labels>
+                                            <label description="Intent (optional)" languagecode="1033" />
+                                        </labels>
+                                        <events>
+                                            <event name="setadditionalparams" application="true" active="true">
+                                                <InternalHandlers>
+                                                    <Handler functionName="CrmService.IncidentRibbon.CommandBarActions.SetCustomFiltersForIntentView" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="0c2b9ffa-1be1-4311-9a1a-56335476d875" enabled="true" passExecutionContext="true"></Handler>
+                                                </InternalHandlers>
+                                            </event>
+                                        </events>
+                                        <control id="intentslookup_id" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" isunbound="true">
+                                            <parameters>
+                                                <TargetEntities>
+                                                    <TargetEntity>
+                                                        <DefaultViewId>{4c517779-247d-48a1-8063-3682b49fbc72}</DefaultViewId>
+                                                        <EntityLogicalName>msdyn_intent</EntityLogicalName>
+                                                    </TargetEntity>
+                                                </TargetEntities>
+                                                <AvailableViewIds>{4c517779-247d-48a1-8063-3682b49fbc72}</AvailableViewIds>
+                                                <DefaultViewId>{4c517779-247d-48a1-8063-3682b49fbc72}</DefaultViewId>
+                                                <IsInlineNewEnabled>false</IsInlineNewEnabled>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{7b455eac-d835-4e93-9ee4-ced7c32dab94}">
+        <rows>
+            <row>
+                <cell id="{c698cec2-86b7-4d92-a15b-0d53d3ecc8d0}">
+                    <labels>
+                        <label description="Save &amp; Route case" languagecode="1033" />
+                    </labels>
+                    <control id="rerouteheader_id" classid="{39354e4a-5015-4d74-8031-ea9eb73a1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{36118f03-46a9-4270-8171-0c76da824238}">
+        <rows>
+            <row>
+                <cell id="{cb613534-2880-4dbe-9aa7-19698756784a}">
+                    <labels>
+                        <label description="Save &amp; Route" languagecode="1033" />
+                    </labels>
+                    <control id="ok_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{71813196-6cf4-4fc9-9544-44eacd85c676}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onload" application="true" active="true">
+            <InternalHandlers>
+                <Handler functionName="CrmService.IncidentRibbon.CommandBarActions.ReRouteDialogOnLoad" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{199557f3-0f8a-4e2e-b53f-abbba35cd3ca}" enabled="true" parameters="" passExecutionContext="true" />
+            </InternalHandlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="ok_id">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.CommandBarActions.SaveAndRouteOnClick" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{134935B3-7DCE-4B86-9BF4-4730D3536F11}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="CrmService.IncidentRibbon.CommandBarActions.CloseDialog" libraryName="Service/Incident/Ribbon/Incident_ribbon_library.js" handlerUniqueId="{2a13c5b2-8dcf-4ce9-9fcd-f21cea092585}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <formparameters>
+        <querystringparameter name="last_button_clicked" type="SafeString" />
+        <querystringparameter name="entity_id" type="SafeString" />
+        <querystringparameter name="has_LOB_Changed" type="Boolean" />
+        <querystringparameter name="redetermined_LOB" type="SafeString" />
+    </formparameters>
+    <clientresources>
+        <internalresources>
+            <clientincludes>
+                <internaljscriptfile src="$webresource:Service/Incident/Ribbon/Incident_ribbon_library.js" />
+            </clientincludes>
+        </internalresources>
+    </clientresources>
+</form>

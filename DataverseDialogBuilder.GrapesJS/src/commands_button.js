@@ -44,7 +44,7 @@ export default (editor, opts = {}) => {
                         component.getTrait(`button_lib`).el.innerHTML = result[0]?.name ?? '';
                     }
                 }
-                catch{
+                catch {
                     component.getTrait(`lib`).setValue("pl_/js/dialog.js");
                     component.getTrait(`button_lib`).el.innerHTML = 'pl_/js/dialog.js';
                 }

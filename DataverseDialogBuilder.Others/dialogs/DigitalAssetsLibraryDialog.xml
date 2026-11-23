@@ -1,0 +1,130 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dialog_config" type="SafeString" />
+        <querystringparameter name="dialog_result" type="Boolean" />
+        <querystringparameter name="selected_item" type="SafeString" />
+        <querystringparameter name="selected_items" type="SafeString" />
+    </formparameters>
+    <header id="{47971550-8D02-409B-B770-302730BE84B1}">
+        <rows>
+            <row>
+                <cell id="{202768E6-1334-4225-B802-E18907E82844}">
+                    <labels>
+                        <label description="Select a file" languagecode="1033" />
+                    </labels>
+                    <control id="lbl_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{E98DD482-3B58-4E7C-BEC3-C7A2EEA1DD18}" name="{036DC6C0-CACF-41F7-9531-6ECE5485D2DC}" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{3E6CC76D-A63B-4361-86F1-97A870A54076}" name="{D383E97A-1813-4191-B895-39ED2BC34EB5}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{F1386360-718A-4ED8-BB70-3DFD95D83F17}">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="new_name" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{350726EE-1358-4771-911F-38B4F6FC6F06}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>2000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{A2AE0418-629B-41E2-88BC-C0FB7B327FC0}">
+        <rows>
+            <row>
+                <cell id="{4947B458-4AA9-4392-914F-C0F11A0BEC88}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="select_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" disabled="true" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{0BFC2D2D-DD3D-47AB-A539-7FCA402CE332}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdyncrm_DigitalAssets.WebResource" libraryUniqueId="{6215b24e-992e-4856-8a3e-90f7fdbab3ca}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="select_id">
+            <Handlers>
+                <Handler functionName="DigitalAssets.Handlers.AssetsDialog.onSelectClick" libraryName="msdyncrm_DigitalAssets.WebResource" handlerUniqueId="{ffb4c0f2-f72d-4237-a325-f31f6c164ded}" enabled="true" parameters="'dialog_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="DigitalAssets.Handlers.AssetsDialog.onCancelClick" libraryName="msdyncrm_DigitalAssets.WebResource" handlerUniqueId="{2b8e4658-cd60-4c38-af48-439211be2eb5}" enabled="true" parameters="'dialog_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="dialog_result">
+            <Handlers>
+                <Handler functionName="DigitalAssets.Handlers.AssetsDialog.onResultChanged" libraryName="msdyncrm_DigitalAssets.WebResource" handlerUniqueId="{5c6dfd79-9d92-4037-957e-a0bf3f00ab69}" enabled="true" parameters="'dialog_result'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false" attribute="selected_item">
+            <Handlers>
+                <Handler functionName="DigitalAssets.Handlers.AssetsDialog.onSelectedItemChanged" libraryName="msdyncrm_DigitalAssets.WebResource" handlerUniqueId="{660e22b2-d9b7-4d8f-87f0-5baff43ecc8d}" enabled="true" parameters="'selected_item','select_id'" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{350726EE-1358-4771-911F-38B4F6FC6F06}">
+            <customControl formFactor="0" name="MscrmControls.AssetsHostControl.AssetsHostControl">
+                <parameters>
+                    <config type="SingleLine.Text">dialog_config</config>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_items</outputItems>
+                    <outputItem type="SingleLine.Text">selected_item</outputItem>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.AssetsHostControl.AssetsHostControl">
+                <parameters>
+                    <config type="SingleLine.Text">dialog_config</config>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_items</outputItems>
+                    <outputItem type="SingleLine.Text">selected_item</outputItem>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.AssetsHostControl.AssetsHostControl">
+                <parameters>
+                    <config type="SingleLine.Text">dialog_config</config>
+                    <dialogResult type="TwoOptions">dialog_result</dialogResult>
+                    <outputItems type="SingleLine.Text">selected_items</outputItems>
+                    <outputItem type="SingleLine.Text">selected_item</outputItem>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

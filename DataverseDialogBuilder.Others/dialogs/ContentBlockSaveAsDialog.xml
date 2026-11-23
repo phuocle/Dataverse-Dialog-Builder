@@ -1,0 +1,144 @@
+<form>
+    <header id="{1E740872-A1F7-499C-910D-63EC7286D867}">
+        <rows>
+            <row>
+                <cell id="{1fb32bd3-d34d-4de0-a24b-2eaf522f37b4}">
+                    <labels>
+                        <label description="Save as content block" languagecode="1033" />
+                    </labels>
+                    <control id="cbsa_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{80d6f2da-3db7-4238-b102-0c4f7d9bf2b2}" name="select_section" contenttype="singleComponent">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" id="{62abc1f4-6078-4de9-9278-71a7e8c8abf4}" name="{682e34e3-a897-4b2a-8bb2-eb0988e4068e}" celllabelposition="Top">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{ba656231-73f7-43b8-98f7-834339bed47a}" showlabel="false" locklevel="0" visible="true">
+                                        <labels>
+                                            <label description="Id" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_dialogcontrol" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" uniqueid="{31ba0cf3-0ff1-42e6-8802-305c3fa4dcff}" disabled="false" isunbound="true" />
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{44ef962b-1333-42cf-b28a-d4e2a179dd1c}">
+        <rows>
+            <row>
+                <cell id="{28668d29-2f80-4c9b-9e1e-f8f8bf325757}">
+                    <labels>
+                        <label description="Save" languagecode="1033" />
+                    </labels>
+                    <control id="save_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" disabled="false" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{def6e689-0d4b-4926-b04a-6e7b36ad3a68}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_id" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdyncrm_ContentBlocks.WebResource" libraryUniqueId="{9bf2bdf2-bfd1-489e-a8a9-567db54b819a}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="true">
+            <Handlers>
+                <Handler functionName="MSDynCrmContentBlock.SaveAsDialog.onLoad" libraryName="msdyncrm_ContentBlocks.WebResource" handlerUniqueId="{98bb58fd-04c0-40d3-a6f0-3ab7613fb099}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="save_id">
+            <Handlers>
+                <Handler functionName="MSDynCrmContentBlock.SaveAsDialog.onSelectClick" libraryName="msdyncrm_ContentBlocks.WebResource" handlerUniqueId="{95593967-9d8d-4154-b06a-3ac769d3f597}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="true" attribute="cancel_id">
+            <Handlers>
+                <Handler functionName="MSDynCrmContentBlock.SaveAsDialog.onCancelClick" libraryName="msdyncrm_ContentBlocks.WebResource" handlerUniqueId="{ffb4c0f2-f72d-4237-a325-f31f6c164ded}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{31ba0cf3-0ff1-42e6-8802-305c3fa4dcff}">
+            <customControl formFactor="0" name="MscrmControls.ContentBlock.ContentBlockSaveAsHost">
+                <parameters>
+                    <local_config type="SingleLine.Text">local_config</local_config>
+                    <tags type="SingleLine.Text">tags_param</tags>
+                    <title type="SingleLine.Text">title_param</title>
+                    <contentblockid type="SingleLine.Text">contentblockid_param</contentblockid>
+                    <designerHtml type="SingleLine.Text">previewhtml_snippet</designerHtml>
+                    <thumbnailImage type="SingleLine.Text">dialog_thumbnail</thumbnailImage>
+                    <statuscode type="OptionSet">statuscode_param</statuscode>
+                    <isProtected type="TwoOptions">isprotected_param</isProtected>
+                    <customFormAttributes type="SingleLine.Text">customFormAttributes_param</customFormAttributes>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.ContentBlock.ContentBlockSaveAsHost">
+                <parameters>
+                    <local_config type="SingleLine.Text">local_config</local_config>
+                    <tags type="SingleLine.Text">tags_param</tags>
+                    <title type="SingleLine.Text">title_param</title>
+                    <contentblockid type="SingleLine.Text">contentblockid_param</contentblockid>
+                    <designerHtml type="SingleLine.Text">previewhtml_snippet</designerHtml>
+                    <thumbnailImage type="SingleLine.Text">dialog_thumbnail</thumbnailImage>
+                    <statuscode type="OptionSet">statuscode_param</statuscode>
+                    <isProtected type="TwoOptions">isprotected_param</isProtected>
+                    <customFormAttributes type="SingleLine.Text">customFormAttributes_param</customFormAttributes>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="MscrmControls.ContentBlock.ContentBlockSaveAsHost">
+                <parameters>
+                    <local_config type="SingleLine.Text">local_config</local_config>
+                    <tags type="SingleLine.Text">tags_param</tags>
+                    <title type="SingleLine.Text">title_param</title>
+                    <contentblockid type="SingleLine.Text">contentblockid_param</contentblockid>
+                    <designerHtml type="SingleLine.Text">previewhtml_snippet</designerHtml>
+                    <thumbnailImage type="SingleLine.Text">dialog_thumbnail</thumbnailImage>
+                    <statuscode type="OptionSet">statuscode_param</statuscode>
+                    <isProtected type="TwoOptions">isprotected_param</isProtected>
+                    <customFormAttributes type="SingleLine.Text">customFormAttributes_param</customFormAttributes>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+    <formparameters>
+        <querystringparameter name="designerhtml_snippet" type="SafeString" />
+        <querystringparameter name="finalizedhtml_snippet" type="SafeString" />
+        <querystringparameter name="previewhtml_snippet" type="SafeString" />
+        <querystringparameter name="preview_dialog_result" type="SafeString" />
+        <querystringparameter name="preview_selected_item" type="SafeString" />
+        <querystringparameter name="tags_param" type="SafeString" />
+        <querystringparameter name="title_param" type="SafeString" />
+        <querystringparameter name="statuscode_param" type="Integer" />
+        <querystringparameter name="isprotected_param" type="Boolean" />
+        <querystringparameter name="contentblockid_param" type="SafeString" />
+        <querystringparameter name="local_config" type="SafeString" />
+        <querystringparameter name="dialog_thumbnail" type="SafeString" />
+        <querystringparameter name="customFormAttributes_param" type="SafeString" />
+    </formparameters>
+</form>

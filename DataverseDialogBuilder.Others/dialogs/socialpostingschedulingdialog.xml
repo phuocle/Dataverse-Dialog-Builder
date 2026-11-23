@@ -1,0 +1,105 @@
+<form>
+    <formparameters>
+        <querystringparameter name="msdyncrm_startdate" type="DateTime" />
+        <querystringparameter name="msdyncrm_socialchannel" type="Integer" />
+        <querystringparameter name="msdyncrm_postinguserid" type="SafeString" />
+    </formparameters>
+    <header id="{d531ab75-44a5-4d9d-8c1e-350cdf26a999}">
+        <rows>
+            <row>
+                <cell id="{d531ab75-44a5-4d9d-8c1e-350cdf26a999}">
+                    <labels>
+                        <label description="Select time to publish your post" languagecode="1033" />
+                    </labels>
+                    <control id="schedulerheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{8b887751-4c35-40cd-bfe0-69d3c68601ea}" name="{8b887751-4c35-40cd-bfe0-69d3c68601ea}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{8b887751-4c35-40cd-bfe0-69d3c68601ea}" name="{8b887751-4c35-40cd-bfe0-69d3c68601ea}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{1e3d8ff6-00c8-4eb8-afce-7cd8cd7cdcca}">
+                                        <labels>
+                                            <label description="Enter date and time:" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_startdate_dialog" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" disabled="false" isunbound="true">
+                                            <parameters>
+                                                <Format>DateAndTime</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{ad39cbd6-5e4b-41fc-a72c-cc1ceb45a9ac}">
+        <rows>
+            <row>
+                <cell id="{552eb9c6-8403-428f-9006-47a18b26098b}">
+                    <labels>
+                        <label description="Schedule" languagecode="1033" />
+                    </labels>
+                    <control id="donebutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{a69f868d-cb5b-41b3-aee8-bbff20eb943e}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{e444af21-5182-4a9b-9953-03a194e40011}" visible="false">
+                    <labels>
+                        <label description="Show calendar" languagecode="1033" />
+                    </labels>
+                    <control id="showcalendarbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="donebutton">
+            <Handlers>
+                <Handler functionName="SocialPosting.WebResource.SchedulingDialogController.onSchedulingDone" libraryName="msdyncrm_socialpostingwebresources" handlerUniqueId="{bb5d4734-a7c2-4937-9cf3-8ddf4cc94a00}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="SocialPosting.WebResource.SchedulingDialogController.onSchedulingCancel" libraryName="msdyncrm_socialpostingwebresources" handlerUniqueId="{3ab78489-c0e3-49a4-a6b5-9f2844c7c5a3}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="showcalendarbutton">
+            <Handlers>
+                <Handler functionName="SocialPosting.WebResource.SchedulingDialogController.onShowCalendar" libraryName="msdyncrm_socialpostingwebresources" handlerUniqueId="{f64cb0f0-012b-42c2-a769-5ab0e1a318c6}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="SocialPosting.WebResource.SchedulingDialogController.onDialogLoad" libraryName="msdyncrm_socialpostingwebresources" handlerUniqueId="{e85812d9-4341-4e7d-ba95-dda61b47fc2a}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+</form>

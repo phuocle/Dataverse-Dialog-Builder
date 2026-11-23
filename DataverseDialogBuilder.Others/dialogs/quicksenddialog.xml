@@ -1,0 +1,93 @@
+<form>
+    <formparameters>
+        <querystringparameter name="msdyncrm_subject" type="SafeString" />
+        <querystringparameter name="msdyncrm_fromuser" type="SafeString" />
+        <querystringparameter name="msdyncrm_quicksendid" type="SafeString" />
+        <querystringparameter name="msdyncrm_emailid" type="SafeString" />
+        <querystringparameter name="msdyncrm_emailname" type="SafeString" />
+        <querystringparameter name="msdyncrm_fromemail" type="SafeString" />
+        <querystringparameter name="msdyncrm_receipients_output" type="SafeString" />
+        <querystringparameter name="msdyncrm_statuscode" type="Integer" />
+        <querystringparameter name="msdyncrm_emailabtestenabled" type="Boolean" />
+        <querystringparameter name="dialog_msdyncrm_subject" type="SafeString" />
+        <querystringparameter name="dialog_msdyncrm_fromuser" type="SafeString" />
+    </formparameters>
+    <header id="{13d6fc09-7062-4959-9595-f5f2769d6769}">
+        <rows>
+            <row>
+                <cell id="{13d6fc09-7062-4959-9595-f5f2769d5769}">
+                    <labels>
+                        <label description="Send marketing email" languagecode="1033" />
+                    </labels>
+                    <control id="header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{b38b2f54-457f-4758-8721-acc534d4b74e}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{8b887751-4c35-40cd-bfe0-69d3c68601ea}" name="quickSendGrid" celllabelposition="Top">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row height="100%">
+                                    <cell id="{21d328ca-0880-43ec-a9c5-e551457ed5ce}" showlabel="false" locklevel="0" colspan="2">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdyncrm_receipients_dialog" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{ef31bb6f-f067-4130-8445-3cf84d3e661a}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <MaxLength>256</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="QuickSend.WebResource.QuickSendHandler.onLoadQuickSendDialog" libraryName="msdyncrm_quicksendwebresources" handlerUniqueId="{6d180f7a-be1a-4e7d-b022-97b184cba1e5}" enabled="true" parameters="" passExecutionContext="false" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{ef31bb6f-f067-4130-8445-3cf84d3e661a}">
+            <customControl formFactor="2" name="MscrmControls.QuickSendDialogGridControl.QuickSendDialogGridControl">
+                <parameters>
+                    <json type="SingleLine.Text">msdyncrm_receipients_output</json>
+                    <abTestEnabled type="TwoOptions">msdyncrm_emailabtestenabled</abTestEnabled>
+                </parameters>
+            </customControl>
+            <customControl formFactor="0" name="MscrmControls.QuickSendDialogGridControl.QuickSendDialogGridControl">
+                <parameters>
+                    <json type="SingleLine.Text">msdyncrm_receipients_output</json>
+                    <abTestEnabled type="TwoOptions">msdyncrm_emailabtestenabled</abTestEnabled>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="MscrmControls.QuickSendDialogGridControl.QuickSendDialogGridControl">
+                <parameters>
+                    <json type="SingleLine.Text">msdyncrm_receipients_output</json>
+                    <abTestEnabled type="TwoOptions">msdyncrm_emailabtestenabled</abTestEnabled>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

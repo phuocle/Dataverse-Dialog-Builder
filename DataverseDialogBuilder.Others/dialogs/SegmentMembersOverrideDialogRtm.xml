@@ -1,0 +1,133 @@
+<form>
+    <formparameters>
+        <querystringparameter name="Entity_Type" type="SafeString" />
+        <querystringparameter name="Selected_Ids" type="SafeString" />
+        <querystringparameter name="Is_Exclusion" type="Boolean" />
+    </formparameters>
+    <tabs>
+        <tab verticallayout="true" id="{34c6bf93-db17-4345-9b54-06236d08a723}" name="{6e3c6da8-78e5-4785-888b-03ae103e3888}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showlabel="false" showbar="false" columns="1" id="{08ca46b4-38b2-4adf-9204-86883a006320}" name="{0217c1b5-c64f-40d4-b6a2-2bdf7d7a51e0}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell rowspan="1" id="{6a14cd4f-69de-43db-ac27-90614d88ea57}" colspan="1">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="msdynmkt-contact-to-segment-banner-control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{529739a8-859e-4a84-b103-0203dfc118c3}" isunbound="true" />
+                                    </cell>
+                                </row>
+                                <row>
+                                    <cell id="{96b61de2-d539-4139-b18e-013ce1f8a873}" showlabel="false">
+                                        <labels>
+                                            <label description="Segments" languagecode="1033" />
+                                        </labels>
+                                        <control id="SegmentGridControl" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" isunbound="true" disabled="false">
+                                            <parameters>
+                                                <ViewId>{a332c2db-8735-4e9a-96c5-e252a5430e6b}</ViewId>
+                                                <IsUserView>false</IsUserView>
+                                                <TargetEntityType>msdyncrm_segment</TargetEntityType>
+                                                <EnableQuickFind>true</EnableQuickFind>
+                                                <EnableViewPicker>false</EnableViewPicker>
+                                                <EnableJumpBar>false</EnableJumpBar>
+                                                <ChartGridMode>Grid</ChartGridMode>
+                                                <VisualizationId>{E365462F-1DB9-46A8-928D-BEAB1A7A2375}</VisualizationId>
+                                                <IsUserChart>false</IsUserChart>
+                                                <EnableChartPicker>false</EnableChartPicker>
+                                                <EnableContextualActions>false</EnableContextualActions>
+                                                <RecordsPerPage>7</RecordsPerPage>
+                                                <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <header id="{b451f563-6134-4324-a0e6-feda36f221b1}">
+        <rows>
+            <row>
+                <cell id="{18c6d32d-9e75-40cc-b3d8-95885fecfa0b}">
+                    <labels>
+                        <label description="" languagecode="1033" />
+                    </labels>
+                    <control id="add_to_segment_dialog_header" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <footer id="{7a14bd2a-dfcb-46b5-afad-0a0bd21b9d40}">
+        <rows>
+            <row>
+                <cell id="{57734e4d-e8df-4fe8-9495-cebefd893065}">
+                    <labels>
+                        <label description="Select" languagecode="1033" />
+                    </labels>
+                    <control id="select_segment" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" disabled="true" />
+                </cell>
+                <cell id="{935d1371-fa55-494b-bc81-ea9eb4064020}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancel_operation" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdyncrm_DynamicsMarketing.CrmWebResource" libraryUniqueId="{5e8a3ec6-3bab-406c-9ed8-fc5414fd0851}" />
+    </formLibraries>
+    <events>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.SegmentationDialog.setDialogHeader" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{9994ea08-32d5-43a2-a586-0e775474cf51}" enabled="true" parameters="" passExecutionContext="true" />
+                <Handler functionName="MSDynCrmMkt.Handlers.SegmentationDialog.addGridSelectionHandler" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{d4f6ed3f-63de-41dc-88cb-60e86fc272d0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="select_segment">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.SegmentationDialog.onSegmentMembersOverrideDialogConfirm" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{ed395057-f264-4b95-8da2-5b29c9eeee36}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancel_operation">
+            <Handlers>
+                <Handler functionName="MSDynCrmMkt.Handlers.SegmentationDialog.onSegmentMembersOverrideDialogCancel" libraryName="msdyncrm_DynamicsMarketing.CrmWebResource" handlerUniqueId="{3c59c4c8-4ca3-44a9-97d6-0072d54f17d0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{529739a8-859e-4a84-b103-0203dfc118c3}">
+            <customControl formFactor="0" name="CxpOrchestrationAnalytics.ContactToSegmentBannerControl.ContactToSegmentBannerControl">
+                <parameters>
+                    <isExclusion type="TwoOptions">Is_Exclusion</isExclusion>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="CxpOrchestrationAnalytics.ContactToSegmentBannerControl.ContactToSegmentBannerControl">
+                <parameters>
+                    <isExclusion type="TwoOptions">Is_Exclusion</isExclusion>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="CxpOrchestrationAnalytics.ContactToSegmentBannerControl.ContactToSegmentBannerControl">
+                <parameters>
+                    <isExclusion type="TwoOptions">Is_Exclusion</isExclusion>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>

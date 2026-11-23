@@ -1,0 +1,133 @@
+<form>
+    <formparameters>
+        <querystringparameter name="dlg_result" type="SafeString" />
+        <querystringparameter name="msdynmkt_keyword_dialog" type="SafeString" />
+        <querystringparameter name="msdynmkt_keywordid_dialog" type="SafeString" />
+    </formparameters>
+    <header id="{8caeea52-47b7-4556-a0f8-b82bcc415aa1}">
+        <rows>
+            <row>
+                <cell id="{1d9e9eea-29a6-457f-9418-85bf1783bbe5}">
+                    <labels>
+                        <label description="Create new keyword" languagecode="1033" />
+                    </labels>
+                    <control id="dialogheader" classid="{39354E4A-5015-4D74-8031-EA9EB73A1322}" isunbound="true">
+                        <parameters>
+                            <IsTitle>true</IsTitle>
+                        </parameters>
+                    </control>
+                </cell>
+            </row>
+        </rows>
+    </header>
+    <tabs>
+        <tab verticallayout="true" id="{c5cd2d24-c4cf-420d-8c83-4ae087b56679}" name="{6f41f4b6-dbf5-4a4a-bb9c-20247694f79c}" locklevel="0" expanded="true">
+            <labels>
+                <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+                <column width="100%">
+                    <sections>
+                        <section showbar="false" columns="1" id="{e30b7cb4-a27c-40bb-a361-b1391e0a89ad}" name="{5ed67436-ea7f-4adc-8cc8-b8c0659e72a7}">
+                            <labels>
+                                <label description="" languagecode="1033" />
+                            </labels>
+                            <rows>
+                                <row>
+                                    <cell id="{57a7d047-2613-4c5f-8c3a-723662fc8577}" showlabel="true" locklevel="0">
+                                        <labels>
+                                            <label description="" languagecode="1033" />
+                                        </labels>
+                                        <control id="create_keyword_dialog_control" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" disabled="false" uniqueid="{8f0f20a5-afb8-4eaa-ba7d-3a2cd0cdf04d}" isunbound="true">
+                                            <parameters>
+                                                <MaxLength>1000</MaxLength>
+                                                <Format>SingleLineOfText</Format>
+                                            </parameters>
+                                        </control>
+                                    </cell>
+                                </row>
+                            </rows>
+                        </section>
+                    </sections>
+                </column>
+            </columns>
+        </tab>
+    </tabs>
+    <footer id="{ecc95d61-0a51-42be-95ca-756141539ead}">
+        <rows>
+            <row>
+                <cell id="{ddf12a33-e9a1-470c-a59e-241787f6c490}">
+                    <labels>
+                        <label description="Create" languagecode="1033" />
+                    </labels>
+                    <control id="createbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{a6f1f8cd-9799-42bd-b7d0-c24b656722ef}">
+                    <labels>
+                        <label description="Update" languagecode="1033" />
+                    </labels>
+                    <control id="updatebutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+            <row>
+                <cell id="{74d85106-166d-40fd-9d56-28dadcb6b319}">
+                    <labels>
+                        <label description="Cancel" languagecode="1033" />
+                    </labels>
+                    <control id="cancelbutton" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" isunbound="true" />
+                </cell>
+            </row>
+        </rows>
+    </footer>
+    <formLibraries>
+        <Library name="msdynmkt_SmsChannel.CreateKeywordDialog.CrmWebResources" libraryUniqueId="{5a51f407-0e5f-429a-be13-e146d3e2a753}" />
+    </formLibraries>
+    <events>
+        <event name="onclick" application="false" active="false" attribute="createbutton">
+            <Handlers>
+                <Handler functionName="CreateKeywordDialogWebResources.CreateKeywordDialogAdapter.onCreateButtonClick" libraryName="msdynmkt_SmsChannel.CreateKeywordDialog.CrmWebResources" handlerUniqueId="{39cd4c03-e4b4-4eeb-abeb-acbf24ac4bcb}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="cancelbutton">
+            <Handlers>
+                <Handler functionName="CreateKeywordDialogWebResources.CreateKeywordDialogAdapter.onCancelButtonClick" libraryName="msdynmkt_SmsChannel.CreateKeywordDialog.CrmWebResources" handlerUniqueId="{5399973c-351c-4521-b945-855ace5f8c9d}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onclick" application="false" active="false" attribute="updatebutton">
+            <Handlers>
+                <Handler functionName="CreateKeywordDialogWebResources.CreateKeywordDialogAdapter.onUpdateButtonClick" libraryName="msdynmkt_SmsChannel.CreateKeywordDialog.CrmWebResources" handlerUniqueId="{60791482-4472-4746-9fc0-bb93188e96b0}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onload" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CreateKeywordDialogWebResources.CreateKeywordDialogAdapter.onDialogLoad" libraryName="msdynmkt_SmsChannel.CreateKeywordDialog.CrmWebResources" handlerUniqueId="{ad49aa1b-324f-405e-a001-b38293397c58}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+        <event name="onchange" application="false" active="false">
+            <Handlers>
+                <Handler functionName="CreateKeywordDialogWebResources.CreateKeywordDialogAdapter.onChange" libraryName="msdynmkt_SmsChannel.CreateKeywordDialog.CrmWebResources" handlerUniqueId="{6b06e877-724d-44da-b1ab-1c68bbb04406}" enabled="true" parameters="" passExecutionContext="true" />
+            </Handlers>
+        </event>
+    </events>
+    <controlDescriptions>
+        <controlDescription forControl="{8f0f20a5-afb8-4eaa-ba7d-3a2cd0cdf04d}">
+            <customControl formFactor="0" name="CxpSmsChannel.CreateKeywordDialogControl.CreateKeywordDialogControl">
+                <parameters>
+                    <keyword type="SingleLine.Text">msdynmkt_keyword_dialog</keyword>
+                </parameters>
+            </customControl>
+            <customControl formFactor="1" name="CxpSmsChannel.CreateKeywordDialogControl.CreateKeywordDialogControl">
+                <parameters>
+                    <keyword type="SingleLine.Text">msdynmkt_keyword_dialog</keyword>
+                </parameters>
+            </customControl>
+            <customControl formFactor="2" name="CxpSmsChannel.CreateKeywordDialogControl.CreateKeywordDialogControl">
+                <parameters>
+                    <keyword type="SingleLine.Text">msdynmkt_keyword_dialog</keyword>
+                </parameters>
+            </customControl>
+        </controlDescription>
+    </controlDescriptions>
+</form>
